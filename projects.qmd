@@ -4,8 +4,7 @@ listing:
   - id: projects
     contents: "projects"
     sort:
-      - "date asc"
-      - "title desc"
+      - "title asc"
     type: default
     categories: true
     sort-ui: false
