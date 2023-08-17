@@ -3,6 +3,7 @@ title: "Schedule"
 description: |
  Schedule and course materials for Statistical Computing (JHSPH Biostatistics 140.776 Fall 2022).
 tbl-colwidths: [15,10, 55, 25]
+engine: knitr
 ---
 
 ## Schedule and course materials
