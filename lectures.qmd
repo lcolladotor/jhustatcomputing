@@ -3,7 +3,9 @@ title: "Lectures"
 listing:
   - id: lectures
     contents: "posts"
-    sort: "date desc"
+    sort:
+      - "date asc"
+      - "title desc"
     type: default
     categories: true
     sort-ui: false

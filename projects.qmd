@@ -3,7 +3,9 @@ title: "Projects"
 listing:
   - id: projects
     contents: "projects"
-    sort: "date desc"
+    sort:
+      - "date asc"
+      - "title desc"
     type: default
     categories: true
     sort-ui: false
