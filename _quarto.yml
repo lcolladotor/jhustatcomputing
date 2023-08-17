@@ -5,6 +5,7 @@ website:
   title: "Statistical Computing (BSPH 140.776)"
   site-url: https://lcolladotor.github.io/jhustatcomputing2023
   description: "Course website for Statistical Computing (BSPH 140.776) in Fall 2023"
+  favicon: "icon_32.png"
   navbar:
     right:
       - text: "Home"
