@@ -6,18 +6,17 @@ about:
   links:
     - icon: twitter
       text: Twitter
-      href: https://twitter.com/stephaniehicks
+      href: https://twitter.com/lcolladotor
     - icon: github
       text: Github
-      href: https://github.com/stephaniehicks
+      href: https://github.com/lcolladotor
 ---
 
-Welcome to Statistical Computing at Johns Hopkins Bloomberg School of Public Health! 
+Welcome to Statistical Computing at Johns Hopkins Bloomberg School of Public Health!
 
-## What is this course? 
+## What is this course?
 
 This course covers the basics of practical issues in programming and other computer skills required for the research and application of statistical methods. Includes programming in R and the tidyverse, data ethics, best practices for coding and reproducible research, introduction to data visualizations, best practices for working with special data types (dates/times, text data, etc), best practices for storing data, basics of debugging, organizing and commenting code, basics of leveraging Python from R. Topics in statistical data analysis provide working examples.
-
 
 ## Getting started
 
