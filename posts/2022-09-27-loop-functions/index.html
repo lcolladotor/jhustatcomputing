@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephanie Hicks">
+<meta name="dcterms.date" content="2022-09-27">
+<meta name="description" content="Introduction to vectorization and loop functionals">
+
+<title>Statistical Computing (BSPH 140.776) - Vectorization and loop functionals</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Statistical Computing (BSPH 140.776)</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-general-information" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">General Information</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-general-information">    
+        <li>
+    <a class="dropdown-item" href="../../syllabus.html" rel="" target="">
+ <span class="dropdown-text">Syllabus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../schedule.html" rel="" target="">
+ <span class="dropdown-text">Schedule</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-course-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Course Materials</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-course-materials">    
+        <li>
+    <a class="dropdown-item" href="../../lectures.html" rel="" target="">
+ <span class="dropdown-text">Lectures</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects.html" rel="" target="">
+ <span class="dropdown-text">Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources.html" rel="" target="">
+ <span class="dropdown-text">Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lcolladotor/jhustatcomputing2023" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/lcolladotor" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Vectorization and loop functionals</h1>
+                  <div>
+        <div class="description">
+          Introduction to vectorization and loop functionals
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">module 4</div>
+                <div class="quarto-category">week 5</div>
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">programming</div>
+                <div class="quarto-category">functions</div>
+              </div>
+                  </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Affiliation</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author"><a href="https://stephaniehicks.com">Stephanie Hicks</a> </p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              Department of Biostatistics, Johns Hopkins
+            </p>
+        </div>
+      </div>
+
+  <div class="quarto-title-meta">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 27, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#pre-lecture-materials" id="toc-pre-lecture-materials" class="nav-link active" data-scroll-target="#pre-lecture-materials">Pre-lecture materials</a>
+  <ul class="collapse">
+  <li><a href="#read-ahead" id="toc-read-ahead" class="nav-link" data-scroll-target="#read-ahead">Read ahead</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  </ul></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#vectorization" id="toc-vectorization" class="nav-link" data-scroll-target="#vectorization">Vectorization</a>
+  <ul class="collapse">
+  <li><a href="#vector-arithmetics" id="toc-vector-arithmetics" class="nav-link" data-scroll-target="#vector-arithmetics">Vector arithmetics</a>
+  <ul class="collapse">
+  <li><a href="#rescaling-a-vector" id="toc-rescaling-a-vector" class="nav-link" data-scroll-target="#rescaling-a-vector">Rescaling a vector</a></li>
+  <li><a href="#two-vectors" id="toc-two-vectors" class="nav-link" data-scroll-target="#two-vectors">Two vectors</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#functional-loops" id="toc-functional-loops" class="nav-link" data-scroll-target="#functional-loops">Functional loops</a>
+  <ul class="collapse">
+  <li><a href="#lapply" id="toc-lapply" class="nav-link" data-scroll-target="#lapply"><code>lapply()</code></a></li>
+  <li><a href="#sapply" id="toc-sapply" class="nav-link" data-scroll-target="#sapply"><code>sapply()</code></a></li>
+  <li><a href="#split" id="toc-split" class="nav-link" data-scroll-target="#split"><code>split()</code></a>
+  <ul class="collapse">
+  <li><a href="#splitting-a-data-frame" id="toc-splitting-a-data-frame" class="nav-link" data-scroll-target="#splitting-a-data-frame">Splitting a Data Frame</a></li>
+  </ul></li>
+  <li><a href="#tapply" id="toc-tapply" class="nav-link" data-scroll-target="#tapply">tapply</a></li>
+  <li><a href="#apply" id="toc-apply" class="nav-link" data-scroll-target="#apply"><code>apply()</code></a>
+  <ul class="collapse">
+  <li><a href="#colrow-sums-and-means" id="toc-colrow-sums-and-means" class="nav-link" data-scroll-target="#colrow-sums-and-means">Col/Row Sums and Means</a></li>
+  <li><a href="#other-ways-to-apply" id="toc-other-ways-to-apply" class="nav-link" data-scroll-target="#other-ways-to-apply">Other Ways to Apply</a></li>
+  </ul></li>
+  <li><a href="#vectorizing-a-function" id="toc-vectorizing-a-function" class="nav-link" data-scroll-target="#vectorizing-a-function">Vectorizing a Function</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#post-lecture-materials" id="toc-post-lecture-materials" class="nav-link" data-scroll-target="#post-lecture-materials">Post-lecture materials</a>
+  <ul class="collapse">
+  <li><a href="#final-questions" id="toc-final-questions" class="nav-link" data-scroll-target="#final-questions">Final Questions</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<!-- Add interesting quote -->
+<section id="pre-lecture-materials" class="level1">
+<h1>Pre-lecture materials</h1>
+<section id="read-ahead" class="level3">
+<h3 class="anchored" data-anchor-id="read-ahead">Read ahead</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Read ahead
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Before class, you can prepare by reading the following materials:</strong></p>
+<ol type="1">
+<li><a href="https://rafalab.github.io/dsbook/programming-basics.html#vectorization" class="uri">https://rafalab.github.io/dsbook/programming-basics.html#vectorization</a></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="acknowledgements" class="level3">
+<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
+<p>Material for this lecture was borrowed and adopted from</p>
+<ul>
+<li><a href="https://rdpeng.github.io/Biostat776/lecture-loop-functions" class="uri">https://rdpeng.github.io/Biostat776/lecture-loop-functions</a></li>
+<li><a href="https://rafalab.github.io/dsbook/programming-basics.html#vectorization" class="uri">https://rafalab.github.io/dsbook/programming-basics.html#vectorization</a></li>
+</ul>
+</section>
+</section>
+<section id="learning-objectives" class="level1">
+<h1>Learning objectives</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Learning objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>At the end of this lesson you will:</strong></p>
+<ul>
+<li>Understand how to perform vector arithmetics in R</li>
+<li>Implement the 5 functional loops in R (vs e.g.&nbsp;for loops) in R</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="vectorization" class="level1">
+<h1>Vectorization</h1>
+<p>Writing <code>for</code> and <code>while</code> loops are useful and easy to understand, but in R we rarely use them.</p>
+<p>As you learn more R, you will realize that <strong>vectorization</strong> is preferred over for-loops since it results in shorter and clearer code.</p>
+<section id="vector-arithmetics" class="level2">
+<h2 class="anchored" data-anchor-id="vector-arithmetics">Vector arithmetics</h2>
+<section id="rescaling-a-vector" class="level3">
+<h3 class="anchored" data-anchor-id="rescaling-a-vector">Rescaling a vector</h3>
+<p>In R, arithmetic operations on <strong>vectors occur element-wise</strong>. For a quick example, suppose we have height in inches:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>inches <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">69</span>, <span class="dv">62</span>, <span class="dv">66</span>, <span class="dv">70</span>, <span class="dv">70</span>, <span class="dv">73</span>, <span class="dv">67</span>, <span class="dv">73</span>, <span class="dv">67</span>, <span class="dv">70</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>and want to convert to centimeters.</p>
+<p>Notice what happens when we multiply inches by 2.54:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>inches <span class="sc">*</span> <span class="fl">2.54</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 175.26 157.48 167.64 177.80 177.80 185.42 170.18 185.42 170.18 177.80</code></pre>
+</div>
+</div>
+<p>In the line above, we <strong>multiplied each element</strong> by 2.54.</p>
+<p>Similarly, if for each entry we want to compute how many inches taller or shorter than 69 inches (the average height for males), we can subtract it from every entry like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>inches <span class="sc">-</span> <span class="dv">69</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  0 -7 -3  1  1  4 -2  4 -2  1</code></pre>
+</div>
+</div>
+</section>
+<section id="two-vectors" class="level3">
+<h3 class="anchored" data-anchor-id="two-vectors">Two vectors</h3>
+<p>If we have <strong>two vectors of the same length</strong>, and we sum them in R, they will be <strong>added entry by entry</strong> as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  2  4  6  8 10 12 14 16 18 20</code></pre>
+</div>
+</div>
+<p>The same holds for other mathematical operations, such as <code>-</code>, <code>*</code> and <code>/</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 1.000000 1.414214 1.732051 2.000000 2.236068 2.449490 2.645751 2.828427
+ [9] 3.000000 3.162278</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>x<span class="sc">*</span>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]   1   4   9  16  25  36  49  64  81 100</code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="functional-loops" class="level1">
+<h1>Functional loops</h1>
+<p>While <code>for</code> loops are perfectly valid, when you use vectorization in an element-wise fashion, there is no need for <code>for</code> loops because we can apply what are called functional loops.</p>
+<p><strong>Functional loops</strong> are functions that help us apply the same function to each entry in a vector, matrix, data frame, or list. Here are a list of them:</p>
+<ul>
+<li><p><code>lapply()</code>: Loop over a list and evaluate a function on each element</p></li>
+<li><p><code>sapply()</code>: Same as <code>lapply</code> but try to simplify the result</p></li>
+<li><p><code>apply()</code>: Apply a function over the margins of an array</p></li>
+<li><p><code>tapply()</code>: Apply a function over subsets of a vector</p></li>
+<li><p><code>mapply()</code>: Multivariate version of <code>lapply</code> (won’t cover)</p></li>
+</ul>
+<p>An auxiliary function <code>split()</code> is also useful, particularly in conjunction with <code>lapply()</code>.</p>
+<section id="lapply" class="level2">
+<h2 class="anchored" data-anchor-id="lapply"><code>lapply()</code></h2>
+<p>The <code>lapply()</code> function does the following simple series of operations:</p>
+<ol type="1">
+<li>it loops over a list, iterating over each element in that list</li>
+<li>it applies a <em>function</em> to each element of the list (a function that you specify)</li>
+<li>and returns a list (the <code>l</code> in <code>lapply()</code> is for “list”).</li>
+</ol>
+<p>This function takes three arguments: (1) a list <code>X</code>; (2) a function (or the name of a function) <code>FUN</code>; (3) other arguments via its <code>...</code> argument. If <code>X</code> is not a list, it will be coerced to a list using <code>as.list()</code>.</p>
+<p>The body of the <code>lapply()</code> function can be seen here.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>lapply</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>function (X, FUN, ...) 
+{
+    FUN &lt;- match.fun(FUN)
+    if (!is.vector(X) || is.object(X)) 
+        X &lt;- as.list(X)
+    .Internal(lapply(X, FUN))
+}
+&lt;bytecode: 0x14f92f928&gt;
+&lt;environment: namespace:base&gt;</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The actual looping is done internally in C code for efficiency reasons.</p>
+</div>
+</div>
+<p>It is important to remember that <code>lapply()</code> always returns a list, regardless of the class of the input.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here’s an example of applying the <code>mean()</code> function to all elements of a list. If the original list has names, the the names will be preserved in the output.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">a =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">b =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>))</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$a
+[1] 1 2 3 4 5
+
+$b
+ [1] -0.796902151 -0.704764494  2.602279644  0.342396072  0.959892466
+ [6]  0.001693647 -0.038861708  0.413760458 -0.740300144 -1.696169815</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(x, mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$a
+[1] 3
+
+$b
+[1] 0.0343024</code></pre>
+</div>
+</div>
+<p>Notice that here we are passing the <code>mean()</code> function as an argument to the <code>lapply()</code> function.</p>
+</div>
+</div>
+<p><strong>Functions in R can be</strong> used this way and can be <strong>passed back and forth as arguments</strong> just like any other object inR.</p>
+<p>When you pass a function to another function, you do not need to include the open and closed parentheses <code>()</code> like you do when you are <strong>calling</strong> a function.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here is another example of using <code>lapply()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">a =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">b =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>), <span class="at">c =</span> <span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="dv">1</span>), <span class="at">d =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">5</span>))</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(x, mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$a
+[1] 2.5
+
+$b
+[1] -0.1328501
+
+$c
+[1] 1.227173
+
+$d
+[1] 5.012158</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>You can use <code>lapply()</code> to evaluate a function multiple times each with a different argument.</p>
+<p>Next is an example where I call the <code>runif()</code> function (to generate uniformly distributed random variables) four times, each time generating a different number of random numbers.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(x, runif)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 0.3924746
+
+[[2]]
+[1] 0.807656 0.852134
+
+[[3]]
+[1] 0.9680554 0.6216622 0.4746080
+
+[[4]]
+[1] 0.09363509 0.80682941 0.44572025 0.55164581</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What happened?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you pass a function to <code>lapply()</code>, <code>lapply()</code> takes elements of the list and passes them as the <em>first argument</em> of the function you are applying.</p>
+<p>In the above example, the first argument of <code>runif()</code> is <code>n</code>, and so the elements of the sequence <code>1:4</code> all got passed to the <code>n</code> argument of <code>runif()</code>.</p>
+</div>
+</div>
+<p>Functions that you pass to <code>lapply()</code> may have other arguments. For example, the <code>runif()</code> function has a <code>min</code> and <code>max</code> argument too.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the example above I used the default values for <code>min</code> and <code>max</code>.</p>
+<ul>
+<li>How would you be able to specify different values for that in the context of <code>lapply()</code>?</li>
+</ul>
+</div>
+</div>
+<p>Here is where the <code>...</code> argument to <code>lapply()</code> comes into play. Any arguments that you place in the <code>...</code> argument will get passed down to the function being applied to the elements of the list.</p>
+<p>Here, the <code>min = 0</code> and <code>max = 10</code> arguments are passed down to <code>runif()</code> every time it gets called.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(x, runif, <span class="at">min =</span> <span class="dv">0</span>, <span class="at">max =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 7.339994
+
+[[2]]
+[1] 6.159324 4.167184
+
+[[3]]
+[1] 1.3182169 6.3869630 0.2614679
+
+[[4]]
+[1] 7.640224 1.984159 9.285444 2.845784</code></pre>
+</div>
+</div>
+<p>So now, instead of the random numbers being between 0 and 1 (the default), the are all between 0 and 10.</p>
+<p>The <code>lapply()</code> function (and its friends) makes heavy use of <em>anonymous</em> functions. Anonymous functions are like members of <a href="http://en.wikipedia.org/wiki/Fight_Club">Project Mayhem</a>—they have no names. These functions are generated “on the fly” as you are using <code>lapply()</code>. Once the call to <code>lapply()</code> is finished, the function disappears and does not appear in the workspace.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here I am creating a list that contains two matrices.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">a =</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">2</span>), <span class="at">b =</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">2</span>)) </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$a
+     [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+
+$b
+     [,1] [,2]
+[1,]    1    4
+[2,]    2    5
+[3,]    3    6</code></pre>
+</div>
+</div>
+<p>Suppose I wanted to extract the first column of each matrix in the list. I could write an anonymous function for extracting the first column of each matrix.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(x, <span class="cf">function</span>(elt) { elt[,<span class="dv">1</span>] })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$a
+[1] 1 2
+
+$b
+[1] 1 2 3</code></pre>
+</div>
+</div>
+<p>Notice that I put the <code>function()</code> definition right in the call to <code>lapply()</code>.</p>
+</div>
+</div>
+<p>This is perfectly legal and acceptable. You can put an arbitrarily complicated function definition inside <code>lapply()</code>, but if it’s going to be more complicated, it’s probably a better idea to define the function separately.</p>
+<p>For example, I could have done the following.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(elt) {</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>        elt[, <span class="dv">1</span>]</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(x, f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$a
+[1] 1 2
+
+$b
+[1] 1 2 3</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Now the function is no longer anonymous; its name is <code>f</code>.</p>
+</div>
+</div>
+<p>Whether you use an anonymous function or you define a function first depends on your context. If you think the function <code>f</code> is something you are going to need a lot in other parts of your code, you might want to define it separately. But if you are just going to use it for this call to <code>lapply()</code>, then it is probably simpler to use an anonymous function.</p>
+</section>
+<section id="sapply" class="level2">
+<h2 class="anchored" data-anchor-id="sapply"><code>sapply()</code></h2>
+<p>The <code>sapply()</code> function behaves similarly to <code>lapply()</code>; the only real difference is in the return value. <code>sapply()</code> will try to simplify the result of <code>lapply()</code> if possible. Essentially, <code>sapply()</code> calls <code>lapply()</code> on its input and then applies the following algorithm:</p>
+<ul>
+<li><p>If the result is a list where every element is length 1, then a vector is returned</p></li>
+<li><p>If the result is a list where every element is a vector of the same length (&gt; 1), a matrix is returned.</p></li>
+<li><p>If it can’t figure things out, a list is returned</p></li>
+</ul>
+<p>Here’s the result of calling <code>lapply()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">a =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">b =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>), <span class="at">c =</span> <span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="dv">1</span>), <span class="at">d =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">5</span>))</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(x, mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$a
+[1] 2.5
+
+$b
+[1] -0.7692304
+
+$c
+[1] 1.1845
+
+$d
+[1] 5.011145</code></pre>
+</div>
+</div>
+<p>Notice that <code>lapply()</code> returns a list (as usual), but that each element of the list has length 1.</p>
+<p>Here’s the result of calling <code>sapply()</code> on the same list.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(x, mean) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         a          b          c          d 
+ 2.5000000 -0.7692304  1.1844997  5.0111453 </code></pre>
+</div>
+</div>
+<p>Because the result of <code>lapply()</code> was a list where each element had length 1, <code>sapply()</code> collapsed the output into a numeric vector, which is often more useful than a list.</p>
+</section>
+<section id="split" class="level2">
+<h2 class="anchored" data-anchor-id="split"><code>split()</code></h2>
+<p>The <code>split()</code> function takes a vector or other objects and splits it into groups determined by a factor or list of factors.</p>
+<p>The arguments to <code>split()</code> are</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(split)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>function (x, f, drop = FALSE, ...)  </code></pre>
+</div>
+</div>
+<p>where</p>
+<ul>
+<li><code>x</code> is a vector (or list) or data frame</li>
+<li><code>f</code> is a factor (or coerced to one) or a list of factors</li>
+<li><code>drop</code> indicates whether empty factors levels should be dropped</li>
+</ul>
+<p>The combination of <code>split()</code> and a function like <code>lapply()</code> or <code>sapply()</code> is a common paradigm in R. The basic idea is that you can take a data structure, split it into subsets defined by another variable, and apply a function over those subsets. The results of applying that function over the subsets are then collated and returned as an object. This sequence of operations is sometimes referred to as “map-reduce” in other contexts.</p>
+<p>Here we simulate some data and split it according to a factor variable. Note that we use the <code>gl()</code> function to “generate levels” in a factor variable.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>), <span class="fu">runif</span>(<span class="dv">10</span>), <span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="dv">1</span>))</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">gl</span>(<span class="dv">3</span>, <span class="dv">10</span>) <span class="co"># generate factor levels</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3
+Levels: 1 2 3</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">split</span>(x, f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$`1`
+ [1]  0.06440437  1.78480833 -0.94373825  1.94781191 -0.16936618 -0.58442286
+ [7]  1.23801276  0.02465268 -0.35022800 -0.03086819
+
+$`2`
+ [1] 0.1623650 0.7931292 0.5370609 0.6692380 0.2197358 0.2657368 0.6490295
+ [8] 0.2862331 0.8169028 0.9344586
+
+$`3`
+ [1]  0.13424958  0.31285258  2.39555383 -0.11859862 -0.08085121 -0.17574475
+ [7] -1.08308465  0.18204113  1.13764707  0.56204495</code></pre>
+</div>
+</div>
+<p>A common idiom is <code>split</code> followed by an <code>lapply</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(<span class="fu">split</span>(x, f), mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$`1`
+[1] 0.2981067
+
+$`2`
+[1] 0.533389
+
+$`3`
+[1] 0.326611</code></pre>
+</div>
+</div>
+<section id="splitting-a-data-frame" class="level3">
+<h3 class="anchored" data-anchor-id="splitting-a-data-frame">Splitting a Data Frame</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datasets)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(airquality)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Ozone Solar.R Wind Temp Month Day
+1    41     190  7.4   67     5   1
+2    36     118  8.0   72     5   2
+3    12     149 12.6   74     5   3
+4    18     313 11.5   62     5   4
+5    NA      NA 14.3   56     5   5
+6    28      NA 14.9   66     5   6</code></pre>
+</div>
+</div>
+<p>We can split the <code>airquality</code> data frame by the <code>Month</code> variable so that we have separate sub-data frames for each month.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">split</span>(airquality, airquality<span class="sc">$</span>Month)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(s)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>List of 5
+ $ 5:'data.frame':  31 obs. of  6 variables:
+  ..$ Ozone  : int [1:31] 41 36 12 18 NA 28 23 19 8 NA ...
+  ..$ Solar.R: int [1:31] 190 118 149 313 NA NA 299 99 19 194 ...
+  ..$ Wind   : num [1:31] 7.4 8 12.6 11.5 14.3 14.9 8.6 13.8 20.1 8.6 ...
+  ..$ Temp   : int [1:31] 67 72 74 62 56 66 65 59 61 69 ...
+  ..$ Month  : int [1:31] 5 5 5 5 5 5 5 5 5 5 ...
+  ..$ Day    : int [1:31] 1 2 3 4 5 6 7 8 9 10 ...
+ $ 6:'data.frame':  30 obs. of  6 variables:
+  ..$ Ozone  : int [1:30] NA NA NA NA NA NA 29 NA 71 39 ...
+  ..$ Solar.R: int [1:30] 286 287 242 186 220 264 127 273 291 323 ...
+  ..$ Wind   : num [1:30] 8.6 9.7 16.1 9.2 8.6 14.3 9.7 6.9 13.8 11.5 ...
+  ..$ Temp   : int [1:30] 78 74 67 84 85 79 82 87 90 87 ...
+  ..$ Month  : int [1:30] 6 6 6 6 6 6 6 6 6 6 ...
+  ..$ Day    : int [1:30] 1 2 3 4 5 6 7 8 9 10 ...
+ $ 7:'data.frame':  31 obs. of  6 variables:
+  ..$ Ozone  : int [1:31] 135 49 32 NA 64 40 77 97 97 85 ...
+  ..$ Solar.R: int [1:31] 269 248 236 101 175 314 276 267 272 175 ...
+  ..$ Wind   : num [1:31] 4.1 9.2 9.2 10.9 4.6 10.9 5.1 6.3 5.7 7.4 ...
+  ..$ Temp   : int [1:31] 84 85 81 84 83 83 88 92 92 89 ...
+  ..$ Month  : int [1:31] 7 7 7 7 7 7 7 7 7 7 ...
+  ..$ Day    : int [1:31] 1 2 3 4 5 6 7 8 9 10 ...
+ $ 8:'data.frame':  31 obs. of  6 variables:
+  ..$ Ozone  : int [1:31] 39 9 16 78 35 66 122 89 110 NA ...
+  ..$ Solar.R: int [1:31] 83 24 77 NA NA NA 255 229 207 222 ...
+  ..$ Wind   : num [1:31] 6.9 13.8 7.4 6.9 7.4 4.6 4 10.3 8 8.6 ...
+  ..$ Temp   : int [1:31] 81 81 82 86 85 87 89 90 90 92 ...
+  ..$ Month  : int [1:31] 8 8 8 8 8 8 8 8 8 8 ...
+  ..$ Day    : int [1:31] 1 2 3 4 5 6 7 8 9 10 ...
+ $ 9:'data.frame':  30 obs. of  6 variables:
+  ..$ Ozone  : int [1:30] 96 78 73 91 47 32 20 23 21 24 ...
+  ..$ Solar.R: int [1:30] 167 197 183 189 95 92 252 220 230 259 ...
+  ..$ Wind   : num [1:30] 6.9 5.1 2.8 4.6 7.4 15.5 10.9 10.3 10.9 9.7 ...
+  ..$ Temp   : int [1:30] 91 92 93 93 87 84 80 78 75 73 ...
+  ..$ Month  : int [1:30] 9 9 9 9 9 9 9 9 9 9 ...
+  ..$ Day    : int [1:30] 1 2 3 4 5 6 7 8 9 10 ...</code></pre>
+</div>
+</div>
+<p>Then we can take the column means for <code>Ozone</code>, <code>Solar.R</code>, and <code>Wind</code> for each sub-data frame.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(s, <span class="cf">function</span>(x) {</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">colMeans</span>(x[, <span class="fu">c</span>(<span class="st">"Ozone"</span>, <span class="st">"Solar.R"</span>, <span class="st">"Wind"</span>)])</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$`5`
+   Ozone  Solar.R     Wind 
+      NA       NA 11.62258 
+
+$`6`
+    Ozone   Solar.R      Wind 
+       NA 190.16667  10.26667 
+
+$`7`
+     Ozone    Solar.R       Wind 
+        NA 216.483871   8.941935 
+
+$`8`
+   Ozone  Solar.R     Wind 
+      NA       NA 8.793548 
+
+$`9`
+   Ozone  Solar.R     Wind 
+      NA 167.4333  10.1800 </code></pre>
+</div>
+</div>
+<p>Using <code>sapply()</code> might be better here for a more readable output.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(s, <span class="cf">function</span>(x) {</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">colMeans</span>(x[, <span class="fu">c</span>(<span class="st">"Ozone"</span>, <span class="st">"Solar.R"</span>, <span class="st">"Wind"</span>)])</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>               5         6          7        8        9
+Ozone         NA        NA         NA       NA       NA
+Solar.R       NA 190.16667 216.483871       NA 167.4333
+Wind    11.62258  10.26667   8.941935 8.793548  10.1800</code></pre>
+</div>
+</div>
+<p>Unfortunately, there are <code>NA</code>s in the data so we cannot simply take the means of those variables. However, we can tell the <code>colMeans</code> function to remove the <code>NA</code>s before computing the mean.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(s, <span class="cf">function</span>(x) {</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">colMeans</span>(x[, <span class="fu">c</span>(<span class="st">"Ozone"</span>, <span class="st">"Solar.R"</span>, <span class="st">"Wind"</span>)], </span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                5         6          7          8         9
+Ozone    23.61538  29.44444  59.115385  59.961538  31.44828
+Solar.R 181.29630 190.16667 216.483871 171.857143 167.43333
+Wind     11.62258  10.26667   8.941935   8.793548  10.18000</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="tapply" class="level2">
+<h2 class="anchored" data-anchor-id="tapply">tapply</h2>
+<p><code>tapply()</code> is used to apply a function over subsets of a vector. It can be thought of as a combination of <code>split()</code> and <code>sapply()</code> for vectors only. I’ve been told that the “t” in <code>tapply()</code> refers to “table”, but that is unconfirmed.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(tapply)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>function (X, INDEX, FUN = NULL, ..., default = NA, simplify = TRUE)  </code></pre>
+</div>
+</div>
+<p>The arguments to <code>tapply()</code> are as follows:</p>
+<ul>
+<li><code>X</code> is a vector</li>
+<li><code>INDEX</code> is a factor or a list of factors (or else they are coerced to factors)</li>
+<li><code>FUN</code> is a function to be applied</li>
+<li>… contains other arguments to be passed <code>FUN</code></li>
+<li><code>simplify</code>, should we simplify the result?</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Given a vector of numbers, one simple operation is to take group means.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Simulate some data</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>), <span class="fu">runif</span>(<span class="dv">10</span>), <span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="dv">1</span>))</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Define some groups with a factor variable</span></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">gl</span>(<span class="dv">3</span>, <span class="dv">10</span>)   </span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3
+Levels: 1 2 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(x, f, mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        1         2         3 
+0.2927136 0.2936399 1.0340813 </code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>We can also apply functions that return more than a single value. In this case, <code>tapply()</code> will not simplify the result and will return a list. Here’s an example of finding the <code>range()</code> (min and max) of each sub-group.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(x, f, range)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$`1`
+[1] -1.217068  1.723239
+
+$`2`
+[1] 0.0620568 0.8443268
+
+$`3`
+[1] -0.1079284  2.8115679</code></pre>
+</div>
+</div>
+</section>
+<section id="apply" class="level2">
+<h2 class="anchored" data-anchor-id="apply"><code>apply()</code></h2>
+<p>The <code>apply()</code> function is used to a evaluate a function (often an anonymous one) over the margins of an array. It is most often used to apply a function to the rows or columns of a matrix (which is just a 2-dimensional array). However, it can be used with general arrays, for example, to take the average of an array of matrices. Using <code>apply()</code> is not really faster than writing a loop, but it works in one line and is highly compact.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(apply)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>function (X, MARGIN, FUN, ..., simplify = TRUE)  </code></pre>
+</div>
+</div>
+<p>The arguments to <code>apply()</code> are</p>
+<ul>
+<li><code>X</code> is an array</li>
+<li><code>MARGIN</code> is an integer vector indicating which margins should be “retained”.</li>
+<li><code>FUN</code> is a function to be applied</li>
+<li><code>...</code> is for other arguments to be passed to <code>FUN</code></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here I create a 20 by 10 matrix of Normal random numbers. I then compute the mean of each column.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">200</span>), <span class="dv">20</span>, <span class="dv">10</span>)</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            [,1]       [,2]        [,3]       [,4]       [,5]       [,6]
+[1,] -0.08951039  0.8826521 -0.08872757 -0.1902191  1.6645398 -0.6256195
+[2,] -1.61681249 -0.1291864 -0.33969902  0.0642613  0.3666109  0.1417229
+[3,] -0.04658801 -0.3518867 -1.19269194  0.5000525  0.7995802 -0.8268586
+[4,]  0.54126740 -0.5923315  0.59592538 -1.3801277  0.9194444  0.6511138
+[5,]  0.02298819 -1.2806856 -0.36783197 -0.8432676 -1.2392163 -0.4812132
+[6,] -0.27934449 -1.0370041  0.74642687 -2.1841962  0.3488571 -0.6985333
+            [,7]       [,8]        [,9]       [,10]
+[1,]  1.54160420 -0.5170260 -0.52851441 -0.04676887
+[2,] -1.46016301 -1.2740124  0.05790032 -1.42846117
+[3,] -0.57536442  2.0125221 -1.91502406 -1.36074140
+[4,]  0.58692626 -0.6922853  0.06218197 -0.10036921
+[5,]  0.03727834  0.1837202  0.26596992 -0.59420697
+[6,] -0.02896566  0.5216695 -0.74571287  0.29136921</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(x, <span class="dv">2</span>, mean)  <span class="do">## Take the mean of each column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] -0.32908184 -0.19267585  0.04411986 -0.21452934 -0.11431928 -0.21070416
+ [7]  0.27329343 -0.21840568 -0.41166243 -0.28090778</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I can also compute the sum of each row.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(x, <span class="dv">1</span>, sum)   <span class="do">## Take the mean of each row</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  2.0024103 -5.6178391 -2.9570003  0.5917455 -4.2964651 -3.0654338
+ [7] -1.9762763 -4.2211525 -3.3652473 -0.6591509 -1.8506994 -3.4277422
+[13] -0.9036821  0.9532504 -0.1092196  2.6233840  2.6924633 -1.8723594
+[19] -4.1938965 -3.4445502</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In both calls to <code>apply()</code>, the return value was a vector of numbers.</p>
+</div>
+</div>
+<p>You’ve probably noticed that the second argument is either a 1 or a 2, depending on whether we want row statistics or column statistics. What exactly <em>is</em> the second argument to <code>apply()</code>?</p>
+<p>The <code>MARGIN</code> argument essentially indicates to <code>apply()</code> which dimension of the array you want to preserve or retain.</p>
+<p>So when taking the mean of each column, I specify</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(x, <span class="dv">2</span>, mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>because I want to collapse the first dimension (the rows) by taking the mean and I want to preserve the number of columns. Similarly, when I want the row sums, I run</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(x, <span class="dv">1</span>, mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>because I want to collapse the columns (the second dimension) and preserve the number of rows (the first dimension).</p>
+<section id="colrow-sums-and-means" class="level3">
+<h3 class="anchored" data-anchor-id="colrow-sums-and-means">Col/Row Sums and Means</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pro-tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For the special case of column/row sums and column/row means of matrices, we have some useful shortcuts.</p>
+<ul>
+<li><code>rowSums</code> = <code>apply(x, 1, sum)</code></li>
+<li><code>rowMeans</code> = <code>apply(x, 1, mean)</code></li>
+<li><code>colSums</code> = <code>apply(x, 2, sum)</code></li>
+<li><code>colMeans</code> = <code>apply(x, 2, mean)</code></li>
+</ul>
+</div>
+</div>
+<p>The shortcut functions are heavily optimized and hence are <strong>much</strong> faster, but you probably won’t notice unless you’re using a large matrix.</p>
+<p>Another nice aspect of these functions is that they are a bit more descriptive. It’s arguably more clear to write <code>colMeans(x)</code> in your code than <code>apply(x, 2, mean)</code>.</p>
+</section>
+<section id="other-ways-to-apply" class="level3">
+<h3 class="anchored" data-anchor-id="other-ways-to-apply">Other Ways to Apply</h3>
+<p>You can do more than take sums and means with the <code>apply()</code> function.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For example, you can compute quantiles of the rows of a matrix using the <code>quantile()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">200</span>), <span class="dv">20</span>, <span class="dv">10</span>)</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            [,1]        [,2]         [,3]        [,4]       [,5]       [,6]
+[1,]  0.30116593 -0.22143862 -0.780484437  0.24715546  0.4620109 -0.1284762
+[2,] -1.02790308 -0.92858900  0.191527407  0.69079520 -0.2844016  0.3033426
+[3,] -0.07119538 -0.06317295 -0.987710196 -0.33902017  0.2571209  0.5702837
+[4,]  1.12855517  1.73876299 -2.037467412  0.06666361 -1.6490073 -1.0061759
+[5,]  1.00533831 -1.29756896  0.009980026  1.98505348 -0.0113328 -0.2182344
+[6,]  0.05762476 -0.28615154 -0.517267972  1.07147513  1.4076715  2.2987914
+           [,7]       [,8]       [,9]       [,10]
+[1,] -0.0770105 -0.0758423 -0.2742897 -1.06783913
+[2,] -0.4108593 -0.7534294 -1.2058456 -0.74607337
+[3,] -0.9714008  0.1451234 -1.4040156 -0.03308528
+[4,] -1.5909674 -0.7444157 -1.6793615 -0.09789561
+[5,]  0.2916761 -2.4666819 -0.9916369  0.99983123
+[6,]  0.6401452  1.1482895  1.0475003 -0.69766008</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Get row quantiles</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(x, <span class="dv">1</span>, quantile, <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.25</span>, <span class="fl">0.75</span>))    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          [,1]        [,2]       [,3]        [,4]       [,5]       [,6]
+25% -0.2610769 -0.88479910 -0.8133057 -1.63449728 -0.7982863 -0.2002075
+75%  0.1664060  0.07254515  0.1005712  0.02552381  0.8227924  1.1290859
+          [,7]       [,8]     [,9]       [,10]       [,11]      [,12]
+25% -0.3483229 -0.2178852 0.142347 -0.00305639 -0.05045378 -0.8347654
+75%  0.2779571  0.6790140 1.226393  0.95341826  0.90565824  0.7197274
+         [,13]       [,14]      [,15]      [,16]      [,17]      [,18]
+25% 0.08092159 -0.08878187 -0.8914984 -0.3260444 -0.4409576 -0.7755624
+75% 1.22063634  0.63504774 -0.1218225  0.8874655  1.3131417  1.0484453
+         [,19]      [,20]
+25% -0.1979752 -0.3811029
+75%  0.7158692  0.6466877</code></pre>
+</div>
+</div>
+<p>Notice that I had to pass the <code>probs = c(0.25, 0.75)</code> argument to <code>quantile()</code> via the <code>...</code> argument to <code>apply()</code>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="vectorizing-a-function" class="level2">
+<h2 class="anchored" data-anchor-id="vectorizing-a-function">Vectorizing a Function</h2>
+<p>Let’s talk about how we can <strong>“vectorize” a function</strong>.</p>
+<p>What this means is that we can write function that typically only takes single arguments and create a new function that can take vector arguments.</p>
+<p>This is often needed when you want to plot functions.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here’s an example of a function that computes the sum of squares given some data, a mean parameter and a standard deviation. The formula is <span class="math inline">\(\sum_{i=1}^n(x_i-\mu)^2/\sigma^2\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>sumsq <span class="ot">&lt;-</span> <span class="cf">function</span>(mu, sigma, x) {</span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sum</span>(((x <span class="sc">-</span> mu) <span class="sc">/</span> sigma)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This function takes a mean <code>mu</code>, a standard deviation <code>sigma</code>, and some data in a vector <code>x</code>.</p>
+<p>In many statistical applications, we want to minimize the sum of squares to find the optimal <code>mu</code> and <code>sigma</code>. Before we do that, we may want to evaluate or plot the function for many different values of <code>mu</code> or <code>sigma</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)       <span class="do">## Generate some data</span></span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sumsq</span>(<span class="at">mu=</span><span class="dv">1</span>, <span class="at">sigma=</span><span class="dv">1</span>, x)  <span class="do">## This works (returns one value)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 203.2493</code></pre>
+</div>
+</div>
+<p>However, passing a vector of <code>mu</code>s or <code>sigma</code>s won’t work with this function because it’s not vectorized.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sumsq</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, x)  <span class="do">## This is not what we want</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 105.2917</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>There’s even a function in R called <code>Vectorize()</code> that <strong>automatically can create a vectorized version of your function</strong>.</p>
+<p>So we could create a <code>vsumsq()</code> function that is fully vectorized as follows.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>vsumsq <span class="ot">&lt;-</span> <span class="fu">Vectorize</span>(sumsq, <span class="fu">c</span>(<span class="st">"mu"</span>, <span class="st">"sigma"</span>))</span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="fu">vsumsq</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 203.24928 122.09428 108.16721 103.66455 101.75042 100.80246 100.28605
+ [8]  99.98663  99.80583  99.69400</code></pre>
+</div>
+</div>
+<p>Pretty cool, right?</p>
+</section>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<ul>
+<li><p>The loop functions in R are very powerful because they allow you to conduct a series of operations on data using a compact form</p></li>
+<li><p>The operation of a loop function involves iterating over an R object (e.g.&nbsp;a list or vector or matrix), applying a function to each element of the object, and the collating the results and returning the collated results.</p></li>
+<li><p>Loop functions make heavy use of anonymous functions, which exist for the life of the loop function but are not stored anywhere</p></li>
+<li><p>The <code>split()</code> function can be used to divide an R object in to subsets determined by another variable which can subsequently be looped over using loop functions.</p></li>
+</ul>
+</section>
+<section id="post-lecture-materials" class="level1">
+<h1>Post-lecture materials</h1>
+<section id="final-questions" class="level3">
+<h3 class="anchored" data-anchor-id="final-questions">Final Questions</h3>
+<p>Here are some post-lecture questions to help you think about the material discussed.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Write a function <code>compute_s_n()</code> that for any given <code>n</code> computes the sum</li>
+</ol>
+<p><span class="math display">\[
+S_n = 1^2 + 2^2 + 3^2 + \ldots + n^2
+\]</span></p>
+<p>Report the value of the sum when <span class="math inline">\(n\)</span> = 10.</p>
+<ol start="2" type="1">
+<li><p>Define an empty numerical vector <code>s_n</code> of size 25 using <code>s_n &lt;- vector("numeric", 25)</code> and store in the results of <span class="math inline">\(S_1, S_2, \ldots, S_n\)</span> using a for-loop.</p></li>
+<li><p>Repeat Q3, but this time use <code>sapply()</code>.</p></li>
+<li><p>Plot <code>s_n</code> versus <code>n</code>. Use points defined by <span class="math inline">\(n= 1, \ldots, 25\)</span></p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="additional-resources" class="level3">
+<h3 class="anchored" data-anchor-id="additional-resources">Additional Resources</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://rdpeng.github.io/Biostat776/lecture-loop-functions" class="uri">https://rdpeng.github.io/Biostat776/lecture-loop-functions</a></li>
+<li><a href="https://rafalab.github.io/dsbook/programming-basics.html#vectorization" class="uri">https://rafalab.github.io/dsbook/programming-basics.html#vectorization</a></li>
+</ul>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
