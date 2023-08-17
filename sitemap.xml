@@ -1,143 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/schedule.html</loc>
-    <lastmod>2023-08-17T19:38:49.778Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/syllabus.html</loc>
-    <lastmod>2023-08-17T19:38:48.904Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/index.html</loc>
-    <lastmod>2023-08-17T19:38:45.807Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/projects/2022-09-15-project-2/index.html</loc>
-    <lastmod>2023-08-17T19:38:44.825Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/projects/2022-10-04-project-3/index.html</loc>
-    <lastmod>2023-08-17T19:38:43.136Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-29-error-handling-and-generation/index.html</loc>
-    <lastmod>2023-08-17T19:38:41.380Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-10-13-working-with-text-sentiment-analysis/index.html</loc>
-    <lastmod>2023-08-17T19:38:39.057Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-15-ggplot2-plotting-system-part-2/index.html</loc>
-    <lastmod>2023-08-17T19:38:36.425Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-10-11-working-with-factors/index.html</loc>
-    <lastmod>2023-08-17T19:38:34.279Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-22-control-structures/index.html</loc>
-    <lastmod>2023-08-17T19:38:32.271Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-08-30-introduction-to-r-and-rstudio/index.html</loc>
-    <lastmod>2023-08-17T19:38:29.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-22-functions/index.html</loc>
-    <lastmod>2023-08-17T19:38:27.227Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-01-literate-programming/index.html</loc>
-    <lastmod>2023-08-17T19:38:24.551Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-13-ggplot2-plotting-system-part-1/index.html</loc>
-    <lastmod>2023-08-17T19:38:21.932Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-06-reading-and-writing-data/index.html</loc>
-    <lastmod>2023-08-17T19:38:18.826Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-13-plotting-systems/index.html</loc>
-    <lastmod>2023-08-17T19:38:15.768Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-08-tidy-data-and-the-tidyverse/index.html</loc>
-    <lastmod>2023-08-17T19:38:13.660Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-08-joining-data-in-r/index.html</loc>
-    <lastmod>2023-08-17T19:38:11.372Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-10-04-working-with-dates-and-times/index.html</loc>
-    <lastmod>2023-08-17T19:38:12.681Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-27-loop-functions/index.html</loc>
-    <lastmod>2023-08-17T19:38:14.902Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-06-managing-data-frames-with-tidyverse/index.html</loc>
-    <lastmod>2023-08-17T19:38:17.323Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-10-06-regular-expressions/index.html</loc>
-    <lastmod>2023-08-17T19:38:20.323Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-10-20-python-for-r-users/index.html</loc>
-    <lastmod>2023-08-17T19:38:23.113Z</lastmod>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-20-r-nuts-and-bolts/index.html</loc>
+    <lastmod>2023-08-17T19:41:04.778Z</lastmod>
   </url>
   <url>
     <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/welcome/index.html</loc>
-    <lastmod>2023-08-17T19:38:25.823Z</lastmod>
+    <lastmod>2023-08-17T19:41:02.150Z</lastmod>
   </url>
   <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-01-reproducible-research/index.html</loc>
-    <lastmod>2023-08-17T19:38:28.162Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-10-18-best-practices-data-analyses/index.html</loc>
-    <lastmod>2023-08-17T19:38:31.273Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-08-30-introduction-to-gitgithub/index.html</loc>
-    <lastmod>2023-08-17T19:38:32.833Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-01-reference-management/index.html</loc>
-    <lastmod>2023-08-17T19:38:35.180Z</lastmod>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-15-ggplot2-plotting-system-part-2/index.html</loc>
+    <lastmod>2023-08-17T19:40:58.754Z</lastmod>
   </url>
   <url>
     <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-29-debugging-r-code/index.html</loc>
-    <lastmod>2023-08-17T19:38:37.602Z</lastmod>
+    <lastmod>2023-08-17T19:40:55.898Z</lastmod>
   </url>
   <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-20-r-nuts-and-bolts/index.html</loc>
-    <lastmod>2023-08-17T19:38:40.409Z</lastmod>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-08-tidy-data-and-the-tidyverse/index.html</loc>
+    <lastmod>2023-08-17T19:40:53.222Z</lastmod>
   </url>
   <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/projects/2022-09-06-project-1/index.html</loc>
-    <lastmod>2023-08-17T19:38:42.273Z</lastmod>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-10-06-regular-expressions/index.html</loc>
+    <lastmod>2023-08-17T19:40:51.202Z</lastmod>
   </url>
   <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/projects/2022-08-30-project-0/index.html</loc>
-    <lastmod>2023-08-17T19:38:43.880Z</lastmod>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-10-13-working-with-text-sentiment-analysis/index.html</loc>
+    <lastmod>2023-08-17T19:40:48.814Z</lastmod>
   </url>
   <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/projects.html</loc>
-    <lastmod>2023-08-17T19:38:45.404Z</lastmod>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-10-11-working-with-factors/index.html</loc>
+    <lastmod>2023-08-17T19:40:45.322Z</lastmod>
   </url>
   <url>
-    <loc>https://lcolladotor.github.io/jhustatcomputing2023/lectures.html</loc>
-    <lastmod>2023-08-17T19:38:47.965Z</lastmod>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-06-reading-and-writing-data/index.html</loc>
+    <lastmod>2023-08-17T19:40:42.306Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-06-managing-data-frames-with-tidyverse/index.html</loc>
+    <lastmod>2023-08-17T19:40:39.330Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-01-literate-programming/index.html</loc>
+    <lastmod>2023-08-17T19:40:36.566Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-10-04-working-with-dates-and-times/index.html</loc>
+    <lastmod>2023-08-17T19:40:34.082Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-22-control-structures/index.html</loc>
+    <lastmod>2023-08-17T19:40:31.654Z</lastmod>
   </url>
   <url>
     <loc>https://lcolladotor.github.io/jhustatcomputing2023/resources.html</loc>
-    <lastmod>2023-08-17T19:38:49.237Z</lastmod>
+    <lastmod>2023-08-17T19:40:29.530Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/projects.html</loc>
+    <lastmod>2023-08-17T19:40:26.362Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/projects/2022-08-30-project-0/index.html</loc>
+    <lastmod>2023-08-17T19:40:25.422Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/projects/2022-09-06-project-1/index.html</loc>
+    <lastmod>2023-08-17T19:40:23.862Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/schedule.html</loc>
+    <lastmod>2023-08-17T19:40:21.442Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/projects/2022-09-15-project-2/index.html</loc>
+    <lastmod>2023-08-17T19:40:22.842Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/projects/2022-10-04-project-3/index.html</loc>
+    <lastmod>2023-08-17T19:40:24.702Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/index.html</loc>
+    <lastmod>2023-08-17T19:40:25.742Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/lectures.html</loc>
+    <lastmod>2023-08-17T19:40:29.214Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/syllabus.html</loc>
+    <lastmod>2023-08-17T19:40:30.518Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-13-plotting-systems/index.html</loc>
+    <lastmod>2023-08-17T19:40:32.590Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-08-joining-data-in-r/index.html</loc>
+    <lastmod>2023-08-17T19:40:35.098Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-29-error-handling-and-generation/index.html</loc>
+    <lastmod>2023-08-17T19:40:37.518Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-10-20-python-for-r-users/index.html</loc>
+    <lastmod>2023-08-17T19:40:40.614Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-27-loop-functions/index.html</loc>
+    <lastmod>2023-08-17T19:40:43.770Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-13-ggplot2-plotting-system-part-1/index.html</loc>
+    <lastmod>2023-08-17T19:40:47.130Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-08-30-introduction-to-gitgithub/index.html</loc>
+    <lastmod>2023-08-17T19:40:49.402Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-01-reproducible-research/index.html</loc>
+    <lastmod>2023-08-17T19:40:52.214Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-08-30-introduction-to-r-and-rstudio/index.html</loc>
+    <lastmod>2023-08-17T19:40:54.554Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-22-functions/index.html</loc>
+    <lastmod>2023-08-17T19:40:57.482Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-10-18-best-practices-data-analyses/index.html</loc>
+    <lastmod>2023-08-17T19:41:00.838Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lcolladotor.github.io/jhustatcomputing2023/posts/2022-09-01-reference-management/index.html</loc>
+    <lastmod>2023-08-17T19:41:03.086Z</lastmod>
   </url>
 </urlset>
