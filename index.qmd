@@ -1,6 +1,6 @@
 ---
 title: "Welcome to Statistical Computing!"
-image: images/cool_icon.png
+image: http://lcolladotor.github.io/media/Leo_transparente.png
 about:
   template: jolla
   links:
@@ -24,7 +24,7 @@ I suggest that you start by looking over the [Syllabus](syllabus.qmd) and [Sched
 
 ## Acknowledgements
 
-This course was developed and is maintained by [Stephanie Hicks](https://www.stephaniehicks.com).
+This course was developed by [Stephanie Hicks](https://www.stephaniehicks.com) and is now being adapted and maintained by [Leonardo Collado Torres](http://lcolladotor.github.io/).
 
 The following individuals have contributed to improving the course or materials have been adapted from their courses: [Roger D. Peng](https://github.com/rdpeng), [Andreas Handel](https://www.andreashandel.com), [Naim Rashid](https://naimurashid.github.io), [Michael Love](https://github.com/mikelove).
 
