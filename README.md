@@ -4,7 +4,7 @@ This GitHub repository is for the Johns Hopkins BSPH course titled 'Statistical 
 
 ## Instructor
 
--   Leonardo Collado Torres (http://lcolladotor.github.io/)
+-   Leonardo Collado Torres ([lcolladotor.github.io](http://lcolladotor.github.io/))
 
 ## Teaching Assistants
 
