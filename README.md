@@ -1,16 +1,17 @@
 # Statistical Computing
 
-This repo is for the Johns Hopkins BSPH course titled 'Statistical Computing' (BSPH 140.776.01) in Fall 2022.
+This GitHub repository is for the Johns Hopkins BSPH course titled 'Statistical Computing' (BSPH 140.776.01) in Fall 2023.
 
 ## Instructor
 
--   Stephanie C. Hicks (<https://www.stephaniehicks.com>)
+-   Leonardo Collado Torres (http://lcolladotor.github.io/)
 
 ## Teaching Assistants
 
--   Phyllis Wei
+-   Emily Norton
 -   Joe Sartini
+-   Phyllis Wei
 
 # Bugs
 
-Github pull requests are welcome for bugs 
+Github pull requests are welcome for bugs
