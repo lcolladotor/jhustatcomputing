@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Statistical Computing (BSPH 140.776) - Syllabus</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Statistical Computing (BSPH 140.776)</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-general-information" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">General Information</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-general-information">    
+        <li>
+    <a class="dropdown-item" href="./syllabus.html" rel="" target="">
+ <span class="dropdown-text">Syllabus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./schedule.html" rel="" target="">
+ <span class="dropdown-text">Schedule</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-course-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Course Materials</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-course-materials">    
+        <li>
+    <a class="dropdown-item" href="./lectures.html" rel="" target="">
+ <span class="dropdown-text">Lectures</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./projects.html" rel="" target="">
+ <span class="dropdown-text">Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./resources.html" rel="" target="">
+ <span class="dropdown-text">Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lcolladotor/jhustatcomputing2023" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/lcolladotor" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="./index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#course-information" id="toc-course-information" class="nav-link active" data-scroll-target="#course-information">Course Information</a>
+  <ul class="collapse">
+  <li><a href="#how-to-register-and-participate" id="toc-how-to-register-and-participate" class="nav-link" data-scroll-target="#how-to-register-and-participate">How to register and participate</a></li>
+  <li><a href="#instructor" id="toc-instructor" class="nav-link" data-scroll-target="#instructor">Instructor</a></li>
+  <li><a href="#teaching-assistants" id="toc-teaching-assistants" class="nav-link" data-scroll-target="#teaching-assistants">Teaching Assistants</a></li>
+  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting help</a></li>
+  </ul></li>
+  <li><a href="#important-links" id="toc-important-links" class="nav-link" data-scroll-target="#important-links">Important Links</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives:</a></li>
+  <li><a href="#lectures" id="toc-lectures" class="nav-link" data-scroll-target="#lectures">Lectures</a></li>
+  <li><a href="#textbook-and-other-course-material" id="toc-textbook-and-other-course-material" class="nav-link" data-scroll-target="#textbook-and-other-course-material">Textbook and Other Course Material</a></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
+  <li><a href="#projects" id="toc-projects" class="nav-link" data-scroll-target="#projects">Projects</a>
+  <ul class="collapse">
+  <li><a href="#project-collaboration" id="toc-project-collaboration" class="nav-link" data-scroll-target="#project-collaboration">Project collaboration</a></li>
+  </ul></li>
+  <li><a href="#discussion-forum" id="toc-discussion-forum" class="nav-link" data-scroll-target="#discussion-forum">Discussion Forum</a></li>
+  <li><a href="#exams" id="toc-exams" class="nav-link" data-scroll-target="#exams">Exams</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  <li><a href="#policy-for-submitted-projects-late" id="toc-policy-for-submitted-projects-late" class="nav-link" data-scroll-target="#policy-for-submitted-projects-late">Policy for submitted projects late</a>
+  <ul class="collapse">
+  <li><a href="#project-1" id="toc-project-1" class="nav-link" data-scroll-target="#project-1">Project 1</a></li>
+  <li><a href="#project-2-and-project-3" id="toc-project-2-and-project-3" class="nav-link" data-scroll-target="#project-2-and-project-3">Project 2 and Project 3</a></li>
+  <li><a href="#regrading-policy" id="toc-regrading-policy" class="nav-link" data-scroll-target="#regrading-policy">Regrading Policy</a></li>
+  </ul></li>
+  <li><a href="#academic-ethics-and-student-conduct-code" id="toc-academic-ethics-and-student-conduct-code" class="nav-link" data-scroll-target="#academic-ethics-and-student-conduct-code">Academic Ethics and Student Conduct Code</a></li>
+  <li><a href="#disability-support-service" id="toc-disability-support-service" class="nav-link" data-scroll-target="#disability-support-service">Disability Support Service</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a>
+  <ul class="collapse">
+  <li><a href="#getting-set-up" id="toc-getting-set-up" class="nav-link" data-scroll-target="#getting-set-up">Getting set up</a></li>
+  </ul></li>
+  <li><a href="#general-disclaimers" id="toc-general-disclaimers" class="nav-link" data-scroll-target="#general-disclaimers">General Disclaimers</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Syllabus</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="course-information" class="level2">
+<h2 class="anchored" data-anchor-id="course-information">Course Information</h2>
+<ul>
+<li>Location: In person and Online for Fall 2022</li>
+<li>Course time: Tuesdays and Thursdays from 1:30-2:50pm (<strong>Eastern Daylight Time</strong> zone)</li>
+<li>Course location:</li>
+<li>140.776.01 is in person in W2008</li>
+<li>140.776.41 will have recorded lectures posted online after class.</li>
+<li>Assignments: Three projects</li>
+</ul>
+<section id="how-to-register-and-participate" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-register-and-participate">How to register and participate</h3>
+<ul>
+<li><strong>To add the course to your 1st term registration</strong>: You can sign up for either the in person (140.776.01) or online only (140.776.41) course.</li>
+<li>All lectures will be recorded and posted on CoursePlus. You can watch all lecture material and complete the assignments asynchronously.</li>
+<li>Please course instructor if interested in auditing.</li>
+</ul>
+</section>
+<section id="instructor" class="level3">
+<h3 class="anchored" data-anchor-id="instructor">Instructor</h3>
+<ul>
+<li>Stephanie C. Hicks (<a href="https://www.stephaniehicks.com" class="uri">https://www.stephaniehicks.com</a>)
+<ul>
+<li>Office Location: E3545, Wolfe Street building</li>
+<li>Email: shicks19@jhu.edu</li>
+</ul></li>
+</ul>
+<p>Instructor office hours are announced on CoursePlus. If there are conflicts and/or need to cancel office hours, announcements will be made on CoursePlus.</p>
+</section>
+<section id="teaching-assistants" class="level3">
+<h3 class="anchored" data-anchor-id="teaching-assistants">Teaching Assistants</h3>
+<ul>
+<li>Phyllis Wei (<a href="ywei43@jhu.edu">ywei43@jhu.edu</a>)</li>
+<li>Joe Sartini (<a href="jsartin1@jhu.edu">jsartin1@jhu.edu</a>)</li>
+</ul>
+<p>TA office hours are announced on CoursePlus.</p>
+</section>
+<section id="getting-help" class="level3">
+<h3 class="anchored" data-anchor-id="getting-help">Getting help</h3>
+<p>In order of preference, here is a preferred list of ways to get help:</p>
+<ol type="1">
+<li>We <strong>strongly encourage</strong> you to use CoursePlus to ask questions first, before joining office hours. The reason for this is so that other students in the class (who likely have similar questions) can also benefit from the questions and answers asked by your colleagues.</li>
+<li>You are welcome to join office hours to get more group interactive feedback.</li>
+<li>If you are not able to make the office hours, appointments can be made by email with either the instructor or the TAs.</li>
+</ol>
+</section>
+</section>
+<section id="important-links" class="level2">
+<h2 class="anchored" data-anchor-id="important-links">Important Links</h2>
+<ul>
+<li>Course website: <a href="https://stephaniehicks.com/jhustatcomputing2022" class="uri">https://stephaniehicks.com/jhustatcomputing2022</a></li>
+<li>GitHub repository with all course material: <a href="https://github.com/stephaniehicks/jhustatcomputing2022" class="uri">https://github.com/stephaniehicks/jhustatcomputing2022</a></li>
+</ul>
+</section>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives:</h2>
+<p>Upon successfully completing this course, students will be able to:</p>
+<ol type="1">
+<li>Install and configure software necessary for a statistical programming environment</li>
+<li>Discuss generic programming language concepts as they are implemented in a high-level statistical language</li>
+<li>Write and debug code in base R and the tidyverse (and integrate code from Python modules)</li>
+<li>Build basic data visualizations using R and the tidyverse</li>
+<li>Discuss best practices for coding and reproducible research, basics of data ethics, basics of working with special data types, and basics of storing data</li>
+</ol>
+</section>
+<section id="lectures" class="level2">
+<h2 class="anchored" data-anchor-id="lectures">Lectures</h2>
+<p>In Fall 2022, we will have in person lectures that will be recorded enabling an entirely online section for the course too. <strong>Mandatory attendance is not required.</strong></p>
+</section>
+<section id="textbook-and-other-course-material" class="level2">
+<h2 class="anchored" data-anchor-id="textbook-and-other-course-material">Textbook and Other Course Material</h2>
+<p>There is no required textbook. We will make use of several freely available textbooks and other materials. All course materials will be provided. We will use the R software for data analysis, which is freely available for download.</p>
+</section>
+<section id="software" class="level2">
+<h2 class="anchored" data-anchor-id="software">Software</h2>
+<p>We will make heavy use of R in this course, so you should have R installed. You can obtain R from the <a href="https://cran.r-project.org">Comprehensive R Archive Network</a>. There are versions available for Mac, Windows, and Unix/Linux. This software is <strong>required</strong> for this course.</p>
+<p>It is important that you have the latest version of R installed. For this course we will be using <strong>R version 4.2.1</strong>. You can determine what version of R you have by starting up R and typing into the console <code>R.version.string</code> and hitting the <code>return</code>/<code>enter</code> key. If you do not have the proper version of R installed, go to <a href="https://cran.r-project.org">CRAN</a> and download and install the latest version.</p>
+<p>We will also make use of the RStudio interactive development environment (IDE). RStudio requires that R be installed, and so is an “add-on” to R. You can obtain the RStudio Desktop for free from the <a href="https://www.rstudio.com/">RStudio web site</a>. In particular, we will make heavy use of it when developing R packages. It is also essential that you have the latest release of RStudio. You can determine the version of RStudio by looking at menu item <code>Help &gt; About RStudio</code>. You should be using <strong>RStudio version 1.4.1106 or higher</strong>.</p>
+</section>
+<section id="projects" class="level2">
+<h2 class="anchored" data-anchor-id="projects">Projects</h2>
+<p>There will be 4 assignments, due every 2–3 weeks. Projects will be submitted electronically via the Drop Box on the CoursePlus web site (unless otherwise specified).</p>
+<p>The project assignments will be due on</p>
+<ul>
+<li>Project 0: September 8, 1:29pm (entirely optional and not graded but hopefully useful and fun)</li>
+<li>Project 1: September 16, 11:59pm</li>
+<li>Project 2: September 30, 11:59pm</li>
+<li>Project 3: October 21, 11:59pm</li>
+</ul>
+<section id="project-collaboration" class="level3">
+<h3 class="anchored" data-anchor-id="project-collaboration">Project collaboration</h3>
+<p>Please feel free to study together and talk to one another about project assignments. The mutual instruction that students give each other is among the most valuable that can be achieved.</p>
+<p>However, it is expected that <strong>project assignments will be implemented and written up independently unless otherwise specified</strong>. Specifically, please do not share analytic code or output. Please do not collaborate on write-up and interpretation. Please do not access or use solutions from any source before your project assignment is submitted for grading.</p>
+</section>
+</section>
+<section id="discussion-forum" class="level2">
+<h2 class="anchored" data-anchor-id="discussion-forum">Discussion Forum</h2>
+<p>The course will make use of the CoursePlus Discussion Forum in order to ask and answer questions regarding any of the course materials. The Instructor and the Teaching Assistants will monitor the discussion boards and answer questions when appropriate.</p>
+</section>
+<section id="exams" class="level2">
+<h2 class="anchored" data-anchor-id="exams">Exams</h2>
+<p>There are <strong>no exams</strong> in this course.</p>
+</section>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<p>Grades in the course will be based on Projects 0–3 with a percentage of the final grade being apportioned to each assignment. Each of Projects 1–3 counts approximately equally in the final grade. Grades for the projects and the final grade will be issued via the CoursePlus grade book.</p>
+</section>
+<section id="policy-for-submitted-projects-late" class="level2">
+<h2 class="anchored" data-anchor-id="policy-for-submitted-projects-late">Policy for submitted projects late</h2>
+<section id="project-1" class="level3">
+<h3 class="anchored" data-anchor-id="project-1">Project 1</h3>
+<p>For submitted solutions that had prior approval to have a two day extension and submitted within the two days, these projects will be graded with no late day penalty.</p>
+<p>For submitted solutions without prior approval to have an extension, these projects will be graded, but have a late day penalty of 5% off the 100% starting point for each day (24 hours from the original date and time the assignment was due) that it is past due from the original due date.</p>
+<ul>
+<li>For example, we will deduct 5% for the assignment that is &lt;24 hours late, 10% points for the assignment that is 24-48 hours late, and 15% points for the assignment that is 48-72 hours late.</li>
+<li>If you had approval from the instructor to submit two days late, but submitted the assignment after the extension due date and time, the penalty will apply starting with the extension date if submitted late. For example, we will deduct 5% for the assignment that is &lt;24 hours late from the extension due date, etc.</li>
+</ul>
+</section>
+<section id="project-2-and-project-3" class="level3">
+<h3 class="anchored" data-anchor-id="project-2-and-project-3">Project 2 and Project 3</h3>
+<p><strong>Starting with Project 2 and 3, the instructor and TAs will not accept any more email late day policy requests</strong>.</p>
+<p>A new policy will be implemented for late submissions. This is the new policy:</p>
+<ul>
+<li>Each student will be given two free “late days” for the rest of the course.</li>
+<li>A late day extends the individual project deadline by 24 hours without penalty.</li>
+<li>The late days can be applied to just one project (e.g.&nbsp;two late days for Project 2), or they can be split across the two projects (one late day for Project 2 and one late day for Project 3). This is entirely left up to the discretion of the student.</li>
+<li>Late days are intended to give you flexibility: you can use them for any reason no questions asked.</li>
+<li>You do not get any bonus points for not using your late days.</li>
+</ul>
+<p>Although the each student is only given a total of two late days, we will be accepting homework from students that pass this limit.</p>
+<ul>
+<li>We will be deducting 5% for each extra late day. For example, if you have already used all of your late days for the term, we will deduct 5% for the assignment that is &lt;24 hours late, 10% points for the assignment that is 24-48 hours late, and 15% points for the assignment that is 48-72 hours late.</li>
+<li><strong>We will not grade assignments that are more than 3 days past the original due date</strong>.</li>
+</ul>
+</section>
+<section id="regrading-policy" class="level3">
+<h3 class="anchored" data-anchor-id="regrading-policy">Regrading Policy</h3>
+<p>It is very important to us that all assignments are properly graded. If you believe there is an error in your assignment grading, please send an email to one of the instructors within 7 days of receiving the grade. No re-grade requests will be accepted orally, and no regrade requests will be accepted more than 7 days after you receive the grade for the assignment.</p>
+</section>
+</section>
+<section id="academic-ethics-and-student-conduct-code" class="level2">
+<h2 class="anchored" data-anchor-id="academic-ethics-and-student-conduct-code">Academic Ethics and Student Conduct Code</h2>
+<p>Students enrolled in the Bloomberg School of Public Health of The Johns Hopkins University assume an obligation to conduct themselves in a manner appropriate to the University’s mission as an institution of higher education. A student is obligated to refrain from acts which he or she knows, or under the circumstances has reason to know, impair the academic integrity of the University. Violations of academic integrity include, but are not limited to: cheating; plagiarism; knowingly furnishing false information to any agent of the University for inclusion in the academic record; violation of the rights and welfare of animal or human subjects in research; and misconduct as a member of either School or University committees or recognized groups or organizations.</p>
+<p>Students should be familiar with the policies and procedures specified under Policy and Procedure Manual Student-01 (Academic Ethics), available on the school’s <a href="http://my.jhsph.edu">portal</a>.</p>
+<p>The faculty, staff and students of the Bloomberg School of Public Health and the Johns Hopkins University have the shared responsibility to conduct themselves in a manner that upholds the law and respects the rights of others. Students enrolled in the School are subject to the Student Conduct Code (detailed in Policy and Procedure Manual Student-06) and assume an obligation to conduct themselves in a manner which upholds the law and respects the rights of others. They are responsible for maintaining the academic integrity of the institution and for preserving an environment conducive to the safe pursuit of the School’s educational, research, and professional practice missions.</p>
+</section>
+<section id="disability-support-service" class="level2">
+<h2 class="anchored" data-anchor-id="disability-support-service">Disability Support Service</h2>
+<p>Students requiring accommodations for disabilities should register with <a href="https://publichealth.jhu.edu/about/inclusion-diversity-anti-racism-and-equity-idare/student-disability-services">Student Disability Service (SDS)</a>. It is the responsibility of the student to register for accommodations with SDS. Accommodations take effect upon approval and apply to the remainder of the time for which a student is registered and enrolled at the Bloomberg School of Public Health. Once you are f a student in your class has approved accommodations you will receive formal notification and the student will be encouraged to reach out. If you have questions about requesting accommodations, please contact <code>BSPH.dss@jhu.edu</code>.</p>
+</section>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p>This is a quantitative course. We will not discuss the mathematical details of specific data analysis approaches, however some statistical background and being comfortable with quantitative thinking are useful. Previous experience with writing computer programs in general and R in particular is also helpful, but not necessary. If you have no programming experience, expect to spend extra time getting yourself familiar with R. As long as you are willing to invest the time to learn the programming and you do not mind thinking quantitatively, you should be able to take the course, independent of your background.</p>
+<p><em>Formal requirement for the course is <a href="https://www.jhsph.edu/courses/list/?keyword=140.621">Biostatistics 140.621</a>. Knowledge of material from 140.621 is assumed. If you didn’t take this course, please contact me to get permission to enroll.</em></p>
+<section id="getting-set-up" class="level3">
+<h3 class="anchored" data-anchor-id="getting-set-up">Getting set up</h3>
+<p>You must install <a href="https://cran.r-project.org">R</a> and <a href="https://rstudio.com">RStudio</a> on your computer in order to complete this course. These are two <strong>different</strong> applications that must be installed separately before they can be used together:</p>
+<ul>
+<li><p>R is the core underlying programming language and computing engine that we will be learning in this course</p></li>
+<li><p>RStudio is an interface into R that makes many aspects of using and programming R simpler</p></li>
+</ul>
+<p>Both R and RStudio are available for Windows, macOS, and most flavors of Unix and Linux. Please download the version that is suitable for your computing setup.</p>
+<p>Throughout the course, we will make use of numerous R add-on packages that must be installed over the Internet. Packages can be installed using the <code>install.packages()</code> function in R. For example, to install the <code>tidyverse</code> package, you can run</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>in the R console.</p>
+<section id="how-to-download-r-for-windows" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-download-r-for-windows">How to Download R for Windows</h4>
+<p>Go to <a href="">https://cran.r-project.org</a> and</p>
+<ol type="1">
+<li><p>Click the link to “Download R for Windows”</p></li>
+<li><p>Click on “base”</p></li>
+<li><p>Click on “Download R 4.2.1 for Windows”</p></li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The version in the video is not the latest version. Please download the latest version.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="videos/downloadRWindows.gif" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Video Demo for Downloading R for Windows</figcaption>
+</figure>
+</div>
+</section>
+<section id="how-to-download-r-for-the-mac" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-download-r-for-the-mac">How to Download R for the Mac</h4>
+<p>Goto <a href="">https://cran.r-project.org</a> and</p>
+<ol type="1">
+<li><p>Click the link to “Download R for (Mac) OS X”.</p></li>
+<li><p>Click on “R-4.2.1.pkg”</p></li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The version in the video is not the latest version. Please download the latest version.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="videos/downloadRMac.gif" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Video Demo for Downloading R for the Mac</figcaption>
+</figure>
+</div>
+</section>
+<section id="how-to-download-rstudio" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-download-rstudio">How to Download RStudio</h4>
+<p>Goto <a href="">https://rstudio.com</a> and</p>
+<ol type="1">
+<li><p>Click on “Products” in the top menu</p></li>
+<li><p>Then click on “RStudio” in the drop down menu</p></li>
+<li><p>Click on “RStudio Desktop”</p></li>
+<li><p>Click the button that says “DOWNLOAD RSTUDIO DESKTOP”</p></li>
+<li><p>Click the button under “RStudio Desktop” Free</p></li>
+<li><p>Under the section “All Installers” choose the file that is appropriate for your operating system.</p></li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The video shows how to download RStudio for the Mac but you should download RStudio for whatever computing setup you have</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="videos/downloadRStudio.gif" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Video Demo for Downloading RStudio</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="general-disclaimers" class="level2">
+<h2 class="anchored" data-anchor-id="general-disclaimers">General Disclaimers</h2>
+<ul>
+<li>This syllabus is a general plan, deviations announced to the class by the instructor may be necessary.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

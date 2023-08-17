@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stephanie Hicks">
+<meta name="dcterms.date" content="2022-10-13">
+<meta name="description" content="Introduction to tidytext and sentiment analysis">
+
+<title>Statistical Computing (BSPH 140.776) - Tidytext and sentiment analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Statistical Computing (BSPH 140.776)</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-general-information" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">General Information</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-general-information">    
+        <li>
+    <a class="dropdown-item" href="../../syllabus.html" rel="" target="">
+ <span class="dropdown-text">Syllabus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../schedule.html" rel="" target="">
+ <span class="dropdown-text">Schedule</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-course-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Course Materials</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-course-materials">    
+        <li>
+    <a class="dropdown-item" href="../../lectures.html" rel="" target="">
+ <span class="dropdown-text">Lectures</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects.html" rel="" target="">
+ <span class="dropdown-text">Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources.html" rel="" target="">
+ <span class="dropdown-text">Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lcolladotor/jhustatcomputing2023" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/lcolladotor" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Tidytext and sentiment analysis</h1>
+                  <div>
+        <div class="description">
+          Introduction to tidytext and sentiment analysis
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">module 5</div>
+                <div class="quarto-category">week 7</div>
+                <div class="quarto-category">tidyverse</div>
+                <div class="quarto-category">tidytext</div>
+                <div class="quarto-category">sentiment analysis</div>
+              </div>
+                  </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Affiliation</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author"><a href="https://stephaniehicks.com">Stephanie Hicks</a> </p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              Department of Biostatistics, Johns Hopkins
+            </p>
+        </div>
+      </div>
+
+  <div class="quarto-title-meta">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 13, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#pre-lecture-materials" id="toc-pre-lecture-materials" class="nav-link active" data-scroll-target="#pre-lecture-materials">Pre-lecture materials</a>
+  <ul class="collapse">
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  </ul></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#tidy-text" id="toc-tidy-text" class="nav-link" data-scroll-target="#tidy-text">Tidy text</a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-tidy-format" id="toc-what-is-a-tidy-format" class="nav-link" data-scroll-target="#what-is-a-tidy-format">What is a <strong>tidy</strong> format?</a></li>
+  <li><a href="#what-is-this-common-philosphy" id="toc-what-is-this-common-philosphy" class="nav-link" data-scroll-target="#what-is-this-common-philosphy">What is this common philosphy?</a></li>
+  <li><a href="#what-is-a-tidy-text-format" id="toc-what-is-a-tidy-text-format" class="nav-link" data-scroll-target="#what-is-a-tidy-text-format">What is a <strong>tidy text</strong> format?</a></li>
+  <li><a href="#why-is-this-format-useful" id="toc-why-is-this-format-useful" class="nav-link" data-scroll-target="#why-is-this-format-useful">Why is this format useful?</a></li>
+  <li><a href="#how-does-it-work" id="toc-how-does-it-work" class="nav-link" data-scroll-target="#how-does-it-work">How does it work?</a></li>
+  <li><a href="#text-mining-and-tokens" id="toc-text-mining-and-tokens" class="nav-link" data-scroll-target="#text-mining-and-tokens">Text Mining and Tokens</a></li>
+  </ul></li>
+  <li><a href="#example-text-from-works-of-jane-austen" id="toc-example-text-from-works-of-jane-austen" class="nav-link" data-scroll-target="#example-text-from-works-of-jane-austen">Example: text from works of Jane Austen</a></li>
+  <li><a href="#sentiment-analysis" id="toc-sentiment-analysis" class="nav-link" data-scroll-target="#sentiment-analysis">Sentiment Analysis</a>
+  <ul class="collapse">
+  <li><a href="#the-sentiments-dataset" id="toc-the-sentiments-dataset" class="nav-link" data-scroll-target="#the-sentiments-dataset">The <code>sentiments</code> dataset</a>
+  <ul class="collapse">
+  <li><a href="#joining-together-tidy-text-data-with-lexicons" id="toc-joining-together-tidy-text-data-with-lexicons" class="nav-link" data-scroll-target="#joining-together-tidy-text-data-with-lexicons">Joining together tidy text data with lexicons</a></li>
+  <li><a href="#word-clouds" id="toc-word-clouds" class="nav-link" data-scroll-target="#word-clouds">Word clouds</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#converting-to-and-from-tidy-and-non-tidy-formats" id="toc-converting-to-and-from-tidy-and-non-tidy-formats" class="nav-link" data-scroll-target="#converting-to-and-from-tidy-and-non-tidy-formats">Converting to and from tidy and non-tidy formats</a>
+  <ul class="collapse">
+  <li><a href="#document-term-matrix" id="toc-document-term-matrix" class="nav-link" data-scroll-target="#document-term-matrix">Document-term matrix</a></li>
+  <li><a href="#creating-documenttermmatrix-objects" id="toc-creating-documenttermmatrix-objects" class="nav-link" data-scroll-target="#creating-documenttermmatrix-objects">Creating DocumentTermMatrix objects</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<!-- Add interesting quote -->
+<section id="pre-lecture-materials" class="level1">
+<h1>Pre-lecture materials</h1>
+<section id="acknowledgements" class="level3">
+<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
+<p>Material for this lecture was borrowed and adopted from</p>
+<ul>
+<li><a href="https://www.tidytextmining.com/">Text mining with R: A Tidy Approach</a> from Julia Silge and David Robinson which uses the <a href="https://github.com/juliasilge/tidytext"><code>tidytext</code></a> R package</li>
+<li><a href="https://smltar.com/preface.html">Supervised Machine Learning for Text Analsyis in R</a> from Emil Hvitfeldt, Julia Sigle</li>
+</ul>
+</section>
+</section>
+<section id="learning-objectives" class="level1">
+<h1>Learning objectives</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Learning objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>At the end of this lesson you will:</strong></p>
+<ul>
+<li>Learn about what is is meant by “tidy text” data</li>
+<li>Know the fundamentals of the <code>tidytext</code> R package to create tidy text data</li>
+<li>Know the fundamentals of sentiment analysis</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="motivation" class="level1">
+<h1>Motivation</h1>
+<p>Analyzing text data such as Twitter content, books or news articles is commonly performed in data science.</p>
+<p>In this lecture, we will be asking the following questions:</p>
+<ol type="1">
+<li>Which are the <strong>most commonly used words</strong> from Jane Austen’s novels?</li>
+<li>Which are the <strong>most positive</strong> or <strong>negative words</strong>?</li>
+<li>How does the <strong>sentiment</strong> (e.g.&nbsp;positive vs negative) of the text change across each novel?</li>
+</ol>
+<p><img src="https://images-na.ssl-images-amazon.com/images/I/A1YUH7-W5AL.jpg" class="img-fluid" data-preview="TRUE"></p>
+<p>[<a href="https://images-na.ssl-images-amazon.com/images/I/A1YUH7-W5AL.jpg">image source</a>]</p>
+<p>To answer these questions, we will need to learn about a few things. Specifically,</p>
+<ol type="1">
+<li>How to <strong>convert words in documents</strong> to a <strong>tidy text</strong> format using the <code>tidytext</code> R package.</li>
+<li>A little bit about <a href="https://www.tidytextmining.com/sentiment.html">sentiment analysis</a>.</li>
+</ol>
+</section>
+<section id="tidy-text" class="level1">
+<h1>Tidy text</h1>
+<p>In previous lectures, you have learned about the <strong>tidy data principles</strong> and the <code>tidyverse</code> R packages as a way to make handling data easier and more effective.</p>
+<p>These packages depend on <strong>data being formatted in a particular way</strong>.</p>
+<p>The idea with tidy text is to <strong>treat text as data frames of individual words</strong> and <strong>apply the same tidy data principles</strong> to make text mining tasks easier and consistent with already developed tools.</p>
+<p>First let’s recall what a <strong>tidy</strong> data format means.</p>
+<section id="what-is-a-tidy-format" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-a-tidy-format">What is a <strong>tidy</strong> format?</h3>
+<p>First, the <a href="https://www.tidyverse.org">tidyverse</a> is</p>
+<blockquote class="blockquote">
+<p>“an opinionated collection of R packages designed for data science. All packages share an underlying philosophy and common APIs.”</p>
+</blockquote>
+<p>Another way of putting it is that it is a <strong>set of packages</strong> that are useful specifically for data manipulation, exploration and visualization <strong>with a common philosophy</strong>.</p>
+</section>
+<section id="what-is-this-common-philosphy" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-this-common-philosphy">What is this common philosphy?</h3>
+<p>The common philosophy is called <strong>“tidy” data</strong>.</p>
+<p>It is a standard way of mapping the meaning of a dataset to its structure.</p>
+<p>In <strong>tidy</strong> data:</p>
+<ul>
+<li>Each variable forms a column.</li>
+<li>Each observation forms a row.</li>
+<li>Each type of observational unit forms a table.</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="http://r4ds.had.co.nz/images/tidy-1.png" class="img-fluid" style="width:95.0%"></p>
+</div>
+</div>
+<p>[<a href="http://r4ds.had.co.nz">img source</a>]</p>
+<p>Working with <strong>tidy data is useful</strong> because it creates a structured way of organizing data values within a data set.</p>
+<p>This makes the data analysis process more efficient and simplifies the development of data analysis tools that work together.</p>
+<p>In this way, you can focus on the problem you are investigating, rather than the uninteresting logistics of data.</p>
+</section>
+<section id="what-is-a-tidy-text-format" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-a-tidy-text-format">What is a <strong>tidy text</strong> format?</h3>
+<p>When dealing with <strong>text</strong> data, the <strong>tidy text</strong> format is defined as a table <strong>with one-token-per-row</strong>, where a <strong>token</strong> is a meaningful unit of text (e.g.&nbsp;a word, pair of words, sentence, paragraph, etc).</p>
+<p>Using a <strong>given set of token</strong>, we can <strong>tokenize</strong> text, or <strong>split the text into the defined tokens of interest along the rows</strong>.</p>
+<p>We will learn more about how to do this using functions in the <a href="https://github.com/juliasilge/tidytext"><code>tidytext</code></a> R package.</p>
+<p>In contrast, other data structures that are commonly used to store text data in text mining applications:</p>
+<ul>
+<li><strong>string</strong>: text can, of course, be stored as strings, i.e., character vectors, within R, and often text data is first read into memory in this form.</li>
+<li><strong>corpus</strong>: these types of objects typically contain raw strings annotated with additional metadata and details.</li>
+<li><strong>document-term matrix</strong>: This is a sparse matrix describing a collection (i.e., a corpus) of documents with one row for each document and one column for each term. The value in the matrix is typically word count.</li>
+</ul>
+<p>I won’t describing these other formats in greater detail, but encourage you to read about them if interested in this topic.</p>
+</section>
+<section id="why-is-this-format-useful" class="level3">
+<h3 class="anchored" data-anchor-id="why-is-this-format-useful">Why is this format useful?</h3>
+<p>One of the biggest advantages of transforming text data to the tidy text format is that it allows data to transition smoothly between other packages that adhere to the <code>tidyverse</code> framework (e.g.&nbsp;<code>ggplot2</code>, <code>dplyr</code>, etc).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.tidytextmining.com/images/tmwr_0101.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption class="figure-caption">A flowchart of a typical text analysis using tidy data principles.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>[<a href="https://www.tidytextmining.com/images/tmwr_0101.png">image source</a>]</p>
+<p>In addition, a user can transition between the tidy text format for e.g data visualization with <code>ggplot2</code>, but then also convert data to other data structures (e.g.&nbsp;document-term matrix) that is commonly used in machine learning applications.</p>
+</section>
+<section id="how-does-it-work" class="level3">
+<h3 class="anchored" data-anchor-id="how-does-it-work">How does it work?</h3>
+<p>The main workhorse function in the <code>tidytext</code> R package to tokenize text a data frame is the <code>unnest_tokens(tbl, output, input)</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>?unnest_tokens</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In addition to the tibble or data frame (<code>tbl</code>), the function needs two basic arguments:</p>
+<ol type="1">
+<li><code>output</code> or the output column name that will be created (e.g.&nbsp;string) as the text is unnested into it</li>
+<li><code>input</code> or input column name that the text comes from and gets split</li>
+</ol>
+<p>Let’s try out the <code>unnest_tokens()</code> function using the first paragraph in the preface of Roger Peng’s <a href="https://leanpub.com/rprogramming">R Programming for Data Science</a> book.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/peng_preface.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption class="figure-caption">Preface from R Programming for Data Science</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>To make this easier, I typed this text into a vector of character strings: one string per sentence.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>peng_preface <span class="ot">&lt;-</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">"I started using R in 1998 when I was a college undergraduate working on my senior thesis."</span>, </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"The version was 0.63."</span>,  </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"I was an applied mathematics major with a statistics concentration and I was working with Dr. Nicolas Hengartner on an analysis of word frequencies in classic texts (Shakespeare, Milton, etc.)."</span>, </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"The idea was to see if we could identify the authorship of each of the texts based on how frequently they used certain words."</span>, </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"We downloaded the data from Project Gutenberg and used some basic linear discriminant analysis for the modeling."</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"The work was eventually published and was my first ever peer-reviewed publication."</span>, </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"I guess you could argue it was my first real 'data science' experience."</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>peng_preface</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "I started using R in 1998 when I was a college undergraduate working on my senior thesis."                                                                                                        
+[2] "The version was 0.63."                                                                                                                                                                            
+[3] "I was an applied mathematics major with a statistics concentration and I was working with Dr. Nicolas Hengartner on an analysis of word frequencies in classic texts (Shakespeare, Milton, etc.)."
+[4] "The idea was to see if we could identify the authorship of each of the texts based on how frequently they used certain words."                                                                    
+[5] "We downloaded the data from Project Gutenberg and used some basic linear discriminant analysis for the modeling."                                                                                 
+[6] "The work was eventually published and was my first ever peer-reviewed publication."                                                                                                               
+[7] "I guess you could argue it was my first real 'data science' experience."                                                                                                                          </code></pre>
+</div>
+</div>
+<p>Turns out Roger performed a similar analysis as an undergraduate student!</p>
+<p>He goes to say that back then no one was using R (but a little bit of something called S-PLUS), so I can only imagine how different it was to accomplish a task like the one we are going to do today compared to when he was an undergraduate.</p>
+<p>Next, we load a few R packages</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytext) <span class="do">## needs to be installed</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janeaustenr) <span class="do">## needs to be installed</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then, we use the <code>tibble()</code> function to construct a data frame with two columns: one counting the line number and one from the character strings in <code>peng_preface</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>peng_preface_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">line=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">text=</span>peng_preface)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>peng_preface_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 2
+   line text                                                                    
+  &lt;int&gt; &lt;chr&gt;                                                                   
+1     1 I started using R in 1998 when I was a college undergraduate working on…
+2     2 The version was 0.63.                                                   
+3     3 I was an applied mathematics major with a statistics concentration and …
+4     4 The idea was to see if we could identify the authorship of each of the …
+5     5 We downloaded the data from Project Gutenberg and used some basic linea…
+6     6 The work was eventually published and was my first ever peer-reviewed p…
+7     7 I guess you could argue it was my first real 'data science' experience. </code></pre>
+</div>
+</div>
+</section>
+<section id="text-mining-and-tokens" class="level3">
+<h3 class="anchored" data-anchor-id="text-mining-and-tokens">Text Mining and Tokens</h3>
+<p>Next, we will use the <code>unnest_tokens()</code> function where we will call the output column to be created <code>word</code> and the input column <code>text</code> from the <code>peng_preface_df</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>peng_token <span class="ot">&lt;-</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  peng_preface_df <span class="sc">%&gt;%</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(<span class="at">output =</span> word, </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">input =</span> text, </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">token =</span> <span class="st">"words"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>peng_token <span class="sc">%&gt;%</span> </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+   line word   
+  &lt;int&gt; &lt;chr&gt;  
+1     1 i      
+2     1 started
+3     1 using  
+4     1 r      
+5     1 in     
+6     1 1998   </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>peng_token <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tail</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+   line word      
+  &lt;int&gt; &lt;chr&gt;     
+1     7 my        
+2     7 first     
+3     7 real      
+4     7 data      
+5     7 science   
+6     7 experience</code></pre>
+</div>
+</div>
+<p>The argument <code>token="words"</code> <strong>defines the unit for tokenization</strong>.</p>
+<p>The default is <code>"words"</code>, but there are lots of other options.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We could tokenize by <code>"characters"</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>peng_preface_df <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                text, </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">token =</span> <span class="st">"characters"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+   line word 
+  &lt;int&gt; &lt;chr&gt;
+1     1 i    
+2     1 s    
+3     1 t    
+4     1 a    
+5     1 r    
+6     1 t    </code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>or something called <a href="https://en.wikipedia.org/wiki/N-gram">ngrams</a>, which is defined by Wikipedia as a <em>“contiguous sequence of n items from a given sample of text or speech”</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>peng_preface_df <span class="sc">%&gt;%</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                text, </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">token =</span> <span class="st">"ngrams"</span>, </span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">n=</span><span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+   line word           
+  &lt;int&gt; &lt;chr&gt;          
+1     1 i started using
+2     1 started using r
+3     1 using r in     
+4     1 r in 1998      
+5     1 in 1998 when   
+6     1 1998 when i    </code></pre>
+</div>
+</div>
+<p>Another option is to use the <code>character_shingles</code> option, which is similar to tokenizing like <code>ngrams</code>, except the units are characters instead of words.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>peng_preface_df <span class="sc">%&gt;%</span> </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                text, </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">token =</span> <span class="st">"character_shingles"</span>,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">n =</span> <span class="dv">4</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+   line word 
+  &lt;int&gt; &lt;chr&gt;
+1     1 ista 
+2     1 star 
+3     1 tart 
+4     1 arte 
+5     1 rted 
+6     1 tedu </code></pre>
+</div>
+</div>
+<p>You can also <strong>create custom functions</strong> for tokenization.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>peng_preface_df <span class="sc">%&gt;%</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                text, </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">token =</span> stringr<span class="sc">::</span>str_split,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">pattern =</span> <span class="st">" "</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+   line word   
+  &lt;int&gt; &lt;chr&gt;  
+1     1 i      
+2     1 started
+3     1 using  
+4     1 r      
+5     1 in     
+6     1 1998   </code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let’s tokenize the first four sentences of <a href="https://www.nytimes.com/2021/01/19/books/amanda-gorman-inauguration-hill-we-climb.html">Amanda Gorman’s <em>The Hill We Climb</em></a> by words.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>gorman_hill_we_climb <span class="ot">&lt;-</span> </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">"When day comes we ask ourselves, where can we find light in this neverending shade?"</span>,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"The loss we carry, a sea we must wade."</span>, </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"We’ve braved the belly of the beast, we’ve learned that quiet isn’t always peace and the norms and notions of what just is, isn’t always justice."</span>,</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"And yet the dawn is ours before we knew it, somehow we do it, somehow we’ve weathered and witnessed a nation that isn’t broken but simply unfinished."</span>)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>hill_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">line=</span><span class="fu">seq_along</span>(gorman_hill_we_climb), </span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>                  <span class="at">text=</span>gorman_hill_we_climb)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>hill_df </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 2
+   line text                                                                    
+  &lt;int&gt; &lt;chr&gt;                                                                   
+1     1 When day comes we ask ourselves, where can we find light in this nevere…
+2     2 The loss we carry, a sea we must wade.                                  
+3     3 We’ve braved the belly of the beast, we’ve learned that quiet isn’t alw…
+4     4 And yet the dawn is ours before we knew it, somehow we do it, somehow w…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="do">### try it out</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="example-text-from-works-of-jane-austen" class="level1">
+<h1>Example: text from works of Jane Austen</h1>
+<p>We will use the text from six published novels from Jane Austen, which are available in the <a href="https://cran.r-project.org/web/packages/janeaustenr/index.html"><code>janeaustenr</code></a> R package. The <a href="https://www.tidytextmining.com/tidytext.html#tidyausten">authors</a> describe the format:</p>
+<blockquote class="blockquote">
+<p>“The package provides the text in a one-row-per-line format, where a line is this context is analogous to a literal printed line in a physical book.</p>
+<p>The package contains:</p>
+<ul>
+<li><code>sensesensibility</code>: Sense and Sensibility, published in 1811</li>
+<li><code>prideprejudice</code>: Pride and Prejudice, published in 1813</li>
+<li><code>mansfieldpark</code>: Mansfield Park, published in 1814</li>
+<li><code>emma</code>: Emma, published in 1815</li>
+<li><code>northangerabbey</code>: Northanger Abbey, published posthumously in 1818</li>
+<li><code>persuasion</code>: Persuasion, also published posthumously in 1818</li>
+</ul>
+<p>There is also a function <code>austen_books()</code> that returns a tidy data frame of all 6 novels.”</p>
+</blockquote>
+<p>Let’s load in the text from <code>prideprejudice</code> and look at how the data are stored.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janeaustenr)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(prideprejudice, <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "PRIDE AND PREJUDICE"                                                        
+ [2] ""                                                                           
+ [3] "By Jane Austen"                                                             
+ [4] ""                                                                           
+ [5] ""                                                                           
+ [6] ""                                                                           
+ [7] "Chapter 1"                                                                  
+ [8] ""                                                                           
+ [9] ""                                                                           
+[10] "It is a truth universally acknowledged, that a single man in possession"    
+[11] "of a good fortune, must be in want of a wife."                              
+[12] ""                                                                           
+[13] "However little known the feelings or views of such a man may be on his"     
+[14] "first entering a neighbourhood, this truth is so well fixed in the minds"   
+[15] "of the surrounding families, that he is considered the rightful property"   
+[16] "of some one or other of their daughters."                                   
+[17] ""                                                                           
+[18] "\"My dear Mr. Bennet,\" said his lady to him one day, \"have you heard that"
+[19] "Netherfield Park is let at last?\""                                         
+[20] ""                                                                           </code></pre>
+</div>
+</div>
+<p>We see each line is in a character vector with elements of about 70 characters.</p>
+<p>Similar to what we did above with Roger’s preface, we can</p>
+<ul>
+<li>Turn the text of character strings into a data frame and then</li>
+<li>Convert it into a one-row-per-line dataframe using the <code>unnest_tokens()</code> function</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>pp_book_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">text =</span> prideprejudice) </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>pp_book_df <span class="sc">%&gt;%</span> </span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(<span class="at">output =</span> word, </span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">input =</span> text, </span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">token=</span><span class="st">"words"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 122,204 × 1
+   word     
+   &lt;chr&gt;    
+ 1 pride    
+ 2 and      
+ 3 prejudice
+ 4 by       
+ 5 jane     
+ 6 austen   
+ 7 chapter  
+ 8 1        
+ 9 it       
+10 is       
+# … with 122,194 more rows</code></pre>
+</div>
+</div>
+<p>We can also divide it by paragraphs:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> pp_book_df <span class="sc">%&gt;%</span> </span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(<span class="at">output =</span> paragraph, </span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">input =</span> text, </span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">token =</span><span class="st">"paragraphs"</span>) </span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>tmp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10,721 × 1
+   paragraph                                                                    
+   &lt;chr&gt;                                                                        
+ 1 "pride and prejudice"                                                        
+ 2 "by jane austen"                                                             
+ 3 "chapter 1"                                                                  
+ 4 "it is a truth universally acknowledged, that a single man in possession"    
+ 5 "of a good fortune, must be in want of a wife."                              
+ 6 "however little known the feelings or views of such a man may be on his"     
+ 7 "first entering a neighbourhood, this truth is so well fixed in the minds"   
+ 8 "of the surrounding families, that he is considered the rightful property"   
+ 9 "of some one or other of their daughters."                                   
+10 "\"my dear mr. bennet,\" said his lady to him one day, \"have you heard that"
+# … with 10,711 more rows</code></pre>
+</div>
+</div>
+<p>We can extract a particular element from the tibble</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>tmp[<span class="dv">3</span>,<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  paragraph
+  &lt;chr&gt;    
+1 chapter 1</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What you name the output column, e.g.&nbsp;<code>paragraph</code> in this case, doesn’t affect it, it’s just good to give it a consistent name.</p>
+</div>
+</div>
+<p>We could also divide it by sentence:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>pp_book_df <span class="sc">%&gt;%</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest_tokens</span>(<span class="at">output =</span> sentence,</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">input =</span> text, </span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">token =</span> <span class="st">"sentences"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 15,545 × 1
+   sentence                                                                  
+   &lt;chr&gt;                                                                     
+ 1 "pride and prejudice"                                                     
+ 2 "by jane austen"                                                          
+ 3 "chapter 1"                                                               
+ 4 "it is a truth universally acknowledged, that a single man in possession" 
+ 5 "of a good fortune, must be in want of a wife."                           
+ 6 "however little known the feelings or views of such a man may be on his"  
+ 7 "first entering a neighbourhood, this truth is so well fixed in the minds"
+ 8 "of the surrounding families, that he is considered the rightful property"
+ 9 "of some one or other of their daughters."                                
+10 "\"my dear mr."                                                           
+# … with 15,535 more rows</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is tricked by terms like “Mr.” and “Mrs.”</p>
+</div>
+</div>
+<p>One neat trick is that we can unnest by two layers:</p>
+<ol type="1">
+<li>paragraph and then</li>
+<li>word</li>
+</ol>
+<p>This lets us keep track of <strong>which paragraph is which</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>paragraphs <span class="ot">&lt;-</span> </span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  pp_book_df <span class="sc">%&gt;%</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest_tokens</span>(<span class="at">output =</span> paragraph, </span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">input =</span> text, </span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>                  <span class="at">token =</span> <span class="st">"paragraphs"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">paragraph_number =</span> <span class="fu">row_number</span>()) </span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>paragraphs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10,721 × 2
+   paragraph                                                             parag…¹
+   &lt;chr&gt;                                                                   &lt;int&gt;
+ 1 "pride and prejudice"                                                       1
+ 2 "by jane austen"                                                            2
+ 3 "chapter 1"                                                                 3
+ 4 "it is a truth universally acknowledged, that a single man in posses…       4
+ 5 "of a good fortune, must be in want of a wife."                             5
+ 6 "however little known the feelings or views of such a man may be on …       6
+ 7 "first entering a neighbourhood, this truth is so well fixed in the …       7
+ 8 "of the surrounding families, that he is considered the rightful pro…       8
+ 9 "of some one or other of their daughters."                                  9
+10 "\"my dear mr. bennet,\" said his lady to him one day, \"have you he…      10
+# … with 10,711 more rows, and abbreviated variable name ¹​paragraph_number</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We use <code>mutate()</code> to annotate a paragraph number quantity to keep track of paragraphs in the original format.</p>
+</div>
+</div>
+<p>After tokenizing by paragraph, we can then tokenzie by word:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>paragraphs <span class="sc">%&gt;%</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest_tokens</span>(<span class="at">output =</span> word, </span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">input =</span> paragraph)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 122,204 × 2
+   paragraph_number word     
+              &lt;int&gt; &lt;chr&gt;    
+ 1                1 pride    
+ 2                1 and      
+ 3                1 prejudice
+ 4                2 by       
+ 5                2 jane     
+ 6                2 austen   
+ 7                3 chapter  
+ 8                3 1        
+ 9                4 it       
+10                4 is       
+# … with 122,194 more rows</code></pre>
+</div>
+</div>
+<p>We notice there are many what are called <strong>stop words</strong> (“the”, “of”, “to”, and so forth in English).</p>
+<p>Often in text analysis, we will want to <strong>remove stop words</strong> because stop words are words that are not useful for an analysis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(stop_words)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(stop_words<span class="sc">$</span>lexicon)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    onix    SMART snowball 
+     404      571      174 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>stop_words <span class="sc">%&gt;%</span> </span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="at">n=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 2
+   word        lexicon
+   &lt;chr&gt;       &lt;chr&gt;  
+ 1 a           SMART  
+ 2 a's         SMART  
+ 3 able        SMART  
+ 4 about       SMART  
+ 5 above       SMART  
+ 6 according   SMART  
+ 7 accordingly SMART  
+ 8 across      SMART  
+ 9 actually    SMART  
+10 after       SMART  </code></pre>
+</div>
+</div>
+<p>We can remove stop words (kept in the <code>tidytext</code> dataset <code>stop_words</code>) with an <code>anti_join(x,y)</code> (return all rows from <code>x</code> without a match in <code>y</code>).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>words_by_paragraph <span class="ot">&lt;-</span> </span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  paragraphs <span class="sc">%&gt;%</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest_tokens</span>(<span class="at">output =</span> word, </span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">input =</span> paragraph) <span class="sc">%&gt;%</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">anti_join</span>(stop_words)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining, by = "word"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>words_by_paragraph </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 37,246 × 2
+   paragraph_number word        
+              &lt;int&gt; &lt;chr&gt;       
+ 1                1 pride       
+ 2                1 prejudice   
+ 3                2 jane        
+ 4                2 austen      
+ 5                3 chapter     
+ 6                3 1           
+ 7                4 truth       
+ 8                4 universally 
+ 9                4 acknowledged
+10                4 single      
+# … with 37,236 more rows</code></pre>
+</div>
+</div>
+<p>Because we have stored our data in a tidy dataset, we can use <code>tidyverse</code> packages for exploratory data analysis.</p>
+<p>For example, here we use <code>dplyr</code>’s <code>count()</code> function to find the most common words in the book</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>words_by_paragraph <span class="sc">%&gt;%</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  word          n
+  &lt;chr&gt;     &lt;int&gt;
+1 elizabeth   597
+2 darcy       373
+3 bennet      294
+4 miss        283
+5 jane        264
+6 bingley     257</code></pre>
+</div>
+</div>
+<p>Then use <code>ggplot2</code> to plot the most commonly used words from the book.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>words_by_paragraph <span class="sc">%&gt;%</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">150</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">fct_reorder</span>(word, n)) <span class="sc">%&gt;%</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(word, n)) <span class="sc">+</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_flip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>We can also do this for all of her books using the <code>austen_books()</code> object</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">austen_books</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  text                    book               
+  &lt;chr&gt;                   &lt;fct&gt;              
+1 "SENSE AND SENSIBILITY" Sense &amp; Sensibility
+2 ""                      Sense &amp; Sensibility
+3 "by Jane Austen"        Sense &amp; Sensibility
+4 ""                      Sense &amp; Sensibility
+5 "(1811)"                Sense &amp; Sensibility
+6 ""                      Sense &amp; Sensibility</code></pre>
+</div>
+</div>
+<p>We can do some data wrangling that keep tracks of the line number and chapter (using a regex) to find where all the chapters are.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>original_books <span class="ot">&lt;-</span> </span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">austen_books</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(book) <span class="sc">%&gt;%</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">linenumber =</span> <span class="fu">row_number</span>(),</span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">chapter =</span> <span class="fu">cumsum</span>(</span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">str_detect</span>(text, </span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>                               <span class="at">pattern =</span> <span class="fu">regex</span>(<span class="at">pattern =</span> <span class="st">"^chapter [</span><span class="sc">\\</span><span class="st">divxlc]"</span>,</span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a>                                               <span class="at">ignore_case =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a>                              )</span>
+<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a>                          ) <span class="sc">%&gt;%</span></span>
+<span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb49-12"><a href="#cb49-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-13"><a href="#cb49-13" aria-hidden="true" tabindex="-1"></a>original_books</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 73,422 × 4
+   text                    book                linenumber chapter
+   &lt;chr&gt;                   &lt;fct&gt;                    &lt;int&gt;   &lt;int&gt;
+ 1 "SENSE AND SENSIBILITY" Sense &amp; Sensibility          1       0
+ 2 ""                      Sense &amp; Sensibility          2       0
+ 3 "by Jane Austen"        Sense &amp; Sensibility          3       0
+ 4 ""                      Sense &amp; Sensibility          4       0
+ 5 "(1811)"                Sense &amp; Sensibility          5       0
+ 6 ""                      Sense &amp; Sensibility          6       0
+ 7 ""                      Sense &amp; Sensibility          7       0
+ 8 ""                      Sense &amp; Sensibility          8       0
+ 9 ""                      Sense &amp; Sensibility          9       0
+10 "CHAPTER 1"             Sense &amp; Sensibility         10       1
+# … with 73,412 more rows</code></pre>
+</div>
+</div>
+<p>Finally, we can restructure it to a one-token-per-row format using the <code>unnest_tokens()</code> function and remove stop words using the <code>anti_join()</code> function in <code>dplyr</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>tidy_books <span class="ot">&lt;-</span> original_books <span class="sc">%&gt;%</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, text) <span class="sc">%&gt;%</span> </span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">anti_join</span>(stop_words)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining, by = "word"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>tidy_books</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 217,609 × 4
+   book                linenumber chapter word       
+   &lt;fct&gt;                    &lt;int&gt;   &lt;int&gt; &lt;chr&gt;      
+ 1 Sense &amp; Sensibility          1       0 sense      
+ 2 Sense &amp; Sensibility          1       0 sensibility
+ 3 Sense &amp; Sensibility          3       0 jane       
+ 4 Sense &amp; Sensibility          3       0 austen     
+ 5 Sense &amp; Sensibility          5       0 1811       
+ 6 Sense &amp; Sensibility         10       1 chapter    
+ 7 Sense &amp; Sensibility         10       1 1          
+ 8 Sense &amp; Sensibility         13       1 family     
+ 9 Sense &amp; Sensibility         13       1 dashwood   
+10 Sense &amp; Sensibility         13       1 settled    
+# … with 217,599 more rows</code></pre>
+</div>
+</div>
+<p>Here are the most commonly used words across all of Jane Austen’s books.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>tidy_books <span class="sc">%&gt;%</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">600</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">fct_reorder</span>(word, n)) <span class="sc">%&gt;%</span></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(word, n)) <span class="sc">+</span></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_flip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="sentiment-analysis" class="level1">
+<h1>Sentiment Analysis</h1>
+<p>In the previous section, we explored the <strong>tidy text</strong> format and showed how we can calculate things such as word frequency.</p>
+<p>Next, we are going to look at something called <strong>opinion mining</strong> or <strong>sentiment analysis</strong>. The <a href="https://www.tidytextmining.com/sentiment.html">tidytext authors</a> write:</p>
+<blockquote class="blockquote">
+<p><em>“When human readers approach a text, we use our understanding of the emotional intent of words to infer whether a section of text is positive or negative, or perhaps characterized by some other more nuanced emotion like surprise or disgust. We can use the tools of text mining to approach the emotional content of text programmatically, as shown in the figure below”</em></p>
+</blockquote>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.tidytextmining.com/images/tmwr_0201.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption class="figure-caption">A flowchart of a typical text analysis that uses tidytext for sentiment analysis.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>[<a href="https://www.tidytextmining.com/images/tmwr_0201.png">image source</a>]</p>
+<blockquote class="blockquote">
+<p><em>“One way to analyze the sentiment of a text is to consider the text as a combination of its individual words and the sentiment content of the whole text as the sum of the sentiment content of the individual words. This isn’t the only way to approach sentiment analysis, but it is an often-used approach, and an approach that naturally takes advantage of the tidy tool ecosystem.”</em></p>
+</blockquote>
+<p>Let’s try using sentiment analysis on the Jane Austen books.</p>
+<section id="the-sentiments-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="the-sentiments-dataset">The <code>sentiments</code> dataset</h2>
+<p>Inside the <code>tidytext</code> package are several <strong>sentiment lexicons</strong>. A few things to note:</p>
+<ul>
+<li>The lexicons are based on unigrams (single words)</li>
+<li>The lexicons contain many English words and the words are assigned scores for positive/negative sentiment, and also possibly emotions like joy, anger, sadness, and so forth</li>
+</ul>
+<p>You can use the <code>get_sentiments()</code> function to extract a specific lexicon.</p>
+<p>The <code>nrc</code> lexicon <strong>categorizes words into multiple categories</strong> of positive, negative, anger, anticipation, disgust, fear, joy, sadness, surprise, and trust</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_sentiments</span>(<span class="st">"nrc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 13,872 × 2
+   word        sentiment
+   &lt;chr&gt;       &lt;chr&gt;    
+ 1 abacus      trust    
+ 2 abandon     fear     
+ 3 abandon     negative 
+ 4 abandon     sadness  
+ 5 abandoned   anger    
+ 6 abandoned   fear     
+ 7 abandoned   negative 
+ 8 abandoned   sadness  
+ 9 abandonment anger    
+10 abandonment fear     
+# … with 13,862 more rows</code></pre>
+</div>
+</div>
+<p>The <code>bing</code> lexicon <strong>categorizes words in a binary fashion</strong> into positive and negative categories</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_sentiments</span>(<span class="st">"bing"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6,786 × 2
+   word        sentiment
+   &lt;chr&gt;       &lt;chr&gt;    
+ 1 2-faces     negative 
+ 2 abnormal    negative 
+ 3 abolish     negative 
+ 4 abominable  negative 
+ 5 abominably  negative 
+ 6 abominate   negative 
+ 7 abomination negative 
+ 8 abort       negative 
+ 9 aborted     negative 
+10 aborts      negative 
+# … with 6,776 more rows</code></pre>
+</div>
+</div>
+<p>The <code>AFINN</code> lexicon <strong>assigns words with a score that runs between -5 and 5</strong>, with negative scores indicating negative sentiment and positive scores indicating positive sentiment</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_sentiments</span>(<span class="st">"afinn"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2,477 × 2
+   word       value
+   &lt;chr&gt;      &lt;dbl&gt;
+ 1 abandon       -2
+ 2 abandoned     -2
+ 3 abandons      -2
+ 4 abducted      -2
+ 5 abduction     -2
+ 6 abductions    -2
+ 7 abhor         -3
+ 8 abhorred      -3
+ 9 abhorrent     -3
+10 abhors        -3
+# … with 2,467 more rows</code></pre>
+</div>
+</div>
+<p>The authors of the <code>tidytext</code> package note:</p>
+<blockquote class="blockquote">
+<p><em>“How were these sentiment lexicons put together and validated? They were constructed via either crowdsourcing (using, for example, Amazon Mechanical Turk) or by the labor of one of the authors, and were validated using some combination of crowdsourcing again, restaurant or movie reviews, or Twitter data. Given this information, we may hesitate to apply these sentiment lexicons to styles of text dramatically different from what they were validated on, such as narrative fiction from 200 years ago. While it is true that using these sentiment lexicons with, for example, Jane Austen’s novels may give us less accurate results than with tweets sent by a contemporary writer, we still can measure the sentiment content for words that are shared across the lexicon and the text.”</em></p>
+</blockquote>
+<p>Two other caveats:</p>
+<blockquote class="blockquote">
+<p><em>“Not every English word is in the lexicons because many English words are pretty neutral. It is important to keep in mind that these methods do not take into account qualifiers before a word, such as in”no good” or “not true”; a lexicon-based method like this is based on unigrams only. For many kinds of text (like the narrative examples below), there are not sustained sections of sarcasm or negated text, so this is not an important effect.”</em></p>
+</blockquote>
+<p>and</p>
+<blockquote class="blockquote">
+<p><em>“One last caveat is that the size of the chunk of text that we use to add up unigram sentiment scores can have an effect on an analysis. A text the size of many paragraphs can often have positive and negative sentiment averaged out to about zero, while sentence-sized or paragraph-sized text often works better.”</em></p>
+</blockquote>
+<section id="joining-together-tidy-text-data-with-lexicons" class="level3">
+<h3 class="anchored" data-anchor-id="joining-together-tidy-text-data-with-lexicons">Joining together tidy text data with lexicons</h3>
+<p>Now that we have our data in a tidy text format AND we have learned about different types of lexicons in application for sentiment analysis, we can <strong>join the words together</strong> using a join function.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What are the most common joy words in the book <em>Emma</em>?</p>
+<p>Here, we use the <code>nrc</code> lexicon and join the <code>tidy_books</code> dataset with the <code>nrc_joy</code> lexicon using the <code>inner_join()</code> function in <code>dplyr</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>nrc_joy <span class="ot">&lt;-</span> <span class="fu">get_sentiments</span>(<span class="st">"nrc"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sentiment <span class="sc">==</span> <span class="st">"joy"</span>)</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>tidy_books <span class="sc">%&gt;%</span></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(book <span class="sc">==</span> <span class="st">"Emma"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(nrc_joy) <span class="sc">%&gt;%</span></span>
+<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining, by = "word"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 297 × 2
+   word          n
+   &lt;chr&gt;     &lt;int&gt;
+ 1 friend      166
+ 2 hope        143
+ 3 happy       125
+ 4 love        117
+ 5 deal         92
+ 6 found        92
+ 7 happiness    76
+ 8 pretty       68
+ 9 true         66
+10 comfort      65
+# … with 287 more rows</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>We can do things like investigate how the sentiment of the text changes throughout each of Jane’s novels.</p>
+<p>Here, we use the <code>bing</code> lexicon, find a sentiment score for each word, and then use <code>inner_join()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>tidy_books <span class="sc">%&gt;%</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(<span class="fu">get_sentiments</span>(<span class="st">"bing"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining, by = "word"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 44,171 × 5
+   book                linenumber chapter word        sentiment
+   &lt;fct&gt;                    &lt;int&gt;   &lt;int&gt; &lt;chr&gt;       &lt;chr&gt;    
+ 1 Sense &amp; Sensibility         16       1 respectable positive 
+ 2 Sense &amp; Sensibility         18       1 advanced    positive 
+ 3 Sense &amp; Sensibility         20       1 death       negative 
+ 4 Sense &amp; Sensibility         21       1 loss        negative 
+ 5 Sense &amp; Sensibility         25       1 comfortably positive 
+ 6 Sense &amp; Sensibility         28       1 goodness    positive 
+ 7 Sense &amp; Sensibility         28       1 solid       positive 
+ 8 Sense &amp; Sensibility         29       1 comfort     positive 
+ 9 Sense &amp; Sensibility         30       1 relish      positive 
+10 Sense &amp; Sensibility         33       1 steady      positive 
+# … with 44,161 more rows</code></pre>
+</div>
+</div>
+<p>Then, we can <strong>count how many positive and negative words</strong> there are in each section of the books.</p>
+<p>We create an index to help us keep track of where we are in the narrative, which uses integer division, and counts up sections of 80 lines of text.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>tidy_books <span class="sc">%&gt;%</span></span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(<span class="fu">get_sentiments</span>(<span class="st">"bing"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(book, </span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">index =</span> linenumber <span class="sc">%/%</span> <span class="dv">80</span>, </span>
+<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a>        sentiment) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining, by = "word"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,840 × 4
+   book                index sentiment     n
+   &lt;fct&gt;               &lt;dbl&gt; &lt;chr&gt;     &lt;int&gt;
+ 1 Sense &amp; Sensibility     0 negative     16
+ 2 Sense &amp; Sensibility     0 positive     26
+ 3 Sense &amp; Sensibility     1 negative     19
+ 4 Sense &amp; Sensibility     1 positive     44
+ 5 Sense &amp; Sensibility     2 negative     12
+ 6 Sense &amp; Sensibility     2 positive     23
+ 7 Sense &amp; Sensibility     3 negative     15
+ 8 Sense &amp; Sensibility     3 positive     22
+ 9 Sense &amp; Sensibility     4 negative     16
+10 Sense &amp; Sensibility     4 positive     29
+# … with 1,830 more rows</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>%/%</code> operator does <strong>integer division</strong> (<code>x %/% y</code> is equivalent to <code>floor(x/y)</code>) so the index keeps track of which 80-line section of text we are counting up negative and positive sentiment in.</p>
+</div>
+</div>
+<p>Finally, we use <code>pivot_wider()</code> to have positive and negative counts in different columns, and then use <code>mutate()</code> to calculate a net sentiment (positive - negative).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>jane_austen_sentiment <span class="ot">&lt;-</span> </span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>  tidy_books <span class="sc">%&gt;%</span></span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(<span class="fu">get_sentiments</span>(<span class="st">"bing"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(book, </span>
+<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">index =</span> linenumber <span class="sc">%/%</span> <span class="dv">80</span>, </span>
+<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a>        sentiment) <span class="sc">%&gt;%</span></span>
+<span id="cb71-7"><a href="#cb71-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> sentiment, </span>
+<span id="cb71-8"><a href="#cb71-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_from =</span> n, </span>
+<span id="cb71-9"><a href="#cb71-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_fill =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb71-10"><a href="#cb71-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sentiment =</span> positive <span class="sc">-</span> negative)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining, by = "word"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>jane_austen_sentiment</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 920 × 5
+   book                index negative positive sentiment
+   &lt;fct&gt;               &lt;dbl&gt;    &lt;int&gt;    &lt;int&gt;     &lt;int&gt;
+ 1 Sense &amp; Sensibility     0       16       26        10
+ 2 Sense &amp; Sensibility     1       19       44        25
+ 3 Sense &amp; Sensibility     2       12       23        11
+ 4 Sense &amp; Sensibility     3       15       22         7
+ 5 Sense &amp; Sensibility     4       16       29        13
+ 6 Sense &amp; Sensibility     5       16       39        23
+ 7 Sense &amp; Sensibility     6       24       37        13
+ 8 Sense &amp; Sensibility     7       22       39        17
+ 9 Sense &amp; Sensibility     8       30       35         5
+10 Sense &amp; Sensibility     9       14       18         4
+# … with 910 more rows</code></pre>
+</div>
+</div>
+<p>Then we can plot the sentiment scores across the sections of each novel:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>jane_austen_sentiment <span class="sc">%&gt;%</span> </span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> index, <span class="at">y =</span> sentiment, <span class="at">fill =</span> book)) <span class="sc">+</span></span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>(. <span class="sc">~</span> book, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">scales =</span> <span class="st">"free_x"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>We can see how the sentiment trajectory of the novel changes over time.</p>
+</section>
+<section id="word-clouds" class="level3">
+<h3 class="anchored" data-anchor-id="word-clouds">Word clouds</h3>
+<p>You can also do things like create word clouds using the <code>wordcloud</code> package.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(wordcloud)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: RColorBrewer</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>tidy_books <span class="sc">%&gt;%</span></span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">anti_join</span>(stop_words) <span class="sc">%&gt;%</span></span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word) <span class="sc">%&gt;%</span></span>
+<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">with</span>(<span class="fu">wordcloud</span>(word, n, <span class="at">max.words =</span> <span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining, by = "word"</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="converting-to-and-from-tidy-and-non-tidy-formats" class="level1">
+<h1>Converting to and from tidy and non-tidy formats</h1>
+<p>In this section, we want to <strong>convert our tidy text data</strong> constructed with the <code>unnest_tokens()</code> function (useable by packages in the tidyverse) into a different format that can be <strong>used by packages for natural language processing</strong> or other types of machine learning algorithms in non-tidy formats.</p>
+<p>In the figure below, we see how an analysis might switch between tidy and non-tidy data structures and tools.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.tidytextmining.com/images/tmwr_0501.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption class="figure-caption">A flowchart of a typical text analysis that combines tidytext with other tools and data formats, particularly the <code>tm</code> or <code>quanteda</code> packages. Here, we show how to convert back and forth between document-term matrices and tidy data frames, as well as converting from a Corpus object to a text data frame.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>[<a href="https://www.tidytextmining.com/images/tmwr_0501.png">image source</a>]</p>
+<details>
+<summary>
+Click here for how to convert to and from tidy and non-tidy formats to build machine learning algorithms.
+</summary>
+<p>To introduce some of these tools, we first need to introduce <strong>document-term matrices</strong>, as well as <strong>casting</strong> a tidy data frame into a sparse matrix.</p>
+<section id="document-term-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="document-term-matrix">Document-term matrix</h3>
+<p>One of the most common structures that text mining packages work with is the <strong>document-term matrix</strong> (or DTM). This is a matrix where:</p>
+<ul>
+<li>each row represents one document (such as a book or article),</li>
+<li>each column represents one term, and</li>
+<li>each value (typically) contains the number of appearances of that term in that document.</li>
+</ul>
+<p>Since most pairings of document and term do not occur (they have the value zero), DTMs are usually implemented as sparse matrices.</p>
+<p>These objects can be treated as though they were matrices (for example, accessing particular rows and columns), but are stored in a more efficient format.</p>
+<p>DTM objects <strong>cannot be used directly with tidy tools</strong>, just as tidy data frames cannot be used as input for most text mining packages. Thus, the <code>tidytext</code> package provides two verbs that convert between the two formats.</p>
+<ul>
+<li><code>tidy()</code> turns a document-term matrix into a tidy data frame. This verb comes from the <code>broom</code> package, which provides similar tidying functions for many statistical models and objects.</li>
+<li><code>cast()</code> turns a tidy one-term-per-row data frame into a matrix. <code>tidytext</code> provides three variations of this verb, each converting to a different type of matrix: <code>cast_sparse()</code> (converting to a sparse matrix from the <code>Matrix</code> package), <code>cast_dtm()</code> (converting to a <code>DocumentTermMatrix</code> object from <code>tm</code>), and <code>cast_dfm()</code> (converting to a <code>dfm</code> object from <code>quanteda</code>).</li>
+</ul>
+<p>A DTM is typically comparable to a tidy data frame after a count or a group_by/summarize that contains counts or another statistic for each combination of a term and document.</p>
+</section>
+<section id="creating-documenttermmatrix-objects" class="level3">
+<h3 class="anchored" data-anchor-id="creating-documenttermmatrix-objects">Creating DocumentTermMatrix objects</h3>
+<p>Perhaps the most widely used implementation of DTMs in R is the <code>DocumentTermMatrix</code> class in the <code>tm</code> package. Many available text mining datasets are provided in this format.</p>
+<p>Let’s create a sparse with <code>cast_sparse()</code> function and then a <code>dtm</code> with the <code>cast_dtm()</code> function:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>tidy_austen <span class="ot">&lt;-</span> </span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">austen_books</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">line =</span> <span class="fu">row_number</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest_tokens</span>(word, text) <span class="sc">%&gt;%</span></span>
+<span id="cb80-5"><a href="#cb80-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">anti_join</span>(stop_words)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining, by = "word"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>tidy_austen</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 217,609 × 3
+   book                 line word       
+   &lt;fct&gt;               &lt;int&gt; &lt;chr&gt;      
+ 1 Sense &amp; Sensibility     1 sense      
+ 2 Sense &amp; Sensibility     1 sensibility
+ 3 Sense &amp; Sensibility     3 jane       
+ 4 Sense &amp; Sensibility     3 austen     
+ 5 Sense &amp; Sensibility     5 1811       
+ 6 Sense &amp; Sensibility    10 chapter    
+ 7 Sense &amp; Sensibility    10 1          
+ 8 Sense &amp; Sensibility    13 family     
+ 9 Sense &amp; Sensibility    13 dashwood   
+10 Sense &amp; Sensibility    13 settled    
+# … with 217,599 more rows</code></pre>
+</div>
+</div>
+<p>First, we’ll make a sparse matrix with <code>cast_sparse(data, row, column, value)</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>austen_sparse <span class="ot">&lt;-</span> tidy_austen <span class="sc">%&gt;%</span></span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(line, word) <span class="sc">%&gt;%</span></span>
+<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cast_sparse</span>(<span class="at">row =</span> line, <span class="at">column =</span> word, <span class="at">value =</span> n)</span>
+<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a>austen_sparse[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>10 x 10 sparse Matrix of class "dgCMatrix"</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>   [[ suppressing 10 column names 'sense', 'sensibility', 'austen' ... ]]</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                      
+1  1 1 . . . . . . . .
+3  . . 1 1 . . . . . .
+5  . . . . 1 . . . . .
+10 . . . . . 1 1 . . .
+13 . . . . . . . 1 1 1
+14 . . . . . . . . . .
+15 . . . . . . . . . .
+16 . . . . . . . . . .
+17 . . . . . . . . 1 .
+18 . . . . . . . . . .</code></pre>
+</div>
+</div>
+<p>Next, we’ll make a <code>dtm</code> object with <code>cast_dtm(data, document, matrix)</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>austen_dtm <span class="ot">&lt;-</span> tidy_austen <span class="sc">%&gt;%</span></span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(line, word) <span class="sc">%&gt;%</span></span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cast_dtm</span>(<span class="at">document =</span> line, <span class="at">term =</span> word, <span class="at">value =</span> n)</span>
+<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a>austen_dtm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;&lt;DocumentTermMatrix (documents: 61010, terms: 13914)&gt;&gt;
+Non-/sparse entries: 216128/848677012
+Sparsity           : 100%
+Maximal term length: 19
+Weighting          : term frequency (tf)</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(austen_dtm)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "DocumentTermMatrix"    "simple_triplet_matrix"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(austen_dtm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 61010 13914</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.matrix</span>(austen_dtm[<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Terms
+Docs sense sensibility austen jane 1811 1 chapter dashwood estate family
+  1      1           1      0    0    0 0       0        0      0      0
+  3      0           0      1    1    0 0       0        0      0      0
+  5      0           0      0    0    1 0       0        0      0      0
+  10     0           0      0    0    0 1       1        0      0      0
+  13     0           0      0    0    0 0       0        1      1      1
+  14     0           0      0    0    0 0       0        0      0      0
+  15     0           0      0    0    0 0       0        0      0      0
+  16     0           0      0    0    0 0       0        0      0      0
+  17     0           0      0    0    0 0       0        0      1      0
+  18     0           0      0    0    0 0       0        0      0      0
+  19     0           0      0    0    0 0       0        0      0      0
+  20     0           0      0    0    0 0       0        0      0      0
+  21     0           0      0    0    0 0       0        0      0      0
+  22     0           0      0    0    0 0       0        1      0      1
+  23     0           0      0    0    0 0       0        0      1      0
+  24     0           0      0    0    0 0       0        0      0      0
+  25     0           0      0    0    0 0       0        0      0      0
+  26     0           0      0    0    0 0       0        0      0      0
+  27     0           0      0    0    0 0       0        1      0      0
+  28     0           0      0    0    0 0       0        0      0      0</code></pre>
+</div>
+</div>
+<p>Now we have 61010 observations and 13914 features.</p>
+<p>With these matricies, you can start to leverage the NLP methods and software. For example, in text mining, we often have collections of documents, such as blog posts or news articles, that we’d like to divide into natural groups so that we can understand them separately.</p>
+<p><strong>Topic modeling</strong> is a method for <strong>unsupervised classification</strong> of such documents, similar to clustering on numeric data, which finds natural groups of items even when we’re not sure what we are looking for.</p>
+<p>Latent Dirichlet allocation (LDA) is a particularly popular method for fitting a topic model. It treats each document as a mixture of topics, and each topic as a mixture of words. This allows documents to “overlap” each other in terms of content, rather than being separated into discrete groups, in a way that mirrors typical use of natural language.</p>
+<p>We can also perform <strong>supervised analyses</strong> to build a classifier to classify lines of text from our <code>austen_sparse</code> or <code>austen_dtm</code> objects.</p>
+</section></details>
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
