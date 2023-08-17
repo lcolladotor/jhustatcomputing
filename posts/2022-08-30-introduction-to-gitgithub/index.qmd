@@ -1,5 +1,6 @@
 ---
 title: "Introduction to git/GitHub"
+author:
   - name: Leonardo Collado Torres
     url: http://lcolladotor.github.io/
     affiliations:

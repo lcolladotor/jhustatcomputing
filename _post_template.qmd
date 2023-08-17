@@ -1,6 +1,6 @@
 ---
 title: "Add title"
-author: 
+author:
   - name: Leonardo Collado Torres
     url: http://lcolladotor.github.io/
     affiliations:
