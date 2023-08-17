@@ -20,17 +20,16 @@ categories: [module 5, week 7, tidyverse, factors, categorial variables]
 **Before class, you can prepare by reading the following materials:**
 
 1.  [Wrangling Categorical Data in R](https://peerj.com/preprints/3163) by Amelia McNamara, Nicholas J Horton
-2. <https://swcarpentry.github.io/r-novice-inflammation/12-supp-factors>
-3. <https://forcats.tidyverse.org>
+2.  <https://swcarpentry.github.io/r-novice-inflammation/12-supp-factors>
+3.  <https://forcats.tidyverse.org>
 :::
 
 ### Acknowledgements
 
 Material for this lecture was borrowed and adopted from
 
-- [Wrangling Categorical Data in R](https://peerj.com/preprints/3163) by Amelia McNamara, Nicholas J Horton
-- <https://r4ds.had.co.nz/factors>
-
+-   [Wrangling Categorical Data in R](https://peerj.com/preprints/3163) by Amelia McNamara, Nicholas J Horton
+-   <https://r4ds.had.co.nz/factors>
 
 # Learning objectives
 
@@ -39,9 +38,8 @@ Material for this lecture was borrowed and adopted from
 
 **At the end of this lesson you will:**
 
-- How to create factors and some challenges working with them in base R
-- An introduction to the `forcats` package in the `tidyverse` to work with **cat**egorical variables in R
-
+-   How to create factors and some challenges working with them in base R
+-   An introduction to the `forcats` package in the `tidyverse` to work with **cat**egorical variables in R
 :::
 
 # Introduction
@@ -50,13 +48,11 @@ Material for this lecture was borrowed and adopted from
 
 Factors are **useful when**:
 
-- You want to **include categorical variables in regression models**
-- You want to **plot categorical data** (e.g. want to map categorical
-variables to aesthetic attributes)
-- You want to **display character vectors in a non-alphabetical order**
+-   You want to **include categorical variables in regression models**
+-   You want to **plot categorical data** (e.g. want to map categorical variables to aesthetic attributes)
+-   You want to **display character vectors in a non-alphabetical order**
 
-:::{.callout-tip}
-
+::: callout-tip
 ### Example
 
 Imagine that you have a variable that records month:
@@ -67,21 +63,20 @@ x <- c("Dec", "Apr", "Jan", "Mar")
 
 Using a string to record this variable has two problems:
 
-1. There are only twelve possible months, and there's nothing saving you from typos:
+1.  There are only twelve possible months, and there's nothing saving you from typos:
 
 ```{r}
 x_typo <- c("Dec", "Apr", "Jam", "Mar")
 ```
 
-2. It doesn't sort in a useful way:
+2.  It doesn't sort in a useful way:
 
 ```{r}
 sort(x)
 ```
-
 :::
 
-## Factor basics 
+## Factor basics
 
 You can fix both of these problems with a **factor**.
 
@@ -101,13 +96,13 @@ y <- factor(x, levels = month_levels)
 y
 ```
 
-We can see what happens if we try to **sort the factor**: 
+We can see what happens if we try to **sort the factor**:
 
 ```{r}
 sort(y)
 ```
 
-We can also check the **attributes of the factor**: 
+We can also check the **attributes of the factor**:
 
 ```{r}
 attributes(y)
@@ -119,9 +114,7 @@ If you want to access the set of levels directly, you can do so with `levels()`:
 levels(y)
 ```
 
-
-:::{.callout-tip}
-
+::: callout-tip
 ### Note
 
 Any values not in the level will be silently converted to NA:
@@ -130,24 +123,21 @@ Any values not in the level will be silently converted to NA:
 y_typo <- factor(x_typo, levels = month_levels)
 y_typo
 ```
-
 :::
-
 
 ## Challenges working with categorical data
 
-Working with categorical data can really helpful in many situations, but it also be challenging. 
+Working with categorical data can really helpful in many situations, but it also be challenging.
 
 For example,
 
-1. What if the **original data source** for where the categorical data is getting ingested **changes**? 
-    - If a domain expert is providing spreadsheet data at regular intervals, code that worked on the initial data may not generate an error message, but could silently produce incorrect results.
-2. What if a **new level** of a categorical data is added in an updated dataset? 
-3. When categorical data are coded with numerical values, it can be easy to **break the relationship between category numbers and category labels** without realizing it, thus losing the information encoded in a variable. 
-    - Let's consider an example of this below. 
+1.  What if the **original data source** for where the categorical data is getting ingested **changes**?
+    -   If a domain expert is providing spreadsheet data at regular intervals, code that worked on the initial data may not generate an error message, but could silently produce incorrect results.
+2.  What if a **new level** of a categorical data is added in an updated dataset?
+3.  When categorical data are coded with numerical values, it can be easy to **break the relationship between category numbers and category labels** without realizing it, thus losing the information encoded in a variable.
+    -   Let's consider an example of this below.
 
-:::{.callout-tip}
-
+::: callout-tip
 ### Example
 
 Consider a set of decades,
@@ -164,15 +154,12 @@ tibble(x1_original, x1_factor) %>%
   mutate(x1_numeric = as.numeric(x1_factor))
 ```
 
-Instead of creating a new variable with a numeric version of the value of the factor variable `x1_factor`, the **variable loses the original numerical categories** and **creates a factor number** (i.e., 10 is mapped to 1, 20 is mapped to 2, and 40 is mapped to 3, etc). 
-
+Instead of creating a new variable with a numeric version of the value of the factor variable `x1_factor`, the **variable loses the original numerical categories** and **creates a factor number** (i.e., 10 is mapped to 1, 20 is mapped to 2, and 40 is mapped to 3, etc).
 :::
 
 This **result is unexpected** because `base::as.numeric()` is intended to recover numeric information by coercing a character variable.
 
-
-:::{.callout-tip}
-
+::: callout-tip
 ### Example
 
 Compare the following:
@@ -185,16 +172,15 @@ as.numeric(factor(c("hello")))
 
 In the first example, R does not how to convert the character string to a numeric, so it returns a `NA`.
 
-In the second example, it creates factor numbers and orders them according to an alphabetical order. Here is another example of this behavior: 
+In the second example, it creates factor numbers and orders them according to an alphabetical order. Here is another example of this behavior:
 
 ```{r}
 #| warning: true
 as.numeric(factor(c("hello", "goodbye")))
 ```
-
 :::
 
-This behavior of the `factor()` function feels unexpected at best. 
+This behavior of the `factor()` function feels unexpected at best.
 
 Another example of **unexpected behavior** is how the function will **silently make a missing value** because the values in the data and the levels do not match.
 
@@ -202,29 +188,26 @@ Another example of **unexpected behavior** is how the function will **silently m
 factor("a", levels="c")
 ```
 
-The **unfortunate behavior of factors in R** has led to an online movement against the default behavior of many data import functions to make factors out of any variable composed as strings. 
+The **unfortunate behavior of factors in R** has led to an online movement against the default behavior of many data import functions to make factors out of any variable composed as strings.
 
-The tidyverse is part of this movement, with functions from the `readr` package defaulting to leaving strings as-is. (Others have chosen
-to add `options(stringAsFactors=FALSE)` into their start up commands.)
+The tidyverse is part of this movement, with functions from the `readr` package defaulting to leaving strings as-is. (Others have chosen to add `options(stringAsFactors=FALSE)` into their start up commands.)
 
-## Factors when modeling data 
+## Factors when modeling data
 
-So if factors are so troublesome, what's the point of them in the first place? 
+So if factors are so troublesome, what's the point of them in the first place?
 
-Factors are **still necessary for some data analytic tasks**. The most salient
-case is in **statistical modeling**.
+Factors are **still necessary for some data analytic tasks**. The most salient case is in **statistical modeling**.
 
-When you pass a factor variable into `lm()` or `glm()`, R automatically creates indicator (or more colloquially ‘dummy’) variables for each of the levels and picks one as a reference group.
+When you pass a factor variable into `lm()` or `glm()`, R automatically creates indicator (or more colloquially 'dummy') variables for each of the levels and picks one as a reference group.
 
-For simple cases, this behavior can also be **achieved with a character vector**. 
+For simple cases, this behavior can also be **achieved with a character vector**.
 
-However, to choose **which level to use as a reference level** or to order classes, factors must be used. 
+However, to choose **which level to use as a reference level** or to order classes, factors must be used.
 
-:::{.callout-tip}
-
+::: callout-tip
 ### Example
 
-Consider a vector of character strings with three income levels: 
+Consider a vector of character strings with three income levels:
 
 ```{r}
 income_level <- c(rep("low",10), 
@@ -233,9 +216,9 @@ income_level <- c(rep("low",10),
 income_level
 ```
 
-Here, it **might make sense to use the lowest income level (low) as the reference** class so that all the other coefficients can be interpreted in comparison to it. 
+Here, it **might make sense to use the lowest income level (low) as the reference** class so that all the other coefficients can be interpreted in comparison to it.
 
-However, R would use **high as the reference** by default because ‘h’ comes before ‘l’ in the alphabet.
+However, R would use **high as the reference** by default because 'h' comes before 'l' in the alphabet.
 
 ```{r}
 x <- factor(income_level)
@@ -246,11 +229,9 @@ lm(y ~ x)
 ```
 :::
 
-
-
 ## Memory req for factors and character strings
 
-Consider a large character string such as `income_level` corresponding to a categorical variable. 
+Consider a large character string such as `income_level` corresponding to a categorical variable.
 
 ```{r}
 income_level <- c(rep("low",10000), 
@@ -258,9 +239,9 @@ income_level <- c(rep("low",10000),
                   rep("high",10000))
 ```
 
-In early versions of R, storing categorical data as a factor variable was considerably more efficient than storing the same data as strings, because factor variables only store the factor labels once. 
+In early versions of R, storing categorical data as a factor variable was considerably more efficient than storing the same data as strings, because factor variables only store the factor labels once.
 
-However, R now uses a global string pool, so each unique string is only stored once, which means storage is now less of an issue. 
+However, R now uses a global string pool, so each unique string is only stored once, which means storage is now less of an issue.
 
 ```{r}
 format(object.size(income_level), units="Kb") # size of the character string
@@ -269,9 +250,9 @@ format(object.size(factor(income_level)), units="Kb") # size of the factor
 
 ## Summary
 
-Factors can be really useful in many data analytic tasks, but the base R functions to work with factors can lead to some unexpected behavior that can catch new R users. 
+Factors can be really useful in many data analytic tasks, but the base R functions to work with factors can lead to some unexpected behavior that can catch new R users.
 
-Let's introduce a package to make wrangling factors easier. 
+Let's introduce a package to make wrangling factors easier.
 
 # `forcats`
 
@@ -281,7 +262,6 @@ Next, we will introduce the `forcats` package, which is part of the core `tidyve
 library(forcats)
 ```
 
-
 It provides tools for dealing with **cat**egorical variables (and it's an anagram of factors!) using a wide range of helpers for working with factors.
 
 ## General Social Survey
@@ -290,7 +270,7 @@ For the rest of this lecture, we are going to use the `gss_cat` dataset that is 
 
 It's a sample of data from the [General Social Survey](https://gss.norc.org), a long-running US survey conducted by the independent research organization NORC at the University of Chicago.
 
-The **survey has thousands of questions**, so in `gss_cat`. 
+The **survey has thousands of questions**, so in `gss_cat`.
 
 I have selected a handful that will illustrate some common challenges you will encounter when working with factors.
 
@@ -298,16 +278,13 @@ I have selected a handful that will illustrate some common challenges you will e
 gss_cat
 ```
 
-:::{.callout-tip}
-
+::: callout-tip
 ### Pro-tip
 
 Since this dataset is provided by a package, you can get more information about the variables with `?gss_cat`.
-
 :::
 
-When factors are stored in a `tibble`, you cannot see their levels so easily.
-One way to view them is with `count()`:
+When factors are stored in a `tibble`, you cannot see their levels so easily. One way to view them is with `count()`:
 
 ```{r}
 gss_cat %>% 
@@ -326,37 +303,35 @@ gss_cat %>%
     geom_bar()
 ```
 
-:::{.callout-tip}
+::: callout-tip
+### Important
 
-### Important 
+When **working with factors**, the **two most common operations** are
 
-When **working with factors**, the **two most common operations** are 
-
-1. Changing the **order** of the levels
-2. Changing the **values** of the levels
-
-
+1.  Changing the **order** of the levels
+2.  Changing the **values** of the levels
 :::
 
 Those operations are described in the sections below.
-
 
 ## Modifying factor order
 
 It's often useful to **change the order of the factor levels** in a visualization.
 
-Let's explore the `relig` (religion) factor: 
+Let's explore the `relig` (religion) factor:
 
 ```{r}
 gss_cat %>% 
   count(relig)
 ```
-We see there are 15 categories in the `gss_cat` dataset. 
+
+We see there are 15 categories in the `gss_cat` dataset.
 
 ```{r}
 attributes(gss_cat$relig)
 ```
-The first level is "No answer" followed by "Don't know", and so on. 
+
+The first level is "No answer" followed by "Don't know", and so on.
 
 Imagine you want to explore the average number of hours spent watching TV (`tvhours`) per day across religions (`relig`):
 
@@ -381,8 +356,7 @@ However, it is **hard to read this plot** because **there's no overall pattern**
 
 ### `fct_reorder`
 
-We can improve it by **reordering the levels** of `relig` using `fct_reorder()`.
-`fct_reorder(.f, .x, .fun)` takes three arguments:
+We can improve it by **reordering the levels** of `relig` using `fct_reorder()`. `fct_reorder(.f, .x, .fun)` takes three arguments:
 
 -   `.f`, the factor whose levels you want to modify.
 -   `.x`, a numeric vector that you want to use to reorder the levels.
@@ -403,8 +377,7 @@ relig_summary %>%
 
 As you start making more complicated transformations, I recommend moving them out of `aes()` and into a separate `mutate()` step.
 
-:::{.callout-tip}
-
+::: callout-tip
 ### Example
 
 You could rewrite the plot above as:
@@ -415,12 +388,9 @@ relig_summary %>%
   ggplot(aes(x = tvhours, y = relig)) +
     geom_point()
 ```
-
 :::
 
-
-:::{.callout-tip}
-
+::: callout-tip
 ### Another example
 
 What if we create a similar plot looking at how average age varies across reported income level?
@@ -442,30 +412,24 @@ rincome_summary %>%
     geom_point()
 ```
 
-Here, arbitrarily reordering the levels isn't a good idea!
-That's because `rincome` already has a principled order that we shouldn't mess with.
-
+Here, arbitrarily reordering the levels isn't a good idea! That's because `rincome` already has a principled order that we shouldn't mess with.
 :::
 
-:::{.callout-tip}
-
+::: callout-tip
 ### Pro-tip
 
 Reserve `fct_reorder()` for factors whose levels are arbitrarily ordered.
-
 :::
 
-
-:::{.callout-note}
-
+::: callout-note
 ### Question
 
-Let's practice `fct_reorder()`. Using the `palmerpenguins` dataset, 
+Let's practice `fct_reorder()`. Using the `palmerpenguins` dataset,
 
-1. Calculate the average `bill_length_mm` for each species
-2. Create a scatter plot showing the average for each species.   
-3. Go back and reorder the factor `species` based on the average bill length from largest to smallest. 
-4. Now order it from smallest to largest
+1.  Calculate the average `bill_length_mm` for each species
+2.  Create a scatter plot showing the average for each species.\
+3.  Go back and reorder the factor `species` based on the average bill length from largest to smallest.
+4.  Now order it from smallest to largest
 
 ```{r}
 library(palmerpenguins)
@@ -474,8 +438,6 @@ penguins
 ## Try it out
 
 ```
-
-
 :::
 
 ### `fct_relevel`
@@ -497,18 +459,13 @@ rincome_summary %>%
     geom_point()
 ```
 
-
-:::{.callout-tip}
-
-### Note 
+::: callout-tip
+### Note
 
 Any levels not mentioned in `fct_relevel` will be left in their existing order.
-
 :::
 
-
-Another type of reordering is useful when you are coloring the lines on a plot.
-`fct_reorder2(f, x, y)` reorders the factor `f` by the `y` values associated with the largest `x` values.
+Another type of reordering is useful when you are coloring the lines on a plot. `fct_reorder2(f, x, y)` reorders the factor `f` by the `y` values associated with the largest `x` values.
 
 This makes the plot easier to read because the colors of the line at the far right of the plot will line up with the legend.
 
@@ -516,15 +473,13 @@ This makes the plot easier to read because the colors of the line at the far rig
 #| layout-ncol: 2
 #| fig-width: 4
 #| fig-height: 2
-#| fig-alt: 
-#| - >
-#|     A line plot with age on the x-axis and proportion on the y-axis.
+#| fig-alt: >
+#|   - A line plot with age on the x-axis and proportion on the y-axis.
 #|     There is one line for each category of marital status: no answer,
 #|     never married, separated, divorced, widowed, and married. It is
 #|     a little hard to read the plot because the order of the legend is 
 #|     unrelated to the lines on the plot.    
-#| - >
-#|     Rearranging the legend makes the plot easier to read because the
+#|   - Rearranging the legend makes the plot easier to read because the
 #|     legend colours now match the order of the lines on the far right 
 #|     of the plot. You can see some unsuprising patterns: the proportion
 #|     never marred decreases with age, married forms an upside down U 
@@ -549,8 +504,7 @@ by_age %>%
 
 ### `fct_infreq`
 
-Finally, for bar plots, you can use `fct_infreq()` to order levels in decreasing frequency: this is the simplest type of reordering because it doesn't need any extra variables.
-Combine it with `fct_rev()` if you want them in increasing frequency so that in the bar plot largest values are on the right, not the left.
+Finally, for bar plots, you can use `fct_infreq()` to order levels in decreasing frequency: this is the simplest type of reordering because it doesn't need any extra variables. Combine it with `fct_rev()` if you want them in increasing frequency so that in the bar plot largest values are on the right, not the left.
 
 ```{r}
 #| fig-alt: >
@@ -565,14 +519,11 @@ gss_cat %>%
 
 ## Modifying factor levels
 
-More powerful than changing the orders of the levels is changing their values.
-This allows you to clarify labels for publication, and collapse levels for high-level displays.
+More powerful than changing the orders of the levels is changing their values. This allows you to clarify labels for publication, and collapse levels for high-level displays.
 
 ### `fct_recode`
 
-The most general and powerful tool is `fct_recode()`.
-It allows you to recode, or change, the value of each level.
-For example, take the `gss_cat$partyid`:
+The most general and powerful tool is `fct_recode()`. It allows you to recode, or change, the value of each level. For example, take the `gss_cat$partyid`:
 
 ```{r}
 gss_cat %>% 
@@ -583,10 +534,10 @@ The **levels are terse and inconsistent**.
 
 Let's tweak them to be longer and use a parallel construction.
 
-Like most rename and recoding functions in the tidyverse: 
+Like most rename and recoding functions in the tidyverse:
 
-- the **new values go on the left**
-- the **old values go on the right**
+-   the **new values go on the left**
+-   the **old values go on the right**
 
 ```{r}
 gss_cat %>% 
@@ -600,13 +551,10 @@ gss_cat %>%
   count(partyid)
 ```
 
-
-:::{.callout-tip}
-
-### Note 
+::: callout-tip
+### Note
 
 `fct_recode()` will leave the levels that aren't explicitly mentioned as is, and will warn you if you accidentally refer to a level that doesn't exist.
-
 :::
 
 To combine groups, you can assign multiple old levels to the same new level:
@@ -644,7 +592,6 @@ gss_cat %>%
   count(partyid)
 ```
 
-
 ### `fct_lump_*`
 
 Sometimes you **just want to lump together the small groups** to make a plot or table simpler.
@@ -670,14 +617,13 @@ gss_cat %>%
   print(n = Inf)
 ```
 
-
 Read the documentation to learn about `fct_lump_min()` and `fct_lump_prop()` which are useful in other cases.
 
 ## Ordered factors
 
 There's a **special type of factor** that needs to be mentioned briefly: ordered factors.
 
-**Ordered factors**, created with `ordered()`, imply a strict ordering and equal distance between levels: 
+**Ordered factors**, created with `ordered()`, imply a strict ordering and equal distance between levels:
 
 The **first level** is "less than" the **second level** by the same amount that the second level is "less than" the **third level**, and so on...
 
@@ -698,19 +644,13 @@ Here are some post-lecture questions to help you think about the material discus
 ::: callout-note
 ### Questions
 
-1.  Explore the distribution of `rincome` (reported income).
-    What makes the default bar chart hard to understand?
-    How could you improve the plot?
+1.  Explore the distribution of `rincome` (reported income). What makes the default bar chart hard to understand? How could you improve the plot?
 
-2.  What is the most common `relig` in this survey?
-    What's the most common `partyid`?
+2.  What is the most common `relig` in this survey? What's the most common `partyid`?
 
-3.  Which `relig` does `denom` (denomination) apply to?
-    How can you find out with a table?
-    How can you find out with a visualization?
-    
-4.  There are some suspiciously high numbers in `tvhours`.
-    Is the mean a good summary?
+3.  Which `relig` does `denom` (denomination) apply to? How can you find out with a table? How can you find out with a visualization?
+
+4.  There are some suspiciously high numbers in `tvhours`. Is the mean a good summary?
 
 5.  For each factor in `gss_cat` identify whether the order of the levels is arbitrary or principled.
 
@@ -720,21 +660,14 @@ Here are some post-lecture questions to help you think about the material discus
 
 8.  How could you collapse `rincome` into a small set of categories?
 
-9.  Notice there are 9 groups (excluding other) in the `fct_lump` example above.
-    Why not 10?
-    (Hint: type `?fct_lump`, and find the default for the argument `other_level` is "Other".)
-
-
+9.  Notice there are 9 groups (excluding other) in the `fct_lump` example above. Why not 10? (Hint: type `?fct_lump`, and find the default for the argument `other_level` is "Other".)
 :::
 
 ### Additional Resources
 
 ::: callout-tip
-
-- <https://r4ds.had.co.nz/factors>
-- [Wrangling Categorical Data in R](https://peerj.com/preprints/3163) by Amelia McNamara, Nicholas J Horton
-- <https://swcarpentry.github.io/r-novice-inflammation/12-supp-factors>
-- <https://forcats.tidyverse.org>
-
+-   <https://r4ds.had.co.nz/factors>
+-   [Wrangling Categorical Data in R](https://peerj.com/preprints/3163) by Amelia McNamara, Nicholas J Horton
+-   <https://swcarpentry.github.io/r-novice-inflammation/12-supp-factors>
+-   <https://forcats.tidyverse.org>
 :::
-
