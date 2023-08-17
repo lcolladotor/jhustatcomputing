@@ -1,12 +1,12 @@
 ---
 title: "Add title"
 author: 
-  - name: Stephanie Hicks
-    url: https://stephaniehicks.com
-    affiliation: Department of Biostatistics, Johns Hopkins
-    affiliation_url: https://publichealth.jhu.edu
+  - name: Leonardo Collado Torres
+    url: http://lcolladotor.github.io/
+    affiliation: Lieber Institute for Brain Development
+    affiliation_url: https://libd.org/
 description: "Add title"
-date: 2022-08-30
+date: 2023-08-30
 categories: [add here]
 ---
 
