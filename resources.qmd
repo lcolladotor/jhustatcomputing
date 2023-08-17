@@ -2,10 +2,14 @@
 title: "Resources"
 ---
 
+# Learning R
 
-# Learning R 
+-   R 101 *LIBD rstats club* blog post: <https://research.libd.org/rstatsclub/2018/12/24/r_101/>
+-   Introductory videos from the *LIBD rstats club* such as this one:
 
-- Big Book of R: https://www.bigbookofr.com
-- List of resources to learn R (but also Python, SQL, Javascript): https://github.com/delabj/datacamp_alternatives/blob/master/index.md 
-- learnr4free. Resources (books, videos, interactive websites, papers) to learn R. Some of the resources are beginner-friendly and start with the installation process: https://www.learnr4free.com/en
-- Data Science with R by Danielle Navarro: https://robust-tools.djnavarro.net
+<iframe width="560" height="315" src="https://www.youtube.com/embed/T51DRWeuKm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+-   Big Book of R: <https://www.bigbookofr.com>
+-   List of resources to learn R (but also Python, SQL, Javascript): <https://github.com/delabj/datacamp_alternatives/blob/master/index.md>
+-   learnr4free. Resources (books, videos, interactive websites, papers) to learn R. Some of the resources are beginner-friendly and start with the installation process: <https://www.learnr4free.com/en>
+-   Data Science with R by Danielle Navarro: <https://robust-tools.djnavarro.net>
