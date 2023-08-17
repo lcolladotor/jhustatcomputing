@@ -38,5 +38,11 @@ format:
 
 editor: visual
 
+listing:
+  contents: posts
+  sort:
+    - "date asc"
+    - "title desc"
+
 execute:
   freeze: auto
