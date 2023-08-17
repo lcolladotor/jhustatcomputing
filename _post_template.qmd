@@ -3,8 +3,13 @@ title: "Add title"
 author: 
   - name: Leonardo Collado Torres
     url: http://lcolladotor.github.io/
-    affiliation: Lieber Institute for Brain Development
-    affiliation_url: https://libd.org/
+    affiliations:
+      - id: libd
+        name: Lieber Institute for Brain Development
+        url: https://libd.org/
+      - id: jhsph
+        name: Johns Hopkins Bloomberg School of Public Health Department of Biostatistics
+        url: https://publichealth.jhu.edu/departments/biostatistics
 description: "Add title"
 date: 2023-08-30
 categories: [add here]
