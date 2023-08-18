@@ -11,6 +11,7 @@ author:
         name: Johns Hopkins Bloomberg School of Public Health Department of Biostatistics
         url: https://publichealth.jhu.edu/departments/biostatistics
 description: "How to use citations and incorporate references from a bibliography in R Markdown."
+image: https://www.bibtex.com/img/bibtex-format-700x402.png
 categories: [module 1, week 1, R Markdown, programming]
 bibliography: my-refs.bib
 ---
