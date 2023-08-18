@@ -724,3 +724,10 @@ Latent Dirichlet allocation (LDA) is a particularly popular method for fitting a
 We can also perform **supervised analyses** to build a classifier to classify lines of text from our `austen_sparse` or `austen_dtm` objects.
 
 </details>
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

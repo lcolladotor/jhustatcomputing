@@ -257,3 +257,10 @@ mpg %>%
 There are additional functions in `ggplot2` that allow you to make arbitrarily sophisticated plots.
 
 We will discuss more about this in the next lecture.
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

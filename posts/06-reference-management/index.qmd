@@ -273,3 +273,10 @@ What do they do? How might they be helpful to you in terms of reference manageme
 ```
 
 \[Add here.\]
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

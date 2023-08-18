@@ -677,3 +677,10 @@ Here are some post-lecture questions to help you think about the material discus
 -   <https://swcarpentry.github.io/r-novice-inflammation/12-supp-factors>
 -   <https://forcats.tidyverse.org>
 :::
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

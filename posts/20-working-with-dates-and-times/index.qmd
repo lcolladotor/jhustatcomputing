@@ -659,3 +659,10 @@ d5 <- "12/30/14" # Dec 30, 20
 -   <https://jhu-advdatasci.github.io/2018/lectures/09-dates-times>
 -   <https://r4ds.had.co.nz/dates-and-times>
 :::
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

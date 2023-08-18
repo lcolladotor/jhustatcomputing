@@ -113,3 +113,10 @@ Following steps 2-4, here is my example website:
 -   As you read the introductions from other folks in the class, feel free to comment/reply using Discussion board.
 
 In class on Sept 8, I will show as many websites as I can from Courseplus!
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

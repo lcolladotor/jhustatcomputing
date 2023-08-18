@@ -222,3 +222,10 @@ Using the `ts_lyrics` dataset,
 # Add your solution here
 
 ```
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

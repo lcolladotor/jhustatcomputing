@@ -166,3 +166,10 @@ knitr::include_graphics("https://github.com/djnavarro/art/raw/master/static/gall
 ```
 
 \['Flametree' from Danielle Navarro <https://art.djnavarro.net>\]
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

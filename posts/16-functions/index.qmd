@@ -659,3 +659,10 @@ x / sum(x, na.rm = TRUE)
 -   <https://r4ds.had.co.nz/functions>
 -   <https://r4ds.had.co.nz/functions.html#environment>
 :::
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

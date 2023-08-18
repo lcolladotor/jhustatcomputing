@@ -616,3 +616,10 @@ qplot(x = displ, y = hwy, data = mpg, color = "blue")
 -   <https://r4ds.had.co.nz/data-visualisation>
 -   <https://rdpeng.github.io/Biostat776/lecture-the-ggplot2-plotting-system-part-1>
 :::
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

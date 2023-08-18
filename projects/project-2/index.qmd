@@ -308,3 +308,10 @@ Using the `rain_df`, plots the estimates of mean rainfall and the 95% confidence
 # Add your solution here
 
 ```
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

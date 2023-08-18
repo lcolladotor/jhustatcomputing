@@ -576,3 +576,10 @@ Report the value of the sum when $n$ = 10.
 -   <https://rdpeng.github.io/Biostat776/lecture-loop-functions>
 -   <https://rafalab.github.io/dsbook/programming-basics.html#vectorization>
 :::
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

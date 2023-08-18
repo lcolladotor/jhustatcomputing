@@ -258,3 +258,10 @@ Here are some post-lecture questions to help you think about the material discus
 
 3.  What is needed to reproduce the results of a data analysis?
 :::
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

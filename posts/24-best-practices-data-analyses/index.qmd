@@ -741,3 +741,10 @@ In general, you should follow these principles:
 -   A Gelman, C Pasarica, R Dodhia (2002) Let's practice what we preach: Turning tables into graphs. The American Statistician 56:121-130.
 -   NB Robbins (2004) Creating more effective graphs. Wiley.
 -   [Nature Methods columns](http://bang.clearscience.info/?p=546)
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

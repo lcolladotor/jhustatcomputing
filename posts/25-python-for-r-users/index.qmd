@@ -548,3 +548,10 @@ Here are some post-lecture questions to help you think about the material discus
 1.  Try to use tab completion for a function.
 2.  Try to install and load a different python module in R using `import()`.
 :::
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

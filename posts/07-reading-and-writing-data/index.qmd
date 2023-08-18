@@ -645,3 +645,10 @@ Here are some post-lecture questions to help you think about the material discus
 -   <https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-the-RStudio-IDE>
 -   <https://jhudatascience.org/tidyversecourse/get-data.html>
 :::
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

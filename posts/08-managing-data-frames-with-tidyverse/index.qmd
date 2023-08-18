@@ -727,3 +727,10 @@ head(trees)
 -   <https://jhudatascience.org/tidyversecourse/wrangle-data.html#data-wrangling>
 -   [dplyr cheat sheet from RStudio](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 :::
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

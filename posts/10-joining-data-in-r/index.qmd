@@ -305,3 +305,10 @@ df2 <- data.frame(ID = 2:4,
 -   <https://r4ds.had.co.nz/relational-data>
 -   <https://rafalab.github.io/dsbook/joining-tables>
 :::
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

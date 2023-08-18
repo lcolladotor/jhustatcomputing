@@ -363,3 +363,10 @@ One closing tip I recommend is to put documentation for your software online, in
 -   <https://rdpeng.github.io/Biostat776/lecture-error-handling-and-generation>
 -   <https://adv-r.hadley.nz/debugging>
 :::
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

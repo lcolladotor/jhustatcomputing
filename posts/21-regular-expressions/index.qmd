@@ -731,3 +731,10 @@ length(stringr::words)
 -   <https://rdpeng.github.io/Biostat776/lecture-regular-expressions>
 -   <https://r4ds.had.co.nz/strings>
 :::
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

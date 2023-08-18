@@ -505,3 +505,10 @@ Here are some post-lecture questions to help you think about the material discus
 -   <https://r4ds.had.co.nz/data-visualisation>
 -   <https://rdpeng.github.io/Biostat776/lecture-the-ggplot2-plotting-system-part-2>
 :::
+
+# R session information
+
+```{r}
+options(width = 120)
+sessioninfo::session_info()
+```

@@ -303,7 +303,7 @@ Students requiring accommodations for disabilities should register with [Student
 
 Feel free to submit typos/errors/etc via the github repository associated with the class: <https://github.com/lcolladotor/jhustatcomputing2023>. You will have the thanks of your grateful instructor!
 
-## R session information
+# R session information
 
 ```{r}
 options(width = 120)
