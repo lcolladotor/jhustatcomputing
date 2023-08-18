@@ -418,7 +418,7 @@ Learning objectives
 <pre><code>[1] "index.qmd"       "index.rmarkdown"</code></pre>
 </div>
 </div>
-<p>OK so our current location is in the reading and writing lectures sub-folder of the <code>jhustatcomputing2022</code> course repository. Let’s try using the <code>here</code> package.</p>
+<p>OK so our current location is in the reading and writing lectures sub-folder of the <code>jhustatcomputing2023</code> course repository. Let’s try using the <code>here</code> package.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -433,9 +433,8 @@ Learning objectives
 [13] "profile.jpg"                "projects"                  
 [15] "projects.qmd"               "README.md"                 
 [17] "resources.qmd"              "schedule.qmd"              
-[19] "scripts"                    "site_libs"                 
-[21] "styles.css"                 "syllabus.qmd"              
-[23] "videos"                    </code></pre>
+[19] "scripts"                    "styles.css"                
+[21] "syllabus.qmd"               "videos"                    </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="fu">here</span>(<span class="st">"data"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -448,7 +447,7 @@ Learning objectives
 [13] "tuesdata_temperature.RDS"</code></pre>
 </div>
 </div>
-<p>Now we see that using the <code>here::here()</code> function is a <em>relative</em> path (relative to the <code>.Rproj</code> file in our <code>jhustatcomputing2022</code> repository. We also see there is are two <code>.csv</code> files in the <code>data</code> folder. We will learn how to read those files into R in the next section.</p>
+<p>Now we see that using the <code>here::here()</code> function is a <em>relative</em> path (relative to the <code>.Rproj</code> file in our <code>jhustatcomputing2023</code> repository. We also see there is are two <code>.csv</code> files in the <code>data</code> folder. We will learn how to read those files into R in the next section.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/here.png" class="img-fluid figure-img" style="width:80.0%"></p>
@@ -1192,7 +1191,7 @@ Tip
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-08-17
+ date     2023-08-18
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
