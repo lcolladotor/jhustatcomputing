@@ -14,7 +14,7 @@ description: "Overview course information for BSPH Biostatistics 140.776 in Fall
 categories: [course-admin, module 1, week 1]
 ---
 
-*This lecture as the rest of the course is adapted from the version Stephanie C. Hicks designed and maintained in 2021 - 2022. Check the recent changes to this file through the [GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/posts/01-welcome/index.qmd).*
+*This lecture as the rest of the course is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
 
 Welcome! I am very excited to have you in our one-term (i.e. half a semester) course on Statistical Computing course number (140.776) offered by the [Department of Biostatistics](https://publichealth.jhu.edu/departments/biostatistics) at the [Johns Hopkins Bloomberg School of Public Health](https://publichealth.jhu.edu).
 
