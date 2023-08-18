@@ -149,6 +149,8 @@ When you download a fresh installation of R from CRAN, you get all of the above,
 
 -   People often make packages available on GitHub (very common) and their personal websites (not so common nowadays); there is no reliable way to keep track of how many packages are available in this fashion.
 
+![Slide from 2012 by Roger D. Peng](/images/140.776_2012_websites.png){fig-alt="Screenshot from a slide from 2012 showing that R developers share their packages on personal websites" fig-align="center"}
+
 ::: callout-note
 ## Questions
 
