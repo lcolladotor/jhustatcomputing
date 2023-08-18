@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Leonardo Collado Torres">
+<meta name="description" content="Introduction to reproducible research covering some basic concepts and ideas that are related to reproducible reporting">
+
+<title>Statistical Computing (BSPH 140.776) - 04 - Reproducible Research</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../icon_32.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Statistical Computing (BSPH 140.776)</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-general-information" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">General Information</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-general-information">    
+        <li>
+    <a class="dropdown-item" href="../../syllabus.html" rel="" target="">
+ <span class="dropdown-text">Syllabus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../schedule.html" rel="" target="">
+ <span class="dropdown-text">Schedule</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-course-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Course Materials</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-course-materials">    
+        <li>
+    <a class="dropdown-item" href="../../lectures.html" rel="" target="">
+ <span class="dropdown-text">Lectures</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects.html" rel="" target="">
+ <span class="dropdown-text">Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../resources.html" rel="" target="">
+ <span class="dropdown-text">Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lcolladotor/jhustatcomputing2023" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/lcolladotor" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">04 - Reproducible Research</h1>
+                  <div>
+        <div class="description">
+          Introduction to reproducible research covering some basic concepts and ideas that are related to reproducible reporting
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">module 1</div>
+                <div class="quarto-category">week 1</div>
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">reproducibility</div>
+              </div>
+                  </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Affiliations</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author"><a href="http://lcolladotor.github.io/">Leonardo Collado Torres</a> </p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              <a href="https://libd.org/">
+              Lieber Institute for Brain Development
+              </a>
+            </p>
+          <p class="affiliation">
+              <a href="https://publichealth.jhu.edu/departments/biostatistics">
+              Johns Hopkins Bloomberg School of Public Health Department of Biostatistics
+              </a>
+            </p>
+        </div>
+      </div>
+
+  <div class="quarto-title-meta">
+
+        
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#pre-lecture-materials" id="toc-pre-lecture-materials" class="nav-link active" data-scroll-target="#pre-lecture-materials">Pre-lecture materials</a>
+  <ul class="collapse">
+  <li><a href="#read-ahead" id="toc-read-ahead" class="nav-link" data-scroll-target="#read-ahead">Read ahead</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  </ul></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#what-is-wrong-with-replication" id="toc-what-is-wrong-with-replication" class="nav-link" data-scroll-target="#what-is-wrong-with-replication">What is wrong with replication?</a></li>
+  </ul></li>
+  <li><a href="#reproducibility-to-the-rescue" id="toc-reproducibility-to-the-rescue" class="nav-link" data-scroll-target="#reproducibility-to-the-rescue">Reproducibility to the Rescue</a>
+  <ul class="collapse">
+  <li><a href="#why-does-this-matter" id="toc-why-does-this-matter" class="nav-link" data-scroll-target="#why-does-this-matter">Why does this matter?</a></li>
+  <li><a href="#types-of-reproducibility" id="toc-types-of-reproducibility" class="nav-link" data-scroll-target="#types-of-reproducibility">Types of reproducibility</a></li>
+  <li><a href="#elements-of-computational-reproducibility" id="toc-elements-of-computational-reproducibility" class="nav-link" data-scroll-target="#elements-of-computational-reproducibility">Elements of computational reproducibility</a></li>
+  </ul></li>
+  <li><a href="#x-to-computational-x" id="toc-x-to-computational-x" class="nav-link" data-scroll-target="#x-to-computational-x">“X” to “Computational X”</a>
+  <ul class="collapse">
+  <li><a href="#example-machine-learning-in-the-life-sciences" id="toc-example-machine-learning-in-the-life-sciences" class="nav-link" data-scroll-target="#example-machine-learning-in-the-life-sciences">Example: machine learning in the life sciences</a></li>
+  </ul></li>
+  <li><a href="#the-data-science-pipeline" id="toc-the-data-science-pipeline" class="nav-link" data-scroll-target="#the-data-science-pipeline">The Data Science Pipeline</a>
+  <ul class="collapse">
+  <li><a href="#authors-and-readers" id="toc-authors-and-readers" class="nav-link" data-scroll-target="#authors-and-readers">Authors and Readers</a></li>
+  </ul></li>
+  <li><a href="#post-lecture-materials" id="toc-post-lecture-materials" class="nav-link" data-scroll-target="#post-lecture-materials">Post-lecture materials</a>
+  <ul class="collapse">
+  <li><a href="#final-questions" id="toc-final-questions" class="nav-link" data-scroll-target="#final-questions">Final Questions</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<blockquote class="blockquote">
+<p>An article about computational results is advertising, not scholarship. The actual scholarship is the full software environment, code and data, that produced the result. —<em>Claerbout and Karrenbach (1992)</em></p>
+</blockquote>
+<p>[<a href="http://sepwww.stanford.edu/doku.php?id=sep:research:reproducible:seg92">Link to Claerbout and Karrenbach (1992) article</a>]</p>
+<section id="pre-lecture-materials" class="level1">
+<h1>Pre-lecture materials</h1>
+<section id="read-ahead" class="level3">
+<h3 class="anchored" data-anchor-id="read-ahead">Read ahead</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Read ahead
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Before class, you can prepare by reading the following materials:</strong></p>
+<ol type="1">
+<li><a href="https://rss.onlinelibrary.wiley.com/doi/epdf/10.1111/1740-9713.01522">Statistical programming, Small mistakes, big impacts</a> by Simon Schwab and Leonhard Held</li>
+<li><a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-publhealth-012420-105110">Reproducible Research: A Retrospective</a> by Roger Peng and Stephanie Hicks</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="acknowledgements" class="level3">
+<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
+<p>Material for this lecture was borrowed and adopted from</p>
+<ul>
+<li><a href="https://ropensci.github.io/reproducibility-guide/sections/introduction" class="uri">https://ropensci.github.io/reproducibility-guide/sections/introduction</a></li>
+<li><a href="https://rdpeng.github.io/Biostat776" class="uri">https://rdpeng.github.io/Biostat776</a></li>
+<li><a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-publhealth-012420-105110">Reproducible Research: A Retrospective</a> by Roger Peng and Stephanie Hicks</li>
+</ul>
+</section>
+</section>
+<section id="learning-objectives" class="level1">
+<h1>Learning objectives</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Learning objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>At the end of this lesson you will:</strong></p>
+<ul>
+<li>Know the difference between replication and reproducibility</li>
+<li>Identify valid reasons why replication and/or reproducibility is not always possible</li>
+<li>Identify the type of reproducibility</li>
+<li>Identify key components to enable reproducible data analyses</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This lecture will be about <strong>reproducible reporting</strong>, and I want to take the opportunity to cover some basic concepts and ideas that are related to reproducible reporting, just in case you have not heard about it or don not know what it is.</p>
+<p>Before we get to <strong>reproducibility</strong>, we need to cover a little background with respect to how science works (even if you are not a scientist, this is important).</p>
+<p>The ultimate standard in strengthening scientific evidence is <strong>replication</strong>. Assume you claim that X causes Y, or that Vitamin C improves disease. The goal of replication is to <strong>have independent people to do independent things with different data, different methods, and different laboratories and see if they get the same result</strong>.</p>
+<p>There is a sense that if a relationship in nature is truly there, then it should be robust to having different people discover it in different ways. Replication is particularly important in areas where findings can have big policy impacts or can influence regulatory types of decisions.</p>
+<section id="what-is-wrong-with-replication" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-wrong-with-replication">What is wrong with replication?</h3>
+<p>There is really nothing wrong with it. This is what science has been doing for a long time, through hundreds of years. And there is nothing wrong with it today.</p>
+<p>But the problem is that it is <strong>becoming more and more challenging to do replication</strong> or to replicate other studies.</p>
+<p>Here are some reasons:</p>
+<ol type="1">
+<li>Often times studies are <strong>much larger and more costly</strong> than previously. If you want to do ten versions of the same study, you need ten times as much money and there is not as much money around as there used to be.</li>
+<li>Sometimes it is difficult to replicate a study because <strong>if the original study took 20 years to complete</strong>, it is difficult to wait around another 20 years for replication.</li>
+<li>Some studies are just plain <strong>unique</strong>, such as studying the impact of a massive earthquake in a very specific location and time. If you are looking at a unique situation in time or a unique population, you cannot readily replicate that situation.</li>
+</ol>
+<p>There are a lot of good reasons why you cannot replicate a study. If you cannot replicate a study, <strong>is the alternative just to do nothing</strong> (?? 😱), just let that study stand by itself?</p>
+<p>The idea behind a reproducible reporting is to create a kind of <strong>minimum standard</strong> (or a middle ground) where we will not be replicating a study, but maybe we can <strong>do something in between</strong>. What can we do that’s in between the gold standard and doing nothing?</p>
+<p>That is where reproducibility comes in. That’s how we can kind of <strong>bridge the gap between replication and nothing</strong>.</p>
+<p>In non-research settings, often full replication is not even the point. Often the goal is to preserve something to the point where anybody in an organization can repeat what you did (for example, after you leave the organization).</p>
+<ul>
+<li>In this case, reproducibility is key to maintaining the history of a project and making sure that every step along the way is clear.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Summary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Replication, whereby scientific questions are examined and verified independently by different scientists, is the gold standard for scientific validity.</p></li>
+<li><p>Replication can be difficult and often there are no resources to independently replicate a study.</p></li>
+<li><p>Reproducibility, whereby data and code are re-analyzed by independent scientists to obtain the same results of the original investigator, is a reasonable minimum standard when replication is not possible.</p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="reproducibility-to-the-rescue" class="level1">
+<h1>Reproducibility to the Rescue</h1>
+<p>Let’s first define reproducibility. The basic idea is that you need to make the <strong>data</strong> available for the original study and the <strong>computational methods</strong> available so that other people can look at your data and run the kind of analysis that you have run, and come to the same findings that you found.</p>
+<p>What reproducible reporting is about is a <strong>validation of the data analysis (not the original question itself)</strong>. Because you are not collecting independent data using independent methods, it is a little bit more difficult to validate the scientific question itself. But if you can take someone’s data and reproduce their findings, then you can, in some sense, validate the data analysis.</p>
+<p>In this way, you can at least have <strong>confidence that you can reproduce the analysis</strong>.</p>
+<p>Recently, there has been a lot of discussion of reproducibility in the media and in the scientific literature. The journal <em>Science</em> had a special issue on reproducibility and data replication.</p>
+<ul>
+<li><a href="https://www.science.org/toc/science/334/6060" class="uri">https://www.science.org/toc/science/334/6060</a></li>
+</ul>
+<p>Other journals have specific policies to promote reproducibility in manuscripts that are published in their journals. For example, the Journal of American Statistical Association (JASA) requires authors to submit their code and data to reproduce their analyses and a set of Associate Editors of Reproducibility review those materials as part of the review process:</p>
+<ul>
+<li><a href="https://jasa-acs.github.io/repro-guide" class="uri">https://jasa-acs.github.io/repro-guide</a></li>
+</ul>
+<section id="why-does-this-matter" class="level3">
+<h3 class="anchored" data-anchor-id="why-does-this-matter">Why does this matter?</h3>
+<p>Here is an example. In 2012, a feature on the TV show 60 minutes looked at a major incident at Duke University where many results involving a promising cancer test were found to be not reproducible. This led to a number of studies and clinical trials having to be stopped, followed by an investigation which is still ongoing.</p>
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W5sZTNPMQRM" frameborder="0" allowfullscreen="">
+</iframe>
+</p>
+<p>[<a href="https://www.youtube.com/watch?v=W5sZTNPMQRM">Source</a> on YouTube]</p>
+</section>
+<section id="types-of-reproducibility" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-reproducibility">Types of reproducibility</h3>
+<p><strong>What are the different kinds of reproducible research?</strong> Enabling reproducibility can be complicated, but by separating out some of the levels and degrees of reproducibility the problem can become more manageable because we can focus our efforts on what best suits our specific scientific domain. <a href="https://www.edge.org/response-detail/25340">Victoria Stodden (2014)</a>, a prominent scholar on this topic, has identified some useful distinctions in reproducible research:</p>
+<ul>
+<li><p><strong>Computational reproducibility</strong>: when detailed information is provided about code, software, hardware and implementation details.</p></li>
+<li><p><strong>Empirical reproducibility</strong>: when detailed information is provided about non-computational empirical scientific experiments and observations. In practice this is enabled by making data freely available, as well as details of how the data was collected.</p></li>
+<li><p><strong>Statistical reproducibility</strong>: when detailed information is provided about the choice of statistical tests, model parameters, threshold values, etc. This mostly relates to pre-registration of study design to prevent <em>p</em>-value hacking and other manipulations.</p></li>
+</ul>
+<p>[<a href="https://ropensci.github.io/reproducibility-guide/sections/introduction/">Source</a>]</p>
+</section>
+<section id="elements-of-computational-reproducibility" class="level3">
+<h3 class="anchored" data-anchor-id="elements-of-computational-reproducibility">Elements of computational reproducibility</h3>
+<p>What do we need for computational reproducibility? There are a variety of ways to talk about this, but one basic definition that we hae come up with is that there are four things that are required to make results reproducible:</p>
+<ol type="1">
+<li><p><strong>Analytic data</strong>. The data that were used for the analysis that was presented should be available for others to access. This is different from the <em>raw data</em> because very often in a data analysis the raw data are not all used for the analysis, but rather some subset is used. It may be interesting to see the raw data but impractical to actually have it. Analytic data is key to examining the data analysis.</p></li>
+<li><p><strong>Analytic code</strong>. The analytic code is the code that was applied to the analytic data to produce the key results. This may be preprocessing code, regression modeling code, or really any other code used to produce the results from the analytic data.</p></li>
+<li><p><strong>Documentation</strong>. Documentation of that code and the data is very important.</p></li>
+<li><p><strong>Distribution</strong>. Finally, there needs to be some standard means of distribution, so all this data in the code is easily accessible.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Summary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Reproducible reporting is about is a validation of the data analysis</p></li>
+<li><p>There are multiple types of reproducibility</p></li>
+<li><p>There are four elements to computational reproducibility</p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="x-to-computational-x" class="level1">
+<h1>“X” to “Computational X”</h1>
+<p>What is driving this need for a “reproducibility middle ground” between replication and doing nothing?</p>
+<p>For starters, there are <strong>a lot of new technologies on the scene</strong> and in many different fields of study including, biology, chemistry and environmental science. These <strong>technologies allow us to collect data at a much higher throughput</strong> so we end up with these very complex and very high dimensional data sets.</p>
+<p>These <strong>datasets can be collected almost instantaneously</strong> compared to even just ten years ago—the technology has allowed us to create huge data sets at essentially the touch of a button. Furthermore, we the computing power to take existing (already huge) databases and merge them into even bigger and bigger databases. Finally, the <strong>massive increase in computing power</strong> has allowed us to implement more sophisticated and complex analysis routines.</p>
+<p>The analyses themselves, the models that we fit and <strong>the algorithms that we run, are much much more complicated</strong> than they used to be. Having a basic understanding of these algorithms is difficult, even for a sophisticated person, and it is almost impossible to describe these algorithms with words alone.</p>
+<p>Understanding what someone did in a data analysis now <strong>requires looking at code and scrutinizing the computer programs</strong> that people used.</p>
+<p>The bottom line with all these different trends is that for every field “X”, there is now “Computational X”. There’s computational biology, computational astronomy—whatever it is you want, there is a computational version of it.</p>
+<section id="example-machine-learning-in-the-life-sciences" class="level3">
+<h3 class="anchored" data-anchor-id="example-machine-learning-in-the-life-sciences">Example: machine learning in the life sciences</h3>
+<p>One example of an area where reproducibility is important comes from research that I have conducted in the area of <a href="https://www.nature.com/articles/s41592-021-01256-7">machine learning in the life sciences</a>.</p>
+<p>In the above article, computational reproducibility is not throught of as a binary property, but rather it is on a sliding scale that reflects the time needed to reproduce. Published works fall somewhere on this scale, which is bookended by ‘forever’, for a completely irreproducible work, and ‘zero’, for a work where one can automatically repeat the entire analysis with a single keystroke.</p>
+<p>As in many cases it is difficult to impose a single standard that divides work into ‘reproducible’ and ‘irreproducible’. Therefore, instead a menu is proposed of three standards with varying degrees of rigor for computational reproducibility:</p>
+<ol type="1">
+<li><p><strong>Bronze standard</strong>. The authors make the data, models and code used in the analysis publicly available. The bronze standard is the minimal standard for reproducibility. Without data, models and code, it is not possible to reproduce a work.</p></li>
+<li><p><strong>Silver standard</strong>. In addition to meeting the bronze standard: (1) the dependencies of the analysis can be downloaded and installed in a single command; (2) key details for reproducing the work are documented, including the order in which to run the analysis scripts, the operating system used and system resource requirements; and (3) all random components in the analysis are set to be deterministic. The silver standard is a midway point between minimal availability and full automation. Works that meet this standard will take much less time to reproduce than ones only meeting the bronze standard.</p></li>
+<li><p><strong>Gold standard</strong>. The work meets the silver standard, and the authors make the analysis reproducible with a single command. The gold standard for reproducibility is full automation. When a work meets this standard, it will take little to no effort for a scientist to reproduce it.</p></li>
+</ol>
+</section>
+</section>
+<section id="the-data-science-pipeline" class="level1">
+<h1>The Data Science Pipeline</h1>
+<p>The basic issue is when you read a description of a data analysis, such as in an article or a technical report, for the most part, what you get is the report and nothing else.</p>
+<p>Of course, everyone knows that behind the scenes <strong>there’s a lot that went into this article</strong> and that is what I call the <strong>data science pipeline</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/dspipeline.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">The Data Science Pipeline</figcaption>
+</figure>
+</div>
+<p>In this pipeline, there are two “actors”: the <em>author</em> of the report/article and the <em>reader</em>.</p>
+<ul>
+<li>On the left side, the <strong>author is going from left to right</strong> along this pipeline.</li>
+<li>On the right side, the <strong>reader is going from right to left</strong>.</li>
+</ul>
+<p>If you are the reader, you read the article, and you may want to know more about what happened e.g.</p>
+<ul>
+<li>Where are the data?</li>
+<li>What methods were used here?</li>
+</ul>
+<p>The basic idea behind <strong>computational reproducibility</strong> is to focus on the elements in the blue box: the analytic data and the computational results. With computational reproducibility the goal is to allow the author of a report and the reader of that report to “meet in the middle”.</p>
+<section id="authors-and-readers" class="level3">
+<h3 class="anchored" data-anchor-id="authors-and-readers">Authors and Readers</h3>
+<p>It is important to realize that there are multiple players when you talk about reproducibility–there are different types of parties that have different types of interests. There are <strong>authors</strong> who produce research and they want to make their research reproducible. There are also <strong>readers</strong> of research and they want to reproduce that work. Everyone needs tools to make their lives easier.</p>
+<p>One current <strong>challenge is that authors of research have to undergo considerable effort to make their results available to a wide audience</strong>.</p>
+<ul>
+<li>Publishing data and code today is not necessarily a trivial task. Although there are a number of resources available now, that were not available even five years ago, it is still a bit of a challenge to get things out on the web (or at least distributed widely).</li>
+<li>Resources like <a href="https://github.com">GitHub</a>, <a href="https://kipoi.org">kipoi</a>, and <a href="http://rpubs.com">RPubs</a> and various data repositories have made a big difference, but there is still a ways to go with respect to building up the public reproducibility infrastructure.</li>
+</ul>
+<p>Furthermore, <strong>even when data and code are available</strong>, readers often have to download the data, download the code, and then they have to piece everything together, usually by hand. It’s <strong>not always an easy task to put the data and code together</strong>.</p>
+<ul>
+<li>Readers may not have the same computational resources that the original authors did.</li>
+<li>If the original authors used an enormous computing cluster, for example, to do their analysis, the readers may not have that same enormous computing cluster at their disposal. It may be difficult for readers to reproduce the same results.</li>
+</ul>
+<p>Generally, the <strong>toolbox for doing reproducible research is small</strong>, although <strong>it’s definitely growing</strong>.</p>
+<ul>
+<li>In practice, authors often just throw things up on the web. There are journals and supplementary materials, but they are famously disorganized.</li>
+<li>There are only a few central databases that authors can take advantage of to post their data and make it available. So if you are working in a field that has a central database that everyone uses, that is great. If you are not, then you have to assemble your own resources.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Summary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>The process of conducting and disseminating research can be depicted as a “data science pipeline”</p></li>
+<li><p>Readers and consumers of data science research are typically not privy to the details of the data science pipeline</p></li>
+<li><p>One view of reproducibility is that it gives research consumers partial access to the raw pipeline elements.</p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="post-lecture-materials" class="level1">
+<h1>Post-lecture materials</h1>
+<section id="final-questions" class="level3">
+<h3 class="anchored" data-anchor-id="final-questions">Final Questions</h3>
+<p>Here are some post-lecture questions to help you think about the material discussed.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>What is the difference between replication and reproducible?</p></li>
+<li><p>Why can replication be difficult to achieve? Why is reproducibility a reasonable minimum standard when replication is not possible?</p></li>
+<li><p>What is needed to reproduce the results of a data analysis?</p></li>
+</ol>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
