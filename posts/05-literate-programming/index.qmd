@@ -414,15 +414,11 @@ matrix(data, nrow = rows, ncol = cols)
 
 ```{r, eval = FALSE}
 if (condition) {
-  
-}
-
-else {
-  
-}
-
-else if (condition) {
-  
+    ## Case 1
+} else if (condition) {
+    ## Case 2
+} else if (condition) {
+    ## Case 3
 }
 ```
 
@@ -430,7 +426,7 @@ else if (condition) {
 
 ```{r, eval = FALSE}
 name <- function(variables) {
-  
+
 }
 ```
 
@@ -438,7 +434,7 @@ name <- function(variables) {
 
 ```{r, eval = FALSE}
 for (variable in vector) {
-  
+
 }
 ```
 
@@ -446,7 +442,6 @@ for (variable in vector) {
 
 ```{r, eval = FALSE}
 # Tue Jan 21 20:20:14 2020 ------------------------------
-
 ```
 
 You can see all default code snippets and add yours by clicking on Tools \> Global Options... \> Code (left sidebar) \> Edit Snippets...
