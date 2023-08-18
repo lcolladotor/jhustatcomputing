@@ -277,6 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#final-questions" id="toc-final-questions" class="nav-link" data-scroll-target="#final-questions">Final Questions</a></li>
   </ul></li>
+  <li><a href="#r-session-information" id="toc-r-session-information" class="nav-link" data-scroll-target="#r-session-information">R session information</a></li>
   </ul>
 </nav>
 </nav>
@@ -290,6 +291,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<p><em>This lecture, as the rest of the course, is adapted from the version <a href="https://www.stephaniehicks.com/">Stephanie C. Hicks</a> designed and maintained in 2021 and 2022. Check the recent changes to this file through the <a href="https://github.com/lcolladotor/jhustatcomputing2023/commits/main/posts/25-python-for-r-users/index.qmd">GitHub history</a>.</em></p>
 <!-- Add interesting quote -->
 <section id="pre-lecture-materials" class="level1">
 <h1>Pre-lecture materials</h1>
@@ -507,12 +509,12 @@ NOTE: Python version was forced by RETICULATE_PYTHON_FALLBACK</code></pre>
 </div>
 <p>And in R, the execution changes from Python to R seamlessly</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">^</span><span class="dv">3</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">^</span><span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 8</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">3</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>x <span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">&amp;</span> x <span class="sc">&lt;=</span><span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>x <span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">&amp;</span> x <span class="sc">&lt;=</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
@@ -730,18 +732,19 @@ Conversions
 <p>Let’s first create a <code>flights.csv</code> dataset in R and save it using <code>write_csv</code> from <code>readr</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># checks to see if a folder called "data" exists; if not, it installs it</span></span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="fu">here</span>(<span class="st">"data"</span>))){</span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(<span class="fu">here</span>(<span class="st">"data"</span>))</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(<span class="fu">here</span>(<span class="st">"data"</span>))) {</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">dir.create</span>(<span class="fu">here</span>(<span class="st">"data"</span>))</span>
 <span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="co"># checks to see if a file called "flights.csv" exists; if not, it saves it to the data folder</span></span>
-<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">file.exists</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"flights.csv"</span>))){</span>
-<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">write_csv</span>(nycflights13<span class="sc">::</span>flights, </span>
-<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>                   <span class="at">file =</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"flights.csv"</span>))</span>
-<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a>nycflights13<span class="sc">::</span>flights <span class="sc">%&gt;%</span> </span>
-<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"flights.csv"</span>))) {</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>    readr<span class="sc">::</span><span class="fu">write_csv</span>(nycflights13<span class="sc">::</span>flights,</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">file =</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"flights.csv"</span>)</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a>nycflights13<span class="sc">::</span>flights <span class="sc">%&gt;%</span></span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 19
    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
@@ -794,7 +797,7 @@ Conversions
 57      AA        -4         4
 70      UA         9        20</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>py<span class="sc">$</span>flights_path </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>py<span class="sc">$</span>flights_path</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "/Users/leocollado/Dropbox/Code/jhustatcomputing2023/data/flights.csv"</code></pre>
 </div>
@@ -812,9 +815,9 @@ Conversions
 <p>Next, we can use R to <strong>visualize the Pandas</strong> <code>DataFrame</code>.</p>
 <p>The data frame is <strong>loaded in as an R object now</strong> stored in the variable <code>py</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(py<span class="sc">$</span>flights, <span class="fu">aes</span>(<span class="at">x =</span> carrier, <span class="at">y =</span> arr_delay)) <span class="sc">+</span> </span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(py<span class="sc">$</span>flights, <span class="fu">aes</span>(<span class="at">x =</span> carrier, <span class="at">y =</span> arr_delay)) <span class="sc">+</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -837,10 +840,10 @@ Note
 <p>Use R to read and manipulate data</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>flights <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>,<span class="st">"flights.csv"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dest <span class="sc">==</span> <span class="st">"ORD"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(carrier, dep_delay, arr_delay) <span class="sc">%&gt;%</span></span>
-<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>flights <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"flights.csv"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(dest <span class="sc">==</span> <span class="st">"ORD"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(carrier, dep_delay, arr_delay) <span class="sc">%&gt;%</span></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">na.omit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 336776 Columns: 19
 ── Column specification ────────────────────────────────────────────────────────
@@ -918,8 +921,8 @@ dttm  (1): time_hour
 <p>[<strong>Source</strong>: <a href="https://rstudio.github.io/reticulate">Rstudio</a>]</p>
 <p>Similarly, we can import the pandas library:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>pd <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">'pandas'</span>)</span>
-<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> pd<span class="sc">$</span><span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>,<span class="st">"flights.csv"</span>))</span>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>pd <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">"pandas"</span>)</span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> pd<span class="sc">$</span><span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"flights.csv"</span>))</span>
 <span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time
@@ -1009,9 +1012,106 @@ Questions
 </ol>
 </div>
 </div>
-
-
 </section>
+</section>
+<section id="r-session-information" class="level1">
+<h1>R session information</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.3.1 (2023-06-16)
+ os       macOS Ventura 13.5
+ system   aarch64, darwin20
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       America/New_York
+ date     2023-08-17
+ pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package      * version date (UTC) lib source
+ bit            4.0.5   2022-11-15 [1] CRAN (R 4.3.0)
+ bit64          4.0.5   2020-08-30 [1] CRAN (R 4.3.0)
+ cli            3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
+ colorout       1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
+ colorspace     2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
+ crayon         1.5.2   2022-09-29 [1] CRAN (R 4.3.0)
+ digest         0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
+ dplyr        * 1.1.2   2023-04-20 [1] CRAN (R 4.3.0)
+ evaluate       0.21    2023-05-05 [1] CRAN (R 4.3.0)
+ fansi          1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
+ farver         2.1.1   2022-07-06 [1] CRAN (R 4.3.0)
+ fastmap        1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
+ forcats      * 1.0.0   2023-01-29 [1] CRAN (R 4.3.0)
+ generics       0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
+ ggplot2      * 3.4.3   2023-08-14 [1] CRAN (R 4.3.1)
+ glue           1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
+ gtable         0.3.3   2023-03-21 [1] CRAN (R 4.3.0)
+ here         * 1.0.1   2020-12-13 [1] CRAN (R 4.3.0)
+ hms            1.1.3   2023-03-21 [1] CRAN (R 4.3.0)
+ htmltools      0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
+ htmlwidgets    1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
+ jsonlite       1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
+ knitr          1.43    2023-05-25 [1] CRAN (R 4.3.0)
+ labeling       0.4.2   2020-10-20 [1] CRAN (R 4.3.0)
+ lattice        0.21-8  2023-04-05 [1] CRAN (R 4.3.1)
+ lifecycle      1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
+ lubridate    * 1.9.2   2023-02-10 [1] CRAN (R 4.3.0)
+ magrittr       2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
+ Matrix         1.6-1   2023-08-14 [1] CRAN (R 4.3.0)
+ munsell        0.5.0   2018-06-12 [1] CRAN (R 4.3.0)
+ nycflights13   1.0.2   2021-04-12 [1] CRAN (R 4.3.0)
+ pillar         1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
+ pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
+ png            0.1-8   2022-11-29 [1] CRAN (R 4.3.0)
+ purrr        * 1.0.2   2023-08-10 [1] CRAN (R 4.3.0)
+ R6             2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
+ Rcpp           1.0.11  2023-07-06 [1] CRAN (R 4.3.0)
+ readr        * 2.1.4   2023-02-10 [1] CRAN (R 4.3.0)
+ reticulate   * 1.31    2023-08-10 [1] CRAN (R 4.3.0)
+ rlang          1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
+ rmarkdown      2.24    2023-08-14 [1] CRAN (R 4.3.1)
+ rprojroot      2.0.3   2022-04-02 [1] CRAN (R 4.3.0)
+ rstudioapi     0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
+ scales         1.2.1   2022-08-20 [1] CRAN (R 4.3.0)
+ sessioninfo    1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
+ stringi        1.7.12  2023-01-11 [1] CRAN (R 4.3.0)
+ stringr      * 1.5.0   2022-12-02 [1] CRAN (R 4.3.0)
+ tibble       * 3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
+ tidyr        * 1.3.0   2023-01-24 [1] CRAN (R 4.3.0)
+ tidyselect     1.2.0   2022-10-10 [1] CRAN (R 4.3.0)
+ tidyverse    * 2.0.0   2023-02-22 [1] CRAN (R 4.3.0)
+ timechange     0.2.0   2023-01-11 [1] CRAN (R 4.3.0)
+ tzdb           0.4.0   2023-05-12 [1] CRAN (R 4.3.0)
+ utf8           1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
+ vctrs          0.6.3   2023-06-14 [1] CRAN (R 4.3.0)
+ vroom          1.6.3   2023-04-28 [1] CRAN (R 4.3.0)
+ withr          2.5.0   2022-03-03 [1] CRAN (R 4.3.0)
+ xfun           0.40    2023-08-09 [1] CRAN (R 4.3.0)
+ yaml           2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+
+ [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+
+─ Python configuration ───────────────────────────────────────────────────────────────────────────────────────────────
+ python:         /usr/bin/python3
+ libpython:      /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/config-3.9-darwin/libpython3.9.dylib
+ pythonhome:     /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9:/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9
+ version:        3.9.6 (default, May  7 2023, 23:32:44)  [Clang 14.0.3 (clang-1403.0.22.14.1)]
+ numpy:          /Users/leocollado/Library/Python/3.9/lib/python/site-packages/numpy
+ numpy_version:  1.25.2
+ 
+ NOTE: Python version was forced by RETICULATE_PYTHON_FALLBACK
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->

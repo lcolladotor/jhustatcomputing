@@ -258,6 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#final-questions" id="toc-final-questions" class="nav-link" data-scroll-target="#final-questions">Final Questions</a></li>
   <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
   </ul></li>
+  <li><a href="#r-session-information" id="toc-r-session-information" class="nav-link" data-scroll-target="#r-session-information">R session information</a></li>
   </ul>
 </nav>
 </nav>
@@ -271,6 +272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<p><em>This lecture, as the rest of the course, is adapted from the version <a href="https://www.stephaniehicks.com/">Stephanie C. Hicks</a> designed and maintained in 2021 and 2022. Check the recent changes to this file through the <a href="https://github.com/lcolladotor/jhustatcomputing2023/commits/main/posts/12-ggplot2-plotting-system-part-1/index.qmd">GitHub history</a>.</em></p>
 <blockquote class="blockquote">
 <p>“The greatest value of a picture is when it forces us to notice what we never expected to see.” —John Tukey</p>
 </blockquote>
@@ -368,9 +370,9 @@ Example
 <div class="callout-body-container callout-body">
 <p>Consider the following plot made using base graphics previously.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(airquality, { </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">plot</span>(Temp, Ozone)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">lines</span>(<span class="fu">loess.smooth</span>(Temp, Ozone))</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(airquality, {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(Temp, Ozone)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">lines</span>(<span class="fu">loess.smooth</span>(Temp, Ozone))</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -394,11 +396,13 @@ Example
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>airquality <span class="sc">%&gt;%</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>(<span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                    <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">method =</span> <span class="st">"loess"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">se =</span> <span class="cn">FALSE</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -667,8 +671,8 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <p>If we wanted to count the number of penguins for each of the three species, we can use the <code>count()</code> function in <code>dplyr</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">%&gt;%</span> </span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   species       n
@@ -901,8 +905,8 @@ Example
 </div>
 <p>What if you wanted to <strong>add a smoother to each one of those panels</strong>? Simple, you literally just add the smoother as another <strong>geom</strong>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(displ, hwy, <span class="at">data =</span> mpg, <span class="at">facets =</span> . <span class="sc">~</span> drv) <span class="sc">+</span> </span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(displ, hwy, <span class="at">data =</span> mpg, <span class="at">facets =</span> . <span class="sc">~</span> drv) <span class="sc">+</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1099,8 +1103,8 @@ Click here for case study practicing the <code>qplot()</code> function.
 </div>
 <p>This is slightly better but the substantial overlap makes it difficult to discern any trends in the data. For this we need to add a smoother of some sort. Here we add a linear regression line (a type of smoother) to each group to see if there’s any difference.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">color =</span> mopos) <span class="sc">+</span> </span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">color =</span> mopos) <span class="sc">+</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
@@ -1111,8 +1115,8 @@ Click here for case study practicing the <code>qplot()</code> function.
 <p>Here we see quite clearly that the red group and the green group exhibit rather different relationships between PM2.5 and eNO. For the non-allergic individuals, there appears to be a slightly negative relationship between PM2.5 and eNO and for the allergic individuals, there is a positive relationship. This suggests a strong interaction between PM2.5 and allergic status, an hypothesis perhaps worth following up on in greater detail than this brief exploratory analysis.</p>
 <p>Another, and perhaps more clear, way to visualize this interaction is to use separate panels for the non-allergic and allergic individuals using the <code>facets</code> argument to <code>qplot()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">facets =</span> . <span class="sc">~</span> mopos) <span class="sc">+</span> </span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">facets =</span> . <span class="sc">~</span> mopos) <span class="sc">+</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
@@ -1169,9 +1173,95 @@ Tip
 </ul>
 </div>
 </div>
-
-
 </section>
+</section>
+<section id="r-session-information" class="level1">
+<h1>R session information</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.3.1 (2023-06-16)
+ os       macOS Ventura 13.5
+ system   aarch64, darwin20
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       America/New_York
+ date     2023-08-17
+ pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package        * version date (UTC) lib source
+ bit              4.0.5   2022-11-15 [1] CRAN (R 4.3.0)
+ bit64            4.0.5   2020-08-30 [1] CRAN (R 4.3.0)
+ cli              3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
+ colorout         1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
+ colorspace       2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
+ crayon           1.5.2   2022-09-29 [1] CRAN (R 4.3.0)
+ digest           0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
+ dplyr          * 1.1.2   2023-04-20 [1] CRAN (R 4.3.0)
+ evaluate         0.21    2023-05-05 [1] CRAN (R 4.3.0)
+ fansi            1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
+ farver           2.1.1   2022-07-06 [1] CRAN (R 4.3.0)
+ fastmap          1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
+ forcats        * 1.0.0   2023-01-29 [1] CRAN (R 4.3.0)
+ generics         0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
+ ggplot2        * 3.4.3   2023-08-14 [1] CRAN (R 4.3.1)
+ glue             1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
+ gtable           0.3.3   2023-03-21 [1] CRAN (R 4.3.0)
+ here           * 1.0.1   2020-12-13 [1] CRAN (R 4.3.0)
+ hms              1.1.3   2023-03-21 [1] CRAN (R 4.3.0)
+ htmltools        0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
+ htmlwidgets      1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
+ jsonlite         1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
+ knitr            1.43    2023-05-25 [1] CRAN (R 4.3.0)
+ labeling         0.4.2   2020-10-20 [1] CRAN (R 4.3.0)
+ lattice          0.21-8  2023-04-05 [1] CRAN (R 4.3.1)
+ lifecycle        1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
+ lubridate      * 1.9.2   2023-02-10 [1] CRAN (R 4.3.0)
+ magrittr         2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
+ Matrix           1.6-1   2023-08-14 [1] CRAN (R 4.3.0)
+ mgcv             1.9-0   2023-07-11 [1] CRAN (R 4.3.0)
+ munsell          0.5.0   2018-06-12 [1] CRAN (R 4.3.0)
+ nlme             3.1-163 2023-08-09 [1] CRAN (R 4.3.0)
+ palmerpenguins * 0.1.1   2022-08-15 [1] CRAN (R 4.3.0)
+ pillar           1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
+ pkgconfig        2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
+ purrr          * 1.0.2   2023-08-10 [1] CRAN (R 4.3.0)
+ R6               2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
+ readr          * 2.1.4   2023-02-10 [1] CRAN (R 4.3.0)
+ rlang            1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
+ rmarkdown        2.24    2023-08-14 [1] CRAN (R 4.3.1)
+ rprojroot        2.0.3   2022-04-02 [1] CRAN (R 4.3.0)
+ rstudioapi       0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
+ scales           1.2.1   2022-08-20 [1] CRAN (R 4.3.0)
+ sessioninfo      1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
+ stringi          1.7.12  2023-01-11 [1] CRAN (R 4.3.0)
+ stringr        * 1.5.0   2022-12-02 [1] CRAN (R 4.3.0)
+ tibble         * 3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
+ tidyr          * 1.3.0   2023-01-24 [1] CRAN (R 4.3.0)
+ tidyselect       1.2.0   2022-10-10 [1] CRAN (R 4.3.0)
+ tidyverse      * 2.0.0   2023-02-22 [1] CRAN (R 4.3.0)
+ timechange       0.2.0   2023-01-11 [1] CRAN (R 4.3.0)
+ tzdb             0.4.0   2023-05-12 [1] CRAN (R 4.3.0)
+ utf8             1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
+ vctrs            0.6.3   2023-06-14 [1] CRAN (R 4.3.0)
+ vroom            1.6.3   2023-04-28 [1] CRAN (R 4.3.0)
+ withr            2.5.0   2022-03-03 [1] CRAN (R 4.3.0)
+ xfun             0.40    2023-08-09 [1] CRAN (R 4.3.0)
+ yaml             2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+
+ [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
