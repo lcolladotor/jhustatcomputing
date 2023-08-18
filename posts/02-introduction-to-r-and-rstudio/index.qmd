@@ -89,9 +89,9 @@ With the skills gained in this course, hopefully you will find R a fun and usefu
 
 Today R runs on almost any standard computing platform and operating system. Its open source nature means that anyone is free to adapt the software to whatever platform they choose. Indeed, R has been reported to be running on modern tablets, phones, PDAs, and game consoles.
 
-One nice feature that R shares with many popular open source projects is frequent releases. These days there is a major annual release, typically in October, where major new features are incorporated and released to the public. Throughout the year, smaller-scale bugfix releases will be made as needed. The frequent releases and regular release cycle indicates active development of the software and ensures that bugs will be addressed in a timely manner. Of course, while the core developers control the primary source tree for R, many people around the world make contributions in the form of new feature, bug fixes, or both.
+One nice feature that R shares with many popular open source projects is frequent releases. These days there is a major annual release, typically at the end of April, where major new features are incorporated and released to the public. Throughout the year, smaller-scale bugfix releases will be made as needed. The frequent releases and regular release cycle indicates active development of the software and ensures that bugs will be addressed in a timely manner. Of course, while the core developers control the primary source tree for R, many people around the world make contributions in the form of new feature, bug fixes, or both.
 
-Another key advantage that R has over many other statistical packages (even today) is its sophisticated graphics capabilities. R's ability to create "publication quality" graphics has existed since the very beginning and has generally been better than competing packages. Today, with many more visualization packages available than before, that trend continues. R's base graphics system allows for very fine control over essentially every aspect of a plot or graph. Other newer graphics systems, like lattice and ggplot2 allow for complex and sophisticated visualizations of high-dimensional data.
+Another key advantage that R has over many other statistical packages (even today) is its sophisticated graphics capabilities. R's ability to create "publication quality" graphics has existed since the very beginning and has generally been better than competing packages. Today, with many more visualization packages available than before, that trend continues. R's *base* graphics system allows for very fine control over essentially every aspect of a plot or graph. Other newer graphics systems, like `lattice` (not as used nowadays) and `ggplot2` (very widely used now) allow for complex and sophisticated visualizations of high-dimensional data.
 
 R has maintained the original S philosophy (see box below), which is that **it provides a language that is both useful for interactive work, but contains a powerful programming language for developing new tools**. This allows the user, who takes existing tools and applies them to data, to slowly but surely become a developer who is creating new tools.
 
@@ -99,7 +99,7 @@ R has maintained the original S philosophy (see box below), which is that **it p
 For a great discussion on an overview and history of R and the S programming language, read through [this chapter](https://rdpeng.github.io/Biostat776/lecture-introduction-and-overview.html) from Roger D. Peng.
 :::
 
-Finally, one of the joys of using R has nothing to do with the language itself, but rather with the active and vibrant user community. In many ways, a language is successful inasmuch as it creates a platform with which many people can create new things. R is that platform and thousands of people around the world have come together to make contributions to R, to develop packages, and help each other use R for all kinds of applications. The R-help and R-devel mailing lists have been highly active for over a decade now and there is considerable activity on web sites like Stack Overflow, Twitter [#rstats](https://twitter.com/search?q=%23rstats), [#rtistry](https://twitter.com/search?q=%23rtistry), and [Reddit](https://www.reddit.com/r/rstats/).
+Finally, one of the joys of using R has nothing to do with the language itself, but rather with the active and vibrant user community. In many ways, a language is successful inasmuch as it creates a platform with which many people can create new things. R is that platform and thousands of people around the world have come together to make contributions to R, to develop packages, and help each other use R for all kinds of applications. The R-help and R-devel mailing lists have been highly active for over a decade now and there is considerable activity on web sites like GitHub, [Posit (RStudio) Community](https://community.rstudio.com/), [Bioconductor Support](https://support.bioconductor.org/), Stack Overflow, Twitter [#rstats](https://twitter.com/search?q=%23rstats), [#rtistry](https://twitter.com/search?q=%23rtistry), and [Reddit](https://www.reddit.com/r/rstats/).
 
 ### Free Software
 
@@ -145,9 +145,9 @@ When you download a fresh installation of R from CRAN, you get all of the above,
 
 -   There are over 10,000 packages on CRAN that have been developed by users and programmers around the world.
 
--   There are also many packages associated with the [Bioconductor project](http://bioconductor.org).
+-   There are also over 2,000 packages associated with the [Bioconductor project](http://bioconductor.org).
 
--   People often make packages available on their personal websites; there is no reliable way to keep track of how many packages are available in this fashion.
+-   People often make packages available on GitHub (very common) and their personal websites (not so common nowadays); there is no reliable way to keep track of how many packages are available in this fashion.
 
 ::: callout-note
 ## Questions
@@ -156,6 +156,12 @@ When you download a fresh installation of R from CRAN, you get all of the above,
 2.  How many R packages are on Bioconductor today?
 3.  How many R packages are on GitHub today?
 :::
+
+Want to learn more about Bioconductor? Check this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c0Ch_sXiGDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
 
 ### Limitations of R
 
@@ -314,23 +320,12 @@ Here are some post-lecture questions to help you think about the material discus
 ### Additional Resources
 
 ::: callout-tip
--   [R for Data Science](https://r4ds.had.co.nz) by Wickham & Grolemund (2017). Covers most of the basics of using R for data analysis.
+-   [R for Data Science (2e)](https://r4ds.hadley.nz/) by Wickham & Grolemund (2017, 2e is from July 18th 2023). Covers most of the basics of using R for data analysis.
 
 -   [Advanced R](https://adv-r.hadley.nz) by Wickham (2014). Covers a number of areas including object-oriented, programming, functional programming, profiling and other advanced topics.
 
--   [RStudio IDE cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf)
+-   [RStudio IDE cheatsheet](https://github.com/rstudio/cheatsheets/raw/main/rstudio-ide.pdf)
 :::
-
-## rtistry
-
-```{r}
-#| label: watercolour_splash
-#| echo: false
-#| fig-cap-location: "top"
-knitr::include_graphics("https://github.com/djnavarro/art/raw/master/static/gallery/water-colours/watercolour_splash.jpg")
-```
-
-\['Water Colours' from Danielle Navarro <https://art.djnavarro.net>\]
 
 # R session information
 
