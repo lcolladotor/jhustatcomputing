@@ -7,7 +7,11 @@ title: "Resources"
 -   R 101 [*LIBD rstats club*](https://research.libd.org/rstatsclub/) blog post: <https://research.libd.org/rstatsclub/2018/12/24/r_101/>
 -   Introductory videos from the [*LIBD rstats club*](https://research.libd.org/rstatsclub/) such as this one:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/T51DRWeuKm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/T51DRWeuKm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XTuJ8vGnzBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 -   Big Book of R: <https://www.bigbookofr.com>
 -   List of resources to learn R (but also Python, SQL, Javascript): <https://github.com/delabj/datacamp_alternatives/blob/master/index.md>
