@@ -10,9 +10,9 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing2023/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776) in Fall 2023</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Fri, 18 Aug 2023 00:56:53 GMT</lastBuildDate>
+<lastBuildDate>Fri, 18 Aug 2023 01:10:34 GMT</lastBuildDate>
 <item>
-  <title>Welcome!</title>
+  <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
   <link>https://lcolladotor.github.io/jhustatcomputing2023/posts/01-welcome/index.html</link>
   <description><![CDATA[ 
@@ -20,6 +20,7 @@
 
 
 
+<p><em>This lecture as the rest of the course is adapted from the version <a href="https://www.stephaniehicks.com/">Stephanie C. Hicks</a> designed and maintained in 2021 - 2022. Check the recent changes to this file through the <a href="https://github.com/lcolladotor/jhustatcomputing2023/commits/main/posts/01-welcome/index.qmd">GitHub history</a>.</em></p>
 <p>Welcome! I am very excited to have you in our one-term (i.e.&nbsp;half a semester) course on Statistical Computing course number (140.776) offered by the <a href="https://publichealth.jhu.edu/departments/biostatistics">Department of Biostatistics</a> at the <a href="https://publichealth.jhu.edu">Johns Hopkins Bloomberg School of Public Health</a>.</p>
 <p>This course is designed for ScM and PhD students at Johns Hopkins Bloomberg School of Public Health. I am pretty flexible about permitting outside students, but I want everyone to be aware of the goals and assumptions so no one feels like they are surprised by how the class works.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -364,6 +365,59 @@ Important
 <section id="typos-and-corrections" class="level2">
 <h2 class="anchored" data-anchor-id="typos-and-corrections">Typos and corrections</h2>
 <p>Feel free to submit typos/errors/etc via the github repository associated with the class: <a href="https://github.com/lcolladotor/jhustatcomputing2023" class="uri">https://github.com/lcolladotor/jhustatcomputing2023</a>. You will have the thanks of your grateful instructor!</p>
+</section>
+<section id="r-session-information" class="level2">
+<h2 class="anchored" data-anchor-id="r-session-information">R session information</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">options</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">120</span>)</span>
+<span id="cb2-2">sessioninfo<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">session_info</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.3.1 (2023-06-16)
+ os       macOS Ventura 13.5
+ system   aarch64, darwin20
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       America/New_York
+ date     2023-08-17
+ pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date (UTC) lib source
+ cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
+ colorout      1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
+ digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
+ evaluate      0.21    2023-05-05 [1] CRAN (R 4.3.0)
+ fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
+ htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
+ htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
+ jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
+ knitr         1.43    2023-05-25 [1] CRAN (R 4.3.0)
+ rlang         1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
+ rmarkdown     2.24    2023-08-14 [1] CRAN (R 4.3.1)
+ rstudioapi    0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
+ sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
+ xfun          0.40    2023-08-09 [1] CRAN (R 4.3.0)
+ yaml          2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+
+ [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
 
 
 </section>
@@ -374,7 +428,7 @@ Important
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/01-welcome/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -793,7 +847,7 @@ Tip
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/02-introduction-to-r-and-rstudio/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1002,7 +1056,7 @@ Tip
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/03-introduction-to-gitgithub/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing2023/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -1285,7 +1339,7 @@ Questions
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/04-reproducible-research/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -1941,7 +1995,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/05-literate-programming/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -2368,7 +2422,8 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/06-reference-management/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
+  <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>07 - Reading and Writing data</title>
@@ -3653,7 +3708,7 @@ Tip
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/07-reading-and-writing-data/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -5371,7 +5426,7 @@ Tip
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/08-managing-data-frames-with-tidyverse/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -6238,7 +6293,7 @@ Tip
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/09-tidy-data-and-the-tidyverse/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -6998,7 +7053,7 @@ Tip
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/10-joining-data-in-r/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -7418,7 +7473,7 @@ font-style: inherit;">geom_point</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/11-plotting-systems/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -8664,7 +8719,7 @@ Tip
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/12-ggplot2-plotting-system-part-1/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -9867,7 +9922,7 @@ Tip
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/13-ggplot2-plotting-system-part-2/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -11528,7 +11583,7 @@ Tip
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/14-r-nuts-and-bolts/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -12677,7 +12732,7 @@ Tip
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/15-control-structures/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -13934,7 +13989,7 @@ Tip
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/16-functions/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -15384,7 +15439,7 @@ Tip
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/17-loop-functions/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -16447,7 +16502,7 @@ Tip
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/18-debugging-r-code/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -17142,7 +17197,7 @@ Tip
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/19-error-handling-and-generation/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -18669,7 +18724,7 @@ Tip
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/20-working-with-dates-and-times/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 00:56:53 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 01:10:34 GMT</pubDate>
 </item>
 </channel>
 </rss>
