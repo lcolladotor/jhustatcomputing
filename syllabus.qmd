@@ -4,31 +4,30 @@ title: "Syllabus"
 
 ## Course Information
 
--   Location: In person and Online for Fall 2022
--   Course time: Tuesdays and Thursdays from 1:30-2:50pm (**Eastern Daylight Time** zone)
--   Course location:
--   140.776.01 is in person in W2008
--   140.776.41 will have recorded lectures posted online after class.
+-   Location: In person and Online for Fall 2023
+-   Course time: Tuesdays and Thursdays from 9:00-10:20 a.m. (**Eastern Daylight Time** zone)
+-   Course location: 140.776.01 is in person in W5030
 -   Assignments: Three projects
 
 ### How to register and participate
 
--   **To add the course to your 1st term registration**: You can sign up for either the in person (140.776.01) or online only (140.776.41) course.
--   All lectures will be recorded and posted on CoursePlus. You can watch all lecture material and complete the assignments asynchronously.
+-   **To add the course to your 1st term registration**: You can sign up only for the in-person (140.776.01) course.
+-   All lectures will be recorded and posted on CoursePlus. Classes will be recorded for flexibility purposes but this will not be a hybrid class.
 -   Please course instructor if interested in auditing.
 
 ### Instructor
 
--   Stephanie C. Hicks (<https://www.stephaniehicks.com>)
-    -   Office Location: E3545, Wolfe Street building
-    -   Email: shicks19\@jhu.edu
+-   Leonardo Collado Torres (<http://lcolladotor.github.io/>)
+    -   Office Location: 855 N. Wolfe, Suite 300, Baltimore, MD 21205. Enter the Rangos building, register at the Security fron desk, ask the security guard to help you take the elevator to the third floor (it's badge-controlled), and register at the LIBD front desk.
+    -   Email: [lcollado\@jhu.edu](mailto:lcollado@jhu.edu)
 
 Instructor office hours are announced on CoursePlus. If there are conflicts and/or need to cancel office hours, announcements will be made on CoursePlus.
 
 ### Teaching Assistants
 
--   Phyllis Wei ([ywei43\@jhu.edu](ywei43@jhu.edu))
--   Joe Sartini ([jsartin1\@jhu.edu](jsartin1@jhu.edu))
+-   Emily Norton ([enorton7\@jhmi.edu](mailto:enorton7@jhmi.edu))
+-   Joe Sartini ([jsartin1\@jhu.edu](mailto:jsartin1@jhu.edu))
+-   Phyllis Wei ([ywei43\@jhu.edu](mailto:ywei43@jhu.edu))
 
 TA office hours are announced on CoursePlus.
 
@@ -42,8 +41,9 @@ In order of preference, here is a preferred list of ways to get help:
 
 ## Important Links
 
--   Course website: <https://stephaniehicks.com/jhustatcomputing2022>
--   GitHub repository with all course material: <https://github.com/stephaniehicks/jhustatcomputing2022>
+-   Course website: <https://lcolladotor.github.io/jhustatcomputing2023/>
+-   GitHub repository with all course material: <https://github.com/lcolladotor/jhustatcomputing2023>
+-   Bug reports: <https://github.com/lcolladotor/jhustatcomputing2023/issues>
 
 ## Learning Objectives:
 
@@ -57,7 +57,7 @@ Upon successfully completing this course, students will be able to:
 
 ## Lectures
 
-In Fall 2022, we will have in person lectures that will be recorded enabling an entirely online section for the course too. **Mandatory attendance is not required.**
+In Fall 2023, we will have in person lectures that will be recorded enabling students who missed a class for personal reasons to catch up as well as to review material discussed in class. **Mandatory attendance is required.**
 
 ## Textbook and Other Course Material
 
@@ -69,7 +69,7 @@ We will make heavy use of R in this course, so you should have R installed. You 
 
 It is important that you have the latest version of R installed. For this course we will be using **R version `r paste(version$major, version$minor, sep = ".")`**. You can determine what version of R you have by starting up R and typing into the console `R.version.string` and hitting the `return`/`enter` key. If you do not have the proper version of R installed, go to [CRAN](https://cran.r-project.org) and download and install the latest version.
 
-We will also make use of the RStudio interactive development environment (IDE). RStudio requires that R be installed, and so is an "add-on" to R. You can obtain the RStudio Desktop for free from the [RStudio web site](https://www.rstudio.com/). In particular, we will make heavy use of it when developing R packages. It is also essential that you have the latest release of RStudio. You can determine the version of RStudio by looking at menu item `Help > About RStudio`. You should be using **RStudio version 1.4.1106 or higher**.
+We will also make use of the `RStudio` interactive development environment (IDE). `RStudio` requires that R be installed, and so is an "add-on" to R. You can obtain the RStudio Desktop for free from the [RStudio web site](https://www.rstudio.com/). In particular, we will make heavy use of it when developing R packages. It is also essential that you have the latest release of RStudio. You can determine the version of RStudio by looking at menu item `Help > About RStudio`. You should be using **RStudio version RStudio 2023.06.1 or higher**.
 
 ## Projects
 
@@ -77,10 +77,10 @@ There will be 4 assignments, due every 2--3 weeks. Projects will be submitted el
 
 The project assignments will be due on
 
--   Project 0: September 8, 1:29pm (entirely optional and not graded but hopefully useful and fun)
--   Project 1: September 16, 11:59pm
--   Project 2: September 30, 11:59pm
--   Project 3: October 21, 11:59pm
+-   Project 0: September 10, 11:59pm (entirely optional and not graded but hopefully useful and fun)
+-   Project 1: September 17, 11:59pm
+-   Project 2: October 1, 11:59pm
+-   Project 3: October 23, 11:59pm
 
 ### Project collaboration
 
@@ -152,7 +152,7 @@ This is a quantitative course. We will not discuss the mathematical details of s
 
 ### Getting set up
 
-You must install [R](https://cran.r-project.org) and [RStudio](https://rstudio.com) on your computer in order to complete this course. These are two **different** applications that must be installed separately before they can be used together:
+You must install [`R`](https://cran.r-project.org) and [`RStudio`](https://rstudio.com) on your computer in order to complete this course. These are two **different** applications that must be installed separately before they can be used together:
 
 -   R is the core underlying programming language and computing engine that we will be learning in this course
 
@@ -169,7 +169,7 @@ install.packages("tidyverse")
 
 in the R console.
 
-#### How to Download R for Windows
+#### How to Download `R` for Windows
 
 Go to [https://cran.r-project.org]() and
 
@@ -185,7 +185,7 @@ The version in the video is not the latest version. Please download the latest v
 
 ![Video Demo for Downloading R for Windows](videos/downloadRWindows.gif){width="80%"}
 
-#### How to Download R for the Mac
+#### How to Download `R` for the Mac
 
 Goto [https://cran.r-project.org]() and
 
@@ -199,7 +199,7 @@ The version in the video is not the latest version. Please download the latest v
 
 ![Video Demo for Downloading R for the Mac](videos/downloadRMac.gif){width="80%"}
 
-#### How to Download RStudio
+#### How to Download `RStudio`
 
 Goto [https://rstudio.com]() and
 
