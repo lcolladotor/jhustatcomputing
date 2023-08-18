@@ -60,7 +60,7 @@ This is how you can download the data.
 
 ```{r}
 #| eval: false
-tuesdata <- tidytuesdayR::tt_load('2022-01-18')
+tuesdata <- tidytuesdayR::tt_load("2022-01-18")
 chocolate <- tuesdata$chocolate
 ```
 
@@ -72,15 +72,17 @@ library(here)
 library(tidyverse)
 
 # tests if a directory named "data" exists locally
-if(!dir.exists(here("data"))) { dir.create(here("data")) }
+if (!dir.exists(here("data"))) {
+    dir.create(here("data"))
+}
 
 # saves data only once (not each time you knit a R Markdown)
-if(!file.exists(here("data","chocolate.RDS"))) {
-  url_csv <- 'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-18/chocolate.csv'
-  chocolate <- readr::read_csv(url_csv)
-  
-  # save the file to RDS objects
-  saveRDS(chocolate, file= here("data","chocolate.RDS"))
+if (!file.exists(here("data", "chocolate.RDS"))) {
+    url_csv <- "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-18/chocolate.csv"
+    chocolate <- readr::read_csv(url_csv)
+
+    # save the file to RDS objects
+    saveRDS(chocolate, file = here("data", "chocolate.RDS"))
 }
 ```
 
@@ -89,7 +91,7 @@ Here we read in the `.RDS` dataset locally from our computing environment:
 ```{r}
 #| eval: true
 #| message: false
-chocolate <- readRDS(here("data","chocolate.RDS"))
+chocolate <- readRDS(here("data", "chocolate.RDS"))
 as_tibble(chocolate)
 ```
 
@@ -111,7 +113,6 @@ In this part, use functions from `dplyr` and `ggplot2` to answer the following q
 
 ```{r}
 # Add your solution here and describe your answer afterwards
-
 ```
 
 The ratings are discrete values making the histogram look strange. When you make the bin size smaller, it aggregates the ratings together in larger groups removing that effect. I picked 15, but there really is no wrong answer. Just looking for an answer here.
@@ -120,35 +121,30 @@ The ratings are discrete values making the histogram look strange. When you make
 
 ```{r}
 # Add your solution here
-
 ```
 
 3.  What is average `rating` scores from reviews of chocolate bars that have Ecuador as `country_of_bean_origin` in this dataset? For this same set of reviews, also calculate (1) the total number of reviews and (2) the standard deviation of the `rating` scores. Your answer should be a new data frame with these three summary statistics in three columns. Label the name of these columns `mean`, `sd`, and `total`.
 
 ```{r}
 # Add your solution here
-
 ```
 
 4.  Which country makes the best chocolate (or has the highest ratings on average) with beans from Ecuador?
 
 ```{r}
 # Add your solution here
-
 ```
 
 5.  Calculate the average rating across all country of origins for beans. Which top 3 countries have the highest ratings on average?
 
 ```{r}
 # Add your solution here
-
 ```
 
 6.  Following up on the previous problem, now remove any countries of bean origins that have less than 10 chocolate bar reviews. Now, which top 3 countries have the highest ratings on average?
 
 ```{r}
 # Add your solution here
-
 ```
 
 7.  For this last part, let's explore the relationship between percent chocolate and ratings.
@@ -173,15 +169,14 @@ slice(dat, 1:3)
 
 ## Create a new column that indicates whether the value of 'x' is positive or negative
 dat %>%
-        mutate(is_positive = case_when(
-                x >= 0 ~ "Yes",
-                x < 0 ~ "No"
-        ))
+    mutate(is_positive = case_when(
+        x >= 0 ~ "Yes",
+        x < 0 ~ "No"
+    ))
 ```
 
 ```{r}
 # Add your solution here
-
 ```
 
 # Part 2: Join two datasets together
@@ -201,7 +196,6 @@ The goal of this part of the assignment is to join two datasets together. `gapmi
 
 ```{r}
 # Add your solution here
-
 ```
 
 # Part 3: Convert wide data into long data
@@ -242,7 +236,6 @@ review_date     feature   mean_score
 
 ```{r}
 # Add your solution here
-
 ```
 
 # Part 4: Data visualization
@@ -268,7 +261,6 @@ Consider playing around with the `theme()` function to make the figure shine, in
 
 ```{r}
 # Add your solution here
-
 ```
 
 # Part 5: Make the worst plot you can!
@@ -284,7 +276,6 @@ Using the `chocolate` dataset (or any of the modified versions you made througho
 
 ```{r}
 # Add your solution here
-
 ```
 
 # Part 6: Make my plot a better plot!
@@ -293,10 +284,12 @@ The goal is to take my sad looking plot and make it better! If you'd like an [ex
 
 ```{r}
 chocolate %>%
-  ggplot(aes(x = as.factor(review_date), 
-             y = rating, 
-             fill = review_date)) +
-  geom_violin()
+    ggplot(aes(
+        x = as.factor(review_date),
+        y = rating,
+        fill = review_date
+    )) +
+    geom_violin()
 ```
 
 ### Tasks
@@ -306,7 +299,6 @@ chocolate %>%
 
 ```{r}
 # Add your solution here
-
 ```
 
 # R session information

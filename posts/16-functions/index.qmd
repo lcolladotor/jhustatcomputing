@@ -96,12 +96,12 @@ Here's a simple function that takes no arguments and does nothing.
 
 ```{r}
 f <- function() {
-        ## This is an empty function
+    ## This is an empty function
 }
 ## Functions have their own class
-class(f)  
+class(f)
 ## Execute this function
-f()       
+f()
 ```
 :::
 
@@ -111,9 +111,9 @@ The next thing we can do is **create a function** that actually has a non-trivia
 
 ```{r}
 f <- function() {
-        # this is the function body
-        hello <- "Hello, world!\n"
-        cat(hello) 
+    # this is the function body
+    hello <- "Hello, world!\n"
+    cat(hello)
 }
 f()
 ```
@@ -139,10 +139,10 @@ For this basic function, we can add an argument that determines how many times "
 
 ```{r}
 f <- function(num) {
-        for(i in seq_len(num)) {
-                hello <- "Hello, world!\n"
-                cat(hello) 
-        }
+    for (i in seq_len(num)) {
+        hello <- "Hello, world!\n"
+        cat(hello)
+    }
 }
 f(3)
 ```
@@ -167,12 +167,12 @@ This next function returns the total number of characters printed to the console
 
 ```{r}
 f <- function(num) {
-        hello <- "Hello, world!\n"
-        for(i in seq_len(num)) {
-                 cat(hello)
-        }
-        chars <- nchar(hello) * num
-        chars
+    hello <- "Hello, world!\n"
+    for (i in seq_len(num)) {
+        cat(hello)
+    }
+    chars <- nchar(hello) * num
+    chars
 }
 meaningoflife <- f(3)
 print(meaningoflife)
@@ -207,17 +207,17 @@ Here, for example, we could set the default value for `num` to be 1, so that if 
 
 ```{r}
 f <- function(num = 1) {
-        hello <- "Hello, world!\n"
-        for(i in seq_len(num)) {
-                cat(hello)
-        }
-        chars <- nchar(hello) * num
-        chars
+    hello <- "Hello, world!\n"
+    for (i in seq_len(num)) {
+        cat(hello)
+    }
+    chars <- nchar(hello) * num
+    chars
 }
 
 
-f()    ## Use default value for 'num'
-f(2)   ## Use user-specified value
+f() ## Use default value for 'num'
+f(2) ## Use user-specified value
 ```
 
 Remember that the function still returns the number of characters printed to the console.
@@ -270,7 +270,7 @@ So, in the following call to `rnorm()`
 
 ```{r}
 str(rnorm)
-mydata <- rnorm(100, 2, 1)              ## Generate some data
+mydata <- rnorm(100, 2, 1) ## Generate some data
 ```
 
 100 is assigned to the `n` argument, 2 is assigned to the `mean` argument, and 1 is assigned to the `sd` argument, all by positional matching.
@@ -287,11 +287,11 @@ The following calls to the `sd()` function (which computes the empirical standar
 
 ```{r}
 ## Positional match first argument, default for 'na.rm'
-sd(mydata)                     
+sd(mydata)
 ## Specify 'x' argument by name, default for 'na.rm'
-sd(x = mydata)                 
+sd(x = mydata)
 ## Specify both arguments by name
-sd(x = mydata, na.rm = FALSE) 
+sd(x = mydata, na.rm = FALSE)
 ```
 :::
 
@@ -301,7 +301,7 @@ In the example below, we specify the `na.rm` argument first, followed by `x`, ev
 
 ```{r}
 ## Specify both arguments by name
-sd(na.rm = FALSE, x = mydata)     
+sd(na.rm = FALSE, x = mydata)
 ```
 
 You **can mix positional matching with matching by name**.
@@ -372,8 +372,8 @@ In this example, the function `f()` has two arguments: `a` and `b`.
 
 ```{r}
 f <- function(a, b) {
-        a^2
-} 
+    a^2
+}
 f(2)
 ```
 
@@ -386,8 +386,8 @@ This example also shows lazy evaluation at work, but does eventually result in a
 ```{r}
 #| error: true
 f <- function(a, b) {
-        print(a)
-        print(b)
+    print(a)
+    print(b)
 }
 f(45)
 ```
@@ -420,7 +420,7 @@ The `...` argument is necessary when the number of arguments passed to the funct
 
 ```{r}
 paste("one", "two", "three")
-paste("one", "two", "three", "four", "five", sep="_")
+paste("one", "two", "three", "four", "five", sep = "_")
 ```
 
 ```{r}
@@ -560,8 +560,8 @@ For example, take this function:
 
 ```{r}
 f <- function(x) {
-  x + y
-} 
+    x + y
+}
 ```
 
 In many programming languages, this would be an error, because `y` is not defined inside the function.
@@ -588,11 +588,11 @@ For `f()` that includes the behavior of two things that you might not expect: `{
 
 ```{r}
 `+` <- function(x, y) {
-  if (runif(1) < 0.1) {
-    sum(x, y)
-  } else {
-    sum(x, y) * 1.1
-  }
+    if (runif(1) < 0.1) {
+        sum(x, y)
+    } else {
+        sum(x, y) * 1.1
+    }
 }
 table(replicate(1000, 1 + 2))
 ```

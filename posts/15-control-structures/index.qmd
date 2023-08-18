@@ -121,7 +121,7 @@ Here is an example of a valid if/else structure.
 Let's use the `runif(n, min=0, max=1)` function which draws a random value between a min and max value with the default being between 0 and 1.
 
 ```{r}
-x <- runif(n=1, min=0, max=10)  
+x <- runif(n = 1, min = 0, max = 10)
 x
 ```
 
@@ -134,11 +134,11 @@ x > 3
 If `x` is greater than 3, then the first condition occurs. If `x` is not greater than 3, then the second condition occurs.
 
 ```{r}
-if(x > 3) {
+if (x > 3) {
     y <- 10
-  } else {
+} else {
     y <- 0
-  }
+}
 ```
 
 Finally, we can auto print `y` to see what the value is.
@@ -150,11 +150,11 @@ y
 This expression can also be written a different (but equivalent!) way in R.
 
 ```{r}
-y <- if(x > 3) {
+y <- if (x > 3) {
     10
-  } else { 
+} else {
     0
-  }
+}
 
 y
 ```
@@ -195,8 +195,7 @@ Let's use the `palmerpenguins` dataset and write a if-else statement that
 
 library(tidyverse)
 library(palmerpenguins)
-penguins 
-
+penguins
 ```
 :::
 
@@ -209,8 +208,8 @@ In R, for loops take an iterator variable and assign it successive values from a
 For loops are most commonly used for **iterating over the elements of an object** (list, vector, etc.)
 
 ```{r}
-for(i in 1:10) {
-        print(i)
+for (i in 1:10) {
+    print(i)
 }
 ```
 
@@ -223,9 +222,9 @@ The following three loops all have the same behavior.
 x <- c("a", "b", "c", "d")
 
 ## create for loop
-for(i in 1:4) {
-        ## Print out each element of 'x'
-        print(x[i])  
+for (i in 1:4) {
+    ## Print out each element of 'x'
+    print(x[i])
 }
 ```
 
@@ -236,9 +235,9 @@ We can also print just the iteration value (`i`) itself
 x <- c("a", "b", "c", "d")
 
 ## create for loop
-for(i in 1:4) {
-        ## Print out just 'i'
-        print(i)
+for (i in 1:4) {
+    ## Print out just 'i'
+    print(i)
 }
 ```
 
@@ -257,43 +256,43 @@ Let's put `seq_along()` and `for` loops together.
 
 ```{r}
 ## Generate a sequence based on length of 'x'
-for(i in seq_along(x)) {   
-        print(x[i])
+for (i in seq_along(x)) {
+    print(x[i])
 }
 ```
 
 It is not necessary to use an index-type variable (i.e. `i`).
 
 ```{r}
-for(babyshark in x) {
-        print(babyshark)
+for (babyshark in x) {
+    print(babyshark)
 }
 ```
 
 ```{r}
-for(candyisgreat in x) {
-        print(candyisgreat)
+for (candyisgreat in x) {
+    print(candyisgreat)
 }
 ```
 
 ```{r}
-for(RememberToVote in x) {
-        print(RememberToVote)
+for (RememberToVote in x) {
+    print(RememberToVote)
 }
 ```
 
 You can use any character index you want (but not with symbols or numbers).
 
 ```{r,error=TRUE}
-for(1999 in x) {
-        print(1999)
+for (1999 in x) {
+    print(1999)
 }
 ```
 
 For one line loops, the curly braces are not strictly necessary.
 
 ```{r}
-for(i in 1:4) print(x[i])
+for (i in 1:4) print(x[i])
 ```
 
 However, I like to use curly braces even for one-line loops, because that way if you decide to expand the loop to multiple lines, you won't be burned because you forgot to add curly braces (and you **will** be burned by this).
@@ -311,8 +310,6 @@ Let's use the `palmerpenguins` dataset. Here are the tasks:
 
 ```{r}
 # try it yourself
-
-
 ```
 :::
 
@@ -326,10 +323,10 @@ x
 ```
 
 ```{r}
-for(i in seq_len(nrow(x))) {
-        for(j in seq_len(ncol(x))) {
-                print(x[i, j])
-        }   
+for (i in seq_len(nrow(x))) {
+    for (j in seq_len(ncol(x))) {
+        print(x[i, j])
+    }
 }
 ```
 
@@ -355,9 +352,9 @@ Once the loop body is executed, the condition is tested again, and so forth, unt
 
 ```{r}
 count <- 0
-while(count < 10) {
-        print(count)
-        count <- count + 1
+while (count < 10) {
+    print(count)
+    count <- count + 1
 }
 ```
 
@@ -369,14 +366,14 @@ Sometimes there will be more than one condition in the test.
 z <- 5
 set.seed(1)
 
-while(z >= 3 && z <= 10) {
-        coin <- rbinom(1, 1, 0.5)
-        
-        if(coin == 1) {  ## random walk
-                z <- z + 1
-        } else {
-                z <- z - 1
-        } 
+while (z >= 3 && z <= 10) {
+    coin <- rbinom(1, 1, 0.5)
+
+    if (coin == 1) { ## random walk
+        z <- z + 1
+    } else {
+        z <- z - 1
+    }
 }
 print(z)
 ```
@@ -421,13 +418,13 @@ x0 <- 1
 tol <- 1e-8
 
 repeat {
-        x1 <- computeEstimate()
-        
-        if(abs(x1 - x0) < tol) {  ## Close enough?
-                break
-        } else {
-                x0 <- x1
-        } 
+    x1 <- computeEstimate()
+
+    if (abs(x1 - x0) < tol) { ## Close enough?
+        break
+    } else {
+        x0 <- x1
+    }
 }
 ```
 
@@ -452,25 +449,25 @@ Better to set a hard limit on the number of iterations by using a `for` loop and
 `next` is used to skip an iteration of a loop.
 
 ```{r,eval=FALSE,prompt=FALSE}
-for(i in 1:100) {
-        if(i <= 20) {
-                ## Skip the first 20 iterations
-                next                 
-        }
-        ## Do something here
+for (i in 1:100) {
+    if (i <= 20) {
+        ## Skip the first 20 iterations
+        next
+    }
+    ## Do something here
 }
 ```
 
 `break` is used to exit a loop immediately, regardless of what iteration the loop may be on.
 
 ```{r,eval=FALSE,prompt=FALSE}
-for(i in 1:100) {
-      print(i)
+for (i in 1:100) {
+    print(i)
 
-      if(i > 20) {
-              ## Stop loop after 20 iterations
-              break  
-      }		
+    if (i > 20) {
+        ## Stop loop after 20 iterations
+        break
+    }
 }
 ```
 

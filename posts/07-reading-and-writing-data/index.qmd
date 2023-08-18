@@ -173,8 +173,8 @@ For example, I can put all this together by
 3.  List the files in the path.
 
 ```{r, eval=FALSE}
-if(!file.exists(here("my", "relative", "path"))){
-  dir.create(here("my", "relative", "path"))
+if (!file.exists(here("my", "relative", "path"))) {
+    dir.create(here("my", "relative", "path"))
 }
 list.files(here("my", "relative", "path"))
 ```
@@ -240,7 +240,7 @@ The function you want to use is
 For example, it might be something like this:
 
 ```{r,eval=FALSE}
-source(here::here('functions.R'))
+source(here::here("functions.R"))
 ```
 
 ## R objects
@@ -294,9 +294,9 @@ Let's try an example. Let's save a vector of length 5 into the two file formats.
 
 ```{r}
 x <- 1:5
-save(x, file=here("data", "x.Rda"))
-saveRDS(x, file=here("data", "x.Rds"))
-list.files(path=here("data"))
+save(x, file = here("data", "x.Rda"))
+saveRDS(x, file = here("data", "x.Rds"))
+list.files(path = here("data"))
 ```
 
 Here we assign the imported data to an object using `readRDS()`
@@ -337,7 +337,7 @@ What do you think this code will do?
 ```{r, eval=FALSE}
 x <- 1:5
 y <- x^2
-save(x,y, file=here("data", "x.Rda"))
+save(x, y, file = here("data", "x.Rda"))
 new_x2 <- load(here("data", "x.Rda"))
 ```
 
@@ -481,18 +481,24 @@ The package provides replacements for functions like `read.table()` and `read.cs
 For example, the package includes a variety of functions in the `read_*()` family that allow you to read in data from different formats of flat files. The following table gives a guide to several functions in the `read_*()` family.
 
 ```{r echo = FALSE}
-readr_functions <- data.frame(func = c("`read_csv()`",
-                                       "`read_csv2()`",
-                                       "`read_tsv()`",
-                                       "`read_delim()`",
-                                       "`read_fwf()`",
-                                       "`read_log()`"),
-                              file_type = c("Reads comma-separated file",
-                                            "Reads semicolon-separated file",
-                                            "Reads tab-separated file",
-                                            "General function for reading delimited files",
-                                            "Reads fixed width files",
-                                            "Reads log files"))
+readr_functions <- data.frame(
+    func = c(
+        "`read_csv()`",
+        "`read_csv2()`",
+        "`read_tsv()`",
+        "`read_delim()`",
+        "`read_fwf()`",
+        "`read_log()`"
+    ),
+    file_type = c(
+        "Reads comma-separated file",
+        "Reads semicolon-separated file",
+        "Reads tab-separated file",
+        "General function for reading delimited files",
+        "Reads fixed width files",
+        "Reads log files"
+    )
+)
 knitr::kable(readr_functions, col.names = c("`readr` function", "Use"))
 ```
 
@@ -534,7 +540,8 @@ read_csv("The first line of metadata
   The second line of metadata
   x,y,z
   1,2,3",
-  skip = 2)
+    skip = 2
+)
 ```
 
 Alternatively, you can use the `comment` argument:
@@ -543,7 +550,8 @@ Alternatively, you can use the `comment` argument:
 read_csv("# A comment I want to skip
   x,y,z
   1,2,3",
-  comment = "#")
+    comment = "#"
+)
 ```
 
 It will also (**by default**), **read in the first few rows of the table** in order to figure out the type of each column (i.e. integer, character, etc.). From the `read_csv()` help page:
@@ -565,8 +573,9 @@ Also, specifying the column types explicitly provides a useful safety check in c
 Here is an example of how to specify the column types explicitly:
 
 ```{r}
-teams <- read_csv(here("data", "team_standings.csv"), 
-                  col_types = "cc")
+teams <- read_csv(here("data", "team_standings.csv"),
+    col_types = "cc"
+)
 ```
 
 Note that the `col_types` argument accepts a compact representation. Here `"cc"` indicates that the first column is `character` and the second column is `character` (there are only two columns). Using the `col_types` argument is useful because often it is not easy to automatically figure out the type of a column by looking at a few rows (especially if a column has many missing values).
@@ -582,16 +591,18 @@ There is no need to decompress the file first or use the `gzfile` connection fun
 The following call reads a gzip-compressed CSV file containing download logs from the RStudio CRAN mirror.
 
 ```{r}
-logs <- read_csv(here("data", "2016-07-19.csv.bz2"), 
-                 n_max = 10)
+logs <- read_csv(here("data", "2016-07-19.csv.bz2"),
+    n_max = 10
+)
 ```
 
 Note that the warnings indicate that `read_csv()` may have had some difficulty identifying the type of each column. This can be solved by using the `col_types` argument.
 
 ```{r}
-logs <- read_csv(here("data", "2016-07-19.csv.bz2"), 
-                 col_types = "ccicccccci", 
-                 n_max = 10)
+logs <- read_csv(here("data", "2016-07-19.csv.bz2"),
+    col_types = "ccicccccci",
+    n_max = 10
+)
 logs
 ```
 
@@ -602,9 +613,10 @@ For example, in the log data above, the first column is actually a date, so it m
 If we wanted to just read in that first column, we could do
 
 ```{r}
-logdates <- read_csv(here("data", "2016-07-19.csv.bz2"), 
-                     col_types = cols_only(date = col_date()),
-                     n_max = 10)
+logdates <- read_csv(here("data", "2016-07-19.csv.bz2"),
+    col_types = cols_only(date = col_date()),
+    n_max = 10
+)
 logdates
 ```
 

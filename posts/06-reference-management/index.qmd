@@ -269,7 +269,6 @@ What do they do? How might they be helpful to you in terms of reference manageme
 #| label: flametree
 #| echo: false
 #| fig-cap-location: "top"
-
 ```
 
 \[Add here.\]

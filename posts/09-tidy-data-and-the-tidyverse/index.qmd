@@ -104,8 +104,8 @@ Converting this data to tidy format would give us
 library(tidyverse)
 
 relig_income %>%
-  pivot_longer(-religion, names_to = "income", values_to = "respondents") %>%
-  mutate(religion = factor(religion), income = factor(income))
+    pivot_longer(-religion, names_to = "income", values_to = "respondents") %>%
+    mutate(religion = factor(religion), income = factor(income))
 ```
 
 Some of these functions you have seen before, others might be new to you. Let's talk about each one in the context of the `tidyverse` R packages.
@@ -176,7 +176,7 @@ For example:
 ```{r}
 # Gather everything EXCEPT religion to tidy data
 relig_income %>%
-  pivot_longer(-religion, names_to = "income", values_to = "respondents")
+    pivot_longer(-religion, names_to = "income", values_to = "respondents")
 ```
 :::
 
@@ -193,13 +193,15 @@ You use the `summarize()` function in `dplyr` to summarize the total number of r
 
 ```{r}
 relig_income %>%
-  pivot_longer(-religion, names_to = "income", values_to = "respondents") %>%
-  mutate(religion = factor(religion), income = factor(income)) %>% 
-  group_by(income) %>% 
-  summarize(total_respondents = sum(respondents)) %>%
-  pivot_wider(names_from = "income", 
-              values_from = "total_respondents") %>%
-  knitr::kable()
+    pivot_longer(-religion, names_to = "income", values_to = "respondents") %>%
+    mutate(religion = factor(religion), income = factor(income)) %>%
+    group_by(income) %>%
+    summarize(total_respondents = sum(respondents)) %>%
+    pivot_wider(
+        names_from = "income",
+        values_from = "total_respondents"
+    ) %>%
+    knitr::kable()
 ```
 :::
 
@@ -225,7 +227,6 @@ If we wanted to make `lifeExp`, `pop` and `gdpPercap` (all measurements that we 
 
 ```{r}
 # try it yourself
-
 ```
 :::
 
@@ -240,19 +241,18 @@ Afterward, use `group_by()` and `summarize()` to calculate the average revenue f
 
 ```{r, set.seed(123)}
 df <- tibble(
-  "company" = rep(1:3, each=4), 
-  "year"  = rep(2006:2009, 3),
-  "Q1"    = sample(x = 0:100, size = 12),
-  "Q2"    = sample(x = 0:100, size = 12),
-  "Q3"    = sample(x = 0:100, size = 12),
-  "Q4"    = sample(x = 0:100, size = 12),
+    "company" = rep(1:3, each = 4),
+    "year" = rep(2006:2009, 3),
+    "Q1" = sample(x = 0:100, size = 12),
+    "Q2" = sample(x = 0:100, size = 12),
+    "Q3" = sample(x = 0:100, size = 12),
+    "Q4" = sample(x = 0:100, size = 12),
 )
 df
 ```
 
 ```{r}
-# try it yourself 
-
+# try it yourself
 ```
 :::
 
@@ -266,22 +266,28 @@ The same `tidyr` package also contains two useful functions:
 First, we combine the first three columns into one new column using `unite()`.
 
 ```{r}
-gapminder %>% 
-  unite(col="country_continent_year", 
-        country:year, 
-        sep="_")
+gapminder %>%
+    unite(
+        col = "country_continent_year",
+        country:year,
+        sep = "_"
+    )
 ```
 
 Next, we show how to separate the columns into three separate columns using `separate()` using the `col`, `into` and `sep` arguments.
 
 ```{r}
-gapminder %>% 
-  unite(col="country_continent_year", 
-        country:year, 
-        sep="_") %>% 
-  separate(col="country_continent_year", 
-           into=c("country", "continent", "year"), 
-           sep="_")
+gapminder %>%
+    unite(
+        col = "country_continent_year",
+        country:year,
+        sep = "_"
+    ) %>%
+    separate(
+        col = "country_continent_year",
+        into = c("country", "continent", "year"),
+        sep = "_"
+    )
 ```
 
 # Post-lecture materials
@@ -298,11 +304,11 @@ Here are some post-lecture questions to help you think about the material discus
 2.  What do the extra and fill arguments do in `separate()`? Experiment with the various options for the following two toy datasets.
 
 ```{r, eval=FALSE}
-tibble(x = c("a,b,c", "d,e,f,g", "h,i,j")) %>% 
-  separate(x, c("one", "two", "three"))
+tibble(x = c("a,b,c", "d,e,f,g", "h,i,j")) %>%
+    separate(x, c("one", "two", "three"))
 
-tibble(x = c("a,b,c", "d,e", "f,g,i")) %>% 
-  separate(x, c("one", "two", "three"))
+tibble(x = c("a,b,c", "d,e", "f,g,i")) %>%
+    separate(x, c("one", "two", "three"))
 ```
 
 3.  Both `unite()` and `separate()` have a remove argument. What does it do? Why would you set it to FALSE?

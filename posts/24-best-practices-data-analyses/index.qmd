@@ -307,11 +307,13 @@ What's sub-optimal about this plot?
 ```{r}
 #| warning: false
 d <- airquality %>%
-  mutate(Summer = ifelse(Month %in% c(7, 8, 9), 2, 3))
+    mutate(Summer = ifelse(Month %in% c(7, 8, 9), 2, 3))
 with(d, {
-  plot(Temp, Ozone, col = unclass(Summer), pch = 19, frame.plot = FALSE)
-  legend("topleft", col = 2:3, pch = 19, bty = "n",
-         legend = c("Summer", "Non-Summer"))
+    plot(Temp, Ozone, col = unclass(Summer), pch = 19, frame.plot = FALSE)
+    legend("topleft",
+        col = 2:3, pch = 19, bty = "n",
+        legend = c("Summer", "Non-Summer")
+    )
 })
 ```
 
@@ -320,11 +322,12 @@ What's sub-optimal about this plot?
 ```{r}
 #| warning: false
 airquality %>%
-  mutate(Summer = ifelse(Month %in% c(7, 8, 9), 
-                         "Summer", "Non-Summer")) %>%
-  ggplot(aes(Temp, Ozone)) + 
-  geom_point(aes(color = Summer), size = 2) + 
-  theme_minimal()
+    mutate(Summer = ifelse(Month %in% c(7, 8, 9),
+        "Summer", "Non-Summer"
+    )) %>%
+    ggplot(aes(Temp, Ozone)) +
+    geom_point(aes(color = Summer), size = 2) +
+    theme_minimal()
 ```
 
 Some of these principles are taken from Edward Tufte's *Visual Display of Quantitative Information*:
@@ -365,16 +368,20 @@ Here are some examples of bad plots and suggestions on how to improve
 Let's say we are interested in the most commonly used browsers. Wikipedia has a [table](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers) with the "usage share of web browsers" or the proportion of visitors to a group of web sites that use a particular web browser from July 2017.
 
 ```{r}
-browsers <- c(Chrome=60, Safari=14, UCBrowser=7,
-              Firefox=5, Opera=3, IE=3, Noinfo=8)
-browsers.df <- gather(data.frame(t(browsers)), 
-                      "browser", "proportion") 
+browsers <- c(
+    Chrome = 60, Safari = 14, UCBrowser = 7,
+    Firefox = 5, Opera = 3, IE = 3, Noinfo = 8
+)
+browsers.df <- gather(
+    data.frame(t(browsers)),
+    "browser", "proportion"
+)
 ```
 
 Let's say we want to report the results of the usage. The standard way of displaying these is with a pie chart:
 
 ```{r}
-pie(browsers,main="Browser Usage (July 2022)")
+pie(browsers, main = "Browser Usage (July 2022)")
 ```
 
 If we look at the help file for `pie()`:
@@ -395,10 +402,12 @@ To see this, look at the figure above and try to determine the percentages just 
 If you do want to plot them, then a barplot is appropriate. Here we use the `geom_bar()` function in `ggplot2`. Note, there are also horizontal lines at every multiple of 10, which helps the eye quickly make comparisons across:
 
 ```{r}
-p <- browsers.df %>% 
-        ggplot(aes(x=reorder(browser, -proportion), 
-                   y=proportion)) + 
-        geom_bar(stat="identity")
+p <- browsers.df %>%
+    ggplot(aes(
+        x = reorder(browser, -proportion),
+        y = proportion
+    )) +
+    geom_bar(stat = "identity")
 p
 ```
 
@@ -429,8 +438,8 @@ We see there are arguments with text that control all the text sizes in the plot
 To change the x-axis and y-axis labels to be full names, use `xlab()` and `ylab()`
 
 ```{r}
-p <- p + xlab("Browser") + 
-        ylab("Proportion of Users")
+p <- p + xlab("Browser") +
+    ylab("Proportion of Users")
 p
 ```
 
@@ -445,16 +454,18 @@ Next, we can also use the `theme()` function in `ggplot2` to control the justifi
 To center the title
 
 ```{r}
-p + ggtitle("Browser Usage (July 2022)") + 
-  theme(plot.title = element_text(hjust = 0.5))
+p + ggtitle("Browser Usage (July 2022)") +
+    theme(plot.title = element_text(hjust = 0.5))
 ```
 
 To create bigger text/labels/titles:
 
 ```{r}
-p <- p + ggtitle("Browser Usage (July 2022)") + 
-        theme(plot.title = element_text(hjust = 0.5), 
-        text = element_text(size = 15))
+p <- p + ggtitle("Browser Usage (July 2022)") +
+    theme(
+        plot.title = element_text(hjust = 0.5),
+        text = element_text(size = 15)
+    )
 p
 ```
 
@@ -512,13 +523,15 @@ Let's recreate these barplots as boxplots and overlay the points. We will simula
 
 ```{r}
 set.seed(1000)
-dat <- data.frame("Treatment" = rnorm(10, 30, sd=4), 
-                  "Control" = rnorm(10, 36, sd=4))
-gather(dat, "type", "response") %>% 
-  ggplot(aes(type, response)) + 
-  geom_boxplot() + 
-  geom_point(position='jitter') + 
-  ggtitle("Response to drug treatment")
+dat <- data.frame(
+    "Treatment" = rnorm(10, 30, sd = 4),
+    "Control" = rnorm(10, 36, sd = 4)
+)
+gather(dat, "type", "response") %>%
+    ggplot(aes(type, response)) +
+    geom_boxplot() +
+    geom_point(position = "jitter") +
+    ggtitle("Response to drug treatment")
 ```
 
 Notice how much more we see here: the center, spread, range, and the points themselves. In the barplot, we only see the mean and the standard error (SE), and the SE has more to do with sample size than with the spread of the data.
@@ -531,12 +544,14 @@ However, a quick look at the data demonstrates that this difference is mostly dr
 
 ```{r}
 set.seed(1000)
-dat <- data.frame("Treatment" = rgamma(10, 10, 1), 
-                  "Control" = rgamma(10, 1, .01))
-gather(dat, "type", "response") %>% 
-  ggplot(aes(type, response)) + 
-  geom_boxplot() + 
-  geom_point(position='jitter')
+dat <- data.frame(
+    "Treatment" = rgamma(10, 10, 1),
+    "Control" = rgamma(10, 1, .01)
+)
+gather(dat, "type", "response") %>%
+    ggplot(aes(type, response)) +
+    geom_boxplot() +
+    geom_point(position = "jitter")
 ```
 
 #### Use log scale if data includes outliers
@@ -544,11 +559,11 @@ gather(dat, "type", "response") %>%
 A version showing the data in the log-scale is much more informative.
 
 ```{r}
- gather(dat, "type", "response") %>% 
-  ggplot(aes(type, response)) + 
-  geom_boxplot() + 
-  geom_point(position='jitter') + 
-  scale_y_log10()
+gather(dat, "type", "response") %>%
+    ggplot(aes(type, response)) +
+    geom_boxplot() +
+    geom_point(position = "jitter") +
+    scale_y_log10()
 ```
 
 ### Barplots for paired data
@@ -564,18 +579,22 @@ There are better ways of showing these data to illustrate that there is an incre
 ```{r}
 set.seed(1000)
 before <- runif(6, 5, 8)
-after <- rnorm(6, before*1.15, 2)
+after <- rnorm(6, before * 1.15, 2)
 li <- range(c(before, after))
-ymx <- max(abs(after-before))
+ymx <- max(abs(after - before))
 
-par(mfrow=c(1,2))
-plot(before, after, xlab="Before", ylab="After",
-     ylim=li, xlim=li)
-abline(0,1, lty=2, col=1)
+par(mfrow = c(1, 2))
+plot(before, after,
+    xlab = "Before", ylab = "After",
+    ylim = li, xlim = li
+)
+abline(0, 1, lty = 2, col = 1)
 
-plot(before, after-before, xlab="Before", ylim=c(-ymx, ymx),
-     ylab="Change (After - Before)", lwd=2)
-abline(h=0, lty=2, col=1)
+plot(before, after - before,
+    xlab = "Before", ylim = c(-ymx, ymx),
+    ylab = "Change (After - Before)", lwd = 2
+)
+abline(h = 0, lty = 2, col = 1)
 ```
 
 #### or line plots
@@ -583,15 +602,16 @@ abline(h=0, lty=2, col=1)
 Line plots are not a bad choice, although they can be harder to follow than the previous two. Boxplots show you the increase, but lose the paired information.
 
 ```{r}
-z <- rep(c(0,1), rep(6,2))
-par(mfrow=c(1,2))
+z <- rep(c(0, 1), rep(6, 2))
+par(mfrow = c(1, 2))
 plot(z, c(before, after),
-     xaxt="n", ylab="Response",
-     xlab="", xlim=c(-0.5, 1.5))
-axis(side=1, at=c(0,1), c("Before","After"))
-segments(rep(0,6), before, rep(1,6), after, col=1)     
+    xaxt = "n", ylab = "Response",
+    xlab = "", xlim = c(-0.5, 1.5)
+)
+axis(side = 1, at = c(0, 1), c("Before", "After"))
+segments(rep(0, 6), before, rep(1, 6), after, col = 1)
 
-boxplot(before,after,names=c("Before","After"),ylab="Response")
+boxplot(before, after, names = c("Before", "After"), ylab = "Response")
 ```
 
 ### Gratuitous 3D
@@ -604,13 +624,15 @@ This plot can be made better by simply using color to distinguish the three line
 
 ```{r,message=FALSE}
 x <- read_csv("https://github.com/kbroman/Talk_Graphs/raw/master/R/fig8dat.csv") %>%
-  as_tibble(.name_repair = make.names)
+    as_tibble(.name_repair = make.names)
 
-p <- x %>% 
-  gather("drug", "proportion", -log.dose) %>% 
-  ggplot(aes(x=log.dose, y=proportion,
-             color=drug)) + 
-  geom_line()
+p <- x %>%
+    gather("drug", "proportion", -log.dose) %>%
+    ggplot(aes(
+        x = log.dose, y = proportion,
+        color = drug
+    )) +
+    geom_line()
 p
 ```
 
@@ -619,9 +641,11 @@ This plot demonstrates that using color is more than enough to distinguish the t
 We can make this plot better using the functions we learned above
 
 ```{r}
-p + ggtitle("Survival proportion") + 
-        theme(plot.title = element_text(hjust = 0.5), 
-        text = element_text(size = 15))
+p + ggtitle("Survival proportion") +
+    theme(
+        plot.title = element_text(hjust = 0.5),
+        text = element_text(size = 15)
+    )
 ```
 
 #### Legends
@@ -629,25 +653,32 @@ p + ggtitle("Survival proportion") +
 We can also move the legend inside the plot
 
 ```{r}
-p + ggtitle("Survival proportion") + 
-        theme(plot.title = element_text(hjust = 0.5), 
-        text = element_text(size = 15), 
-        legend.position = c(0.2, 0.3))
+p + ggtitle("Survival proportion") +
+    theme(
+        plot.title = element_text(hjust = 0.5),
+        text = element_text(size = 15),
+        legend.position = c(0.2, 0.3)
+    )
 ```
 
 We can also make the legend transparent
 
 ```{r}
-transparent_legend =  theme(
-  legend.background = element_rect(fill = "transparent"),
-  legend.key = element_rect(fill = "transparent", 
-                            color = "transparent"))
+transparent_legend <- theme(
+    legend.background = element_rect(fill = "transparent"),
+    legend.key = element_rect(
+        fill = "transparent",
+        color = "transparent"
+    )
+)
 
-p + ggtitle("Survival proportion") + 
-        theme(plot.title = element_text(hjust = 0.5), 
-        text = element_text(size = 15), 
-        legend.position = c(0.2, 0.3)) + 
-  transparent_legend
+p + ggtitle("Survival proportion") +
+    theme(
+        plot.title = element_text(hjust = 0.5),
+        text = element_text(size = 15),
+        legend.position = c(0.2, 0.3)
+    ) +
+    transparent_legend
 ```
 
 ### Too many significant digits
@@ -655,17 +686,19 @@ p + ggtitle("Survival proportion") +
 By default, statistical software like R returns many significant digits. This does not mean we should report them. Cutting and pasting directly from R is a bad idea since you might end up showing a table, such as the one below, comparing the heights of basketball players:
 
 ```{r}
-heights <- cbind(rnorm(8,73,3),rnorm(8,73,3),rnorm(8,80,3),
-                 rnorm(8,78,3),rnorm(8,78,3))
-colnames(heights)<-c("SG","PG","C","PF","SF")
-rownames(heights)<- paste("team",1:8)
+heights <- cbind(
+    rnorm(8, 73, 3), rnorm(8, 73, 3), rnorm(8, 80, 3),
+    rnorm(8, 78, 3), rnorm(8, 78, 3)
+)
+colnames(heights) <- c("SG", "PG", "C", "PF", "SF")
+rownames(heights) <- paste("team", 1:8)
 heights
 ```
 
 We are reporting precision up to 0.00001 inches. Do you know of a tape measure with that much precision? This can be easily remedied:
 
 ```{r}
-round(heights,1)
+round(heights, 1)
 ```
 
 ### Minimal figure captions
@@ -673,17 +706,22 @@ round(heights,1)
 Recall the plot we had before:
 
 ```{r, fig.cap=""}
-transparent_legend =  theme(
-  legend.background = element_rect(fill = "transparent"),
-  legend.key = element_rect(fill = "transparent", 
-                            color = "transparent"))
+transparent_legend <- theme(
+    legend.background = element_rect(fill = "transparent"),
+    legend.key = element_rect(
+        fill = "transparent",
+        color = "transparent"
+    )
+)
 
-p + ggtitle("Survival proportion") + 
-        theme(plot.title = element_text(hjust = 0.5), 
-        text = element_text(size = 15), 
-        legend.position = c(0.2, 0.3)) + 
-  xlab("dose (mg)") + 
-  transparent_legend
+p + ggtitle("Survival proportion") +
+    theme(
+        plot.title = element_text(hjust = 0.5),
+        text = element_text(size = 15),
+        legend.position = c(0.2, 0.3)
+    ) +
+    xlab("dose (mg)") +
+    transparent_legend
 ```
 
 What type of caption would be good here?

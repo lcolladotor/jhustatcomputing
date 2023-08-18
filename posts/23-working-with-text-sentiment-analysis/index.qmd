@@ -154,14 +154,16 @@ knitr::include_graphics("../../images/peng_preface.png")
 To make this easier, I typed this text into a vector of character strings: one string per sentence.
 
 ```{r}
-peng_preface <- 
-  c("I started using R in 1998 when I was a college undergraduate working on my senior thesis.", 
-    "The version was 0.63.",  
-    "I was an applied mathematics major with a statistics concentration and I was working with Dr. Nicolas Hengartner on an analysis of word frequencies in classic texts (Shakespeare, Milton, etc.).", 
-    "The idea was to see if we could identify the authorship of each of the texts based on how frequently they used certain words.", 
-    "We downloaded the data from Project Gutenberg and used some basic linear discriminant analysis for the modeling.",
-    "The work was eventually published and was my first ever peer-reviewed publication.", 
-    "I guess you could argue it was my first real 'data science' experience.")
+peng_preface <-
+    c(
+        "I started using R in 1998 when I was a college undergraduate working on my senior thesis.",
+        "The version was 0.63.",
+        "I was an applied mathematics major with a statistics concentration and I was working with Dr. Nicolas Hengartner on an analysis of word frequencies in classic texts (Shakespeare, Milton, etc.).",
+        "The idea was to see if we could identify the authorship of each of the texts based on how frequently they used certain words.",
+        "We downloaded the data from Project Gutenberg and used some basic linear discriminant analysis for the modeling.",
+        "The work was eventually published and was my first ever peer-reviewed publication.",
+        "I guess you could argue it was my first real 'data science' experience."
+    )
 
 peng_preface
 ```
@@ -182,8 +184,10 @@ library(janeaustenr) ## needs to be installed
 Then, we use the `tibble()` function to construct a data frame with two columns: one counting the line number and one from the character strings in `peng_preface`.
 
 ```{r}
-peng_preface_df <- tibble(line=1:7, 
-                          text=peng_preface)
+peng_preface_df <- tibble(
+    line = 1:7,
+    text = peng_preface
+)
 peng_preface_df
 ```
 
@@ -192,17 +196,19 @@ peng_preface_df
 Next, we will use the `unnest_tokens()` function where we will call the output column to be created `word` and the input column `text` from the `peng_preface_df`.
 
 ```{r}
-peng_token <- 
-  peng_preface_df %>% 
-  unnest_tokens(output = word, 
-                input = text, 
-                token = "words")
+peng_token <-
+    peng_preface_df %>%
+    unnest_tokens(
+        output = word,
+        input = text,
+        token = "words"
+    )
 
-peng_token %>% 
-  head()
+peng_token %>%
+    head()
 
-peng_token %>% 
-  tail()
+peng_token %>%
+    tail()
 ```
 
 The argument `token="words"` **defines the unit for tokenization**.
@@ -215,45 +221,49 @@ The default is `"words"`, but there are lots of other options.
 We could tokenize by `"characters"`:
 
 ```{r}
-peng_preface_df %>% 
-  unnest_tokens(word, 
-                text, 
-                token = "characters") %>% 
-  head()
+peng_preface_df %>%
+    unnest_tokens(word,
+        text,
+        token = "characters"
+    ) %>%
+    head()
 ```
 :::
 
 or something called [ngrams](https://en.wikipedia.org/wiki/N-gram), which is defined by Wikipedia as a *"contiguous sequence of n items from a given sample of text or speech"*
 
 ```{r}
-peng_preface_df %>% 
-  unnest_tokens(word,
-                text, 
-                token = "ngrams", 
-                n=3) %>% 
-  head()
+peng_preface_df %>%
+    unnest_tokens(word,
+        text,
+        token = "ngrams",
+        n = 3
+    ) %>%
+    head()
 ```
 
 Another option is to use the `character_shingles` option, which is similar to tokenizing like `ngrams`, except the units are characters instead of words.
 
 ```{r}
-peng_preface_df %>% 
-  unnest_tokens(word, 
-                text, 
-                token = "character_shingles",
-                n = 4) %>% 
-  head()
+peng_preface_df %>%
+    unnest_tokens(word,
+        text,
+        token = "character_shingles",
+        n = 4
+    ) %>%
+    head()
 ```
 
 You can also **create custom functions** for tokenization.
 
 ```{r}
-peng_preface_df %>% 
-  unnest_tokens(word, 
-                text, 
-                token = stringr::str_split,
-                pattern = " ") %>% 
-  head()
+peng_preface_df %>%
+    unnest_tokens(word,
+        text,
+        token = stringr::str_split,
+        pattern = " "
+    ) %>%
+    head()
 ```
 
 ::: callout-note
@@ -262,23 +272,28 @@ peng_preface_df %>%
 Let's tokenize the first four sentences of [Amanda Gorman's *The Hill We Climb*](https://www.nytimes.com/2021/01/19/books/amanda-gorman-inauguration-hill-we-climb.html) by words.
 
 ```{r}
-gorman_hill_we_climb <- 
-  c("When day comes we ask ourselves, where can we find light in this neverending shade?",
-    "The loss we carry, a sea we must wade.", 
-    "We’ve braved the belly of the beast, we’ve learned that quiet isn’t always peace and the norms and notions of what just is, isn’t always justice.",
-    "And yet the dawn is ours before we knew it, somehow we do it, somehow we’ve weathered and witnessed a nation that isn’t broken but simply unfinished.")
+gorman_hill_we_climb <-
+    c(
+        "When day comes we ask ourselves, where can we find light in this neverending shade?",
+        "The loss we carry, a sea we must wade.",
+        "We’ve braved the belly of the beast, we’ve learned that quiet isn’t always peace and the norms and notions of what just is, isn’t always justice.",
+        "And yet the dawn is ours before we knew it, somehow we do it, somehow we’ve weathered and witnessed a nation that isn’t broken but simply unfinished."
+    )
 
-hill_df <- tibble(line=seq_along(gorman_hill_we_climb), 
-                  text=gorman_hill_we_climb)
-hill_df 
+hill_df <- tibble(
+    line = seq_along(gorman_hill_we_climb),
+    text = gorman_hill_we_climb
+)
+hill_df
 
 ### try it out
 
-hill_df %>% 
-  unnest_tokens(output = wordsforfun, 
-                input = text, 
-                token = "words")
-
+hill_df %>%
+    unnest_tokens(
+        output = wordsforfun,
+        input = text,
+        token = "words"
+    )
 ```
 :::
 
@@ -314,28 +329,32 @@ Similar to what we did above with Roger's preface, we can
 -   Convert it into a one-row-per-line dataframe using the `unnest_tokens()` function
 
 ```{r}
-pp_book_df <- tibble(text = prideprejudice) 
-  
-pp_book_df %>% 
-  unnest_tokens(output = word, 
-                input = text, 
-                token="words")
+pp_book_df <- tibble(text = prideprejudice)
+
+pp_book_df %>%
+    unnest_tokens(
+        output = word,
+        input = text,
+        token = "words"
+    )
 ```
 
 We can also divide it by paragraphs:
 
 ```{r}
-tmp <- pp_book_df %>% 
-  unnest_tokens(output = paragraph, 
-                input = text, 
-                token ="paragraphs") 
+tmp <- pp_book_df %>%
+    unnest_tokens(
+        output = paragraph,
+        input = text,
+        token = "paragraphs"
+    )
 tmp
 ```
 
 We can extract a particular element from the tibble
 
 ```{r}
-tmp[3,1]
+tmp[3, 1]
 ```
 
 ::: callout-tip
@@ -348,9 +367,11 @@ We could also divide it by sentence:
 
 ```{r}
 pp_book_df %>%
-    unnest_tokens(output = sentence,
-                  input = text, 
-                  token = "sentences") 
+    unnest_tokens(
+        output = sentence,
+        input = text,
+        token = "sentences"
+    )
 ```
 
 ::: callout-tip
@@ -367,12 +388,14 @@ One neat trick is that we can unnest by two layers:
 This lets us keep track of **which paragraph is which**.
 
 ```{r}
-paragraphs <- 
-  pp_book_df %>%
-    unnest_tokens(output = paragraph, 
-                  input = text, 
-                  token = "paragraphs") %>%
-    mutate(paragraph_number = row_number()) 
+paragraphs <-
+    pp_book_df %>%
+    unnest_tokens(
+        output = paragraph,
+        input = text,
+        token = "paragraphs"
+    ) %>%
+    mutate(paragraph_number = row_number())
 
 paragraphs
 ```
@@ -387,8 +410,10 @@ After tokenizing by paragraph, we can then tokenzie by word:
 
 ```{r}
 paragraphs %>%
-    unnest_tokens(output = word, 
-                  input = paragraph)
+    unnest_tokens(
+        output = word,
+        input = paragraph
+    )
 ```
 
 We notice there are many what are called **stop words** ("the", "of", "to", and so forth in English).
@@ -400,20 +425,22 @@ data(stop_words)
 
 table(stop_words$lexicon)
 
-stop_words %>% 
-  head(n=10)
+stop_words %>%
+    head(n = 10)
 ```
 
 We can remove stop words (kept in the `tidytext` dataset `stop_words`) with an `anti_join(x,y)` (return all rows from `x` without a match in `y`).
 
 ```{r}
-words_by_paragraph <- 
-  paragraphs %>%
-    unnest_tokens(output = word, 
-                  input = paragraph) %>%
+words_by_paragraph <-
+    paragraphs %>%
+    unnest_tokens(
+        output = word,
+        input = paragraph
+    ) %>%
     anti_join(stop_words)
 
-words_by_paragraph 
+words_by_paragraph
 ```
 
 Because we have stored our data in a tidy dataset, we can use `tidyverse` packages for exploratory data analysis.
@@ -422,18 +449,18 @@ For example, here we use `dplyr`'s `count()` function to find the most common wo
 
 ```{r}
 words_by_paragraph %>%
-  count(word, sort = TRUE) %>% 
-  head()
+    count(word, sort = TRUE) %>%
+    head()
 ```
 
 Then use `ggplot2` to plot the most commonly used words from the book.
 
 ```{r}
 words_by_paragraph %>%
-  count(word, sort = TRUE) %>%
-  filter(n > 150) %>%
-  mutate(word = fct_reorder(word, n)) %>%
-  ggplot(aes(word, n)) +
+    count(word, sort = TRUE) %>%
+    filter(n > 150) %>%
+    mutate(word = fct_reorder(word, n)) %>%
+    ggplot(aes(word, n)) +
     geom_col() +
     xlab(NULL) +
     coord_flip()
@@ -442,24 +469,28 @@ words_by_paragraph %>%
 We can also do this for all of her books using the `austen_books()` object
 
 ```{r}
-austen_books() %>% 
-  head()
+austen_books() %>%
+    head()
 ```
 
 We can do some data wrangling that keep tracks of the line number and chapter (using a regex) to find where all the chapters are.
 
 ```{r}
-original_books <- 
-  austen_books() %>%
-  group_by(book) %>%
-  mutate(linenumber = row_number(),
-         chapter = cumsum(
-                    str_detect(text, 
-                               pattern = regex(pattern = "^chapter [\\divxlc]",
-                                               ignore_case = TRUE))
-                              )
-                          ) %>%
-  ungroup()
+original_books <-
+    austen_books() %>%
+    group_by(book) %>%
+    mutate(
+        linenumber = row_number(),
+        chapter = cumsum(
+            str_detect(text,
+                pattern = regex(
+                    pattern = "^chapter [\\divxlc]",
+                    ignore_case = TRUE
+                )
+            )
+        )
+    ) %>%
+    ungroup()
 
 original_books
 ```
@@ -468,8 +499,8 @@ Finally, we can restructure it to a one-token-per-row format using the `unnest_t
 
 ```{r}
 tidy_books <- original_books %>%
-  unnest_tokens(word, text) %>% 
-  anti_join(stop_words)
+    unnest_tokens(word, text) %>%
+    anti_join(stop_words)
 
 tidy_books
 ```
@@ -478,10 +509,10 @@ Here are the most commonly used words across all of Jane Austen's books.
 
 ```{r}
 tidy_books %>%
-  count(word, sort = TRUE) %>%
-  filter(n > 600) %>%
-  mutate(word = fct_reorder(word, n)) %>%
-  ggplot(aes(word, n)) +
+    count(word, sort = TRUE) %>%
+    filter(n > 600) %>%
+    mutate(word = fct_reorder(word, n)) %>%
+    ggplot(aes(word, n)) +
     geom_col() +
     xlab(NULL) +
     coord_flip()
@@ -556,13 +587,13 @@ What are the most common joy words in the book *Emma*?
 Here, we use the `nrc` lexicon and join the `tidy_books` dataset with the `nrc_joy` lexicon using the `inner_join()` function in `dplyr`.
 
 ```{r}
-nrc_joy <- get_sentiments("nrc") %>% 
-  filter(sentiment == "joy")
+nrc_joy <- get_sentiments("nrc") %>%
+    filter(sentiment == "joy")
 
 tidy_books %>%
-  filter(book == "Emma") %>%
-  inner_join(nrc_joy) %>%
-  count(word, sort = TRUE)
+    filter(book == "Emma") %>%
+    inner_join(nrc_joy) %>%
+    count(word, sort = TRUE)
 ```
 :::
 
@@ -572,7 +603,7 @@ Here, we use the `bing` lexicon, find a sentiment score for each word, and then 
 
 ```{r}
 tidy_books %>%
-  inner_join(get_sentiments("bing"))
+    inner_join(get_sentiments("bing"))
 ```
 
 Then, we can **count how many positive and negative words** there are in each section of the books.
@@ -581,10 +612,11 @@ We create an index to help us keep track of where we are in the narrative, which
 
 ```{r}
 tidy_books %>%
-  inner_join(get_sentiments("bing")) %>%
-  count(book, 
-        index = linenumber %/% 80, 
-        sentiment) 
+    inner_join(get_sentiments("bing")) %>%
+    count(book,
+        index = linenumber %/% 80,
+        sentiment
+    )
 ```
 
 ::: callout-tip
@@ -596,16 +628,19 @@ The `%/%` operator does **integer division** (`x %/% y` is equivalent to `floor(
 Finally, we use `pivot_wider()` to have positive and negative counts in different columns, and then use `mutate()` to calculate a net sentiment (positive - negative).
 
 ```{r}
-jane_austen_sentiment <- 
-  tidy_books %>%
-  inner_join(get_sentiments("bing")) %>%
-  count(book, 
-        index = linenumber %/% 80, 
-        sentiment) %>%
-  pivot_wider(names_from = sentiment, 
-              values_from = n, 
-              values_fill = 0) %>%
-  mutate(sentiment = positive - negative)
+jane_austen_sentiment <-
+    tidy_books %>%
+    inner_join(get_sentiments("bing")) %>%
+    count(book,
+        index = linenumber %/% 80,
+        sentiment
+    ) %>%
+    pivot_wider(
+        names_from = sentiment,
+        values_from = n,
+        values_fill = 0
+    ) %>%
+    mutate(sentiment = positive - negative)
 
 jane_austen_sentiment
 ```
@@ -613,8 +648,8 @@ jane_austen_sentiment
 Then we can plot the sentiment scores across the sections of each novel:
 
 ```{r, fig.height=10}
-jane_austen_sentiment %>% 
-  ggplot(aes(x = index, y = sentiment, fill = book)) +
+jane_austen_sentiment %>%
+    ggplot(aes(x = index, y = sentiment, fill = book)) +
     geom_col(show.legend = FALSE) +
     facet_wrap(. ~ book, ncol = 2, scales = "free_x")
 ```
@@ -629,9 +664,9 @@ You can also do things like create word clouds using the `wordcloud` package.
 library(wordcloud)
 
 tidy_books %>%
-  anti_join(stop_words) %>%
-  count(word) %>%
-  with(wordcloud(word, n, max.words = 100))
+    anti_join(stop_words) %>%
+    count(word) %>%
+    with(wordcloud(word, n, max.words = 100))
 ```
 
 # Converting to and from tidy and non-tidy formats
@@ -678,8 +713,8 @@ Perhaps the most widely used implementation of DTMs in R is the `DocumentTermMat
 Let's create a sparse with `cast_sparse()` function and then a `dtm` with the `cast_dtm()` function:
 
 ```{r}
-tidy_austen <- 
-  austen_books() %>%
+tidy_austen <-
+    austen_books() %>%
     mutate(line = row_number()) %>%
     unnest_tokens(word, text) %>%
     anti_join(stop_words)
@@ -708,7 +743,7 @@ austen_dtm
 ```
 
 ```{r}
-class(austen_dtm)  
+class(austen_dtm)
 dim(austen_dtm)
 as.matrix(austen_dtm[1:20, 1:10])
 ```

@@ -88,8 +88,8 @@ We might look at a simple scatterplot and then decide to add a linear regression
 #| fig-cap: "Scatterplot with loess curve"
 data(airquality)
 with(airquality, {
-        plot(Temp, Ozone)
-        lines(loess.smooth(Temp, Ozone))
+    plot(Temp, Ozone)
+    lines(loess.smooth(Temp, Ozone))
 })
 ```
 :::
@@ -107,8 +107,8 @@ Next, we use the `plot()` function to draw the points on the scatterplot and the
 #| fig-cap: "Scatterplot with loess curve"
 data(airquality)
 with(airquality, {
-        plot(Temp, Ozone, main = "my plot")
-        lines(loess.smooth(Temp, Ozone))
+    plot(Temp, Ozone, main = "my plot")
+    lines(loess.smooth(Temp, Ozone))
 })
 ```
 
@@ -249,8 +249,8 @@ A typical plot with the `ggplot2` package looks as follows.
 library(tidyverse)
 data(mpg)
 mpg %>%
-  ggplot(aes(displ, hwy)) + 
-  geom_point()
+    ggplot(aes(displ, hwy)) +
+    geom_point()
 ```
 :::
 

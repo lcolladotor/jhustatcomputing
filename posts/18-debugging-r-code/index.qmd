@@ -181,12 +181,12 @@ Here is another function that is designed to print a message to the console depe
 
 ```{r}
 print_message <- function(x) {
-        if(x > 0) {
-                print("x is greater than zero")
-        } else {
-                print("x is less than or equal to zero")
-        }  
-        invisible(x)        
+    if (x > 0) {
+        print("x is greater than zero")
+    } else {
+        print("x is less than or equal to zero")
+    }
+    invisible(x)
 }
 ```
 
@@ -224,13 +224,14 @@ We can **fix this problem** by anticipating the possibility of `NA` values and c
 
 ```{r}
 print_message2 <- function(x) {
-        if(is.na(x))
-                print("x is a missing value!")
-        else if(x > 0)
-                print("x is greater than zero")
-        else
-                print("x is less than or equal to zero")
-        invisible(x)
+    if (is.na(x)) {
+        print("x is a missing value!")
+    } else if (x > 0) {
+        print("x is greater than zero")
+    } else {
+        print("x is less than or equal to zero")
+    }
+    invisible(x)
 }
 ```
 
@@ -271,15 +272,17 @@ For the **first way**, we simply need to check the length of the input.
 
 ```{r}
 print_message3 <- function(x) {
-        if(length(x) > 1L)
-                stop("'x' has length > 1")
-        if(is.na(x))
-                print("x is a missing value!")
-        else if(x > 0)
-                print("x is greater than zero")
-        else
-                print("x is less than or equal to zero")
-        invisible(x)
+    if (length(x) > 1L) {
+        stop("'x' has length > 1")
+    }
+    if (is.na(x)) {
+        print("x is a missing value!")
+    } else if (x > 0) {
+        print("x is greater than zero")
+    } else {
+        print("x is less than or equal to zero")
+    }
+    invisible(x)
 }
 ```
 
@@ -508,10 +511,10 @@ f <- function(a) g(a)
 g <- function(b) h(b)
 h <- function(c) i(c)
 i <- function(d) {
-  if (!is.numeric(d)) {
-    stop("`d` must be numeric", call. = FALSE)
-  }
-  d + 10
+    if (!is.numeric(d)) {
+        stop("`d` must be numeric", call. = FALSE)
+    }
+    d + 10
 }
 f("a")
 ```

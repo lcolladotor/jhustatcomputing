@@ -39,24 +39,24 @@ Data dictionary avaialble here:
 Specifically, we will explore album sales and lyrics from two artists (Beyoncé and Taylor Swift), The data are available from TidyTuesday from September 2020, which I have provided for you below:
 
 ```{r, eval=FALSE}
-b_lyrics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/beyonce_lyrics.csv')
-ts_lyrics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/taylor_swift_lyrics.csv')
-sales <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/sales.csv')
+b_lyrics <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/beyonce_lyrics.csv")
+ts_lyrics <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/taylor_swift_lyrics.csv")
+sales <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/sales.csv")
 ```
 
 However, to avoid re-downloading data, we will check to see if those files already exist using an `if()` statement:
 
 ```{r, message=FALSE}
 library(here)
-if(!file.exists(here("data","b_lyrics.RDS"))){
-  b_lyrics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/beyonce_lyrics.csv')
-  ts_lyrics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/taylor_swift_lyrics.csv')
-  sales <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/sales.csv')
-  
-  # save the files to RDS objects
-  saveRDS(b_lyrics, file = here("data","b_lyrics.RDS"))
-  saveRDS(ts_lyrics, file = here("data","ts_lyrics.RDS"))
-  saveRDS(sales, file = here("data","sales.RDS"))
+if (!file.exists(here("data", "b_lyrics.RDS"))) {
+    b_lyrics <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/beyonce_lyrics.csv")
+    ts_lyrics <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/taylor_swift_lyrics.csv")
+    sales <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/sales.csv")
+
+    # save the files to RDS objects
+    saveRDS(b_lyrics, file = here("data", "b_lyrics.RDS"))
+    saveRDS(ts_lyrics, file = here("data", "ts_lyrics.RDS"))
+    saveRDS(sales, file = here("data", "sales.RDS"))
 }
 ```
 
@@ -67,9 +67,9 @@ The above code will only run if it cannot find the path to the `b_lyrics.RDS` on
 Let's load the datasets
 
 ```{r, eval=TRUE, message=FALSE}
-b_lyrics <- readRDS(here("data","b_lyrics.RDS"))
-ts_lyrics <- readRDS(here("data","ts_lyrics.RDS"))
-sales <- readRDS(here("data","sales.RDS"))
+b_lyrics <- readRDS(here("data", "b_lyrics.RDS"))
+ts_lyrics <- readRDS(here("data", "ts_lyrics.RDS"))
+sales <- readRDS(here("data", "sales.RDS"))
 ```
 
 # Part 1: Explore album sales
@@ -92,7 +92,6 @@ In this section, we will do some data wrangling.
 
 ```{r}
 # Add your solution here
-
 ```
 
 ## Part 1B
@@ -105,7 +104,6 @@ In this section, we will do some more data wrangling followed by summarization u
 
 ```{r}
 # Add your solution here
-
 ```
 
 ## Part 1C
@@ -117,7 +115,6 @@ Using the wrangled data from Part 1A:
 
 ```{r}
 # Add your solution here
-
 ```
 
 ## Part 1D
@@ -133,7 +130,6 @@ Using the wrangled data from Part 1A, use `ggplot2` to create a bar plot for the
 
 ```{r}
 # Add your solution here
-
 ```
 
 ## Part 1E
@@ -147,7 +143,6 @@ Using the wrangled data from Part 1A, use `ggplot2` to create a scatter plot of 
 
 ```{r}
 # Add your solution here
-
 ```
 
 # Part 2: Exploring sentiment of lyrics
@@ -163,7 +158,6 @@ Using `ts_lyrics`, create a new column called `line` with one line containing th
 
 ```{r}
 # Add your solution here
-
 ```
 
 ## Part 2B
@@ -172,7 +166,6 @@ Repeat the same analysis for `b_lyrics` as described in Part 2A.
 
 ```{r}
 # Add your solution here
-
 ```
 
 ## Part 2C
@@ -191,7 +184,6 @@ Using the `b_lyrics` dataset,
 
 ```{r}
 # Add your solution here
-
 ```
 
 ## Part 2D
@@ -200,7 +192,6 @@ Repeat the same analysis as above in Part 2C, but for `ts_lyrics`.
 
 ```{r}
 # Add your solution here
-
 ```
 
 ## Part 2E
@@ -220,7 +211,6 @@ Using the `ts_lyrics` dataset,
 
 ```{r}
 # Add your solution here
-
 ```
 
 # R session information

@@ -107,9 +107,9 @@ This code creates a simple table with some made up data about some hypothetical 
 library(tidyverse)
 
 outcomes <- tibble(
-        id = rep(c("a", "b", "c"), each = 3),
-        visit = rep(0:2, 3),
-        outcome = rnorm(3 * 3, 3)
+    id = rep(c("a", "b", "c"), each = 3),
+    visit = rep(0:2, 3),
+    outcome = rnorm(3 * 3, 3)
 )
 
 print(outcomes)
@@ -123,8 +123,8 @@ Here is some code to create a second table (we will be joining the first and sec
 
 ```{r second_table,exercise=TRUE,message=FALSE}
 subjects <- tibble(
-        id = c("a", "b", "c"),
-        house = c("detached", "rowhouse", "rowhouse")
+    id = c("a", "b", "c"),
+    house = c("detached", "rowhouse", "rowhouse")
 )
 
 print(subjects)
@@ -155,14 +155,20 @@ Here, are the **four functions from this family** that you will likely use the m
 #| out-width: '60%'
 #| fig-align: 'center'
 library(knitr)
-join_funcs <- data.frame(func = c("`left_join()`",
-                                  "`right_join()`",
-                                  "`inner_join()`",
-                                  "`full_join()`"),
-                         does = c("Includes all observations in the left data frame, whether or not there is a match in the right data frame",
-                                  "Includes all observations in the right data frame, whether or not there is a match in the left data frame",
-                                  "Includes only observations that are in both data frames",
-                                  "Includes all observations from both data frames"))
+join_funcs <- data.frame(
+    func = c(
+        "`left_join()`",
+        "`right_join()`",
+        "`inner_join()`",
+        "`full_join()`"
+    ),
+    does = c(
+        "Includes all observations in the left data frame, whether or not there is a match in the right data frame",
+        "Includes all observations in the right data frame, whether or not there is a match in the left data frame",
+        "Includes only observations that are in both data frames",
+        "Includes all observations from both data frames"
+    )
+)
 knitr::kable(join_funcs, col.names = c("Function", "What it includes in merged data frame"))
 ```
 
@@ -199,9 +205,9 @@ In the previous examples, the `subjects` table didn't have a `visit` column. But
 
 ```{r}
 subjects <- tibble(
-        id = c("a", "b", "c"),
-        visit = c(0, 1, 0),
-        house = c("detached", "rowhouse", "rowhouse"),
+    id = c("a", "b", "c"),
+    visit = c(0, 1, 0),
+    house = c("detached", "rowhouse", "rowhouse"),
 )
 
 print(subjects)
@@ -227,9 +233,9 @@ We may even have a situation where we are missing housing data for a subject com
 
 ```{r}
 subjects <- tibble(
-        id = c("b", "c"),
-        visit = c(1, 0),
-        house = c("rowhouse", "rowhouse"),
+    id = c("b", "c"),
+    visit = c(1, 0),
+    house = c("rowhouse", "rowhouse"),
 )
 
 subjects
@@ -288,11 +294,15 @@ Here are some post-lecture questions to help you think about the material discus
 
 ```{r}
 # Create first example data frame
-df1 <- data.frame(ID = 1:3,
-                  X1 = c("a1", "a2", "a3"))
+df1 <- data.frame(
+    ID = 1:3,
+    X1 = c("a1", "a2", "a3")
+)
 # Create second example data frame
-df2 <- data.frame(ID = 2:4, 
-                  X2 = c("b1", "b2", "b3"))
+df2 <- data.frame(
+    ID = 2:4,
+    X2 = c("b1", "b2", "b3")
+)
 ```
 
 3.  Try changing the order from the above e.g. `inner_join(df2, df1)`, `semi_join(df2, df1)` and `anti_join(df2, df1)`. What changed? What did not change?

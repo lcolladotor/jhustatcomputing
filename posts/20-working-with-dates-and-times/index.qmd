@@ -108,13 +108,13 @@ A few things to note about it:
 
 ```{r}
 #| eval: false
-install.packages("lubridate") 
+install.packages("lubridate")
 ```
 
 ```{r}
 #| message: false
 library(tidyverse)
-library(lubridate) 
+library(lubridate)
 ```
 
 # Creating date/times
@@ -197,10 +197,10 @@ ymd(20170131)
 Different locales have different ways of formatting dates
 
 ```{r}
-ymd("2016-09-13")  ## International standard
-ymd("2016/09/13")  ## Just figure it out
-mdy("09-13-2016")  ## Mostly U.S.
-dmy("13-09-2016")  ## Europe
+ymd("2016-09-13") ## International standard
+ymd("2016/09/13") ## Just figure it out
+mdy("09-13-2016") ## Mostly U.S.
+dmy("13-09-2016") ## Europe
 ```
 
 All of the **above are valid and lead to the exact same object**.
@@ -208,9 +208,11 @@ All of the **above are valid and lead to the exact same object**.
 Even if the individual dates are formatted differently, `ymd()` can **usually figure it out**.
 
 ```{r}
-x <- c("2016-04-05", 
-       "2016/05/06",
-       "2016,10,4")
+x <- c(
+    "2016-04-05",
+    "2016/05/06",
+    "2016,10,4"
+)
 ymd(x)
 ```
 
@@ -223,8 +225,8 @@ Sometimes the **date components** will come across **multiple columns in a datas
 ```{r}
 library(nycflights13)
 
-flights %>% 
-  select(year, month, day)
+flights %>%
+    select(year, month, day)
 ```
 
 To create a date/time from this sort of input, use
@@ -235,9 +237,9 @@ To create a date/time from this sort of input, use
 We combine these functions inside of `mutate` to add a new column to our dataset:
 
 ```{r}
-flights %>% 
-  select(year, month, day) %>% 
-  mutate(departure = make_date(year, month, day))
+flights %>%
+    select(year, month, day) %>%
+    mutate(departure = make_date(year, month, day))
 ```
 
 ::: callout-note
@@ -246,15 +248,14 @@ flights %>%
 The `flights` also contains a `hour` and `minute` column.
 
 ```{r}
-flights %>% 
-  select(year, month, day, hour, minute)
+flights %>%
+    select(year, month, day, hour, minute)
 ```
 
 Let's use `make_datetime()` to create a date-time column called `departure`:
 
 ```{r}
 # try it yourself
-
 ```
 :::
 
@@ -293,7 +294,6 @@ You can also force the creation of a date-time from a date by supplying a timezo
 ymd_hms("2016-09-13 14:00:00")
 ymd_hms("2016-09-13 14:00:00", tz = "America/New_York")
 ymd_hms("2016-09-13 14:00:00", tz = "")
-
 ```
 
 ## `POSIXct` or the `POSIXlt` class
@@ -308,7 +308,7 @@ Technically, the `POSIXct` class represents the number of **seconds** since 1 Ja
 
 ```{r}
 x <- ymd_hm("1970-01-01 01:00")
-class(x) 
+class(x)
 unclass(x)
 
 typeof(x)
@@ -387,7 +387,7 @@ A few other fun things to think about related to time zones:
 You **can add and subtract** dates and times.
 
 ```{r}
-x <- ymd("2012-01-01", tz = "")  ## Midnight
+x <- ymd("2012-01-01", tz = "") ## Midnight
 y <- dmy_hms("9 Jan 2011 11:34:21", tz = "")
 x - y ## this works
 ```
@@ -398,7 +398,7 @@ You can do comparisons too (i.e. `>`, `<`, and `==`)
 x < y ## this works
 x > y ## this works
 x == y ## this works
-x + y ## what??? why does this not work? 
+x + y ## what??? why does this not work?
 ```
 
 ::: callout-tip
@@ -415,7 +415,7 @@ class(x)
 Just add the requisite number of seconds to the object:
 
 ```{r}
-x + 3*60*60 # add 3 hours
+x + 3 * 60 * 60 # add 3 hours
 ```
 :::
 
@@ -429,7 +429,7 @@ y
 And then add a number to the date (in this case 1 day)
 
 ```{r}
-y + 1  
+y + 1
 ```
 
 Cool eh?
@@ -475,8 +475,10 @@ There are a set of helper functions in `lubridate` that can extract sub-elements
 ## Date Elements
 
 ```{r}
-x <- ymd_hms(c("2012-10-25 01:13:46",
-               "2015-04-23 15:11:23"), tz = "")
+x <- ymd_hms(c(
+    "2012-10-25 01:13:46",
+    "2015-04-23 15:11:23"
+), tz = "")
 year(x)
 month(x)
 day(x)
@@ -486,8 +488,10 @@ weekdays(x)
 ## Time Elements
 
 ```{r}
-x <- ymd_hms(c("2012-10-25 01:13:46",
-               "2015-04-23 15:11:23"), tz = "")
+x <- ymd_hms(c(
+    "2012-10-25 01:13:46",
+    "2015-04-23 15:11:23"
+), tz = "")
 minute(x)
 second(x)
 hour(x)
@@ -528,7 +532,6 @@ Tasks:
 library(dplyr)
 
 # try it yourself
-
 ```
 :::
 
@@ -536,12 +539,12 @@ Next, we do some wrangling to create a `storm_sub` data frame (code chunk set to
 
 ```{r}
 #| echo: false
-storm_sub <- 
-  storm %>% 
-  select(BEGIN_DATE_TIME, EVENT_TYPE, DEATHS_DIRECT) %>%
-  mutate(begin = dmy_hms(BEGIN_DATE_TIME)) %>%
-  rename(type = EVENT_TYPE, deaths = DEATHS_DIRECT) %>%
-  select(begin, type, deaths)
+storm_sub <-
+    storm %>%
+    select(BEGIN_DATE_TIME, EVENT_TYPE, DEATHS_DIRECT) %>%
+    mutate(begin = dmy_hms(BEGIN_DATE_TIME)) %>%
+    rename(type = EVENT_TYPE, deaths = DEATHS_DIRECT) %>%
+    select(begin, type, deaths)
 ```
 
 ```{r}
@@ -555,9 +558,9 @@ We can make a histogram of the dates/times to get a sense of when storm events o
 ```{r}
 library(ggplot2)
 storm_sub %>%
-  ggplot(aes(x = begin)) + 
-  geom_histogram(bins = 20) + 
-  theme_bw()
+    ggplot(aes(x = begin)) +
+    geom_histogram(bins = 20) +
+    theme_bw()
 ```
 
 We can group by event type too.
@@ -567,38 +570,37 @@ We can group by event type too.
 #| fig-height: 12
 library(ggplot2)
 storm_sub %>%
-  ggplot(aes(x = begin)) + 
-  facet_wrap(~ type) + 
-  geom_histogram(bins = 20) + 
-  theme_bw() + 
-  theme(axis.text.x.bottom = element_text(angle = 90))
+    ggplot(aes(x = begin)) +
+    facet_wrap(~type) +
+    geom_histogram(bins = 20) +
+    theme_bw() +
+    theme(axis.text.x.bottom = element_text(angle = 90))
 ```
 
 ## Scatterplots of Dates/Times
 
 ```{r}
 storm_sub %>%
-  ggplot(aes(x = begin, y = deaths)) + 
-  geom_point()
+    ggplot(aes(x = begin, y = deaths)) +
+    geom_point()
 ```
 
 If we focus on a single month, the x-axis adapts.
 
 ```{r}
 storm_sub %>%
-  filter(month(begin) == 6) %>%
-  ggplot(aes(begin, deaths)) + 
-  geom_point()
+    filter(month(begin) == 6) %>%
+    ggplot(aes(begin, deaths)) +
+    geom_point()
 ```
 
 Similarly, we can focus on a single day.
 
 ```{r}
 storm_sub %>%
-  filter(month(begin) == 6, day(begin) == 16) %>%
-  ggplot(aes(begin, deaths)) + 
-  geom_point()
-
+    filter(month(begin) == 6, day(begin) == 16) %>%
+    ggplot(aes(begin, deaths)) +
+    geom_point()
 ```
 
 # Summary

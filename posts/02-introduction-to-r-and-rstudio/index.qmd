@@ -274,7 +274,7 @@ You only need to install a package once, unless you upgrade/re-install R. Once i
 ```{r}
 #| eval: false
 #| echo: true
-library('ggplot2')
+library("ggplot2")
 ```
 
 You may or may not see a short message on the screen. Some packages show messages when you load them, and others do not.

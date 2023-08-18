@@ -128,7 +128,8 @@ We can look at the data quickly by reading it in as a tibble with `read_csv()` i
 library(tidyverse)
 library(here)
 maacs <- read_csv(here("data", "bmi_pm25_no2_sim.csv"),
-                  col_types = "nnci")
+    col_types = "nnci"
+)
 maacs
 ```
 :::
@@ -153,8 +154,10 @@ First, we can **create a `ggplot` object** that stores the dataset and the basic
 Here, we will eventually be plotting the log of PM2.5 and `NocturnalSymp` variable.
 
 ```{r}
-g <- ggplot(maacs, aes(x = logpm25, 
-                       y = NocturnalSympt))
+g <- ggplot(maacs, aes(
+    x = logpm25,
+    y = NocturnalSympt
+))
 summary(g)
 class(g)
 ```
@@ -167,7 +170,7 @@ Now, normally if you were to `print()` a `ggplot` object a plot would appear on 
 ```{r}
 #| fig-cap: "Nothing to see here!"
 g <- maacs %>%
-        ggplot(aes(logpm25, NocturnalSympt))
+    ggplot(aes(logpm25, NocturnalSympt))
 print(g)
 ```
 
@@ -180,7 +183,7 @@ Here, we add the `geom_point()` function to create a traditional scatter plot.
 ```{r}
 #| fig-cap: "Scatterplot of PM2.5 and days with nocturnal symptoms"
 g <- maacs %>%
-        ggplot(aes(logpm25, NocturnalSympt))
+    ggplot(aes(logpm25, NocturnalSympt))
 g + geom_point()
 ```
 
@@ -195,9 +198,9 @@ Because the data appear rather noisy, it might be better if we added a smoother 
 ```{r}
 #| fig-cap: "Scatterplot with smoother"
 #| message: false
-g + 
-  geom_point() + 
-  geom_smooth()
+g +
+    geom_point() +
+    geom_smooth()
 ```
 
 The default smoother is a loess smoother, which is flexible and nonparametric but might be too flexible for our purposes. Perhaps we'd prefer a simple linear regression line to highlight any first order trends. We can do this by specifying `method = "lm"` to `geom_smooth()`.
@@ -205,9 +208,9 @@ The default smoother is a loess smoother, which is flexible and nonparametric bu
 ```{r}
 #| fig-cap: "Scatterplot with linear regression line"
 #| message: false
-g + 
-  geom_point() + 
-  geom_smooth(method = "lm")
+g +
+    geom_point() +
+    geom_smooth(method = "lm")
 ```
 
 Here, we can see there appears to be a slight increasing trend, suggesting that higher levels of PM2.5 are associated with increased days with nocturnal symptoms.
@@ -221,8 +224,7 @@ Let's use the `ggplot()` function with our `palmerpenguins` dataset example and 
 # try it yourself
 
 library(palmerpenguins)
-penguins 
-
+penguins
 ```
 :::
 
@@ -241,10 +243,10 @@ We want one row and two columns, one column for each weight category. So we spec
 #| fig-width: 9
 #| fig-cap: "Scatterplot of PM2.5 and nocturnal symptoms by BMI category"
 #| message: false
-g + 
-  geom_point() + 
-  geom_smooth(method = "lm") +
-  facet_grid(. ~ bmicat) 
+g +
+    geom_point() +
+    geom_smooth(method = "lm") +
+    facet_grid(. ~ bmicat)
 ```
 :::
 
@@ -265,7 +267,7 @@ For example, here we modify the points in the scatterplot to make the color "ste
 
 ```{r}
 #| fig-cap: "Modifying point color with a constant"
-g + geom_point(color = "steelblue", size = 4, alpha = 1/2)
+g + geom_point(color = "steelblue", size = 4, alpha = 1 / 2)
 ```
 :::
 
@@ -279,7 +281,7 @@ We use the `aes()` function to indicate this difference from the plot above.
 
 ```{r}
 #| fig-cap: "Mapping color to a variable"
-g + geom_point(aes(color = bmicat), size = 4, alpha = 1/2)
+g + geom_point(aes(color = bmicat), size = 4, alpha = 1 / 2)
 ```
 
 ## Customizing the smooth
@@ -293,14 +295,17 @@ Here we change the line type and increase the size from the default. We also rem
 ```{r}
 #| fig-cap: "Customizing a smoother"
 #| message: false
-g + 
-  geom_point(aes(color = bmicat), 
-             size = 2, 
-             alpha = 1/2) + 
-  geom_smooth(size = 4, 
-              linetype = 3, 
-              method = "lm", 
-              se = FALSE)
+g +
+    geom_point(aes(color = bmicat),
+        size = 2,
+        alpha = 1 / 2
+    ) +
+    geom_smooth(
+        size = 4,
+        linetype = 3,
+        method = "lm",
+        se = FALSE
+    )
 ```
 
 # Other important stuff
@@ -324,9 +329,9 @@ For things that only make sense globally, use `theme()`, i.e. `theme(legend.posi
 
 ```{r}
 #| fig-cap: "Modifying the theme for a plot"
-g + 
-  geom_point(aes(color = bmicat)) + 
-  theme_bw(base_family = "Times")
+g +
+    geom_point(aes(color = bmicat)) +
+    theme_bw(base_family = "Times")
 ```
 
 ::: callout-note
@@ -338,8 +343,7 @@ Let's take our `palmerpenguins` scatterplot from above and change out the theme 
 # try it yourself
 
 library(palmerpenguins)
-penguins 
-
+penguins
 ```
 :::
 
@@ -361,11 +365,13 @@ Here is an example of modifying the title and the `x` and `y` labels to make the
 
 ```{r}
 #| fig-cap: "Modifying plot labels"
-g + 
-  geom_point(aes(color = bmicat)) + 
-  labs(title = "MAACS Cohort") + 
-  labs(x = expression("log " * PM[2.5]), 
-       y = "Nocturnal Symptoms")
+g +
+    geom_point(aes(color = bmicat)) +
+    labs(title = "MAACS Cohort") +
+    labs(
+        x = expression("log " * PM[2.5]),
+        y = "Nocturnal Symptoms"
+    )
 ```
 
 ## A quick aside about axis limits
@@ -378,13 +384,16 @@ In the base graphics system you can do that as follows.
 
 ```{r}
 #| fig-cap: "Time series plot with base graphics"
-testdat <- data.frame(x = 1:100, 
-                      y = rnorm(100))
-testdat[50,2] <- 100  ## Outlier!
-plot(testdat$x, 
-     testdat$y,
-     type = "l", 
-     ylim = c(-3,3))
+testdat <- data.frame(
+    x = 1:100,
+    y = rnorm(100)
+)
+testdat[50, 2] <- 100 ## Outlier!
+plot(testdat$x,
+    testdat$y,
+    type = "l",
+    ylim = c(-3, 3)
+)
 ```
 
 Here, we have restricted the y-axis range to be between -3 and 3, even though there is a clear outlier in the data.
@@ -404,9 +413,9 @@ One might think that modifying the `ylim()` attribute would give you the same th
 
 ```{r}
 #| fig-cap: "Time series plot with modified ylim"
-g + 
-  geom_line() + 
-  ylim(-3, 3)
+g +
+    geom_line() +
+    ylim(-3, 3)
 ```
 :::
 
@@ -416,9 +425,9 @@ To plot the data without subsetting it first and still get the restricted range,
 
 ```{r}
 #| fig-cap: "Time series plot with restricted y-axis range"
-g + 
-  geom_line() + 
-  coord_cartesian(ylim = c(-3, 3))
+g +
+    geom_line() +
+    coord_cartesian(ylim = c(-3, 3))
 ```
 
 And now you know!
@@ -469,16 +478,16 @@ The final plot shows the relationship between PM2.5 and nocturnal symptoms by BM
 ```{r,fig.cap="PM2.5 and nocturnal symptoms by BMI category and NO2 tertile",fig.width=9, fig.height=5}
 ## Setup ggplot with data frame
 g <- maacs %>%
-        ggplot(aes(logpm25, NocturnalSympt))
+    ggplot(aes(logpm25, NocturnalSympt))
 
 ## Add layers
-g + geom_point(alpha = 1/3) + 
-        facet_grid(bmicat ~ no2tert) + 
-        geom_smooth(method="lm", se=FALSE, col="steelblue") + 
-        theme_bw(base_family = "Avenir", base_size = 10) + 
-        labs(x = expression("log " * PM[2.5])) + 
-        labs(y = "Nocturnal Symptoms") + 
-        labs(title = "MAACS Cohort")
+g + geom_point(alpha = 1 / 3) +
+    facet_grid(bmicat ~ no2tert) +
+    geom_smooth(method = "lm", se = FALSE, col = "steelblue") +
+    theme_bw(base_family = "Avenir", base_size = 10) +
+    labs(x = expression("log " * PM[2.5])) +
+    labs(y = "Nocturnal Symptoms") +
+    labs(title = "MAACS Cohort")
 ```
 
 </details>

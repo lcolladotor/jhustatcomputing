@@ -100,8 +100,8 @@ Here's a small function that will generate a message:
 
 ```{r}
 #| message: true
-f <- function(){
-  message("This is a message.")
+f <- function() {
+    message("This is a message.")
 }
 
 f()
@@ -133,8 +133,8 @@ If an error occurs inside of a function, then the **name of that function will a
 
 ```{r}
 #| error: true
-name_of_function <- function(){
-  stop("Something bad happened.")
+name_of_function <- function() {
+    stop("Something bad happened.")
 }
 
 name_of_function()
@@ -149,9 +149,9 @@ Let's take a look at an example:
 
 ```{r}
 #| error: true
-error_if_n_is_greater_than_zero <- function(n){
-  stopifnot(n <= 0)
-  n
+error_if_n_is_greater_than_zero <- function(n) {
+    stopifnot(n <= 0)
+    n
 }
 
 error_if_n_is_greater_than_zero(5)
@@ -173,9 +173,9 @@ Just like errors, a warning generated inside of a function will include the name
 
 ```{r}
 #| warning: true
-make_NA <- function(x){
-  warning("Generating an NA.")
-  NA
+make_NA <- function(x) {
+    warning("Generating an NA.")
+    NA
 }
 
 make_NA("Sodium")
@@ -240,17 +240,18 @@ The `tryCatch()` function is the workhorse of handling errors and warnings in R.
 Let's construct a simple function I'm going to call [`beera`](https://en.wikipedia.org/wiki/Yogi_Berra) that catches errors and warnings gracefully.
 
 ```{r}
-beera <- function(expr){
-  tryCatch(expr,
-         error = function(e){
-           message("An error occurred:\n", e)
-         },
-         warning = function(w){
-           message("A warning occured:\n", w)
-         },
-         finally = {
-           message("Finally done!")
-         })
+beera <- function(expr) {
+    tryCatch(expr,
+        error = function(e) {
+            message("An error occurred:\n", e)
+        },
+        warning = function(w) {
+            message("A warning occured:\n", w)
+        },
+        finally = {
+            message("Finally done!")
+        }
+    )
 }
 ```
 
@@ -258,15 +259,15 @@ This function takes an expression as an argument and tries to evaluate it. If th
 
 ```{r}
 beera({
-  2 + 2
+    2 + 2
 })
 
 beera({
-  "two" + 2
+    "two" + 2
 })
 
 beera({
-  as.numeric(c(1, "two", 3))
+    as.numeric(c(1, "two", 3))
 })
 ```
 
@@ -275,8 +276,8 @@ Notice that we've effectively transformed errors and warnings into messages.
 Now that you know the basics of generating and catching errors you'll need to decide when your program should generate an error. My advice to you is to limit the number of errors your program generates as much as possible. Even if you design your program so that it's able to catch and handle errors, the error handling process slows down your program by orders of magnitude. Imagine you wanted to write a simple function that checks if an argument is an even number. You might write the following:
 
 ```{r, error=TRUE}
-is_even <- function(n){
-  n %% 2 == 0
+is_even <- function(n) {
+    n %% 2 == 0
 }
 
 is_even(768)
@@ -287,11 +288,12 @@ is_even("two")
 You can see that providing a string causes this function to raise an error. You could imagine though that you want to use this function across a list of different data types, and you only want to know which elements of that list are even numbers. You might think to write the following:
 
 ```{r}
-is_even_error <- function(n){
-  tryCatch(n %% 2 == 0,
-           error = function(e){
-             FALSE
-           })
+is_even_error <- function(n) {
+    tryCatch(n %% 2 == 0,
+        error = function(e) {
+            FALSE
+        }
+    )
 }
 
 is_even_error(714)
@@ -302,8 +304,8 @@ is_even_error("eight")
 This appears to be working the way you intended, however when applied to more data this function will be seriously slow compared to alternatives. For example I could check that `n` is numeric before treating `n` like a number:
 
 ```{r}
-is_even_check <- function(n){
-  is.numeric(n) && n %% 2 == 0
+is_even_check <- function(n) {
+    is.numeric(n) && n %% 2 == 0
 }
 
 is_even_check(1876)

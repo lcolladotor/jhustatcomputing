@@ -86,7 +86,7 @@ If we have **two vectors of the same length**, and we sum them in R, they will b
 
 ```{r}
 x <- 1:10
-y <- 1:10 
+y <- 1:10
 x + y
 ```
 
@@ -99,7 +99,7 @@ sqrt(x)
 
 ```{r}
 y <- 1:10
-x*y
+x * y
 ```
 
 # Functional loops
@@ -219,14 +219,16 @@ The `lapply()` function (and its friends) makes heavy use of *anonymous* functio
 Here I am creating a list that contains two matrices.
 
 ```{r}
-x <- list(a = matrix(1:4, 2, 2), b = matrix(1:6, 3, 2)) 
+x <- list(a = matrix(1:4, 2, 2), b = matrix(1:6, 3, 2))
 x
 ```
 
 Suppose I wanted to extract the first column of each matrix in the list. I could write an anonymous function for extracting the first column of each matrix.
 
 ```{r}
-lapply(x, function(elt) { elt[,1] })
+lapply(x, function(elt) {
+    elt[, 1]
+})
 ```
 
 Notice that I put the `function()` definition right in the call to `lapply()`.
@@ -238,7 +240,7 @@ For example, I could have done the following.
 
 ```{r}
 f <- function(elt) {
-        elt[, 1]
+    elt[, 1]
 }
 lapply(x, f)
 ```
@@ -273,7 +275,7 @@ Notice that `lapply()` returns a list (as usual), but that each element of the l
 Here's the result of calling `sapply()` on the same list.
 
 ```{r}
-sapply(x, mean) 
+sapply(x, mean)
 ```
 
 Because the result of `lapply()` was a list where each element had length 1, `sapply()` collapsed the output into a numeric vector, which is often more useful than a list.
@@ -332,7 +334,7 @@ Then we can take the column means for `Ozone`, `Solar.R`, and `Wind` for each su
 
 ```{r}
 lapply(s, function(x) {
-        colMeans(x[, c("Ozone", "Solar.R", "Wind")])
+    colMeans(x[, c("Ozone", "Solar.R", "Wind")])
 })
 ```
 
@@ -340,7 +342,7 @@ Using `sapply()` might be better here for a more readable output.
 
 ```{r}
 sapply(s, function(x) {
-        colMeans(x[, c("Ozone", "Solar.R", "Wind")])
+    colMeans(x[, c("Ozone", "Solar.R", "Wind")])
 })
 ```
 
@@ -348,8 +350,9 @@ Unfortunately, there are `NA`s in the data so we cannot simply take the means of
 
 ```{r}
 sapply(s, function(x) {
-        colMeans(x[, c("Ozone", "Solar.R", "Wind")], 
-                 na.rm = TRUE)
+    colMeans(x[, c("Ozone", "Solar.R", "Wind")],
+        na.rm = TRUE
+    )
 })
 ```
 
@@ -378,7 +381,7 @@ Given a vector of numbers, one simple operation is to take group means.
 ## Simulate some data
 x <- c(rnorm(10), runif(10), rnorm(10, 1))
 ## Define some groups with a factor variable
-f <- gl(3, 10)   
+f <- gl(3, 10)
 f
 tapply(x, f, mean)
 ```
@@ -413,7 +416,7 @@ Here I create a 20 by 10 matrix of Normal random numbers. I then compute the mea
 ```{r}
 x <- matrix(rnorm(200), 20, 10)
 head(x)
-apply(x, 2, mean)  ## Take the mean of each column
+apply(x, 2, mean) ## Take the mean of each column
 ```
 :::
 
@@ -423,7 +426,7 @@ apply(x, 2, mean)  ## Take the mean of each column
 I can also compute the sum of each row.
 
 ```{r}
-apply(x, 1, sum)   ## Take the mean of each row
+apply(x, 1, sum) ## Take the mean of each row
 ```
 :::
 
@@ -484,7 +487,7 @@ x <- matrix(rnorm(200), 20, 10)
 head(x)
 
 ## Get row quantiles
-apply(x, 1, quantile, probs = c(0.25, 0.75))    
+apply(x, 1, quantile, probs = c(0.25, 0.75))
 ```
 
 Notice that I had to pass the `probs = c(0.25, 0.75)` argument to `quantile()` via the `...` argument to `apply()`.
@@ -505,7 +508,7 @@ Here's an example of a function that computes the sum of squares given some data
 
 ```{r}
 sumsq <- function(mu, sigma, x) {
-        sum(((x - mu) / sigma)^2)
+    sum(((x - mu) / sigma)^2)
 }
 ```
 
@@ -514,14 +517,14 @@ This function takes a mean `mu`, a standard deviation `sigma`, and some data in 
 In many statistical applications, we want to minimize the sum of squares to find the optimal `mu` and `sigma`. Before we do that, we may want to evaluate or plot the function for many different values of `mu` or `sigma`.
 
 ```{r}
-x <- rnorm(100)       ## Generate some data
-sumsq(mu=1, sigma=1, x)  ## This works (returns one value)
+x <- rnorm(100) ## Generate some data
+sumsq(mu = 1, sigma = 1, x) ## This works (returns one value)
 ```
 
 However, passing a vector of `mu`s or `sigma`s won't work with this function because it's not vectorized.
 
 ```{r}
-sumsq(1:10, 1:10, x)  ## This is not what we want
+sumsq(1:10, 1:10, x) ## This is not what we want
 ```
 :::
 

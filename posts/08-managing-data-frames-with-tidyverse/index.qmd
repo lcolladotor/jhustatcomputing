@@ -155,8 +155,8 @@ Specifically, `View(chicago)` would provide you, the viewer, with a scrollable v
 Here, we again display the `chicago` data.frame as a tibble but specify that we would only like to see 5 rows. The `width = Inf` argument specifies that we would like to see all the possible columns. Here, there are only 8, but for larger datasets, this can be helpful to specify.
 
 ```{r}
-as_tibble(chicago) %>% 
-  print(n = 5, width = Inf)
+as_tibble(chicago) %>%
+    print(n = 5, width = Inf)
 ```
 
 ### `tibble()`
@@ -172,10 +172,10 @@ In the example here, we see that the column `c` will contain the value '1' acros
 
 ```{r}
 tibble(
-  a = 1:5,
-  b = 6:10,
-  c = 1,
-  z = (a + b)^2 + c
+    a = 1:5,
+    b = 6:10,
+    c = 1,
+    z = (a + b)^2 + c
 )
 ```
 :::
@@ -193,9 +193,9 @@ Note that to refer to such columns in other tidyverse packages, you willl contin
 
 ```{r}
 tibble(
-  `two words` = 1:5,
-  `12` = "numeric",
-  `:)` = "smile",
+    `two words` = 1:5,
+    `12` = "numeric",
+    `:)` = "smile",
 )
 ```
 :::
@@ -213,10 +213,10 @@ For example:
 
 ```{r}
 df <- tibble(
-  a = 1:5,
-  b = 6:10,
-  c = 1,
-  z = (a + b)^2 + c
+    a = 1:5,
+    b = 6:10,
+    c = 1,
+    z = (a + b)^2 + c
 )
 
 # Extract by name using $ or [[]]
@@ -520,9 +520,10 @@ There is also the related `transmute()` function, which does the same thing as `
 Here, we de-trend the PM10 and ozone (O3) variables.
 
 ```{r}
-head(transmute(chicago, 
-               pm10detrend = pm10tmean2 - mean(pm10tmean2, na.rm = TRUE),
-               o3detrend = o3tmean2 - mean(o3tmean2, na.rm = TRUE)))
+head(transmute(chicago,
+    pm10detrend = pm10tmean2 - mean(pm10tmean2, na.rm = TRUE),
+    o3detrend = o3tmean2 - mean(o3tmean2, na.rm = TRUE)
+))
 ```
 
 Note that there are only two columns in the transmuted data frame.
@@ -564,9 +565,11 @@ years <- group_by(chicago, year)
 Finally, we compute summary statistics for each year in the data frame with the `summarize()` function.
 
 ```{r}
-summarize(years, pm25 = mean(pm25, na.rm = TRUE), 
-          o3 = max(o3tmean2, na.rm = TRUE), 
-          no2 = median(no2tmean2, na.rm = TRUE))
+summarize(years,
+    pm25 = mean(pm25, na.rm = TRUE),
+    o3 = max(o3tmean2, na.rm = TRUE),
+    no2 = median(no2tmean2, na.rm = TRUE)
+)
 ```
 :::
 
@@ -593,8 +596,10 @@ quint <- group_by(chicago, pm25.quint)
 Finally, we can compute the mean of `o3` and `no2` within quintiles of `pm25`.
 
 ```{r}
-summarize(quint, o3 = mean(o3tmean2, na.rm = TRUE), 
-          no2 = mean(no2tmean2, na.rm = TRUE))
+summarize(quint,
+    o3 = mean(o3tmean2, na.rm = TRUE),
+    no2 = mean(no2tmean2, na.rm = TRUE)
+)
 ```
 :::
 
@@ -617,7 +622,9 @@ This **nesting is not a natural way** to think about a sequence of operations.
 The `%>%` operator allows you to string operations in a left-to-right fashion, i.e.
 
 ```{r,eval=FALSE}
-first(x) %>% second %>% third
+first(x) %>%
+    second() %>%
+    third()
 ```
 
 ::: callout-tip
@@ -628,12 +635,14 @@ Take the example that we just did in the last section.
 That can be done with the following sequence in a single R expression.
 
 ```{r}
-chicago %>% 
-  mutate(year = as.POSIXlt(date)$year + 1900) %>%    
-  group_by(year) %>% 
-  summarize(pm25 = mean(pm25, na.rm = TRUE), 
-            o3 = max(o3tmean2, na.rm = TRUE), 
-            no2 = median(no2tmean2, na.rm = TRUE))
+chicago %>%
+    mutate(year = as.POSIXlt(date)$year + 1900) %>%
+    group_by(year) %>%
+    summarize(
+        pm25 = mean(pm25, na.rm = TRUE),
+        o3 = max(o3tmean2, na.rm = TRUE),
+        no2 = median(no2tmean2, na.rm = TRUE)
+    )
 ```
 :::
 
@@ -650,11 +659,13 @@ Once you travel down the pipeline with `%>%`, the first argument is taken to be 
 Another example might be computing the average pollutant level by month. This could be useful to see if there are any seasonal trends in the data.
 
 ```{r}
-mutate(chicago, month = as.POSIXlt(date)$mon + 1) %>% 
-        group_by(month) %>% 
-        summarize(pm25 = mean(pm25, na.rm = TRUE), 
-                  o3 = max(o3tmean2, na.rm = TRUE), 
-                  no2 = median(no2tmean2, na.rm = TRUE))
+mutate(chicago, month = as.POSIXlt(date)$mon + 1) %>%
+    group_by(month) %>%
+    summarize(
+        pm25 = mean(pm25, na.rm = TRUE),
+        o3 = max(o3tmean2, na.rm = TRUE),
+        no2 = median(no2tmean2, na.rm = TRUE)
+    )
 ```
 
 Here, we can see that `o3` tends to be low in the winter months and high in the summer while `no2` is higher in the winter and lower in the summer.

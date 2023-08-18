@@ -259,7 +259,6 @@ Let's practice a few out together. Make the following regular expressions for th
 
 ```{r}
 ## try it out
-
 ```
 :::
 
@@ -291,7 +290,7 @@ grepl("(iss){2}", "Mississippi")
 # Does "Mississippi" contain between 2 adjacent "ss" ?
 grepl("(ss){2}", "Mississippi")
 
-# Does "Mississippi" contain the pattern of an "i" followed by 
+# Does "Mississippi" contain the pattern of an "i" followed by
 # 2 of any character, with that pattern repeated three times adjacently?
 grepl("(i.{2}){3}", "Mississippi")
 ```
@@ -308,7 +307,6 @@ Let's practice a few out together. Make the following regular expressions for th
 
 ```{r}
 ## try it out
-
 ```
 :::
 
@@ -351,10 +349,10 @@ Technically, you are using the a character set `"\d"` or `"\s"` (with only one b
 So for example, to include a literal single or double quote in a string you can use `\` to "escape" the string and being able to include a single or double quote:
 
 ```{r}
-double_quote <- "\"" 
+double_quote <- "\""
 double_quote
 
-single_quote <- '\''
+single_quote <- "'"
 single_quote
 ```
 
@@ -522,21 +520,27 @@ Below is a table of several important metacharacters:
 #| echo: false
 library(knitr)
 
-mc_tibl <- data.frame(Metacharacter =
-                        c(".", "\\\\w", "\\\\W", "\\\\d", "\\\\D",
-                          "\\\\s", "\\\\S", "[xyz]", "[^xyz]", "[a-z]",
-                          "^", "$", "\\\\n", "+", "*", "?", "|", "{5}", "{2, 5}",
-                          "{2, }"),
-           Meaning =
-             c("Any Character", "A Word", "Not a Word", "A Digit", "Not a Digit",
-               "Whitespace", "Not Whitespace", "A Set of Characters", 
-               "Negation of Set", "A Range of Characters",
-               "Beginning of String", "End of String", "Newline", 
-               "One or More of Previous", "Zero or More of Previous",
-               "Zero or One of Previous", "Either the Previous or the Following",
-               "Exactly 5 of Previous", "Between 2 and 5 or Previous",
-               "More than 2 of Previous"),
-           stringsAsFactors = FALSE)
+mc_tibl <- data.frame(
+    Metacharacter =
+        c(
+            ".", "\\\\w", "\\\\W", "\\\\d", "\\\\D",
+            "\\\\s", "\\\\S", "[xyz]", "[^xyz]", "[a-z]",
+            "^", "$", "\\\\n", "+", "*", "?", "|", "{5}", "{2, 5}",
+            "{2, }"
+        ),
+    Meaning =
+        c(
+            "Any Character", "A Word", "Not a Word", "A Digit", "Not a Digit",
+            "Whitespace", "Not Whitespace", "A Set of Characters",
+            "Negation of Set", "A Range of Characters",
+            "Beginning of String", "End of String", "Newline",
+            "One or More of Previous", "Zero or More of Previous",
+            "Zero or One of Previous", "Either the Previous or the Following",
+            "Exactly 5 of Previous", "Between 2 and 5 or Previous",
+            "More than 2 of Previous"
+        ),
+    stringsAsFactors = FALSE
+)
 kable(mc_tibl, align = "c")
 ```
 
@@ -563,7 +567,7 @@ grep(pattern = "[Ii]", x = c("Hawaii", "Illinois", "Kentucky"))
 The `sub(pattern, replacement, x)` function takes as arguments a regex, a "replacement," and a vector of strings. This function will **replace the first instance of that regex found in each string**.
 
 ```{r}
-sub(pattern = "[Ii]", replacement = "1", x= c("Hawaii", "Illinois", "Kentucky"))
+sub(pattern = "[Ii]", replacement = "1", x = c("Hawaii", "Illinois", "Kentucky"))
 ```
 
 ## `gsub()`
@@ -639,7 +643,7 @@ The `str_replace(string, pattern, replace)` is equivalent to `sub(pattern, repla
 
 ```{r}
 str_replace(string = state.name, pattern = "[Aa]", replace = "B")
-sub(pattern = "[Aa]", replacement = "B", x= state.name)
+sub(pattern = "[Aa]", replacement = "B", x = state.name)
 ```
 
 ## `str_pad`

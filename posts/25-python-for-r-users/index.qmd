@@ -216,10 +216,10 @@ x > 1 and x <= 5
 And in R, the execution changes from Python to R seamlessly
 
 ```{r}
-2^3 
+2^3
 
-x = 3
-x > 1 & x <=5
+x <- 3
+x > 1 & x <= 5
 ```
 
 ## format operators
@@ -396,18 +396,19 @@ Let's first create a `flights.csv` dataset in R and save it using `write_csv` fr
 
 ```{r}
 # checks to see if a folder called "data" exists; if not, it installs it
-if(!file.exists(here("data"))){
-  dir.create(here("data"))
+if (!file.exists(here("data"))) {
+    dir.create(here("data"))
 }
 
 # checks to see if a file called "flights.csv" exists; if not, it saves it to the data folder
-if(!file.exists(here("data", "flights.csv"))){
-  readr::write_csv(nycflights13::flights, 
-                   file = here("data", "flights.csv"))
+if (!file.exists(here("data", "flights.csv"))) {
+    readr::write_csv(nycflights13::flights,
+        file = here("data", "flights.csv")
+    )
 }
 
-nycflights13::flights %>% 
-  head()
+nycflights13::flights %>%
+    head()
 ```
 
 Next, we **use Python to read in the file** and do some data wrangling
@@ -424,7 +425,7 @@ flights
 
 ```{r}
 head(py$flights)
-py$flights_path 
+py$flights_path
 ```
 
 ```{r}
@@ -437,9 +438,9 @@ Next, we can use R to **visualize the Pandas** `DataFrame`.
 The data frame is **loaded in as an R object now** stored in the variable `py`.
 
 ```{r}
-ggplot(py$flights, aes(x = carrier, y = arr_delay)) + 
-  geom_point() + 
-  geom_jitter()
+ggplot(py$flights, aes(x = carrier, y = arr_delay)) +
+    geom_point() +
+    geom_jitter()
 ```
 
 ::: callout-tip
@@ -454,10 +455,10 @@ Use R to read and manipulate data
 
 ```{r}
 library(tidyverse)
-flights <- read_csv(here("data","flights.csv")) %>%
-  filter(dest == "ORD") %>%
-  select(carrier, dep_delay, arr_delay) %>%
-  na.omit()
+flights <- read_csv(here("data", "flights.csv")) %>%
+    filter(dest == "ORD") %>%
+    select(carrier, dep_delay, arr_delay) %>%
+    na.omit()
 
 flights
 ```
@@ -494,8 +495,8 @@ knitr::include_graphics("https://rstudio.github.io/reticulate/images/reticulate_
 Similarly, we can import the pandas library:
 
 ```{r}
-pd <- import('pandas')
-test <- pd$read_csv(here("data","flights.csv"))
+pd <- import("pandas")
+test <- pd$read_csv(here("data", "flights.csv"))
 head(test)
 class(test)
 ```

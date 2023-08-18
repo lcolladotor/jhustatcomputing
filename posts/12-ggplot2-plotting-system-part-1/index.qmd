@@ -89,9 +89,9 @@ Consider the following plot made using base graphics previously.
 #| fig-width: 5
 #| fig-height: 5
 #| fig-cap: "Scatterplot of Temperature and Ozone in New York (base graphics)"
-with(airquality, { 
-        plot(Temp, Ozone)
-        lines(loess.smooth(Temp, Ozone))
+with(airquality, {
+    plot(Temp, Ozone)
+    lines(loess.smooth(Temp, Ozone))
 })
 ```
 
@@ -113,11 +113,13 @@ Here is the same plot made using `ggplot2` in the `tidyverse`.
 #| fig-cap: "Scatterplot of Temperature and Ozone in New York (ggplot2)"
 library(tidyverse)
 airquality %>%
-        ggplot(aes(Temp, Ozone)) + 
-        geom_point() + 
-        geom_smooth(method = "loess", 
-                    se = FALSE) + 
-        theme_minimal()
+    ggplot(aes(Temp, Ozone)) +
+    geom_point() +
+    geom_smooth(
+        method = "loess",
+        se = FALSE
+    ) +
+    theme_minimal()
 ```
 
 ::: callout-tip
@@ -299,8 +301,8 @@ glimpse(penguins)
 If we wanted to count the number of penguins for each of the three species, we can use the `count()` function in `dplyr`:
 
 ```{r}
-penguins %>% 
-  count(species)
+penguins %>%
+    count(species)
 ```
 :::
 
@@ -313,14 +315,12 @@ If we wanted to use `qplot()` to map `flipper_length_mm` and `bill_length_mm` to
 
 ```{r}
 # try it yourself
-
 ```
 
 Now try mapping color to the `species` variable on top of the code you just wrote:
 
 ```{r}
 # try it yourself
-
 ```
 :::
 
@@ -369,7 +369,6 @@ Using the code we previously wrote mapping variables to points and color, add a 
 
 ```{r}
 # try it yourself
-
 ```
 :::
 
@@ -397,7 +396,6 @@ Notice, I used `fill` here to map color to the `drv` variable. Why is this? What
 
 ```{r}
 # try it yourself
-
 ```
 :::
 
@@ -455,8 +453,8 @@ What if you wanted to **add a smoother to each one of those panels**? Simple, yo
 #| fig-width: 6
 #| fig-cap: "Engine displacement and highway mileage by drive class w/smoother"
 #| message: false
-qplot(displ, hwy, data = mpg, facets = . ~ drv) + 
-  geom_smooth(method = "lm")
+qplot(displ, hwy, data = mpg, facets = . ~ drv) +
+    geom_smooth(method = "lm")
 ```
 
 ::: callout-tip
@@ -479,14 +477,12 @@ Building off the code we previously wrote, perform the following tasks:
 
 ```{r}
 # try it yourself
-
 ```
 
 Next, make a histogram of the `body_mass_g` for each of the species colored by the three species.
 
 ```{r}
 # try it yourself
-
 ```
 :::
 
@@ -577,8 +573,8 @@ qplot(log(pm25), log(eno), data = maacs, color = mopos)
 This is slightly better but the substantial overlap makes it difficult to discern any trends in the data. For this we need to add a smoother of some sort. Here we add a linear regression line (a type of smoother) to each group to see if there's any difference.
 
 ```{r}
-qplot(log(pm25), log(eno), data = maacs, color = mopos) + 
-        geom_smooth(method = "lm")
+qplot(log(pm25), log(eno), data = maacs, color = mopos) +
+    geom_smooth(method = "lm")
 ```
 
 Here we see quite clearly that the red group and the green group exhibit rather different relationships between PM2.5 and eNO. For the non-allergic individuals, there appears to be a slightly negative relationship between PM2.5 and eNO and for the allergic individuals, there is a positive relationship. This suggests a strong interaction between PM2.5 and allergic status, an hypothesis perhaps worth following up on in greater detail than this brief exploratory analysis.
@@ -586,8 +582,8 @@ Here we see quite clearly that the red group and the green group exhibit rather 
 Another, and perhaps more clear, way to visualize this interaction is to use separate panels for the non-allergic and allergic individuals using the `facets` argument to `qplot()`.
 
 ```{r, fig.width=9}
-qplot(log(pm25), log(eno), data = maacs, facets = . ~ mopos) + 
-        geom_smooth(method = "lm")
+qplot(log(pm25), log(eno), data = maacs, facets = . ~ mopos) +
+    geom_smooth(method = "lm")
 ```
 
 </details>
