@@ -239,7 +239,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#course-staff" id="toc-course-staff" class="nav-link" data-scroll-target="#course-staff">Course Staff</a></li>
   <li><a href="#assignment-due-dates" id="toc-assignment-due-dates" class="nav-link" data-scroll-target="#assignment-due-dates">Assignment Due Dates</a></li>
-  <li><a href="#the-pandemic" id="toc-the-pandemic" class="nav-link" data-scroll-target="#the-pandemic">The Pandemic</a></li>
   <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   <li><a href="#submitting-assignments" id="toc-submitting-assignments" class="nav-link" data-scroll-target="#submitting-assignments">Submitting assignments</a></li>
   <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility">Reproducibility</a></li>
@@ -267,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><em>This lecture, as the rest of the course, is adapted from the version <a href="https://www.stephaniehicks.com/">Stephanie C. Hicks</a> designed and maintained in 2021 and 2022. Check the recent changes to this file through the <a href="https://github.com/lcolladotor/jhustatcomputing2023/commits/main/posts/01-welcome/index.qmd">GitHub history</a>.</em></p>
-<p>Welcome! I am very excited to have you in our one-term (i.e.&nbsp;half a semester) course on Statistical Computing course number (140.776) offered by the <a href="https://publichealth.jhu.edu/departments/biostatistics">Department of Biostatistics</a> at the <a href="https://publichealth.jhu.edu">Johns Hopkins Bloomberg School of Public Health</a>.</p>
+<p>Welcome! I am very excited to have you in our one-term (i.e.&nbsp;half a semester) course on Statistical Computing course number (140.776) offered by the <a href="https://publichealth.jhu.edu/departments/biostatistics">Department of Biostatistics</a> at the <a href="https://publichealth.jhu.edu">Johns Hopkins Bloomberg School of Public Health</a>. This will be my first time as the lead instructor of a JHBSPH course! 🙌🏽</p>
 <p>This course is designed for ScM and PhD students at Johns Hopkins Bloomberg School of Public Health. I am pretty flexible about permitting outside students, but I want everyone to be aware of the goals and assumptions so no one feels like they are surprised by how the class works.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -287,7 +286,7 @@ Note
 <h3 class="anchored" data-anchor-id="assumptions-and-pre-requisites">Assumptions and pre-requisites</h3>
 <p>The course is designed for students in the Johns Hopkins Biostatistics Masters and PhD programs. However, we do not assume a significant background in statistics. Specifically we assume:</p>
 <section id="you-know-the-basics-of-at-least-one-programming-language-e.g.-r-or-python" class="level4">
-<h4 class="anchored" data-anchor-id="you-know-the-basics-of-at-least-one-programming-language-e.g.-r-or-python">1. You know the basics of at least one programming language (e.g.&nbsp;R or Python)</h4>
+<h4 class="anchored" data-anchor-id="you-know-the-basics-of-at-least-one-programming-language-e.g.-r-or-python">1. You know the <strong>basics</strong> of at least one programming language (e.g.&nbsp;R or Python)</h4>
 <ul>
 <li>If it’s not R, we assume that you are willing to spend the time to learn R</li>
 <li>You have heard of things such as control structures, functions, loops, etc</li>
@@ -318,7 +317,7 @@ Note
 <li>Know how to cite references (e.g.&nbsp;like in a publication)</li>
 <li>Somewhat familiar with tools that enable reproducible research (In complete transparency, we will briefly cover these topics in the first week, but depending on your comfort level with them, this may impact whether you choose to continue with the course).</li>
 </ul>
-<p>Since the target audience for this course is advanced students in statistics we will not be able to spend significant time covering these concepts and technologies. To give you some idea about how these prerequisites will impact your experience in the course, we will be turning in all assignments via R Markdown documents and you will be encouraged (not required) to use git/GitHub to track changes to your code over time. The majority of the assignments will involve learning the practical issues around performing data analyses, building software packages, building websites, etc all using the R programming language. Data analyses you will perform will also often involve significant data extraction, cleaning, and transformation. We will learn about tools to do all of this, but hopefully most of this sounds familiar to you so you can focus on the concepts we will be teaching around best practices for statistical computing.</p>
+<p>Since the target audience for this course is advanced students in statistics we will not be able to spend significant time covering these concepts and technologies. To give you some idea about how these prerequisites will impact your experience in the course, we will be using R for nearly all classes, we will be turning in all assignments via R Markdown documents and you will be encouraged (not required) to use git/GitHub to track changes to your code over time. The majority of the assignments will involve learning the practical issues around performing data analyses, building software packages, building websites, etc all using the R programming language. Data analyses you will perform will also often involve significant data extraction, cleaning, and transformation. We will learn about tools to do all of this, but hopefully most of this sounds familiar to you so you can focus on the concepts we will be teaching around best practices for statistical computing.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -335,7 +334,13 @@ Tip
 <li><strong>Basic Data Science</strong> - <a href="https://leanpub.com/universities/set/jhu/cloud-based-data-science">Cloud Data Science (Leanpub)</a>; <a href="https://www.coursera.org/specializations/jhu-data-science">Data Science Specialization (Coursera)</a></li>
 <li><strong>Version Control</strong> - <a href="https://lab.github.com/">Github Learning Lab</a>; <a href="https://happygitwithr.com/">Happy Git and Github for the useR</a></li>
 <li><strong>Rmarkdown</strong> - <a href="https://rmarkdown.rstudio.com/lesson-1.html">Rmarkdown introduction</a></li>
+<li><strong>R 101</strong> <a href="https://research.libd.org/rstatsclub/"><em>LIBD rstats club</em></a> blog post: <a href="https://research.libd.org/rstatsclub/2018/12/24/r_101/" class="uri">https://research.libd.org/rstatsclub/2018/12/24/r_101/</a></li>
+<li><strong>Introductory R videos</strong> from the <a href="https://research.libd.org/rstatsclub/"><em>LIBD rstats club</em></a> such as these videos:</li>
 </ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/T51DRWeuKm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XTuJ8vGnzBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
 </div>
 </div>
 </section>
@@ -345,10 +350,10 @@ Tip
 <p>You must install <a href="https://cran.r-project.org">R</a> and <a href="https://rstudio.com">RStudio</a> on your computing environment in order to complete this course.</p>
 <p>These are two <strong>different</strong> applications that must be installed separately before they can be used together:</p>
 <ul>
-<li><p>R is the core underlying programming language and computing engine that we will be learning in this course</p></li>
-<li><p>RStudio is an interface into R that makes many aspects of using and programming R simpler</p></li>
+<li><p><code>R</code> is the core underlying programming language and computing engine that we will be learning in this course</p></li>
+<li><p><code>RStudio</code> is an interface into R that makes many aspects of using and programming R simpler</p></li>
 </ul>
-<p>Both R and RStudio are available for Windows, macOS, and most flavors of Unix and Linux. Please download the version that is suitable for your computing setup.</p>
+<p>Both <code>R</code> and <code>RStudio</code> are available for Windows, macOS, and most flavors of Unix and Linux. Please download the version that is suitable for your computing setup.</p>
 <p>Throughout the course, we will make use of numerous R add-on packages that must be installed over the Internet. Packages can be installed using the <code>install.packages()</code> function in R. For example, to install the <code>tidyverse</code> package, you can run</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -454,24 +459,24 @@ Warning
 </section>
 <section id="course-logistics" class="level1">
 <h1>Course logistics</h1>
-<p>As with all things in a pandemic, we are offering two sections of this course. One option is to take the course in person (140.776.01) and the other option is to take it entirely virtually (140.776.41). You are welcome to register for either section.</p>
+<p>Unlike 2022, the only option is to take the course in person (140.776.01).</p>
 <ul>
-<li><a href="https://www.stephaniehicks.com/jhustatcomputing2022" class="uri">https://www.stephaniehicks.com/jhustatcomputing2022</a></li>
+<li><a href="https://lcolladotor.github.io/jhustatcomputing2023" class="uri">https://lcolladotor.github.io/jhustatcomputing2023</a></li>
 </ul>
 <p>All communication for the course is going to take place on one of three platforms:</p>
 <ul>
 <li><p><strong>Courseplus</strong>: for discussion, sharing resources, collaborating, and announcements</p></li>
 <li><p><strong>Github</strong>: for getting access to course materials (e.g.&nbsp;lectures, project assignments)</p>
 <ul>
-<li>Course Github: <a href="https://github.com/stephaniehicks/jhustatcomputing2022" class="uri">https://github.com/stephaniehicks/jhustatcomputing2022</a></li>
+<li>Course Github: <a href="https://github.com/lcolladotor/jhustatcomputing2023" class="uri">https://github.com/lcolladotor/jhustatcomputing2023</a></li>
 </ul></li>
-<li><p><strong>Lectures</strong>: for in person lectures or online / async lectures</p>
+<li><p><strong>Lectures</strong>: most lectures will be in person</p>
 <ul>
 <li>All in person lectures to be recorded and posted online after class ends</li>
-<li>If for some reason I am sick or not capable of coming onsite, I will send out a zoom link for everyone to attend remotely for that day.</li>
+<li>If for some reason I am sick or not capable of coming onsite, I will send out a zoom link for everyone to attend remotely for that day. I already know that I will be teaching <strong>remotely on Tuesday August 29 and Thursday August 31st</strong>, due to prior travel arrangments I had made before knowing when I would be teaching this class.</li>
 </ul></li>
 </ul>
-<p>The primary communication for the class will go through. Courseplus That is where we will post course announcements, host most of our asynchronous course discussion, and as the primary means of communication between course participants and course instructors.</p>
+<p>The primary communication for the class will go through Courseplus. That is where we will post course announcements, answer common questions, and as the primary means of communication between course participants and course instructors.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -482,41 +487,28 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you are registered for the course, you should have access to Courseplus now. Once you have access you will also be able to find all material and dates/times of drop-in hours. Any zoom links will be posted on Courseplus.</p>
+<p>If you are registered for the course, you should have access to Courseplus now. Once you have access you will also be able to find all material and dates/times of drop-in hours. Any Zoom links will be posted on Courseplus.</p>
 </div>
 </div>
 <section id="course-staff" class="level3">
 <h3 class="anchored" data-anchor-id="course-staff">Course Staff</h3>
-<p>The course instructor this year is <a href="https://www.stephaniehicks.com">Stephanie Hicks</a> who is a Associate Professor in the <a href="https://publichealth.jhu.edu/departments/biostatistics">Department of Biostatistics</a> at the <a href="https://publichealth.jhu.edu">Johns Hopkins Bloomberg School of Public Health</a>, a faculty member of the <a href="http://jhudatascience.org">Johns Hopkins Data Science Lab</a>, and have affiliations with the <a href="https://malonecenter.jhu.edu">Malone Center for Engineering in Healthcare</a>, <a href="https://ccb.jhu.edu/people.php">Center for Computational Biology</a>, the <a href="https://www.hopkinsmedicine.org/institute-genetic-medicine/education-training/predoctoral-human-genetics">Department of Genetic Medicine</a>, and the <a href="http://www.jhu-bmb-phd.org/faculty/stephanie-hicks">Department of Biochemistry and Molecular Biology</a>.</p>
-<p>My research focuses on developing fast, scalable, statistical methodology and open-source software for genomics and biomedical data analysis for human health and disease. My research is <strong>problem-forward</strong>: I develop statistical methods and software that are motivated by concrete problems, often with real-world, noisy, messy data. I’m also interested in developing theory for how to incorporate <em>design thinking</em> (alongside <em>statistical thinking</em>) in practice of data analysis.</p>
-<p>If you want, you can find me on <a href="https://twitter.com/stephaniehicks">Twitter</a>. I’m also a co-host of the <a href="https://twitter.com/CorrespondAuth">The Corresponding Author</a> podcast, member of the <a href="https://genomebiology.biomedcentral.com/about/editorial-board">Editorial Board for <em>Genome Biology</em></a>, an Associate Editor for <a href="https://jasa-acs.github.io/repro-guide/">Reproducibility</a> at the <a href="https://www.tandfonline.com/toc/uasa20/current">Journal of the American Statistical Association</a>, and co-founder of <a href="https://www.meetup.com/rladies-baltimore/">R-Ladies Baltimore</a>.</p>
-<p>We also have a couple of amazing TAs this year:</p>
+<p>The course instructor this year is <a href="http://lcolladotor.github.io/">Leonardo Collado Torres</a> who is an Investigator at the <a href="https://www.libd.org/">Lieber Institute for Brain Development</a> and is an Associate in the <a href="https://publichealth.jhu.edu/departments/biostatistics">Department of Biostatistics</a> at the <a href="https://publichealth.jhu.edu">Johns Hopkins Bloomberg School of Public Health</a>.</p>
+<p>At the Lieber Institute for Brain Development (<a href="https://www.libd.org/">LIBD</a>), my group works on understanding the roots and signatures of disease (particularly psychiatric disorders) by zooming in across dimensions of gene activity. We achieve this by studying gene expression at all expression feature levels (genes, exons, exon-exon junctions, and un-annotated regions) and by using different gene expression measurement technologies (bulk RNA-seq, single cell/nucleus RNA-seq, and spatial transcriptomics) that provide finer biological resolution and localization of gene expression. We work closely with collaborators from LIBD as well as from Johns Hopkins University (JHU) and other institutions, which reflects the cross-disciplinary approach and diversity in expertise needed to further advance our understanding of high throughput biology.</p>
+<p>Every day I use <a href="http://cran.r-project.org/">R</a> and <a href="http://www.bioconductor.org/">Bioconductor</a>, and on some days I <a href="https://lcolladotor.github.io/pkgs/">write R packages</a>. Occasionally I write <a href="http://lcolladotor.github.io/#blog">blog posts</a> about them and other tools. I’m a co-founder of the <a href="http://LieberInstitute.github.io/rstatsclub/">LIBD rstats club</a> and the <a href="https://comunidadbioinfo.github.io">CDSB community</a> of R and Bioconductor developers in Mexico and Latin America, that we described at the <a href="https://www.r-consortium.org/blog/2020/03/18/cdsb-diversity-and-outreach-hotspot-in-mexico">R Consortium website</a>. In the past, I also served on the <a href="http://bioconductor.org/about/community-advisory-board/">Bioconductor Community Advisory Board</a> and the advisory board for <a href="https://ropensci.org/stat-software-review/">rOpenSci’s Statistical Software Peer Review</a>.</p>
+<p>If you want, you can find me on <a href="https://twitter.com/lcolladotor">Twitter</a>.</p>
+<section id="teaching-assistants" class="level4">
+<h4 class="anchored" data-anchor-id="teaching-assistants">Teaching Assistants</h4>
+<p>We also have three amazing TAs this year:</p>
 <ul>
-<li>Phyllis Wei (<a href="ywei43@jhu.edu">ywei43@jhu.edu</a>). She is a second-year Ph.D.&nbsp;student in Biostatistics. She develops methods to help understand the genetic basis of complex traits and diseases and enhance disease risk prediction models through data integration. Outside of biostatistics, she enjoys hiking, baking, and visiting museums.</li>
-<li>Joe Sartini (<a href="jsartin1@jhu.edu">jsartin1@jhu.edu</a>). He is a second year Ph.D.&nbsp;student in Biostatistics, with interest in models for precision medicine applications. Currently, the focus of his work is extracting meaningful insights from time-series produced by Continuous Glucose Monitoring and other devices worn by Type 2 diabetics. Outside of research, he enjoys participating in endurance sports and weightlifting.</li>
+<li>Emily Norton (<a href="mailto:enorton7@jhmi.edu">enorton7@jhmi.edu</a>). TODO.</li>
+<li>Joe Sartini (<a href="mailto:jsartin1@jhu.edu">jsartin1@jhu.edu</a>). He is a third year Ph.D.&nbsp;student in Biostatistics, with interest in models for precision medicine applications. Currently, the focus of his work is extracting meaningful insights from time-series produced by Continuous Glucose Monitoring and other devices worn by Type 2 diabetics. Outside of research, he enjoys participating in endurance sports and weightlifting.</li>
+<li>Phyllis Wei (<a href="mailto:ywei43@jhu.edu">ywei43@jhu.edu</a>). She is a third year Ph.D.&nbsp;student in Biostatistics. She develops methods to help understand the genetic basis of complex traits and diseases and enhance disease risk prediction models through data integration. Outside of biostatistics, she enjoys hiking, baking, and visiting museums.</li>
 </ul>
+</section>
 </section>
 <section id="assignment-due-dates" class="level3">
 <h3 class="anchored" data-anchor-id="assignment-due-dates">Assignment Due Dates</h3>
 <p>All course assignment due dates appear on the <strong>Schedule</strong> and <strong>Syllabus</strong>.</p>
-</section>
-<section id="the-pandemic" class="level3">
-<h3 class="anchored" data-anchor-id="the-pandemic">The Pandemic</h3>
-<p>This is how 2020 felt:</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://media.giphy.com/media/XdIOEZTt6dL7zTYWIo/giphy.gif" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">How 2020 felt</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>For many, 2021 and 2022 have continued to be incredibly tough (e.g.&nbsp;coordinating school online, challenges with visas and travel, an economic crisis, ). As your instructor, I am <em>ultra</em> sympathetic to family challenges and life challenges (fwiw, I have three small children).</p>
-<p>While the <code>140.776.01</code> section will be held in person here in this room, it is strongly likely that one or more times I will send out a class email the night before (or maybe even the morning of) lecture to let you know that I need to move the class to zoom for the day. I apologize in advance, but I will do my best to give as much advance notice as I can.</p>
-<p>With that in mind, my goal is to make as much of the class asynchronous as possible so you can work whenever you have time. My plan is to be as understanding as possible when it comes to grading, and any issues that come up with the course. Please don’t hesitate to reach out to me (or the TAs) if you are having issues and we will do our best to direct you to whatever resources we have/accommodate you however we can.</p>
-<p>I think the material in this course is important, fun, and this is an opportunity to learn a lot. But life is more important than a course and if there was ever a time that life might get in the way of learning, it’s likely now.</p>
 </section>
 <section id="grading" class="level3">
 <h3 class="anchored" data-anchor-id="grading">Grading</h3>
@@ -530,6 +522,7 @@ Important
 <li>C - Needs improvement - 70%+</li>
 </ul>
 <p>We rarely give out grades below a C and if you consistently submit work, and do your best you are very likely to get an A or a B in the course.</p>
+<p>When I was a JHBSPH student in 2011-2016, I had a scholarship from my country 🇲🇽 which had specific grade requirements, so I recognize that while most employers won’t care about your grades over your grad school projects, you might have strong reasons for aiming for high grades.</p>
 </section>
 <section id="relative-weights" class="level4">
 <h4 class="anchored" data-anchor-id="relative-weights">Relative weights</h4>
@@ -553,7 +546,8 @@ Important
 </section>
 <section id="code-of-conduct" class="level3">
 <h3 class="anchored" data-anchor-id="code-of-conduct">Code of Conduct</h3>
-<p>We are committed to providing a welcoming, inclusive, and harassment-free experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), political beliefs/leanings, or technology choices. We do not tolerate harassment of course participants in any form. Sexual language and imagery is not appropriate for any work event, including group meetings, conferences, talks, parties, Twitter and other online media. This code of conduct applies to all course participants, including instructors and TAs, and applies to all modes of interaction, both in-person and online, including GitHub project repos, Slack channels, and Twitter.</p>
+<p>We are committed to providing a welcoming, inclusive, and harassment-free experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), political beliefs/leanings, or technology choices. We do not tolerate harassment of course participants in any form. Sexual language and imagery is not appropriate for any work event, including group meetings, conferences, talks, parties, Twitter, and other online media. This code of conduct applies to all course participants, including instructors and TAs, and applies to all modes of interaction, both in-person and online, including GitHub project repos, Slack channels, and Twitter.</p>
+<p>I was also part of the Bioconductor Code of Conduct committee for a few years. You might find the Bioconductor Code of Conduct useful as it is translated into different languages by native speakers of said languages: <a href="https://bioconductor.github.io/bioc_coc_multilingual/" class="uri">https://bioconductor.github.io/bioc_coc_multilingual/</a>.</p>
 <p>Course participants violating these rules will be referred to leadership of the Department of Biostatistics and the Title IX coordinator at JHU and may face expulsion from the class.</p>
 <p>All class participants agree to:</p>
 <ul>
@@ -606,7 +600,7 @@ Important
 </section>
 <section id="typos-and-corrections" class="level2">
 <h2 class="anchored" data-anchor-id="typos-and-corrections">Typos and corrections</h2>
-<p>Feel free to submit typos/errors/etc via the github repository associated with the class: <a href="https://github.com/lcolladotor/jhustatcomputing2023" class="uri">https://github.com/lcolladotor/jhustatcomputing2023</a>. You will have the thanks of your grateful instructor!</p>
+<p>Feel free to submit typos/errors/etc via the GitHub repository associated with the class: <a href="https://github.com/lcolladotor/jhustatcomputing2023/issues" class="uri">https://github.com/lcolladotor/jhustatcomputing2023/issues</a>. You will have the thanks of your grateful instructor!</p>
 </section>
 </section>
 <section id="r-session-information" class="level1">

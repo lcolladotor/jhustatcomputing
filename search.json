@@ -641,7 +641,7 @@
     "href": "resources.html",
     "title": "Resources",
     "section": "",
-    "text": "Learning R\n\nR 101 LIBD rstats club blog post: https://research.libd.org/rstatsclub/2018/12/24/r_101/\nIntroductory videos from the LIBD rstats club such as this one:\n\n\n\n\nBig Book of R: https://www.bigbookofr.com\nList of resources to learn R (but also Python, SQL, Javascript): https://github.com/delabj/datacamp_alternatives/blob/master/index.md\nlearnr4free. Resources (books, videos, interactive websites, papers) to learn R. Some of the resources are beginner-friendly and start with the installation process: https://www.learnr4free.com/en\nData Science with R by Danielle Navarro: https://robust-tools.djnavarro.net"
+    "text": "Learning R\n\nR 101 LIBD rstats club blog post: https://research.libd.org/rstatsclub/2018/12/24/r_101/\nIntroductory videos from the LIBD rstats club such as this one:\n\n\n\n\n\n\nBig Book of R: https://www.bigbookofr.com\nList of resources to learn R (but also Python, SQL, Javascript): https://github.com/delabj/datacamp_alternatives/blob/master/index.md\nlearnr4free. Resources (books, videos, interactive websites, papers) to learn R. Some of the resources are beginner-friendly and start with the installation process: https://www.learnr4free.com/en\nData Science with R by Danielle Navarro: https://robust-tools.djnavarro.net"
   },
   {
     "objectID": "projects.html",
@@ -914,7 +914,7 @@
     "href": "posts/01-welcome/index.html",
     "title": "01 - Welcome!",
     "section": "",
-    "text": "This lecture, as the rest of the course, is adapted from the version Stephanie C. Hicks designed and maintained in 2021 and 2022. Check the recent changes to this file through the GitHub history.\nWelcome! I am very excited to have you in our one-term (i.e. half a semester) course on Statistical Computing course number (140.776) offered by the Department of Biostatistics at the Johns Hopkins Bloomberg School of Public Health.\nThis course is designed for ScM and PhD students at Johns Hopkins Bloomberg School of Public Health. I am pretty flexible about permitting outside students, but I want everyone to be aware of the goals and assumptions so no one feels like they are surprised by how the class works.\nThis class is not designed to teach the theoretical aspects of statistical or computational methods, but rather the goal is to help with the practical issues related to setting up a statistical computing environment for data analyses, developing high-quality R packages, conducting reproducible data analyses, best practices for data visualization and writing code, and creating websites for personal or project use."
+    "text": "This lecture, as the rest of the course, is adapted from the version Stephanie C. Hicks designed and maintained in 2021 and 2022. Check the recent changes to this file through the GitHub history.\nWelcome! I am very excited to have you in our one-term (i.e. half a semester) course on Statistical Computing course number (140.776) offered by the Department of Biostatistics at the Johns Hopkins Bloomberg School of Public Health. This will be my first time as the lead instructor of a JHBSPH course! 🙌🏽\nThis course is designed for ScM and PhD students at Johns Hopkins Bloomberg School of Public Health. I am pretty flexible about permitting outside students, but I want everyone to be aware of the goals and assumptions so no one feels like they are surprised by how the class works.\nThis class is not designed to teach the theoretical aspects of statistical or computational methods, but rather the goal is to help with the practical issues related to setting up a statistical computing environment for data analyses, developing high-quality R packages, conducting reproducible data analyses, best practices for data visualization and writing code, and creating websites for personal or project use."
   },
   {
     "objectID": "posts/01-welcome/index.html#disability-support-service",
@@ -935,7 +935,7 @@
     "href": "posts/01-welcome/index.html#typos-and-corrections",
     "title": "01 - Welcome!",
     "section": "Typos and corrections",
-    "text": "Typos and corrections\nFeel free to submit typos/errors/etc via the github repository associated with the class: https://github.com/lcolladotor/jhustatcomputing2023. You will have the thanks of your grateful instructor!"
+    "text": "Typos and corrections\nFeel free to submit typos/errors/etc via the GitHub repository associated with the class: https://github.com/lcolladotor/jhustatcomputing2023/issues. You will have the thanks of your grateful instructor!"
   },
   {
     "objectID": "posts/02-introduction-to-r-and-rstudio/index.html",
