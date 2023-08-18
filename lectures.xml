@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing2023/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776) in Fall 2023</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Fri, 18 Aug 2023 02:29:17 GMT</lastBuildDate>
+<lastBuildDate>Fri, 18 Aug 2023 02:44:55 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -423,7 +423,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/01-welcome/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -531,8 +531,8 @@ Learning objectives
 <section id="basic-features-of-r" class="level3">
 <h3 class="anchored" data-anchor-id="basic-features-of-r">Basic Features of R</h3>
 <p>Today R runs on almost any standard computing platform and operating system. Its open source nature means that anyone is free to adapt the software to whatever platform they choose. Indeed, R has been reported to be running on modern tablets, phones, PDAs, and game consoles.</p>
-<p>One nice feature that R shares with many popular open source projects is frequent releases. These days there is a major annual release, typically in October, where major new features are incorporated and released to the public. Throughout the year, smaller-scale bugfix releases will be made as needed. The frequent releases and regular release cycle indicates active development of the software and ensures that bugs will be addressed in a timely manner. Of course, while the core developers control the primary source tree for R, many people around the world make contributions in the form of new feature, bug fixes, or both.</p>
-<p>Another key advantage that R has over many other statistical packages (even today) is its sophisticated graphics capabilities. R’s ability to create “publication quality” graphics has existed since the very beginning and has generally been better than competing packages. Today, with many more visualization packages available than before, that trend continues. R’s base graphics system allows for very fine control over essentially every aspect of a plot or graph. Other newer graphics systems, like lattice and ggplot2 allow for complex and sophisticated visualizations of high-dimensional data.</p>
+<p>One nice feature that R shares with many popular open source projects is frequent releases. These days there is a major annual release, typically at the end of April, where major new features are incorporated and released to the public. Throughout the year, smaller-scale bugfix releases will be made as needed. The frequent releases and regular release cycle indicates active development of the software and ensures that bugs will be addressed in a timely manner. Of course, while the core developers control the primary source tree for R, many people around the world make contributions in the form of new feature, bug fixes, or both.</p>
+<p>Another key advantage that R has over many other statistical packages (even today) is its sophisticated graphics capabilities. R’s ability to create “publication quality” graphics has existed since the very beginning and has generally been better than competing packages. Today, with many more visualization packages available than before, that trend continues. R’s <em>base</em> graphics system allows for very fine control over essentially every aspect of a plot or graph. Other newer graphics systems, like <code>lattice</code> (not as used nowadays) and <code>ggplot2</code> (very widely used now) allow for complex and sophisticated visualizations of high-dimensional data.</p>
 <p>R has maintained the original S philosophy (see box below), which is that <strong>it provides a language that is both useful for interactive work, but contains a powerful programming language for developing new tools</strong>. This allows the user, who takes existing tools and applies them to data, to slowly but surely become a developer who is creating new tools.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -547,7 +547,7 @@ Tip
 <p>For a great discussion on an overview and history of R and the S programming language, read through <a href="https://rdpeng.github.io/Biostat776/lecture-introduction-and-overview.html">this chapter</a> from Roger D. Peng.</p>
 </div>
 </div>
-<p>Finally, one of the joys of using R has nothing to do with the language itself, but rather with the active and vibrant user community. In many ways, a language is successful inasmuch as it creates a platform with which many people can create new things. R is that platform and thousands of people around the world have come together to make contributions to R, to develop packages, and help each other use R for all kinds of applications. The R-help and R-devel mailing lists have been highly active for over a decade now and there is considerable activity on web sites like Stack Overflow, Twitter <a href="https://twitter.com/search?q=%23rstats">#rstats</a>, <a href="https://twitter.com/search?q=%23rtistry">#rtistry</a>, and <a href="https://www.reddit.com/r/rstats/">Reddit</a>.</p>
+<p>Finally, one of the joys of using R has nothing to do with the language itself, but rather with the active and vibrant user community. In many ways, a language is successful inasmuch as it creates a platform with which many people can create new things. R is that platform and thousands of people around the world have come together to make contributions to R, to develop packages, and help each other use R for all kinds of applications. The R-help and R-devel mailing lists have been highly active for over a decade now and there is considerable activity on web sites like GitHub, <a href="https://community.rstudio.com/">Posit (RStudio) Community</a>, <a href="https://support.bioconductor.org/">Bioconductor Support</a>, Stack Overflow, Twitter <a href="https://twitter.com/search?q=%23rstats">#rstats</a>, <a href="https://twitter.com/search?q=%23rtistry">#rtistry</a>, and <a href="https://www.reddit.com/r/rstats/">Reddit</a>.</p>
 </section>
 <section id="free-software" class="level3">
 <h3 class="anchored" data-anchor-id="free-software">Free Software</h3>
@@ -597,8 +597,8 @@ Tip
 <p>When you download a fresh installation of R from CRAN, you get all of the above, which represents a substantial amount of functionality. However, there are many other packages available:</p>
 <ul>
 <li><p>There are over 10,000 packages on CRAN that have been developed by users and programmers around the world.</p></li>
-<li><p>There are also many packages associated with the <a href="http://bioconductor.org">Bioconductor project</a>.</p></li>
-<li><p>People often make packages available on their personal websites; there is no reliable way to keep track of how many packages are available in this fashion.</p></li>
+<li><p>There are also over 2,000 packages associated with the <a href="http://bioconductor.org">Bioconductor project</a>.</p></li>
+<li><p>People often make packages available on GitHub (very common) and their personal websites (not so common nowadays); there is no reliable way to keep track of how many packages are available in this fashion.</p></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -617,6 +617,9 @@ Questions
 </ol>
 </div>
 </div>
+<p>Want to learn more about Bioconductor? Check this video:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c0Ch_sXiGDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
 </section>
 <section id="limitations-of-r" class="level3">
 <h3 class="anchored" data-anchor-id="limitations-of-r">Limitations of R</h3>
@@ -816,21 +819,12 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><p><a href="https://r4ds.had.co.nz">R for Data Science</a> by Wickham &amp; Grolemund (2017). Covers most of the basics of using R for data analysis.</p></li>
+<li><p><a href="https://r4ds.hadley.nz/">R for Data Science (2e)</a> by Wickham &amp; Grolemund (2017, 2e is from July 18th 2023). Covers most of the basics of using R for data analysis.</p></li>
 <li><p><a href="https://adv-r.hadley.nz">Advanced R</a> by Wickham (2014). Covers a number of areas including object-oriented, programming, functional programming, profiling and other advanced topics.</p></li>
-<li><p><a href="https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf">RStudio IDE cheatsheet</a></p></li>
+<li><p><a href="https://github.com/rstudio/cheatsheets/raw/main/rstudio-ide.pdf">RStudio IDE cheatsheet</a></p></li>
 </ul>
 </div>
 </div>
-</section>
-<section id="rtistry" class="level2">
-<h2 class="anchored" data-anchor-id="rtistry">rtistry</h2>
-<div class="cell fig-cap-location-top">
-<div class="cell-output-display">
-<p><img src="https://lcolladotor.github.io/jhustatcomputing2023/posts/02-introduction-to-r-and-rstudio/https:/github.com/djnavarro/art/raw/master/static/gallery/water-colours/watercolour_splash.jpg" class="img-fluid"></p>
-</div>
-</div>
-<p>[‘Water Colours’ from Danielle Navarro <a href="https://art.djnavarro.net" class="uri">https://art.djnavarro.net</a>]</p>
 </section>
 </section>
 <section id="r-session-information" class="level1">
@@ -896,7 +890,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/02-introduction-to-r-and-rstudio/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1159,7 +1153,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/03-introduction-to-gitgithub/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing2023/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -1521,7 +1515,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/04-reproducible-research/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -2235,7 +2229,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/05-literate-programming/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -2716,7 +2710,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/06-reference-management/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4107,7 +4101,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/07-reading-and-writing-data/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -5926,7 +5920,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/08-managing-data-frames-with-tidyverse/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -6886,7 +6880,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/09-tidy-data-and-the-tidyverse/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -7734,7 +7728,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/10-joining-data-in-r/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -8241,7 +8235,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/11-plotting-systems/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -9586,7 +9580,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/12-ggplot2-plotting-system-part-1/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -10897,7 +10891,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/13-ggplot2-plotting-system-part-2/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -12643,7 +12637,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/14-r-nuts-and-bolts/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -13877,7 +13871,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/15-control-structures/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -15188,7 +15182,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/16-functions/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -16695,7 +16689,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/17-loop-functions/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -17820,7 +17814,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/18-debugging-r-code/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -18571,7 +18565,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/19-error-handling-and-generation/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -20202,7 +20196,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/20-working-with-dates-and-times/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 02:29:17 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 02:44:55 GMT</pubDate>
 </item>
 </channel>
 </rss>

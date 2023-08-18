@@ -261,7 +261,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#final-questions" id="toc-final-questions" class="nav-link" data-scroll-target="#final-questions">Final Questions</a></li>
   <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
-  <li><a href="#rtistry" id="toc-rtistry" class="nav-link" data-scroll-target="#rtistry">rtistry</a></li>
   </ul></li>
   <li><a href="#r-session-information" id="toc-r-session-information" class="nav-link" data-scroll-target="#r-session-information">R session information</a></li>
   </ul>
@@ -374,8 +373,8 @@ Learning objectives
 <section id="basic-features-of-r" class="level3">
 <h3 class="anchored" data-anchor-id="basic-features-of-r">Basic Features of R</h3>
 <p>Today R runs on almost any standard computing platform and operating system. Its open source nature means that anyone is free to adapt the software to whatever platform they choose. Indeed, R has been reported to be running on modern tablets, phones, PDAs, and game consoles.</p>
-<p>One nice feature that R shares with many popular open source projects is frequent releases. These days there is a major annual release, typically in October, where major new features are incorporated and released to the public. Throughout the year, smaller-scale bugfix releases will be made as needed. The frequent releases and regular release cycle indicates active development of the software and ensures that bugs will be addressed in a timely manner. Of course, while the core developers control the primary source tree for R, many people around the world make contributions in the form of new feature, bug fixes, or both.</p>
-<p>Another key advantage that R has over many other statistical packages (even today) is its sophisticated graphics capabilities. R’s ability to create “publication quality” graphics has existed since the very beginning and has generally been better than competing packages. Today, with many more visualization packages available than before, that trend continues. R’s base graphics system allows for very fine control over essentially every aspect of a plot or graph. Other newer graphics systems, like lattice and ggplot2 allow for complex and sophisticated visualizations of high-dimensional data.</p>
+<p>One nice feature that R shares with many popular open source projects is frequent releases. These days there is a major annual release, typically at the end of April, where major new features are incorporated and released to the public. Throughout the year, smaller-scale bugfix releases will be made as needed. The frequent releases and regular release cycle indicates active development of the software and ensures that bugs will be addressed in a timely manner. Of course, while the core developers control the primary source tree for R, many people around the world make contributions in the form of new feature, bug fixes, or both.</p>
+<p>Another key advantage that R has over many other statistical packages (even today) is its sophisticated graphics capabilities. R’s ability to create “publication quality” graphics has existed since the very beginning and has generally been better than competing packages. Today, with many more visualization packages available than before, that trend continues. R’s <em>base</em> graphics system allows for very fine control over essentially every aspect of a plot or graph. Other newer graphics systems, like <code>lattice</code> (not as used nowadays) and <code>ggplot2</code> (very widely used now) allow for complex and sophisticated visualizations of high-dimensional data.</p>
 <p>R has maintained the original S philosophy (see box below), which is that <strong>it provides a language that is both useful for interactive work, but contains a powerful programming language for developing new tools</strong>. This allows the user, who takes existing tools and applies them to data, to slowly but surely become a developer who is creating new tools.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -390,7 +389,7 @@ Tip
 <p>For a great discussion on an overview and history of R and the S programming language, read through <a href="https://rdpeng.github.io/Biostat776/lecture-introduction-and-overview.html">this chapter</a> from Roger D. Peng.</p>
 </div>
 </div>
-<p>Finally, one of the joys of using R has nothing to do with the language itself, but rather with the active and vibrant user community. In many ways, a language is successful inasmuch as it creates a platform with which many people can create new things. R is that platform and thousands of people around the world have come together to make contributions to R, to develop packages, and help each other use R for all kinds of applications. The R-help and R-devel mailing lists have been highly active for over a decade now and there is considerable activity on web sites like Stack Overflow, Twitter <a href="https://twitter.com/search?q=%23rstats">#rstats</a>, <a href="https://twitter.com/search?q=%23rtistry">#rtistry</a>, and <a href="https://www.reddit.com/r/rstats/">Reddit</a>.</p>
+<p>Finally, one of the joys of using R has nothing to do with the language itself, but rather with the active and vibrant user community. In many ways, a language is successful inasmuch as it creates a platform with which many people can create new things. R is that platform and thousands of people around the world have come together to make contributions to R, to develop packages, and help each other use R for all kinds of applications. The R-help and R-devel mailing lists have been highly active for over a decade now and there is considerable activity on web sites like GitHub, <a href="https://community.rstudio.com/">Posit (RStudio) Community</a>, <a href="https://support.bioconductor.org/">Bioconductor Support</a>, Stack Overflow, Twitter <a href="https://twitter.com/search?q=%23rstats">#rstats</a>, <a href="https://twitter.com/search?q=%23rtistry">#rtistry</a>, and <a href="https://www.reddit.com/r/rstats/">Reddit</a>.</p>
 </section>
 <section id="free-software" class="level3">
 <h3 class="anchored" data-anchor-id="free-software">Free Software</h3>
@@ -440,8 +439,8 @@ Tip
 <p>When you download a fresh installation of R from CRAN, you get all of the above, which represents a substantial amount of functionality. However, there are many other packages available:</p>
 <ul>
 <li><p>There are over 10,000 packages on CRAN that have been developed by users and programmers around the world.</p></li>
-<li><p>There are also many packages associated with the <a href="http://bioconductor.org">Bioconductor project</a>.</p></li>
-<li><p>People often make packages available on their personal websites; there is no reliable way to keep track of how many packages are available in this fashion.</p></li>
+<li><p>There are also over 2,000 packages associated with the <a href="http://bioconductor.org">Bioconductor project</a>.</p></li>
+<li><p>People often make packages available on GitHub (very common) and their personal websites (not so common nowadays); there is no reliable way to keep track of how many packages are available in this fashion.</p></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -460,6 +459,9 @@ Questions
 </ol>
 </div>
 </div>
+<p>Want to learn more about Bioconductor? Check this video:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c0Ch_sXiGDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
 </section>
 <section id="limitations-of-r" class="level3">
 <h3 class="anchored" data-anchor-id="limitations-of-r">Limitations of R</h3>
@@ -641,21 +643,12 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><p><a href="https://r4ds.had.co.nz">R for Data Science</a> by Wickham &amp; Grolemund (2017). Covers most of the basics of using R for data analysis.</p></li>
+<li><p><a href="https://r4ds.hadley.nz/">R for Data Science (2e)</a> by Wickham &amp; Grolemund (2017, 2e is from July 18th 2023). Covers most of the basics of using R for data analysis.</p></li>
 <li><p><a href="https://adv-r.hadley.nz">Advanced R</a> by Wickham (2014). Covers a number of areas including object-oriented, programming, functional programming, profiling and other advanced topics.</p></li>
-<li><p><a href="https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf">RStudio IDE cheatsheet</a></p></li>
+<li><p><a href="https://github.com/rstudio/cheatsheets/raw/main/rstudio-ide.pdf">RStudio IDE cheatsheet</a></p></li>
 </ul>
 </div>
 </div>
-</section>
-<section id="rtistry" class="level2">
-<h2 class="anchored" data-anchor-id="rtistry">rtistry</h2>
-<div class="cell fig-cap-location-top">
-<div class="cell-output-display">
-<p><img src="https://github.com/djnavarro/art/raw/master/static/gallery/water-colours/watercolour_splash.jpg" class="img-fluid"></p>
-</div>
-</div>
-<p>[‘Water Colours’ from Danielle Navarro <a href="https://art.djnavarro.net" class="uri">https://art.djnavarro.net</a>]</p>
 </section>
 </section>
 <section id="r-session-information" class="level1">
