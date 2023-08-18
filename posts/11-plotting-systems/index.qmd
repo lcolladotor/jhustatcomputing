@@ -14,6 +14,8 @@ description: "Overview of three plotting systems in R"
 categories: [module 3, week 3, R, programming, ggplot2, data viz]
 ---
 
+*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
+
 > The data may not contain the answer. And, if you torture the data long enough, it will tell you anything. ---*John W. Tukey*
 
 # Pre-lecture materials

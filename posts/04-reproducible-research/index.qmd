@@ -14,6 +14,8 @@ description: "Introduction to reproducible research covering some basic concepts
 categories: [module 1, week 1, R, reproducibility]
 ---
 
+*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
+
 ```{r}
 #| label: setup
 #| include: false
