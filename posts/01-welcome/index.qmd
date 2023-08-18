@@ -10,7 +10,7 @@ author:
       - id: jhsph
         name: Johns Hopkins Bloomberg School of Public Health Department of Biostatistics
         url: https://publichealth.jhu.edu/departments/biostatistics
-description: "Overview course information for BSPH Biostatistics 140.776 in Fall 2022"
+description: "Overview course information for BSPH Biostatistics 140.776 in Fall 2023"
 categories: [course-admin, module 1, week 1]
 ---
 
@@ -183,7 +183,7 @@ If you are registered for the course, you should have access to Courseplus now. 
 
 ### Course Staff
 
-The course instructor this year is [Leonardo Collado Torres](http://lcolladotor.github.io/) who is an Investigator at the [Lieber Institute for Brain Development](https://www.libd.org/) and is an Associate in the [Department of Biostatistics](https://publichealth.jhu.edu/departments/biostatistics) at the [Johns Hopkins Bloomberg School of Public Health](https://publichealth.jhu.edu).
+The course instructor this year is [Leonardo Collado Torres](http://lcolladotor.github.io/) who is an Investigator at the [Lieber Institute for Brain Development](https://www.libd.org/) and is an Associate in the [Department of Biostatistics](https://publichealth.jhu.edu/departments/biostatistics) at the [Johns Hopkins Bloomberg School of Public Health](https://publichealth.jhu.edu). I was actually a student of this course in Fall 2012 when [Roger D. Peng](https://twitter.com/rdpeng) was the instructor of this course and [Jenna Krall](https://twitter.com/kralljr) was the only teaching assistant. I myself started learning and [teaching](http://lcolladotor.github.io/#teaching) about R in 2008 and we have a lot of material in the [LIBD rstats club](https://research.libd.org/rstatsclub/) that you might be interested in. 
 
 At the Lieber Institute for Brain Development ([LIBD](https://www.libd.org/)), my group works on understanding the roots and signatures of disease (particularly psychiatric disorders) by zooming in across dimensions of gene activity. We achieve this by studying gene expression at all expression feature levels (genes, exons, exon-exon junctions, and un-annotated regions) and by using different gene expression measurement technologies (bulk RNA-seq, single cell/nucleus RNA-seq, and spatial transcriptomics) that provide finer biological resolution and localization of gene expression. We work closely with collaborators from LIBD as well as from Johns Hopkins University (JHU) and other institutions, which reflects the cross-disciplinary approach and diversity in expertise needed to further advance our understanding of high throughput biology.
 
