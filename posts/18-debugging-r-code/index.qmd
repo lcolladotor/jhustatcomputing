@@ -110,7 +110,7 @@ It is now ready and waiting on your clipboard, so you can paste it into, say, a 
 
 One last step. Let's go here and open up an issue on the course website:
 
--   <https://github.com/stephaniehicks/jhustatcomputing2022/issues>
+-   <https://github.com/lcolladotor/jhustatcomputing2023/issuess>
 
 We will paste in the code from our reprex.
 :::

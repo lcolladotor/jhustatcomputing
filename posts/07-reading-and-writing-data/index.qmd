@@ -141,7 +141,7 @@ getwd()
 list.files()
 ```
 
-OK so our current location is in the reading and writing lectures sub-folder of the `jhustatcomputing2022` course repository. Let's try using the `here` package.
+OK so our current location is in the reading and writing lectures sub-folder of the `jhustatcomputing2023` course repository. Let's try using the `here` package.
 
 ```{r}
 library(here)
@@ -150,7 +150,7 @@ list.files(here::here())
 list.files(here("data"))
 ```
 
-Now we see that using the `here::here()` function is a *relative* path (relative to the `.Rproj` file in our `jhustatcomputing2022` repository. We also see there is are two `.csv` files in the `data` folder. We will learn how to read those files into R in the next section.
+Now we see that using the `here::here()` function is a *relative* path (relative to the `.Rproj` file in our `jhustatcomputing2023` repository. We also see there is are two `.csv` files in the `data` folder. We will learn how to read those files into R in the next section.
 
 ![Artwork by Allison Horst on here package](https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/here.png){width="80%"}
 
