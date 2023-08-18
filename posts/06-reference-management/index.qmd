@@ -247,7 +247,7 @@ Here are some post-lecture tasks to practice some of the material discussed.
 
 ```{r}
 #| eval: false
-install.packages(c("bibtex", "RefManageR")
+install.packages(c("bibtex", "RefManageR"))
 ```
 
 What do they do? How might they be helpful to you in terms of reference management?
