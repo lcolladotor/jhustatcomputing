@@ -91,10 +91,10 @@ function being used which explicitly tells R to change the absolute path or abso
 For example, say I want to clone a GitHub repo from my colleague Brian, which has 100 R script files, and in every one of those files at the top is:
 
 ```{r, eval=FALSE}
-setwd("C:\Users\Brian\path\only\that\Brian\has")
+setwd("C:\\Users\\Brian\\path\\only\\that\\Brian\\has")
 ```
 
-The problem is, if I want to use his code, I will need to go and hand-edit every single one of those paths (`C:\Users\Brian\path\only\that\Brian\has`) to the path that I want to use on my computer or wherever I saved the folder on my computer (e.g. `/Users/Stephanie/Documents/path/only/I/have`).
+The problem is, if I want to use his code, I will need to go and hand-edit every single one of those paths (`C:\Users\Brian\path\only\that\Brian\has`) to the path that I want to use on my computer or wherever I saved the folder on my computer (e.g. `/Users/leocollado/Documents/path/only/I/have`).
 
 1.  This is an unsustainable practice.
 2.  I can go in and manually edit the path, but this assumes I know how to set a working directory. Not everyone does.
