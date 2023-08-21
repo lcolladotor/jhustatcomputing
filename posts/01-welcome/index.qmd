@@ -68,9 +68,12 @@ Some resources that may be useful if you feel you may be missing pieces of this 
 -   **Introductory R videos** from the [*LIBD rstats club*](https://research.libd.org/rstatsclub/) such as these videos:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T51DRWeuKm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
 </iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XTuJ8vGnzBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XTuJ8vGnzBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
 :::
 
 ### Getting set up
@@ -183,12 +186,11 @@ If you are registered for the course, you should have access to Courseplus now. 
 
 ### Course Staff
 
-The course instructor this year is [Leonardo Collado Torres](http://lcolladotor.github.io/) who is an Investigator at the [Lieber Institute for Brain Development](https://www.libd.org/) and is an Associate in the [Department of Biostatistics](https://publichealth.jhu.edu/departments/biostatistics) at the [Johns Hopkins Bloomberg School of Public Health](https://publichealth.jhu.edu). I was actually a student of this course in Fall 2012 when [Roger D. Peng](https://twitter.com/rdpeng) was the instructor of this course and [Jenna Krall](https://twitter.com/kralljr) was the only teaching assistant. I myself started learning and [teaching](http://lcolladotor.github.io/#teaching) about R in 2008 and we have a lot of material in the [LIBD rstats club](https://research.libd.org/rstatsclub/) that you might be interested in. 
+The course instructor this year is [Leonardo Collado Torres](http://lcolladotor.github.io/) who is an Investigator at the [Lieber Institute for Brain Development](https://www.libd.org/) and is an Associate in the [Department of Biostatistics](https://publichealth.jhu.edu/departments/biostatistics) at the [Johns Hopkins Bloomberg School of Public Health](https://publichealth.jhu.edu). I was actually a student of this course in Fall 2012 when [Roger D. Peng](https://twitter.com/rdpeng) was the instructor of this course and [Jenna Krall](https://twitter.com/kralljr) was the only teaching assistant. I myself started learning and [teaching](http://lcolladotor.github.io/#teaching) about R in 2008 and we have a lot of material in the [LIBD rstats club](https://research.libd.org/rstatsclub/) that you might be interested in.
 
 At the Lieber Institute for Brain Development ([LIBD](https://www.libd.org/)), my group works on understanding the roots and signatures of disease (particularly psychiatric disorders) by zooming in across dimensions of gene activity. We achieve this by studying gene expression at all expression feature levels (genes, exons, exon-exon junctions, and un-annotated regions) and by using different gene expression measurement technologies (bulk RNA-seq, single cell/nucleus RNA-seq, and spatial transcriptomics) that provide finer biological resolution and localization of gene expression. We work closely with collaborators from LIBD as well as from Johns Hopkins University (JHU) and other institutions, which reflects the cross-disciplinary approach and diversity in expertise needed to further advance our understanding of high throughput biology.
 
-Every day I use [R](http://cran.r-project.org/) and [Bioconductor](http://www.bioconductor.org/), and on some days I [write R packages](https://lcolladotor.github.io/pkgs/). Occasionally I write [blog posts](http://lcolladotor.github.io/#blog) about them and other tools. I'm a co-founder of the [LIBD rstats club](http://LieberInstitute.github.io/rstatsclub/) and the [CDSB community](https://comunidadbioinfo.github.io) of R and Bioconductor developers in Mexico and Latin America, that we described at the [R Consortium website](https://www.r-consortium.org/blog/2020/03/18/cdsb-diversity-and-outreach-hotspot-in-mexico). In the past, I also served on the [Bioconductor Community Advisory Board](http://bioconductor.org/about/community-advisory-board/) and the advisory board for [rOpenSci’s Statistical Software Peer Review](https://ropensci.org/stat-software-review/).
-
+Every day I use [R](http://cran.r-project.org/) and [Bioconductor](http://www.bioconductor.org/), and on some days I [write R packages](https://lcolladotor.github.io/pkgs/). Occasionally I write [blog posts](http://lcolladotor.github.io/#blog) about them and other tools. I'm a co-founder of the [LIBD rstats club](http://LieberInstitute.github.io/rstatsclub/) and the [CDSB community](https://comunidadbioinfo.github.io) of R and Bioconductor developers in Mexico and Latin America, that we described at the [R Consortium website](https://www.r-consortium.org/blog/2020/03/18/cdsb-diversity-and-outreach-hotspot-in-mexico). In the past, I also served on the [Bioconductor Community Advisory Board](http://bioconductor.org/about/community-advisory-board/) and the advisory board for [rOpenSci's Statistical Software Peer Review](https://ropensci.org/stat-software-review/).
 
 If you want, you can find me on [Twitter](https://twitter.com/lcolladotor).
 
@@ -196,10 +198,9 @@ If you want, you can find me on [Twitter](https://twitter.com/lcolladotor).
 
 We also have three amazing TAs this year:
 
--   Emily Norton ([enorton7\@jhmi.edu](mailto:enorton7@jhmi.edu)). TODO.
+-   Emily Norton ([enorton7\@jhmi.edu](mailto:enorton7@jhmi.edu)). She is a second year Ph.D. student in Biostatistics, with interest in understanding how genetics and environment interact to impact someone\'s risk of disease. She currently validates polygenic risk scores and, in combination with other risk factors, translates disease risk into a clinically-relevant quantity. Aside from research, she enjoys swing dancing, camping, and crafting.
 -   Joe Sartini ([jsartin1\@jhu.edu](mailto:jsartin1@jhu.edu)). He is a third year Ph.D. student in Biostatistics, with interest in models for precision medicine applications. Currently, the focus of his work is extracting meaningful insights from time-series produced by Continuous Glucose Monitoring and other devices worn by Type 2 diabetics. Outside of research, he enjoys participating in endurance sports and weightlifting.
 -   Phyllis Wei ([ywei43\@jhu.edu](mailto:ywei43@jhu.edu)). She is a third year Ph.D. student in Biostatistics. She develops methods to help understand the genetic basis of complex traits and diseases and enhance disease risk prediction models through data integration. Outside of biostatistics, she enjoys hiking, baking, and visiting museums.
-
 
 ### Assignment Due Dates
 
