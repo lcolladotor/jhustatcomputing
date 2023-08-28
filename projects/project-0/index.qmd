@@ -216,9 +216,6 @@ rstudioapi::restartSession()
 ## Editing the .Renviron is strongly discouraged now since it stores as
 ## simple text your GitHub personal access token (PAT) instead of the
 ## more secure approach provided by gitcreds.
-
-## Now run use_github()
-usethis::use_github()
 ```
 
 ### 5. Create Hub repo and link your RStudio project to it
