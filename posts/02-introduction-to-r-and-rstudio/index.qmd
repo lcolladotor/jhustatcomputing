@@ -194,7 +194,7 @@ The file/plot/pkg viewer is a handy browser for your current files, like Finder,
 
 ### Installing R and RStudio
 
--   If you have not already, [install R first](http://cran.r-project.org). If you already have R installed, make sure it is a fairly recent version, version 4.0 or newer. If yours is older, I suggest you update (install a new R version).
+-   If you have not already, [install R first](http://cran.r-project.org). If you already have R installed, make sure it is a fairly recent version, version 4.3.1 or newer. If yours is older that version 4.2.0, I suggest you update (install a new R version).
 -   Once you have R installed, install the free version of [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/). Again, make sure it's a recent version.
 
 ::: callout-tip
@@ -205,7 +205,7 @@ Installing R and RStudio should be fairly straightforward. However, a great set 
 
 If things don't work, ask for help in the Courseplus discussion board.
 
-I personally only have experience with Mac, but everything should work on all the standard operating systems (Windows, Mac, and even Linux).
+I have both a macOS and a winOS computer, and have used Linux (Ubuntu) in the past too, but I might be more limited in how much I can help you on Linux.
 
 ### RStudio default options
 
@@ -244,6 +244,13 @@ To install an R package from CRAN, one can simply call the `install.packages()` 
 #| eval: false
 #| echo: true
 install.packages("ggplot2")
+
+## Below is an example for installing more than one package at a time:
+
+## Install R packages for project 0
+install.packages(
+    c("postcards", "usethis", "gitcreds")
+)
 ```
 
 and the appropriate version of the package will be installed.
