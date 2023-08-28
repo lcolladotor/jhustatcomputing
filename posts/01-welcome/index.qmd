@@ -161,7 +161,7 @@ The goal is by the end of the class, students will be able to:
 
 # Course logistics
 
-Unlike 2022, the only option is to take the course in person (140.776.01).
+Unlike 2022, the only option is to take the course is in-person (140.776.01).
 
 -   <https://lcolladotor.github.io/jhustatcomputing2023>
 
@@ -198,7 +198,7 @@ If you want, you can find me on [Twitter](https://twitter.com/lcolladotor).
 
 We also have three amazing TAs this year:
 
--   Emily Norton ([enorton7\@jhmi.edu](mailto:enorton7@jhmi.edu)). She is a second year Ph.D. student in Biostatistics, with interest in understanding how genetics and environment interact to impact someone\'s risk of disease. She currently validates polygenic risk scores and, in combination with other risk factors, translates disease risk into a clinically-relevant quantity. Aside from research, she enjoys swing dancing, camping, and crafting.
+-   Emily Norton ([enorton7\@jhmi.edu](mailto:enorton7@jhmi.edu)). She is a second year Ph.D. student in Biostatistics, with interest in understanding how genetics and environment interact to impact someone's risk of disease. She currently validates polygenic risk scores and, in combination with other risk factors, translates disease risk into a clinically-relevant quantity. Aside from research, she enjoys swing dancing, camping, and crafting.
 -   Joe Sartini ([jsartin1\@jhu.edu](mailto:jsartin1@jhu.edu)). He is a third year Ph.D. student in Biostatistics, with interest in models for precision medicine applications. Currently, the focus of his work is extracting meaningful insights from time-series produced by Continuous Glucose Monitoring and other devices worn by Type 2 diabetics. Outside of research, he enjoys participating in endurance sports and weightlifting.
 -   Phyllis Wei ([ywei43\@jhu.edu](mailto:ywei43@jhu.edu)). She is a third year Ph.D. student in Biostatistics. She develops methods to help understand the genetic basis of complex traits and diseases and enhance disease risk prediction models through data integration. Outside of biostatistics, she enjoys hiking, baking, and visiting museums.
 
