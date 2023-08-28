@@ -63,7 +63,7 @@ This document gives a brief explanation of GitHub and how we will use it for thi
 
 ### GitHub
 
-*GitHub* is a hosting service on internet for git-aware folders and projects
+*GitHub* is a hosting service on internet for `git`-aware folders and projects
 
 -   Similar to the DropBox or Google, but more structured, powerful, and programmatic
 -   Great for solo or collaborative work!
@@ -93,7 +93,7 @@ To learn a bit more about Git/GitHub and why you might want to use it, [read thi
 
 ### What to (not) do
 
-**GitHub is ideal if** you have a project with a fair number of files, most of those files are text files (such as code, LaTeX, (R)markdown, etc.) and different people work on different parts of the project.
+**GitHub is ideal if** you have a project with a fair number of files, most of those files are text files (such as code, $LaTeX$, (R)markdown, etc.) and different people work on different parts of the project.
 
 **GitHub is less useful if** you have a lot of non-text files (e.g. Word or Powerpoint) and different team members might want to edit the same document at the same time. In that instance, a solution like Google Docs, Word+Dropbox, Word+Onedrive, etc. might be better.
 
@@ -106,6 +106,8 @@ Git and GitHub is fundamentally **based on commands you type into the command li
 -   There are also third party GitHub clients with many advanced features, most of which you won't need initially, but might eventually.
 
 **Note**: As student, you can (and should) upgrade to the Pro version of GitHub for free (i.e. access to unlimited private repositories is one benefit), see the [GitHub student developer pack](https://education.github.com/pack) on how to do this.
+
+We will mostly be using Git commands through the RStudio Git panel. This panel will show up by default if RStudio recognizes that you have installed Git already.
 
 # Getting Started
 
@@ -125,6 +127,8 @@ It truly is one of the **best resources** out there for getting started with git
 
 Some of you may only need to skim it, others will need to spend some time reading through it. Either way, I will bet that you won't regret the time investment.
 
+Alternatively, check the [git to know git: an 8 minute introduction](https://research.libd.org/rstatsclub/2018/04/17/git-to-know-git/) blog post by [Amy Peterson](https://amy-peterson.github.io/).
+
 # Using git/GitHub in our course
 
 In this course, you will use git/GitHub in the following ways:
@@ -133,6 +137,37 @@ In this course, you will use git/GitHub in the following ways:
 2.  Projects 1-3 - You can practice using git locally (on your compute environment) to track your changes over time and, if you wish (but highly suggested), you can practice pushing your project solutions to a private GitHub repository on your GitHub account (i.e. `git add`, `git commit`, `git push`, `git pull`, etc) .
 
 Learning these skills will be useful down the road if you ever work collaboratively on a project (i.e. writing code as a group). In this scenario, you will use the skills you have been practicing in your projects to work together as a team in a single GitHub repository.
+
+# "Help me help you": `reprex::reprex()`
+
+Install the `reprex` R package.
+
+```{r}
+#| eval: false
+install.packages("reprex")
+```
+
+![](https://reprex.tidyverse.org/reference/figures/help-me-help-you.png)
+
+We'll learn more about reproducible code soon. But in the meantime, you will definitely want to learn about `reprex: Prepare Reproducible Example Code via the Clipboard`.
+
+As a quick exercise:
+
+1.  Install `reprex`
+
+2.  Log in to your GitHub account and access <https://github.com/lcolladotor/jhustatcomputing2023/issues/2>
+
+3.  Copy paste the following R code `stop("This R error is weird")`.
+
+4.  Type `reprex::reprex()` in your R console.
+
+5.  Paste the output into <https://github.com/lcolladotor/jhustatcomputing2023/issues/2> and click on the "comment" green button.
+
+For more details on `reprex`, check this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8bBo3B7N8YQ?si=HQRqLn--9KTNKDcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
 
 # Post-lecture materials
 
