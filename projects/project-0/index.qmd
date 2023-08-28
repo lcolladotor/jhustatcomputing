@@ -82,9 +82,13 @@ If you have any trouble with any of the steps above, try to first post on the di
 
 This part of the project is to help you introduce yourself (and your interests!) to others in this course. You will create a new GitHub repository and build a small website about yourself.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9LUCZAx3SlU?si=PHxVG7LBPjuS0yB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9LUCZAx3SlU?si=PHxVG7LBPjuS0yB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Q6eRD8Nyxfk?si=q9x552s-qhzYBs0-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q6eRD8Nyxfk?si=q9x552s-qhzYBs0-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
 
 ### 1. Create an RStudio project for your website
 
@@ -119,7 +123,7 @@ usethis::use_git() ## Choose the option to make the commit, then to restart RStu
 
 Here's the output and selections I made in my case. Note that the prompts and options will change randomly every time you run this function, so you do need to read them carefully!
 
-```{}
+```         
 usethis::use_git()
 ✔ Setting active project to '/Users/leocollado/Dropbox/Mac/Desktop/biostat776-intro-Leonardo-ColladoTorres'
 ✔ Initialising Git repo
@@ -163,7 +167,7 @@ usethis::git_default_branch_rename(to = "gh-pages")
 
 This was the output for me:
 
-```{}
+```         
 usethis::git_default_branch_rename(to = "gh-pages")
 ✔ Setting active project to '/Users/leocollado/Dropbox/Mac/Desktop/biostat776-intro-Leonardo-ColladoTorres'
 ℹ Local branch 'devel' appears to play the role of the default branch.
@@ -319,6 +323,7 @@ You might also want to use inline R code with `fontawesome::fa()` like at <https
 
 -   Go to the Discussion Board in CoursePlus and write a short post with a link (URL) to your website (and URL to the corresponding GitHub repository) that you created.
 -   As you read the introductions from other folks in the class, feel free to comment/reply using Discussion board.
+-   Feel free to share your website with the world. If you use Twitter, use the `#postcards` hashtag and tag the author `@seankross` <https://twitter.com/seankross>.
 
 In class on Sept 12, I will show as many websites as I can from Courseplus!
 
