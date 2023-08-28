@@ -188,17 +188,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#r-package-dependencies" id="toc-r-package-dependencies" class="nav-link" data-scroll-target="#r-package-dependencies">R package dependencies</a></li>
   <li><a href="#part-1" id="toc-part-1" class="nav-link" data-scroll-target="#part-1">Part 1</a>
   <ul class="collapse">
   <li><a href="#setting-up-your-computing-environment" id="toc-setting-up-your-computing-environment" class="nav-link" data-scroll-target="#setting-up-your-computing-environment">Setting up your computing environment</a></li>
   </ul></li>
-  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a>
+  <li><a href="#part-2-make-a-website-using-usethis-and-postcards" id="toc-part-2-make-a-website-using-usethis-and-postcards" class="nav-link" data-scroll-target="#part-2-make-a-website-using-usethis-and-postcards">Part 2: make a website using <code>usethis</code> and <code>postcards</code></a>
   <ul class="collapse">
-  <li><a href="#create-a-github-repo-for-your-website" id="toc-create-a-github-repo-for-your-website" class="nav-link" data-scroll-target="#create-a-github-repo-for-your-website">1. Create a GitHub repo for your website</a></li>
-  <li><a href="#build-a-website-using-r-markdown" id="toc-build-a-website-using-r-markdown" class="nav-link" data-scroll-target="#build-a-website-using-r-markdown">2. Build a website using R Markdown</a></li>
-  <li><a href="#include-a-readme.md-file" id="toc-include-a-readme.md-file" class="nav-link" data-scroll-target="#include-a-readme.md-file">3. Include a <code>README.md</code> file</a></li>
-  <li><a href="#deploy-your-website" id="toc-deploy-your-website" class="nav-link" data-scroll-target="#deploy-your-website">4. Deploy your website</a></li>
-  <li><a href="#share-your-website" id="toc-share-your-website" class="nav-link" data-scroll-target="#share-your-website">5. Share your website</a></li>
+  <li><a href="#create-an-rstudio-project-for-your-website" id="toc-create-an-rstudio-project-for-your-website" class="nav-link" data-scroll-target="#create-an-rstudio-project-for-your-website">1. Create an RStudio project for your website</a></li>
+  <li><a href="#create-a-local-git-repo-for-your-rstudio-project" id="toc-create-a-local-git-repo-for-your-rstudio-project" class="nav-link" data-scroll-target="#create-a-local-git-repo-for-your-rstudio-project">2. Create a local Git repo for your RStudio project</a></li>
+  <li><a href="#use-the-gh-pages-branch" id="toc-use-the-gh-pages-branch" class="nav-link" data-scroll-target="#use-the-gh-pages-branch">3. Use the <code>gh-pages</code> branch</a></li>
+  <li><a href="#link-r-to-github" id="toc-link-r-to-github" class="nav-link" data-scroll-target="#link-r-to-github">4. Link R to GitHub</a></li>
+  <li><a href="#create-hub-repo-and-link-your-rstudio-project-to-it" id="toc-create-hub-repo-and-link-your-rstudio-project-to-it" class="nav-link" data-scroll-target="#create-hub-repo-and-link-your-rstudio-project-to-it">5. Create Hub repo and link your RStudio project to it</a></li>
+  <li><a href="#build-a-website-using-r-markdown" id="toc-build-a-website-using-r-markdown" class="nav-link" data-scroll-target="#build-a-website-using-r-markdown">6. Build a website using R Markdown</a></li>
+  <li><a href="#render-your-website" id="toc-render-your-website" class="nav-link" data-scroll-target="#render-your-website">7. Render your website</a></li>
+  <li><a href="#deploy-your-website" id="toc-deploy-your-website" class="nav-link" data-scroll-target="#deploy-your-website">8. Deploy your website</a></li>
+  <li><a href="#refine-your-website" id="toc-refine-your-website" class="nav-link" data-scroll-target="#refine-your-website">9. Refine your website</a></li>
+  <li><a href="#share-your-website" id="toc-share-your-website" class="nav-link" data-scroll-target="#share-your-website">10. Share your website</a></li>
   </ul></li>
   <li><a href="#r-session-information" id="toc-r-session-information" class="nav-link" data-scroll-target="#r-session-information">R session information</a></li>
   </ul>
@@ -256,17 +262,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><em>This project, as the rest of the course, is adapted from the version <a href="https://www.stephaniehicks.com/">Stephanie C. Hicks</a> designed and maintained in 2021 and 2022. Check the recent changes to this file through the <a href="https://github.com/lcolladotor/jhustatcomputing2023/commits/main/projects/project-0/index.qmd">GitHub history</a>.</em></p>
 <section id="background" class="level1">
 <h1>Background</h1>
-<p><strong>Due date: Sept 8 at 1:29pm</strong></p>
+<p><strong>Due date: Sept 10 at 11:59pm</strong></p>
 <p>Using the tools we learned in the first week (e.g.&nbsp;R, RStudio and Github). Let’s apply them in a small (but also comprehensive) exercise.</p>
 <ul>
 <li><p><strong>Please note this project is entirely optional</strong> (i.e.&nbsp;it will not be graded), but hopefully it will be helpful to you getting set up for the rest of the course (i.e.&nbsp;set up these tools on your computing environment) and give you an opportunity to introduce yourself to your classmates.</p></li>
-<li><p><strong>For anyone who completes it, you get a free hex sticker!</strong> If you aren’t familiar with the hex stickers, check out <a href="https://github.com/rstudio/hex-stickers">this link</a>. You can add them to your laptop for some character and swag (or <a href="https://twitter.com/ClaireMKBowen/status/1294336123414523904">turn them into magnets</a>). I have a ton of different ones from the tidyverse or <a href="https://pbs.twimg.com/profile_images/1236855715018559488/PuYAjTTD_400x400.jpg">RLadies Baltimore</a>. You can come pick one up from my office or I can mail it to you if you email me a mailing address after you submit the project.</p></li>
 <li><p><strong>For those of you who are new to GitHub/R/Rmarkdown</strong>: this project makes you do a lot of things that you might not be familiar with. I know that this might be time-consuming and also might feel a bit intimidating. It’s partly unavoidable and partly on purpose. You need to learn how to quickly get up to speed with all kinds of new tools that come your way. So practicing it is a good idea. You are welcome to draw on any sources for help that you want (online, classmates, instructor, etc.). I’m confident with a bit of trial and error you’ll get it to work.</p></li>
 </ul>
 </section>
+<section id="r-package-dependencies" class="level1">
+<h1>R package dependencies</h1>
+<p>You will likely need to install these R packages:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="st">"postcards"</span>, <span class="st">"usethis"</span>, <span class="st">"gitcreds"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You will also need to have installed Git on your computer. Follow <a href="https://happygitwithr.com/install-git" class="uri">https://happygitwithr.com/install-git</a> for more detailed instructions depending on your operating system.</p>
+</section>
 <section id="part-1" class="level1">
 <h1>Part 1</h1>
-<p>This part of the project is to ensure that you have successfully set up your computing environment. Please email (use the Subject line: <code>140.776 Setup</code>) the Course Instructor (Dr.&nbsp;Stephanie Hicks) at shicks19@jhu.edu the following information:</p>
+<p>This part of the project is to ensure that you have successfully set up your computing environment. Please email (use the Subject line: <code>140.776 Setup</code>) the Course Instructor (Dr.&nbsp;Leonardo Collado Torres) at lcollado@jhu.edu the following information:</p>
 <section id="setting-up-your-computing-environment" class="level3">
 <h3 class="anchored" data-anchor-id="setting-up-your-computing-environment">Setting up your computing environment</h3>
 <ol type="1">
@@ -275,7 +290,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>The version of R that you have installed on your computer. To do this, start up R and run the following in the R console and include the output in your email.</p></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(R.version.string)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(R.version.string)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -287,7 +302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The version of RStudio that you have installed on your computer. To do this start up RStudio and in the R console window, run the following and again include the output in your email:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">RStudio.Version</span>()<span class="sc">$</span>version)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">RStudio.Version</span>()<span class="sc">$</span>version)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="5" type="1">
 <li><p>If you have a GitHub username, please include this in your email. If you do not have a GitHub username, read https://happygitwithr.com, sign up for GitHub, and include your new username in your email to me.</p></li>
@@ -295,7 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>For example, this is mine:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>git version 2.39.2 (Apple Git-143)</code></pre>
 </div>
@@ -303,55 +318,205 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>If you have any trouble with any of the steps above, try to first post on the discussion board on CoursePlus. The TAs and I will be checking it frequently, but other students may also be helpful in their replies. You can also use other resources to get help (Google, R4DS, colleagues/friends/relatives with R/Markdown experience, etc.). Still, try to do as much as possible yourself. We will use all the bits you are learning here repeatedly during this course.</p>
 </section>
 </section>
-<section id="part-2" class="level1">
-<h1>Part 2</h1>
+<section id="part-2-make-a-website-using-usethis-and-postcards" class="level1">
+<h1>Part 2: make a website using <code>usethis</code> and <code>postcards</code></h1>
 <p>This part of the project is to help you introduce yourself (and your interests!) to others in this course. You will create a new GitHub repository and build a small website about yourself.</p>
-<section id="create-a-github-repo-for-your-website" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-github-repo-for-your-website">1. Create a GitHub repo for your website</h3>
-<p>Create a new GitHub repository titled <code>biostat776-intro-&lt;firstname&gt;-&lt;lastname&gt;</code> (where you replace <code>&lt;firstname&gt;</code> with your first name and <code>&lt;lastname&gt;</code> with your last name) in your own personal GitHub account (e.g.&nbsp;<code>https://github.com/&lt;yourgithubusername&gt;/biostat776-intro-&lt;firstname&gt;-&lt;lastname&gt;</code>).</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9LUCZAx3SlU?si=PHxVG7LBPjuS0yB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q6eRD8Nyxfk?si=q9x552s-qhzYBs0-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<section id="create-an-rstudio-project-for-your-website" class="level3">
+<h3 class="anchored" data-anchor-id="create-an-rstudio-project-for-your-website">1. Create an RStudio project for your website</h3>
+<p>Use <code>usethis::create_project()</code> or in RStudio go to <code>File</code> -&gt; <code>New project</code> and create a project with the name <code>&lt;YourGitHubUsername&gt;.github.io</code>. That is a very specific name used by GitHub Pages <a href="https://pages.github.com/" class="uri">https://pages.github.com/</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## My GitHub username is "lcolladotor", so this would create the RStudio project</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="do">## on my Desktop</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_project</span>(<span class="st">"~/Desktop/lcolladotor.github.io"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you already have a GitHub repository with that name, then choose the following name: <code>biostat776-intro-&lt;firstname&gt;-&lt;lastname&gt;</code> (where you replace <code>&lt;firstname&gt;</code> with your first name and <code>&lt;lastname&gt;</code> with your last name) in your own personal GitHub account.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_project</span>(<span class="st">"~/Desktop/biostat776-intro-Leonardo-ColladoTorres"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>usethis::create_project()</code> will create a new RStudio window for your website project.</p>
+</section>
+<section id="create-a-local-git-repo-for-your-rstudio-project" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-local-git-repo-for-your-rstudio-project">2. Create a local Git repo for your RStudio project</h3>
+<p>We will use utilities from <code>usethis</code> to link our RStudio project to GitHub. Assuming that you already have Git installed in your computer (see <a href="https://happygitwithr.com/install-git" class="uri">https://happygitwithr.com/install-git</a> for detailed instructions on how to install Git), on your RStudio project you made on step 1 above type this on your R console: <code>usethis::use_git()</code>. This will run <code>git init</code> behind the scenes and setup a Git repository on your computer. On your R console you will get asked if it’s OK to restart RStudio. Say yes, as that will now enable the <code>Git</code> panel in RStudio, which will make your life easier later on.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git</span>() <span class="do">## Choose the option to make the commit, then to restart RStudio</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="do">## If you don't have git installed, you will likely benefit from reading</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="do">## "Happy Git and GitHub for the useR" at https://happygitwithr.com/.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Here’s the output and selections I made in my case. Note that the prompts and options will change randomly every time you run this function, so you do need to read them carefully!</p>
+<pre class="{> usethis::use_git()}"><code>✔ Setting active project to '/Users/leocollado/Dropbox/Mac/Desktop/biostat776-intro-Leonardo-ColladoTorres'
+✔ Initialising Git repo
+✔ Adding '.Rhistory', '.Rdata', '.httr-oauth', '.DS_Store', '.quarto' to '.gitignore'
+There are 2 uncommitted files:
+* '.gitignore'
+* 'biostat776-intro-Leonardo-ColladoTorres.Rproj'
+Is it ok to commit them?
+
+1: Not now
+2: Yup
+3: Negative
+
+Selection: 2
+
+✔ Adding files
+✔ Making a commit with message 'Initial commit'
+• A restart of RStudio is required to activate the Git pane
+Restart now?
+
+1: Absolutely not
+2: No
+3: For sure
+
+Selection: 3</code></pre>
+<p>At the end, my RStudio window was restarted.</p>
+</section>
+<section id="use-the-gh-pages-branch" class="level3">
+<h3 class="anchored" data-anchor-id="use-the-gh-pages-branch">3. Use the <code>gh-pages</code> branch</h3>
+<p>GitHub provides websites for free to Git repositories they host if you use a specific Git branch name: <code>gh-pages</code>. While there are more configuration options available through GitHub, the easiest option is to use the <code>gh-pages</code> branch, which we can do with R thanks to <code>usethis::git_default_branch_rename()</code> as shown below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">## After the restart, we next need to change the default Git branch to "gh-pages".</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="do">## This will make our lives a bit easier later on, as this specific name is used by</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub pages https://pages.github.com/ for websites.</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_default_branch_rename</span>(<span class="at">to =</span> <span class="st">"gh-pages"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This was the output for me:</p>
+<p><code>{&gt; usethis::git_default_branch_rename(to = "gh-pages")} ✔ Setting active project to '/Users/leocollado/Dropbox/Mac/Desktop/biostat776-intro-Leonardo-ColladoTorres' ℹ Local branch 'devel' appears to play the role of the default branch. ✔ Moving local 'devel' branch to 'gh-pages'. • Be sure to update files that refer to the default branch by name.   Consider searching within your project for 'devel'.</code></p>
+</section>
+<section id="link-r-to-github" class="level3">
+<h3 class="anchored" data-anchor-id="link-r-to-github">4. Link R to GitHub</h3>
+<p>We will need to provide R the information to act on your behalf when doing things for you on GitHub. We will need to follow the instructions from <code>usethis::gh_token_help()</code> for this. This is a function from the authors of <a href="https://happygitwithr.com/" class="uri">https://happygitwithr.com/</a> that guides you through the full process.</p>
+<p>For most of you (aka anyone on macOS or winOS and not on Linux), you will use two functions:</p>
+<ol type="1">
+<li><code>usethis::create_github_token()</code> will help you create a personal access token (PAT) for GitHub. Think of it as an alternative version to your GitHub password that we can use from R.</li>
+<li><code>gitcreds::gitcreds_set()</code> will allow you to save your PAT in a way that R will be able to access it again in the future. This function only works on macOS and winOS, but not on Linux.</li>
+</ol>
+<p>If you are a Linux user, you’ll have to save your GitHub PAT on your <code>~/.Renviron</code> file using <code>usethis::edit_r_environ()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## We will next link R to GitHub so R can act on your behalf. We will create a </span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub Personal Access Token (PAT) so R can say that it's acting on your behalf.</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="do">## This function guides us through the full process:</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">gh_token_help</span>()</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="do">## The above command will suggest that you read more at</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="do">## https://usethis.r-lib.org/articles/articles/git-credentials.html</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="do">## which contains the latest recommendations by the usethis authors for</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="do">## configuring your R to GitHub connection.</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="do">## Type your GitHub token, not your password! Otherwise you might run into this</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="do">## problem: https://github.com/r-lib/usethis/issues/1347</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="do">## In some situations, gitcreds::gitcreds_set() might not work. For example,</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="do">## gitcreds::gitcreds_set() is not supported on Linux as discussed at</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="do">## https://github.com/r-lib/gitcreds/issues/29. In these situations,</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="do">## you have to rely on the old workflow of editing your</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="do">## .Renviron file with contents like (note the empty line at the end!):</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="co"># GITHUB_PAT=YOUR_40_CHARACTERS_TOKEN</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>()</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="do">## Then re-start your R session.</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>rstudioapi<span class="sc">::</span><span class="fu">restartSession</span>()</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="do">## Editing the .Renviron is strongly discouraged now since it stores as</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="do">## simple text your GitHub personal access token (PAT) instead of the</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="do">## more secure approach provided by gitcreds.</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="do">## Now run use_github()</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="create-hub-repo-and-link-your-rstudio-project-to-it" class="level3">
+<h3 class="anchored" data-anchor-id="create-hub-repo-and-link-your-rstudio-project-to-it">5. Create Hub repo and link your RStudio project to it</h3>
+<p>Next, we can can link our local Git repository to GitHub, which is a service that hosts Git repositories. We will do this through R via the <code>usethis::use_github()</code> function. Since we configured R in step 4 to act for us when interacting with GitHub, we can now use this function on our RStudio project that we made for our website.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Next we continue by connecting your local git repository to</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub. For other scenarios, you might want to use the `organisation`</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="do">## and `private` arguments</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">args</span>(usethis<span class="sc">::</span>use_github)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Now run use_github()</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Following the prompts, you will end up with a GitHub repository that is <code>https://github.com/&lt;YourGithubUsername&gt;/&lt;YourGithubUsername&gt;.github.io</code> (or alternatively <code>https://github.com/&lt;YourGithubUsername&gt;/biostat776-intro-&lt;firstname&gt;-&lt;lastname&gt;</code>).</p>
 <p>For example, you can find an example that I created for myself at</p>
 <ul>
-<li>github repo: <a href="https://github.com/stephaniehicks/biostat776-intro-stephanie-hicks" class="uri">https://github.com/stephaniehicks/biostat776-intro-stephanie-hicks</a></li>
+<li>github repo: <a href="https://github.com/lcolladotor/biostat776-intro-Leonardo-ColladoTorres" class="uri">https://github.com/lcolladotor/biostat776-intro-Leonardo-ColladoTorres</a></li>
 </ul>
 </section>
 <section id="build-a-website-using-r-markdown" class="level3">
-<h3 class="anchored" data-anchor-id="build-a-website-using-r-markdown">2. Build a website using R Markdown</h3>
-<p>Using one of the many ways we discussed in class (e.g.&nbsp;a <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html">simple R Markdown website</a>, <a href="https://bookdown.org/yihui/blogdown/">blogdown</a>, <a href="https://rstudio.github.io/distill/website.html">distill</a>, etc), create a new project in RStudio with the appropriate files. For example, you might include the following information:</p>
+<h3 class="anchored" data-anchor-id="build-a-website-using-r-markdown">6. Build a website using R Markdown</h3>
+<p>Using one of the many ways we discussed in class (e.g.&nbsp;a <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html">simple R Markdown website</a>, <a href="https://bookdown.org/yihui/blogdown/">blogdown</a>, <a href="https://rstudio.github.io/distill/website.html">distill</a>, etc), create a new project in RStudio with the appropriate files. We highly recommend that you use <a href="https://github.com/seankross/postcards">postcards</a> which includes easy to use R Markdown templates.</p>
+<p>On your files, you might include the following information:</p>
 <ul>
 <li><p>Write a short summary introducing yourself. Structure the webpage with headings, subheadings, etc. Talk a bit about yourself, your background, training, research interests. Let me/us know what kind of statistics, programming, data analysis experience you already have. I am also curious to know what you most hope to learn in this course.</p></li>
 <li><p>Five fun facts about yourself</p></li>
 <li><p>A web page linking to something you think is really cool/interesting/inspiring/etc. You could also describe briefly what it is and why you like it.</p></li>
 </ul>
+<p>Overall, your website should ideally say something about you, your interests, your projects, and how to contact you. Here are some examples with their source code:</p>
+<ul>
+<li><p><a href="https://amy-peterson.github.io/" class="uri">https://amy-peterson.github.io/</a> + <a href="https://github.com/amy-peterson/amy-peterson.github.com" class="uri">https://github.com/amy-peterson/amy-peterson.github.com</a></p></li>
+<li><p><a href="http://jtleek.com/" class="uri">http://jtleek.com/</a> + <a href="https://github.com/jtleek/jtleek.github.io" class="uri">https://github.com/jtleek/jtleek.github.io</a></p></li>
+<li><p><a href="http://aejaffe.com/" class="uri">http://aejaffe.com/</a> + <a href="https://github.com/andrewejaffe/andrewejaffe.github.io" class="uri">https://github.com/andrewejaffe/andrewejaffe.github.io</a></p></li>
+<li><p><a href="https://hadley.nz/" class="uri">https://hadley.nz/</a> + <a href="https://github.com/hadley/hadley.github.com" class="uri">https://github.com/hadley/hadley.github.com</a></p></li>
+<li><p><a href="https://emarquezz.github.io/" class="uri">https://emarquezz.github.io/</a> + <a href="https://github.com/emarquezz/emarquezz.github.io" class="uri">https://github.com/emarquezz/emarquezz.github.io</a></p></li>
+<li><p><a href="https://bpardo99.github.io/" class="uri">https://bpardo99.github.io/</a> + <a href="https://github.com/bpardo99/bpardo99.github.io" class="uri">https://github.com/bpardo99/bpardo99.github.io</a></p></li>
+<li><p><a href="https://daianna21.github.io/" class="uri">https://daianna21.github.io/</a> + <a href="https://github.com/daianna21/daianna21.github.io" class="uri">https://github.com/daianna21/daianna21.github.io</a></p></li>
+<li><p><a href="https://reneegf.github.io/" class="uri">https://reneegf.github.io/</a> + <a href="https://github.com/reneegf/reneegf.github.io" class="uri">https://github.com/reneegf/reneegf.github.io</a></p></li>
+<li><p><a href="https://cfausto.github.io/" class="uri">https://cfausto.github.io/</a> + <a href="https://github.com/cfausto/cfausto.github.io/" class="uri">https://github.com/cfausto/cfausto.github.io/</a></p></li>
+<li><p><a href="https://davidgonilski.github.io/" class="uri">https://davidgonilski.github.io/</a> + <a href="https://github.com/davidgonilski/davidgonilski.github.io" class="uri">https://github.com/davidgonilski/davidgonilski.github.io</a></p></li>
+</ul>
 <p>If you want, feel free to get creative and include other things. You can play with RMarkdown if you wish to, e.g., you can try to include some table or a video, etc.</p>
+<p>With <a href="https://github.com/seankross/postcards">postcards</a>, explore the five templates at https://github.com/seankross/postcards and then create the files using one of the following five options:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"jolla"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"jolla-blue"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"trestles"</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"onofre"</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"solana"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>I chose this one for example: <code>postcards::create_postcard(template = "trestles")</code>. This created two files for me: <code>index.Rmd</code> and <code>frank.jpg</code>.</p>
 </section>
-<section id="include-a-readme.md-file" class="level3">
-<h3 class="anchored" data-anchor-id="include-a-readme.md-file">3. Include a <code>README.md</code> file</h3>
-<p>Your project repository should include a <code>README.md</code> file (if it was not included already).</p>
-<p>Edit the repository <code>README.md</code> file. Typically it will only contain the name of your repository with a <code>#</code> sign in front. The <code>#</code> represents a level 1 heading in Markdown. Change the headline and call it “Introducing myself” (or something like that). Underneath write something like “This website contains a short introduction of <em>Your Name</em>.”</p>
-<p>Make sure the 2 files (README.md and especially <code>index.Rmd</code> / <code>index.html</code>) look the way you want. Make changes until everything works.</p>
+<section id="render-your-website" class="level3">
+<h3 class="anchored" data-anchor-id="render-your-website">7. Render your website</h3>
+<p>Render your R Markdown website. That is, create an <code>index.html</code> file. If you are using <a href="https://github.com/seankross/postcards">postcards</a>, simply click the <code>Knit</code> button on RStudio. This uses the information from <code>index.Rmd</code> to create the <code>index.html</code> file.</p>
 </section>
 <section id="deploy-your-website" class="level3">
-<h3 class="anchored" data-anchor-id="deploy-your-website">4. Deploy your website</h3>
-<p>Depending on how you want to deploy your website, the following may or may not be relevant to you. In general, you want to make sure you have initialized your project to use <code>git</code> (i.e.&nbsp;you can type <code>git init</code> to initialize the repository to use git. Add and commit your changes. Push your changes and deploy your website.</p>
-<p>Following steps 2-4, here is my example website:</p>
+<h3 class="anchored" data-anchor-id="deploy-your-website">8. Deploy your website</h3>
+<p>Depending on how you want to deploy your website, the following may or may not be relevant to you.</p>
+<p>With <a href="https://github.com/seankross/postcards">postcards</a>, we will version control with Git the 3 files we made: <code>index.Rmd</code>, <code>index.html</code>, and <code>frank.jpg</code> (or whichever image it was for you). We can do this with the RStudio <code>Git</code> panel where we will click on <code>Commit</code>, then select all 3 files so we can <code>Add</code> them to <code>Git</code>, then type a message for our <code>commit</code>. I typed “Initial postcards website” in my case as you can see at <a href="https://github.com/lcolladotor/biostat776-intro-Leonardo-ColladoTorres/commit/1c33daf8352795c22197b972603e6e7d7edb212c" class="uri">https://github.com/lcolladotor/biostat776-intro-Leonardo-ColladoTorres/commit/1c33daf8352795c22197b972603e6e7d7edb212c</a>. Then click on <code>Push</code> to upload these files to GitHub.</p>
+<p>A few seconds / 1-2 minutes later, your website should be visible to the public. Mine is available at <a href="https://lcolladotor.github.io/biostat776-intro-Leonardo-ColladoTorres/" class="uri">https://lcolladotor.github.io/biostat776-intro-Leonardo-ColladoTorres/</a>. If your RStudio project name is</p>
 <ul>
-<li>website: <a href="https://www.stephaniehicks.com/biostat776-intro-stephanie-hicks" class="uri">https://www.stephaniehicks.com/biostat776-intro-stephanie-hicks</a></li>
+<li><p><code>&lt;YourGitHubUsername&gt;.github.io</code> then your website will be available at <code>https://&lt;YourGithubUsername&gt;.github.io</code>.</p></li>
+<li><p><code>biostat776-&lt;FirstName&gt;-&lt;LastName&gt;</code> then your website will be available at <code>https://&lt;YourGithubUsername&gt;.github.io/biostat776-&lt;FirstName&gt;-&lt;LastName&gt;</code>.</p></li>
+</ul>
+</section>
+<section id="refine-your-website" class="level3">
+<h3 class="anchored" data-anchor-id="refine-your-website">9. Refine your website</h3>
+<p>Now that you have a website, feel free to edit your <code>index.Rmd</code> file as well as to change your image (either save it as <code>frank.jpg</code> or save a new image but also update the corresponding line on your <code>index.Rmd</code>). Remember to use <code>Knit</code> on RStudio to update the <code>index.html</code> file then use the <code>Git</code> panel to select the files you edited prior to making a <code>git commit</code> to version control the changes. Finally, use <code>git push</code> to upload the new version of your files to GitHub.</p>
+<p>You might also want to use inline R code with <code>fontawesome::fa()</code> like at <a href="https://github.com/emarquezz/emarquezz.github.io/blob/c49eae75d53efa623e5d3bbbb29d77a3f1678a1c/index.Rmd#L9" class="uri">https://github.com/emarquezz/emarquezz.github.io/blob/c49eae75d53efa623e5d3bbbb29d77a3f1678a1c/index.Rmd#L9</a> or and emojis like at <a href="https://github.com/emarquezz/emarquezz.github.io/blob/c49eae75d53efa623e5d3bbbb29d77a3f1678a1c/index.Rmd#L24" class="uri">https://github.com/emarquezz/emarquezz.github.io/blob/c49eae75d53efa623e5d3bbbb29d77a3f1678a1c/index.Rmd#L24</a>. Check all previous examples I linked to, though these ones have some more advanced features:</p>
+<ul>
+<li><p><a href="https://emarquezz.github.io/" class="uri">https://emarquezz.github.io/</a> + <a href="https://github.com/emarquezz/emarquezz.github.io" class="uri">https://github.com/emarquezz/emarquezz.github.io</a></p></li>
+<li><p><a href="https://cfausto.github.io/" class="uri">https://cfausto.github.io/</a> + <a href="https://github.com/cfausto/cfausto.github.io/" class="uri">https://github.com/cfausto/cfausto.github.io/</a></p></li>
+<li><p><a href="https://davidgonilski.github.io/" class="uri">https://davidgonilski.github.io/</a> + <a href="https://github.com/davidgonilski/davidgonilski.github.io" class="uri">https://github.com/davidgonilski/davidgonilski.github.io</a></p></li>
 </ul>
 </section>
 <section id="share-your-website" class="level3">
-<h3 class="anchored" data-anchor-id="share-your-website">5. Share your website</h3>
+<h3 class="anchored" data-anchor-id="share-your-website">10. Share your website</h3>
 <ul>
 <li>Go to the Discussion Board in CoursePlus and write a short post with a link (URL) to your website (and URL to the corresponding GitHub repository) that you created.</li>
 <li>As you read the introductions from other folks in the class, feel free to comment/reply using Discussion board.</li>
 </ul>
-<p>In class on Sept 8, I will show as many websites as I can from Courseplus!</p>
+<p>In class on Sept 12, I will show as many websites as I can from Courseplus!</p>
 </section>
 </section>
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
@@ -362,8 +527,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
- tz       America/New_York
- date     2023-08-17
+ tz       America/Mexico_City
+ date     2023-08-28
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
