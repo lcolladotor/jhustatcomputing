@@ -199,7 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#create-a-local-git-repo-for-your-rstudio-project" id="toc-create-a-local-git-repo-for-your-rstudio-project" class="nav-link" data-scroll-target="#create-a-local-git-repo-for-your-rstudio-project">2. Create a local Git repo for your RStudio project</a></li>
   <li><a href="#use-the-gh-pages-branch" id="toc-use-the-gh-pages-branch" class="nav-link" data-scroll-target="#use-the-gh-pages-branch">3. Use the <code>gh-pages</code> branch</a></li>
   <li><a href="#link-r-to-github" id="toc-link-r-to-github" class="nav-link" data-scroll-target="#link-r-to-github">4. Link R to GitHub</a></li>
-  <li><a href="#create-hub-repo-and-link-your-rstudio-project-to-it" id="toc-create-hub-repo-and-link-your-rstudio-project-to-it" class="nav-link" data-scroll-target="#create-hub-repo-and-link-your-rstudio-project-to-it">5. Create Hub repo and link your RStudio project to it</a></li>
+  <li><a href="#create-github-repo-and-link-your-rstudio-project-to-it" id="toc-create-github-repo-and-link-your-rstudio-project-to-it" class="nav-link" data-scroll-target="#create-github-repo-and-link-your-rstudio-project-to-it">5. Create GitHub repo and link your RStudio project to it</a></li>
   <li><a href="#build-a-website-using-r-markdown" id="toc-build-a-website-using-r-markdown" class="nav-link" data-scroll-target="#build-a-website-using-r-markdown">6. Build a website using R Markdown</a></li>
   <li><a href="#render-your-website" id="toc-render-your-website" class="nav-link" data-scroll-target="#render-your-website">7. Render your website</a></li>
   <li><a href="#deploy-your-website" id="toc-deploy-your-website" class="nav-link" data-scroll-target="#deploy-your-website">8. Deploy your website</a></li>
@@ -428,14 +428,11 @@ Selection: 3</code></pre>
 <span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>rstudioapi<span class="sc">::</span><span class="fu">restartSession</span>()</span>
 <span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="do">## Editing the .Renviron is strongly discouraged now since it stores as</span></span>
 <span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="do">## simple text your GitHub personal access token (PAT) instead of the</span></span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="do">## more secure approach provided by gitcreds.</span></span>
-<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a><span class="do">## Now run use_github()</span></span>
-<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="do">## more secure approach provided by gitcreds.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="create-hub-repo-and-link-your-rstudio-project-to-it" class="level3">
-<h3 class="anchored" data-anchor-id="create-hub-repo-and-link-your-rstudio-project-to-it">5. Create Hub repo and link your RStudio project to it</h3>
+<section id="create-github-repo-and-link-your-rstudio-project-to-it" class="level3">
+<h3 class="anchored" data-anchor-id="create-github-repo-and-link-your-rstudio-project-to-it">5. Create GitHub repo and link your RStudio project to it</h3>
 <p>Next, we can can link our local Git repository to GitHub, which is a service that hosts Git repositories. We will do this through R via the <code>usethis::use_github()</code> function. Since we configured R in step 4 to act for us when interacting with GitHub, we can now use this function on our RStudio project that we made for our website.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Next we continue by connecting your local git repository to</span></span>
