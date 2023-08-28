@@ -119,7 +119,8 @@ usethis::use_git() ## Choose the option to make the commit, then to restart RStu
 
 Here's the output and selections I made in my case. Note that the prompts and options will change randomly every time you run this function, so you do need to read them carefully!
 
-```{> usethis::use_git()}
+```{}
+usethis::use_git()
 ✔ Setting active project to '/Users/leocollado/Dropbox/Mac/Desktop/biostat776-intro-Leonardo-ColladoTorres'
 ✔ Initialising Git repo
 ✔ Adding '.Rhistory', '.Rdata', '.httr-oauth', '.DS_Store', '.quarto' to '.gitignore'
@@ -162,7 +163,8 @@ usethis::git_default_branch_rename(to = "gh-pages")
 
 This was the output for me:
 
-```{> usethis::git_default_branch_rename(to = "gh-pages")}
+```{}
+usethis::git_default_branch_rename(to = "gh-pages")
 ✔ Setting active project to '/Users/leocollado/Dropbox/Mac/Desktop/biostat776-intro-Leonardo-ColladoTorres'
 ℹ Local branch 'devel' appears to play the role of the default branch.
 ✔ Moving local 'devel' branch to 'gh-pages'.
