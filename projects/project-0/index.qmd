@@ -218,7 +218,7 @@ rstudioapi::restartSession()
 ## more secure approach provided by gitcreds.
 ```
 
-### 5. Create Hub repo and link your RStudio project to it
+### 5. Create GitHub repo and link your RStudio project to it
 
 Next, we can can link our local Git repository to GitHub, which is a service that hosts Git repositories. We will do this through R via the `usethis::use_github()` function. Since we configured R in step 4 to act for us when interacting with GitHub, we can now use this function on our RStudio project that we made for our website.
 
