@@ -500,7 +500,7 @@ Questions
 <section id="installing-r-and-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="installing-r-and-rstudio">Installing R and RStudio</h3>
 <ul>
-<li>If you have not already, <a href="http://cran.r-project.org">install R first</a>. If you already have R installed, make sure it is a fairly recent version, version 4.0 or newer. If yours is older, I suggest you update (install a new R version).</li>
+<li>If you have not already, <a href="http://cran.r-project.org">install R first</a>. If you already have R installed, make sure it is a fairly recent version, version 4.3.1 or newer. If yours is older that version 4.2.0, I suggest you update (install a new R version).</li>
 <li>Once you have R installed, install the free version of <a href="https://www.rstudio.com/products/rstudio/download/">RStudio Desktop</a>. Again, make sure it’s a recent version.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -520,7 +520,7 @@ Tip
 </div>
 </div>
 <p>If things don’t work, ask for help in the Courseplus discussion board.</p>
-<p>I personally only have experience with Mac, but everything should work on all the standard operating systems (Windows, Mac, and even Linux).</p>
+<p>I have both a macOS and a winOS computer, and have used Linux (Ubuntu) in the past too, but I might be more limited in how much I can help you on Linux.</p>
 </section>
 <section id="rstudio-default-options" class="level3">
 <h3 class="anchored" data-anchor-id="rstudio-default-options">RStudio default options</h3>
@@ -553,7 +553,14 @@ Tip
 <p>The “official” place for packages is the <a href="https://cran.r-project.org/web/packages/available_packages_by_name.html">CRAN website</a>. If you are interested in packages on a specific topic, the <a href="http://cran.r-project.org/web/views/">CRAN task views</a> provide curated descriptions of packages sorted by topic.</p>
 <p>To install an R package from CRAN, one can simply call the <code>install.packages()</code> function and pass the name of the package as an argument. For example, to install the <code>ggplot2</code> package from CRAN: open RStudio,go to the R prompt (the <code>&gt;</code> symbol) in the lower-left corner and type</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Below is an example for installing more than one package at a time:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Install R packages for project 0</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="st">"postcards"</span>, <span class="st">"usethis"</span>, <span class="st">"gitcreds"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>and the appropriate version of the package will be installed.</p>
 <p>Often, a package needs other packages to work (called dependencies), and they are installed automatically. It usually does not matter if you use a single or double quotation mark around the name of the package.</p>
@@ -672,8 +679,8 @@ Tip
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
- tz       America/New_York
- date     2023-08-18
+ tz       America/Mexico_City
+ date     2023-08-28
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
