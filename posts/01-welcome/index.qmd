@@ -51,7 +51,7 @@ The course is designed for students in the Johns Hopkins Biostatistics Masters a
 
 #### 4. You know the **basics** of reproducible research
 
--   Difference between replication and reproducible
+-   Difference between replication and reproducible. If not, check this excellent paper by Prasad Patil et al.: <https://doi.org/10.1038/s41562-019-0629-z>.
 -   Know how to cite references (e.g. like in a publication)
 -   Somewhat familiar with tools that enable reproducible research (In complete transparency, we will briefly cover these topics in the first week, but depending on your comfort level with them, this may impact whether you choose to continue with the course).
 
