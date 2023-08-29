@@ -163,6 +163,8 @@ As a quick exercise:
 
 5.  Paste the output into <https://github.com/lcolladotor/jhustatcomputing2023/issues/2> and click on the "comment" green button.
 
+Here is an actual example where I used `reprex` to ask a question: <https://github.com/Bioconductor/BiocFileCache/issues/48>.
+
 For more details on `reprex`, check this video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8bBo3B7N8YQ?si=HQRqLn--9KTNKDcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
