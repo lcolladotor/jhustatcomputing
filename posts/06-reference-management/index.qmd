@@ -230,6 +230,10 @@ For instance, I use a format of lower-case first author last name followed by 4 
 
 In your R Markdown document, you can then cite the reference by adding the key, such as `...in the paper by Hicks et al. [@hicks2022]...`.
 
+# SciWheel
+
+I use [SciWheel](https://sciwheel.com/) for managing citations and writing papers on Google Docs as documented at <https://lcolladotor.github.io/bioc_team_ds/writing-papers.html>. I mention it here because you can import $BibTeX$ files (`.bib`) on SciWheel, which can make your life easier if you want to import R package citations that way.
+
 # Post-lecture materials
 
 ### Practice
@@ -256,22 +260,6 @@ What do they do? How might they be helpful to you in terms of reference manageme
 
 4.  Practice using a different CSL file to change the citation style.
 :::
-
-### Additional Resources
-
-::: callout-tip
--   Add here.
-:::
-
-## rtistry
-
-```{r}
-#| label: flametree
-#| echo: false
-#| fig-cap-location: "top"
-```
-
-\[Add here.\]
 
 # R session information
 
