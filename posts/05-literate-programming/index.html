@@ -116,6 +116,8 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -379,7 +381,7 @@ Learning objectives
 </section>
 <section id="sweave" class="level3">
 <h3 class="anchored" data-anchor-id="sweave">Sweave</h3>
-<p>One of the original literate programming systems in R that was designed to do this was called Sweave. Sweave enables users to combine R code with a documentation program called LaTeX.</p>
+<p>One of the original literate programming systems in R that was designed to do this was called Sweave. Sweave enables users to combine R code with a documentation program called <span class="math inline">\(LaTeX\)</span>.</p>
 <p><strong>Sweave files ends a <code>.Rnw</code></strong> and have R code weaved through the document:</p>
 <pre><code>&lt;&lt;plot1, height=4, width=5, eval=FALSE&gt;&gt;=
 data(airquality)
@@ -389,7 +391,7 @@ plot(airquality$Ozone ~ airquality$Wind)
 <p>It was originally developed by Fritz Leisch, who is a core member of R, and the code base is still maintained by R Core. The Sweave system comes with any installation of R.</p>
 <p>There are many limitations to the original Sweave system.</p>
 <ul>
-<li>One of the limitations is that it is <strong>focused primarily on LaTeX</strong>, which is not a documentation language that many people are familiar with.</li>
+<li>One of the limitations is that it is <strong>focused primarily on</strong> <span class="math inline">\(LaTeX\)</span>, which is not a documentation language that many people are familiar with.</li>
 <li>Therefore, it <strong>can be difficult to learn this type of markup language</strong> if you’re not already in a field that uses it regularly.</li>
 <li>Sweave also <strong>lacks a lot of features that people find useful</strong> like caching, and multiple plots per page and mixing programming languages.</li>
 </ul>
@@ -460,6 +462,7 @@ Questions
 <li><a href="https://CRAN.R-project.org/package=markdown"><code>markdown</code></a> (<strong>R package</strong>). <code>markdown</code> is an R package which converts <code>.md</code> files into HTML. It is no longer recommended for use has been surpassed by <a href="https://CRAN.R-project.org/package=rmarkdown"><code>rmarkdown</code></a> (discussed below).</li>
 <li>R Markdown (<strong>markup language</strong>). R Markdown is an extension of the markdown syntax. R Markdown files are plain text files that typically have the file extension <code>.Rmd</code>.</li>
 <li><a href="https://CRAN.R-project.org/package=rmarkdown"><code>rmarkdown</code></a> (<strong>R package</strong>). The R package <code>rmarkdown</code> is a library that uses pandoc to process and convert <code>.Rmd</code> files into a number of different formats. This core function is <code>rmarkdown::render()</code>. <strong>Note</strong>: this package only deals with the markdown language. If the input file is e.g.&nbsp;<code>.Rhtml</code> or <code>.Rnw</code>, then you need to use <code>knitr</code> prior to calling pandoc (see below).</li>
+<li><a href="https://quarto.org/">quarto</a>: Similar to <code>rmarkdown</code> but can be used outside R. It is not an R package! Input files have the <code>.qmd</code> file extension.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -590,7 +593,7 @@ Tip
 <div class="callout-body-container callout-body">
 <p>For example, my personal website was built in blogdown:</p>
 <ul>
-<li><a href="https://www.stephaniehicks.com" class="uri">https://www.stephaniehicks.com</a></li>
+<li><a href="http://lcolladotor.github.io/" class="uri">http://lcolladotor.github.io/</a></li>
 </ul>
 <p>Other really great examples can be found here:</p>
 <ul>
@@ -635,6 +638,10 @@ Tip
 <ul>
 <li><a href="https://rdpeng.github.io/Biostat776" class="uri">https://rdpeng.github.io/Biostat776</a></li>
 </ul>
+<p>My team documentation website is also built with <code>bookdown</code>:</p>
+<ul>
+<li><a href="https://lcolladotor.github.io/bioc_team_ds/" class="uri">https://lcolladotor.github.io/bioc_team_ds/</a></li>
+</ul>
 <p>Another example is the <a href="https://jhudatascience.org/tidyversecourse/">Tidyverse Skills for Data Science</a> book that the JHU Data Science Lab wrote. The github repo that contains all the <code>.Rmd</code> files can be found <a href="https://github.com/jhudsl/tidyversecourse">here</a>.</p>
 <ul>
 <li><a href="https://jhudatascience.org/tidyversecourse" class="uri">https://jhudatascience.org/tidyversecourse</a></li>
@@ -644,7 +651,7 @@ Tip
 </div>
 <p><strong>Note</strong>: Even though the word “book” is in “bookdown”, this package is not only for books. It really can be anything that consists of multiple <code>.Rmd</code> documents meant to be read in a linear sequence such as course dissertation/thesis, handouts, study notes, a software manual, a thesis, or even a diary.</p>
 <ul>
-<li>https://bookdown.org/yihui/rmarkdown/basics-examples.html#examples-books</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/basics-examples.html#examples-books" class="uri">https://bookdown.org/yihui/rmarkdown/basics-examples.html#examples-books</a></li>
 </ul>
 </section>
 <section id="distill" class="level3 page-columns page-full">
@@ -657,13 +664,13 @@ Tip
 <p>Distill articles include:</p>
 <ul>
 <li>Reader-friendly typography that adapts well to mobile devices.</li>
-<li>Features essential to technical writing like LaTeX math, citations, and footnotes.</li>
+<li>Features essential to technical writing like <span class="math inline">\(LaTeX\)</span> math, citations, and footnotes.</li>
 <li>Flexible figure layout options (e.g.&nbsp;displaying figures at a larger width than the article text).</li>
 <li>Attractively rendered tables with optional support for pagination.</li>
 <li>Support for a wide variety of diagramming tools for illustrating concepts. The ability to incorporate JavaScript and D3-based interactive visualizations.</li>
 <li>A variety of ways to publish articles, including support for publishing sets of articles as a Distill website or as a Distill blog.</li>
 </ul>
-<p>The course website from last year was built in Distill for R Markdown:</p>
+<p>The course website from 2021 was built in Distill for R Markdown:</p>
 <ul>
 <li>Website: <a href="https://stephaniehicks.com/jhustatcomputing2021" class="uri">https://stephaniehicks.com/jhustatcomputing2021</a></li>
 <li>Github: <a href="https://github.com/stephaniehicks/jhustatcomputing2021" class="uri">https://github.com/stephaniehicks/jhustatcomputing2021</a></li>
@@ -711,7 +718,7 @@ Ctrl + Shift + K on Windows</code></pre>
   
 }</code></pre>
 <p>Pressing <code>Tab</code> again will jump through the placeholders for you to edit it. So you can first edit the name of the function, then the variables and finally the code inside the function (try by yourself!).</p>
-<p>There are many code snippets by default in RStudio. Here are the code snippets I use most often:</p>
+<p>There are many code snippets by default in RStudio. Here are the code snippets you might want to use:</p>
 <ul>
 <li><code>lib</code> to call <code>library()</code></li>
 </ul>
@@ -822,6 +829,32 @@ for (i in 1:10) {
   }
   print(i)
 }</code></pre>
+<p>I also like to use the <a href="https://github.com/r-lib/styler"><code>styler</code>: Non-invasive pretty printing of R code</a> package to automatically style my R code. I also use <a href="https://lcolladotor.github.io/biocthis/reference/bioc_style.html" class="uri">https://lcolladotor.github.io/biocthis/reference/bioc_style.html</a> to style my code in a way that it is compatible with Bioconductor’s code standards.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install styler for automatically styling scripts</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"styler"</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Install biocthis</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"BiocManager"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"BiocManager"</span>)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">"biocthis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Example code for styling all files that end with .qmd</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">readLines</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"scripts"</span>, <span class="st">"auto_style.R"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>styler::style_dir(     here::here(),     transformers = biocthis::bioc_style(),     filetype = "qmd" )</code></pre>
+</div>
+</div>
+<p>You might want to edit your <code>~/.Rprofile with `usethis::edit_r_profile()`</code> and add this line to it:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="do">## For the styler addin</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Affects the output of: styler:::get_addins_style_transformer_name()</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="st">"styler.addins_style_transformer"</span> <span class="ot">=</span> <span class="st">"biocthis::bioc_style()"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For more information I have on my <code>~/.Rprofile</code> file check <a href="https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile" class="uri">https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile</a>.</p>
 </section>
 <section id="rstudio-addins" class="level3">
 <h3 class="anchored" data-anchor-id="rstudio-addins">RStudio addins</h3>
@@ -893,8 +926,8 @@ Tip
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
@@ -905,8 +938,8 @@ Tip
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
- tz       America/New_York
- date     2023-08-17
+ tz       America/Mexico_City
+ date     2023-08-29
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -916,12 +949,14 @@ Tip
  digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
  evaluate      0.21    2023-05-05 [1] CRAN (R 4.3.0)
  fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
+ here          1.0.1   2020-12-13 [1] CRAN (R 4.3.0)
  htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
  htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
  jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
  knitr         1.43    2023-05-25 [1] CRAN (R 4.3.0)
  rlang         1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
  rmarkdown     2.24    2023-08-14 [1] CRAN (R 4.3.1)
+ rprojroot     2.0.3   2022-04-02 [1] CRAN (R 4.3.0)
  rstudioapi    0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
  sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
  xfun          0.40    2023-08-09 [1] CRAN (R 4.3.0)
