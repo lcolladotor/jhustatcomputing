@@ -81,7 +81,7 @@ In order to use a system like this you need a documentational language, that's h
 
 ### Sweave
 
-One of the original literate programming systems in R that was designed to do this was called Sweave. Sweave enables users to combine R code with a documentation program called LaTeX.
+One of the original literate programming systems in R that was designed to do this was called Sweave. Sweave enables users to combine R code with a documentation program called $LaTeX$.
 
 **Sweave files ends a `.Rnw`** and have R code weaved through the document:
 
@@ -98,7 +98,7 @@ It was originally developed by Fritz Leisch, who is a core member of R, and the 
 
 There are many limitations to the original Sweave system.
 
--   One of the limitations is that it is **focused primarily on LaTeX**, which is not a documentation language that many people are familiar with.
+-   One of the limitations is that it is **focused primarily on** $LaTeX$, which is not a documentation language that many people are familiar with.
 -   Therefore, it **can be difficult to learn this type of markup language** if you're not already in a field that uses it regularly.
 -   Sweave also **lacks a lot of features that people find useful** like caching, and multiple plots per page and mixing programming languages.
 
@@ -152,6 +152,7 @@ Before we leave this section, I find that there is quite a bit of terminology to
 -   [`markdown`](https://CRAN.R-project.org/package=markdown) (**R package**). `markdown` is an R package which converts `.md` files into HTML. It is no longer recommended for use has been surpassed by [`rmarkdown`](https://CRAN.R-project.org/package=rmarkdown) (discussed below).
 -   R Markdown (**markup language**). R Markdown is an extension of the markdown syntax. R Markdown files are plain text files that typically have the file extension `.Rmd`.
 -   [`rmarkdown`](https://CRAN.R-project.org/package=rmarkdown) (**R package**). The R package `rmarkdown` is a library that uses pandoc to process and convert `.Rmd` files into a number of different formats. This core function is `rmarkdown::render()`. **Note**: this package only deals with the markdown language. If the input file is e.g. `.Rhtml` or `.Rnw`, then you need to use `knitr` prior to calling pandoc (see below).
+-   [quarto](https://quarto.org/): Similar to `rmarkdown` but can be used outside R. It is not an R package! Input files have the `.qmd` file extension.
 
 ::: callout-tip
 Check out the R Markdown Quick Tour for more:
@@ -260,7 +261,7 @@ The `blogdown` R package is built on top of R Markdown, supports multi-page HTML
 ::: callout-tip
 For example, my personal website was built in blogdown:
 
--   <https://www.stephaniehicks.com>
+-   <http://lcolladotor.github.io/>
 
 Other really great examples can be found here:
 
@@ -302,6 +303,10 @@ For example, the previous version of this course was built in bookdown:
 
 -   <https://rdpeng.github.io/Biostat776>
 
+My team documentation website is also built with `bookdown`:
+
+-   <https://lcolladotor.github.io/bioc_team_ds/>
+
 Another example is the [Tidyverse Skills for Data Science](https://jhudatascience.org/tidyversecourse/) book that the JHU Data Science Lab wrote. The github repo that contains all the `.Rmd` files can be found [here](https://github.com/jhudsl/tidyversecourse).
 
 -   <https://jhudatascience.org/tidyversecourse>
@@ -310,7 +315,7 @@ Another example is the [Tidyverse Skills for Data Science](https://jhudatascienc
 
 **Note**: Even though the word "book" is in "bookdown", this package is not only for books. It really can be anything that consists of multiple `.Rmd` documents meant to be read in a linear sequence such as course dissertation/thesis, handouts, study notes, a software manual, a thesis, or even a diary.
 
--   https://bookdown.org/yihui/rmarkdown/basics-examples.html#examples-books
+-   <https://bookdown.org/yihui/rmarkdown/basics-examples.html#examples-books>
 
 ### distill
 
@@ -323,13 +328,13 @@ Distill for R Markdown combines the technical authoring features of the [Distill
 Distill articles include:
 
 -   Reader-friendly typography that adapts well to mobile devices.
--   Features essential to technical writing like LaTeX math, citations, and footnotes.
+-   Features essential to technical writing like $LaTeX$ math, citations, and footnotes.
 -   Flexible figure layout options (e.g. displaying figures at a larger width than the article text).
 -   Attractively rendered tables with optional support for pagination.
 -   Support for a wide variety of diagramming tools for illustrating concepts. The ability to incorporate JavaScript and D3-based interactive visualizations.
 -   A variety of ways to publish articles, including support for publishing sets of articles as a Distill website or as a Distill blog.
 
-The course website from last year was built in Distill for R Markdown:
+The course website from 2021 was built in Distill for R Markdown:
 
 -   Website: <https://stephaniehicks.com/jhustatcomputing2021>
 -   Github: <https://github.com/stephaniehicks/jhustatcomputing2021>
@@ -396,7 +401,7 @@ name <- function(variables) {
 
 Pressing `Tab` again will jump through the placeholders for you to edit it. So you can first edit the name of the function, then the variables and finally the code inside the function (try by yourself!).
 
-There are many code snippets by default in RStudio. Here are the code snippets I use most often:
+There are many code snippets by default in RStudio. Here are the code snippets you might want to use:
 
 -   `lib` to call `library()`
 
@@ -538,6 +543,37 @@ for (i in 1:10) {
   print(i)
 }
 ```
+
+I also like to use the [`styler`: Non-invasive pretty printing of R code](https://github.com/r-lib/styler) package to automatically style my R code. I also use <https://lcolladotor.github.io/biocthis/reference/bioc_style.html> to style my code in a way that it is compatible with Bioconductor's code standards.
+
+```{r}
+#| eval: false
+## Install styler for automatically styling scripts
+install.packages("styler")
+
+## Install biocthis
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("biocthis")
+```
+
+```{r}
+## Example code for styling all files that end with .qmd
+cat(readLines(here::here("scripts", "auto_style.R")))
+```
+
+You might want to edit your `` ~/.Rprofile with `usethis::edit_r_profile()` `` and add this line to it:
+
+```{r}
+#| eval: false
+## For the styler addin
+# Affects the output of: styler:::get_addins_style_transformer_name()
+# https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183
+options("styler.addins_style_transformer" = "biocthis::bioc_style()")
+```
+
+For more information I have on my `~/.Rprofile` file check <https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile>.
 
 ### RStudio addins
 
