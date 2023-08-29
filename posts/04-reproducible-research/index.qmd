@@ -118,6 +118,8 @@ Other journals have specific policies to promote reproducibility in manuscripts 
 
 -   <https://jasa-acs.github.io/repro-guide>
 
+You might also want to check [A visual tool for defining reproducibility and replicability](https://doi.org/10.1038/s41562-019-0629-z) by Prasad Patil et al.
+
 ### Why does this matter?
 
 Here is an example. In 2012, a feature on the TV show 60 minutes looked at a major incident at Duke University where many results involving a promising cancer test were found to be not reproducible. This led to a number of studies and clinical trials having to be stopped, followed by an investigation which is still ongoing.
@@ -146,13 +148,19 @@ Here is an example. In 2012, a feature on the TV show 60 minutes looked at a maj
 
 ### Elements of computational reproducibility
 
-What do we need for computational reproducibility? There are a variety of ways to talk about this, but one basic definition that we hae come up with is that there are four things that are required to make results reproducible:
+What do we need for computational reproducibility? There are a variety of ways to talk about this, but one basic definition that people have come up with is that there are four things that are required to make results reproducible:
 
 1.  **Analytic data**. The data that were used for the analysis that was presented should be available for others to access. This is different from the *raw data* because very often in a data analysis the raw data are not all used for the analysis, but rather some subset is used. It may be interesting to see the raw data but impractical to actually have it. Analytic data is key to examining the data analysis.
 
+    1.  See <https://research.libd.org/spatialLIBD/reference/fetch_data.html> and <https://github.com/LieberInstitute/spatialDLPFC#processed-data> for an example of how we have shared analytic (processed) data.
+
 2.  **Analytic code**. The analytic code is the code that was applied to the analytic data to produce the key results. This may be preprocessing code, regression modeling code, or really any other code used to produce the results from the analytic data.
 
+    1.  You can share analytic code through GitHub and Zenodo. See <https://github.com/LieberInstitute/spatialDLPFC> and <https://zenodo.org/record/7925134> for example. Follow <https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content> in order to share your GitHub files through Zenodo and obtain a DOI (digital object identifier) that people can then cite. You could also use Figshare instead of Zenodo.
+
 3.  **Documentation**. Documentation of that code and the data is very important.
+
+    1.  See <https://github.com/LieberInstitute/template_project> for how we organize code in my team at LIBD.
 
 4.  **Distribution**. Finally, there needs to be some standard means of distribution, so all this data in the code is easily accessible.
 
@@ -184,7 +192,7 @@ The bottom line with all these different trends is that for every field "X", the
 
 One example of an area where reproducibility is important comes from research that I have conducted in the area of [machine learning in the life sciences](https://www.nature.com/articles/s41592-021-01256-7).
 
-In the above article, computational reproducibility is not throught of as a binary property, but rather it is on a sliding scale that reflects the time needed to reproduce. Published works fall somewhere on this scale, which is bookended by 'forever', for a completely irreproducible work, and 'zero', for a work where one can automatically repeat the entire analysis with a single keystroke.
+In the above article, computational reproducibility is not throuought of as a binary property, but rather it is on a sliding scale that reflects the time needed to reproduce. Published works fall somewhere on this scale, which is bookended by 'forever', for a completely irreproducible work, and 'zero', for a work where one can automatically repeat the entire analysis with a single keystroke.
 
 As in many cases it is difficult to impose a single standard that divides work into 'reproducible' and 'irreproducible'. Therefore, instead a menu is proposed of three standards with varying degrees of rigor for computational reproducibility:
 
@@ -198,7 +206,7 @@ As in many cases it is difficult to impose a single standard that divides work i
 
 The basic issue is when you read a description of a data analysis, such as in an article or a technical report, for the most part, what you get is the report and nothing else.
 
-Of course, everyone knows that behind the scenes **there's a lot that went into this article** and that is what I call the **data science pipeline**.
+Of course, everyone knows that behind the scenes **there's a lot that went into this article** and that is what Roger and Stephanie call the **data science pipeline**.
 
 ![The Data Science Pipeline](../../images/dspipeline.png)
 
@@ -242,6 +250,91 @@ Generally, the **toolbox for doing reproducible research is small**, although **
 
 -   One view of reproducibility is that it gives research consumers partial access to the raw pipeline elements.
 :::
+
+# Key R packages that we can use for promoting reproducibility
+
+Two key R packages that we can use to promote reproducibility of our R code are [`here`: A Simpler Way to Find Your Files](https://here.r-lib.org/) and [`sessioninfo`: R Session Information](https://sessioninfo.r-lib.org/).
+
+```{r}
+#| eval: false
+install.packages(c("here", "sessioninfo"))
+```
+
+## `here`
+
+`here` makes it easy to write code that you can share by avoiding *full file paths* and making it easier to use *relative* file paths. The file paths are made relative to your project home, which is automatically detected based on a few files. These can be:
+
+-   The directory where you have a `.git` directory. That is, the beginning of your `git` repository.
+
+-   The directory where you have an RStudio project file (`*.Rproj`). For RStudio projects with a `git` repository, this is typically the same directory.
+
+-   The directory where you have a `.here` file (very uncommon scenario).
+
+```{r}
+## This is my relative directory
+here::here()
+
+## I can now easily share code to access files from this project
+## such as access to the flight.csv file saved under the data
+## directory.
+here::here("data", "flights.csv")
+
+## This would not be easily shareable as you don't have
+## "/Users/leocollado/Dropbox/Code" on your computer
+full_path <- "/Users/leocollado/Dropbox/Code/jhustatcomputing2023/data/flights.csv"
+```
+
+## `sessioninfo`
+
+This R package is excellent for sharing all details about the R packages you are using for a particular script. I typically include these lines at the end of my scripts as you can see at <https://github.com/LieberInstitute/template_project/blob/3987e7f307611b2bcf657d1aa6930e76c4cc2b9a/code/01_read_data_to_r/01_read_data_to_r.R#L32-L39>:
+
+```{r}
+#| eval: false
+## Reproducibility information
+print("Reproducibility information:")
+Sys.time()
+proc.time()
+options(width = 120)
+sessioninfo::session_info()
+```
+
+Note that I made a *GitHub permalink* (*perma*nent *link*) above, which is another way we can communicate precisely with others. It's very useful to include GitHub permalinks when asking questions about code you or others have made public on GitHub. See <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet> for more details about how to create GitHub permalinks.
+
+Here is the actual output of those commands:
+
+```{r}
+## Reproducibility information
+print("Reproducibility information:")
+Sys.time()
+proc.time()
+options(width = 120)
+sessioninfo::session_info()
+```
+
+`sessioninfo::session_info()` has a first section that includes information about my R installation and other computer environment variables (like my operating system). The second section includes information about the R packages that I used, their version numbers, and where I installed them from.
+
+```{r}
+library("colorout") ## Load a package I installed from GitHub
+sessioninfo::session_info()
+```
+
+For packages that we installed from GitHub, it includes the specific `git` commit ID for the version we installed. This is super precise information that is very useful to have.
+
+Check <https://github.com/LieberInstitute/template_project/blob/main/code/01_read_data_to_r/01_read_data_to_r.R> for a full script example part of <https://github.com/LieberInstitute/template_project>.
+
+Check <https://github.com/Bioconductor/BiocFileCache/issues/48> for an example on how the output from `sessioninfo::session_info()` provided useful hints that allowed me and others to resolve a problem.
+
+In this video I talked about both `here` and `sessioninfo` as well as `R` and `RStudio`:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XTuJ8vGnzBU?si=wLWZe-LuSA_fKD-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
+
+`here` and `sessioninfo` are so useful that people have made a Python versions of these R packages.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-GdqCf0dFPU?si=d0-KKI5d0pghBs07" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
 
 # Post-lecture materials
 
