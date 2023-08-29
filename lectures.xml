@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing2023/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776) in Fall 2023</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Tue, 29 Aug 2023 14:26:38 GMT</lastBuildDate>
+<lastBuildDate>Tue, 29 Aug 2023 15:20:41 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -434,7 +434,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/01-welcome/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -928,7 +928,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/02-introduction-to-r-and-rstudio/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1209,7 +1209,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/03-introduction-to-gitgithub/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing2023/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -1335,6 +1335,7 @@ Summary
 <ul>
 <li><a href="https://jasa-acs.github.io/repro-guide" class="uri">https://jasa-acs.github.io/repro-guide</a></li>
 </ul>
+<p>You might also want to check <a href="https://doi.org/10.1038/s41562-019-0629-z">A visual tool for defining reproducibility and replicability</a> by Prasad Patil et al.</p>
 <section id="why-does-this-matter" class="level3">
 <h3 class="anchored" data-anchor-id="why-does-this-matter">Why does this matter?</h3>
 <p>Here is an example. In 2012, a feature on the TV show 60 minutes looked at a major incident at Duke University where many results involving a promising cancer test were found to be not reproducible. This led to a number of studies and clinical trials having to be stopped, followed by an investigation which is still ongoing.</p>
@@ -1356,11 +1357,20 @@ Summary
 </section>
 <section id="elements-of-computational-reproducibility" class="level3">
 <h3 class="anchored" data-anchor-id="elements-of-computational-reproducibility">Elements of computational reproducibility</h3>
-<p>What do we need for computational reproducibility? There are a variety of ways to talk about this, but one basic definition that we hae come up with is that there are four things that are required to make results reproducible:</p>
+<p>What do we need for computational reproducibility? There are a variety of ways to talk about this, but one basic definition that people have come up with is that there are four things that are required to make results reproducible:</p>
 <ol type="1">
-<li><p><strong>Analytic data</strong>. The data that were used for the analysis that was presented should be available for others to access. This is different from the <em>raw data</em> because very often in a data analysis the raw data are not all used for the analysis, but rather some subset is used. It may be interesting to see the raw data but impractical to actually have it. Analytic data is key to examining the data analysis.</p></li>
-<li><p><strong>Analytic code</strong>. The analytic code is the code that was applied to the analytic data to produce the key results. This may be preprocessing code, regression modeling code, or really any other code used to produce the results from the analytic data.</p></li>
-<li><p><strong>Documentation</strong>. Documentation of that code and the data is very important.</p></li>
+<li><p><strong>Analytic data</strong>. The data that were used for the analysis that was presented should be available for others to access. This is different from the <em>raw data</em> because very often in a data analysis the raw data are not all used for the analysis, but rather some subset is used. It may be interesting to see the raw data but impractical to actually have it. Analytic data is key to examining the data analysis.</p>
+<ol type="1">
+<li>See <a href="https://research.libd.org/spatialLIBD/reference/fetch_data.html" class="uri">https://research.libd.org/spatialLIBD/reference/fetch_data.html</a> and <a href="https://github.com/LieberInstitute/spatialDLPFC#processed-data" class="uri">https://github.com/LieberInstitute/spatialDLPFC#processed-data</a> for an example of how we have shared analytic (processed) data.</li>
+</ol></li>
+<li><p><strong>Analytic code</strong>. The analytic code is the code that was applied to the analytic data to produce the key results. This may be preprocessing code, regression modeling code, or really any other code used to produce the results from the analytic data.</p>
+<ol type="1">
+<li>You can share analytic code through GitHub and Zenodo. See <a href="https://github.com/LieberInstitute/spatialDLPFC" class="uri">https://github.com/LieberInstitute/spatialDLPFC</a> and <a href="https://zenodo.org/record/7925134" class="uri">https://zenodo.org/record/7925134</a> for example. Follow <a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content" class="uri">https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content</a> in order to share your GitHub files through Zenodo and obtain a DOI (digital object identifier) that people can then cite. You could also use Figshare instead of Zenodo.</li>
+</ol></li>
+<li><p><strong>Documentation</strong>. Documentation of that code and the data is very important.</p>
+<ol type="1">
+<li>See <a href="https://github.com/LieberInstitute/template_project" class="uri">https://github.com/LieberInstitute/template_project</a> for how we organize code in my team at LIBD.</li>
+</ol></li>
 <li><p><strong>Distribution</strong>. Finally, there needs to be some standard means of distribution, so all this data in the code is easily accessible.</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1393,7 +1403,7 @@ Summary
 <section id="example-machine-learning-in-the-life-sciences" class="level3">
 <h3 class="anchored" data-anchor-id="example-machine-learning-in-the-life-sciences">Example: machine learning in the life sciences</h3>
 <p>One example of an area where reproducibility is important comes from research that I have conducted in the area of <a href="https://www.nature.com/articles/s41592-021-01256-7">machine learning in the life sciences</a>.</p>
-<p>In the above article, computational reproducibility is not throught of as a binary property, but rather it is on a sliding scale that reflects the time needed to reproduce. Published works fall somewhere on this scale, which is bookended by ‘forever’, for a completely irreproducible work, and ‘zero’, for a work where one can automatically repeat the entire analysis with a single keystroke.</p>
+<p>In the above article, computational reproducibility is not throuought of as a binary property, but rather it is on a sliding scale that reflects the time needed to reproduce. Published works fall somewhere on this scale, which is bookended by ‘forever’, for a completely irreproducible work, and ‘zero’, for a work where one can automatically repeat the entire analysis with a single keystroke.</p>
 <p>As in many cases it is difficult to impose a single standard that divides work into ‘reproducible’ and ‘irreproducible’. Therefore, instead a menu is proposed of three standards with varying degrees of rigor for computational reproducibility:</p>
 <ol type="1">
 <li><p><strong>Bronze standard</strong>. The authors make the data, models and code used in the analysis publicly available. The bronze standard is the minimal standard for reproducibility. Without data, models and code, it is not possible to reproduce a work.</p></li>
@@ -1405,7 +1415,7 @@ Summary
 <section id="the-data-science-pipeline" class="level1">
 <h1>The Data Science Pipeline</h1>
 <p>The basic issue is when you read a description of a data analysis, such as in an article or a technical report, for the most part, what you get is the report and nothing else.</p>
-<p>Of course, everyone knows that behind the scenes <strong>there’s a lot that went into this article</strong> and that is what I call the <strong>data science pipeline</strong>.</p>
+<p>Of course, everyone knows that behind the scenes <strong>there’s a lot that went into this article</strong> and that is what Roger and Stephanie call the <strong>data science pipeline</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://lcolladotor.github.io/jhustatcomputing2023/images/dspipeline.png" class="img-fluid figure-img"></p>
@@ -1460,6 +1470,293 @@ Summary
 </div>
 </section>
 </section>
+<section id="key-r-packages-that-we-can-use-for-promoting-reproducibility" class="level1">
+<h1>Key R packages that we can use for promoting reproducibility</h1>
+<p>Two key R packages that we can use to promote reproducibility of our R code are <a href="https://here.r-lib.org/"><code>here</code>: A Simpler Way to Find Your Files</a> and <a href="https://sessioninfo.r-lib.org/"><code>sessioninfo</code>: R Session Information</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install.packages</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"here"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sessioninfo"</span>))</span></code></pre></div>
+</div>
+<section id="here" class="level2">
+<h2 class="anchored" data-anchor-id="here"><code>here</code></h2>
+<p><code>here</code> makes it easy to write code that you can share by avoiding <em>full file paths</em> and making it easier to use <em>relative</em> file paths. The file paths are made relative to your project home, which is automatically detected based on a few files. These can be:</p>
+<ul>
+<li><p>The directory where you have a <code>.git</code> directory. That is, the beginning of your <code>git</code> repository.</p></li>
+<li><p>The directory where you have an RStudio project file (<code>*.Rproj</code>). For RStudio projects with a <code>git</code> repository, this is typically the same directory.</p></li>
+<li><p>The directory where you have a <code>.here</code> file (very uncommon scenario).</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## This is my relative directory</span></span>
+<span id="cb2-2">here<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">here</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "/Users/leocollado/Dropbox/Code/jhustatcomputing2023"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## I can now easily share code to access files from this project</span></span>
+<span id="cb4-2"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## such as access to the flight.csv file saved under the data</span></span>
+<span id="cb4-3"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## directory.</span></span>
+<span id="cb4-4">here<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">here</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"data"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"flights.csv"</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "/Users/leocollado/Dropbox/Code/jhustatcomputing2023/data/flights.csv"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## This would not be easily shareable as you don't have</span></span>
+<span id="cb6-2"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## "/Users/leocollado/Dropbox/Code" on your computer</span></span>
+<span id="cb6-3">full_path <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/Users/leocollado/Dropbox/Code/jhustatcomputing2023/data/flights.csv"</span></span></code></pre></div>
+</div>
+</section>
+<section id="sessioninfo" class="level2">
+<h2 class="anchored" data-anchor-id="sessioninfo"><code>sessioninfo</code></h2>
+<p>This R package is excellent for sharing all details about the R packages you are using for a particular script. I typically include these lines at the end of my scripts as you can see at <a href="https://github.com/LieberInstitute/template_project/blob/3987e7f307611b2bcf657d1aa6930e76c4cc2b9a/code/01_read_data_to_r/01_read_data_to_r.R#L32-L39" class="uri">https://github.com/LieberInstitute/template_project/blob/3987e7f307611b2bcf657d1aa6930e76c4cc2b9a/code/01_read_data_to_r/01_read_data_to_r.R#L32-L39</a>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Reproducibility information</span></span>
+<span id="cb7-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Reproducibility information:"</span>)</span>
+<span id="cb7-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">Sys.time</span>()</span>
+<span id="cb7-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">proc.time</span>()</span>
+<span id="cb7-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">options</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">120</span>)</span>
+<span id="cb7-6">sessioninfo<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">session_info</span>()</span></code></pre></div>
+</div>
+<p>Note that I made a <em>GitHub permalink</em> (<em>perma</em>nent <em>link</em>) above, which is another way we can communicate precisely with others. It’s very useful to include GitHub permalinks when asking questions about code you or others have made public on GitHub. See <a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet" class="uri">https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet</a> for more details about how to create GitHub permalinks.</p>
+<p>Here is the actual output of those commands:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Reproducibility information</span></span>
+<span id="cb8-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Reproducibility information:"</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Reproducibility information:"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">Sys.time</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-08-29 09:18:40 CST"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">proc.time</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   user  system elapsed 
+  0.574   0.086   0.696 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">options</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">120</span>)</span>
+<span id="cb14-2">sessioninfo<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">session_info</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.3.1 (2023-06-16)
+ os       macOS Ventura 13.5
+ system   aarch64, darwin20
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       America/Mexico_City
+ date     2023-08-29
+ pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date (UTC) lib source
+ cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
+ colorout      1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
+ colorspace    2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
+ digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
+ dplyr         1.1.2   2023-04-20 [1] CRAN (R 4.3.0)
+ emojifont     0.5.5   2021-04-20 [1] CRAN (R 4.3.0)
+ evaluate      0.21    2023-05-05 [1] CRAN (R 4.3.0)
+ fansi         1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
+ fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
+ generics      0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
+ ggplot2       3.4.3   2023-08-14 [1] CRAN (R 4.3.0)
+ glue          1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
+ gtable        0.3.3   2023-03-21 [1] CRAN (R 4.3.0)
+ here        * 1.0.1   2020-12-13 [1] CRAN (R 4.3.0)
+ htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
+ htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
+ jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
+ knitr         1.43    2023-05-25 [1] CRAN (R 4.3.0)
+ lifecycle     1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
+ magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
+ munsell       0.5.0   2018-06-12 [1] CRAN (R 4.3.0)
+ pillar        1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
+ pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
+ proto         1.0.0   2016-10-29 [1] CRAN (R 4.3.0)
+ R6            2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
+ rlang         1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
+ rmarkdown     2.24    2023-08-14 [1] CRAN (R 4.3.1)
+ rprojroot     2.0.3   2022-04-02 [1] CRAN (R 4.3.0)
+ rstudioapi    0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
+ scales        1.2.1   2022-08-20 [1] CRAN (R 4.3.0)
+ sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
+ showtext      0.9-6   2023-05-03 [1] CRAN (R 4.3.0)
+ showtextdb    3.0     2020-06-04 [1] CRAN (R 4.3.0)
+ sysfonts      0.8.8   2022-03-13 [1] CRAN (R 4.3.0)
+ tibble        3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
+ tidyselect    1.2.0   2022-10-10 [1] CRAN (R 4.3.0)
+ utf8          1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
+ vctrs         0.6.3   2023-06-14 [1] CRAN (R 4.3.0)
+ xfun          0.40    2023-08-09 [1] CRAN (R 4.3.0)
+ yaml          2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+
+ [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+<p><code>sessioninfo::session_info()</code> has a first section that includes information about my R installation and other computer environment variables (like my operating system). The second section includes information about the R packages that I used, their version numbers, and where I installed them from.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"colorout"</span>) <span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Load a package I installed from GitHub</span></span>
+<span id="cb16-2">sessioninfo<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">session_info</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.3.1 (2023-06-16)
+ os       macOS Ventura 13.5
+ system   aarch64, darwin20
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       America/Mexico_City
+ date     2023-08-29
+ pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date (UTC) lib source
+ cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
+ colorout    * 1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
+ colorspace    2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
+ digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
+ dplyr         1.1.2   2023-04-20 [1] CRAN (R 4.3.0)
+ emojifont     0.5.5   2021-04-20 [1] CRAN (R 4.3.0)
+ evaluate      0.21    2023-05-05 [1] CRAN (R 4.3.0)
+ fansi         1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
+ fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
+ generics      0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
+ ggplot2       3.4.3   2023-08-14 [1] CRAN (R 4.3.0)
+ glue          1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
+ gtable        0.3.3   2023-03-21 [1] CRAN (R 4.3.0)
+ here        * 1.0.1   2020-12-13 [1] CRAN (R 4.3.0)
+ htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
+ htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
+ jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
+ knitr         1.43    2023-05-25 [1] CRAN (R 4.3.0)
+ lifecycle     1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
+ magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
+ munsell       0.5.0   2018-06-12 [1] CRAN (R 4.3.0)
+ pillar        1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
+ pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
+ proto         1.0.0   2016-10-29 [1] CRAN (R 4.3.0)
+ R6            2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
+ rlang         1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
+ rmarkdown     2.24    2023-08-14 [1] CRAN (R 4.3.1)
+ rprojroot     2.0.3   2022-04-02 [1] CRAN (R 4.3.0)
+ rstudioapi    0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
+ scales        1.2.1   2022-08-20 [1] CRAN (R 4.3.0)
+ sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
+ showtext      0.9-6   2023-05-03 [1] CRAN (R 4.3.0)
+ showtextdb    3.0     2020-06-04 [1] CRAN (R 4.3.0)
+ sysfonts      0.8.8   2022-03-13 [1] CRAN (R 4.3.0)
+ tibble        3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
+ tidyselect    1.2.0   2022-10-10 [1] CRAN (R 4.3.0)
+ utf8          1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
+ vctrs         0.6.3   2023-06-14 [1] CRAN (R 4.3.0)
+ xfun          0.40    2023-08-09 [1] CRAN (R 4.3.0)
+ yaml          2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+
+ [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+<p>For packages that we installed from GitHub, it includes the specific <code>git</code> commit ID for the version we installed. This is super precise information that is very useful to have.</p>
+<p>Check <a href="https://github.com/LieberInstitute/template_project/blob/main/code/01_read_data_to_r/01_read_data_to_r.R" class="uri">https://github.com/LieberInstitute/template_project/blob/main/code/01_read_data_to_r/01_read_data_to_r.R</a> for a full script example part of <a href="https://github.com/LieberInstitute/template_project" class="uri">https://github.com/LieberInstitute/template_project</a>.</p>
+<p>Check <a href="https://github.com/Bioconductor/BiocFileCache/issues/48" class="uri">https://github.com/Bioconductor/BiocFileCache/issues/48</a> for an example on how the output from <code>sessioninfo::session_info()</code> provided useful hints that allowed me and others to resolve a problem.</p>
+<p>In this video I talked about both <code>here</code> and <code>sessioninfo</code> as well as <code>R</code> and <code>RStudio</code>:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XTuJ8vGnzBU?si=wLWZe-LuSA_fKD-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<p><code>here</code> and <code>sessioninfo</code> are so useful that people have made a Python versions of these R packages.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-GdqCf0dFPU?si=d0-KKI5d0pghBs07" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+</section>
+</section>
 <section id="post-lecture-materials" class="level1">
 <h1>Post-lecture materials</h1>
 <section id="final-questions" class="level3">
@@ -1487,14 +1784,14 @@ Questions
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">options</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">120</span>)</span>
-<span id="cb1-2">sessioninfo<span class="sc" style="color: #5E5E5E;
+<span id="cb18-2">sessioninfo<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1509,14 +1806,14 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
- tz       America/New_York
- date     2023-08-17
+ tz       America/Mexico_City
+ date     2023-08-29
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
  cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout      1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
+ colorout    * 1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
  colorspace    2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
  digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
  dplyr         1.1.2   2023-04-20 [1] CRAN (R 4.3.0)
@@ -1525,7 +1822,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
  fansi         1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
  fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
  generics      0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
- ggplot2       3.4.3   2023-08-14 [1] CRAN (R 4.3.1)
+ ggplot2       3.4.3   2023-08-14 [1] CRAN (R 4.3.0)
  glue          1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
  gtable        0.3.3   2023-03-21 [1] CRAN (R 4.3.0)
  here        * 1.0.1   2020-12-13 [1] CRAN (R 4.3.0)
@@ -1571,7 +1868,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/04-reproducible-research/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -2285,7 +2582,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/05-literate-programming/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -2766,7 +3063,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/06-reference-management/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4156,7 +4453,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/07-reading-and-writing-data/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -5975,7 +6272,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/08-managing-data-frames-with-tidyverse/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -6935,7 +7232,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/09-tidy-data-and-the-tidyverse/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -7783,7 +8080,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/10-joining-data-in-r/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -8290,7 +8587,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/11-plotting-systems/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -9635,7 +9932,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/12-ggplot2-plotting-system-part-1/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -10946,7 +11243,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/13-ggplot2-plotting-system-part-2/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -12692,7 +12989,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/14-r-nuts-and-bolts/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -13926,7 +14223,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/15-control-structures/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -15237,7 +15534,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/16-functions/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -16744,7 +17041,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/17-loop-functions/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -17869,7 +18166,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/18-debugging-r-code/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -18620,7 +18917,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/19-error-handling-and-generation/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -20251,7 +20548,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/20-working-with-dates-and-times/index.html</guid>
-  <pubDate>Tue, 29 Aug 2023 14:26:38 GMT</pubDate>
+  <pubDate>Tue, 29 Aug 2023 15:20:41 GMT</pubDate>
 </item>
 </channel>
 </rss>
