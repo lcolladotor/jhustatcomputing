@@ -116,6 +116,8 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -267,11 +269,10 @@ div.csl-indent {
   <li><a href="#other-cool-features" id="toc-other-cool-features" class="nav-link" data-scroll-target="#other-cool-features">Other cool features</a></li>
   </ul></li>
   <li><a href="#other-useful-tips" id="toc-other-useful-tips" class="nav-link" data-scroll-target="#other-useful-tips">Other useful tips</a></li>
+  <li><a href="#sciwheel" id="toc-sciwheel" class="nav-link" data-scroll-target="#sciwheel">SciWheel</a></li>
   <li><a href="#post-lecture-materials" id="toc-post-lecture-materials" class="nav-link" data-scroll-target="#post-lecture-materials">Post-lecture materials</a>
   <ul class="collapse">
   <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">Practice</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
-  <li><a href="#rtistry" id="toc-rtistry" class="nav-link" data-scroll-target="#rtistry">rtistry</a></li>
   </ul></li>
   <li><a href="#r-session-information" id="toc-r-session-information" class="nav-link" data-scroll-target="#r-session-information">R session information</a></li>
   </ul>
@@ -504,6 +505,10 @@ bibtex=TRUE)', 'toBibtex(.)', or set
 <p>For instance, I use a format of lower-case first author last name followed by 4 digit year for each reference followed by a keyword (e.g name of a software package). Alternatively, you can omit the keyword. But note that if I cite a paper by the same first author that was published in the same year, then a lower case letter is added to the end. For instance, for a paper that I wrote as 1st author in 2010, my bibtex key might be <code>hicks2022</code> or <code>hicks2022a</code>. You can decide what scheme to use, just pick one and use it <em>forever</em>.</p>
 <p>In your R Markdown document, you can then cite the reference by adding the key, such as <code>...in the paper by Hicks et al. [@hicks2022]...</code>.</p>
 </section>
+<section id="sciwheel" class="level1">
+<h1>SciWheel</h1>
+<p>I use <a href="https://sciwheel.com/">SciWheel</a> for managing citations and writing papers on Google Docs as documented at <a href="https://lcolladotor.github.io/bioc_team_ds/writing-papers.html" class="uri">https://lcolladotor.github.io/bioc_team_ds/writing-papers.html</a>. I mention it here because you can import <span class="math inline">\(BibTeX\)</span> files (<code>.bib</code>) on SciWheel, which can make your life easier if you want to import R package citations that way.</p>
+</section>
 <section id="post-lecture-materials" class="level1">
 <h1>Post-lecture materials</h1>
 <section id="practice" class="level3">
@@ -535,31 +540,6 @@ Questions
 </div>
 </div>
 </section>
-<section id="additional-resources" class="level3">
-<h3 class="anchored" data-anchor-id="additional-resources">Additional Resources</h3>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Add here.</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="rtistry" class="level2">
-<h2 class="anchored" data-anchor-id="rtistry">rtistry</h2>
-<div class="cell fig-cap-location-top">
-
-</div>
-<p>[Add here.]</p>
-</section>
 </section>
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
@@ -576,8 +556,8 @@ Tip
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
- tz       America/New_York
- date     2023-08-17
+ tz       America/Mexico_City
+ date     2023-08-29
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
