@@ -166,8 +166,8 @@ If that's the case, that means that you have to configure your computer to know 
 
 ```{}
 [user]
-	name = lcolladotor
-	email = lcolladotor@gmail.com
+    name = lcolladotor
+    email = lcolladotor@gmail.com
 	
 ```
 
