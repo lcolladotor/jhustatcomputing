@@ -153,6 +153,26 @@ Selection: 3
 
 At the end, my RStudio window was restarted.
 
+Note that you might get an error like this one:
+
+```{}
+✔ Adding files
+✔ Making a commit with message 'Initial commit'
+Error in libgit2::git_signature_default : 
+  config value 'user.name' was not found
+```
+
+If that's the case, that means that you have to configure your computer to know who you are when you are using `git` and thus `GitHub`. We can do this with `usethis::edit_git_config()` which will open your `~/.gitconfig` file. There we can configure Git so it knows who we are. For `name` I'm using my `GitHub` username, and for `email`, I'm using the email I used for my `GitHub` account. Note that there are 4 spaces before `name` and `email`, as well as an empty line in the end.
+
+```{}
+[user]
+	name = lcolladotor
+	email = lcolladotor@gmail.com
+	
+```
+
+Alternatively, you can use `git` commands directly or the `usethis::use_git_config()` function as documented at <https://happygitwithr.com/hello-git.html?q=config#hello-git>.
+
 ### 3. Use the `gh-pages` branch
 
 GitHub provides websites for free to Git repositories they host if you use a specific Git branch name: `gh-pages`. While there are more configuration options available through GitHub, the easiest option is to use the `gh-pages` branch, which we can do with R thanks to `usethis::git_default_branch_rename()` as shown below:
