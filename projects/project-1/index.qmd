@@ -135,7 +135,7 @@ The ratings are discrete values making the histogram look strange. When you make
 # Add your solution here
 ```
 
-5.  Calculate the average rating across all country of origins for beans. Which top 3 countries have the highest ratings on average?
+5.  Calculate the average rating across all country of origins for beans. Which top 3 countries (for bean origin) have the highest ratings on average?
 
 ```{r}
 # Add your solution here
