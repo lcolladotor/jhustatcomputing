@@ -394,7 +394,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add your solution here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="4" type="1">
-<li>Which country makes the best chocolate (or has the highest ratings on average) with beans from Ecuador?</li>
+<li>Which company (name) makes the best chocolate (or has the highest ratings on average) with beans from Ecuador?</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add your solution here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -431,9 +431,9 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 3 × 1
        x
    &lt;dbl&gt;
-1 0.692 
-2 0.864 
-3 0.0589</code></pre>
+1 -0.307
+2  0.696
+3  0.882</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a new column that indicates whether the value of 'x' is positive or negative</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
@@ -443,18 +443,18 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 2
-         x is_positive
-     &lt;dbl&gt; &lt;chr&gt;      
- 1  0.692  Yes        
- 2  0.864  Yes        
- 3  0.0589 Yes        
- 4  1.04   Yes        
- 5 -0.297  No         
- 6 -2.18   No         
- 7 -1.41   No         
- 8 -1.24   No         
- 9 -1.15   No         
-10 -0.0717 No         
+        x is_positive
+    &lt;dbl&gt; &lt;chr&gt;      
+ 1 -0.307 No         
+ 2  0.696 Yes        
+ 3  0.882 Yes        
+ 4 -0.510 No         
+ 5 -0.285 No         
+ 6 -0.781 No         
+ 7  0.781 Yes        
+ 8  0.299 Yes        
+ 9 -1.03  No         
+10  0.595 Yes        
 # ℹ 90 more rows</code></pre>
 </div>
 </div>
