@@ -209,7 +209,7 @@ If you are a Linux user, you'll have to save your GitHub PAT on your `~/.Renviro
 
 ```{r}
 #| eval: false
-## We will next link R to GitHub so R can act on your behalf. We will create a 
+## We will next link R to GitHub so R can act on your behalf. We will create a
 ## GitHub Personal Access Token (PAT) so R can say that it's acting on your behalf.
 ## This function guides us through the full process:
 

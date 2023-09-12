@@ -552,8 +552,9 @@ I also like to use the [`styler`: Non-invasive pretty printing of R code](https:
 install.packages("styler")
 
 ## Install biocthis
-if (!require("BiocManager", quietly = TRUE))
+if (!require("BiocManager", quietly = TRUE)) {
     install.packages("BiocManager")
+}
 
 BiocManager::install("biocthis")
 ```
