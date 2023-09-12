@@ -155,7 +155,7 @@ At the end, my RStudio window was restarted.
 
 Note that you might get an error like this one:
 
-```{}
+```         
 ✔ Adding files
 ✔ Making a commit with message 'Initial commit'
 Error in libgit2::git_signature_default : 
@@ -164,11 +164,11 @@ Error in libgit2::git_signature_default :
 
 If that's the case, that means that you have to configure your computer to know who you are when you are using `git` and thus `GitHub`. We can do this with `usethis::edit_git_config()` which will open your `~/.gitconfig` file. There we can configure Git so it knows who we are. For `name` I'm using my `GitHub` username, and for `email`, I'm using the email I used for my `GitHub` account. Note that there are 4 spaces before `name` and `email`, as well as an empty line in the end.
 
-```{}
+```         
 [user]
     name = lcolladotor
     email = lcolladotor@gmail.com
-	
+    
 ```
 
 Alternatively, you can use `git` commands directly or the `usethis::use_git_config()` function as documented at <https://happygitwithr.com/hello-git.html?q=config#hello-git>.
@@ -343,6 +343,60 @@ You might also want to use inline R code with `fontawesome::fa()` like at <https
 -   Feel free to share your website with the world. If you use Twitter, use the `#postcards` hashtag and tag the author `@seankross` <https://twitter.com/seankross>.
 
 In class on Sept 12, I will show as many websites as I can from Courseplus!
+
+# Part 3: repositories for class notes and projects
+
+Now that we you have learned how to make an RStudio project, version control it with Git, then share it through GitHub, and even use GitHub pages to host your website, we can repeat this exercise and create more Git/GitHub repositories.
+
+## Class notes
+
+First, lets make one for our class notes where we will host data and R scripts. We won't be hosting HTML files here, so we don't need to use the `gh-pages` branch for hosting files on GitHub pages.
+
+```{r}
+#| eval: false
+## Create an Rstudio project
+usethis::create_project("~/Desktop/biostat776classnotes")
+
+## Start version controlling it
+usethis::use_git()
+
+## Share it via GitHub with the world
+usethis::use_github()
+```
+
+Above I created the `biostat766classnotes` RStudio project + `git` / GitHub repository. I saved it on my `~/Desktop` but you can save it wherever you want.
+
+Once that's created, create the `R`/ and `data/` subdirectories. Inside `R/`, save your R scripts for every class. As for `data/`, copy the contents of <https://github.com/lcolladotor/jhustatcomputing2023/tree/main/data> into it. That way commands like `here("data", "chocolate.RDS")` from the class lectures will work the same way.
+
+My live example is available at <https://github.com/lcolladotor/biostat776classnotes>.
+
+## For each project
+
+We can go ahead and
+
+```{r}
+#| eval: false
+## Create an Rstudio project
+usethis::create_project("~/Desktop/biostat776project1")
+
+## Start version controlling it
+usethis::use_git()
+
+## Use the gh-pages branch in order for
+## GitHub pages https://pages.github.com/ to
+## host our website.
+usethis::git_default_branch_rename(to = "gh-pages")
+
+## Create a .nojekyll file
+writeLines("", here::here(".nojekyll"))
+
+## Share it via GitHub with the world
+usethis::use_github()
+```
+
+Once that's done, create a `index.Rmd` (or `index.qmd` if you are using Quarto) file and make sure you version control the resulting `index.html` file (`git add index.html`) after you render your `index.Rmd` (or `index.qmd`) file.
+
+My live example is available at <https://github.com/lcolladotor/biostat776project1>.
 
 # R session information
 
