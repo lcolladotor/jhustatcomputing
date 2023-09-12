@@ -1173,7 +1173,7 @@
     "href": "posts/13-ggplot2-plotting-system-part-2/index.html#customizing-the-smooth",
     "title": "13 - The ggplot2 plotting system: ggplot()",
     "section": "Customizing the smooth",
-    "text": "Customizing the smooth\nWe can also customize aspects of the geoms.\nFor example, we can customize the smoother that we overlay on the points with geom_smooth().\nHere we change the line type and increase the size from the default. We also remove the shaded standard error from the line.\n\ng +\n    geom_point(aes(color = bmicat),\n        size = 2,\n        alpha = 1 / 2\n    ) +\n    geom_smooth(\n        size = 4,\n        linetype = 3,\n        method = \"lm\",\n        se = FALSE\n    )\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\n\n\n\nCustomizing a smoother"
+    "text": "Customizing the smooth\nWe can also customize aspects of the geoms.\nFor example, we can customize the smoother that we overlay on the points with geom_smooth().\nHere we change the line type and increase the size from the default. We also remove the shaded standard error from the line.\n\ng +\n    geom_point(aes(color = bmicat),\n        size = 2,\n        alpha = 1 / 2\n    ) +\n    geom_smooth(\n        linewidth = 4,\n        linetype = 3,\n        method = \"lm\",\n        se = FALSE\n    )\n\n\n\n\nCustomizing a smoother"
   },
   {
     "objectID": "posts/13-ggplot2-plotting-system-part-2/index.html#changing-the-theme",
