@@ -67,8 +67,9 @@ knitr::include_graphics("https://bookdown.org/yihui/bookdown/images/logo.png")
 ## install.packages("styler")
 ## 
 ## ## Install biocthis
-## if (!require("BiocManager", quietly = TRUE))
+## if (!require("BiocManager", quietly = TRUE)) {
 ##     install.packages("BiocManager")
+## }
 ## 
 ## BiocManager::install("biocthis")
 
