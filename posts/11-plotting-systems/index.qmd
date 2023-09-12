@@ -33,6 +33,11 @@ categories: [module 3, week 3, R, programming, ggplot2, data viz]
 4.  Deepayan Sarkar (2008). *Lattice: Multivariate Data Visualization with R*, Springer.
 :::
 
+I also highlighted these two free online books:
+
+1.  *ggplot2: Elegant Graphics for Data Analysis (3e)* <https://ggplot2-book.org/>
+2.  *R Graphics Cookbook, 2nd edition* <https://r-graphics.org/>
+
 ### Acknowledgements
 
 Material for this lecture was borrowed and adopted from
