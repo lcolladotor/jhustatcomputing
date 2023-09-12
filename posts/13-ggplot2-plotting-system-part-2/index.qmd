@@ -306,7 +306,7 @@ g +
         alpha = 1 / 2
     ) +
     geom_smooth(
-        size = 4,
+        linewidth = 4,
         linetype = 3,
         method = "lm",
         se = FALSE
