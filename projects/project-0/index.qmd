@@ -396,7 +396,7 @@ usethis::use_github()
 
 Once that's done, create a `index.Rmd` (or `index.qmd` if you are using Quarto) file and make sure you version control the resulting `index.html` file (`git add index.html`) after you render your `index.Rmd` (or `index.qmd`) file.
 
-My live example is available at <https://github.com/lcolladotor/biostat776project1>.
+My live example is available at <https://github.com/lcolladotor/biostat776project1>. The rendered website is available at <https://lcolladotor.github.io/biostat776project1/>.
 
 # R session information
 
