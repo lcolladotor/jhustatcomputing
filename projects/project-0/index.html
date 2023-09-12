@@ -206,6 +206,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#refine-your-website" id="toc-refine-your-website" class="nav-link" data-scroll-target="#refine-your-website">9. Refine your website</a></li>
   <li><a href="#share-your-website" id="toc-share-your-website" class="nav-link" data-scroll-target="#share-your-website">10. Share your website</a></li>
   </ul></li>
+  <li><a href="#part-3-repositories-for-class-notes-and-projects" id="toc-part-3-repositories-for-class-notes-and-projects" class="nav-link" data-scroll-target="#part-3-repositories-for-class-notes-and-projects">Part 3: repositories for class notes and projects</a>
+  <ul class="collapse">
+  <li><a href="#class-notes" id="toc-class-notes" class="nav-link" data-scroll-target="#class-notes">Class notes</a></li>
+  <li><a href="#for-each-project" id="toc-for-each-project" class="nav-link" data-scroll-target="#for-each-project">For each project</a></li>
+  </ul></li>
   <li><a href="#r-session-information" id="toc-r-session-information" class="nav-link" data-scroll-target="#r-session-information">R session information</a></li>
   </ul>
 </nav>
@@ -527,11 +532,56 @@ Error in libgit2::git_signature_default :
 <p>In class on Sept 12, I will show as many websites as I can from Courseplus!</p>
 </section>
 </section>
+<section id="part-3-repositories-for-class-notes-and-projects" class="level1">
+<h1>Part 3: repositories for class notes and projects</h1>
+<p>Now that we you have learned how to make an RStudio project, version control it with Git, then share it through GitHub, and even use GitHub pages to host your website, we can repeat this exercise and create more Git/GitHub repositories.</p>
+<section id="class-notes" class="level2">
+<h2 class="anchored" data-anchor-id="class-notes">Class notes</h2>
+<p>First, lets make one for our class notes where we will host data and R scripts. We won’t be hosting HTML files here, so we don’t need to use the <code>gh-pages</code> branch for hosting files on GitHub pages.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create an Rstudio project</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_project</span>(<span class="st">"~/Desktop/biostat776classnotes"</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Start version controlling it</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Share it via GitHub with the world</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Above I created the <code>biostat766classnotes</code> RStudio project + <code>git</code> / GitHub repository. I saved it on my <code>~/Desktop</code> but you can save it wherever you want.</p>
+<p>Once that’s created, create the <code>R</code>/ and <code>data/</code> subdirectories. Inside <code>R/</code>, save your R scripts for every class. As for <code>data/</code>, copy the contents of <a href="https://github.com/lcolladotor/jhustatcomputing2023/tree/main/data" class="uri">https://github.com/lcolladotor/jhustatcomputing2023/tree/main/data</a> into it. That way commands like <code>here("data", "chocolate.RDS")</code> from the class lectures will work the same way.</p>
+<p>My live example is available at <a href="https://github.com/lcolladotor/biostat776classnotes" class="uri">https://github.com/lcolladotor/biostat776classnotes</a>.</p>
+</section>
+<section id="for-each-project" class="level2">
+<h2 class="anchored" data-anchor-id="for-each-project">For each project</h2>
+<p>We can go ahead and</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create an Rstudio project</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_project</span>(<span class="st">"~/Desktop/biostat776project1"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Start version controlling it</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Use the gh-pages branch in order for</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub pages https://pages.github.com/ to</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="do">## host our website.</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_default_branch_rename</span>(<span class="at">to =</span> <span class="st">"gh-pages"</span>)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a .nojekyll file</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="fu">writeLines</span>(<span class="st">""</span>, here<span class="sc">::</span><span class="fu">here</span>(<span class="st">".nojekyll"</span>))</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="do">## Share it via GitHub with the world</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Once that’s done, create a <code>index.Rmd</code> (or <code>index.qmd</code> if you are using Quarto) file and make sure you version control the resulting <code>index.html</code> file (<code>git add index.html</code>) after you render your <code>index.Rmd</code> (or <code>index.qmd</code>) file.</p>
+<p>My live example is available at <a href="https://github.com/lcolladotor/biostat776project1" class="uri">https://github.com/lcolladotor/biostat776project1</a>.</p>
+</section>
+</section>
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
@@ -543,7 +593,7 @@ Error in libgit2::git_signature_default :
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-09-05
+ date     2023-09-12
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
