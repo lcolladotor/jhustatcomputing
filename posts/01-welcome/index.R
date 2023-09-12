@@ -1,0 +1,8 @@
+#| eval: false
+## install.packages("tidyverse")
+
+
+
+options(width = 120)
+sessioninfo::session_info()
+
