@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing2023/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776) in Fall 2023</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Tue, 12 Sep 2023 15:13:10 GMT</lastBuildDate>
+<lastBuildDate>Thu, 14 Sep 2023 02:07:04 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -434,7 +434,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/01-welcome/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -928,7 +928,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/02-introduction-to-r-and-rstudio/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1209,7 +1209,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/03-introduction-to-gitgithub/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing2023/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -1868,7 +1868,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/04-reproducible-research/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -2674,7 +2674,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/05-literate-programming/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3134,7 +3134,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/06-reference-management/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4524,7 +4524,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/07-reading-and-writing-data/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6343,7 +6343,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/08-managing-data-frames-with-tidyverse/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7303,7 +7303,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/09-tidy-data-and-the-tidyverse/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8151,7 +8151,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/10-joining-data-in-r/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -8663,7 +8663,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/11-plotting-systems/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10013,7 +10013,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/12-ggplot2-plotting-system-part-1/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -10173,10 +10173,14 @@ Example
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(tidyverse)</span>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"tidyverse"</span>)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(here)</span>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"here"</span>)</span>
 <span id="cb1-3">maacs <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
@@ -10411,7 +10415,9 @@ font-style: inherit;"># try it yourself</span></span>
 <span id="cb11-2"></span>
 <span id="cb11-3"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(palmerpenguins)</span>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"palmerpenguins"</span>)</span>
 <span id="cb11-4">penguins</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 344 × 8
@@ -10436,7 +10442,7 @@ font-style: inherit;">library</span>(palmerpenguins)</span>
 </section>
 <section id="facets" class="level3">
 <h3 class="anchored" data-anchor-id="facets">facets</h3>
-<p>Because our primary question involves comparing overweight individuals to normal weight individuals, we can <strong>stratify the scatter plot</strong> of PM2.5 and nocturnal symptoms by the BMI category (<code>bmicat</code>) variable, which indicates whether an individual is overweight or now.</p>
+<p>Because our primary question involves comparing overweight individuals to normal weight individuals, we can <strong>stratify the scatter plot</strong> of PM2.5 and nocturnal symptoms by the BMI category (<code>bmicat</code>) variable, which indicates whether an individual is overweight or not.</p>
 <p>To visualize this we can <strong>add a <code>facet_grid()</code></strong>, which takes a formula argument.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -10714,7 +10720,9 @@ font-style: inherit;"># try it yourself</span></span>
 <span id="cb18-2"></span>
 <span id="cb18-3"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(palmerpenguins)</span>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"palmerpenguins"</span>)</span>
 <span id="cb18-4">penguins</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 344 × 8
@@ -10988,6 +10996,236 @@ font-style: inherit;">3</span>))</span></code></pre></div>
 <p>And now you know!</p>
 </section>
 </section>
+<section id="do-you-like-bbcs-plots-make-your-own" class="level1">
+<h1>Do you like BBC’s plots? Make your own!</h1>
+<p>Well, thanks to <a href="https://bbc.github.io/rcookbook/" class="uri">https://bbc.github.io/rcookbook/</a> and the <code>bbplot</code> package you now can make plots worthy of the <a href="https://www.bbc.com/news" class="uri">https://www.bbc.com/news</a>.</p>
+<p>First, we need to install the <code>bbplot</code> package which is only available from GitHub. To do so, we’ll use <code>remotes::install_github()</code> instead of the typical function <code>install.packages()</code>. The latter only works for R packages distributed by CRAN. If you don’t have <code>remotes</code> installed, you’ll have to install it from CRAN with <code>install.packages("remotes")</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Install all required packages</span></span>
+<span id="cb25-2">remotes<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install_github</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bbc/bbplot"</span>)</span></code></pre></div>
+</div>
+<p>Next, let’s try the <code>bbplot::bbc_style()</code> function on a plot we made before.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Basic ggplot2 object with our data</span></span>
+<span id="cb26-2">g <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> maacs <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb26-3">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(logpm25, NocturnalSympt))</span>
+<span id="cb26-4"></span>
+<span id="cb26-5"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## A plot we made before, but this time without the SE lines</span></span>
+<span id="cb26-6">g <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb26-7">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb26-8">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_smooth</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lm"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">se =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb26-9">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">facet_grid</span>(. <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> bmicat)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://lcolladotor.github.io/jhustatcomputing2023/posts/13-ggplot2-plotting-system-part-2/index_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="1248"></p>
+</div>
+<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Now let's add bbplot::bbc_style()</span></span>
+<span id="cb27-2">g <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb27-3">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb27-4">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_smooth</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lm"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">se =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb27-5">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">facet_grid</span>(. <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> bmicat) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb27-6">    bbplot<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bbc_style</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://lcolladotor.github.io/jhustatcomputing2023/posts/13-ggplot2-plotting-system-part-2/index_files/figure-html/unnamed-chunk-20-2.png" class="img-fluid" width="1248"></p>
+</div>
+</div>
+<p>Next, we can use the blue color that the BBC frequently uses and further improve our plot by adding a title and subtitle.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1">g <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb28-2">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb28-3">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_smooth</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">colour =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#1380A1"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lm"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">se =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb28-4">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">facet_grid</span>(. <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> bmicat) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb28-5">    bbplot<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bbc_style</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb28-6">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb28-7">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Child asthma's link to air quality worsens in overweight children"</span>,</span>
+<span id="cb28-8">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Number of days with symptoms vs PM2.5 by weight group"</span></span>
+<span id="cb28-9">    )</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://lcolladotor.github.io/jhustatcomputing2023/posts/13-ggplot2-plotting-system-part-2/index_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="1248"></p>
+</div>
+</div>
+<p>But maybe that was too confusing for our readers as we are showing a lot of information. We can drop the points and only keep the regression lines. Here we’ll need to map the <code>bmicat</code> variable to the <code>color</code> (or <code>colour</code>) aesthetic, then manually change the colors we want to match the typical yellow and blue colors the BBC uses. See <a href="https://htmlcolorcodes.com/" class="uri">https://htmlcolorcodes.com/</a>, <a href="https://www.color-hex.com/" class="uri">https://www.color-hex.com/</a>, or other similar websites for visualizing HTML Hex color codes. We can also increase the line width.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1">g <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb29-2">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_smooth</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">colour =</span> bmicat), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lm"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">se =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb29-3">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_colour_manual</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">values =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#FAAB18"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#1380A1"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb29-4">    bbplot<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bbc_style</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb29-5">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb29-6">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Child asthma's link to air quality worsens in overweight children"</span>,</span>
+<span id="cb29-7">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Number of days with symptoms vs PM2.5 by weight group"</span></span>
+<span id="cb29-8">    )</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://lcolladotor.github.io/jhustatcomputing2023/posts/13-ggplot2-plotting-system-part-2/index_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid" width="1248"></p>
+</div>
+</div>
+<p>Voilà! Hopefully our editor likes the plot we made!</p>
+<p>P.S. Follow <a href="https://twitter.com/christinezhang">Christine Zhang</a> on Twitter / X for more <a href="https://twitter.com/hashtag/dataviz?src=hashtag_click">#dataviz</a> and data journalism.</p>
+</section>
 <section id="post-lecture-materials" class="level1">
 <h1>Post-lecture materials</h1>
 <section id="resources" class="level3">
@@ -11012,7 +11250,7 @@ Click here for a slightly more complicated example with <code>ggplot()</code>.
 <p>Unlike our previous BMI variable, NO2 is continuous, and so we need to make NO2 categorical so we can condition on it in the plotting. We can use the <code>cut()</code> function for this purpose. We will divide the NO2 variable into tertiles.</p>
 <p>First we need to calculate the tertiles with the <code>quantile()</code> function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1">cutpoints <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1">cutpoints <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -11036,7 +11274,7 @@ font-style: inherit;">TRUE</span>)</span></code></pre></div>
 </div>
 <p>Then we need to divide the original <code>logno2_new</code> variable into the ranges defined by the cut points computed above.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1">maacs<span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1">maacs<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>no2tert <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -11048,10 +11286,10 @@ font-style: inherit;">$</span>logno2_new, cutpoints)</span></code></pre></div>
 </div>
 <p>The <code>not2tert</code> variable is now a categorical factor variable containing 3 levels, indicating the ranges of NO2 (on the log scale).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><span class="do" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## See the levels of the newly created factor variable</span></span>
-<span id="cb27-2"><span class="fu" style="color: #4758AB;
+<span id="cb32-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">levels</span>(maacs<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -11062,24 +11300,24 @@ font-style: inherit;">$</span>no2tert)</span></code></pre></div>
 </div>
 <p>The final plot shows the relationship between PM2.5 and nocturnal symptoms by BMI category and NO2 tertile.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><span class="do" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Setup ggplot with data frame</span></span>
-<span id="cb29-2">g <span class="ot" style="color: #003B4F;
+<span id="cb34-2">g <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> maacs <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb29-3">    <span class="fu" style="color: #4758AB;
+<span id="cb34-3">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">aes</span>(logpm25, NocturnalSympt))</span>
-<span id="cb29-4"></span>
-<span id="cb29-5"><span class="do" style="color: #5E5E5E;
+<span id="cb34-4"></span>
+<span id="cb34-5"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Add layers</span></span>
-<span id="cb29-6">g <span class="sc" style="color: #5E5E5E;
+<span id="cb34-6">g <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -11094,14 +11332,14 @@ background-color: null;
 font-style: inherit;">3</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb29-7">    <span class="fu" style="color: #4758AB;
+<span id="cb34-7">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">facet_grid</span>(bmicat <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">~</span> no2tert) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb29-8">    <span class="fu" style="color: #4758AB;
+<span id="cb34-8">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_smooth</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -11118,7 +11356,7 @@ background-color: null;
 font-style: inherit;">"steelblue"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb29-9">    <span class="fu" style="color: #4758AB;
+<span id="cb34-9">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_bw</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -11131,7 +11369,7 @@ background-color: null;
 font-style: inherit;">10</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb29-10">    <span class="fu" style="color: #4758AB;
+<span id="cb34-10">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -11146,7 +11384,7 @@ background-color: null;
 font-style: inherit;">2.5</span>])) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb29-11">    <span class="fu" style="color: #4758AB;
+<span id="cb34-11">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -11155,7 +11393,7 @@ background-color: null;
 font-style: inherit;">"Nocturnal Symptoms"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb29-12">    <span class="fu" style="color: #4758AB;
+<span id="cb34-12">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -11168,7 +11406,7 @@ font-style: inherit;">"MAACS Cohort"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://lcolladotor.github.io/jhustatcomputing2023/posts/13-ggplot2-plotting-system-part-2/index_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="https://lcolladotor.github.io/jhustatcomputing2023/posts/13-ggplot2-plotting-system-part-2/index_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="864"></p>
 <figcaption class="figure-caption">PM2.5 and nocturnal symptoms by BMI category and NO2 tertile</figcaption>
 </figure>
 </div>
@@ -11221,14 +11459,14 @@ Tip
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">options</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">120</span>)</span>
-<span id="cb31-2">sessioninfo<span class="sc" style="color: #5E5E5E;
+<span id="cb36-2">sessioninfo<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -11244,11 +11482,12 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-09-12
+ date     2023-09-13
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package        * version date (UTC) lib source
+ bbplot           0.2     2023-09-14 [1] Github (bbc/bbplot@82af595)
  bit              4.0.5   2022-11-15 [1] CRAN (R 4.3.0)
  bit64            4.0.5   2020-08-30 [1] CRAN (R 4.3.0)
  cli              3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
@@ -11325,7 +11564,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/13-ggplot2-plotting-system-part-2/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -13071,7 +13310,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/14-r-nuts-and-bolts/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -14305,7 +14544,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/15-control-structures/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -15616,7 +15855,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/16-functions/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -17123,7 +17362,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/17-loop-functions/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -18248,7 +18487,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/18-debugging-r-code/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -18999,7 +19238,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/19-error-handling-and-generation/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -20630,7 +20869,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/20-working-with-dates-and-times/index.html</guid>
-  <pubDate>Tue, 12 Sep 2023 15:13:10 GMT</pubDate>
+  <pubDate>Thu, 14 Sep 2023 02:07:04 GMT</pubDate>
 </item>
 </channel>
 </rss>

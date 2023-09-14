@@ -429,11 +429,11 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">slice</span>(dat, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
-       x
-   &lt;dbl&gt;
-1 -0.307
-2  0.696
-3  0.882</code></pre>
+      x
+  &lt;dbl&gt;
+1 0.481
+2 1.06 
+3 0.529</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a new column that indicates whether the value of 'x' is positive or negative</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
@@ -443,18 +443,18 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 2
-        x is_positive
-    &lt;dbl&gt; &lt;chr&gt;      
- 1 -0.307 No         
- 2  0.696 Yes        
- 3  0.882 Yes        
- 4 -0.510 No         
- 5 -0.285 No         
- 6 -0.781 No         
- 7  0.781 Yes        
- 8  0.299 Yes        
- 9 -1.03  No         
-10  0.595 Yes        
+         x is_positive
+     &lt;dbl&gt; &lt;chr&gt;      
+ 1  0.481  Yes        
+ 2  1.06   Yes        
+ 3  0.529  Yes        
+ 4 -0.221  No         
+ 5 -0.906  No         
+ 6  2.96   Yes        
+ 7 -0.0564 No         
+ 8 -0.931  No         
+ 9 -0.0624 No         
+10  0.240  Yes        
 # ℹ 90 more rows</code></pre>
 </div>
 </div>
@@ -484,7 +484,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 </section>
 <section id="part-3-convert-wide-data-into-long-data" class="level1">
 <h1>Part 3: Convert wide data into long data</h1>
-<p>The goal of this part of the assignment is to take a dataset that is either messy or simply not tidy and to make them tidy datasets. The objective is to gain some familiarity with the functions in the <code>dplyr</code>, <code>tidyr</code> packages. You may find it helpful to review the section on spreading and gathering data.</p>
+<p>The goal of this part of the assignment is to take a dataset that is either messy or simply not tidy and to make them tidy datasets. The objective is to gain some familiarity with the functions in the <code>dplyr</code>, <code>tidyr</code> packages. You may find it helpful to review the section on pivoting data from wide to long format and vice versa.</p>
 <section id="tasks-1" class="level3">
 <h3 class="anchored" data-anchor-id="tasks-1">Tasks</h3>
 <p>We are going to create a set of features for us to plot over time. Use the functions in <code>dplyr</code> and <code>tidyr</code> to perform the following steps to the <code>chocolate</code> dataset:</p>
@@ -601,7 +601,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-09-11
+ date     2023-09-13
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
