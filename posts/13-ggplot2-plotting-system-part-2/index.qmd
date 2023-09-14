@@ -445,7 +445,7 @@ First, we need to install the `bbplot` package which is only available from GitH
 
 ```{r}
 #| eval: false
-## Install all required packages
+## Install bbplot
 remotes::install_github("bbc/bbplot")
 ```
 
@@ -506,6 +506,64 @@ g +
 Voilà! Hopefully our editor likes the plot we made!
 
 P.S. Follow [Christine Zhang](https://twitter.com/christinezhang) on Twitter / X for more [#dataviz](https://twitter.com/hashtag/dataviz?src=hashtag_click) and data journalism.
+
+# What about Barbenheimer?
+
+Well, there's <https://github.com/MatthewBJane/theme_park> now. Here are some examples with it:
+
+```{r}
+#| eval: false
+## Install ThemePark from GitHub
+remotes::install_github("MatthewBJane/theme_park")
+```
+
+```{r}
+#| message: false
+#| fig-width: 13
+## Barbie-inspired theme
+g +
+    geom_smooth(aes(colour = bmicat), method = "lm", se = FALSE, linewidth = 2) +
+    scale_colour_manual(values = c("#FAAB18", "#1380A1")) +
+    ThemePark::theme_barbie() +
+    labs(
+        title = "Child asthma's link to air quality worsens in overweight children",
+        subtitle = "Number of days with symptoms vs PM2.5 by weight group"
+    )
+
+## Oppenheimer-inspired theme
+g +
+    geom_smooth(aes(colour = bmicat), method = "lm", se = FALSE, linewidth = 2) +
+    scale_colour_manual(values = c("#FAAB18", "#1380A1")) +
+    ThemePark::theme_oppenheimer() +
+    labs(
+        title = "Child asthma's link to air quality worsens in overweight children",
+        subtitle = "Number of days with symptoms vs PM2.5 by weight group"
+    )
+```
+
+Nowadays you can find many `ggplot2` themes online. Just search your favorite movie / keyword + `ggplot2` on Google Search or your favorite browser search tool.
+
+Note that one great package with many themes is the `ggthemes` package showcased at <https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/>.
+
+```{r}
+#| eval: false
+## Install ggthemes from CRAN
+install.packages("ggthemes")
+```
+
+```{r}
+#| message: false
+## Your favorite statistics class theme ;)
+## I bet that you could fool a few people into thinking that you are not using R ^_^'
+g +
+    geom_smooth(aes(colour = bmicat), method = "lm", se = FALSE, linewidth = 2) +
+    scale_colour_manual(values = c("#FAAB18", "#1380A1")) +
+    ggthemes::theme_stata() +
+    labs(
+        title = "Child asthma's link to air quality worsens in overweight children",
+        subtitle = "Number of days with symptoms vs PM2.5 by weight group"
+    )
+```
 
 # Post-lecture materials
 
