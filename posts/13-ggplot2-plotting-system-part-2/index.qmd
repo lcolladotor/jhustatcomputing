@@ -235,7 +235,7 @@ penguins
 
 ### facets
 
-Because our primary question involves comparing overweight individuals to normal weight individuals, we can **stratify the scatter plot** of PM2.5 and nocturnal symptoms by the BMI category (`bmicat`) variable, which indicates whether an individual is overweight or now.
+Because our primary question involves comparing overweight individuals to normal weight individuals, we can **stratify the scatter plot** of PM2.5 and nocturnal symptoms by the BMI category (`bmicat`) variable, which indicates whether an individual is overweight or not.
 
 To visualize this we can **add a `facet_grid()`**, which takes a formula argument.
 
