@@ -554,7 +554,8 @@ install.packages("ggthemes")
 ```{r}
 #| message: false
 ## Your favorite statistics class theme ;)
-## I bet that you could fool a few people into thinking that you are not using R ^_^'
+## I bet that you could fool a few people into thinking
+## that you are not using R ^_^'
 g +
     geom_smooth(aes(colour = bmicat), method = "lm", se = FALSE, linewidth = 2) +
     scale_colour_manual(values = c("#FAAB18", "#1380A1")) +
@@ -563,6 +564,22 @@ g +
         title = "Child asthma's link to air quality worsens in overweight children",
         subtitle = "Number of days with symptoms vs PM2.5 by weight group"
     )
+```
+
+# Can we... make them interactive?
+
+Yes we can! Well, not always, but you can always try. Simply save your plot as an object, then feed that object into `plotly::ggplotly()`. `plotly` is available from CRAN as is documented at <https://plotly.com/r/>. That's how I made a lot of the interactive plots in `spatialLIBD` that you can see at <http://spatial.libd.org/spatialLIBD/>.
+
+```{r}
+#| message: false
+## Save our plot into an object
+g_complete <- g +
+    geom_point(aes(colour = bmicat)) +
+    geom_smooth(aes(colour = bmicat), method = "lm", se = FALSE, linewidth = 2) +
+    scale_colour_manual(values = c("#FAAB18", "#1380A1"))
+
+## Make it interactive with plotly::ggplotly()
+plotly::ggplotly((g_complete))
 ```
 
 # Post-lecture materials
