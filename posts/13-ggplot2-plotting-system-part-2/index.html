@@ -268,6 +268,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#a-quick-aside-about-axis-limits" id="toc-a-quick-aside-about-axis-limits" class="nav-link" data-scroll-target="#a-quick-aside-about-axis-limits">A quick aside about axis limits</a></li>
   </ul></li>
   <li><a href="#do-you-like-bbcs-plots-make-your-own" id="toc-do-you-like-bbcs-plots-make-your-own" class="nav-link" data-scroll-target="#do-you-like-bbcs-plots-make-your-own">Do you like BBC’s plots? Make your own!</a></li>
+  <li><a href="#what-about-barbenheimer" id="toc-what-about-barbenheimer" class="nav-link" data-scroll-target="#what-about-barbenheimer">What about Barbenheimer?</a></li>
   <li><a href="#post-lecture-materials" id="toc-post-lecture-materials" class="nav-link" data-scroll-target="#post-lecture-materials">Post-lecture materials</a>
   <ul class="collapse">
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
@@ -934,7 +935,7 @@ Example
 <p>Well, thanks to <a href="https://bbc.github.io/rcookbook/" class="uri">https://bbc.github.io/rcookbook/</a> and the <code>bbplot</code> package you now can make plots worthy of the <a href="https://www.bbc.com/news" class="uri">https://www.bbc.com/news</a>.</p>
 <p>First, we need to install the <code>bbplot</code> package which is only available from GitHub. To do so, we’ll use <code>remotes::install_github()</code> instead of the typical function <code>install.packages()</code>. The latter only works for R packages distributed by CRAN. If you don’t have <code>remotes</code> installed, you’ll have to install it from CRAN with <code>install.packages("remotes")</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install all required packages</span></span>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install bbplot</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"bbc/bbplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Next, let’s try the <code>bbplot::bbc_style()</code> function on a plot we made before.</p>
@@ -993,6 +994,61 @@ Example
 <p>Voilà! Hopefully our editor likes the plot we made!</p>
 <p>P.S. Follow <a href="https://twitter.com/christinezhang">Christine Zhang</a> on Twitter / X for more <a href="https://twitter.com/hashtag/dataviz?src=hashtag_click">#dataviz</a> and data journalism.</p>
 </section>
+<section id="what-about-barbenheimer" class="level1">
+<h1>What about Barbenheimer?</h1>
+<p>Well, there’s <a href="https://github.com/MatthewBJane/theme_park" class="uri">https://github.com/MatthewBJane/theme_park</a> now. Here are some examples with it:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install ThemePark from GitHub</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"MatthewBJane/theme_park"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Barbie-inspired theme</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>g <span class="sc">+</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">colour =</span> bmicat), <span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">linewidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#FAAB18"</span>, <span class="st">"#1380A1"</span>)) <span class="sc">+</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    ThemePark<span class="sc">::</span><span class="fu">theme_barbie</span>() <span class="sc">+</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"Child asthma's link to air quality worsens in overweight children"</span>,</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">"Number of days with symptoms vs PM2.5 by weight group"</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="1248"></p>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Oppenheimer-inspired theme</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>g <span class="sc">+</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">colour =</span> bmicat), <span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">linewidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#FAAB18"</span>, <span class="st">"#1380A1"</span>)) <span class="sc">+</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    ThemePark<span class="sc">::</span><span class="fu">theme_oppenheimer</span>() <span class="sc">+</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"Child asthma's link to air quality worsens in overweight children"</span>,</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">"Number of days with symptoms vs PM2.5 by weight group"</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-24-2.png" class="img-fluid" width="1248"></p>
+</div>
+</div>
+<p>Nowadays you can find many <code>ggplot2</code> themes online. Just search your favorite movie / keyword + <code>ggplot2</code> on Google Search or your favorite browser search tool.</p>
+<p>Note that one great package with many themes is the <code>ggthemes</code> package showcased at <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/" class="uri">https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install ggthemes from CRAN</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggthemes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Your favorite statistics class theme ;)</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="do">## I bet that you could fool a few people into thinking that you are not using R ^_^'</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>g <span class="sc">+</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">colour =</span> bmicat), <span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">linewidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#FAAB18"</span>, <span class="st">"#1380A1"</span>)) <span class="sc">+</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    ggthemes<span class="sc">::</span><span class="fu">theme_stata</span>() <span class="sc">+</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"Child asthma's link to air quality worsens in overweight children"</span>,</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">"Number of days with symptoms vs PM2.5 by weight group"</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
 <section id="post-lecture-materials" class="level1">
 <h1>Post-lecture materials</h1>
 <section id="resources" class="level3">
@@ -1017,41 +1073,2278 @@ Click here for a slightly more complicated example with <code>ggplot()</code>.
 <p>Unlike our previous BMI variable, NO2 is continuous, and so we need to make NO2 categorical so we can condition on it in the plotting. We can use the <code>cut()</code> function for this purpose. We will divide the NO2 variable into tertiles.</p>
 <p>First we need to calculate the tertiles with the <code>quantile()</code> function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>cutpoints <span class="ot">&lt;-</span> <span class="fu">quantile</span>(maacs<span class="sc">$</span>logno2_new, <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length =</span> <span class="dv">4</span>), <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>cutpoints <span class="ot">&lt;-</span> <span class="fu">quantile</span>(maacs<span class="sc">$</span>logno2_new, <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length =</span> <span class="dv">4</span>), <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we need to divide the original <code>logno2_new</code> variable into the ranges defined by the cut points computed above.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>maacs<span class="sc">$</span>no2tert <span class="ot">&lt;-</span> <span class="fu">cut</span>(maacs<span class="sc">$</span>logno2_new, cutpoints)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>maacs<span class="sc">$</span>no2tert <span class="ot">&lt;-</span> <span class="fu">cut</span>(maacs<span class="sc">$</span>logno2_new, cutpoints)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <code>not2tert</code> variable is now a categorical factor variable containing 3 levels, indicating the ranges of NO2 (on the log scale).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="do">## See the levels of the newly created factor variable</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(maacs<span class="sc">$</span>no2tert)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="do">## See the levels of the newly created factor variable</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(maacs<span class="sc">$</span>no2tert)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "(0.342,1.23]" "(1.23,1.47]"  "(1.47,2.17]" </code></pre>
 </div>
 </div>
 <p>The final plot shows the relationship between PM2.5 and nocturnal symptoms by BMI category and NO2 tertile.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Setup ggplot with data frame</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>g <span class="ot">&lt;-</span> maacs <span class="sc">%&gt;%</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(logpm25, NocturnalSympt))</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Add layers</span></span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_grid</span>(bmicat <span class="sc">~</span> no2tert) <span class="sc">+</span></span>
-<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">col =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>(<span class="at">base_family =</span> <span class="st">"Avenir"</span>, <span class="at">base_size =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="fu">expression</span>(<span class="st">"log "</span> <span class="sc">*</span> PM[<span class="fl">2.5</span>])) <span class="sc">+</span></span>
-<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Nocturnal Symptoms"</span>) <span class="sc">+</span></span>
-<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"MAACS Cohort"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Setup ggplot with data frame</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>g <span class="ot">&lt;-</span> maacs <span class="sc">%&gt;%</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(logpm25, NocturnalSympt))</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Add layers</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_grid</span>(bmicat <span class="sc">~</span> no2tert) <span class="sc">+</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">col =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>(<span class="at">base_family =</span> <span class="st">"Avenir"</span>, <span class="at">base_size =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="fu">expression</span>(<span class="st">"log "</span> <span class="sc">*</span> PM[<span class="fl">2.5</span>])) <span class="sc">+</span></span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Nocturnal Symptoms"</span>) <span class="sc">+</span></span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"MAACS Cohort"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+family 'Avenir' not found, will use 'sans' instead</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead
+
+Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+font family 'Avenir' not found, will use 'sans' instead</code></pre>
 </div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="864"></p>
 <figcaption class="figure-caption">PM2.5 and nocturnal symptoms by BMI category and NO2 tertile</figcaption>
 </figure>
 </div>
@@ -1104,8 +3397,8 @@ Tip
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
@@ -1121,66 +3414,72 @@ Tip
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
- package        * version date (UTC) lib source
- bbplot           0.2     2023-09-14 [1] Github (bbc/bbplot@82af595)
- bit              4.0.5   2022-11-15 [1] CRAN (R 4.3.0)
- bit64            4.0.5   2020-08-30 [1] CRAN (R 4.3.0)
- cli              3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout         1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
- colorspace       2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
- crayon           1.5.2   2022-09-29 [1] CRAN (R 4.3.0)
- digest           0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- dplyr          * 1.1.3   2023-09-03 [1] CRAN (R 4.3.0)
- evaluate         0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fansi            1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
- farver           2.1.1   2022-07-06 [1] CRAN (R 4.3.0)
- fastmap          1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- forcats        * 1.0.0   2023-01-29 [1] CRAN (R 4.3.0)
- generics         0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
- ggplot2        * 3.4.3   2023-08-14 [1] CRAN (R 4.3.0)
- glue             1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
- gtable           0.3.4   2023-08-21 [1] CRAN (R 4.3.0)
- here           * 1.0.1   2020-12-13 [1] CRAN (R 4.3.0)
- hms              1.1.3   2023-03-21 [1] CRAN (R 4.3.0)
- htmltools        0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets      1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- jsonlite         1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr            1.43    2023-05-25 [1] CRAN (R 4.3.0)
- labeling         0.4.3   2023-08-29 [1] CRAN (R 4.3.0)
- lattice          0.21-8  2023-04-05 [1] CRAN (R 4.3.1)
- lifecycle        1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
- lubridate      * 1.9.2   2023-02-10 [1] CRAN (R 4.3.0)
- magrittr         2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
- Matrix           1.6-1   2023-08-14 [1] CRAN (R 4.3.0)
- mgcv             1.9-0   2023-07-11 [1] CRAN (R 4.3.0)
- munsell          0.5.0   2018-06-12 [1] CRAN (R 4.3.0)
- nlme             3.1-163 2023-08-09 [1] CRAN (R 4.3.0)
- palmerpenguins * 0.1.1   2022-08-15 [1] CRAN (R 4.3.0)
- pillar           1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
- pkgconfig        2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
- purrr          * 1.0.2   2023-08-10 [1] CRAN (R 4.3.0)
- R6               2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
- readr          * 2.1.4   2023-02-10 [1] CRAN (R 4.3.0)
- rlang            1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown        2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rprojroot        2.0.3   2022-04-02 [1] CRAN (R 4.3.0)
- rstudioapi       0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- scales           1.2.1   2022-08-20 [1] CRAN (R 4.3.0)
- sessioninfo      1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- stringi          1.7.12  2023-01-11 [1] CRAN (R 4.3.0)
- stringr        * 1.5.0   2022-12-02 [1] CRAN (R 4.3.0)
- tibble         * 3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
- tidyr          * 1.3.0   2023-01-24 [1] CRAN (R 4.3.0)
- tidyselect       1.2.0   2022-10-10 [1] CRAN (R 4.3.0)
- tidyverse      * 2.0.0   2023-02-22 [1] CRAN (R 4.3.0)
- timechange       0.2.0   2023-01-11 [1] CRAN (R 4.3.0)
- tzdb             0.4.0   2023-05-12 [1] CRAN (R 4.3.0)
- utf8             1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
- vctrs            0.6.3   2023-06-14 [1] CRAN (R 4.3.0)
- vroom            1.6.3   2023-04-28 [1] CRAN (R 4.3.0)
- withr            2.5.0   2022-03-03 [1] CRAN (R 4.3.0)
- xfun             0.40    2023-08-09 [1] CRAN (R 4.3.0)
- yaml             2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ package        * version    date (UTC) lib source
+ bbplot           0.2        2023-09-14 [1] Github (bbc/bbplot@82af595)
+ bit              4.0.5      2022-11-15 [1] CRAN (R 4.3.0)
+ bit64            4.0.5      2020-08-30 [1] CRAN (R 4.3.0)
+ cli              3.6.1      2023-03-23 [1] CRAN (R 4.3.0)
+ colorout         1.2-2      2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
+ colorspace       2.1-0      2023-01-23 [1] CRAN (R 4.3.0)
+ crayon           1.5.2      2022-09-29 [1] CRAN (R 4.3.0)
+ curl             5.0.2      2023-08-14 [1] CRAN (R 4.3.1)
+ digest           0.6.33     2023-07-07 [1] CRAN (R 4.3.0)
+ dplyr          * 1.1.3      2023-09-03 [1] CRAN (R 4.3.0)
+ evaluate         0.21       2023-05-05 [1] CRAN (R 4.3.0)
+ fansi            1.0.4      2023-01-22 [1] CRAN (R 4.3.0)
+ farver           2.1.1      2022-07-06 [1] CRAN (R 4.3.0)
+ fastmap          1.1.1      2023-02-24 [1] CRAN (R 4.3.0)
+ forcats        * 1.0.0      2023-01-29 [1] CRAN (R 4.3.0)
+ generics         0.1.3      2022-07-05 [1] CRAN (R 4.3.0)
+ ggplot2        * 3.4.3      2023-08-14 [1] CRAN (R 4.3.0)
+ ggthemes         4.2.4      2021-01-20 [1] CRAN (R 4.3.0)
+ glue             1.6.2      2022-02-24 [1] CRAN (R 4.3.0)
+ gtable           0.3.4      2023-08-21 [1] CRAN (R 4.3.0)
+ here           * 1.0.1      2020-12-13 [1] CRAN (R 4.3.0)
+ hms              1.1.3      2023-03-21 [1] CRAN (R 4.3.0)
+ htmltools        0.5.6      2023-08-10 [1] CRAN (R 4.3.0)
+ htmlwidgets      1.6.2      2023-03-17 [1] CRAN (R 4.3.0)
+ jsonlite         1.8.7      2023-06-29 [1] CRAN (R 4.3.0)
+ knitr            1.43       2023-05-25 [1] CRAN (R 4.3.0)
+ labeling         0.4.3      2023-08-29 [1] CRAN (R 4.3.0)
+ lattice          0.21-8     2023-04-05 [1] CRAN (R 4.3.1)
+ lifecycle        1.0.3      2022-10-07 [1] CRAN (R 4.3.0)
+ lubridate      * 1.9.2      2023-02-10 [1] CRAN (R 4.3.0)
+ magrittr         2.0.3      2022-03-30 [1] CRAN (R 4.3.0)
+ Matrix           1.6-1      2023-08-14 [1] CRAN (R 4.3.0)
+ mgcv             1.9-0      2023-07-11 [1] CRAN (R 4.3.0)
+ munsell          0.5.0      2018-06-12 [1] CRAN (R 4.3.0)
+ nlme             3.1-163    2023-08-09 [1] CRAN (R 4.3.0)
+ palmerpenguins * 0.1.1      2022-08-15 [1] CRAN (R 4.3.0)
+ pillar           1.9.0      2023-03-22 [1] CRAN (R 4.3.0)
+ pkgconfig        2.0.3      2019-09-22 [1] CRAN (R 4.3.0)
+ purrr          * 1.0.2      2023-08-10 [1] CRAN (R 4.3.0)
+ R6               2.5.1      2021-08-19 [1] CRAN (R 4.3.0)
+ readr          * 2.1.4      2023-02-10 [1] CRAN (R 4.3.0)
+ rlang            1.1.1      2023-04-28 [1] CRAN (R 4.3.0)
+ rmarkdown        2.24       2023-08-14 [1] CRAN (R 4.3.1)
+ rprojroot        2.0.3      2022-04-02 [1] CRAN (R 4.3.0)
+ rstudioapi       0.15.0     2023-07-07 [1] CRAN (R 4.3.0)
+ scales           1.2.1      2022-08-20 [1] CRAN (R 4.3.0)
+ sessioninfo      1.2.2      2021-12-06 [1] CRAN (R 4.3.0)
+ showtext         0.9-6      2023-05-03 [1] CRAN (R 4.3.0)
+ showtextdb       3.0        2020-06-04 [1] CRAN (R 4.3.0)
+ stringi          1.7.12     2023-01-11 [1] CRAN (R 4.3.0)
+ stringr        * 1.5.0      2022-12-02 [1] CRAN (R 4.3.0)
+ sysfonts         0.8.8      2022-03-13 [1] CRAN (R 4.3.0)
+ ThemePark        0.0.0.9000 2023-09-14 [1] Github (MatthewBJane/theme_park@dbf98c5)
+ tibble         * 3.2.1      2023-03-20 [1] CRAN (R 4.3.0)
+ tidyr          * 1.3.0      2023-01-24 [1] CRAN (R 4.3.0)
+ tidyselect       1.2.0      2022-10-10 [1] CRAN (R 4.3.0)
+ tidyverse      * 2.0.0      2023-02-22 [1] CRAN (R 4.3.0)
+ timechange       0.2.0      2023-01-11 [1] CRAN (R 4.3.0)
+ tzdb             0.4.0      2023-05-12 [1] CRAN (R 4.3.0)
+ utf8             1.2.3      2023-01-31 [1] CRAN (R 4.3.0)
+ vctrs            0.6.3      2023-06-14 [1] CRAN (R 4.3.0)
+ vroom            1.6.3      2023-04-28 [1] CRAN (R 4.3.0)
+ withr            2.5.0      2022-03-03 [1] CRAN (R 4.3.0)
+ xfun             0.40       2023-08-09 [1] CRAN (R 4.3.0)
+ yaml             2.3.7      2023-01-23 [1] CRAN (R 4.3.0)
 
  [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
 
