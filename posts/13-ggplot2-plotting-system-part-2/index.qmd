@@ -130,8 +130,8 @@ We can look at the data quickly by reading it in as a tibble with `read_csv()` i
 
 ```{r}
 #| message: false
-library(tidyverse)
-library(here)
+library("tidyverse")
+library("here")
 maacs <- read_csv(here("data", "bmi_pm25_no2_sim.csv"),
     col_types = "nnci"
 )
@@ -228,7 +228,7 @@ Let's use the `ggplot()` function with our `palmerpenguins` dataset example and 
 ```{r}
 # try it yourself
 
-library(palmerpenguins)
+library("palmerpenguins")
 penguins
 ```
 :::
@@ -347,7 +347,7 @@ Let's take our `palmerpenguins` scatterplot from above and change out the theme 
 ```{r}
 # try it yourself
 
-library(palmerpenguins)
+library("palmerpenguins")
 penguins
 ```
 :::
@@ -436,6 +436,76 @@ g +
 ```
 
 And now you know!
+
+# Do you like BBC's plots? Make your own!
+
+Well, thanks to <https://bbc.github.io/rcookbook/> and the `bbplot` package you now can make plots worthy of the <https://www.bbc.com/news>.
+
+First, we need to install the `bbplot` package which is only available from GitHub. To do so, we'll use `remotes::install_github()` instead of the typical function `install.packages()`. The latter only works for R packages distributed by CRAN. If you don't have `remotes` installed, you'll have to install it from CRAN with `install.packages("remotes")`.
+
+```{r}
+#| eval: false
+## Install all required packages
+remotes::install_github("bbc/bbplot")
+```
+
+Next, let's try the `bbplot::bbc_style()` function on a plot we made before.
+
+```{r}
+#| message: false
+#| fig-width: 13
+## Basic ggplot2 object with our data
+g <- maacs %>%
+    ggplot(aes(logpm25, NocturnalSympt))
+
+## A plot we made before, but this time without the SE lines
+g +
+    geom_point() +
+    geom_smooth(method = "lm", se = FALSE) +
+    facet_grid(. ~ bmicat)
+
+## Now let's add bbplot::bbc_style()
+g +
+    geom_point() +
+    geom_smooth(method = "lm", se = FALSE) +
+    facet_grid(. ~ bmicat) +
+    bbplot::bbc_style()
+```
+
+Next, we can use the blue color that the BBC frequently uses and further improve our plot by adding a title and subtitle.
+
+```{r}
+#| message: false
+#| fig-width: 13
+g +
+    geom_point() +
+    geom_smooth(colour = "#1380A1", method = "lm", se = FALSE) +
+    facet_grid(. ~ bmicat) +
+    bbplot::bbc_style() +
+    labs(
+        title = "Child asthma's link to air quality worsens in overweight children",
+        subtitle = "Number of days with symptoms vs PM2.5 by weight group"
+    )
+```
+
+But maybe that was too confusing for our readers as we are showing a lot of information. We can drop the points and only keep the regression lines. Here we'll need to map the `bmicat` variable to the `color` (or `colour`) aesthetic, then manually change the colors we want to match the typical yellow and blue colors the BBC uses. See <https://htmlcolorcodes.com/>, <https://www.color-hex.com/>, or other similar websites for visualizing HTML Hex color codes. We can also increase the line width.
+
+```{r}
+#| message: false
+#| fig-width: 13
+g +
+    geom_smooth(aes(colour = bmicat), method = "lm", se = FALSE, linewidth = 2) +
+    scale_colour_manual(values = c("#FAAB18", "#1380A1")) +
+    bbplot::bbc_style() +
+    labs(
+        title = "Child asthma's link to air quality worsens in overweight children",
+        subtitle = "Number of days with symptoms vs PM2.5 by weight group"
+    )
+```
+
+Voilà! Hopefully our editor likes the plot we made!
+
+P.S. Follow [Christine Zhang](https://twitter.com/christinezhang) on Twitter / X for more [#dataviz](https://twitter.com/hashtag/dataviz?src=hashtag_click) and data journalism.
 
 # Post-lecture materials
 
