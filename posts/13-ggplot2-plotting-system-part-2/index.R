@@ -244,7 +244,7 @@ plotly::ggplotly((g_complete))
 
 #| eval: false
 ## ## Install colorblindr from GitHub
-## remotes::install_github("wilkelab/cowplot")
+## remotes::install_github("clauswilke/colorblindr")
 
 
 #| message: false
