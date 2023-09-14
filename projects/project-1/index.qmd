@@ -200,7 +200,7 @@ The goal of this part of the assignment is to join two datasets together. `gapmi
 
 # Part 3: Convert wide data into long data
 
-The goal of this part of the assignment is to take a dataset that is either messy or simply not tidy and to make them tidy datasets. The objective is to gain some familiarity with the functions in the `dplyr`, `tidyr` packages. You may find it helpful to review the section on spreading and gathering data.
+The goal of this part of the assignment is to take a dataset that is either messy or simply not tidy and to make them tidy datasets. The objective is to gain some familiarity with the functions in the `dplyr`, `tidyr` packages. You may find it helpful to review the section on pivoting data from wide to long format and vice versa.
 
 ### Tasks
 
