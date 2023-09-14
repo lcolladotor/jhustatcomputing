@@ -1,6 +1,6 @@
 #| message: false
-library(tidyverse)
-library(here)
+library("tidyverse")
+library("here")
 maacs <- read_csv(here("data", "bmi_pm25_no2_sim.csv"),
     col_types = "nnci"
 )
@@ -45,7 +45,7 @@ g +
 
 # try it yourself
 
-library(palmerpenguins)
+library("palmerpenguins")
 penguins
 
 
@@ -90,7 +90,7 @@ g +
 
 # try it yourself
 
-library(palmerpenguins)
+library("palmerpenguins")
 penguins
 
 
@@ -132,6 +132,114 @@ g +
 g +
     geom_line() +
     coord_cartesian(ylim = c(-3, 3))
+
+
+#| eval: false
+## ## Install bbplot
+## remotes::install_github("bbc/bbplot")
+
+
+#| message: false
+#| fig-width: 13
+## Basic ggplot2 object with our data
+g <- maacs %>%
+    ggplot(aes(logpm25, NocturnalSympt))
+
+## A plot we made before, but this time without the SE lines
+g +
+    geom_point() +
+    geom_smooth(method = "lm", se = FALSE) +
+    facet_grid(. ~ bmicat)
+
+## Now let's add bbplot::bbc_style()
+g +
+    geom_point() +
+    geom_smooth(method = "lm", se = FALSE) +
+    facet_grid(. ~ bmicat) +
+    bbplot::bbc_style()
+
+
+#| message: false
+#| fig-width: 13
+g +
+    geom_point() +
+    geom_smooth(colour = "#1380A1", method = "lm", se = FALSE) +
+    facet_grid(. ~ bmicat) +
+    bbplot::bbc_style() +
+    labs(
+        title = "Child asthma's link to air quality worsens in overweight children",
+        subtitle = "Number of days with symptoms vs PM2.5 by weight group"
+    )
+
+
+#| message: false
+#| fig-width: 13
+g +
+    geom_smooth(aes(colour = bmicat), method = "lm", se = FALSE, linewidth = 2) +
+    scale_colour_manual(values = c("#FAAB18", "#1380A1")) +
+    bbplot::bbc_style() +
+    labs(
+        title = "Child asthma's link to air quality worsens in overweight children",
+        subtitle = "Number of days with symptoms vs PM2.5 by weight group"
+    )
+
+
+#| eval: false
+## ## Install ThemePark from GitHub
+## remotes::install_github("MatthewBJane/theme_park")
+
+
+#| message: false
+#| fig-width: 13
+## Barbie-inspired theme
+g +
+    geom_smooth(aes(colour = bmicat), method = "lm", se = FALSE, linewidth = 2) +
+    scale_colour_manual(values = c("#FAAB18", "#1380A1")) +
+    ThemePark::theme_barbie() +
+    labs(
+        title = "Child asthma's link to air quality worsens in overweight children",
+        subtitle = "Number of days with symptoms vs PM2.5 by weight group"
+    )
+
+## Oppenheimer-inspired theme
+g +
+    geom_smooth(aes(colour = bmicat), method = "lm", se = FALSE, linewidth = 2) +
+    scale_colour_manual(values = c("#FAAB18", "#1380A1")) +
+    ThemePark::theme_oppenheimer() +
+    labs(
+        title = "Child asthma's link to air quality worsens in overweight children",
+        subtitle = "Number of days with symptoms vs PM2.5 by weight group"
+    )
+
+
+#| eval: false
+## ## Install ggthemes from CRAN
+## install.packages("ggthemes")
+
+
+#| message: false
+## Your favorite statistics class theme ;)
+## I bet that you could fool a few people into thinking
+## that you are not using R ^_^'
+g +
+    geom_smooth(aes(colour = bmicat), method = "lm", se = FALSE, linewidth = 2) +
+    scale_colour_manual(values = c("#FAAB18", "#1380A1")) +
+    ggthemes::theme_stata() +
+    labs(
+        title = "Child asthma's link to air quality worsens in overweight children",
+        subtitle = "Number of days with symptoms vs PM2.5 by weight group"
+    )
+
+
+#| message: false
+## Save our plot into an object
+g_complete <- g +
+    geom_point(aes(colour = bmicat)) +
+    geom_smooth(aes(colour = bmicat), method = "lm", se = FALSE, linewidth = 2) +
+    scale_colour_manual(values = c("#FAAB18", "#1380A1"))
+
+## Make it interactive with plotly::ggplotly()
+plotly::ggplotly((g_complete))
 
 
 
