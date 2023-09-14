@@ -242,6 +242,15 @@ g_complete <- g +
 plotly::ggplotly((g_complete))
 
 
+#| eval: false
+## ## Install colorblindr from GitHub
+## remotes::install_github("wilkelab/cowplot")
+
+
+#| message: false
+colorblindr::cvd_grid(g_complete)
+
+
 
 cutpoints <- quantile(maacs$logno2_new, seq(0, 1, length = 4), na.rm = TRUE)
 

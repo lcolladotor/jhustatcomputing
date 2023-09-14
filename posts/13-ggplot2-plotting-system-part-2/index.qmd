@@ -582,6 +582,27 @@ g_complete <- g +
 plotly::ggplotly((g_complete))
 ```
 
+Because `ggplot2::ggplot()` actually returns an object, we can use `plotly::ggplotly()` instead of the `print()` methods from `ggplot2` to take the data, aesthetic mappings, etc that we have defined and visualize them in a different graphical system such as `plotly`. Base R plotting functions do not return objects and we thus cannot easily change the graphical system we are using.
+
+# Visual impairments
+
+Similar to how `plotly::ggplotly()` benefited from having access to the `gg` + `ggplot` objects, there is a great GitHub package called `colorblindr` that can help us simulate different visual impairments. It is available from <https://github.com/clauswilke/colorblindr>.
+
+```{r}
+#| eval: false
+## Install colorblindr from GitHub
+remotes::install_github("wilkelab/cowplot")
+```
+
+We can use the `cvd_grid()` function to plot a given `ggplot` object with colors that simulate deutanomaly, trianomaly, protanomaly, and also show the colors in their desaturated scale. That way, you can get an approximate idea to what individuals with these visual impairments see. Then if you cannot differentiate the colors, you know that they likely won't be able to differentiate them either.
+
+```{r}
+#| message: false
+colorblindr::cvd_grid(g_complete)
+```
+
+At <https://github.com/LieberInstitute/Visium_SPG_AD/blob/master/plots/09_pathology_vs_BayesSpace/pathology_groups_colorblind.pdf> you can find an example of an actual use case for my work that I made with <https://github.com/LieberInstitute/Visium_SPG_AD/blob/master/code/09_pathology_vs_BayesSpace/04_label_pathology_spots.R>.
+
 # Post-lecture materials
 
 ### Resources
