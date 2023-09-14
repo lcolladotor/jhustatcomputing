@@ -31,13 +31,15 @@ To get started, [watch this video on setting up your R Markdown document](https:
 Before attempting this assignment, you should first install the `tidyverse` package if you have not already. The `tidyverse` package is actually a collection of many packages that serves as a convenient way to install many packages without having to do them one by one. This can be done with the `install.packages()` function.
 
 ```{r,eval=FALSE}
-install.packages("tidyverse")
+## Install the tidyverse package if you don't have it
+if (!require("tidyverse", quietly = TRUE))
+    install.packages("tidyverse")
 ```
 
 Running this function will install a host of other packages so it make take a minute or two depending on how fast your computer is. Once you have installed it, you will want to load the package.
 
 ```{r, message=FALSE}
-library(tidyverse)
+library("tidyverse")
 ```
 
 ### Data
@@ -53,7 +55,9 @@ If we look at the [TidyTuesday github repo](https://github.com/rfordatascience/t
 To access the data, you need to install the `tidytuesdayR` R package and use the function `tt_load()` with the date of '2022-01-18' to load the data.
 
 ```{r,eval=FALSE}
-install.packages("tidytuesdayR")
+## Install the tidytuesdayR package if you don't have it
+if (!require("tidytuesdayR", quietly = TRUE))
+    install.packages("tidytuesdayR")
 ```
 
 This is how you can download the data.
@@ -68,8 +72,8 @@ However, if you use this code, you will hit an API limit after trying to compile
 
 ```{r}
 #| message: false
-library(here)
-library(tidyverse)
+library("here")
+library("tidyverse")
 
 # tests if a directory named "data" exists locally
 if (!dir.exists(here("data"))) {

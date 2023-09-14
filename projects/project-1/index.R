@@ -1,13 +1,17 @@
 
-## install.packages("tidyverse")
+## ## Install the tidyverse package if you don't have it
+## if (!require("tidyverse", quietly = TRUE))
+##     install.packages("tidyverse")
 
 
 
-library(tidyverse)
+library("tidyverse")
 
 
 
-## install.packages("tidytuesdayR")
+## ## Install the tidytuesdayR package if you don't have it
+## if (!require("tidytuesdayR", quietly = TRUE))
+##     install.packages("tidytuesdayR")
 
 
 #| eval: false
@@ -16,8 +20,8 @@ library(tidyverse)
 
 
 #| message: false
-library(here)
-library(tidyverse)
+library("here")
+library("tidyverse")
 
 # tests if a directory named "data" exists locally
 if (!dir.exists(here("data"))) {
