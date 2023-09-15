@@ -435,9 +435,9 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 3 × 1
        x
    &lt;dbl&gt;
-1 -0.599
-2  1.49 
-3 -0.756</code></pre>
+1  0.386
+2 -0.797
+3 -2.24 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a new column that indicates whether the value of 'x' is positive or negative</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
@@ -447,18 +447,18 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 2
-        x is_positive
-    &lt;dbl&gt; &lt;chr&gt;      
- 1 -0.599 No         
- 2  1.49  Yes        
- 3 -0.756 No         
- 4  1.94  Yes        
- 5  1.48  Yes        
- 6  0.367 Yes        
- 7  0.121 Yes        
- 8 -1.42  No         
- 9 -0.149 No         
-10  0.948 Yes        
+         x is_positive
+     &lt;dbl&gt; &lt;chr&gt;      
+ 1  0.386  Yes        
+ 2 -0.797  No         
+ 3 -2.24   No         
+ 4  0.252  Yes        
+ 5  0.251  Yes        
+ 6  0.161  Yes        
+ 7 -0.157  No         
+ 8  0.494  Yes        
+ 9 -0.0802 No         
+10  0.236  Yes        
 # ℹ 90 more rows</code></pre>
 </div>
 </div>
@@ -528,14 +528,14 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <p>In this part of the project, we will continue to work with our now tidy song dataset from the previous part.</p>
 <section id="tasks-2" class="level3">
 <h3 class="anchored" data-anchor-id="tasks-2">Tasks</h3>
-<p>Use the functions in <code>ggplot2</code> package to make a scatter plot of the <code>mean_score</code>s (y-axis) over time (x-axis). One plot for each <code>mean_score</code>. For full credit, your plot should include:</p>
+<p>Use the functions in <code>ggplot2</code> package to make a scatter plot of the <code>mean_score</code>s (y-axis) over time (x-axis). One point for each <code>mean_score</code>. For full credit, your plot should include:</p>
 <ol type="1">
 <li>An overall title for the plot and a subtitle summarizing key trends that you found. Also include a caption in the figure with your name.</li>
 <li>Both the observed points for the <code>mean_score</code>, but also a smoothed non-linear pattern of the trend</li>
 <li>All plots should be shown in the one figure</li>
 <li>There should be an informative x-axis and y-axis label</li>
 </ol>
-<p>Consider playing around with the <code>theme()</code> function to make the figure shine, including playing with background colors, font, etc.</p>
+<p>Consider playing around with the <code>theme()</code> function to make the figure shine, including playing with background colors, font, etc. See <a href="https://github.com/lcolladotor/jhustatcomputing2023/issues/4" class="uri">https://github.com/lcolladotor/jhustatcomputing2023/issues/4</a> for an example on how you can choose colors if you have too many categories.</p>
 </section>
 <section id="notes-1" class="level3">
 <h3 class="anchored" data-anchor-id="notes-1">Notes</h3>
@@ -605,7 +605,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-09-14
+ date     2023-09-15
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
