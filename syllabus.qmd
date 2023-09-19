@@ -117,7 +117,9 @@ Although the each student is only given a total of two late days, we will be acc
 -   We will be deducting 5% for each extra late day. For example, if you have already used all of your late days for the term, we will deduct 5% for the assignment that is \<24 hours late, 10% points for the assignment that is 24-48 hours late, and 15% points for the assignment that is 48-72 hours late.
 -   **We will not grade assignments that are more than 3 days past the original due date**.
 
-To submit a late homework, send it via email to the instructor and all TAs. That way everyone involved will receive the same communication and we can avoid any confusion and/or misunderstandings. Thank you.
+### Submit a late project
+
+To submit a late project, send it via email to the instructor and all TAs. That way everyone involved will receive the same communication and we can avoid any confusion and/or misunderstandings. We will then manually submit it for you on the corresponding CoursePlus DropBox. Thank you.
 
 ### Regrading Policy
 
