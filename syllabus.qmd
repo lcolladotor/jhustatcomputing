@@ -100,6 +100,20 @@ There are **no exams** in this course.
 
 Grades in the course will be based on Projects 0--3 with a percentage of the final grade being apportioned to each assignment. Each of Projects 1--3 counts approximately equally in the final grade. Grades for the projects and the final grade will be issued via the CoursePlus grade book.
 
+### Points deducted
+
+On a given project, we will deduct:
+
+-   1 points: typo on a function call. Think about it as an orthographic mistake.
+
+-   2 points: missed a function call. Think about it as a grammatical mistake.
+
+-   3 points: provided the wrong answer. For example, if a question asked about the median for a variable and you used `mean()` instead of `median()`.
+
+-   5 points: did not provide an answer for a sub-section of a part of a project. Like question 2 of part 1 from project 1.
+
+-   10 points: did not provide an answer for a part of a project.
+
 ## Policy for submitting projects late
 
 **The instructor and TAs will not accept email late day policy requests**.
