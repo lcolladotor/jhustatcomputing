@@ -102,11 +102,27 @@ y <- 1:10
 x * y
 ```
 
+That is, we don't write a `for` loop that takes each element of `x` and each element of `y`, adds, them up, then puts them all in a single vector.
+
+```{r}
+## Check that x and y have the same length
+stopifnot(length(x) == length(y))
+## Create our result object
+result <- vector(mode = "integer", length = length(x))
+## Loop through each element of x and y, calculate the sum,
+## then store it on 'result'
+for (i in seq_along(x)) {
+    result[i] <- x[i] + y[i]
+}
+## Check that we got the same answer
+identical(result, x + y)
+```
+
 # Functional loops
 
 While `for` loops are perfectly valid, when you use vectorization in an element-wise fashion, there is no need for `for` loops because we can apply what are called functional loops.
 
-**Functional loops** are functions that help us apply the same function to each entry in a vector, matrix, data frame, or list. Here are a list of them:
+**Functional loops** are functions that help us apply the same function to each entry in a vector, matrix, data frame, or list. Here are a list of them in base R:
 
 -   `lapply()`: Loop over a list and evaluate a function on each element
 
@@ -119,6 +135,206 @@ While `for` loops are perfectly valid, when you use vectorization in an element-
 -   `mapply()`: Multivariate version of `lapply` (won't cover)
 
 An auxiliary function `split()` is also useful, particularly in conjunction with `lapply()`.
+
+## Define a function
+
+```{r}
+my_sum <- function(a, b) {
+    a + b
+}
+
+## Same but with an extra check to make sure that 'a' and 'b'
+## have the same lengths.
+my_sum <- function(a, b) {
+    ## Check that a and b are of the same length
+    stopifnot(length(a) == length(b))
+    a + b
+}
+```
+
+## Extra material: document + test + share functions
+
+### Document your function with `roxygen2`
+
+Extra: document your function with `roxygen2` syntax. `Code` (or magic wand) -\> `Insert Roxygen skeleton` . For more details about `roxygen2` check <https://r-pkgs.org/man.html> and <https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html>.
+
+```{r}
+#' Title
+#'
+#' @param a 
+#' @param b 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+my_sum <- function(a, b) {
+    ## Check that a and b are of the same length
+    stopifnot(length(a) == length(b))
+    a + b
+}
+```
+
+```{r}
+#' Title
+#' 
+#' Description
+#' 
+#' Details
+#'
+#' @param a What is `a`?
+#' @param b What is `b`?
+#'
+#' @return What does the function return?
+#' @export ## Do we want to share this function? yes!
+#'
+#' @examples
+#' ## How do you use this function?
+my_sum <- function(a, b) {
+    ## Check that a and b are of the same length
+    stopifnot(length(a) == length(b))
+    a + b
+}
+```
+
+Here is a full example
+
+```{r}
+#' Sum two vectors
+#'
+#' This function does the element wise sum of two vectors.
+#'
+#' It really is just an example function that is powered by the `+` operator
+#' from [base::Arithmetic].
+#'
+#' @param a An `integer()` or `numeric()` vector of length `L`.
+#' @param b An `integer()` or `numeric()` vector of length `L`.
+#'
+#' @return An `integer()` or `numeric()` vector of length `L` with
+#' the element-wise sum of `a` and `b`.
+#' @export
+#'
+#' @examples
+#' ## Generate some input data
+#' x <- 1:10
+#' y <- 1:10
+#'
+#' ## Perform the element wise sum
+#' my_sum(x, y)
+my_sum <- function(a, b) {
+    ## Check that a and b are of the same length
+    stopifnot(length(a) == length(b))
+    a + b
+}
+```
+
+### Test your function with `testthat`
+
+Below will use two `expect_*()` functions from `testthat`. For more details, check <https://r-pkgs.org/testing-basics.html>.
+
+```{r}
+library("testthat")
+test_that("my_sum works", {
+    x <- seq_len(10)
+    expect_equal(my_sum(x, x), x + x)
+
+    expect_error(my_sum(x, seq_len(5)))
+})
+
+```
+
+### Share your function in an R package
+
+What even more? Make an R package to share this function.
+
+```{r}
+#| eval: false
+## Install biocthis if you don't have it
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("biocthis")
+
+## Create an empty R package that is also an
+## RStudio project
+usethis::create_package("~/Desktop/sum776")
+
+## On the new RStudio window, create the
+## scripts that will guide you into making a package
+biocthis::use_bioc_pkg_templates()
+```
+
+See my example at <https://github.com/lcolladotor/sum776> with its documentation website <https://lcolladotor.github.io/sum776/>. The documentation we wrote for our function is shown at <https://lcolladotor.github.io/sum776/reference/my_sum.html>.
+
+As this package is fully functional and tested (see <https://github.com/lcolladotor/sum776/actions> and in particular <https://github.com/lcolladotor/sum776/actions/runs/6305876152/job/17120052804#step:20:27>), we can install it from GitHub as any other R package on GitHub.
+
+```{r}
+#| eval: false
+remotes::install_github("lcolladotor/sum776")
+```
+
+### Build your own R package with your custom-made `ggplot2` theme
+
+As you can see from <https://github.com/MatthewBJane/ThemePark/blob/main/R/theme_barbie.R>, it doesn't take a lot of R code to write a custom theme. See the following video for more on custom `ggplot2` themes.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7GqXssfzQYE?si=cxBbtCCjIs1t21qS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
+
+## Apply your function
+
+Here since we have two input vectors, we need to use `mapply()` which is one of the more complex functions. Note the weird order of the arguments where the function we will `mapply()` over comes before the inputs to said function.
+
+```{r}
+## Check the arguments to mapply()
+args(mapply)
+
+## Apply mapply() to our function my_sum() with the inputs 'x' and 'y'
+mapply(sum776::my_sum, x, y)
+
+## Or write an anynymous function that is:
+## * not documented
+## * not tested
+## * not shared
+##
+## :(
+mapply(function(a, b) {
+    a + b
+}, x, y)
+```
+
+# `purrr` alternative
+
+The [`purrr`](https://purrr.tidyverse.org/) package, which is part of the `tidyverse`, provides an alternative framework to the `apply` family of functions in base R.
+
+[![Three green fuzzy monsters in chef hats frosting cupcakes with the same vanilla frosting. A purple fuzzy monster to the side holds a recipe book containing code that would automate the cupcake frosting process. By Allison Horst.](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/66ad455b-a0fc-4c61-8a5c-fb091f8b7f36_rw_3840.png?h=b4d401a70fe73cc06ad53aeae285981f)](https://allisonhorst.com/wickham-tidy-bakers)
+
+```{r}
+#| message: false
+library("purrr") ## part of tidyverse
+```
+
+```{r}
+## Check the arguments of map2_int()
+args(purrr::map2_int)
+
+## Apply our function my_sum() to our inputs
+purrr::map2_int(x, y, sum776::my_sum)
+
+## You can also use anonymous functions
+purrr::map2_int(x, y, function(a, b) {a + b})
+
+## purrr even has a super short formula-like syntax
+## where .x is the first input and .y is the second one
+purrr::map2_int(x, y, ~ .x + .y)
+
+## This formula syntax has nothing to do with the objects 'x' and 'y'
+purrr::map2_int(1:2, 3:4, ~ .x + .y)
+```
+
+[![Three green fuzzy monsters in chef hats frosting cupcakes with three different frostings. A purple fuzzy monster to the side holds a recipe book containing code that would automate the cupcake frosting process. By Allison Horst.](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/07bae254-62c4-4fd9-a165-acdeff1667de_rw_3840.png?h=f3abf97961c21249eb4de47a98540b4c){fig-align="center"}](https://allisonhorst.com/wickham-tidy-bakers)
+
+# Base R loops
 
 ## `lapply()`
 
@@ -156,9 +372,19 @@ lapply(x, mean)
 ```
 
 Notice that here we are passing the `mean()` function as an argument to the `lapply()` function.
+
+```{r}
+purrr::map_dbl(x, mean)
+```
+
+What difference do you notice in terms of the output of `lapply()` and `purrr::map_dbl()`?
+
+```{r}
+purrr::map(x, mean)
+```
 :::
 
-**Functions in R can be** used this way and can be **passed back and forth as arguments** just like any other object inR.
+**Functions in R can be** used this way and can be **passed back and forth as arguments** just like any other object in R.
 
 When you pass a function to another function, you do not need to include the open and closed parentheses `()` like you do when you are **calling** a function.
 
@@ -188,6 +414,12 @@ lapply(x, runif)
 When you pass a function to `lapply()`, `lapply()` takes elements of the list and passes them as the *first argument* of the function you are applying.
 
 In the above example, the first argument of `runif()` is `n`, and so the elements of the sequence `1:4` all got passed to the `n` argument of `runif()`.
+
+This also works with `purrr` functions.
+
+```{r}
+purrr::map(x, runif)
+```
 :::
 
 Functions that you pass to `lapply()` may have other arguments. For example, the `runif()` function has a `min` and `max` argument too.
@@ -209,7 +441,11 @@ x <- 1:4
 lapply(x, runif, min = 0, max = 10)
 ```
 
-So now, instead of the random numbers being between 0 and 1 (the default), the are all between 0 and 10.
+So now, instead of the random numbers being between 0 and 1 (the default), the are all between 0 and 10. Again, this also works with `purrr` functions.
+
+```{r}
+purrr::map(x, runif, min = 0, max = 10)
+```
 
 The `lapply()` function (and its friends) makes heavy use of *anonymous* functions. Anonymous functions are like members of [Project Mayhem](http://en.wikipedia.org/wiki/Fight_Club)---they have no names. These functions are generated "on the fly" as you are using `lapply()`. Once the call to `lapply()` is finished, the function disappears and does not appear in the workspace.
 
@@ -263,6 +499,8 @@ The `sapply()` function behaves similarly to `lapply()`; the only real differenc
 
 -   If it can't figure things out, a list is returned
 
+    -   This can be a source of many headaches and one of the main motivations behind the `purrr` package. With `purrr` you know exactly what type of output you are getting!
+
 Here's the result of calling `lapply()`.
 
 ```{r}
@@ -279,6 +517,13 @@ sapply(x, mean)
 ```
 
 Because the result of `lapply()` was a list where each element had length 1, `sapply()` collapsed the output into a numeric vector, which is often more useful than a list.
+
+With `purrr`, if I want a list output, I use `map()`. If I want a double (numeric) output, we can use `map_dbl()`.
+
+```{r}
+purrr::map(x, mean)
+purrr::map_dbl(x, mean)
+```
 
 ## `split()`
 
@@ -319,7 +564,7 @@ lapply(split(x, f), mean)
 ### Splitting a Data Frame
 
 ```{r}
-library(datasets)
+library("datasets")
 head(airquality)
 ```
 
@@ -354,6 +599,102 @@ sapply(s, function(x) {
         na.rm = TRUE
     )
 })
+```
+
+We can also do this with `purrr` as shown below.
+
+```{r}
+purrr::map(s, function(x) {
+    colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm = TRUE)
+})
+```
+
+The above is not as condensed as the `sapply()` output. We can use the *superseded* (aka no longer supported) function `map_dfc()`:
+
+```{r}
+purrr::map_dfc(s, function(x) {
+    colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm = TRUE)
+})
+```
+
+Or use the currently supported function `purrr::list_cbind()`. Though we also need to do a bit more work behind the scenes.
+
+```{r}
+## Make sure we get data.frame / tibble outputs for each element
+## of the list
+purrr:::map(s, function(x) {
+    tibble::as_tibble(colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm = TRUE))
+})
+
+## Now we can combine them with list_cbind()
+purrr:::map(s, function(x) {
+    tibble::as_tibble(colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm = TRUE))
+}) %>% purrr::list_cbind()
+
+## And we can then add the actual variable it came from with mutate()
+purrr:::map(s, function(x) {
+    tibble::as_tibble(colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm = TRUE))
+}) %>% purrr::list_cbind() %>% 
+    dplyr::mutate(Variable = c("Ozone", "Solar.R", "Wind"))
+```
+
+As we know, the above output is not *tidy*.
+
+[![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/6e297111-efb7-4555-93d2-085071d1853c_rw_1920.jpg?h=f1951b118eaddaaab8a572422bc16566){fig-align="center"}](https://allisonhorst.com/other-r-fun)
+
+So below we repeat the steps using similar functions. First we use the superseded `map_dfr()` function. At <https://purrr.tidyverse.org/reference/map_dfr.html> we can find more details about why this function was superseded and what that means.
+
+```{r}
+## Sadly map_dfr() is now superseded (aka not recommended)
+purrr:::map_dfr(s, function(x) {
+    colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm = TRUE)
+})
+
+## This is how we would have added back the Month variable
+purrr:::map_dfr(s, function(x) {
+    colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm = TRUE)
+}) %>% 
+    dplyr:::mutate(Month = as.integer(names(s)))
+
+```
+
+Instead, we'll use the `t()` function for transposing a vector and `purrr:list_rbind()`.
+
+```{r}
+
+## Get data.frame / tibble outputs, but with each variable as a separate
+## column. Here we used the t() or transpose() function.
+purrr:::map(s, function(x) {
+    tibble::as_tibble(t(colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm = TRUE)))
+})
+
+## Now we can row bind each of these data.frames / tibbles into a
+## single one
+purrr:::map(s, function(x) {
+    tibble::as_tibble(t(colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm = TRUE)))
+}) %>% purrr::list_rbind()
+
+## Then with mutate, we can add the Month back
+purrr:::map(s, function(x) {
+    tibble::as_tibble(t(colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm = TRUE)))
+}) %>% purrr::list_rbind() %>% 
+    dplyr:::mutate(Month = as.integer(names(s)))
+```
+
+For the above task though, we might prefer to use `dplyr` functions.
+
+```{r}
+## group_by() is in a way splitting our input data.frame / tibble by
+## our variable of interest. Then summarize() helps us specify how we
+## want to use that data, before it's all put back together into a
+## tidy tibble.
+airquality %>% 
+    dplyr::group_by(Month) %>% 
+    dplyr::summarize(
+        Ozone = mean(Ozone, na.rm = TRUE),
+        Solar.R = mean(Solar.R, na.rm = TRUE),
+        Wind = mean(Wind, na.rm = TRUE)
+    )
 ```
 
 ## tapply
@@ -391,6 +732,13 @@ We can also apply functions that return more than a single value. In this case, 
 
 ```{r}
 tapply(x, f, range)
+```
+
+With `purrr`, we don't have a `tapply()` direct equivalent but we can still get similar results thanks to the `split()` function.
+
+```{r}
+split(x, f) %>% purrr::map_dbl(mean)
+split(x, f) %>% purrr::map(range)
 ```
 
 ## `apply()`
@@ -456,6 +804,13 @@ apply(x, 1, mean)
 
 because I want to collapse the columns (the second dimension) and preserve the number of rows (the first dimension).
 
+With `purrr` this is a bit more complicated as it has been generalized. Matrices are arrays with 2 dimensions (margins), but they can have more. Here we use the `array_branch()` function to change `x` into a list, then use regular `map_*()` functions to compute what we want.
+
+```{r}
+array_branch(x, 2) %>% map_dbl(mean)
+array_branch(x, 1) %>% map_dbl(sum)
+```
+
 ### Col/Row Sums and Means
 
 ::: callout-tip
@@ -491,6 +846,13 @@ apply(x, 1, quantile, probs = c(0.25, 0.75))
 ```
 
 Notice that I had to pass the `probs = c(0.25, 0.75)` argument to `quantile()` via the `...` argument to `apply()`.
+
+```{r}
+array_branch(x, 1) %>%
+    map(quantile, probs = c(0.25, 0.75)) %>%
+    map(~ as.data.frame(t(.x))) %>%
+    list_rbind()
+```
 :::
 
 ## Vectorizing a Function
@@ -535,6 +897,10 @@ So we could create a `vsumsq()` function that is fully vectorized as follows.
 ```{r}
 vsumsq <- Vectorize(sumsq, c("mu", "sigma"))
 vsumsq(1:10, 1:10, x)
+
+## The details are a bit complicated though
+## as we can see below
+vsumsq
 ```
 
 Pretty cool, right?
@@ -548,6 +914,8 @@ Pretty cool, right?
 -   Loop functions make heavy use of anonymous functions, which exist for the life of the loop function but are not stored anywhere
 
 -   The `split()` function can be used to divide an R object in to subsets determined by another variable which can subsequently be looped over using loop functions.
+
+-   With `purrr` you have very tight control on the expected output, unlike with base R.
 
 # Post-lecture materials
 
@@ -568,7 +936,7 @@ Report the value of the sum when $n$ = 10.
 
 2.  Define an empty numerical vector `s_n` of size 25 using `s_n <- vector("numeric", 25)` and store in the results of $S_1, S_2, \ldots, S_n$ using a for-loop.
 
-3.  Repeat Q3, but this time use `sapply()`.
+3.  Repeat Q3, but this time use `sapply() or functions from`purrr`.`
 
 4.  Plot `s_n` versus `n`. Use points defined by $n= 1, \ldots, 25$
 :::
