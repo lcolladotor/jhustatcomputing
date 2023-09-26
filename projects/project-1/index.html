@@ -283,8 +283,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Before attempting this assignment, you should first install the <code>tidyverse</code> package if you have not already. The <code>tidyverse</code> package is actually a collection of many packages that serves as a convenient way to install many packages without having to do them one by one. This can be done with the <code>install.packages()</code> function.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the tidyverse package if you don't have it</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"tidyverse"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"tidyverse"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Running this function will install a host of other packages so it make take a minute or two depending on how fast your computer is. Once you have installed it, you will want to load the package.</p>
 <div class="cell">
@@ -300,8 +301,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To access the data, you need to install the <code>tidytuesdayR</code> R package and use the function <code>tt_load()</code> with the date of ‘2022-01-18’ to load the data.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the tidytuesdayR package if you don't have it</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"tidytuesdayR"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"tidytuesdayR"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"tidytuesdayR"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"tidytuesdayR"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is how you can download the data.</p>
 <div class="cell">
@@ -435,9 +437,9 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 3 × 1
        x
    &lt;dbl&gt;
-1  0.386
-2 -0.797
-3 -2.24 </code></pre>
+1  0.250
+2 -0.664
+3 -1.04 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a new column that indicates whether the value of 'x' is positive or negative</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
@@ -447,18 +449,18 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 2
-         x is_positive
-     &lt;dbl&gt; &lt;chr&gt;      
- 1  0.386  Yes        
- 2 -0.797  No         
- 3 -2.24   No         
- 4  0.252  Yes        
- 5  0.251  Yes        
- 6  0.161  Yes        
- 7 -0.157  No         
- 8  0.494  Yes        
- 9 -0.0802 No         
-10  0.236  Yes        
+        x is_positive
+    &lt;dbl&gt; &lt;chr&gt;      
+ 1  0.250 Yes        
+ 2 -0.664 No         
+ 3 -1.04  No         
+ 4 -0.333 No         
+ 5 -1.04  No         
+ 6 -0.316 No         
+ 7  0.591 Yes        
+ 8 -0.639 No         
+ 9  0.168 Yes        
+10 -1.06  No         
 # ℹ 90 more rows</code></pre>
 </div>
 </div>
@@ -598,14 +600,14 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.5.2
+ os       macOS Ventura 13.6
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-09-15
+ date     2023-09-25
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -629,7 +631,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
  htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
  jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr         1.43    2023-05-25 [1] CRAN (R 4.3.0)
+ knitr         1.44    2023-09-11 [1] CRAN (R 4.3.0)
  labeling      0.4.3   2023-08-29 [1] CRAN (R 4.3.0)
  lifecycle     1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
  lubridate   * 1.9.2   2023-02-10 [1] CRAN (R 4.3.0)
