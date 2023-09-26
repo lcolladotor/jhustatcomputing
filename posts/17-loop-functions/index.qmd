@@ -905,6 +905,12 @@ vsumsq
 
 Pretty cool, right?
 
+# Parallelize your functions
+
+We don't have time to dive into the details, but with `furrr` we can parallelize `purrr` functions thanks to the `future` package. More details at <https://furrr.futureverse.org/>.
+
+Similarly, with `BiocParallel::bplapply()` we can parallelize `lapply()` commands. Details at <https://bioconductor.org/packages/release/bioc/vignettes/BiocParallel/inst/doc/Introduction_To_BiocParallel.html> and more generally at <https://bioconductor.org/packages/BiocParallel/>.
+
 # Summary
 
 -   The loop functions in R are very powerful because they allow you to conduct a series of operations on data using a compact form
