@@ -32,8 +32,9 @@ Before attempting this assignment, you should first install the `tidyverse` pack
 
 ```{r,eval=FALSE}
 ## Install the tidyverse package if you don't have it
-if (!require("tidyverse", quietly = TRUE))
+if (!require("tidyverse", quietly = TRUE)) {
     install.packages("tidyverse")
+}
 ```
 
 Running this function will install a host of other packages so it make take a minute or two depending on how fast your computer is. Once you have installed it, you will want to load the package.
@@ -56,8 +57,9 @@ To access the data, you need to install the `tidytuesdayR` R package and use the
 
 ```{r,eval=FALSE}
 ## Install the tidytuesdayR package if you don't have it
-if (!require("tidytuesdayR", quietly = TRUE))
+if (!require("tidytuesdayR", quietly = TRUE)) {
     install.packages("tidytuesdayR")
+}
 ```
 
 This is how you can download the data.
