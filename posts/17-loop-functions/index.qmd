@@ -801,7 +801,7 @@ because I want to collapse the first dimension (the rows) by taking the mean and
 
 ```{r}
 #| eval: false
-apply(x, 1, mean)
+apply(x, 1, sum)
 ```
 
 because I want to collapse the columns (the second dimension) and preserve the number of rows (the first dimension).
