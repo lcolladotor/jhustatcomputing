@@ -108,6 +108,25 @@ f()
 ```
 :::
 
+Note that using `message()` is better than `print()` because users can suppress (censor) the messages if they want to with `suppressMessages()` as shown below. There's super easy equivalent for `print()` as `capture.output()` is more complicated to use.
+
+```{r}
+suppressMessages(f())
+```
+
+Also, something I like to do with messages is take advantage of the fact that it uses `paste0()` inside. That is, it is easy to combine our message with more information, such as the current time. Note the extra space before `T` from `This`.
+
+```{r}
+#| message: true
+f2 <- function() {
+    message(Sys.time(), " This is a message.")
+}
+
+f2()
+```
+
+See <https://research.libd.org/spatialLIBD/reference/registration_wrapper.html> for example.
+
 ## Generating Errors
 
 There are a few essential functions for **generating** errors, warnings, and messages in R.
