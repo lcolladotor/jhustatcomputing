@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing2023/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776) in Fall 2023</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Tue, 26 Sep 2023 01:10:50 GMT</lastBuildDate>
+<lastBuildDate>Thu, 28 Sep 2023 02:31:50 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -434,7 +434,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/01-welcome/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -928,7 +928,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/02-introduction-to-r-and-rstudio/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1209,7 +1209,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/03-introduction-to-gitgithub/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing2023/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -1868,7 +1868,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/04-reproducible-research/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -2674,7 +2674,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/05-literate-programming/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3134,7 +3134,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/06-reference-management/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4524,7 +4524,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/07-reading-and-writing-data/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6343,7 +6343,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/08-managing-data-frames-with-tidyverse/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7303,7 +7303,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/09-tidy-data-and-the-tidyverse/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8151,7 +8151,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/10-joining-data-in-r/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -8663,7 +8663,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/11-plotting-systems/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10013,7 +10013,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/12-ggplot2-plotting-system-part-1/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -14143,7 +14143,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/13-ggplot2-plotting-system-part-2/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -15889,7 +15889,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/14-r-nuts-and-bolts/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -17123,7 +17123,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/15-control-structures/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -18434,7 +18434,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/16-functions/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -21436,7 +21436,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/17-loop-functions/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -21508,9 +21508,267 @@ Learning objectives
 <h2 class="anchored" data-anchor-id="overall-approach">Overall approach</h2>
 <p>Finding the <strong>root cause of a problem is always challenging</strong>.</p>
 <p>Most bugs are subtle and hard to find because if they were obvious, you would have avoided them in the first place.</p>
-<p>A good strategy helps. Below I outline a four step process that I have found useful:</p>
+<p>A good strategy helps. Below I outline a five step process that I have found useful:</p>
+<section id="see-it" class="level3">
+<h3 class="anchored" data-anchor-id="see-it">1. See it!</h3>
+<p>One of my favorite packages is <a href="https://github.com/jalvesaq/colorout"><code>colorout</code></a>. It doesn’t work on winOS though 😢. Anyways, a very common mistake I see is that people don’t notice an earlier warning / error, which is actually more informative than the last error they get down the road. That can send people into a rabbit hole that doesn’t contain the relevant solution.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">remotes<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install_github</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"jalvesaq/colorout"</span>)</span></code></pre></div>
+</div>
+<p>It works best if you load it automatically, which we can do by editing the configuration file called <code>.Rprofile</code>. It typically lives at <code>~/.Rprofile</code>, but it’s best to access it with <code>usethis::edit_r_profile()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Open your .Rprofile file</span></span>
+<span id="cb2-2">usethis<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">edit_r_profile</span>()</span>
+<span id="cb2-3"></span>
+<span id="cb2-4"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Copy paste the following code taken from</span></span>
+<span id="cb2-5"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile</span></span>
+<span id="cb2-6"></span>
+<span id="cb2-7"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Change colors</span></span>
+<span id="cb2-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Source https://github.com/jalvesaq/colorout</span></span>
+<span id="cb2-9"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">Sys.getenv</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'TERM'</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%in%</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"term"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"xterm-256color"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cygwin"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"screen"</span>)) {</span>
+<span id="cb2-10">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">requireNamespace</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"colorout"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">quietly =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span> .Platform<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>OS.type <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'windows'</span>) {</span>
+<span id="cb2-11">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'To install colorout use: remotes::install_github("jalvesaq/colorout")</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>)</span>
+<span id="cb2-12">    }</span>
+<span id="cb2-13">}</span></code></pre></div>
+</div>
+<p>Let’s give it a test.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://github.com/jalvesaq/colorout"><img src="https://lcolladotor.github.io/jhustatcomputing2023/posts/18-debugging-r-code/https:/raw.githubusercontent.com/jalvesaq/colorout/master/man/figures/screenshot.png" class="img-fluid figure-img" alt="Example colorout output."></a></p>
+</figure>
+</div>
+<p>I re-typed part of the code shown in the screenshot above. Compare how it looks in our RStudio window (if you are not on winOS) compared to how it looks on the HTML file for this lesson. Which one do you prefer?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">require</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"colorout"</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: colorout</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## From colorout's README documentation</span></span>
+<span id="cb5-2">x <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(</span>
+<span id="cb5-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">logic =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>, <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>, <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>),</span>
+<span id="cb5-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">factor =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">factor</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"abc"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"def"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ghi"</span>)),</span>
+<span id="cb5-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">string =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ABC"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"DEF"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"GHI"</span>),</span>
+<span id="cb5-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">real =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.23</span>, <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4.56</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7.89</span>),</span>
+<span id="cb5-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">cien.not =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.234e-23</span>, <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4.56</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">45</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7.89e78</span>),</span>
+<span id="cb5-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">date =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.Date</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2012-02-21"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2013-02-12"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2014-03-04"</span>))</span>
+<span id="cb5-9">)</span>
+<span id="cb5-10"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rownames</span>(x) <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seq_len</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)</span>
+<span id="cb5-11">x</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  logic factor string  real  cien.not       date
+1  TRUE    abc    ABC  1.23 1.234e-23 2012-02-21
+2  TRUE    def    DEF -4.56 4.044e+01 2013-02-12
+3 FALSE    ghi    GHI  7.89 7.890e+78 2014-03-04</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(x[, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>)])</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   logic         factor       real             date           
+ Mode :logical   abc:1   Min.   :-4.560   Min.   :2012-02-21  
+ FALSE:1         def:1   1st Qu.:-1.665   1st Qu.:2012-08-17  
+ TRUE :2         ghi:1   Median : 1.230   Median :2013-02-12  
+                         Mean   : 1.520   Mean   :2013-02-21  
+                         3rd Qu.: 4.560   3rd Qu.:2013-08-23  
+                         Max.   : 7.890   Max.   :2014-03-04  </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">warning</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"This is an example of a warning."</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: This is an example of a warning.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">example.of.error</span></code></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in eval(expr, envir, enclos): object 'example.of.error' not found</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"KernSmooth"</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>KernSmooth 2.23 loaded
+Copyright M. P. Wand 1997-2009</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1">colorout<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">setOutputColors</span>()</span></code></pre></div>
+</div>
+<p>If you want to, use <code>colorout::setOutputColors()</code> to edit the colors.</p>
+</section>
 <section id="google" class="level3">
-<h3 class="anchored" data-anchor-id="google">1. Google!</h3>
+<h3 class="anchored" data-anchor-id="google">2. Google!</h3>
 <p>Whenever you see an error message, <strong>start by googling it</strong>.</p>
 <p>If you are lucky, you will discover that it’s a common error with a known solution.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -21523,14 +21781,16 @@ Pro-tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When googling, improve your chances of a good match by removing any variable names or values that are specific to your problem.</p>
+<p>When searching on Google or your preferred search browse, improve your chances of a good match by removing any variable names or values that are specific to your problem.</p>
 </div>
 </div>
 </section>
 <section id="make-it-repeatable" class="level3">
-<h3 class="anchored" data-anchor-id="make-it-repeatable">2. Make it repeatable</h3>
+<h3 class="anchored" data-anchor-id="make-it-repeatable">3. Make it repeatable</h3>
 <p>To find the root cause of an error, you are going to need to execute the code many times as you consider and reject hypotheses.</p>
 <p><strong>To make that iteration as quick possible</strong>, it’s worth some upfront investment to <strong>make the problem both easy and fast to reproduce</strong>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8bBo3B7N8YQ?si=7M-t_sa0YZBjRnJJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
 <p>Start by creating a <strong>rep</strong>roducible <strong>ex</strong>ample (reprex).</p>
 <ul>
 <li>This will help others help you, and <strong>often leads to a solution without asking others</strong>, because in the course of making the problem reproducible you often figure out the root cause.</li>
@@ -21551,13 +21811,15 @@ Example
 <div class="callout-body-container callout-body">
 <p>Let’s try making a <strong>reprex</strong> <a href="https://www.tidyverse.org/help">using the <code>reprex</code> package</a> (installed with the <code>tidyverse</code>)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(reprex)</span></code></pre></div>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"reprex"</span>)</span></code></pre></div>
 </div>
 <p>Write a bit of code and copy it to the clipboard:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">(y <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1">(y <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
 background-color: null;
@@ -21566,23 +21828,43 @@ background-color: null;
 font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>)</span>
-<span id="cb2-2"><span class="fu" style="color: #4758AB;
+<span id="cb17-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mean</span>(y)</span></code></pre></div>
 </div>
 <p>Enter <code>reprex()</code> in the R Console. In RStudio, you’ll see a preview of your rendered reprex.</p>
 <p>It is now ready and waiting on your clipboard, so you can paste it into, say, a GitHub issue.</p>
-<p>One last step. Let’s go here and open up an issue on the course website:</p>
+<p>One last step. Let’s go here and open up an issue on the course website or respond to our practice issue from earlier in the course:</p>
 <ul>
-<li><a href="https://github.com/lcolladotor/jhustatcomputing2023/issuess" class="uri">https://github.com/lcolladotor/jhustatcomputing2023/issuess</a></li>
+<li><a href="https://github.com/lcolladotor/jhustatcomputing2023/issues/2" class="uri">https://github.com/lcolladotor/jhustatcomputing2023/issues/2</a></li>
 </ul>
 <p>We will paste in the code from our reprex.</p>
+<p>Notice that if you are asking about code in this class, you might need to use the <code>wd</code> argument and set it to <code>here::here()</code>, that is <code>reprex::reprex(wd = here::here())</code> as showcased at <a href="https://github.com/lcolladotor/jhustatcomputing2023/issues/5" class="uri">https://github.com/lcolladotor/jhustatcomputing2023/issues/5</a>.</p>
 </div>
 </div>
-<p>In RStudio, you can access reprex from the addins menu, which makes it even easier to point out your code and select the output format.</p>
+<p>In RStudio, you can access <code>reprex</code> from the addins menu, which makes it even easier to point out your code and select the output format.</p>
+<p>Several times in the process of building a <code>reprex</code> and then simplifying it as much as possible, I have found the source of my error.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Remember that we configured our RStudio’s global options such that:</p>
+<ul>
+<li><p><em>Workspace: restore .RData into workspace at startup</em> is turned <strong>off</strong></p></li>
+<li><p><em>Save workspace to .RData on exit</em> is set to <strong>Never</strong></p></li>
+</ul>
+<p>Those two settings will save us many headaches!</p>
+</div>
+</div>
 </section>
 <section id="figure-out-where-it-is" class="level3">
-<h3 class="anchored" data-anchor-id="figure-out-where-it-is">3. Figure out where it is</h3>
+<h3 class="anchored" data-anchor-id="figure-out-where-it-is">4. Figure out where it is</h3>
 <p>It’s a great idea to adopt the scientific method here.</p>
 <ul>
 <li>Generate hypotheses</li>
@@ -21595,13 +21877,14 @@ font-style: inherit;">mean</span>(y)</span></code></pre></div>
 <p>If you have followed the previous step, you will have a small example that is easy to share with others. That makes it much easier for other people to look at the problem, and more likely to help you find a solution.</p>
 </section>
 <section id="fix-it-and-test-it" class="level3">
-<h3 class="anchored" data-anchor-id="fix-it-and-test-it">4. Fix it and test it</h3>
+<h3 class="anchored" data-anchor-id="fix-it-and-test-it">5. Fix it and test it</h3>
 <p>Once you have found the bug, you need to <strong>figure out how to fix it</strong> and to <strong>check that the fix actually worked</strong>.</p>
-<p>Again, it is very useful to have automated tests in place.</p>
+<p>Again, it is very useful to have automated tests in place, which you can implement with <code>testthat</code> as showcased in the previous class.</p>
 <ul>
 <li>Not only does this help to ensure that you <strong>have actually fixed the bug</strong>, it also <strong>helps to ensure you have not introduced any new bugs</strong> in the process.</li>
 <li>In the absence of automated tests, make sure to <strong>carefully record the correct output</strong>, and check against the inputs that previously failed.</li>
 </ul>
+<p>As a package developer, you might want to use simple <code>reprex</code> cases users report to you as sources for new unit tests in your package. Make sure to recognize the author(s) of the <code>reprex</code> and give them credit!</p>
 </section>
 </section>
 <section id="somethings-wrong" class="level2">
@@ -21612,7 +21895,7 @@ font-style: inherit;">mean</span>(y)</span></code></pre></div>
 <ul>
 <li><code>message</code>: A <strong>generic notification/diagnostic message</strong> produced by the <code>message()</code> function; execution of the function continues</li>
 <li><code>warning</code>: An indication that <strong>something is wrong but not necessarily fatal</strong>; execution of the function continues. Warnings are generated by the <code>warning()</code> function</li>
-<li><code>error</code>: An indication that <strong>a fatal problem has occurred</strong> and execution of the function stops. Errors are produced by the <code>stop()</code> function.</li>
+<li><code>error</code>: An indication that <strong>a fatal problem has occurred</strong> and execution of the function stops. Errors are produced by the <code>stop()</code> or <code>stopifnot()</code> functions.</li>
 <li><code>condition</code>: A generic concept for indicating that <strong>something unexpected has occurred</strong>; programmers can create their own custom conditions if they want.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -21627,7 +21910,7 @@ Example
 <div class="callout-body-container callout-body">
 <p>Here is an example of a warning that you might receive in the course of using R.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">log</span>(<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -21647,6 +21930,8 @@ font-style: inherit;">1</span>)</span></code></pre></div>
 <p>Nevertheless, R doesn’t give an error, because it has a useful value that it can return, the <strong><code>NaN</code> value</strong>.</p>
 <p>The <strong>warning is just there</strong> to let you know that <strong>something unexpected happen</strong>.</p>
 <p>Depending on what you are programming, you may have intentionally taken the log of a negative number in order to move on to another section of code.</p>
+<section id="cases-with-nas" class="level3">
+<h3 class="anchored" data-anchor-id="cases-with-nas">Cases with <code>NA</code>s</h3>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -21659,36 +21944,36 @@ Example
 <div class="callout-body-container callout-body">
 <p>Here is another function that is designed to print a message to the console depending on the nature of its input.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">print_message <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1">print_message <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">function</span>(x) {</span>
-<span id="cb6-2">    <span class="cf" style="color: #003B4F;
+<span id="cb21-2">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">if</span> (x <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>) {</span>
-<span id="cb6-3">        <span class="fu" style="color: #4758AB;
+<span id="cb21-3">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"x is greater than zero"</span>)</span>
-<span id="cb6-4">    } <span class="cf" style="color: #003B4F;
+<span id="cb21-4">    } <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">else</span> {</span>
-<span id="cb6-5">        <span class="fu" style="color: #4758AB;
+<span id="cb21-5">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"x is less than or equal to zero"</span>)</span>
-<span id="cb6-6">    }</span>
-<span id="cb6-7">    <span class="fu" style="color: #4758AB;
+<span id="cb21-6">    }</span>
+<span id="cb21-7">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">invisible</span>(x)</span>
-<span id="cb6-8">}</span></code></pre></div>
+<span id="cb21-8">}</span></code></pre></div>
 </div>
 <p>This function is simple:</p>
 <ul>
@@ -21699,7 +21984,7 @@ font-style: inherit;">invisible</span>(x)</span>
 <p>Take a hard look at the function above and see if you can identify any bugs or problems.</p>
 <p>We can execute the function as follows.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print_message</span>(<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -21710,7 +21995,7 @@ font-style: inherit;">1</span>)</span></code></pre></div>
 </div>
 <p>The function seems to work fine at this point. No errors, warnings, or messages.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print_message</span>(<span class="cn" style="color: #8f5902;
 background-color: null;
@@ -21729,22 +22014,22 @@ font-style: inherit;">NA</span>)</span></code></pre></div>
 </ul>
 <p>We can <strong>fix this problem</strong> by anticipating the possibility of <code>NA</code> values and checking to see if the input is <code>NA</code> with the <code>is.na()</code> function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">print_message2 <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1">print_message2 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">function</span>(x) {</span>
-<span id="cb11-2">    <span class="cf" style="color: #003B4F;
+<span id="cb26-2">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">if</span> (<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">is.na</span>(x)) {</span>
-<span id="cb11-3">        <span class="fu" style="color: #4758AB;
+<span id="cb26-3">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"x is a missing value!"</span>)</span>
-<span id="cb11-4">    } <span class="cf" style="color: #003B4F;
+<span id="cb26-4">    } <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -21753,28 +22038,28 @@ background-color: null;
 font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>) {</span>
-<span id="cb11-5">        <span class="fu" style="color: #4758AB;
+<span id="cb26-5">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"x is greater than zero"</span>)</span>
-<span id="cb11-6">    } <span class="cf" style="color: #003B4F;
+<span id="cb26-6">    } <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">else</span> {</span>
-<span id="cb11-7">        <span class="fu" style="color: #4758AB;
+<span id="cb26-7">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"x is less than or equal to zero"</span>)</span>
-<span id="cb11-8">    }</span>
-<span id="cb11-9">    <span class="fu" style="color: #4758AB;
+<span id="cb26-8">    }</span>
+<span id="cb26-9">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">invisible</span>(x)</span>
-<span id="cb11-10">}</span></code></pre></div>
+<span id="cb26-10">}</span></code></pre></div>
 </div>
 <p>Now we can run the following.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print_message2</span>(<span class="cn" style="color: #8f5902;
 background-color: null;
@@ -21784,9 +22069,12 @@ font-style: inherit;">NA</span>)</span></code></pre></div>
 </div>
 </div>
 <p>And all is fine.</p>
+</section>
+<section id="cases-with-longer-inputs-than-expected" class="level3">
+<h3 class="anchored" data-anchor-id="cases-with-longer-inputs-than-expected">Cases with longer inputs than expected</h3>
 <p>Now what about the following situation.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1">x <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1">x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -21802,7 +22090,7 @@ font-style: inherit;">2</span>))</span></code></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in log(c(-1, 2)): NaNs produced</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print_message2</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-error">
@@ -21822,35 +22110,35 @@ font-style: inherit;">print_message2</span>(x)</span></code></pre></div>
 </ol>
 <p>For the <strong>first way</strong>, we simply need to check the length of the input.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1">print_message3 <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1">print_message3 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">function</span>(x) {</span>
-<span id="cb18-2">    <span class="cf" style="color: #003B4F;
+<span id="cb33-2">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">if</span> (<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">length</span>(x) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> 1L) {</span>
-<span id="cb18-3">        <span class="fu" style="color: #4758AB;
+<span id="cb33-3">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">stop</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"'x' has length &gt; 1"</span>)</span>
-<span id="cb18-4">    }</span>
-<span id="cb18-5">    <span class="cf" style="color: #003B4F;
+<span id="cb33-4">    }</span>
+<span id="cb33-5">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">if</span> (<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">is.na</span>(x)) {</span>
-<span id="cb18-6">        <span class="fu" style="color: #4758AB;
+<span id="cb33-6">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"x is a missing value!"</span>)</span>
-<span id="cb18-7">    } <span class="cf" style="color: #003B4F;
+<span id="cb33-7">    } <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -21859,28 +22147,31 @@ background-color: null;
 font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>) {</span>
-<span id="cb18-8">        <span class="fu" style="color: #4758AB;
+<span id="cb33-8">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"x is greater than zero"</span>)</span>
-<span id="cb18-9">    } <span class="cf" style="color: #003B4F;
+<span id="cb33-9">    } <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">else</span> {</span>
-<span id="cb18-10">        <span class="fu" style="color: #4758AB;
+<span id="cb33-10">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"x is less than or equal to zero"</span>)</span>
-<span id="cb18-11">    }</span>
-<span id="cb18-12">    <span class="fu" style="color: #4758AB;
+<span id="cb33-11">    }</span>
+<span id="cb33-12">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">invisible</span>(x)</span>
-<span id="cb18-13">}</span></code></pre></div>
+<span id="cb33-13">}</span></code></pre></div>
 </div>
 <p>Now when we pass <code>print_message3()</code> a vector, we should get an <strong>error</strong>.</p>
+</section>
+<section id="dont-show-users-the-call-to-help-them-and-you-too" class="level3">
+<h3 class="anchored" data-anchor-id="dont-show-users-the-call-to-help-them-and-you-too">Don’t show users the <code>call</code> to help them and you too!</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print_message3</span>(<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -21893,14 +22184,420 @@ font-style: inherit;">2</span>)</span></code></pre></div>
 <pre><code>Error in print_message3(1:2): 'x' has length &gt; 1</code></pre>
 </div>
 </div>
+<p>I have learned that using that setting <code>call. = FALSE</code> when using <code>stop()</code> and/or <code>warning()</code> helps your users by providing them less information that could confuse them.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1">print_message3_no_call <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(x) {</span>
+<span id="cb36-2">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">length</span>(x) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> 1L) {</span>
+<span id="cb36-3">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">stop</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"'x' has length &gt; 1"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">call. =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>)</span>
+<span id="cb36-4">    }</span>
+<span id="cb36-5">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">is.na</span>(x)) {</span>
+<span id="cb36-6">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x is a missing value!"</span>)</span>
+<span id="cb36-7">    } <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (x <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>) {</span>
+<span id="cb36-8">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x is greater than zero"</span>)</span>
+<span id="cb36-9">    } <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> {</span>
+<span id="cb36-10">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x is less than or equal to zero"</span>)</span>
+<span id="cb36-11">    }</span>
+<span id="cb36-12">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">invisible</span>(x)</span>
+<span id="cb36-13">}</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print_message3_no_call</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">99</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span></code></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: 'x' has length &gt; 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print_message3</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">99</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span></code></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in print_message3(99:100): 'x' has length &gt; 1</code></pre>
+</div>
+</div>
+<p>If we compare the error output from <code>print_message3()</code> against <code>print_message3_no_call()</code> we can see that the second scenario doesn’t include information that only we (as the user) have. That’s information that users will copy-paste on their Google searches, which makes finding the right information much harder. As the person trying to help users, knowing how the users called our function is very likely not useful enough information. A <code>reprex</code> is 💯 * ♾️ much better!!!!!</p>
+</section>
+<section id="errors-à-la-tidyverse" class="level3">
+<h3 class="anchored" data-anchor-id="errors-à-la-tidyverse">Errors à la <code>tidyverse</code></h3>
+<p>If you want to write error messages similar to those you are used to seeing with <code>tidyverse</code> packages, use <code>rlang</code>. Specifically, switch:</p>
+<ul>
+<li><p><code>base::stop()</code> with <code>rlang::abort()</code></p></li>
+<li><p><code>base::warning()</code> with <code>rlang::warn()</code></p></li>
+<li><p><code>base::message()</code> with <code>rlang::inform()</code></p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1">print_message3_tidyverse <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(x) {</span>
+<span id="cb41-2">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">length</span>(x) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> 1L) {</span>
+<span id="cb41-3">        rlang<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">abort</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"'x' has length &gt; 1"</span>)</span>
+<span id="cb41-4">    }</span>
+<span id="cb41-5">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">is.na</span>(x)) {</span>
+<span id="cb41-6">        rlang<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">warn</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x is a missing value!"</span>)</span>
+<span id="cb41-7">    } <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (x <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>) {</span>
+<span id="cb41-8">        rlang<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">inform</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x is greater than zero"</span>)</span>
+<span id="cb41-9">    } <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> {</span>
+<span id="cb41-10">        rlang<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">inform</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x is less than or equal to zero"</span>)</span>
+<span id="cb41-11">    }</span>
+<span id="cb41-12">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">invisible</span>(x)</span>
+<span id="cb41-13">}</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print_message3_tidyverse</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">99</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span></code></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `print_message3_tidyverse()`:
+! 'x' has length &gt; 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print_message3_tidyverse</span>(<span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NA</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: x is a missing value!</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print_message3_tidyverse</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>x is greater than zero</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print_message3_tidyverse</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>x is less than or equal to zero</code></pre>
+</div>
+</div>
+<p>Note how <code>rlang</code> by default doesn’t show the function call. The <code>tidyverse</code> style guide has a whole chapter on how to format error messages: <a href="https://style.tidyverse.org/error-messages.html" class="uri">https://style.tidyverse.org/error-messages.html</a>. That is how all the R developers in the <code>tidyverse</code> team have been able to provide consistent looking messages to users of all these packages. They also use <code>cli</code> to make their error messages super pretty to read <a href="https://rlang.r-lib.org/reference/topic-condition-formatting.html" class="uri">https://rlang.r-lib.org/reference/topic-condition-formatting.html</a>.</p>
+<p>In this next example, I:</p>
+<ul>
+<li><p>use <code>cli::cli_abort()</code> instead of <code>rlang::abort()</code></p></li>
+<li><p>define <code>len</code> so I can use it in a message with <code>{len}</code></p></li>
+<li><p>use <code>{.code something}</code> for inline-markup <a href="https://cli.r-lib.org/reference/inline-markup.html" class="uri">https://cli.r-lib.org/reference/inline-markup.html</a></p></li>
+<li><p>use several of the <code>cli</code> bullets, see <a href="https://cli.r-lib.org/reference/cli_bullets.html" class="uri">https://cli.r-lib.org/reference/cli_bullets.html</a> for the full list</p></li>
+<li><p>use <code>praise::praise()</code> to get some fun messages to praise our user and lift up their spirits =)</p>
+<ul>
+<li>See also <code>praiseMX</code> <a href="https://github.com/ComunidadBioInfo/praiseMX" class="uri">https://github.com/ComunidadBioInfo/praiseMX</a> which <a href="https://comunidadbioinfo.github.io/">CDSB</a> students built in a course I co-instructed in 2019.</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1">print_message3_cli <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(x) {</span>
+<span id="cb50-2">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">length</span>(x) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> 1L) {</span>
+<span id="cb50-3">        len <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">length</span>(x)</span>
+<span id="cb50-4">        </span>
+<span id="cb50-5">        <span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Avoid the print() calls from</span></span>
+<span id="cb50-6">        <span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## https://github.com/ComunidadBioInfo/praiseMX/blob/master/R/praise_crear_emi.R</span></span>
+<span id="cb50-7">        praise_mx_log <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">capture.output</span>({</span>
+<span id="cb50-8">            praise_mx <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> praiseMX<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">praise_bien</span>()</span>
+<span id="cb50-9">        })</span>
+<span id="cb50-10">        cli<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cli_abort</span>(</span>
+<span id="cb50-11">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(</span>
+<span id="cb50-12">                <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"This function is not vectorized:"</span>,</span>
+<span id="cb50-13">                <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"i"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"{.var x} has length {len}."</span>,</span>
+<span id="cb50-14">                <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"{.var x} must have length 1."</span>,</span>
+<span id="cb50-15">                <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"&gt;"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Try using {.code purrr::map(x, print_message3_cli)} to loop your input {.var x} on this function."</span>,</span>
+<span id="cb50-16">                <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"v"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> praise<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">praise</span>(),</span>
+<span id="cb50-17">                <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"v"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> praise_mx</span>
+<span id="cb50-18">            )</span>
+<span id="cb50-19">        )</span>
+<span id="cb50-20">    }</span>
+<span id="cb50-21">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">is.na</span>(x)) {</span>
+<span id="cb50-22">        rlang<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">warn</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x is a missing value!"</span>)</span>
+<span id="cb50-23">    } <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (x <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>) {</span>
+<span id="cb50-24">        rlang<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">inform</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x is greater than zero"</span>)</span>
+<span id="cb50-25">    } <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> {</span>
+<span id="cb50-26">        rlang<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">inform</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x is less than or equal to zero"</span>)</span>
+<span id="cb50-27">    }</span>
+<span id="cb50-28">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">invisible</span>(x)</span>
+<span id="cb50-29">}</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20230928</span>)</span>
+<span id="cb51-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print_message3_cli</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span></code></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `print_message3_cli()`:
+! This function is not vectorized:
+ℹ `x` has length 3.
+✖ `x` must have length 1.
+→ Try using `purrr::map(x, print_message3_cli)` to loop your input `x` on this
+  function.
+✔ You are neat!
+✔ ¡Ah chingá! Programas bien perrón.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb53" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1">purrr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, print_message3_cli)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>x is less than or equal to zero
+x is less than or equal to zero
+x is greater than zero</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] -1
+
+[[2]]
+[1] 0
+
+[[3]]
+[1] 1</code></pre>
+</div>
+</div>
+</section>
+<section id="vectorizing" class="level3">
+<h3 class="anchored" data-anchor-id="vectorizing">Vectorizing</h3>
 <p>Vectorizing the function can be accomplished easily with the <code>Vectorize()</code> function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1">print_message4 <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb56" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1">print_message4 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">Vectorize</span>(print_message2)</span>
-<span id="cb21-2">out <span class="ot" style="color: #003B4F;
+<span id="cb56-2">out <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -21959,13 +22656,30 @@ Helpful tips
 </div>
 <p>Being able to answer these questions is important not just for your own sake, but in situations where you may need to ask someone else for help with debugging the problem.</p>
 <p>Seasoned programmers will be asking you these exact questions.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Think about the person who is going to receive your question. At <a href="https://lcolladotor.github.io/bioc_team_ds/how-to-ask-for-help.html" class="uri">https://lcolladotor.github.io/bioc_team_ds/how-to-ask-for-help.html</a> I showcase some examples by Jim Hester and other information you might want to think about when asking for help.</p>
+</div>
+</div>
+</section>
 </section>
 </section>
 <section id="debugging-tools-in-r" class="level1">
 <h1>Debugging Tools in R</h1>
 <p>R provides a number of tools to help you with debugging your code. The primary tools for debugging functions in R are</p>
 <ul>
-<li><code>traceback()</code>: <strong>prints out the function call stack</strong> after an error occurs; does nothing if there’s no error</li>
+<li><code>traceback()</code>: <strong>prints out the function call stack</strong> after an error occurs; does nothing if there’s no error
+<ul>
+<li>The <code>tidyverse</code> version of this base R function is <code>rlang::last_error()</code> <a href="https://rlang.r-lib.org/reference/last_error.html" class="uri">https://rlang.r-lib.org/reference/last_error.html</a>. For base R, you will need to enable tracing with <code>rlang</code> with <code>rlang::global_entrace()</code> <a href="https://rlang.r-lib.org/reference/global_entrace.html" class="uri">https://rlang.r-lib.org/reference/global_entrace.html</a>. It can provide much more user-friendly output.</li>
+</ul></li>
 <li><code>debug()</code>: <strong>flags a function for “debug” mode</strong> which allows you to step through execution of a function one line at a time</li>
 <li><code>browser()</code>: <strong>suspends the execution of a function</strong> wherever it is called and puts the function in debug mode</li>
 <li><code>trace()</code>: allows you to <strong>insert debugging code into a function</strong> at specific places</li>
@@ -21990,12 +22704,12 @@ Example
 </div>
 <div class="callout-body-container callout-body">
 <p>Let’s use the <code>mean()</code> function on a vector <code>z</code> that does not exist in our R environment</p>
-<div class="sourceCode" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode" id="cb58" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mean</span>(z)</span>
-<span id="cb23-2">Error <span class="cf" style="color: #003B4F;
+<span id="cb58-2">Error <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">in</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -22004,12 +22718,12 @@ background-color: null;
 font-style: inherit;">:</span> object <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'z'</span> not found</span>
-<span id="cb23-3"><span class="sc" style="color: #5E5E5E;
+<span id="cb58-3"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">traceback</span>()</span>
-<span id="cb23-4"><span class="dv" style="color: #AD0000;
+<span id="cb58-4"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -22031,40 +22745,40 @@ Example
 </div>
 <div class="callout-body-container callout-body">
 <p>Here is a slightly more complicated example using the <code>lm()</code> function for linear modeling.</p>
-<div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode" id="cb59" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">lm</span>(y <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">~</span> x)</span>
-<span id="cb24-2">Error <span class="cf" style="color: #003B4F;
+<span id="cb59-2">Error <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">in</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">eval</span>(expr, envir, enclos) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> object ’y’ not found</span>
-<span id="cb24-3"><span class="sc" style="color: #5E5E5E;
+<span id="cb59-3"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">traceback</span>()</span>
-<span id="cb24-4"><span class="dv" style="color: #AD0000;
+<span id="cb59-4"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">7</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">eval</span>(expr, envir, enclos)</span>
-<span id="cb24-5"><span class="dv" style="color: #AD0000;
+<span id="cb59-5"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">6</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">eval</span>(predvars, data, env)</span>
-<span id="cb24-6"><span class="dv" style="color: #AD0000;
+<span id="cb59-6"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -22079,7 +22793,7 @@ background-color: null;
 font-style: inherit;">drop.unused.levels =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span>)</span>
-<span id="cb24-7"><span class="dv" style="color: #AD0000;
+<span id="cb59-7"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -22094,14 +22808,14 @@ background-color: null;
 font-style: inherit;">drop.unused.levels =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span>)</span>
-<span id="cb24-8"><span class="dv" style="color: #AD0000;
+<span id="cb59-8"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">eval</span>(expr, envir, enclos)</span>
-<span id="cb24-9"><span class="dv" style="color: #AD0000;
+<span id="cb59-9"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -22110,7 +22824,7 @@ background-color: null;
 font-style: inherit;">eval</span>(mf, <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">parent.frame</span>())</span>
-<span id="cb24-10"><span class="dv" style="color: #AD0000;
+<span id="cb59-10"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -22120,6 +22834,111 @@ font-style: inherit;">lm</span>(y <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">~</span> x)</span></code></pre></div>
 <p>You can see now that the <strong>error did not get thrown until the 7th level of the function call stack</strong>, in which case the <code>eval()</code> function tried to evaluate the formula <code>y ~ x</code> and <strong>realized the object <code>y</code> did not exist</strong>.</p>
+<p>With <code>rlang</code>, this is how it look:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(y <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> x)</span></code></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in eval(predvars, data, env): object 'y' not found</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb62" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1">rlang<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">last_error</span>()</span></code></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: Can't show last error because no error was recorded yet</code></pre>
+</div>
+</div>
+<p>Note that we need to use <code>rlang::global_entrace()</code> first since <code>lm()</code> is a base R function. If we do so, then <code>rlang::last_error()</code> does work.</p>
+<div class="sourceCode" id="cb64" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> rlang<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">global_entrace</span>()</span>
+<span id="cb64-2"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(y <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> x)</span>
+<span id="cb64-3">Error<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb64-4"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span> object <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'y'</span> not found</span>
+<span id="cb64-5">Run <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">rlang::last_trace()</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span> to see where the error occurred.</span>
+<span id="cb64-6"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> rlang<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">last_error</span>()</span>
+<span id="cb64-7"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>error<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>rlang_error<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb64-8">Error<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb64-9"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span> object <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'y'</span> not found</span>
+<span id="cb64-10"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">---</span></span>
+<span id="cb64-11">Backtrace<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb64-12">    ▆</span>
+<span id="cb64-13"> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.</span> └─stats<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(y <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> x)</span>
+<span id="cb64-14"> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.</span>   └─base<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">eval</span>(mf, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">parent.frame</span>())</span>
+<span id="cb64-15"> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3.</span>     └─base<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">eval</span>(mf, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">parent.frame</span>())</span></code></pre></div>
 </div>
 </div>
 <p>Looking at the traceback is useful for figuring out roughly where an error occurred but it’s not useful for more detailed debugging. For that you might turn to the <code>debug()</code> function.</p>
@@ -22132,21 +22951,21 @@ Click here for how to use <code>debug()</code> with an interactive browser.
 </summary>
 <p>The <code>debug()</code> function initiates an interactive debugger (also known as the “browser” in R) for a function. With the debugger, you can step through an R function one expression at a time to pinpoint exactly where an error occurs.</p>
 <p>The <code>debug()</code> function takes a function as its first argument. Here is an example of debugging the <code>lm()</code> function.</p>
-<div class="sourceCode" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode" id="cb65" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">debug</span>(lm)      <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Flag the 'lm()' function for interactive debugging</span></span>
-<span id="cb25-2"><span class="sc" style="color: #5E5E5E;
+<span id="cb65-2"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">lm</span>(y <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">~</span> x)</span>
-<span id="cb25-3">debugging <span class="cf" style="color: #003B4F;
+<span id="cb65-3">debugging <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">in</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -22155,36 +22974,36 @@ background-color: null;
 font-style: inherit;">lm</span>(y <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">~</span> x)</span>
-<span id="cb25-4">debug<span class="sc" style="color: #5E5E5E;
+<span id="cb65-4">debug<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> {</span>
-<span id="cb25-5">    ret.x <span class="ot" style="color: #003B4F;
+<span id="cb65-5">    ret.x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> x</span>
-<span id="cb25-6">    ret.y <span class="ot" style="color: #003B4F;
+<span id="cb65-6">    ret.y <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> y</span>
-<span id="cb25-7">    cl <span class="ot" style="color: #003B4F;
+<span id="cb65-7">    cl <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">match.call</span>()</span>
-<span id="cb25-8">    ...</span>
-<span id="cb25-9">    <span class="cf" style="color: #003B4F;
+<span id="cb65-8">    ...</span>
+<span id="cb65-9">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">if</span> (<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">!</span>qr)</span>
-<span id="cb25-10">        z<span class="sc" style="color: #5E5E5E;
+<span id="cb65-10">        z<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>qr <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NULL</span> </span>
-<span id="cb25-11">    z</span>
-<span id="cb25-12">} </span>
-<span id="cb25-13">Browse[<span class="dv" style="color: #AD0000;
+<span id="cb65-11">    z</span>
+<span id="cb65-12">} </span>
+<span id="cb65-13">Browse[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>]<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -22197,46 +23016,46 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 <li><code>Q</code> quits the browser</li>
 </ul>
 <p>Here’s an example of a browser session with the <code>lm()</code> function.</p>
-<div class="sourceCode" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1">Browse[<span class="dv" style="color: #AD0000;
+<div class="sourceCode" id="cb66" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1">Browse[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>]<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> n   <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Evalute this expression and move to the next one</span></span>
-<span id="cb26-2">debug<span class="sc" style="color: #5E5E5E;
+<span id="cb66-2">debug<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> ret.x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> x</span>
-<span id="cb26-3">Browse[<span class="dv" style="color: #AD0000;
+<span id="cb66-3">Browse[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>]<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> n</span>
-<span id="cb26-4">debug<span class="sc" style="color: #5E5E5E;
+<span id="cb66-4">debug<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> ret.y <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> y</span>
-<span id="cb26-5">Browse[<span class="dv" style="color: #AD0000;
+<span id="cb66-5">Browse[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>]<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> n</span>
-<span id="cb26-6">debug<span class="sc" style="color: #5E5E5E;
+<span id="cb66-6">debug<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> cl <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">match.call</span>()</span>
-<span id="cb26-7">Browse[<span class="dv" style="color: #AD0000;
+<span id="cb66-7">Browse[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>]<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> n</span>
-<span id="cb26-8">debug<span class="sc" style="color: #5E5E5E;
+<span id="cb66-8">debug<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> mf <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -22247,12 +23066,12 @@ background-color: null;
 font-style: inherit;">expand.dots =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>)</span>
-<span id="cb26-9">Browse[<span class="dv" style="color: #AD0000;
+<span id="cb66-9">Browse[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>]<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> n</span>
-<span id="cb26-10">debug<span class="sc" style="color: #5E5E5E;
+<span id="cb66-10">debug<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> m <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -22271,14 +23090,14 @@ background-color: null;
 font-style: inherit;">"weights"</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"na.action"</span>,</span>
-<span id="cb26-11">    <span class="st" style="color: #20794D;
+<span id="cb66-11">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"offset"</span>), <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">names</span>(mf), 0L)</span></code></pre></div>
 <p>While you are in the browser you can execute any other R function that might be available to you in a regular session. In particular, you can use <code>ls()</code> to see what is in your current environment (the function environment) and <code>print()</code> to print out the values of R objects in the function environment.</p>
 <p>You can turn off interactive debugging with the <code>undebug()</code> function.</p>
-<div class="sourceCode" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb67" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">undebug</span>(lm)    <span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -22293,7 +23112,7 @@ Click here for how to use <code>recover()</code> with an interactive browser.
 </summary>
 <p>The <code>recover()</code> function can be used to modify the error behavior of R when an error occurs. Normally, when an error occurs in a function, R will print out an error message, exit out of the function, and return you to your workspace to await further commands.</p>
 <p>With <code>recover()</code> you can tell R that when an error occurs, it should halt execution at the exact point at which the error occurred. That can give you the opportunity to poke around in the environment in which the error occurred. This can be useful to see if there are any R objects or data that have been corrupted or mistakenly modified.</p>
-<div class="sourceCode" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode" id="cb68" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -22302,7 +23121,7 @@ background-color: null;
 font-style: inherit;">error =</span> recover)    <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Change default R error behavior</span></span>
-<span id="cb28-2"><span class="sc" style="color: #5E5E5E;
+<span id="cb68-2"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -22311,7 +23130,7 @@ background-color: null;
 font-style: inherit;">"nosuchfile"</span>)      <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## This code doesn't work</span></span>
-<span id="cb28-3">Error <span class="cf" style="color: #003B4F;
+<span id="cb68-3">Error <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">in</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -22320,27 +23139,27 @@ background-color: null;
 font-style: inherit;">"rt"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> cannot open the connection</span>
-<span id="cb28-4">In addition<span class="sc" style="color: #5E5E5E;
+<span id="cb68-4">In addition<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> Warning message<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span></span>
-<span id="cb28-5">In <span class="fu" style="color: #4758AB;
+<span id="cb68-5">In <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">file</span>(file, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"rt"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span></span>
-<span id="cb28-6">  cannot open file ’nosuchfile’<span class="sc" style="color: #5E5E5E;
+<span id="cb68-6">  cannot open file ’nosuchfile’<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> No such file or directory</span>
-<span id="cb28-7">  </span>
-<span id="cb28-8">Enter a frame number, or <span class="dv" style="color: #AD0000;
+<span id="cb68-7">  </span>
+<span id="cb68-8">Enter a frame number, or <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span> to exit</span>
-<span id="cb28-9"></span>
-<span id="cb28-10"><span class="dv" style="color: #AD0000;
+<span id="cb68-9"></span>
+<span id="cb68-10"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -22349,7 +23168,7 @@ background-color: null;
 font-style: inherit;">read.csv</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"nosuchfile"</span>)</span>
-<span id="cb28-11"><span class="dv" style="color: #AD0000;
+<span id="cb68-11"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -22366,7 +23185,7 @@ background-color: null;
 font-style: inherit;">quote =</span> quote, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">dec =</span></span>
-<span id="cb28-12"><span class="dv" style="color: #AD0000;
+<span id="cb68-12"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -22375,8 +23194,8 @@ background-color: null;
 font-style: inherit;">file</span>(file, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"rt"</span>)</span>
-<span id="cb28-13"></span>
-<span id="cb28-14">Selection<span class="sc" style="color: #5E5E5E;
+<span id="cb68-13"></span>
+<span id="cb68-14">Selection<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span></span></code></pre></div>
 <p>The <code>recover()</code> function will first print out the function call stack when an error occurrs. Then, you can choose to jump around the call stack and investigate the problem. When you choose a frame number, you will be put in the browser (just like the interactive debugger triggered with <code>debug()</code>) and will have the ability to poke around.</p>
@@ -22386,7 +23205,10 @@ font-style: inherit;">:</span></span></code></pre></div>
 <section id="summary" class="level1">
 <h1>Summary</h1>
 <ul>
-<li>There are three main indications of a problem/condition: <code>message</code>, <code>warning</code>, <code>error</code>; only an <code>error</code> is fatal</li>
+<li>There are three main indications of a problem/condition: <code>message</code>, <code>warning</code>, <code>error</code>; only an <code>error</code> is fatal
+<ul>
+<li>We saw how to trigger them with base R functions such as <code>stop()</code>, and <code>tidyverse</code> functions <code>rlang::abort()</code> and <code>cli::cli_abort()</code>.</li>
+</ul></li>
 <li>When analyzing a function with a problem, make sure you can reproduce the problem, clearly state your expectations and how the output differs from your expectation</li>
 <li>Interactive debugging tools <code>traceback</code>, <code>debug</code>, <code>recover</code>, <code>browser</code>, and <code>trace</code> can be used to find problematic code in functions</li>
 <li>Debugging tools are not a substitute for thinking!</li>
@@ -22411,40 +23233,40 @@ Questions
 <li>Try using <code>traceback()</code> to debug this piece of code:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1">f <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb69" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1">f <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">function</span>(a) <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">g</span>(a)</span>
-<span id="cb29-2">g <span class="ot" style="color: #003B4F;
+<span id="cb69-2">g <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">function</span>(b) <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">h</span>(b)</span>
-<span id="cb29-3">h <span class="ot" style="color: #003B4F;
+<span id="cb69-3">h <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">function</span>(c) <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">i</span>(c)</span>
-<span id="cb29-4">i <span class="ot" style="color: #003B4F;
+<span id="cb69-4">i <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">function</span>(d) {</span>
-<span id="cb29-5">    <span class="cf" style="color: #003B4F;
+<span id="cb69-5">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">if</span> (<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">!</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">is.numeric</span>(d)) {</span>
-<span id="cb29-6">        <span class="fu" style="color: #4758AB;
+<span id="cb69-6">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">stop</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -22453,14 +23275,14 @@ background-color: null;
 font-style: inherit;">call. =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>)</span>
-<span id="cb29-7">    }</span>
-<span id="cb29-8">    d <span class="sc" style="color: #5E5E5E;
+<span id="cb69-7">    }</span>
+<span id="cb69-8">    d <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">10</span></span>
-<span id="cb29-9">}</span>
-<span id="cb29-10"><span class="fu" style="color: #4758AB;
+<span id="cb69-9">}</span>
+<span id="cb69-10"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">f</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -22497,14 +23319,14 @@ Tip
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb71" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">options</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">120</span>)</span>
-<span id="cb31-2">sessioninfo<span class="sc" style="color: #5E5E5E;
+<span id="cb71-2">sessioninfo<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -22513,38 +23335,44 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.5
+ os       macOS Ventura 13.6
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-08-18
+ date     2023-09-27
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
- package     * version date (UTC) lib source
- cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout      1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
- digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- evaluate      0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- fs            1.6.3   2023-07-20 [1] CRAN (R 4.3.0)
- glue          1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
- htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr         1.43    2023-05-25 [1] CRAN (R 4.3.0)
- lifecycle     1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
- reprex      * 2.0.2   2022-08-17 [1] CRAN (R 4.3.0)
- rlang         1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown     2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rstudioapi    0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- withr         2.5.0   2022-03-03 [1] CRAN (R 4.3.0)
- xfun          0.40    2023-08-09 [1] CRAN (R 4.3.0)
- yaml          2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ package     * version    date (UTC) lib source
+ cli           3.6.1      2023-03-23 [1] CRAN (R 4.3.0)
+ colorout    * 1.3-0      2023-09-28 [1] Github (jalvesaq/colorout@8384882)
+ digest        0.6.33     2023-07-07 [1] CRAN (R 4.3.0)
+ evaluate      0.21       2023-05-05 [1] CRAN (R 4.3.0)
+ fastmap       1.1.1      2023-02-24 [1] CRAN (R 4.3.0)
+ fs            1.6.3      2023-07-20 [1] CRAN (R 4.3.0)
+ glue          1.6.2      2022-02-24 [1] CRAN (R 4.3.0)
+ htmltools     0.5.6      2023-08-10 [1] CRAN (R 4.3.0)
+ htmlwidgets   1.6.2      2023-03-17 [1] CRAN (R 4.3.0)
+ jsonlite      1.8.7      2023-06-29 [1] CRAN (R 4.3.0)
+ KernSmooth  * 2.23-22    2023-07-10 [1] CRAN (R 4.3.0)
+ knitr         1.44       2023-09-11 [1] CRAN (R 4.3.0)
+ lifecycle     1.0.3      2022-10-07 [1] CRAN (R 4.3.0)
+ magrittr      2.0.3      2022-03-30 [1] CRAN (R 4.3.0)
+ praise        1.0.0      2015-08-11 [1] CRAN (R 4.3.0)
+ praiseMX      0.0.0.9000 2023-09-28 [1] Github (ComunidadBioInfo/praiseMX@9d26399)
+ purrr         1.0.2      2023-08-10 [1] CRAN (R 4.3.0)
+ reprex      * 2.0.2      2022-08-17 [1] CRAN (R 4.3.0)
+ rlang         1.1.1      2023-04-28 [1] CRAN (R 4.3.0)
+ rmarkdown     2.24       2023-08-14 [1] CRAN (R 4.3.1)
+ rstudioapi    0.15.0     2023-07-07 [1] CRAN (R 4.3.0)
+ sessioninfo   1.2.2      2021-12-06 [1] CRAN (R 4.3.0)
+ vctrs         0.6.3      2023-06-14 [1] CRAN (R 4.3.0)
+ withr         2.5.0      2022-03-03 [1] CRAN (R 4.3.0)
+ xfun          0.40       2023-08-09 [1] CRAN (R 4.3.0)
+ yaml          2.3.7      2023-01-23 [1] CRAN (R 4.3.0)
 
  [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
 
@@ -22561,7 +23389,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/18-debugging-r-code/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -23312,7 +24140,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/19-error-handling-and-generation/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -24943,7 +25771,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/20-working-with-dates-and-times/index.html</guid>
-  <pubDate>Tue, 26 Sep 2023 01:10:50 GMT</pubDate>
+  <pubDate>Thu, 28 Sep 2023 02:31:50 GMT</pubDate>
 </item>
 </channel>
 </rss>
