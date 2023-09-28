@@ -139,13 +139,10 @@ The `stop()` function will generate an error.
 Let's generate an error:
 
 ```{r}
-#| eval: false
+#| error: true
 stop("Something erroneous has occurred!")
 ```
 
-``` r
-Error: Something erroneous has occurred!
-```
 :::
 
 If an error occurs inside of a function, then the **name of that function will appear in the error message**:
@@ -158,6 +155,8 @@ name_of_function <- function() {
 
 name_of_function()
 ```
+
+As we saw in the previous lesson, we can combine `stop()` with an `if()` if we want to provide our users a more informative error message than the one they would get otherwise. For example, see <https://github.com/LieberInstitute/qsvaR/blob/feb9a9e4f8a499baba76271de37ca39a9969f400/R/k_qsvs.R#L30-L32>.
 
 The `stopifnot()` function takes a series of logical expressions as arguments and if any of them are false an error is generated specifying which expression is false.
 
@@ -176,6 +175,54 @@ error_if_n_is_greater_than_zero <- function(n) {
 error_if_n_is_greater_than_zero(5)
 ```
 :::
+
+::: callout-note
+
+I recommend using `stopifnot()` only with objects that are arguments to your function. Otherwise, users will get confusing error messages involving objects that they do not know how they were created.
+
+```{r}
+#| error: true
+error_if_n_squared <- function(n) {
+    ## Ok use
+    stopifnot(n <= 0)
+
+    ## Create an internal object
+    n_squared <- n^2
+
+    ## Not ok, since we are using the internal object n_squared
+    stopifnot(n_squared <= 10)
+    n
+}
+
+error_if_n_squared(-2)
+
+## This generates a confusing error message to our users
+error_if_n_squared(-4)
+```
+
+:::
+
+`stopifnot()` is mostly used at the beginning of functions to check our inputs. You might also want to use `rlang::arg_match()` <https://rlang.r-lib.org/reference/arg_match.html> to provide error messages that include hints when we have a set of allowed options.
+
+```{r}
+#| error: true
+fn <- function(x = c("foo", "bar")) {
+    x <- rlang::arg_match(x)
+
+    ## Known scenario 1
+    if (x == "foo") {
+        print("I know what to do here with 'x = foo'")
+    }
+
+    ## Known scenario 2
+    if (x == "bar") {
+        print("I know what to do here with 'x = bar'")
+    }
+}
+fn("foo")
+fn("zoo")
+```
+
 
 The `warning()` function creates a warning, and the function itself is very similar to the `stop()` function. Remember that a warning does not stop the execution of a program (unlike an error.)
 
@@ -291,6 +338,8 @@ beera({
 ```
 
 Notice that we've effectively transformed errors and warnings into messages.
+
+As a real use case of `tryCatch()` check <https://github.com/leekgroup/recount/blob/742c5ea7cc321729d6b3f03412d5829dd55e023e/R/download_retry.R#L40> which is based on the Bioconductor guidelines for querying data from the web <https://contributions.bioconductor.org/querying-web-resources.html>.
 
 Now that you know the basics of generating and catching errors you'll need to decide when your program should generate an error. My advice to you is to limit the number of errors your program generates as much as possible. Even if you design your program so that it's able to catch and handle errors, the error handling process slows down your program by orders of magnitude. Imagine you wanted to write a simple function that checks if an argument is an even number. You might write the following:
 

@@ -377,12 +377,12 @@ print_message3 <- function(x) {
 
 Now when we pass `print_message3()` a vector, we should get an **error**.
 
-### Don't show users the `call` to help them and you too!
-
 ```{r}
 #| error: true
 print_message3(1:2)
 ```
+
+### Don't show users the `call` to help them and you too!
 
 I have learned that using that setting `call. = FALSE` when using `stop()` and/or `warning()` helps your users by providing them less information that could confuse them.
 
