@@ -362,8 +362,8 @@ Learning objectives
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Change colors</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Source https://github.com/jalvesaq/colorout</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">Sys.getenv</span>(<span class="st">'TERM'</span>) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"term"</span>, <span class="st">"xterm-256color"</span>, <span class="st">"cygwin"</span>, <span class="st">"screen"</span>)) {</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"colorout"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>) <span class="sc">&amp;</span> .Platform<span class="sc">$</span>OS.type <span class="sc">!=</span> <span class="st">'windows'</span>) {</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">Sys.getenv</span>(<span class="st">"TERM"</span>) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"term"</span>, <span class="st">"xterm-256color"</span>, <span class="st">"cygwin"</span>, <span class="st">"screen"</span>)) {</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"colorout"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>) <span class="sc">&amp;</span> .Platform<span class="sc">$</span>OS.type <span class="sc">!=</span> <span class="st">"windows"</span>) {</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">cat</span>(<span class="st">'To install colorout use: remotes::install_github("jalvesaq/colorout")</span><span class="sc">\n</span><span class="st">'</span>)</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -386,7 +386,7 @@ Learning objectives
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">factor =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"abc"</span>, <span class="st">"def"</span>, <span class="st">"ghi"</span>)),</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">string =</span> <span class="fu">c</span>(<span class="st">"ABC"</span>, <span class="st">"DEF"</span>, <span class="st">"GHI"</span>),</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">real =</span> <span class="fu">c</span>(<span class="fl">1.23</span>, <span class="sc">-</span><span class="fl">4.56</span>, <span class="fl">7.89</span>),</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">cien.not =</span> <span class="fu">c</span>(<span class="fl">1.234e-23</span>, <span class="sc">-</span><span class="fl">4.56</span><span class="sc">+</span><span class="dv">45</span>, <span class="fl">7.89e78</span>),</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">cien.not =</span> <span class="fu">c</span>(<span class="fl">1.234e-23</span>, <span class="sc">-</span><span class="fl">4.56</span> <span class="sc">+</span> <span class="dv">45</span>, <span class="fl">7.89e78</span>),</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">"2012-02-21"</span>, <span class="st">"2013-02-12"</span>, <span class="st">"2014-03-04"</span>))</span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(x) <span class="ot">&lt;-</span> <span class="fu">seq_len</span>(<span class="dv">3</span>)</span>
@@ -682,15 +682,15 @@ Example
 <span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now when we pass <code>print_message3()</code> a vector, we should get an <strong>error</strong>.</p>
-</section>
-<section id="dont-show-users-the-call-to-help-them-and-you-too" class="level3">
-<h3 class="anchored" data-anchor-id="dont-show-users-the-call-to-help-them-and-you-too">Don’t show users the <code>call</code> to help them and you too!</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print_message3</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error in print_message3(1:2): 'x' has length &gt; 1</code></pre>
 </div>
 </div>
+</section>
+<section id="dont-show-users-the-call-to-help-them-and-you-too" class="level3">
+<h3 class="anchored" data-anchor-id="dont-show-users-the-call-to-help-them-and-you-too">Don’t show users the <code>call</code> to help them and you too!</h3>
 <p>I have learned that using that setting <code>call. = FALSE</code> when using <code>stop()</code> and/or <code>warning()</code> helps your users by providing them less information that could confuse them.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>print_message3_no_call <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
@@ -777,7 +777,7 @@ Example
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>print_message3_cli <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">length</span>(x) <span class="sc">&gt;</span> 1L) {</span>
 <span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>        len <span class="ot">&lt;-</span> <span class="fu">length</span>(x)</span>
-<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>        <span class="do">## Avoid the print() calls from</span></span>
 <span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>        <span class="do">## https://github.com/ComunidadBioInfo/praiseMX/blob/master/R/praise_crear_emi.R</span></span>
 <span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>        praise_mx_log <span class="ot">&lt;-</span> <span class="fu">capture.output</span>({</span>
@@ -1153,7 +1153,7 @@ Tip
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-09-27
+ date     2023-09-28
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
