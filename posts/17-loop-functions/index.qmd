@@ -161,8 +161,8 @@ Extra: document your function with `roxygen2` syntax. `Code` (or magic wand) -\>
 ```{r}
 #' Title
 #'
-#' @param a 
-#' @param b 
+#' @param a
+#' @param b
 #'
 #' @return
 #' @export
@@ -177,9 +177,9 @@ my_sum <- function(a, b) {
 
 ```{r}
 #' Title
-#' 
+#'
 #' Description
-#' 
+#'
 #' Details
 #'
 #' @param a What is `a`?
@@ -240,7 +240,6 @@ test_that("my_sum works", {
 
     expect_error(my_sum(x, seq_len(5)))
 })
-
 ```
 
 ### Share your function in an R package
@@ -250,8 +249,9 @@ What even more? Make an R package to share this function.
 ```{r}
 #| eval: false
 ## Install biocthis if you don't have it
-if (!require("BiocManager", quietly = TRUE))
+if (!require("BiocManager", quietly = TRUE)) {
     install.packages("BiocManager")
+}
 
 BiocManager::install("biocthis")
 
@@ -322,7 +322,9 @@ args(purrr::map2_int)
 purrr::map2_int(x, y, sum776::my_sum)
 
 ## You can also use anonymous functions
-purrr::map2_int(x, y, function(a, b) {a + b})
+purrr::map2_int(x, y, function(a, b) {
+    a + b
+})
 
 ## purrr even has a super short formula-like syntax
 ## where .x is the first input and .y is the second one
@@ -634,7 +636,8 @@ purrr:::map(s, function(x) {
 ## And we can then add the actual variable it came from with mutate()
 purrr:::map(s, function(x) {
     tibble::as_tibble(colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm = TRUE))
-}) %>% purrr::list_cbind() %>% 
+}) %>%
+    purrr::list_cbind() %>%
     dplyr::mutate(Variable = c("Ozone", "Solar.R", "Wind"))
 ```
 
@@ -653,15 +656,13 @@ purrr:::map_dfr(s, function(x) {
 ## This is how we would have added back the Month variable
 purrr:::map_dfr(s, function(x) {
     colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm = TRUE)
-}) %>% 
+}) %>%
     dplyr:::mutate(Month = as.integer(names(s)))
-
 ```
 
 Instead, we'll use the `t()` function for transposing a vector and `purrr:list_rbind()`.
 
 ```{r}
-
 ## Get data.frame / tibble outputs, but with each variable as a separate
 ## column. Here we used the t() or transpose() function.
 purrr:::map(s, function(x) {
@@ -677,7 +678,8 @@ purrr:::map(s, function(x) {
 ## Then with mutate, we can add the Month back
 purrr:::map(s, function(x) {
     tibble::as_tibble(t(colMeans(x[, c("Ozone", "Solar.R", "Wind")], na.rm = TRUE)))
-}) %>% purrr::list_rbind() %>% 
+}) %>%
+    purrr::list_rbind() %>%
     dplyr:::mutate(Month = as.integer(names(s)))
 ```
 
@@ -688,8 +690,8 @@ For the above task though, we might prefer to use `dplyr` functions.
 ## our variable of interest. Then summarize() helps us specify how we
 ## want to use that data, before it's all put back together into a
 ## tidy tibble.
-airquality %>% 
-    dplyr::group_by(Month) %>% 
+airquality %>%
+    dplyr::group_by(Month) %>%
     dplyr::summarize(
         Ozone = mean(Ozone, na.rm = TRUE),
         Solar.R = mean(Solar.R, na.rm = TRUE),

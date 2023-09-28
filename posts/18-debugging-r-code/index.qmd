@@ -59,9 +59,74 @@ Finding the **root cause of a problem is always challenging**.
 
 Most bugs are subtle and hard to find because if they were obvious, you would have avoided them in the first place.
 
-A good strategy helps. Below I outline a four step process that I have found useful:
+A good strategy helps. Below I outline a five step process that I have found useful:
 
-### 1. Google!
+### 1. See it!
+
+One of my favorite packages is [`colorout`](https://github.com/jalvesaq/colorout). It doesn't work on winOS though 😢. Anyways, a very common mistake I see is that people don't notice an earlier warning / error, which is actually more informative than the last error they get down the road. That can send people into a rabbit hole that doesn't contain the relevant solution.
+
+```{r}
+#| eval: false
+remotes::install_github("jalvesaq/colorout")
+```
+
+It works best if you load it automatically, which we can do by editing the configuration file called `.Rprofile`. It typically lives at `~/.Rprofile`, but it's best to access it with `usethis::edit_r_profile()`.
+
+```{r}
+#| eval: false
+
+## Open your .Rprofile file
+usethis::edit_r_profile()
+
+## Copy paste the following code taken from
+## https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile
+
+## Change colors
+# Source https://github.com/jalvesaq/colorout
+if (Sys.getenv("TERM") %in% c("term", "xterm-256color", "cygwin", "screen")) {
+    if (!requireNamespace("colorout", quietly = TRUE) & .Platform$OS.type != "windows") {
+        cat('To install colorout use: remotes::install_github("jalvesaq/colorout")\n')
+    }
+}
+```
+
+Let's give it a test.
+
+[![](https://raw.githubusercontent.com/jalvesaq/colorout/master/man/figures/screenshot.png){fig-alt="Example colorout output." fig-align="center"}](https://github.com/jalvesaq/colorout)
+
+I re-typed part of the code shown in the screenshot above. Compare how it looks in our RStudio window (if you are not on winOS) compared to how it looks on the HTML file for this lesson. Which one do you prefer?
+
+```{r}
+#| warning: true
+#| error: true
+require("colorout")
+
+## From colorout's README documentation
+x <- data.frame(
+    logic = c(TRUE, TRUE, FALSE),
+    factor = factor(c("abc", "def", "ghi")),
+    string = c("ABC", "DEF", "GHI"),
+    real = c(1.23, -4.56, 7.89),
+    cien.not = c(1.234e-23, -4.56 + 45, 7.89e78),
+    date = as.Date(c("2012-02-21", "2013-02-12", "2014-03-04"))
+)
+rownames(x) <- seq_len(3)
+x
+
+summary(x[, c(1, 2, 4, 6)])
+
+warning("This is an example of a warning.")
+
+example.of.error
+
+library("KernSmooth")
+
+colorout::setOutputColors()
+```
+
+If you want to, use `colorout::setOutputColors()` to edit the colors.
+
+### 2. Google!
 
 Whenever you see an error message, **start by googling it**.
 
@@ -70,14 +135,18 @@ If you are lucky, you will discover that it's a common error with a known soluti
 ::: callout-tip
 ### Pro-tip
 
-When googling, improve your chances of a good match by removing any variable names or values that are specific to your problem.
+When searching on Google or your preferred search browse, improve your chances of a good match by removing any variable names or values that are specific to your problem.
 :::
 
-### 2. Make it repeatable
+### 3. Make it repeatable
 
 To find the root cause of an error, you are going to need to execute the code many times as you consider and reject hypotheses.
 
 **To make that iteration as quick possible**, it's worth some upfront investment to **make the problem both easy and fast to reproduce**.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8bBo3B7N8YQ?si=7M-t_sa0YZBjRnJJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
 
 Start by creating a **rep**roducible **ex**ample (reprex).
 
@@ -93,7 +162,7 @@ Make the **example minimal by removing code and simplifying data**.
 Let's try making a **reprex** [using the `reprex` package](https://www.tidyverse.org/help) (installed with the `tidyverse`)
 
 ```{r}
-library(reprex)
+library("reprex")
 ```
 
 Write a bit of code and copy it to the clipboard:
@@ -108,16 +177,30 @@ Enter `reprex()` in the R Console. In RStudio, you'll see a preview of your rend
 
 It is now ready and waiting on your clipboard, so you can paste it into, say, a GitHub issue.
 
-One last step. Let's go here and open up an issue on the course website:
+One last step. Let's go here and open up an issue on the course website or respond to our practice issue from earlier in the course:
 
--   <https://github.com/lcolladotor/jhustatcomputing2023/issuess>
+-   <https://github.com/lcolladotor/jhustatcomputing2023/issues/2>
 
 We will paste in the code from our reprex.
+
+Notice that if you are asking about code in this class, you might need to use the `wd` argument and set it to `here::here()`, that is `reprex::reprex(wd = here::here())` as showcased at <https://github.com/lcolladotor/jhustatcomputing2023/issues/5>.
 :::
 
-In RStudio, you can access reprex from the addins menu, which makes it even easier to point out your code and select the output format.
+In RStudio, you can access `reprex` from the addins menu, which makes it even easier to point out your code and select the output format.
 
-### 3. Figure out where it is
+Several times in the process of building a `reprex` and then simplifying it as much as possible, I have found the source of my error.
+
+::: callout-note
+Remember that we configured our RStudio's global options such that:
+
+-   *Workspace: restore .RData into workspace at startup* is turned **off**
+
+-   *Save workspace to .RData on exit* is set to **Never**
+
+Those two settings will save us many headaches!
+:::
+
+### 4. Figure out where it is
 
 It's a great idea to adopt the scientific method here.
 
@@ -133,14 +216,16 @@ If this fails, you **might need to ask help from someone else**.
 
 If you have followed the previous step, you will have a small example that is easy to share with others. That makes it much easier for other people to look at the problem, and more likely to help you find a solution.
 
-### 4. Fix it and test it
+### 5. Fix it and test it
 
 Once you have found the bug, you need to **figure out how to fix it** and to **check that the fix actually worked**.
 
-Again, it is very useful to have automated tests in place.
+Again, it is very useful to have automated tests in place, which you can implement with `testthat` as showcased in the previous class.
 
 -   Not only does this help to ensure that you **have actually fixed the bug**, it also **helps to ensure you have not introduced any new bugs** in the process.
 -   In the absence of automated tests, make sure to **carefully record the correct output**, and check against the inputs that previously failed.
+
+As a package developer, you might want to use simple `reprex` cases users report to you as sources for new unit tests in your package. Make sure to recognize the author(s) of the `reprex` and give them credit!
 
 ## Something's Wrong!
 
@@ -152,7 +237,7 @@ There are **different levels of indication** that can be used, ranging from mere
 
 -   `message`: A **generic notification/diagnostic message** produced by the `message()` function; execution of the function continues
 -   `warning`: An indication that **something is wrong but not necessarily fatal**; execution of the function continues. Warnings are generated by the `warning()` function
--   `error`: An indication that **a fatal problem has occurred** and execution of the function stops. Errors are produced by the `stop()` function.
+-   `error`: An indication that **a fatal problem has occurred** and execution of the function stops. Errors are produced by the `stop()` or `stopifnot()` functions.
 -   `condition`: A generic concept for indicating that **something unexpected has occurred**; programmers can create their own custom conditions if they want.
 
 ::: callout-tip
@@ -173,6 +258,8 @@ Nevertheless, R doesn't give an error, because it has a useful value that it can
 The **warning is just there** to let you know that **something unexpected happen**.
 
 Depending on what you are programming, you may have intentionally taken the log of a negative number in order to move on to another section of code.
+
+### Cases with `NA`s
 
 ::: callout-tip
 ### Example
@@ -243,6 +330,8 @@ print_message2(NA)
 
 And all is fine.
 
+### Cases with longer inputs than expected
+
 Now what about the following situation.
 
 ```{r}
@@ -288,10 +377,129 @@ print_message3 <- function(x) {
 
 Now when we pass `print_message3()` a vector, we should get an **error**.
 
+### Don't show users the `call` to help them and you too!
+
 ```{r}
 #| error: true
 print_message3(1:2)
 ```
+
+I have learned that using that setting `call. = FALSE` when using `stop()` and/or `warning()` helps your users by providing them less information that could confuse them.
+
+```{r}
+print_message3_no_call <- function(x) {
+    if (length(x) > 1L) {
+        stop("'x' has length > 1", call. = FALSE)
+    }
+    if (is.na(x)) {
+        print("x is a missing value!")
+    } else if (x > 0) {
+        print("x is greater than zero")
+    } else {
+        print("x is less than or equal to zero")
+    }
+    invisible(x)
+}
+```
+
+```{r}
+#| error: true
+print_message3_no_call(99:100)
+print_message3(99:100)
+```
+
+If we compare the error output from `print_message3()` against `print_message3_no_call()` we can see that the second scenario doesn't include information that only we (as the user) have. That's information that users will copy-paste on their Google searches, which makes finding the right information much harder. As the person trying to help users, knowing how the users called our function is very likely not useful enough information. A `reprex` is 💯 \* ♾️ much better!!!!!
+
+### Errors à la `tidyverse`
+
+If you want to write error messages similar to those you are used to seeing with `tidyverse` packages, use `rlang`. Specifically, switch:
+
+-   `base::stop()` with `rlang::abort()`
+
+-   `base::warning()` with `rlang::warn()`
+
+-   `base::message()` with `rlang::inform()`
+
+```{r}
+print_message3_tidyverse <- function(x) {
+    if (length(x) > 1L) {
+        rlang::abort("'x' has length > 1")
+    }
+    if (is.na(x)) {
+        rlang::warn("x is a missing value!")
+    } else if (x > 0) {
+        rlang::inform("x is greater than zero")
+    } else {
+        rlang::inform("x is less than or equal to zero")
+    }
+    invisible(x)
+}
+```
+
+```{r}
+#| error: true
+print_message3_tidyverse(99:100)
+print_message3_tidyverse(NA)
+print_message3_tidyverse(1)
+print_message3_tidyverse(-1)
+```
+
+Note how `rlang` by default doesn't show the function call. The `tidyverse` style guide has a whole chapter on how to format error messages: <https://style.tidyverse.org/error-messages.html>. That is how all the R developers in the `tidyverse` team have been able to provide consistent looking messages to users of all these packages. They also use `cli` to make their error messages super pretty to read <https://rlang.r-lib.org/reference/topic-condition-formatting.html>.
+
+In this next example, I:
+
+-   use `cli::cli_abort()` instead of `rlang::abort()`
+
+-   define `len` so I can use it in a message with `{len}`
+
+-   use `{.code something}` for inline-markup <https://cli.r-lib.org/reference/inline-markup.html>
+
+-   use several of the `cli` bullets, see <https://cli.r-lib.org/reference/cli_bullets.html> for the full list
+
+-   use `praise::praise()` to get some fun messages to praise our user and lift up their spirits =)
+
+    -   See also `praiseMX` <https://github.com/ComunidadBioInfo/praiseMX> which [CDSB](https://comunidadbioinfo.github.io/) students built in a course I co-instructed in 2019.
+
+```{r}
+print_message3_cli <- function(x) {
+    if (length(x) > 1L) {
+        len <- length(x)
+
+        ## Avoid the print() calls from
+        ## https://github.com/ComunidadBioInfo/praiseMX/blob/master/R/praise_crear_emi.R
+        praise_mx_log <- capture.output({
+            praise_mx <- praiseMX:::praise_bien()
+        })
+        cli::cli_abort(
+            c(
+                "This function is not vectorized:",
+                "i" = "{.var x} has length {len}.",
+                "x" = "{.var x} must have length 1.",
+                ">" = "Try using {.code purrr::map(x, print_message3_cli)} to loop your input {.var x} on this function.",
+                "v" = praise::praise(),
+                "v" = praise_mx
+            )
+        )
+    }
+    if (is.na(x)) {
+        rlang::warn("x is a missing value!")
+    } else if (x > 0) {
+        rlang::inform("x is greater than zero")
+    } else {
+        rlang::inform("x is less than or equal to zero")
+    }
+    invisible(x)
+}
+```
+
+```{r}
+#| error: true
+set.seed(20230928)
+print_message3_cli(-1:1)
+purrr::map(-1:1, print_message3_cli)
+```
+
+### Vectorizing
 
 Vectorizing the function can be accomplished easily with the `Vectorize()` function.
 
@@ -333,11 +541,16 @@ Being able to answer these questions is important not just for your own sake, bu
 
 Seasoned programmers will be asking you these exact questions.
 
+::: callout-note
+Think about the person who is going to receive your question. At <https://lcolladotor.github.io/bioc_team_ds/how-to-ask-for-help.html> I showcase some examples by Jim Hester and other information you might want to think about when asking for help.
+:::
+
 # Debugging Tools in R
 
 R provides a number of tools to help you with debugging your code. The primary tools for debugging functions in R are
 
 -   `traceback()`: **prints out the function call stack** after an error occurs; does nothing if there's no error
+    -   The `tidyverse` version of this base R function is `rlang::last_error()` <https://rlang.r-lib.org/reference/last_error.html>. For base R, you will need to enable tracing with `rlang` with `rlang::global_entrace()` <https://rlang.r-lib.org/reference/global_entrace.html>. It can provide much more user-friendly output.
 -   `debug()`: **flags a function for "debug" mode** which allows you to step through execution of a function one line at a time
 -   `browser()`: **suspends the execution of a function** wherever it is called and puts the function in debug mode
 -   `trace()`: allows you to **insert debugging code into a function** at specific places
@@ -393,6 +606,34 @@ Error in eval(expr, envir, enclos) : object ’y’ not found
 ```
 
 You can see now that the **error did not get thrown until the 7th level of the function call stack**, in which case the `eval()` function tried to evaluate the formula `y ~ x` and **realized the object `y` did not exist**.
+
+With `rlang`, this is how it look:
+
+```{r}
+#| error: true
+lm(y ~ x)
+rlang::last_error()
+```
+
+Note that we need to use `rlang::global_entrace()` first since `lm()` is a base R function. If we do so, then `rlang::last_error()` does work.
+
+``` r
+> rlang::global_entrace()
+> lm(y ~ x)
+Error:
+! object 'y' not found
+Run `rlang::last_trace()` to see where the error occurred.
+> rlang::last_error()
+<error/rlang_error>
+Error:
+! object 'y' not found
+---
+Backtrace:
+    ▆
+ 1. └─stats::lm(y ~ x)
+ 2.   └─base::eval(mf, parent.frame())
+ 3.     └─base::eval(mf, parent.frame())
+```
 :::
 
 Looking at the traceback is useful for figuring out roughly where an error occurred but it's not useful for more detailed debugging. For that you might turn to the `debug()` function.
@@ -491,6 +732,7 @@ The `recover()` function will first print out the function call stack when an er
 # Summary
 
 -   There are three main indications of a problem/condition: `message`, `warning`, `error`; only an `error` is fatal
+    -   We saw how to trigger them with base R functions such as `stop()`, and `tidyverse` functions `rlang::abort()` and `cli::cli_abort()`.
 -   When analyzing a function with a problem, make sure you can reproduce the problem, clearly state your expectations and how the output differs from your expectation
 -   Interactive debugging tools `traceback`, `debug`, `recover`, `browser`, and `trace` can be used to find problematic code in functions
 -   Debugging tools are not a substitute for thinking!
