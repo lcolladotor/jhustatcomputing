@@ -80,7 +80,9 @@ $$
 \bar{x} = \frac{1}{N} \sum_{i=1}^n x_i
 $$ $$
 s = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i - \overline{x})^2}
-$$ Include at least one example of output using your functions.
+$$ As a primer, the $\sum_{i = 1}^3 x_i$ is equivalent to doing the sum of $x_i$ starting from $i = 1$, increasing $i$ by 1 each then, up to when $i = 3$. That is, $x_1 + x_2 + x_3$.
+
+Include at least one example of output using your functions.
 
 ::: callout-note
 -   You can assume that the input value `x` will always be a *vector* of numbers of length *N*.
@@ -108,6 +110,7 @@ Next, write a function called `calculate_CI()` that:
 
 $$
 \bar{x} \pm t_{\alpha/2, N-1} s_{\bar{x}}
+= ( \bar{x} - t_{\alpha/2, N-1} s_{\bar{x}}, \bar{x} + t_{\alpha/2, N-1} s_{\bar{x}} )
 $$
 
 where $t_{\alpha/2, N-1}$ is the value needed to generate an area of $\alpha / 2$ in each tail of the $t$-distribution with $N-1$ degrees of freedom and $s_{\bar{x}} = \frac{s}{\sqrt{N}}$ is the standard error of the mean. For example, if we pick a 95% confidence interval and $N$=50, then you can calculate $t_{\alpha/2, N-1}$ as
