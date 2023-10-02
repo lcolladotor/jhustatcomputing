@@ -437,9 +437,9 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 3 × 1
        x
    &lt;dbl&gt;
-1  0.250
-2 -0.664
-3 -1.04 </code></pre>
+1 -0.691
+2 -0.723
+3 -1.79 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a new column that indicates whether the value of 'x' is positive or negative</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
@@ -451,16 +451,16 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 100 × 2
         x is_positive
     &lt;dbl&gt; &lt;chr&gt;      
- 1  0.250 Yes        
- 2 -0.664 No         
- 3 -1.04  No         
- 4 -0.333 No         
- 5 -1.04  No         
- 6 -0.316 No         
- 7  0.591 Yes        
- 8 -0.639 No         
- 9  0.168 Yes        
-10 -1.06  No         
+ 1 -0.691 No         
+ 2 -0.723 No         
+ 3 -1.79  No         
+ 4  0.890 Yes        
+ 5  0.962 Yes        
+ 6 -1.32  No         
+ 7 -0.311 No         
+ 8  0.662 Yes        
+ 9  0.721 Yes        
+10 -0.504 No         
 # ℹ 90 more rows</code></pre>
 </div>
 </div>
@@ -530,7 +530,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <p>In this part of the project, we will continue to work with our now tidy song dataset from the previous part.</p>
 <section id="tasks-2" class="level3">
 <h3 class="anchored" data-anchor-id="tasks-2">Tasks</h3>
-<p>Use the functions in <code>ggplot2</code> package to make a scatter plot of the <code>mean_score</code>s (y-axis) over time (x-axis). One point for each <code>mean_score</code>. For full credit, your plot should include:</p>
+<p>Use the functions in <code>ggplot2</code> package to make a scatter plot of the <code>mean_score</code>s (y-axis) over time (x-axis). There should be one plot (facet) for each <code>feature</code>. For full credit, your plot should include:</p>
 <ol type="1">
 <li>An overall title for the plot and a subtitle summarizing key trends that you found. Also include a caption in the figure with your name.</li>
 <li>Both the observed points for the <code>mean_score</code>, but also a smoothed non-linear pattern of the trend</li>
@@ -607,13 +607,13 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-09-25
+ date     2023-10-02
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
  cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout      1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
+ colorout      1.3-0   2023-09-28 [1] Github (jalvesaq/colorout@8384882)
  colorspace    2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
  digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
  dplyr       * 1.1.3   2023-09-03 [1] CRAN (R 4.3.0)
