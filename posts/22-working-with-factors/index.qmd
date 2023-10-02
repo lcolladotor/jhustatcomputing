@@ -196,7 +196,7 @@ factor("a", levels = "c")
 
 The **unfortunate behavior of factors in R** has led to an online movement against the default behavior of many data import functions to make factors out of any variable composed as strings.
 
-The tidyverse is part of this movement, with functions from the `readr` package defaulting to leaving strings as-is. (Others have chosen to add `options(stringAsFactors=FALSE)` into their start up commands.)
+The tidyverse is part of this movement, with functions from the `readr` package defaulting to leaving strings as-is. Others used to chose to add `options(stringAsFactors = FALSE)` into their start up commands to override R's default of `stringsAsFactors = TRUE` in functions such as `read.table()`. However, that is no longer needed in recent versions of R as the default has become `stringsAsFactors = FALSE` as documented on the official R blog: <https://blog.r-project.org/2020/02/16/stringsasfactors/>.
 
 ## Factors when modeling data
 
@@ -269,7 +269,7 @@ Let's introduce a package to make wrangling factors easier.
 Next, we will introduce the `forcats` package, which is part of the core `tidyverse`, but can also be loaded directly
 
 ```{r}
-library(forcats)
+library("forcats")
 ```
 
 It provides tools for dealing with **cat**egorical variables (and it's an anagram of factors!) using a wide range of helpers for working with factors.
@@ -423,6 +423,12 @@ rincome_summary <-
         n = n()
     )
 
+## Original rincome order
+rincome_summary %>%
+    ggplot(aes(x = age, y = rincome)) +
+    geom_point()
+
+## rincome re-ordered by age's values
 rincome_summary %>%
     ggplot(aes(x = age, y = fct_reorder(.f = rincome, .x = age))) +
     geom_point()
