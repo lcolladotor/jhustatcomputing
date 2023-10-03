@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing2023/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776) in Fall 2023</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Mon, 02 Oct 2023 23:50:13 GMT</lastBuildDate>
+<lastBuildDate>Tue, 03 Oct 2023 00:29:46 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -434,7 +434,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/01-welcome/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -928,7 +928,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/02-introduction-to-r-and-rstudio/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1209,7 +1209,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/03-introduction-to-gitgithub/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing2023/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -1868,7 +1868,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/04-reproducible-research/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -2674,7 +2674,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/05-literate-programming/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3134,7 +3134,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/06-reference-management/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4524,7 +4524,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/07-reading-and-writing-data/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6343,7 +6343,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/08-managing-data-frames-with-tidyverse/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7303,7 +7303,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/09-tidy-data-and-the-tidyverse/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8151,7 +8151,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/10-joining-data-in-r/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -8663,7 +8663,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/11-plotting-systems/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10013,7 +10013,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/12-ggplot2-plotting-system-part-1/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -14143,7 +14143,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/13-ggplot2-plotting-system-part-2/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -15889,7 +15889,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/14-r-nuts-and-bolts/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -17123,7 +17123,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/15-control-structures/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -18434,7 +18434,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/16-functions/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -21441,7 +21441,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/17-loop-functions/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -23394,7 +23394,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/18-debugging-r-code/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -24331,7 +24331,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/19-error-handling-and-generation/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -24477,10 +24477,14 @@ font-style: inherit;">"lubridate"</span>)</span></code></pre></div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(tidyverse)</span>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"tidyverse"</span>)</span>
 <span id="cb2-2"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(lubridate)</span></code></pre></div>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lubridate"</span>)</span></code></pre></div>
 </div>
 </section>
 </section>
@@ -24511,17 +24515,39 @@ Note
 <p><strong>Date-times</strong> are <strong>substantially more complicated</strong> because of the need to handle time zones, which we will come back to at the end of the lesson.</p>
 <p>To get the current date or date-time you can use <code>today()</code> or <code>now()</code> from <code>lubridate</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## lubridate versions</span></span>
+<span id="cb3-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">today</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-08-17"</code></pre>
+<pre><code>[1] "2023-10-02"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">now</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-08-17 21:47:51 EDT"</code></pre>
+<pre><code>[1] "2023-10-02 20:28:00 EDT"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## base R versions</span></span>
+<span id="cb7-2">base<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">Sys.Date</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-10-02"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">base<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">Sys.time</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-10-02 20:28:00 EDT"</code></pre>
 </div>
 </div>
 <p>Otherwise, there are three ways you are likely to create a date/time:</p>
@@ -24547,12 +24573,12 @@ Typical ways to create a date/time in R
 <h2 class="anchored" data-anchor-id="from-a-string">1. From a string</h2>
 <p>Dates are of the <code>Date</code> class.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">x <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">today</span>()</span>
-<span id="cb7-2"><span class="fu" style="color: #4758AB;
+<span id="cb11-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">class</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -24563,7 +24589,7 @@ font-style: inherit;">class</span>(x)</span></code></pre></div>
 <p>To use the helper functions, <strong>identify the order in which year, month, and day appear</strong> in your dates, then arrange “y”, “m”, and “d” in the same order.</p>
 <p>That gives you the name of the <code>lubridate</code> function that will parse your date. For example:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -24571,7 +24597,7 @@ font-style: inherit;">"1970-01-01"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "1970-01-01"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -24579,7 +24605,7 @@ font-style: inherit;">"2017-01-31"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2017-01-31"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mdy</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -24587,11 +24613,60 @@ font-style: inherit;">"January 31st, 2017"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2017-01-31"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">dmy</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"31-Jan-2017"</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2017-01-31"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Base R versions</span></span>
+<span id="cb21-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.Date</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"1970-01-01"</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "1970-01-01"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Quickly becomes more complicated.</span></span>
+<span id="cb23-2"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## We quickly need to get familiarized with</span></span>
+<span id="cb23-3"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## formats for specifying dates, and that's complicated.</span></span>
+<span id="cb23-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ?strptime</span></span>
+<span id="cb23-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.Date</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"January 31st, 2017"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%B %dst, %Y"</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2017-01-31"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.Date</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">gsub</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"st,"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"January 31st, 2017"</span>), <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%B %d %Y"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2017-01-31"</code></pre>
 </div>
@@ -24612,7 +24687,7 @@ Pro-tip
 <li>These functions also take unquoted numbers.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd</span>(<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -24627,7 +24702,7 @@ font-style: inherit;">20170131</span>)</span></code></pre></div>
 <h3 class="anchored" data-anchor-id="alternate-formulations">Alternate Formulations</h3>
 <p>Different locales have different ways of formatting dates</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -24637,7 +24712,7 @@ font-style: italic;">## International standard</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2016-09-13"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -24647,7 +24722,7 @@ font-style: italic;">## Just figure it out</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2016-09-13"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mdy</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -24657,7 +24732,7 @@ font-style: italic;">## Mostly U.S.</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2016-09-13"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">dmy</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -24671,22 +24746,22 @@ font-style: italic;">## Europe</span></span></code></pre></div>
 <p>All of the <strong>above are valid and lead to the exact same object</strong>.</p>
 <p>Even if the individual dates are formatted differently, <code>ymd()</code> can <strong>usually figure it out</strong>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1">x <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1">x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(</span>
-<span id="cb27-2">    <span class="st" style="color: #20794D;
+<span id="cb37-2">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"2016-04-05"</span>,</span>
-<span id="cb27-3">    <span class="st" style="color: #20794D;
+<span id="cb37-3">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"2016/05/06"</span>,</span>
-<span id="cb27-4">    <span class="st" style="color: #20794D;
+<span id="cb37-4">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"2016,10,4"</span></span>
-<span id="cb27-5">)</span>
-<span id="cb27-6"><span class="fu" style="color: #4758AB;
+<span id="cb37-5">)</span>
+<span id="cb37-6"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -24700,14 +24775,16 @@ font-style: inherit;">ymd</span>(x)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="from-individual-date-time-components">2. From individual date-time components</h2>
 <p>Sometimes the <strong>date components</strong> will come across <strong>multiple columns in a dataset</strong>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(nycflights13)</span>
-<span id="cb29-2"></span>
-<span id="cb29-3">flights <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"nycflights13"</span>)</span>
+<span id="cb39-2"></span>
+<span id="cb39-3">flights <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb29-4">    <span class="fu" style="color: #4758AB;
+<span id="cb39-4">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">select</span>(year, month, day)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -24729,20 +24806,20 @@ font-style: inherit;">select</span>(year, month, day)</span></code></pre></div>
 </div>
 <p>To create a date/time from this sort of input, use</p>
 <ul>
-<li><code>make_date(year,month,day)</code> for dates, or</li>
-<li><code>make_datetime(year,month,day,hour,min,sec,tz)</code> for date-times</li>
+<li><code>make_date(year, month, day)</code> for dates, or</li>
+<li><code>make_datetime(year, month, day, hour, min, sec, tz)</code> for date-times</li>
 </ul>
 <p>We combine these functions inside of <code>mutate</code> to add a new column to our dataset:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1">flights <span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1">flights <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb31-2">    <span class="fu" style="color: #4758AB;
+<span id="cb41-2">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">select</span>(year, month, day) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb31-3">    <span class="fu" style="color: #4758AB;
+<span id="cb41-3">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -24778,10 +24855,10 @@ Questions
 <div class="callout-body-container callout-body">
 <p>The <code>flights</code> also contains a <code>hour</code> and <code>minute</code> column.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1">flights <span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1">flights <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb33-2">    <span class="fu" style="color: #4758AB;
+<span id="cb43-2">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">select</span>(year, month, day, hour, minute)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -24803,7 +24880,7 @@ font-style: inherit;">select</span>(year, month, day, hour, minute)</span></code
 </div>
 <p>Let’s use <code>make_datetime()</code> to create a date-time column called <code>departure</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><span class="co" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># try it yourself</span></span></code></pre></div>
 </div>
@@ -24815,33 +24892,33 @@ font-style: inherit;"># try it yourself</span></span></code></pre></div>
 <p>You may want to <strong>switch</strong> between a <code>date-time</code> and a <code>date</code>.</p>
 <p>That is the job of <code>as_datetime()</code> and <code>as_date()</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">today</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-08-17"</code></pre>
+<pre><code>[1] "2023-10-02"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">as_datetime</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">today</span>())</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-08-17 UTC"</code></pre>
+<pre><code>[1] "2023-10-02 UTC"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb40" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">now</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-08-17 21:47:52 EDT"</code></pre>
+<pre><code>[1] "2023-10-02 20:28:01 EDT"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb42" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">as_date</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">now</span>())</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-08-17"</code></pre>
+<pre><code>[1] "2023-10-02"</code></pre>
 </div>
 </div>
 </section>
@@ -24854,7 +24931,7 @@ font-style: inherit;">now</span>())</span></code></pre></div>
 <p>To create a <code>date-time</code> <strong>from a character string</strong>, add an underscore and one or more of “h”, “m”, and “s” to the name of the parsing function:</p>
 <p>Times can be coerced from a character string with <code>ymd_hms()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb54" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd_hms</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -24862,7 +24939,7 @@ font-style: inherit;">"2017-01-31 20:11:59"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2017-01-31 20:11:59 UTC"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb56" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mdy_hm</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -24873,7 +24950,7 @@ font-style: inherit;">"01/31/2017 08:01"</span>)</span></code></pre></div>
 </div>
 <p>You can also force the creation of a date-time from a date by supplying a timezone:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb58" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd_hms</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -24881,7 +24958,7 @@ font-style: inherit;">"2016-09-13 14:00:00"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2016-09-13 14:00:00 UTC"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb60" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd_hms</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -24893,7 +24970,7 @@ font-style: inherit;">"America/New_York"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2016-09-13 14:00:00 EDT"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb62" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd_hms</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -24915,20 +24992,20 @@ font-style: inherit;">""</span>)</span></code></pre></div>
 <p><code>POSIXct</code> is just a very large integer under the hood. It is a useful class when you want to store times in something like a data frame.</p>
 <p>Technically, the <code>POSIXct</code> class represents the number of <strong>seconds</strong> since 1 January 1970. (In case you were wondering, “POSIXct” stands for “Portable Operating System Interface”, calendar time.)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1">x <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb64" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1">x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd_hm</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"1970-01-01 01:00"</span>)</span>
-<span id="cb54-2"><span class="fu" style="color: #4758AB;
+<span id="cb64-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">class</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "POSIXct" "POSIXt" </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb56" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb66" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">unclass</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -24936,13 +25013,13 @@ font-style: inherit;">unclass</span>(x)</span></code></pre></div>
 attr(,"tzone")
 [1] "UTC"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb58" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb68" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">typeof</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "double"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb60" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb70" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">attributes</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -24958,22 +25035,22 @@ $tzone
 <h3 class="anchored" data-anchor-id="posixlt"><code>POSIXlt</code></h3>
 <p><code>POSIXlt</code> is a <code>list</code> underneath and it stores a bunch of other useful information like the day of the week, day of the year, month, day of the month</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb62" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1">y <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb72" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1">y <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">as.POSIXlt</span>(x)</span>
-<span id="cb62-2">y</span></code></pre></div>
+<span id="cb72-2">y</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "1970-01-01 01:00:00 UTC"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb64" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb74" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">typeof</span>(y)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "list"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb66" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb76" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">attributes</span>(y)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -25021,7 +25098,7 @@ Pro-tip
 <li>Specifying <code>tz = ""</code> in one of the <code>ymd()</code> and friends functions will use the local time zone</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb68" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1">x <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb78" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1">x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -25032,11 +25109,11 @@ background-color: null;
 font-style: inherit;">tz =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">""</span>)</span>
-<span id="cb68-2">x</span></code></pre></div>
+<span id="cb78-2">x</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "1970-01-01 01:00:00 EST"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb70" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb80" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">attributes</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -25059,7 +25136,7 @@ Pro-tip
 <div class="callout-body-container callout-body">
 <p>The <code>tzone</code> attribute is optional. It <strong>controls how the time is printed</strong>, not what absolute time it refers to.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb72" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb82" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">attr</span>(x, <span class="st" style="color: #20794D;
 background-color: null;
@@ -25068,11 +25145,11 @@ background-color: null;
 font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"US/Pacific"</span></span>
-<span id="cb72-2">x</span></code></pre></div>
+<span id="cb82-2">x</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "1969-12-31 22:00:00 PST"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb74" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb84" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">attr</span>(x, <span class="st" style="color: #20794D;
 background-color: null;
@@ -25081,7 +25158,7 @@ background-color: null;
 font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"US/Eastern"</span></span>
-<span id="cb74-2">x</span></code></pre></div>
+<span id="cb84-2">x</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "1970-01-01 01:00:00 EST"</code></pre>
 </div>
@@ -25102,7 +25179,7 @@ font-style: inherit;">"US/Eastern"</span></span>
 <h2 class="anchored" data-anchor-id="arithmetic">Arithmetic</h2>
 <p>You <strong>can add and subtract</strong> dates and times.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb76" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1">x <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb86" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1">x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -25115,7 +25192,7 @@ background-color: null;
 font-style: inherit;">""</span>) <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Midnight</span></span>
-<span id="cb76-2">y <span class="ot" style="color: #003B4F;
+<span id="cb86-2">y <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -25126,7 +25203,7 @@ background-color: null;
 font-style: inherit;">tz =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">""</span>)</span>
-<span id="cb76-3">x <span class="sc" style="color: #5E5E5E;
+<span id="cb86-3">x <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span> y <span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -25137,7 +25214,7 @@ font-style: italic;">## this works</span></span></code></pre></div>
 </div>
 <p>You can do comparisons too (i.e.&nbsp;<code>&gt;</code>, <code>&lt;</code>, and <code>==</code>)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb78" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1">x <span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb88" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1">x <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;</span> y <span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -25145,7 +25222,7 @@ font-style: italic;">## this works</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb80" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1">x <span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb90" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1">x <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> y <span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -25153,7 +25230,7 @@ font-style: italic;">## this works</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb82" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1">x <span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb92" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1">x <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">==</span> y <span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -25161,7 +25238,7 @@ font-style: italic;">## this works</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb84" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1">x <span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb94" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1">x <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> y <span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -25182,7 +25259,7 @@ Note
 <div class="callout-body-container callout-body">
 <p>The class of <code>x</code> is <code>POSIXct</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb86" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb96" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">class</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -25192,7 +25269,7 @@ font-style: inherit;">class</span>(x)</span></code></pre></div>
 <p><code>POSIXct</code> objects are a measure of seconds from an origin, usually the UNIX epoch (1st Jan 1970).</p>
 <p>Just add the requisite number of seconds to the object:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb88" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1">x <span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb98" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1">x <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
 background-color: null;
@@ -25215,19 +25292,19 @@ font-style: inherit;"># add 3 hours</span></span></code></pre></div>
 </div>
 <p>Same goes for days. For example, you can just keep the date portion using <code>date()</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb90" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1">y <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb100" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1">y <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">date</span>(y)</span>
-<span id="cb90-2">y</span></code></pre></div>
+<span id="cb100-2">y</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2011-01-09"</code></pre>
 </div>
 </div>
 <p>And then add a number to the date (in this case 1 day)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb92" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1">y <span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb102" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1">y <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
 background-color: null;
@@ -25243,21 +25320,21 @@ font-style: inherit;">1</span></span></code></pre></div>
 <p>Even keeps track of leap years, leap seconds, daylight savings, and time zones.</p>
 <p>Leap years</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb94" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1">x <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb104" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1">x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"2012-03-01"</span>)</span>
-<span id="cb94-2">y <span class="ot" style="color: #003B4F;
+<span id="cb104-2">y <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"2012-02-28"</span>)</span>
-<span id="cb94-3">x <span class="sc" style="color: #5E5E5E;
+<span id="cb104-3">x <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span> y</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -25266,21 +25343,21 @@ font-style: inherit;">-</span> y</span></code></pre></div>
 </div>
 <p>Not a leap year</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb96" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1">x <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb106" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1">x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"2013-03-01"</span>)</span>
-<span id="cb96-2">y <span class="ot" style="color: #003B4F;
+<span id="cb106-2">y <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"2013-02-28"</span>)</span>
-<span id="cb96-3">x <span class="sc" style="color: #5E5E5E;
+<span id="cb106-3">x <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span> y</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -25289,7 +25366,7 @@ font-style: inherit;">-</span> y</span></code></pre></div>
 </div>
 <p>BUT beware of time zones!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb98" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1">x <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb108" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1">x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -25300,7 +25377,7 @@ background-color: null;
 font-style: inherit;">tz =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">""</span>)</span>
-<span id="cb98-2">y <span class="ot" style="color: #003B4F;
+<span id="cb108-2">y <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -25311,7 +25388,7 @@ background-color: null;
 font-style: inherit;">tz =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"GMT"</span>)</span>
-<span id="cb98-3">y <span class="sc" style="color: #5E5E5E;
+<span id="cb108-3">y <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span> x</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -25320,7 +25397,7 @@ font-style: inherit;">-</span> x</span></code></pre></div>
 </div>
 <p>There are also things called <a href="https://en.wikipedia.org/wiki/Leap_second"><strong>leap seconds</strong></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb100" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1">.leap.seconds</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb110" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1">.leap.seconds</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "1972-07-01 GMT" "1973-01-01 GMT" "1974-01-01 GMT" "1975-01-01 GMT"
  [5] "1976-01-01 GMT" "1977-01-01 GMT" "1978-01-01 GMT" "1979-01-01 GMT"
@@ -25339,43 +25416,43 @@ font-style: inherit;">-</span> x</span></code></pre></div>
 <section id="date-elements" class="level2">
 <h2 class="anchored" data-anchor-id="date-elements">Date Elements</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb102" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1">x <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb112" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1">x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd_hms</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(</span>
-<span id="cb102-2">    <span class="st" style="color: #20794D;
+<span id="cb112-2">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"2012-10-25 01:13:46"</span>,</span>
-<span id="cb102-3">    <span class="st" style="color: #20794D;
+<span id="cb112-3">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"2015-04-23 15:11:23"</span></span>
-<span id="cb102-4">), <span class="at" style="color: #657422;
+<span id="cb112-4">), <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">tz =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">""</span>)</span>
-<span id="cb102-5"><span class="fu" style="color: #4758AB;
+<span id="cb112-5"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">year</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2012 2015</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb104" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb114" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">month</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10  4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb106" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb116" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">day</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 25 23</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb108" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb118" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">weekdays</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -25386,43 +25463,43 @@ font-style: inherit;">weekdays</span>(x)</span></code></pre></div>
 <section id="time-elements" class="level2">
 <h2 class="anchored" data-anchor-id="time-elements">Time Elements</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb110" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1">x <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb120" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1">x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd_hms</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(</span>
-<span id="cb110-2">    <span class="st" style="color: #20794D;
+<span id="cb120-2">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"2012-10-25 01:13:46"</span>,</span>
-<span id="cb110-3">    <span class="st" style="color: #20794D;
+<span id="cb120-3">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"2015-04-23 15:11:23"</span></span>
-<span id="cb110-4">), <span class="at" style="color: #657422;
+<span id="cb120-4">), <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">tz =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">""</span>)</span>
-<span id="cb110-5"><span class="fu" style="color: #4758AB;
+<span id="cb120-5"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">minute</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 13 11</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb112" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb122" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb122-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">second</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 46 23</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb114" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb124" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb124-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">hour</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  1 15</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb116" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb126" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb126-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">week</span>(x)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -25436,13 +25513,13 @@ font-style: inherit;">week</span>(x)</span></code></pre></div>
 <section id="reading-in-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="reading-in-the-data">Reading in the Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb118" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb128" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb128-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(here)</span>
-<span id="cb118-2"><span class="fu" style="color: #4758AB;
+<span id="cb128-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(readr)</span>
-<span id="cb118-3">storm <span class="ot" style="color: #003B4F;
+<span id="cb128-3">storm <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -25457,7 +25534,7 @@ background-color: null;
 font-style: inherit;">progress =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>)</span>
-<span id="cb118-4">storm</span></code></pre></div>
+<span id="cb128-4">storm</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 52,409 × 51
    BEGIN_YEARMONTH BEGIN_DAY BEGIN_TIME END_YEARMONTH END_DAY END_TIME
@@ -25482,7 +25559,7 @@ font-style: inherit;">FALSE</span>)</span>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb120" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb130" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb130-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">names</span>(storm)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -25524,11 +25601,11 @@ Questions
 <li>Rename the <code>DEATHS_DIRECT</code> column as <code>deaths</code>.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb122" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb122-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb132" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb132-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(dplyr)</span>
-<span id="cb122-2"></span>
-<span id="cb122-3"><span class="co" style="color: #5E5E5E;
+<span id="cb132-2"></span>
+<span id="cb132-3"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># try it yourself</span></span></code></pre></div>
 </div>
@@ -25536,7 +25613,7 @@ font-style: inherit;"># try it yourself</span></span></code></pre></div>
 </div>
 <p>Next, we do some wrangling to create a <code>storm_sub</code> data frame (code chunk set to <code>echo=FALSE</code> for the purposes of the lecture, but code is in the R Markdown).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb123" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb123-1">storm_sub</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb133" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb133-1">storm_sub</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 52,409 × 3
    begin               type             deaths
@@ -25559,13 +25636,15 @@ font-style: inherit;"># try it yourself</span></span></code></pre></div>
 <h2 class="anchored" data-anchor-id="histograms-of-datestimes">Histograms of Dates/Times</h2>
 <p>We can make a histogram of the dates/times to get a sense of when storm events occur.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb125" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb125-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb135" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb135-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(ggplot2)</span>
-<span id="cb125-2">storm_sub <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ggplot2"</span>)</span>
+<span id="cb135-2">storm_sub <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb125-3">    <span class="fu" style="color: #4758AB;
+<span id="cb135-3">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -25574,7 +25653,7 @@ background-color: null;
 font-style: inherit;">x =</span> begin)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb125-4">    <span class="fu" style="color: #4758AB;
+<span id="cb135-4">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_histogram</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -25583,7 +25662,7 @@ background-color: null;
 font-style: inherit;">20</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb125-5">    <span class="fu" style="color: #4758AB;
+<span id="cb135-5">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_bw</span>()</span></code></pre></div>
 <div class="cell-output-display">
@@ -25592,13 +25671,13 @@ font-style: inherit;">theme_bw</span>()</span></code></pre></div>
 </div>
 <p>We can group by event type too.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb126" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb126-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb136" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb136-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(ggplot2)</span>
-<span id="cb126-2">storm_sub <span class="sc" style="color: #5E5E5E;
+<span id="cb136-2">storm_sub <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb126-3">    <span class="fu" style="color: #4758AB;
+<span id="cb136-3">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -25607,14 +25686,14 @@ background-color: null;
 font-style: inherit;">x =</span> begin)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb126-4">    <span class="fu" style="color: #4758AB;
+<span id="cb136-4">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">facet_wrap</span>(<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">~</span>type) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb126-5">    <span class="fu" style="color: #4758AB;
+<span id="cb136-5">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_histogram</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -25623,12 +25702,12 @@ background-color: null;
 font-style: inherit;">20</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb126-6">    <span class="fu" style="color: #4758AB;
+<span id="cb136-6">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_bw</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb126-7">    <span class="fu" style="color: #4758AB;
+<span id="cb136-7">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -25647,10 +25726,10 @@ font-style: inherit;">90</span>))</span></code></pre></div>
 <section id="scatterplots-of-datestimes" class="level2">
 <h2 class="anchored" data-anchor-id="scatterplots-of-datestimes">Scatterplots of Dates/Times</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb127" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb127-1">storm_sub <span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb137" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb137-1">storm_sub <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb127-2">    <span class="fu" style="color: #4758AB;
+<span id="cb137-2">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -25661,7 +25740,7 @@ background-color: null;
 font-style: inherit;">y =</span> deaths)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb127-3">    <span class="fu" style="color: #4758AB;
+<span id="cb137-3">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_point</span>()</span></code></pre></div>
 <div class="cell-output-display">
@@ -25670,10 +25749,10 @@ font-style: inherit;">geom_point</span>()</span></code></pre></div>
 </div>
 <p>If we focus on a single month, the x-axis adapts.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb128" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb128-1">storm_sub <span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb138" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb138-1">storm_sub <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb128-2">    <span class="fu" style="color: #4758AB;
+<span id="cb138-2">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">filter</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -25684,14 +25763,14 @@ background-color: null;
 font-style: inherit;">6</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb128-3">    <span class="fu" style="color: #4758AB;
+<span id="cb138-3">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">aes</span>(begin, deaths)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb128-4">    <span class="fu" style="color: #4758AB;
+<span id="cb138-4">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_point</span>()</span></code></pre></div>
 <div class="cell-output-display">
@@ -25700,10 +25779,10 @@ font-style: inherit;">geom_point</span>()</span></code></pre></div>
 </div>
 <p>Similarly, we can focus on a single day.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb129" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb129-1">storm_sub <span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb139" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb139-1">storm_sub <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb129-2">    <span class="fu" style="color: #4758AB;
+<span id="cb139-2">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">filter</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -25720,14 +25799,14 @@ background-color: null;
 font-style: inherit;">16</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb129-3">    <span class="fu" style="color: #4758AB;
+<span id="cb139-3">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">aes</span>(begin, deaths)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb129-4">    <span class="fu" style="color: #4758AB;
+<span id="cb139-4">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_point</span>()</span></code></pre></div>
 <div class="cell-output-display">
@@ -25766,9 +25845,22 @@ Questions
 <li>What happens if you parse a string that contains invalid dates?</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb130" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb130-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb140" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb140-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ymd</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2010-10-10"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bananas"</span>))</span>
+<span id="cb140-2"></span>
+<span id="cb140-3"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Compare against base R's behavior:</span></span>
+<span id="cb140-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.Date</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -25780,35 +25872,35 @@ font-style: inherit;">"bananas"</span>))</span></code></pre></div>
 <li>What does the <code>tzone</code> argument to <code>today()</code> do? Why is it important?</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb131" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb131-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb141" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb141-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">unclass</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">today</span>())</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 19586</code></pre>
+<pre><code>[1] 19632</code></pre>
 </div>
 </div>
 <ol start="3" type="1">
 <li>Use the appropriate <code>lubridate</code> function to parse each of the following dates:</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb133" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb133-1">d1 <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb143" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb143-1">d1 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"January 1, 2010"</span></span>
-<span id="cb133-2">d2 <span class="ot" style="color: #003B4F;
+<span id="cb143-2">d2 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"2015-Mar-07"</span></span>
-<span id="cb133-3">d3 <span class="ot" style="color: #003B4F;
+<span id="cb143-3">d3 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"06-Jun-2017"</span></span>
-<span id="cb133-4">d4 <span class="ot" style="color: #003B4F;
+<span id="cb143-4">d4 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -25817,7 +25909,7 @@ background-color: null;
 font-style: inherit;">"August 19 (2015)"</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"July 1 (2015)"</span>)</span>
-<span id="cb133-5">d5 <span class="ot" style="color: #003B4F;
+<span id="cb143-5">d5 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
 background-color: null;
@@ -25857,14 +25949,14 @@ Tip
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb134" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb134-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb144" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb144-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">options</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">120</span>)</span>
-<span id="cb134-2">sessioninfo<span class="sc" style="color: #5E5E5E;
+<span id="cb144-2">sessioninfo<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -25873,14 +25965,14 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.5
+ os       macOS Ventura 13.6
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-08-17
+ date     2023-10-02
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -25888,11 +25980,11 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
  bit            4.0.5   2022-11-15 [1] CRAN (R 4.3.0)
  bit64          4.0.5   2020-08-30 [1] CRAN (R 4.3.0)
  cli            3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout       1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
+ colorout       1.3-0   2023-09-28 [1] Github (jalvesaq/colorout@8384882)
  colorspace     2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
  crayon         1.5.2   2022-09-29 [1] CRAN (R 4.3.0)
  digest         0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- dplyr        * 1.1.2   2023-04-20 [1] CRAN (R 4.3.0)
+ dplyr        * 1.1.3   2023-09-03 [1] CRAN (R 4.3.0)
  emojifont      0.5.5   2021-04-20 [1] CRAN (R 4.3.0)
  evaluate       0.21    2023-05-05 [1] CRAN (R 4.3.0)
  fansi          1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
@@ -25900,16 +25992,16 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
  fastmap        1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
  forcats      * 1.0.0   2023-01-29 [1] CRAN (R 4.3.0)
  generics       0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
- ggplot2      * 3.4.3   2023-08-14 [1] CRAN (R 4.3.1)
+ ggplot2      * 3.4.3   2023-08-14 [1] CRAN (R 4.3.0)
  glue           1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
- gtable         0.3.3   2023-03-21 [1] CRAN (R 4.3.0)
+ gtable         0.3.4   2023-08-21 [1] CRAN (R 4.3.0)
  here         * 1.0.1   2020-12-13 [1] CRAN (R 4.3.0)
  hms            1.1.3   2023-03-21 [1] CRAN (R 4.3.0)
  htmltools      0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
  htmlwidgets    1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
  jsonlite       1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr          1.43    2023-05-25 [1] CRAN (R 4.3.0)
- labeling       0.4.2   2020-10-20 [1] CRAN (R 4.3.0)
+ knitr          1.44    2023-09-11 [1] CRAN (R 4.3.0)
+ labeling       0.4.3   2023-08-29 [1] CRAN (R 4.3.0)
  lifecycle      1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
  lubridate    * 1.9.2   2023-02-10 [1] CRAN (R 4.3.0)
  magrittr       2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
@@ -25962,7 +26054,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing2023/posts/20-working-with-dates-and-times/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:50:13 GMT</pubDate>
+  <pubDate>Tue, 03 Oct 2023 00:29:46 GMT</pubDate>
 </item>
 </channel>
 </rss>
