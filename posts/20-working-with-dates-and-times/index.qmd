@@ -113,8 +113,8 @@ install.packages("lubridate")
 
 ```{r}
 #| message: false
-library(tidyverse)
-library(lubridate)
+library("tidyverse")
+library("lubridate")
 ```
 
 # Creating date/times
@@ -142,8 +142,13 @@ That means if you can use a `date` instead of a `date-time`, you should.
 To get the current date or date-time you can use `today()` or `now()` from `lubridate`:
 
 ```{r}
+## lubridate versions
 today()
 now()
+
+## base R versions
+base::Sys.Date()
+base::Sys.time()
 ```
 
 Otherwise, there are three ways you are likely to create a date/time:
@@ -178,6 +183,16 @@ ymd("1970-01-01")
 ymd("2017-01-31")
 mdy("January 31st, 2017")
 dmy("31-Jan-2017")
+
+## Base R versions
+as.Date("1970-01-01")
+
+## Quickly becomes more complicated.
+## We quickly need to get familiarized with
+## formats for specifying dates, and that's complicated.
+# ?strptime
+as.Date("January 31st, 2017", "%B %dst, %Y")
+as.Date(gsub("st,", "", "January 31st, 2017"), "%B %d %Y")
 ```
 
 ::: callout-tip
@@ -223,7 +238,7 @@ Cool right?
 Sometimes the **date components** will come across **multiple columns in a dataset**.
 
 ```{r}
-library(nycflights13)
+library("nycflights13")
 
 flights %>%
     select(year, month, day)
@@ -231,8 +246,8 @@ flights %>%
 
 To create a date/time from this sort of input, use
 
--   `make_date(year,month,day)` for dates, or
--   `make_datetime(year,month,day,hour,min,sec,tz)` for date-times
+-   `make_date(year, month, day)` for dates, or
+-   `make_datetime(year, month, day, hour, min, sec, tz)` for date-times
 
 We combine these functions inside of `mutate` to add a new column to our dataset:
 
@@ -556,7 +571,7 @@ storm_sub
 We can make a histogram of the dates/times to get a sense of when storm events occur.
 
 ```{r}
-library(ggplot2)
+library("ggplot2")
 storm_sub %>%
     ggplot(aes(x = begin)) +
     geom_histogram(bins = 20) +
@@ -630,6 +645,9 @@ Here are some post-lecture questions to help you think about the material discus
 
 ```{r, eval=FALSE}
 ymd(c("2010-10-10", "bananas"))
+
+## Compare against base R's behavior:
+as.Date(c("2010-10-10", "bananas"))
 ```
 
 2.  What does the `tzone` argument to `today()` do? Why is it important?
