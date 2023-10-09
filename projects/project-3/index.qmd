@@ -30,7 +30,7 @@ Please write up your project using R Markdown and processed with `knitr`. Compil
 
 The datasets for this part of the assignment comes from [TidyTuesday](https://www.tidytuesday.com).
 
-Data dictionary avaialble here:
+Data dictionary available here:
 
 -   <https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-09-29>
 
@@ -47,13 +47,16 @@ sales <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidy
 However, to avoid re-downloading data, we will check to see if those files already exist using an `if()` statement:
 
 ```{r, message=FALSE}
-library(here)
-if (!file.exists(here("data", "b_lyrics.RDS"))) {
+library("here")
+rds_files <- c("b_lyrics.RDS", "ts_lyrics.RDS", "sales.RDS")
+## Check whether we have all 3 files
+if (any(!file.exists(here("data", rds_files)))) {
+    ## If we don't, then download the data
     b_lyrics <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/beyonce_lyrics.csv")
     ts_lyrics <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/taylor_swift_lyrics.csv")
     sales <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/sales.csv")
 
-    # save the files to RDS objects
+    ## Then save the data objects to RDS files
     saveRDS(b_lyrics, file = here("data", "b_lyrics.RDS"))
     saveRDS(ts_lyrics, file = here("data", "ts_lyrics.RDS"))
     saveRDS(sales, file = here("data", "sales.RDS"))
