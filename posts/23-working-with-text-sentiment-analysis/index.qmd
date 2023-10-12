@@ -25,7 +25,7 @@ categories: [module 5, week 7, tidyverse, tidytext, sentiment analysis]
 Material for this lecture was borrowed and adopted from
 
 -   [Text mining with R: A Tidy Approach](https://www.tidytextmining.com/) from Julia Silge and David Robinson which uses the [`tidytext`](https://github.com/juliasilge/tidytext) R package
--   [Supervised Machine Learning for Text Analsyis in R](https://smltar.com/preface.html) from Emil Hvitfeldt, Julia Sigle
+-   [Supervised Machine Learning for Text Analsyis in R](https://smltar.com/preface.html) from Emil Hvitfeldt, Julia Silge
 
 # Learning objectives
 
