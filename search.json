@@ -571,7 +571,7 @@
     "href": "projects/project-3/index.html#part-1c",
     "title": "Project 3",
     "section": "Part 1C",
-    "text": "Part 1C\nUsing the wrangled data from Part 1A:\n\nCalculate the total album sales for each artist and for each country (only sales from the UK, US, and World).\nUsing the total album sales, create a percent stacked barchart using ggplot2 of the percentage of sales of studio albums (in millions) along the y-axis for the two artists along the x-axis colored by the country.\n\n\n# Add your solution here"
+    "text": "Part 1C\nUsing the wrangled data from Part 1A:\n\nCalculate the total album sales for each artist and for each country (only sales from the UK, US, and World).\n\nNote: assume that the World sales do not include the UK and US ones.\n\nUsing the total album sales, create a percent stacked barchart using ggplot2 of the percentage of sales of studio albums (in millions) along the y-axis for the two artists along the x-axis colored by the country.\n\n\n# Add your solution here"
   },
   {
     "objectID": "projects/project-3/index.html#part-1d",
