@@ -114,6 +114,7 @@ In this section, we will do some more data wrangling followed by summarization u
 Using the wrangled data from Part 1A:
 
 1.  Calculate the total album sales for each artist and for each `country` (only sales from the UK, US, and World).
+    1.  Note: assume that the World sales do not include the UK and US ones.
 2.  Using the total album sales, create a [percent stacked barchart](https://r-graph-gallery.com/48-grouped-barplot-with-ggplot2) using `ggplot2` of the percentage of sales of studio albums (in millions) along the y-axis for the two artists along the x-axis colored by the `country`.
 
 ```{r}
