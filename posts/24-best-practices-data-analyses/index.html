@@ -524,8 +524,14 @@ Human data
 <div class="callout-body-container callout-body">
 <p>Sometimes you cannot publicly post all human data, even after de-identification. We suggest three strategies for making these data maximally accessible.</p>
 <ol type="1">
-<li>Deposit raw data files in a controlled-access repository. Controlled-access repositories allow only qualified researchers who apply to access the data.</li>
-<li>Even if you cannot make individual-level raw data available, you can make as much processed data available as possible. This may take the form of summary statistics such as means and standard deviations, rather than individual-level data.</li>
+<li>Deposit raw data files in a controlled-access repository. Controlled-access repositories allow only qualified researchers who apply to access the data.
+<ul>
+<li>Example: the database of Genotypes and Phenotypes (dbGaP) <a href="https://www.ncbi.nlm.nih.gov/gap/" class="uri">https://www.ncbi.nlm.nih.gov/gap/</a></li>
+</ul></li>
+<li>Even if you cannot make individual-level raw data available, you can make as much processed data available as possible. This may take the form of summary statistics such as means and standard deviations, rather than individual-level data.
+<ul>
+<li>Example: GWAS summary data such as the one available from <a href="https://www.ebi.ac.uk/gwas/docs/summary-statistics-format" class="uri">https://www.ebi.ac.uk/gwas/docs/summary-statistics-format</a></li>
+</ul></li>
 <li>You may want to generate simulated data distinct from the original data but statistically similar to it. Simulated data would allow others to reproduce your analysis without disclosing the original data or requiring the security controls needed for controlled access.</li>
 </ol>
 </div>
@@ -534,13 +540,23 @@ Human data
 </section>
 <section id="what-data-to-share" class="level2">
 <h2 class="anchored" data-anchor-id="what-data-to-share">What data to share?</h2>
-<p>Depending on the data type, you might be able to share the data itself, or a summarized version of it. Boradly thought, you want to share the following:</p>
+<p>Depending on the data type, you might be able to share the data itself, or a summarized version of it. Broadly thought, you want to share the following:</p>
 <ol type="1">
 <li>The <strong>data</strong> itself, or a summarized version, or a simulated data similar to the original.</li>
 <li>Any <strong>metadata</strong> to describe the primary data and the resources used to generate it. Most disciplines have specific metadata standards to follow (e.g.&nbsp;<a href="http://fged.org/projects/minseqe/">microarrays</a>).</li>
-<li><strong>Data dictionary</strong>. These have crucial role in organizing your data, especially explaining the variables and their representation. Data dictionaries should provide short names for each variable, a longer text label for the variable, a definition for each variable, data type (such as floating-point number, integer, or string), measurement units, and expected minimum and maximum values. Data dictionaries can make explicit what future users would otherwise have to guess about the representation of data.</li>
-<li><strong>Source code</strong>. Ideally, readers should have all materials needed to completely reproduce the study described in a publication, not just data. These materials include source code, preprocessing, and analysis scripts. Guidelines for organization of computational project can help you arrange your data and scripts in a way that will make it easier for you and other to access and reuse them.</li>
-<li><strong>Licensing</strong>. Clear licensing information attached to your data avoids any questions of whether others may reuse it. Many data resources turn out not to be as reusable as the providers intended, due to lack of clarity in licensing or restrictive licensing choices.</li>
+<li><strong>Data dictionary</strong>. These have crucial role in organizing your data, especially explaining the variables and their representation. Data dictionaries should provide short names for each variable, a longer text label for the variable, a definition for each variable, data type (such as floating-point number, integer, or string), measurement units, and expected minimum and maximum values. Data dictionaries can make explicit what future users would otherwise have to guess about the representation of data.
+<ul>
+<li>You have gotten used to seeing the <em>Tidy Tuesday</em> data dictionaries <a href="https://github.com/rfordatascience/tidytuesday" class="uri">https://github.com/rfordatascience/tidytuesday</a> such as <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-10-17/readme.md#data-dictionary" class="uri">https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-10-17/readme.md#data-dictionary</a></li>
+</ul></li>
+<li><strong>Source code</strong>. Ideally, readers should have all materials needed to completely reproduce the study described in a publication, not just data. These materials include source code, preprocessing, and analysis scripts. Guidelines for organization of computational project can help you arrange your data and scripts in a way that will make it easier for you and other to access and reuse them.
+<ul>
+<li>See <a href="https://github.com/LieberInstitute/template_project" class="uri">https://github.com/LieberInstitute/template_project</a> for how we organize code in my team.</li>
+<li>See also <a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content" class="uri">https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content</a> for how to deposit your GitHub repository on Zenodo and get a Digital Object Identifier (DOI) that others can cite. Example <a href="https://zenodo.org/doi/10.5281/zenodo.10010510" class="uri">https://zenodo.org/doi/10.5281/zenodo.10010510</a></li>
+</ul></li>
+<li><strong>Licensing</strong>. Clear licensing information attached to your data avoids any questions of whether others may reuse it. Many data resources turn out not to be as reusable as the providers intended, due to lack of clarity in licensing or restrictive licensing choices.
+<ul>
+<li>See <a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a> for more on how to choose a license</li>
+</ul></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -572,7 +588,7 @@ How should you document your data?
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Quote from a hero of mine
+Quote from one of Roger Peng’s heroes
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -717,7 +733,7 @@ Broad steps for creating data visualizations
 </section>
 <section id="plots-to-avoid" class="level2">
 <h2 class="anchored" data-anchor-id="plots-to-avoid">Plots to Avoid</h2>
-<p>This section is based on a talk by <a href="http://kbroman.org/">Karl W. Broman</a> titled “How to Display Data Badly,” in which he described how the default plots offered by Microsoft Excel “obscure your data and annoy your readers” (<a href="https://kbroman.org/talks.html">here</a> is a link to a collection of Karl Broman’s talks).</p>
+<p>This section is based on a talk by <a href="http://kbroman.org/">Karl W. Broman</a> titled <a href="https://www.biostat.wisc.edu/~kbroman/presentations/graphs_cmp2014.pdf">“How to Display Data Badly”</a>, in which he described how the default plots offered by Microsoft Excel “obscure your data and annoy your readers” (<a href="https://kbroman.org/talks.html">here</a> is a link to a collection of Karl Broman’s talks).</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -787,6 +803,7 @@ Some general principles of <em>bad</em> plots
 <p>“Pie charts are a very bad way of displaying information. The eye is good at judging linear measures and bad at judging relative areas. A bar chart or dot chart is a preferable way of displaying this type of data.”</p>
 </blockquote>
 <p>To see this, look at the figure above and try to determine the percentages just from looking at the plot. Unless the percentages are close to 25%, 50% or 75%, this is not so easy. Simply showing the numbers is not only clear, but also saves on printing costs.</p>
+<p>Having said that, see how we used a pie chart in a <a href="https://doi.org/10.1101/2023.02.15.528722">recent pre-print</a> <a href="https://www.biorxiv.org/content/biorxiv/early/2023/02/15/2023.02.15.528722/F5.large.jpg" class="uri">https://www.biorxiv.org/content/biorxiv/early/2023/02/15/2023.02.15.528722/F5.large.jpg</a>.</p>
 <section id="instead-of-pie-charts-try-bar-plots" class="level4">
 <h4 class="anchored" data-anchor-id="instead-of-pie-charts-try-bar-plots">Instead of pie charts, try bar plots</h4>
 <p>If you do want to plot them, then a barplot is appropriate. Here we use the <code>geom_bar()</code> function in <code>ggplot2</code>. Note, there are also horizontal lines at every multiple of 10, which helps the eye quickly make comparisons across:</p>
@@ -1012,11 +1029,20 @@ Question
 <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">at =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="fu">c</span>(<span class="st">"Before"</span>, <span class="st">"After"</span>))</span>
 <span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="fu">segments</span>(<span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">6</span>), before, <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">6</span>), after, <span class="at">col =</span> <span class="dv">1</span>)</span>
 <span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(before, after, <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"Before"</span>, <span class="st">"After"</span>), <span class="at">ylab =</span> <span class="st">"Response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(before, after,</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"Before"</span>, <span class="st">"After"</span>),</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab =</span> <span class="st">"Response"</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/2c3377401c934bb9abd859b644bb9455?slide=17" title="2023-10-03-FOGBoston" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777">
+</iframe>
+<p>The above plot was made using <a href="https://rpkgs.datanovia.com/ggpubr/reference/ggpaired.html"><code>ggpubr::ggpaired()</code></a>. Note that the title of the package is:</p>
+<blockquote class="blockquote">
+<p>ggpubr: ‘ggplot2’ Based Publication Ready Plots</p>
+</blockquote>
 </section>
 </section>
 <section id="gratuitous-3d" class="level3">
