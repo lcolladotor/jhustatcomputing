@@ -1,15 +1,16 @@
-
+## ----out.width = "95%", echo = FALSE----------------------------------------
 knitr::include_graphics("http://r4ds.had.co.nz/images/tidy-1.png")
 
 
-
+## ----echo=FALSE, out.width = '90%', fig.cap="A flowchart of a typical text analysis using tidy data principles."----
 knitr::include_graphics("https://www.tidytextmining.com/images/tmwr_0101.png")
 
 
-
+## ----eval=FALSE-------------------------------------------------------------
 ## ?unnest_tokens
 
 
+## ---------------------------------------------------------------------------
 #| label: pengpreface
 #| echo: false
 #| fig-cap: 'Preface from R Programming for Data Science'
@@ -17,7 +18,7 @@ knitr::include_graphics("https://www.tidytextmining.com/images/tmwr_0101.png")
 knitr::include_graphics("../../images/peng_preface.png")
 
 
-
+## ---------------------------------------------------------------------------
 peng_preface <-
     c(
         "I started using R in 1998 when I was a college undergraduate working on my senior thesis.",
@@ -32,14 +33,14 @@ peng_preface <-
 peng_preface
 
 
-
+## ----message=FALSE, warning=FALSE-------------------------------------------
 library(tidyverse)
 library(stringr)
 library(tidytext) ## needs to be installed
 library(janeaustenr) ## needs to be installed
 
 
-
+## ---------------------------------------------------------------------------
 peng_preface_df <- tibble(
     line = 1:7,
     text = peng_preface
@@ -47,7 +48,7 @@ peng_preface_df <- tibble(
 peng_preface_df
 
 
-
+## ---------------------------------------------------------------------------
 peng_token <-
     peng_preface_df %>%
     unnest_tokens(
@@ -63,7 +64,7 @@ peng_token %>%
     tail()
 
 
-
+## ---------------------------------------------------------------------------
 peng_preface_df %>%
     unnest_tokens(word,
         text,
@@ -72,7 +73,7 @@ peng_preface_df %>%
     head()
 
 
-
+## ---------------------------------------------------------------------------
 peng_preface_df %>%
     unnest_tokens(word,
         text,
@@ -82,7 +83,7 @@ peng_preface_df %>%
     head()
 
 
-
+## ---------------------------------------------------------------------------
 peng_preface_df %>%
     unnest_tokens(word,
         text,
@@ -92,7 +93,7 @@ peng_preface_df %>%
     head()
 
 
-
+## ---------------------------------------------------------------------------
 peng_preface_df %>%
     unnest_tokens(word,
         text,
@@ -102,7 +103,7 @@ peng_preface_df %>%
     head()
 
 
-
+## ---------------------------------------------------------------------------
 gorman_hill_we_climb <-
     c(
         "When day comes we ask ourselves, where can we find light in this neverending shade?",
@@ -127,12 +128,12 @@ hill_df %>%
     )
 
 
-
+## ---------------------------------------------------------------------------
 library(janeaustenr)
 head(prideprejudice, 20)
 
 
-
+## ---------------------------------------------------------------------------
 pp_book_df <- tibble(text = prideprejudice)
 
 pp_book_df %>%
@@ -143,7 +144,7 @@ pp_book_df %>%
     )
 
 
-
+## ---------------------------------------------------------------------------
 tmp <- pp_book_df %>%
     unnest_tokens(
         output = paragraph,
@@ -153,11 +154,11 @@ tmp <- pp_book_df %>%
 tmp
 
 
-
+## ---------------------------------------------------------------------------
 tmp[3, 1]
 
 
-
+## ---------------------------------------------------------------------------
 pp_book_df %>%
     unnest_tokens(
         output = sentence,
@@ -166,7 +167,7 @@ pp_book_df %>%
     )
 
 
-
+## ---------------------------------------------------------------------------
 paragraphs <-
     pp_book_df %>%
     unnest_tokens(
@@ -179,7 +180,7 @@ paragraphs <-
 paragraphs
 
 
-
+## ---------------------------------------------------------------------------
 paragraphs %>%
     unnest_tokens(
         output = word,
@@ -187,7 +188,7 @@ paragraphs %>%
     )
 
 
-
+## ---------------------------------------------------------------------------
 data(stop_words)
 
 table(stop_words$lexicon)
@@ -196,7 +197,7 @@ stop_words %>%
     head(n = 10)
 
 
-
+## ---------------------------------------------------------------------------
 words_by_paragraph <-
     paragraphs %>%
     unnest_tokens(
@@ -208,13 +209,13 @@ words_by_paragraph <-
 words_by_paragraph
 
 
-
+## ---------------------------------------------------------------------------
 words_by_paragraph %>%
     count(word, sort = TRUE) %>%
     head()
 
 
-
+## ---------------------------------------------------------------------------
 words_by_paragraph %>%
     count(word, sort = TRUE) %>%
     filter(n > 150) %>%
@@ -225,12 +226,12 @@ words_by_paragraph %>%
     coord_flip()
 
 
-
+## ---------------------------------------------------------------------------
 austen_books() %>%
     head()
 
 
-
+## ---------------------------------------------------------------------------
 original_books <-
     austen_books() %>%
     group_by(book) %>%
@@ -250,7 +251,7 @@ original_books <-
 original_books
 
 
-
+## ---------------------------------------------------------------------------
 tidy_books <- original_books %>%
     unnest_tokens(word, text) %>%
     anti_join(stop_words)
@@ -258,7 +259,7 @@ tidy_books <- original_books %>%
 tidy_books
 
 
-
+## ---------------------------------------------------------------------------
 tidy_books %>%
     count(word, sort = TRUE) %>%
     filter(n > 600) %>%
@@ -269,23 +270,23 @@ tidy_books %>%
     coord_flip()
 
 
-
+## ----echo=FALSE, out.width = '90%', fig.cap="A flowchart of a typical text analysis that uses tidytext for sentiment analysis."----
 knitr::include_graphics("https://www.tidytextmining.com/images/tmwr_0201.png")
 
 
-
+## ---------------------------------------------------------------------------
 get_sentiments("nrc")
 
 
-
+## ---------------------------------------------------------------------------
 get_sentiments("bing")
 
 
-
+## ---------------------------------------------------------------------------
 get_sentiments("afinn")
 
 
-
+## ---------------------------------------------------------------------------
 nrc_joy <- get_sentiments("nrc") %>%
     filter(sentiment == "joy")
 
@@ -295,12 +296,12 @@ tidy_books %>%
     count(word, sort = TRUE)
 
 
-
+## ---------------------------------------------------------------------------
 tidy_books %>%
     inner_join(get_sentiments("bing"))
 
 
-
+## ---------------------------------------------------------------------------
 tidy_books %>%
     inner_join(get_sentiments("bing")) %>%
     count(book,
@@ -309,7 +310,7 @@ tidy_books %>%
     )
 
 
-
+## ---------------------------------------------------------------------------
 jane_austen_sentiment <-
     tidy_books %>%
     inner_join(get_sentiments("bing")) %>%
@@ -327,14 +328,14 @@ jane_austen_sentiment <-
 jane_austen_sentiment
 
 
-
+## ----fig.height=10----------------------------------------------------------
 jane_austen_sentiment %>%
     ggplot(aes(x = index, y = sentiment, fill = book)) +
     geom_col(show.legend = FALSE) +
     facet_wrap(. ~ book, ncol = 2, scales = "free_x")
 
 
-
+## ---------------------------------------------------------------------------
 library(wordcloud)
 
 tidy_books %>%
@@ -343,11 +344,11 @@ tidy_books %>%
     with(wordcloud(word, n, max.words = 100))
 
 
-
+## ----echo=FALSE, out.width = '90%', fig.cap=" A flowchart of a typical text analysis that combines tidytext with other tools and data formats, particularly the `tm` or `quanteda` packages. Here, we show how to convert back and forth between document-term matrices and tidy data frames, as well as converting from a Corpus object to a text data frame."----
 knitr::include_graphics("https://www.tidytextmining.com/images/tmwr_0501.png")
 
 
-
+## ---------------------------------------------------------------------------
 tidy_austen <-
     austen_books() %>%
     mutate(line = row_number()) %>%
@@ -357,7 +358,7 @@ tidy_austen <-
 tidy_austen
 
 
-
+## ---------------------------------------------------------------------------
 austen_sparse <- tidy_austen %>%
     count(line, word) %>%
     cast_sparse(row = line, column = word, value = n)
@@ -365,7 +366,7 @@ austen_sparse <- tidy_austen %>%
 austen_sparse[1:10, 1:10]
 
 
-
+## ---------------------------------------------------------------------------
 austen_dtm <- tidy_austen %>%
     count(line, word) %>%
     cast_dtm(document = line, term = word, value = n)
@@ -373,13 +374,13 @@ austen_dtm <- tidy_austen %>%
 austen_dtm
 
 
-
+## ---------------------------------------------------------------------------
 class(austen_dtm)
 dim(austen_dtm)
 as.matrix(austen_dtm[1:20, 1:10])
 
 
-
+## ---------------------------------------------------------------------------
 options(width = 120)
 sessioninfo::session_info()
 
