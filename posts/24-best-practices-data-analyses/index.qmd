@@ -195,19 +195,25 @@ Despite the clear benefits of sharing data, some researchers still have concerns
 Sometimes you cannot publicly post all human data, even after de-identification. We suggest three strategies for making these data maximally accessible.
 
 1.  Deposit raw data files in a controlled-access repository. Controlled-access repositories allow only qualified researchers who apply to access the data.
+    * Example: the database of Genotypes and Phenotypes (dbGaP) <https://www.ncbi.nlm.nih.gov/gap/>
 2.  Even if you cannot make individual-level raw data available, you can make as much processed data available as possible. This may take the form of summary statistics such as means and standard deviations, rather than individual-level data.
+    * Example: GWAS summary data such as the one available from <https://www.ebi.ac.uk/gwas/docs/summary-statistics-format>
 3.  You may want to generate simulated data distinct from the original data but statistically similar to it. Simulated data would allow others to reproduce your analysis without disclosing the original data or requiring the security controls needed for controlled access.
 :::
 
 ## What data to share?
 
-Depending on the data type, you might be able to share the data itself, or a summarized version of it. Boradly thought, you want to share the following:
+Depending on the data type, you might be able to share the data itself, or a summarized version of it. Broadly thought, you want to share the following:
 
 1.  The **data** itself, or a summarized version, or a simulated data similar to the original.
 2.  Any **metadata** to describe the primary data and the resources used to generate it. Most disciplines have specific metadata standards to follow (e.g. [microarrays](http://fged.org/projects/minseqe/)).
 3.  **Data dictionary**. These have crucial role in organizing your data, especially explaining the variables and their representation. Data dictionaries should provide short names for each variable, a longer text label for the variable, a definition for each variable, data type (such as floating-point number, integer, or string), measurement units, and expected minimum and maximum values. Data dictionaries can make explicit what future users would otherwise have to guess about the representation of data.
+    * You have gotten used to seeing the _Tidy Tuesday_ data dictionaries <https://github.com/rfordatascience/tidytuesday> such as <https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-10-17/readme.md#data-dictionary>
 4.  **Source code**. Ideally, readers should have all materials needed to completely reproduce the study described in a publication, not just data. These materials include source code, preprocessing, and analysis scripts. Guidelines for organization of computational project can help you arrange your data and scripts in a way that will make it easier for you and other to access and reuse them.
+    * See <https://github.com/LieberInstitute/template_project> for how we organize code in my team.
+    * See also <https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content> for how to deposit your GitHub repository on Zenodo and get a Digital Object Identifier (DOI) that others can cite. Example <https://zenodo.org/doi/10.5281/zenodo.10010510>
 5.  **Licensing**. Clear licensing information attached to your data avoids any questions of whether others may reuse it. Many data resources turn out not to be as reusable as the providers intended, due to lack of clarity in licensing or restrictive licensing choices.
+    * See <https://choosealicense.com/> for more on how to choose a license
 
 ::: callout-tip
 ### How should you document your data?
@@ -224,7 +230,7 @@ Document your data in three ways:
 ## Motiviation
 
 ::: callout-tip
-### Quote from a hero of mine
+### Quote from one of Roger Peng's heroes
 
 *"The greatest value of a picture is when it forces us to notice what we never expected to see."* -John W. Tukey
 
@@ -341,7 +347,7 @@ Some of these principles are taken from Edward Tufte's *Visual Display of Quanti
 
 ## Plots to Avoid
 
-This section is based on a talk by [Karl W. Broman](http://kbroman.org/) titled "How to Display Data Badly," in which he described how the default plots offered by Microsoft Excel "obscure your data and annoy your readers" ([here](https://kbroman.org/talks.html) is a link to a collection of Karl Broman's talks).
+This section is based on a talk by [Karl W. Broman](http://kbroman.org/) titled ["How to Display Data Badly"](https://www.biostat.wisc.edu/~kbroman/presentations/graphs_cmp2014.pdf), in which he described how the default plots offered by Microsoft Excel "obscure your data and annoy your readers" ([here](https://kbroman.org/talks.html) is a link to a collection of Karl Broman's talks).
 
 ::: callout-tip
 ### FYI
@@ -403,6 +409,8 @@ It states:
 > "Pie charts are a very bad way of displaying information. The eye is good at judging linear measures and bad at judging relative areas. A bar chart or dot chart is a preferable way of displaying this type of data."
 
 To see this, look at the figure above and try to determine the percentages just from looking at the plot. Unless the percentages are close to 25%, 50% or 75%, this is not so easy. Simply showing the numbers is not only clear, but also saves on printing costs.
+
+Having said that, see how we used a pie chart in a [recent pre-print](https://doi.org/10.1101/2023.02.15.528722) <https://www.biorxiv.org/content/biorxiv/early/2023/02/15/2023.02.15.528722/F5.large.jpg>.
 
 #### Instead of pie charts, try bar plots
 
@@ -618,8 +626,17 @@ plot(z, c(before, after),
 axis(side = 1, at = c(0, 1), c("Before", "After"))
 segments(rep(0, 6), before, rep(1, 6), after, col = 1)
 
-boxplot(before, after, names = c("Before", "After"), ylab = "Response")
+boxplot(before, after,
+    names = c("Before", "After"),
+    ylab = "Response"
+)
 ```
+
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/2c3377401c934bb9abd859b644bb9455?slide=17" title="2023-10-03-FOGBoston" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+
+The above plot was made using [`ggpubr::ggpaired()`](https://rpkgs.datanovia.com/ggpubr/reference/ggpaired.html). Note that the title of the package is:
+
+> ggpubr: ‘ggplot2’ Based Publication Ready Plots
 
 ### Gratuitous 3D
 
