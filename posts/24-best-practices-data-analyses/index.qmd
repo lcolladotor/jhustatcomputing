@@ -127,7 +127,7 @@ When thinking about the questions below, reflect on the good aspects and the bad
     -   The software might make it easier to accurately associate an individual with a crime, but it might also make it easier to mistakenly associate an individual with a crime. How should the pro vs con be weighed against each other?
     -   Do individuals have a right to know, correct, or delete personal information included in a database?
 -   Issues of societal impact:
-    -   Is it permissible to use a facial recognition software which has been trained primarily on Caucasian faces, given that this results in false positive and false negative rates that are not equally dispersed across racial lines?
+    -   Is it permissible to use a facial recognition software which has been trained primarily on faces of European ancestry individual, given that this results in false positive and false negative rates that are not equally dispersed across racial lines?
     -   While the software might make it easier to protect against criminal activity, it also makes it easier to undermine specific communities when their members are mistakenly identified with criminal activity. How should the pro vs con of different communities be weighed against each other?
 -   Issues of money:
     -   Is it permissible for a software company to profit from an algorithm while having no financial responsibility for its misuse or negative impacts?
@@ -169,10 +169,17 @@ Sharing data proves more useful when others can easily find and access, interpre
 4.  **Reusable**. The ultimate goal of FAIR is to optimize the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings.
 :::
 
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/846fdf74c6ec440691521f9a42855ce4?slide=17" title="LCG20" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+
 ## Why share?
 
 1.  **Benefits of sharing data to science and society**. Sharing data allows for transparency in scientific studies and allows one to fully understand what occurred in an analysis and reproduce the results. Without complete data, metadata, and information about resources used to generate the data, reproducing a study proves impossible.
 2.  **Benefits of sharing data to individual researchers**. Sharing data increases the impact of a researcher's work and reputation for sound science. Awards for those with an excellent record of [data sharing](https://researchsymbionts.org/) or [data reuse](https://researchparasite.com/) can exemplify this reputation.
+
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/434ae0541ae64731a95f35431acb754d?slide=18" title="HCA LA 2022" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 420;" data-ratio="1.3333333333333333"></iframe>
+
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/846fdf74c6ec440691521f9a42855ce4?slide=44" title="LCG20" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+
 
 ### Addressing common concerns about data sharing
 
