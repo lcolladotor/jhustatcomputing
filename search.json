@@ -1432,7 +1432,7 @@
     "href": "posts/25-python-for-r-users/index.html#install-reticulate",
     "title": "25 - Python for R Users",
     "section": "Install reticulate",
-    "text": "Install reticulate\nLet’s try it out. Before we get started, you will need to install the packages:\n\ninstall.package(\"reticulate\")\n\nWe will also load the here and tidyverse packages for our lesson:\n\nlibrary(here)\nlibrary(tidyverse)\nlibrary(reticulate)"
+    "text": "Install reticulate\nLet’s try it out. Before we get started, you will need to install the packages:\n\ninstall.packages(\"reticulate\")\n\nWe will also load the here and tidyverse packages for our lesson:\n\nlibrary(here)\nlibrary(tidyverse)\nlibrary(reticulate)"
   },
   {
     "objectID": "posts/25-python-for-r-users/index.html#python-path",
@@ -1495,7 +1495,7 @@
     "href": "posts/25-python-for-r-users/index.html#functions",
     "title": "25 - Python for R Users",
     "section": "functions",
-    "text": "functions\nPython contains a small list of very useful built-in functions.\nAll other functions need defined by the user or need to be imported from modules.\n\n\n\n\n\n\nPro-tip\n\n\n\nFor a more detailed list on the built-in functions in Python, see Built-in Python Functions.\n\n\nThe first function we will discuss, type(), reports the type of any object, which is very useful when handling multiple data types (remember, everything in Python is an object). Here are some the mains types you will encounter:\n\ninteger (int)\nfloating-point (float)\nstring (str)\nlist (list)\ndictionary (dict)\ntuple (tuple)\nfunction (function)\nmodule (module)\nboolean (bool): e.g. True, False\nenumerate (enumerate)\n\nIf we asked for the type of a string “Let’s go Ravens!”\n\ntype(\"Let's go Ravens!\")\n\n&lt;class 'str'&gt;\n\n\nThis would return the str type.\nYou have also seen how to use the print() function. The function print will accept an argument and print the argument to the screen. Print can be used in two ways:\n\nprint(\"Let's go Ravens!\")\n\n[1] \"Let's go Ravens!\""
+    "text": "functions\nPython contains a small list of very useful built-in functions.\nAll other functions need defined by the user or need to be imported from modules.\n\n\n\n\n\n\nPro-tip\n\n\n\nFor a more detailed list on the built-in functions in Python, see Built-in Python Functions.\n\n\nThe first function we will discuss, type(), reports the type of any object, which is very useful when handling multiple data types (remember, everything in Python is an object). Here are some the mains types you will encounter:\n\ninteger (int)\nfloating-point (float)\nstring (str)\nlist (list)\ndictionary (dict)\ntuple (tuple)\nfunction (function)\nmodule (module)\nboolean (bool): e.g. True, False\nenumerate (enumerate)\n\nIf we asked for the type of a string “Let’s go Ravens!”\n\ntype(\"Let's go Ravens!\")\n\n&lt;class 'str'&gt;\n\n\nThis would return the str type.\nYou have also seen how to use the print() function. The function print will accept an argument and print the argument to the screen. Print can be used in two ways:\n\nprint(\"Let's go Ravens!\")\n\nLet's go Ravens!"
   },
   {
     "objectID": "posts/25-python-for-r-users/index.html#new-functions",
