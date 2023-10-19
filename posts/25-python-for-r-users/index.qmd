@@ -92,7 +92,7 @@ Let's try it out. Before we get started, you will need to install the packages:
 
 ```{r}
 #| eval: false
-install.package("reticulate")
+install.packages("reticulate")
 ```
 
 We will also load the `here` and `tidyverse` packages for our lesson:
@@ -271,7 +271,7 @@ This would return the `str` type.
 
 You have also seen how to use the `print()` function. The function print will accept an argument and print the argument to the screen. Print can be used in two ways:
 
-```{r}
+```{python}
 print("Let's go Ravens!")
 ```
 
