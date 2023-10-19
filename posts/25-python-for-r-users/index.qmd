@@ -545,7 +545,7 @@ Enter exit within the Python REPL to return to the R prompt.
 
 "Todos los caminos llevan a Roma" (all roads lead to Rome)... or `R`
 
-Yet, we are all unique. You might have had some privilege, you likely faced obstacles, you might have made mistakes, you likely were made to feel unwelcome at times; ultimately, you have accumulated many experiences. You are the best person to help others like you. And you are not alone. Also, you can belong to more than one community.
+Yet, we are all unique. You might have had some privileges, you likely faced obstacles, you might have made mistakes, you likely were made to feel unwelcome at times; ultimately, you have accumulated many experiences. (Here's a bit of [my own history](https://lcolladotor.github.io/2018/11/06/a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities/)). You are the best person to help others like you. And you are not alone. Also, you can belong to more than one community.
 
 -   <https://twitter.com/miR_community>
 -   <https://twitter.com/R_LGBTQ>
