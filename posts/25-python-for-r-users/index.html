@@ -273,6 +273,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#calling-python-scripts" id="toc-calling-python-scripts" class="nav-link" data-scroll-target="#calling-python-scripts">Calling python scripts</a></li>
   <li><a href="#calling-the-python-repl" id="toc-calling-the-python-repl" class="nav-link" data-scroll-target="#calling-the-python-repl">Calling the python repl</a></li>
   </ul></li>
+  <li><a href="#community" id="toc-community" class="nav-link" data-scroll-target="#community">Community</a></li>
   <li><a href="#post-lecture-materials" id="toc-post-lecture-materials" class="nav-link" data-scroll-target="#post-lecture-materials">Post-lecture materials</a>
   <ul class="collapse">
   <li><a href="#final-questions" id="toc-final-questions" class="nav-link" data-scroll-target="#final-questions">Final Questions</a></li>
@@ -373,11 +374,14 @@ Pro-tip for installing python
 <p><strong>Installing python</strong>: If you would like recommendations on installing python, I like these resources:</p>
 <ul>
 <li>Py Pkgs: <a href="https://py-pkgs.org/02-setup#installing-python" class="uri">https://py-pkgs.org/02-setup#installing-python</a></li>
-<li>my fav: Using conda environments with mini-forge: <a href="https://github.com/conda-forge/miniforge" class="uri">https://github.com/conda-forge/miniforge</a></li>
+<li>Using conda environments with mini-forge: <a href="https://github.com/conda-forge/miniforge" class="uri">https://github.com/conda-forge/miniforge</a></li>
 <li>from <code>reticulate</code>: <a href="https://rstudio.github.io/reticulate/articles/python_packages.html" class="uri">https://rstudio.github.io/reticulate/articles/python_packages.html</a></li>
 </ul>
 <p><strong>What’s happening under the hood?</strong>: <code>reticulate</code> embeds a Python session within your R session, enabling seamless, high-performance interoperability.</p>
 <p>If you are an R developer that uses Python for some of your work or a member of data science team that uses both languages, <code>reticulate</code> can make your life better!</p>
+<ul>
+<li>If you make an R package with Python dependencies, you might want to use <code>basilisk</code> <a href="https://bioconductor.org/packages/basilisk/" class="uri">https://bioconductor.org/packages/basilisk/</a></li>
+</ul>
 </div>
 </div>
 </section>
@@ -423,7 +427,7 @@ Pro-tip for installing python
 <pre><code>python:         /usr/bin/python3
 libpython:      /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/config-3.9-darwin/libpython3.9.dylib
 pythonhome:     /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9:/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9
-version:        3.9.6 (default, May  7 2023, 23:32:44)  [Clang 14.0.3 (clang-1403.0.22.14.1)]
+version:        3.9.6 (default, Aug 11 2023, 19:44:49)  [Clang 15.0.0 (clang-1500.0.40.1)]
 numpy:          /Users/leocollado/Library/Python/3.9/lib/python/site-packages/numpy
 numpy_version:  1.25.2
 
@@ -440,7 +444,7 @@ NOTE: Python version was forced by RETICULATE_PYTHON_FALLBACK</code></pre>
 <li><p><strong>Sourcing Python scripts</strong> — The <code>source_python()</code> function enables you to source a Python script the same way you would <code>source()</code> an R script (Python functions and objects defined within the script become directly available to the R session).</p></li>
 <li><p><strong>Python REPL</strong> — The <code>repl_python()</code> function creates an interactive Python console within R. Objects you create within Python are available to your R session (and vice-versa).</p></li>
 </ol>
-<p>Below I will focus on introducing the first and last one. However, before we do that, let’s introduce a bit about python basics.</p>
+<p>Below I will focus on introducing the first and last one. However, before we do that, let’s introduce a bit about Python basics.</p>
 </section>
 </section>
 <section id="python-basics" class="level1">
@@ -450,7 +454,7 @@ NOTE: Python version was forced by RETICULATE_PYTHON_FALLBACK</code></pre>
 <ul>
 <li>There is no compiling and no need to define the type of variables before using them.</li>
 <li>No need to allocate memory for variables.</li>
-<li>The code is very easy to learn and easy to read (syntax).</li>
+<li>The code is easy to learn and easy to read (syntax).</li>
 </ul>
 <p>There is a large scientific community contributing to Python. Some of the most widely used libraries in Python are <code>numpy</code>, <code>scipy</code>, <code>pandas</code>, and <code>matplotlib</code>.</p>
 <section id="start-python" class="level2">
@@ -903,7 +907,7 @@ dttm  (1): time_hour
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>os <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">"os"</span>)</span>
 <span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>os<span class="sc">$</span><span class="fu">listdir</span>(<span class="st">"."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "index.qmd"       "index_files"     "index.rmarkdown"</code></pre>
+<pre><code>[1] "index.R"         "index.qmd"       "index_files"     "index.rmarkdown"</code></pre>
 </div>
 </div>
 <p>Functions and other data within Python modules and classes can be accessed via the <code>$</code> operator (analogous to the way you would interact with an R list, environment, or reference class).</p>
@@ -991,6 +995,29 @@ dttm  (1): time_hour
 <p>Enter exit within the Python REPL to return to the R prompt.</p>
 </section>
 </section>
+<section id="community" class="level1">
+<h1>Community</h1>
+<p><em>Sharing the Recipe for rOpenSci’s Unconf Ice Breaker</em> <a href="https://ropensci.org/blog/2018/11/01/icebreaker/" class="uri">https://ropensci.org/blog/2018/11/01/icebreaker/</a> is a great activity you can use.</p>
+<p>“Todos los caminos llevan a Roma” (all roads lead to Rome)… or <code>R</code></p>
+<p>Yet, we are all unique. You might have had some privilege, you likely faced obstacles, you might have made mistakes, you likely were made to feel unwelcome at times; ultimately, you have accumulated many experiences. You are the best person to help others like you. And you are not alone. Also, you can belong to more than one community.</p>
+<ul>
+<li><a href="https://twitter.com/miR_community" class="uri">https://twitter.com/miR_community</a></li>
+<li><a href="https://twitter.com/R_LGBTQ" class="uri">https://twitter.com/R_LGBTQ</a></li>
+<li><a href="https://twitter.com/conecta_R" class="uri">https://twitter.com/conecta_R</a></li>
+<li><a href="https://twitter.com/LatinR_Conf" class="uri">https://twitter.com/LatinR_Conf</a></li>
+<li><a href="https://twitter.com/R4DScommunity" class="uri">https://twitter.com/R4DScommunity</a></li>
+<li><a href="https://twitter.com/RConsortium" class="uri">https://twitter.com/RConsortium</a></li>
+<li><a href="https://twitter.com/rweekly_org" class="uri">https://twitter.com/rweekly_org</a></li>
+<li><a href="https://twitter.com/RLadiesGlobal" class="uri">https://twitter.com/RLadiesGlobal</a></li>
+<li><a href="https://twitter.com/RLadiesBmore" class="uri">https://twitter.com/RLadiesBmore</a></li>
+<li><a href="https://twitter.com/search?q=%23RLadiesMX&amp;src=typed_query" class="uri">https://twitter.com/search?q=%23RLadiesMX&amp;src=typed_query</a></li>
+<li><a href="https://twitter.com/Bioconductor" class="uri">https://twitter.com/Bioconductor</a></li>
+<li><a href="https://twitter.com/rOpenSci" class="uri">https://twitter.com/rOpenSci</a></li>
+<li><a href="https://twitter.com/LIBDrstats" class="uri">https://twitter.com/LIBDrstats</a></li>
+<li><a href="https://twitter.com/CDSBMexico" class="uri">https://twitter.com/CDSBMexico</a></li>
+</ul>
+<p>RUGS (R User Groups) Program from the R Consortium: <a href="https://www.r-consortium.org/all-projects/r-user-group-support-program" class="uri">https://www.r-consortium.org/all-projects/r-user-group-support-program</a>. Get $200 to $1000 USD for supporting your group.</p>
+</section>
 <section id="post-lecture-materials" class="level1">
 <h1>Post-lecture materials</h1>
 <section id="final-questions" class="level3">
@@ -1023,14 +1050,14 @@ Questions
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.5
+ os       macOS Ventura 13.6
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-08-17
+ date     2023-10-19
  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -1038,27 +1065,27 @@ Questions
  bit            4.0.5   2022-11-15 [1] CRAN (R 4.3.0)
  bit64          4.0.5   2020-08-30 [1] CRAN (R 4.3.0)
  cli            3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout       1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
+ colorout       1.3-0   2023-09-28 [1] Github (jalvesaq/colorout@8384882)
  colorspace     2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
  crayon         1.5.2   2022-09-29 [1] CRAN (R 4.3.0)
  digest         0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- dplyr        * 1.1.2   2023-04-20 [1] CRAN (R 4.3.0)
+ dplyr        * 1.1.3   2023-09-03 [1] CRAN (R 4.3.0)
  evaluate       0.21    2023-05-05 [1] CRAN (R 4.3.0)
  fansi          1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
  farver         2.1.1   2022-07-06 [1] CRAN (R 4.3.0)
  fastmap        1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
  forcats      * 1.0.0   2023-01-29 [1] CRAN (R 4.3.0)
  generics       0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
- ggplot2      * 3.4.3   2023-08-14 [1] CRAN (R 4.3.1)
+ ggplot2      * 3.4.3   2023-08-14 [1] CRAN (R 4.3.0)
  glue           1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
- gtable         0.3.3   2023-03-21 [1] CRAN (R 4.3.0)
+ gtable         0.3.4   2023-08-21 [1] CRAN (R 4.3.0)
  here         * 1.0.1   2020-12-13 [1] CRAN (R 4.3.0)
  hms            1.1.3   2023-03-21 [1] CRAN (R 4.3.0)
  htmltools      0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
  htmlwidgets    1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
  jsonlite       1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr          1.43    2023-05-25 [1] CRAN (R 4.3.0)
- labeling       0.4.2   2020-10-20 [1] CRAN (R 4.3.0)
+ knitr          1.44    2023-09-11 [1] CRAN (R 4.3.0)
+ labeling       0.4.3   2023-08-29 [1] CRAN (R 4.3.0)
  lattice        0.21-8  2023-04-05 [1] CRAN (R 4.3.1)
  lifecycle      1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
  lubridate    * 1.9.2   2023-02-10 [1] CRAN (R 4.3.0)
@@ -1073,7 +1100,7 @@ Questions
  R6             2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
  Rcpp           1.0.11  2023-07-06 [1] CRAN (R 4.3.0)
  readr        * 2.1.4   2023-02-10 [1] CRAN (R 4.3.0)
- reticulate   * 1.31    2023-08-10 [1] CRAN (R 4.3.0)
+ reticulate   * 1.32.0  2023-09-11 [1] CRAN (R 4.3.0)
  rlang          1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
  rmarkdown      2.24    2023-08-14 [1] CRAN (R 4.3.1)
  rprojroot      2.0.3   2022-04-02 [1] CRAN (R 4.3.0)
@@ -1101,7 +1128,7 @@ Questions
  python:         /usr/bin/python3
  libpython:      /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/config-3.9-darwin/libpython3.9.dylib
  pythonhome:     /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9:/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9
- version:        3.9.6 (default, May  7 2023, 23:32:44)  [Clang 14.0.3 (clang-1403.0.22.14.1)]
+ version:        3.9.6 (default, Aug 11 2023, 19:44:49)  [Clang 15.0.0 (clang-1500.0.40.1)]
  numpy:          /Users/leocollado/Library/Python/3.9/lib/python/site-packages/numpy
  numpy_version:  1.25.2
  
