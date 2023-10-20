@@ -88,7 +88,7 @@
     "href": "projects/project-3/index.html#part-1d",
     "title": "Project 3",
     "section": "Part 1D",
-    "text": "Part 1D\nUsing the wrangled data from Part 1A, use ggplot2 to create a bar plot for the sales of studio albums (in millions) along the x-axis for each of the album titles along the y-axis.\nNote:\n\nYou only need to consider the global World sales (you can ignore US and UK sales for this part).\nThe title of the album must be clearly readable along the y-axis.\nEach bar should be colored by which artist made that album.\nThe bars should be ordered from albums with the most sales (top) to the least sales (bottom) (Note: you must use functions from forcats for this step).\n\n\n# Add your solution here"
+    "text": "Part 1D\nUsing the wrangled data from Part 1A, use ggplot2 to create a bar plot for the sales of studio albums (in millions) along the x-axis for each of the album titles along the y-axis.\nNote:\n\nYou only need to consider the global World sales (you can ignore US and UK sales for this part). Hint: how would you abbreviate WorldWide?\nThe title of the album must be clearly readable along the y-axis.\nEach bar should be colored by which artist made that album.\nThe bars should be ordered from albums with the most sales (top) to the least sales (bottom) (Note: you must use functions from forcats for this step).\n\n\n# Add your solution here"
   },
   {
     "objectID": "projects/project-3/index.html#part-1e",
