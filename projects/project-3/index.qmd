@@ -127,7 +127,7 @@ Using the wrangled data from Part 1A, use `ggplot2` to create a bar plot for the
 
 **Note**:
 
--   You only need to consider the global World sales (you can ignore US and UK sales for this part).
+-   You only need to consider the global World sales (you can ignore US and UK sales for this part). Hint: how would you abbreviate *WorldWide*?
 -   The title of the album must be clearly readable along the y-axis.
 -   Each bar should be colored by which artist made that album.
 -   The bars should be ordered from albums with the most sales (top) to the least sales (bottom) (**Note**: you must use functions from `forcats` for this step).
