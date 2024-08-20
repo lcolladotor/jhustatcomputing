@@ -14,7 +14,7 @@ description: "Implement exception handling routines in R functions"
 categories: [module 4, week 5, programming, debugging]
 ---
 
-*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
+*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
 
 # Pre-lecture materials
 

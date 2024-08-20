@@ -14,7 +14,7 @@ description: "How to get data in and out of R using relative paths"
 categories: [module 2, week 2, R, programming, readr, here, tidyverse]
 ---
 
-*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
+*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
 
 ```{r}
 #| echo: false
@@ -141,7 +141,7 @@ getwd()
 list.files()
 ```
 
-OK so our current location is in the reading and writing lectures sub-folder of the `jhustatcomputing2023` course repository. Let's try using the `here` package.
+OK so our current location is in the reading and writing lectures sub-folder of the `jhustatcomputing` course repository. Let's try using the `here` package.
 
 ```{r}
 library(here)
@@ -150,7 +150,7 @@ list.files(here::here())
 list.files(here("data"))
 ```
 
-Now we see that using the `here::here()` function is a *relative* path (relative to the `.Rproj` file in our `jhustatcomputing2023` repository. We also see there is are two `.csv` files in the `data` folder. We will learn how to read those files into R in the next section.
+Now we see that using the `here::here()` function is a *relative* path (relative to the `.Rproj` file in our `jhustatcomputing` repository. We also see there is are two `.csv` files in the `data` folder. We will learn how to read those files into R in the next section.
 
 ![Artwork by Allison Horst on here package](https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/here.png){width="80%"}
 

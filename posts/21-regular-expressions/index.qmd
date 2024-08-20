@@ -14,7 +14,7 @@ description: "Introduction to working with character strings and regular express
 categories: [module 5, week 6, tidyverse, R, programming, strings and regex]
 ---
 
-*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
+*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
 
 <!-- Add interesting quote -->
 

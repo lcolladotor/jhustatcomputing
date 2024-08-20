@@ -14,7 +14,7 @@ description: "A noncomprehensive set of best practices for building data analyse
 categories: [module 6, week 8, best practices]
 ---
 
-*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
+*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
 
 # Pre-lecture materials
 
@@ -169,17 +169,22 @@ Sharing data proves more useful when others can easily find and access, interpre
 4.  **Reusable**. The ultimate goal of FAIR is to optimize the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings.
 :::
 
-<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/846fdf74c6ec440691521f9a42855ce4?slide=17" title="LCG20" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/846fdf74c6ec440691521f9a42855ce4?slide=17" title="LCG20" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777">
+
+</iframe>
 
 ## Why share?
 
 1.  **Benefits of sharing data to science and society**. Sharing data allows for transparency in scientific studies and allows one to fully understand what occurred in an analysis and reproduce the results. Without complete data, metadata, and information about resources used to generate the data, reproducing a study proves impossible.
 2.  **Benefits of sharing data to individual researchers**. Sharing data increases the impact of a researcher's work and reputation for sound science. Awards for those with an excellent record of [data sharing](https://researchsymbionts.org/) or [data reuse](https://researchparasite.com/) can exemplify this reputation.
 
-<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/434ae0541ae64731a95f35431acb754d?slide=18" title="HCA LA 2022" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 420;" data-ratio="1.3333333333333333"></iframe>
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/434ae0541ae64731a95f35431acb754d?slide=18" title="HCA LA 2022" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 420;" data-ratio="1.3333333333333333">
 
-<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/846fdf74c6ec440691521f9a42855ce4?slide=44" title="LCG20" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+</iframe>
 
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/846fdf74c6ec440691521f9a42855ce4?slide=44" title="LCG20" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777">
+
+</iframe>
 
 ### Addressing common concerns about data sharing
 
@@ -195,9 +200,9 @@ Despite the clear benefits of sharing data, some researchers still have concerns
 Sometimes you cannot publicly post all human data, even after de-identification. We suggest three strategies for making these data maximally accessible.
 
 1.  Deposit raw data files in a controlled-access repository. Controlled-access repositories allow only qualified researchers who apply to access the data.
-    * Example: the database of Genotypes and Phenotypes (dbGaP) <https://www.ncbi.nlm.nih.gov/gap/>
+    -   Example: the database of Genotypes and Phenotypes (dbGaP) <https://www.ncbi.nlm.nih.gov/gap/>
 2.  Even if you cannot make individual-level raw data available, you can make as much processed data available as possible. This may take the form of summary statistics such as means and standard deviations, rather than individual-level data.
-    * Example: GWAS summary data such as the one available from <https://www.ebi.ac.uk/gwas/docs/summary-statistics-format>
+    -   Example: GWAS summary data such as the one available from <https://www.ebi.ac.uk/gwas/docs/summary-statistics-format>
 3.  You may want to generate simulated data distinct from the original data but statistically similar to it. Simulated data would allow others to reproduce your analysis without disclosing the original data or requiring the security controls needed for controlled access.
 :::
 
@@ -208,12 +213,12 @@ Depending on the data type, you might be able to share the data itself, or a sum
 1.  The **data** itself, or a summarized version, or a simulated data similar to the original.
 2.  Any **metadata** to describe the primary data and the resources used to generate it. Most disciplines have specific metadata standards to follow (e.g. [microarrays](http://fged.org/projects/minseqe/)).
 3.  **Data dictionary**. These have crucial role in organizing your data, especially explaining the variables and their representation. Data dictionaries should provide short names for each variable, a longer text label for the variable, a definition for each variable, data type (such as floating-point number, integer, or string), measurement units, and expected minimum and maximum values. Data dictionaries can make explicit what future users would otherwise have to guess about the representation of data.
-    * You have gotten used to seeing the _Tidy Tuesday_ data dictionaries <https://github.com/rfordatascience/tidytuesday> such as <https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-10-17/readme.md#data-dictionary>
+    -   You have gotten used to seeing the *Tidy Tuesday* data dictionaries <https://github.com/rfordatascience/tidytuesday> such as <https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-10-17/readme.md#data-dictionary>
 4.  **Source code**. Ideally, readers should have all materials needed to completely reproduce the study described in a publication, not just data. These materials include source code, preprocessing, and analysis scripts. Guidelines for organization of computational project can help you arrange your data and scripts in a way that will make it easier for you and other to access and reuse them.
-    * See <https://github.com/LieberInstitute/template_project> for how we organize code in my team.
-    * See also <https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content> for how to deposit your GitHub repository on Zenodo and get a Digital Object Identifier (DOI) that others can cite. Example <https://zenodo.org/doi/10.5281/zenodo.10010510>
+    -   See <https://github.com/LieberInstitute/template_project> for how we organize code in my team.
+    -   See also <https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content> for how to deposit your GitHub repository on Zenodo and get a Digital Object Identifier (DOI) that others can cite. Example <https://zenodo.org/doi/10.5281/zenodo.10010510>
 5.  **Licensing**. Clear licensing information attached to your data avoids any questions of whether others may reuse it. Many data resources turn out not to be as reusable as the providers intended, due to lack of clarity in licensing or restrictive licensing choices.
-    * See <https://choosealicense.com/> for more on how to choose a license
+    -   See <https://choosealicense.com/> for more on how to choose a license
 
 ::: callout-tip
 ### How should you document your data?
@@ -410,7 +415,7 @@ It states:
 
 To see this, look at the figure above and try to determine the percentages just from looking at the plot. Unless the percentages are close to 25%, 50% or 75%, this is not so easy. Simply showing the numbers is not only clear, but also saves on printing costs.
 
-Having said that, see how we used a pie chart in a [recent pre-print](https://doi.org/10.1101/2023.02.15.528722) <https://www.biorxiv.org/content/biorxiv/early/2023/02/15/2023.02.15.528722/F5.large.jpg>.
+Having said that, see how we used a pie chart in a [2023 pre-print](https://doi.org/10.1101/2023.02.15.528722) <https://www.biorxiv.org/content/biorxiv/early/2023/02/15/2023.02.15.528722/F5.large.jpg>. The published version is accessible from doi [10.1126/science.adh1938](http://dx.doi.org/10.1126/science.adh1938).
 
 #### Instead of pie charts, try bar plots
 
@@ -632,7 +637,9 @@ boxplot(before, after,
 )
 ```
 
-<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/2c3377401c934bb9abd859b644bb9455?slide=17" title="2023-10-03-FOGBoston" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/2c3377401c934bb9abd859b644bb9455?slide=17" title="2023-10-03-FOGBoston" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777">
+
+</iframe>
 
 The above plot was made using [`ggpubr::ggpaired()`](https://rpkgs.datanovia.com/ggpubr/reference/ggpaired.html). Note that the title of the package is:
 

@@ -10,11 +10,11 @@ author:
       - id: jhsph
         name: Johns Hopkins Bloomberg School of Public Health Department of Biostatistics
         url: https://publichealth.jhu.edu/departments/biostatistics
-description: "Overview course information for BSPH Biostatistics 140.776 in Fall 2023"
+description: "Overview course information for BSPH Biostatistics 140.776"
 categories: [course-admin, module 1, week 1]
 ---
 
-*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
+*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
 
 Welcome! I am very excited to have you in our one-term (i.e. half a semester) course on Statistical Computing course number (140.776) offered by the [Department of Biostatistics](https://publichealth.jhu.edu/departments/biostatistics) at the [Johns Hopkins Bloomberg School of Public Health](https://publichealth.jhu.edu). This will be my first time as the lead instructor of a JHBSPH course! 🙌🏽
 
@@ -105,7 +105,7 @@ Go to [https://cran.r-project.org]() and
 
 2.  Click on "base"
 
-3.  Click on "Download R 4.3.1 for Windows"
+3.  Click on "Download R 4.4.1 for Windows"
 
 ::: callout-warning
 The version in the video is not the latest version of R. Please download the latest version.
@@ -119,7 +119,7 @@ Goto [https://cran.r-project.org]() and
 
 1.  Click the link to "Download R for (Mac) OS X".
 
-2.  Click on "R-4.3.1.pkg"
+2.  Click on "R-4.4.1.pkg"
 
 ::: callout-warning
 The version in the video is not the latest version of R. Please download the latest version.
@@ -157,7 +157,7 @@ Install `Git` on your computer following the detailed instructions at <https://h
 
 Create a personal GitHub account following the instructions at <https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account>.
 
-Following [Jeff Leek](https://twitter.com/jtleek)'s advice on [**How to be a modern scientist**](https://leanpub.com/modernscientist) that was part of my team's bootcamps at <https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html>, try to choose a username that will be the same one you use on your email and other work-related social media platforms such as Twitter.
+Following [Jeff Leek](https://twitter.com/jtleek)'s advice on [**How to be a modern scientist**](https://leanpub.com/modernscientist) that was part of my team's bootcamps at <https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html>, try to choose a username that will be the same one you use on your email and other work-related social media platforms such as Twitter, Bluesky, etc.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rcX-VyxHEXA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
@@ -175,9 +175,9 @@ The goal is by the end of the class, students will be able to:
 
 # Course logistics
 
-Unlike 2022, the only option is to take the course is in-person (140.776.01).
+The only option is to take the course is in-person (140.776.01).
 
--   <https://lcolladotor.github.io/jhustatcomputing2023>
+-   <https://lcolladotor.github.io/jhustatcomputing>
 
 All communication for the course is going to take place on one of three platforms:
 
@@ -185,12 +185,12 @@ All communication for the course is going to take place on one of three platform
 
 -   **Github**: for getting access to course materials (e.g. lectures, project assignments)
 
-    -   Course Github: <https://github.com/lcolladotor/jhustatcomputing2023>
+    -   Course Github: <https://github.com/lcolladotor/jhustatcomputing>
 
 -   **Lectures**: most lectures will be in person
 
     -   All in person lectures to be recorded and posted online after class ends
-    -   If for some reason I am sick or not capable of coming onsite, I will send out a zoom link for everyone to attend remotely for that day. I already know that I will be teaching **remotely on Tuesday August 29 and Thursday August 31st**, due to prior travel arrangments I had made before knowing when I would be teaching this class.
+    -   If for some reason I am sick or not capable of coming onsite, I will send out a Zoom link for everyone to attend remotely for that day.
 
 The primary communication for the class will go through Courseplus. That is where we will post course announcements, answer common questions, and as the primary means of communication between course participants and course instructors.
 
@@ -200,21 +200,21 @@ If you are registered for the course, you should have access to Courseplus now. 
 
 ### Course Staff
 
-The course instructor this year is [Leonardo Collado Torres](http://lcolladotor.github.io/) who is an Investigator at the [Lieber Institute for Brain Development](https://www.libd.org/) and is an Associate in the [Department of Biostatistics](https://publichealth.jhu.edu/departments/biostatistics) at the [Johns Hopkins Bloomberg School of Public Health](https://publichealth.jhu.edu). I was actually a student of this course in Fall 2012 when [Roger D. Peng](https://twitter.com/rdpeng) was the instructor of this course and [Jenna Krall](https://twitter.com/kralljr) was the only teaching assistant. I myself started learning and [teaching](http://lcolladotor.github.io/#teaching) about R in 2008 and we have a lot of material in the [LIBD rstats club](https://research.libd.org/rstatsclub/) that you might be interested in.
+The course instructor this year is [Leonardo Collado Torres](http://lcolladotor.github.io/) who is an Investigator at the [Lieber Institute for Brain Development](https://www.libd.org/) and an Assistant Professor in the [Department of Biostatistics](https://publichealth.jhu.edu/departments/biostatistics) at the [Johns Hopkins Bloomberg School of Public Health](https://publichealth.jhu.edu). I was actually a student of this course in Fall 2012 when [Roger D. Peng](https://twitter.com/rdpeng) was the instructor of this course and [Jenna Krall](https://twitter.com/kralljr) was the only teaching assistant. I first taught this course in 2023. I myself started learning and [teaching](http://lcolladotor.github.io/#teaching) about R in 2008 and we have a lot of material in the [LIBD rstats club](https://research.libd.org/rstatsclub/) that you might be interested in.
 
 At the Lieber Institute for Brain Development ([LIBD](https://www.libd.org/)), my group works on understanding the roots and signatures of disease (particularly psychiatric disorders) by zooming in across dimensions of gene activity. We achieve this by studying gene expression at all expression feature levels (genes, exons, exon-exon junctions, and un-annotated regions) and by using different gene expression measurement technologies (bulk RNA-seq, single cell/nucleus RNA-seq, and spatial transcriptomics) that provide finer biological resolution and localization of gene expression. We work closely with collaborators from LIBD as well as from Johns Hopkins University (JHU) and other institutions, which reflects the cross-disciplinary approach and diversity in expertise needed to further advance our understanding of high throughput biology.
 
-Every day I use [R](http://cran.r-project.org/) and [Bioconductor](http://www.bioconductor.org/), and on some days I [write R packages](https://lcolladotor.github.io/pkgs/). Occasionally I write [blog posts](http://lcolladotor.github.io/#blog) about them and other tools. I'm a co-founder of the [LIBD rstats club](http://LieberInstitute.github.io/rstatsclub/) and the [CDSB community](https://comunidadbioinfo.github.io) of R and Bioconductor developers in Mexico and Latin America, that we described at the [R Consortium website](https://www.r-consortium.org/blog/2020/03/18/cdsb-diversity-and-outreach-hotspot-in-mexico). In the past, I also served on the [Bioconductor Community Advisory Board](http://bioconductor.org/about/community-advisory-board/) and the advisory board for [rOpenSci's Statistical Software Peer Review](https://ropensci.org/stat-software-review/).
+Every day I use [R](http://cran.r-project.org/) and [Bioconductor](http://www.bioconductor.org/), and on some days I [write R packages](https://lcolladotor.github.io/pkgs/). Occasionally I write [blog posts](http://lcolladotor.github.io/#blog) about them and other tools. I'm a co-founder of the [LIBD rstats club](http://LieberInstitute.github.io/rstatsclub/) and the [CDSB community](https://comunidadbioinfo.github.io) of R and Bioconductor developers in Mexico and Latin America, that we described at the [R Consortium website](https://www.r-consortium.org/blog/2020/03/18/cdsb-diversity-and-outreach-hotspot-in-mexico). In the past, I also served on the [Bioconductor Community Advisory Board](http://bioconductor.org/about/community-advisory-board/).
 
-If you want, you can find me on [Twitter](https://twitter.com/lcolladotor).
+If you want, you can find me on [Twitter](https://twitter.com/lcolladotor) or [Bluesky](https://bsky.app/profile/lcolladotor.bsky.social).
 
 #### Teaching Assistants
 
 We also have three amazing TAs this year:
 
--   Emily Norton ([enorton7\@jhmi.edu](mailto:enorton7@jhmi.edu)). She is a second year Ph.D. student in Biostatistics, with interest in understanding how genetics and environment interact to impact someone's risk of disease. She currently validates polygenic risk scores and, in combination with other risk factors, translates disease risk into a clinically-relevant quantity. Aside from research, she enjoys swing dancing, camping, and crafting.
--   Joe Sartini ([jsartin1\@jhu.edu](mailto:jsartin1@jhu.edu)). He is a third year Ph.D. student in Biostatistics, with interest in models for precision medicine applications. Currently, the focus of his work is extracting meaningful insights from time-series produced by Continuous Glucose Monitoring and other devices worn by Type 2 diabetics. Outside of research, he enjoys participating in endurance sports and weightlifting.
--   Phyllis Wei ([ywei43\@jhu.edu](mailto:ywei43@jhu.edu)). She is a third year Ph.D. student in Biostatistics. She develops methods to help understand the genetic basis of complex traits and diseases and enhance disease risk prediction models through data integration. Outside of biostatistics, she enjoys hiking, baking, and visiting museums.
+-   Jiaxin Huang ([jhuan206\@jh.edu](mailto:jhuan206@jh.edu))
+-   Phyllis Wei ([ywei43\@jhu.edu](mailto:ywei43@jhu.edu)). She is a fourth year Ph.D. student in Biostatistics. She develops methods to help understand the genetic basis of complex traits and diseases and enhance disease risk prediction models through data integration. Outside of biostatistics, she enjoys hiking, baking, and visiting museums.
+-   Yu Lu ([ylu136\@jh.edu](mailto:ylu136@jh.edu))
 
 ### Assignment Due Dates
 
@@ -314,7 +314,7 @@ Students requiring accommodations for disabilities should register with [Student
 
 ## Typos and corrections
 
-Feel free to submit typos/errors/etc via the GitHub repository associated with the class: <https://github.com/lcolladotor/jhustatcomputing2023/issues>. You will have the thanks of your grateful instructor!
+Feel free to submit typos/errors/etc via the GitHub repository associated with the class: <https://github.com/lcolladotor/jhustatcomputing/issues>. You will have the thanks of your grateful instructor!
 
 # R session information
 

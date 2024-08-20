@@ -14,11 +14,11 @@ description: "Finding great chocolate bars!"
 categories: [project 1, projects]
 ---
 
-*This project, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
+*This project, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
 
 # Background
 
-**Due date: Sept 16 at 11:59pm**
+**Due date: September 15th at 11:59pm**
 
 ### To submit your project
 
@@ -257,7 +257,7 @@ Use the functions in `ggplot2` package to make a scatter plot of the `mean_score
 3.  All plots should be shown in the one figure
 4.  There should be an informative x-axis and y-axis label
 
-Consider playing around with the `theme()` function to make the figure shine, including playing with background colors, font, etc. See <https://github.com/lcolladotor/jhustatcomputing2023/issues/4> for an example on how you can choose colors if you have too many categories.
+Consider playing around with the `theme()` function to make the figure shine, including playing with background colors, font, etc. See <https://github.com/lcolladotor/jhustatcomputing/issues/4> for an example on how you can choose colors if you have too many categories.
 
 ### Notes
 

@@ -14,7 +14,7 @@ description: "Help! What's wrong with my code???"
 categories: [module 4, week 5, programming, debugging]
 ---
 
-*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
+*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
 
 <!-- Add interesting quote -->
 
@@ -179,11 +179,11 @@ It is now ready and waiting on your clipboard, so you can paste it into, say, a 
 
 One last step. Let's go here and open up an issue on the course website or respond to our practice issue from earlier in the course:
 
--   <https://github.com/lcolladotor/jhustatcomputing2023/issues/2>
+-   <https://github.com/lcolladotor/jhustatcomputing/issues/2>
 
 We will paste in the code from our reprex.
 
-Notice that if you are asking about code in this class, you might need to use the `wd` argument and set it to `here::here()`, that is `reprex::reprex(wd = here::here())` as showcased at <https://github.com/lcolladotor/jhustatcomputing2023/issues/5>.
+Notice that if you are asking about code in this class, you might need to use the `wd` argument and set it to `here::here()`, that is `reprex::reprex(wd = here::here())` as showcased at <https://github.com/lcolladotor/jhustatcomputing/issues/5>.
 :::
 
 In RStudio, you can access `reprex` from the addins menu, which makes it even easier to point out your code and select the output format.

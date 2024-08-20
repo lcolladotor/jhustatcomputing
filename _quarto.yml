@@ -3,8 +3,8 @@ project:
 
 website:
   title: "Statistical Computing (BSPH 140.776)"
-  site-url: https://lcolladotor.github.io/jhustatcomputing2023
-  description: "Course website for Statistical Computing (BSPH 140.776) in Fall 2023"
+  site-url: https://lcolladotor.github.io/jhustatcomputing
+  description: "Course website for Statistical Computing (BSPH 140.776)"
   favicon: "icon_32.png"
   navbar:
     right:
@@ -25,7 +25,7 @@ website:
         - text: "Resources"
           href: resources.qmd
       - icon: github
-        href: https://github.com/lcolladotor/jhustatcomputing2023
+        href: https://github.com/lcolladotor/jhustatcomputing
       - icon: twitter
         href: https://twitter.com/lcolladotor
       - icon: rss

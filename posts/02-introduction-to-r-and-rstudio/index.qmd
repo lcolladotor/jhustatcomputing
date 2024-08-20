@@ -15,7 +15,7 @@ image: https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.p
 categories: [module 1, week 1, R, programming, RStudio]
 ---
 
-*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
+*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
 
 > There are only two kinds of languages: the ones people complain about and the ones nobody uses. ---*Bjarne Stroustrup*
 
@@ -194,7 +194,7 @@ The file/plot/pkg viewer is a handy browser for your current files, like Finder,
 
 ### Installing R and RStudio
 
--   If you have not already, [install R first](http://cran.r-project.org). If you already have R installed, make sure it is a fairly recent version, version 4.3.1 or newer. If yours is older that version 4.2.0, I suggest you update (install a new R version).
+-   If you have not already, [install R first](http://cran.r-project.org). If you already have R installed, make sure it is a fairly recent version, version 4.4.1 or newer. If yours is older that version 4.3.0, I suggest you update (install a new R version).
 -   Once you have R installed, install the free version of [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/). Again, make sure it's a recent version.
 
 ::: callout-tip

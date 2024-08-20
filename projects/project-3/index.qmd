@@ -14,11 +14,11 @@ description: "Exploring album sales and sentiment of lyrics from Beyoncé and Ta
 categories: [project 3, projects]
 ---
 
-*This project, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
+*This project, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
 
 # Background
 
-**Due date: October 22 at 11:59pm**
+**Due date: October 20th at 11:59pm**
 
 The goal of this assignment is to practice wrangling special data types (including dates, character strings, and factors) and visualizing results while practicing our tidyverse skills.
 

@@ -15,7 +15,7 @@ image: "../../images/happygitwithr.png"
 categories: [module 1, week 1, programming, version control, git, GitHub]
 ---
 
-*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
+*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
 
 <!-- Add interesting quote -->
 
@@ -155,13 +155,13 @@ As a quick exercise:
 
 1.  Install `reprex`
 
-2.  Log in to your GitHub account and access <https://github.com/lcolladotor/jhustatcomputing2023/issues/2>
+2.  Log in to your GitHub account and access <https://github.com/lcolladotor/jhustatcomputing/issues/7>
 
 3.  Copy paste the following R code `stop("This R error is weird")`.
 
 4.  Type `reprex::reprex()` in your R console.
 
-5.  Paste the output into <https://github.com/lcolladotor/jhustatcomputing2023/issues/2> and click on the "comment" green button.
+5.  Paste the output into <https://github.com/lcolladotor/jhustatcomputing/issues/7> and click on the "comment" green button.
 
 Here is an actual example where I used `reprex` to ask a question: <https://github.com/Bioconductor/BiocFileCache/issues/48>.
 

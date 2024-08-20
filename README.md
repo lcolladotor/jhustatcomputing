@@ -1,6 +1,8 @@
 # Statistical Computing
 
-This GitHub repository is for the Johns Hopkins BSPH course titled 'Statistical Computing' (BSPH 140.776.01) in Fall 2023.
+This GitHub repository is for the Johns Hopkins BSPH course titled 'Statistical Computing' (BSPH 140.776.01).
+
+To check previous versions of this course, see <https://github.com/lcolladotor/jhustatcomputing/branches>.
 
 ## Instructor
 
@@ -8,9 +10,9 @@ This GitHub repository is for the Johns Hopkins BSPH course titled 'Statistical 
 
 ## Teaching Assistants
 
--   Emily Norton
--   Joe Sartini
+-   Jiaxin Huang
 -   Phyllis Wei
+-   Yu Lu
 
 # Bugs
 

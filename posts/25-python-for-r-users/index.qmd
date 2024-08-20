@@ -14,7 +14,7 @@ description: "Introduction to using Python in R and the reticulate package"
 categories: [week 8, module 6, python, R, programming]
 ---
 
-*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing2023/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
+*This lecture, as the rest of the course, is adapted from the version [Stephanie C. Hicks](https://www.stephaniehicks.com/) designed and maintained in 2021 and 2022. Check the recent changes to this file through the `r paste0("[GitHub history](https://github.com/lcolladotor/jhustatcomputing/commits/main/", basename(dirname(getwd())), "/", basename(getwd()), "/index.qmd)")`.*
 
 <!-- Add interesting quote -->
 
@@ -417,7 +417,7 @@ Next, we **use Python to read in the file** and do some data wrangling
 
 ```{python}
 import pandas
-flights_path = "/Users/leocollado/Dropbox/Code/jhustatcomputing2023/data/flights.csv"
+flights_path = "/Users/leocollado/Dropbox/Code/jhustatcomputing/data/flights.csv"
 flights = pandas.read_csv(flights_path)
 flights = flights[flights['dest'] == "ORD"]
 flights = flights[['carrier', 'dep_delay', 'arr_delay']]
