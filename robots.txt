@@ -1,1 +1,1 @@
-Sitemap: https://lcolladotor.github.io/jhustatcomputing2023/sitemap.xml
+Sitemap: https://lcolladotor.github.io/jhustatcomputing/sitemap.xml

@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Leonardo Collado Torres">
-<meta name="description" content="Overview course information for BSPH Biostatistics 140.776 in Fall 2023">
+<meta name="description" content="Overview course information for BSPH Biostatistics 140.776">
 
-<title>Statistical Computing (BSPH 140.776) - 01 - Welcome!</title>
+<title>01 - Welcome! – Statistical Computing (BSPH 140.776)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -35,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -82,7 +82,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -91,6 +97,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -104,77 +111,77 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Statistical Computing (BSPH 140.776)</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-general-information" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-general-information" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">General Information</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-general-information">    
         <li>
-    <a class="dropdown-item" href="../../syllabus.html" rel="" target="">
+    <a class="dropdown-item" href="../../syllabus.html">
  <span class="dropdown-text">Syllabus</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../schedule.html" rel="" target="">
+    <a class="dropdown-item" href="../../schedule.html">
  <span class="dropdown-text">Schedule</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-course-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-course-materials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Course Materials</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-course-materials">    
         <li>
-    <a class="dropdown-item" href="../../lectures.html" rel="" target="">
+    <a class="dropdown-item" href="../../lectures.html">
  <span class="dropdown-text">Lectures</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../projects.html" rel="" target="">
+    <a class="dropdown-item" href="../../projects.html">
  <span class="dropdown-text">Projects</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../resources.html" rel="" target="">
+    <a class="dropdown-item" href="../../resources.html">
  <span class="dropdown-text">Resources</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/lcolladotor/jhustatcomputing2023" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/lcolladotor/jhustatcomputing"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/lcolladotor" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/lcolladotor"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -185,7 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <h1 class="title">01 - Welcome!</h1>
                   <div>
         <div class="description">
-          Overview course information for BSPH Biostatistics 140.776 in Fall 2023
+          Overview course information for BSPH Biostatistics 140.776
         </div>
       </div>
                           <div class="quarto-categories">
@@ -203,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="quarto-title-meta-contents">
       <p class="author"><a href="http://lcolladotor.github.io/">Leonardo Collado Torres</a> </p>
     </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
           <p class="affiliation">
               <a href="https://libd.org/">
               Lieber Institute for Brain Development
@@ -215,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
               </a>
             </p>
         </div>
-      </div>
+    </div>
 
   <div class="quarto-title-meta">
 
@@ -227,7 +234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
@@ -255,9 +262,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul>
 </nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -265,7 +272,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p><em>This lecture, as the rest of the course, is adapted from the version <a href="https://www.stephaniehicks.com/">Stephanie C. Hicks</a> designed and maintained in 2021 and 2022. Check the recent changes to this file through the <a href="https://github.com/lcolladotor/jhustatcomputing2023/commits/main/posts/01-welcome/index.qmd">GitHub history</a>.</em></p>
+
+<p><em>This lecture, as the rest of the course, is adapted from the version <a href="https://www.stephaniehicks.com/">Stephanie C. Hicks</a> designed and maintained in 2021 and 2022. Check the recent changes to this file through the <a href="https://github.com/lcolladotor/jhustatcomputing/commits/main/posts/01-welcome/index.qmd">GitHub history</a>.</em></p>
 <p>Welcome! I am very excited to have you in our one-term (i.e.&nbsp;half a semester) course on Statistical Computing course number (140.776) offered by the <a href="https://publichealth.jhu.edu/departments/biostatistics">Department of Biostatistics</a> at the <a href="https://publichealth.jhu.edu">Johns Hopkins Bloomberg School of Public Health</a>. This will be my first time as the lead instructor of a JHBSPH course! 🙌🏽</p>
 <p>This course is designed for ScM and PhD students at Johns Hopkins Bloomberg School of Public Health. I am pretty flexible about permitting outside students, but I want everyone to be aware of the goals and assumptions so no one feels like they are surprised by how the class works.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -365,7 +373,7 @@ Tip
 <ol type="1">
 <li><p>Click the link to “Download R for Windows”</p></li>
 <li><p>Click on “base”</p></li>
-<li><p>Click on “Download R 4.3.1 for Windows”</p></li>
+<li><p>Click on “Download R 4.4.1 for Windows”</p></li>
 </ol>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -383,7 +391,7 @@ Warning
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../videos/downloadRWindows.gif" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Video Demo for Downloading R for Windows</figcaption>
+<figcaption>Video Demo for Downloading R for Windows</figcaption>
 </figure>
 </div>
 </section>
@@ -392,7 +400,7 @@ Warning
 <p>Goto <a href="">https://cran.r-project.org</a> and</p>
 <ol type="1">
 <li><p>Click the link to “Download R for (Mac) OS X”.</p></li>
-<li><p>Click on “R-4.3.1.pkg”</p></li>
+<li><p>Click on “R-4.4.1.pkg”</p></li>
 </ol>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -410,7 +418,7 @@ Warning
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../videos/downloadRMac.gif" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Video Demo for Downloading R for the Mac</figcaption>
+<figcaption>Video Demo for Downloading R for the Mac</figcaption>
 </figure>
 </div>
 </section>
@@ -441,7 +449,7 @@ Warning
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../videos/downloadRStudio.gif" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Video Demo for Downloading RStudio</figcaption>
+<figcaption>Video Demo for Downloading RStudio</figcaption>
 </figure>
 </div>
 </section>
@@ -452,7 +460,7 @@ Warning
 <section id="create-your-github-account" class="level4">
 <h4 class="anchored" data-anchor-id="create-your-github-account">Create your GitHub account</h4>
 <p>Create a personal GitHub account following the instructions at <a href="https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account" class="uri">https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account</a>.</p>
-<p>Following <a href="https://twitter.com/jtleek">Jeff Leek</a>’s advice on <a href="https://leanpub.com/modernscientist"><strong>How to be a modern scientist</strong></a> that was part of my team’s bootcamps at <a href="https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html" class="uri">https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html</a>, try to choose a username that will be the same one you use on your email and other work-related social media platforms such as Twitter.</p>
+<p>Following <a href="https://twitter.com/jtleek">Jeff Leek</a>’s advice on <a href="https://leanpub.com/modernscientist"><strong>How to be a modern scientist</strong></a> that was part of my team’s bootcamps at <a href="https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html" class="uri">https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html</a>, try to choose a username that will be the same one you use on your email and other work-related social media platforms such as Twitter, Bluesky, etc.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rcX-VyxHEXA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </section>
@@ -470,21 +478,21 @@ Warning
 </section>
 <section id="course-logistics" class="level1">
 <h1>Course logistics</h1>
-<p>Unlike 2022, the only option is to take the course is in-person (140.776.01).</p>
+<p>The only option is to take the course is in-person (140.776.01).</p>
 <ul>
-<li><a href="https://lcolladotor.github.io/jhustatcomputing2023" class="uri">https://lcolladotor.github.io/jhustatcomputing2023</a></li>
+<li><a href="https://lcolladotor.github.io/jhustatcomputing" class="uri">https://lcolladotor.github.io/jhustatcomputing</a></li>
 </ul>
 <p>All communication for the course is going to take place on one of three platforms:</p>
 <ul>
 <li><p><strong>Courseplus</strong>: for discussion, sharing resources, collaborating, and announcements</p></li>
 <li><p><strong>Github</strong>: for getting access to course materials (e.g.&nbsp;lectures, project assignments)</p>
 <ul>
-<li>Course Github: <a href="https://github.com/lcolladotor/jhustatcomputing2023" class="uri">https://github.com/lcolladotor/jhustatcomputing2023</a></li>
+<li>Course Github: <a href="https://github.com/lcolladotor/jhustatcomputing" class="uri">https://github.com/lcolladotor/jhustatcomputing</a></li>
 </ul></li>
 <li><p><strong>Lectures</strong>: most lectures will be in person</p>
 <ul>
 <li>All in person lectures to be recorded and posted online after class ends</li>
-<li>If for some reason I am sick or not capable of coming onsite, I will send out a zoom link for everyone to attend remotely for that day. I already know that I will be teaching <strong>remotely on Tuesday August 29 and Thursday August 31st</strong>, due to prior travel arrangments I had made before knowing when I would be teaching this class.</li>
+<li>If for some reason I am sick or not capable of coming onsite, I will send out a Zoom link for everyone to attend remotely for that day.</li>
 </ul></li>
 </ul>
 <p>The primary communication for the class will go through Courseplus. That is where we will post course announcements, answer common questions, and as the primary means of communication between course participants and course instructors.</p>
@@ -503,17 +511,17 @@ Important
 </div>
 <section id="course-staff" class="level3">
 <h3 class="anchored" data-anchor-id="course-staff">Course Staff</h3>
-<p>The course instructor this year is <a href="http://lcolladotor.github.io/">Leonardo Collado Torres</a> who is an Investigator at the <a href="https://www.libd.org/">Lieber Institute for Brain Development</a> and is an Associate in the <a href="https://publichealth.jhu.edu/departments/biostatistics">Department of Biostatistics</a> at the <a href="https://publichealth.jhu.edu">Johns Hopkins Bloomberg School of Public Health</a>. I was actually a student of this course in Fall 2012 when <a href="https://twitter.com/rdpeng">Roger D. Peng</a> was the instructor of this course and <a href="https://twitter.com/kralljr">Jenna Krall</a> was the only teaching assistant. I myself started learning and <a href="http://lcolladotor.github.io/#teaching">teaching</a> about R in 2008 and we have a lot of material in the <a href="https://research.libd.org/rstatsclub/">LIBD rstats club</a> that you might be interested in.</p>
+<p>The course instructor this year is <a href="http://lcolladotor.github.io/">Leonardo Collado Torres</a> who is an Investigator at the <a href="https://www.libd.org/">Lieber Institute for Brain Development</a> and an Assistant Professor in the <a href="https://publichealth.jhu.edu/departments/biostatistics">Department of Biostatistics</a> at the <a href="https://publichealth.jhu.edu">Johns Hopkins Bloomberg School of Public Health</a>. I was actually a student of this course in Fall 2012 when <a href="https://twitter.com/rdpeng">Roger D. Peng</a> was the instructor of this course and <a href="https://twitter.com/kralljr">Jenna Krall</a> was the only teaching assistant. I first taught this course in 2023. I myself started learning and <a href="http://lcolladotor.github.io/#teaching">teaching</a> about R in 2008 and we have a lot of material in the <a href="https://research.libd.org/rstatsclub/">LIBD rstats club</a> that you might be interested in.</p>
 <p>At the Lieber Institute for Brain Development (<a href="https://www.libd.org/">LIBD</a>), my group works on understanding the roots and signatures of disease (particularly psychiatric disorders) by zooming in across dimensions of gene activity. We achieve this by studying gene expression at all expression feature levels (genes, exons, exon-exon junctions, and un-annotated regions) and by using different gene expression measurement technologies (bulk RNA-seq, single cell/nucleus RNA-seq, and spatial transcriptomics) that provide finer biological resolution and localization of gene expression. We work closely with collaborators from LIBD as well as from Johns Hopkins University (JHU) and other institutions, which reflects the cross-disciplinary approach and diversity in expertise needed to further advance our understanding of high throughput biology.</p>
-<p>Every day I use <a href="http://cran.r-project.org/">R</a> and <a href="http://www.bioconductor.org/">Bioconductor</a>, and on some days I <a href="https://lcolladotor.github.io/pkgs/">write R packages</a>. Occasionally I write <a href="http://lcolladotor.github.io/#blog">blog posts</a> about them and other tools. I’m a co-founder of the <a href="http://LieberInstitute.github.io/rstatsclub/">LIBD rstats club</a> and the <a href="https://comunidadbioinfo.github.io">CDSB community</a> of R and Bioconductor developers in Mexico and Latin America, that we described at the <a href="https://www.r-consortium.org/blog/2020/03/18/cdsb-diversity-and-outreach-hotspot-in-mexico">R Consortium website</a>. In the past, I also served on the <a href="http://bioconductor.org/about/community-advisory-board/">Bioconductor Community Advisory Board</a> and the advisory board for <a href="https://ropensci.org/stat-software-review/">rOpenSci’s Statistical Software Peer Review</a>.</p>
-<p>If you want, you can find me on <a href="https://twitter.com/lcolladotor">Twitter</a>.</p>
+<p>Every day I use <a href="http://cran.r-project.org/">R</a> and <a href="http://www.bioconductor.org/">Bioconductor</a>, and on some days I <a href="https://lcolladotor.github.io/pkgs/">write R packages</a>. Occasionally I write <a href="http://lcolladotor.github.io/#blog">blog posts</a> about them and other tools. I’m a co-founder of the <a href="http://LieberInstitute.github.io/rstatsclub/">LIBD rstats club</a> and the <a href="https://comunidadbioinfo.github.io">CDSB community</a> of R and Bioconductor developers in Mexico and Latin America, that we described at the <a href="https://www.r-consortium.org/blog/2020/03/18/cdsb-diversity-and-outreach-hotspot-in-mexico">R Consortium website</a>. In the past, I also served on the <a href="http://bioconductor.org/about/community-advisory-board/">Bioconductor Community Advisory Board</a>.</p>
+<p>If you want, you can find me on <a href="https://twitter.com/lcolladotor">Twitter</a> or <a href="https://bsky.app/profile/lcolladotor.bsky.social">Bluesky</a>.</p>
 <section id="teaching-assistants" class="level4">
 <h4 class="anchored" data-anchor-id="teaching-assistants">Teaching Assistants</h4>
 <p>We also have three amazing TAs this year:</p>
 <ul>
-<li>Emily Norton (<a href="mailto:enorton7@jhmi.edu">enorton7@jhmi.edu</a>). She is a second year Ph.D.&nbsp;student in Biostatistics, with interest in understanding how genetics and environment interact to impact someone’s risk of disease. She currently validates polygenic risk scores and, in combination with other risk factors, translates disease risk into a clinically-relevant quantity. Aside from research, she enjoys swing dancing, camping, and crafting.</li>
-<li>Joe Sartini (<a href="mailto:jsartin1@jhu.edu">jsartin1@jhu.edu</a>). He is a third year Ph.D.&nbsp;student in Biostatistics, with interest in models for precision medicine applications. Currently, the focus of his work is extracting meaningful insights from time-series produced by Continuous Glucose Monitoring and other devices worn by Type 2 diabetics. Outside of research, he enjoys participating in endurance sports and weightlifting.</li>
-<li>Phyllis Wei (<a href="mailto:ywei43@jhu.edu">ywei43@jhu.edu</a>). She is a third year Ph.D.&nbsp;student in Biostatistics. She develops methods to help understand the genetic basis of complex traits and diseases and enhance disease risk prediction models through data integration. Outside of biostatistics, she enjoys hiking, baking, and visiting museums.</li>
+<li>Jiaxin Huang (<a href="mailto:jhuan206@jh.edu">jhuan206@jh.edu</a>)</li>
+<li>Phyllis Wei (<a href="mailto:ywei43@jhu.edu">ywei43@jhu.edu</a>). She is a fourth year Ph.D.&nbsp;student in Biostatistics. She develops methods to help understand the genetic basis of complex traits and diseases and enhance disease risk prediction models through data integration. Outside of biostatistics, she enjoys hiking, baking, and visiting museums.</li>
+<li>Yu Lu (<a href="mailto:ylu136@jh.edu">ylu136@jh.edu</a>)</li>
 </ul>
 </section>
 </section>
@@ -611,7 +619,7 @@ Important
 </section>
 <section id="typos-and-corrections" class="level2">
 <h2 class="anchored" data-anchor-id="typos-and-corrections">Typos and corrections</h2>
-<p>Feel free to submit typos/errors/etc via the GitHub repository associated with the class: <a href="https://github.com/lcolladotor/jhustatcomputing2023/issues" class="uri">https://github.com/lcolladotor/jhustatcomputing2023/issues</a>. You will have the thanks of your grateful instructor!</p>
+<p>Feel free to submit typos/errors/etc via the GitHub repository associated with the class: <a href="https://github.com/lcolladotor/jhustatcomputing/issues" class="uri">https://github.com/lcolladotor/jhustatcomputing/issues</a>. You will have the thanks of your grateful instructor!</p>
 </section>
 </section>
 <section id="r-session-information" class="level1">
@@ -622,36 +630,36 @@ Important
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.5
+ version  R version 4.4.1 (2024-06-14)
+ os       macOS Sonoma 14.5
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
- tz       America/Mexico_City
- date     2023-08-29
- pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+ tz       America/New_York
+ date     2024-08-20
+ pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout      1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
- digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- evaluate      0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr         1.43    2023-05-25 [1] CRAN (R 4.3.0)
- rlang         1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown     2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rstudioapi    0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- xfun          0.40    2023-08-09 [1] CRAN (R 4.3.0)
- yaml          2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ cli           3.6.3   2024-06-21 [1] CRAN (R 4.4.0)
+ colorout    * 1.3-0.2 2024-05-03 [1] Github (jalvesaq/colorout@c6113a2)
+ digest        0.6.36  2024-06-23 [1] CRAN (R 4.4.0)
+ evaluate      0.24.0  2024-06-10 [1] CRAN (R 4.4.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.4.0)
+ htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.4.0)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.4.0)
+ jsonlite      1.8.8   2023-12-04 [1] CRAN (R 4.4.0)
+ knitr         1.48    2024-07-07 [1] CRAN (R 4.4.0)
+ rlang         1.1.4   2024-06-04 [1] CRAN (R 4.4.0)
+ rmarkdown     2.27    2024-05-17 [1] CRAN (R 4.4.0)
+ rstudioapi    0.16.0  2024-03-24 [1] CRAN (R 4.4.0)
+ sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.4.0)
+ xfun          0.46    2024-07-18 [1] CRAN (R 4.4.0)
+ yaml          2.3.10  2024-07-26 [1] CRAN (R 4.4.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
@@ -696,18 +704,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -739,11 +736,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/lcolladotor\.github\.io\/jhustatcomputing");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -753,8 +789,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -766,7 +811,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -810,6 +978,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -835,6 +1004,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -895,6 +1090,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
