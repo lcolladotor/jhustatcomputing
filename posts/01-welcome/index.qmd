@@ -187,7 +187,7 @@ All communication for the course is going to take place on one of three platform
 
     -   Course Github: <https://github.com/lcolladotor/jhustatcomputing>
 
--   **Lectures**: most lectures will be in person
+-   **Lectures**: lectures will be in person
 
     -   All in person lectures to be recorded and posted online after class ends
     -   If for some reason I am sick or not capable of coming onsite, I will send out a Zoom link for everyone to attend remotely for that day.
