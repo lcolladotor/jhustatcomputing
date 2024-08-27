@@ -99,7 +99,7 @@ in the R console.
 
 #### How to Download R for Windows
 
-Go to [https://cran.r-project.org]() and
+Go to <https://cran.r-project.org> and
 
 1.  Click the link to "Download R for Windows"
 
@@ -115,7 +115,7 @@ The version in the video is not the latest version of R. Please download the lat
 
 #### How to Download R for the Mac
 
-Goto [https://cran.r-project.org]() and
+Goto <https://cran.r-project.org> and
 
 1.  Click the link to "Download R for (Mac) OS X".
 
@@ -129,7 +129,7 @@ The version in the video is not the latest version of R. Please download the lat
 
 #### How to Download RStudio
 
-Goto [https://rstudio.com]() and
+Goto <https://rstudio.com> and
 
 1.  Click on "Products" in the top menu
 
@@ -268,8 +268,8 @@ All class participants agree to:
 
 -   **Be considerate** in speech and actions, and actively seek to acknowledge and respect the boundaries of other members.
 -   **Be respectful**. Disagreements happen, but do not require poor behavior or poor manners. Frustration is inevitable, but it should never turn into a personal attack. A community where people feel uncomfortable or threatened is not a productive one. Course participants should be respectful both of the other course participants and those outside the course.
--   **Refrain from demeaning, discriminatory, or harassing behavior and speech**. Harassment includes, but is not limited to: deliberate intimidation; stalking; unwanted photography or recording; sustained or willful disruption of talks or other events; inappropriate physical contact; use of sexual or discriminatory imagery, comments, or jokes; and unwelcome sexual attention. If you feel that someone has harassed you or otherwise treated you inappropriately, please alert Stephanie Hicks.
--   **Take care of each other**. Refrain from advocating for, or encouraging, any of the above behavior. And, if someone asks you to stop, then stop. Alert Stephanie Hicks if you notice a dangerous situation, someone in distress, or violations of this code of conduct, even if they seem inconsequential.
+-   **Refrain from demeaning, discriminatory, or harassing behavior and speech**. Harassment includes, but is not limited to: deliberate intimidation; stalking; unwanted photography or recording; sustained or willful disruption of talks or other events; inappropriate physical contact; use of sexual or discriminatory imagery, comments, or jokes; and unwelcome sexual attention. If you feel that someone has harassed you or otherwise treated you inappropriately, please alert Leonardo Collado Torres.
+-   **Take care of each other**. Refrain from advocating for, or encouraging, any of the above behavior. And, if someone asks you to stop, then stop. Alert Leonardo Collado Torres if you notice a dangerous situation, someone in distress, or violations of this code of conduct, even if they seem inconsequential.
 
 ### Need Help?
 
