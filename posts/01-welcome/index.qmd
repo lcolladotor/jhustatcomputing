@@ -18,10 +18,25 @@ categories: [course-admin, module 1, week 1]
 
 Welcome! I am very excited to have you in our one-term (i.e. half a semester) course on Statistical Computing course number (140.776) offered by the [Department of Biostatistics](https://publichealth.jhu.edu/departments/biostatistics) at the [Johns Hopkins Bloomberg School of Public Health](https://publichealth.jhu.edu).
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6N4bifNtBKSSDmIL3qZRh8?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6N4bifNtBKSSDmIL3qZRh8?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m excited to be back this year to teach &quot;140.776 Statistical Computing&quot; at <a href="https://twitter.com/jhubiostat?ref_src=twsrc%5Etfw">@jhubiostat</a> <a href="https://twitter.com/JohnsHopkinsSPH?ref_src=twsrc%5Etfw">@JohnsHopkinsSPH</a> 😊<br><br>This year, I decided to start with some music 🎶. I like part of the lyrics of this song, which talks about overcoming challenges, [...]<a href="https://t.co/H5Uq6QhH4D">https://t.co/H5Uq6QhH4D</a><br><br>1/3 🧵 <a href="https://t.co/pkRjefcokc">pic.twitter.com/pkRjefcokc</a></p>&mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) <a href="https://twitter.com/lcolladotor/status/1828455658481430960?ref_src=twsrc%5Etfw">August 27, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</iframe>
 
+<blockquote class="twitter-tweet">
+
+<p lang="en" dir="ltr">
+
+I'm excited to be back this year to teach "140.776 Statistical Computing" at <a href="https://twitter.com/jhubiostat?ref_src=twsrc%5Etfw">@jhubiostat</a> <a href="https://twitter.com/JohnsHopkinsSPH?ref_src=twsrc%5Etfw">@JohnsHopkinsSPH</a> 😊<br><br>This year, I decided to start with some music 🎶. I like part of the lyrics of this song, which talks about overcoming challenges, \[...\]<a href="https://t.co/H5Uq6QhH4D">https://t.co/H5Uq6QhH4D</a><br><br>1/3 🧵 <a href="https://t.co/pkRjefcokc">pic.twitter.com/pkRjefcokc</a>
+
+</p>
+
+— 🇲🇽 Leonardo Collado-Torres (@lcolladotor) <a href="https://twitter.com/lcolladotor/status/1828455658481430960?ref_src=twsrc%5Etfw">August 27, 2024</a>
+
+</blockquote>
+
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
 This course is designed for ScM and PhD students at Johns Hopkins Bloomberg School of Public Health. I am pretty flexible about permitting outside students, but I want everyone to be aware of the goals and assumptions so no one feels like they are surprised by how the class works.
 
 ::: callout-note
@@ -82,7 +97,7 @@ Some resources that may be useful if you feel you may be missing pieces of this 
 
 ### Getting set up
 
-You must install [R](https://cran.r-project.org) and [RStudio](https://rstudio.com) on your computing environment in order to complete this course.
+You must install [R](https://cran.r-project.org) and [RStudio](https://rstudio.com) (available from [Posit](https://posit.co/)) on your computing environment in order to complete this course.
 
 These are two **different** applications that must be installed separately before they can be used together:
 
