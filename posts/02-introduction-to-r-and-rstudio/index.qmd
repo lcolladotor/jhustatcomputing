@@ -143,9 +143,9 @@ R functionality is divided into a number of *packages*.
 
 When you download a fresh installation of R from CRAN, you get all of the above, which represents a substantial amount of functionality. However, there are many other packages available:
 
--   There are over 10,000 packages on CRAN that have been developed by users and programmers around the world.
+-   There are over 21,163 packages on CRAN that have been developed by users and programmers around the world.
 
--   There are also over 2,000 packages associated with the [Bioconductor project](http://bioconductor.org).
+-   There are also over 2,300 packages associated with the [Bioconductor project](http://bioconductor.org).
 
 -   People often make packages available on GitHub (very common) and their personal websites (not so common nowadays); there is no reliable way to keep track of how many packages are available in this fashion.
 
