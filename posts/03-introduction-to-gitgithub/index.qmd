@@ -189,7 +189,7 @@ For more details on `reprex`, check this video:
 
 </iframe>
 
-[Here's a](https://github.com/tidyverse/tidy-dev-day/issues/25#issuecomment-2233564971):
+[Here's a nice comment](https://github.com/tidyverse/tidy-dev-day/issues/25#issuecomment-2233564971) from [Hadley Wickham](https://twitter.com/hadleywickham) about an issue I made:
 
 > @hadley: A good example of a very detailed issue is [r-lib/pkgdown#2727](https://github.com/r-lib/pkgdown/issues/2727)
 
