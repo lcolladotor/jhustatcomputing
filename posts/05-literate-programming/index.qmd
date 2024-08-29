@@ -593,12 +593,12 @@ Instead, folks have **moved towards using something called knitr**, which offers
 
 ### knitr
 
-One of the alternative that has come up in recent times (it was[first released in 2012](https://en.wikipedia.org/wiki/Knitr); nowadays most people use `rmarkdown` directly) is something called `knitr`.
+One of the alternative that has come up in recent times (it was [first released in 2012](https://en.wikipedia.org/wiki/Knitr); nowadays most people use `rmarkdown` directly) is something called `knitr`.
 
 -   The `knitr` package for R takes a lot of these ideas of literate programming and updates and improves upon them.
 -   `knitr` still uses R as its programming language, but it allows you to mix other programming languages in.
 -   You can also use a variety of documentation languages now, such as LaTeX, markdown and HTML.
--   `knitr` was developed by Yihui Xie while he was a graduate student at Iowa State and it has become a very popular package for writing literate statistical programs.
+-   `knitr` was developed by [Yihui Xie](https://twitter.com/xieyihui) while he was a graduate student at Iowa State and it has become a very popular package for writing literate statistical programs.
 
 Knitr takes a plain text document with embedded code, executes the code and 'knits' the results back into the document.
 
@@ -662,4 +662,4 @@ You can also optionally include notes in the gutter of the article (immediately 
 
 <aside>This content will appear in the gutter of the article.</aside>
 
-You can also include figures in the gutter. Just enclose the code chunk which generates the figure in an aside tag
+You can also include figures in the gutter. Just enclose the code chunk which generates the figure in an aside tag.

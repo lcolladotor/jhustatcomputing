@@ -177,6 +177,19 @@ For more details on `reprex`, check this video:
 
 Note the use of the R session information from `sessioninfo::session_info()` along with `reprex::reprex()`.
 
+Note the use of:
+
+```         
+<details>
+
+Anything you want here, that you want to hide under a little toggle.
+This can be useful to include more information that can be useful, 
+but could interrupt the flow of the narrative that you are trying
+to convey.
+
+</details>
+```
+
 # Post-lecture materials
 
 ### Final Questions
