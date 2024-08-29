@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.5.56</generator>
-<lastBuildDate>Thu, 29 Aug 2024 03:14:47 GMT</lastBuildDate>
+<lastBuildDate>Thu, 29 Aug 2024 03:35:30 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -444,7 +444,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -946,7 +946,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1233,7 +1233,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -1893,7 +1893,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -1978,30 +1978,9 @@ Learning objectives
 <p>The basic idea behind literate programming in order to generate the different kinds of output you might need, <strong>you only need a single source document</strong>—you can weave and tangle to get the rest.</p>
 <p>In order to use a system like this you need a documentational language, that’s human readable, and you need a programming language that’s machine readable (or can be compiled/interpreted into something that’s machine readable).</p>
 </section>
-<section id="sweave" class="level3">
-<h3 class="anchored" data-anchor-id="sweave">Sweave</h3>
-<p>One of the original literate programming systems in R that was designed to do this was called Sweave. Sweave enables users to combine R code with a documentation program called <img src="https://latex.codecogs.com/png.latex?LaTeX">.</p>
-<p><strong>Sweave files ends a <code>.Rnw</code></strong> and have R code weaved through the document:</p>
-<pre><code>&lt;&lt;plot1, height=4, width=5, eval=FALSE&gt;&gt;=
-data(airquality)
-plot(airquality$Ozone ~ airquality$Wind)
-@</code></pre>
-<p>Once you have created your <code>.Rnw</code> file, Sweave will process the file, executing the R chunks and replacing them with output as appropriate before creating the PDF document.</p>
-<p>It was originally developed by Fritz Leisch, who is a core member of R, and the code base is still maintained by R Core. The Sweave system comes with any installation of R.</p>
-<p>There are many limitations to the original Sweave system.</p>
-<ul>
-<li>One of the limitations is that it is <strong>focused primarily on</strong> <img src="https://latex.codecogs.com/png.latex?LaTeX">, which is not a documentation language that many people are familiar with.</li>
-<li>Therefore, it <strong>can be difficult to learn this type of markup language</strong> if you’re not already in a field that uses it regularly.</li>
-<li>Sweave also <strong>lacks a lot of features that people find useful</strong> like caching, and multiple plots per page and mixing programming languages.</li>
-</ul>
-<p>Instead, folks have <strong>moved towards using something called knitr</strong>, which offers everything Sweave does, plus it extends it further.</p>
-<ul>
-<li>With Sweave, additional tools are required for advanced operations, whereas knitr supports more internally. We’ll discuss knitr below.</li>
-</ul>
-</section>
 <section id="rmarkdown" class="level3">
 <h3 class="anchored" data-anchor-id="rmarkdown">rmarkdown</h3>
-<p>Another choice for literate programming is to build documents based on <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> language. A markdown file is a plain text file that is typically given the extension <code>.md.</code>. The <a href="https://CRAN.R-project.org/package=rmarkdown"><code>rmarkdown</code></a> R package takes a R Markdown file (<code>.Rmd</code>) and weaves together R code chunks like this:</p>
+<p>Today’s main choice for literate programming is to build documents based on <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> language. A markdown file is a plain text file that is typically given the extension <code>.md.</code>. The <a href="https://CRAN.R-project.org/package=rmarkdown"><code>rmarkdown</code></a> R package takes a R Markdown file (<code>.Rmd</code>) and weaves together R code chunks like this:</p>
 <pre><code>```{r plot1, height=4, width=5, eval=FALSE, echo=TRUE}
 data(airquality)
 plot(airquality$Ozone ~ airquality$Wind)
@@ -2032,10 +2011,10 @@ Tip
 </div>
 <p>Because this is lecture is built in a <code>.qmd</code> file (which is very similar to a <code>.Rmd</code> file), let’s demonstrate how this work. I am going to change <code>eval=FALSE</code> to <code>eval=TRUE</code>.</p>
 <div class="cell" height="4" width="5">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">data</span>(airquality)</span>
-<span id="cb3-2"><span class="fu" style="color: #4758AB;
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">plot</span>(airquality<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2100,47 +2079,6 @@ Tip
 </figure>
 </div>
 </section>
-<section id="knitr" class="level3">
-<h3 class="anchored" data-anchor-id="knitr">knitr</h3>
-<p>One of the alternative that has come up in recent times is something called <code>knitr</code>.</p>
-<ul>
-<li>The <code>knitr</code> package for R takes a lot of these ideas of literate programming and updates and improves upon them.</li>
-<li><code>knitr</code> still uses R as its programming language, but it allows you to mix other programming languages in.</li>
-<li>You can also use a variety of documentation languages now, such as LaTeX, markdown and HTML.</li>
-<li><code>knitr</code> was developed by Yihui Xie while he was a graduate student at Iowa State and it has become a very popular package for writing literate statistical programs.</li>
-</ul>
-<p>Knitr takes a plain text document with embedded code, executes the code and ‘knits’ the results back into the document.</p>
-<p>For for example, it converts</p>
-<ul>
-<li>An R Markdown (<code>.Rmd)</code> file into a standard markdown file (<code>.md</code>)</li>
-<li>An <code>.Rnw</code> (Sweave) file into to <code>.tex</code> format.</li>
-<li>An <code>.Rhtml</code> file into to <code>.html</code>.</li>
-</ul>
-<p>The core function is <code>knitr::knit()</code> and by default this will look at the input document and try and guess what type it is e.g.&nbsp;<code>Rnw</code>, <code>Rmd</code> etc.</p>
-<p>This core function performs three roles:</p>
-<ul>
-<li>A <strong>source parser</strong>, which looks at the input document and detects which parts are code that the user wants to be evaluated.</li>
-<li>A <strong>code evaluator</strong>, which evaluates this code</li>
-<li>An <strong>output renderer</strong>, which writes the results of evaluation back to the document in a format which is interpretable by the raw output type. For instance, if the input file is an <code>.Rmd</code>, the output render marks up the output of code evaluation in <code>.md</code> format.</li>
-</ul>
-<div class="cell" data-layout-align="center" data-preview="true">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://d33wubrfki0l68.cloudfront.net/61d189fd9cdf955058415d3e1b28dd60e1bd7c9b/9791d/images/rmarkdownflow.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption>Converting a Rmd file to many outputs using knitr and pandoc</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>[<a href="https://rmarkdown.rstudio.com/authoring_quick_tour.html">Source</a>]</p>
-<p>As seen in the figure above, from there pandoc is used to convert e.g.&nbsp;a <code>.md</code> file into many other types of file formats into a <code>.html</code>, etc.</p>
-<p>So in summary:</p>
-<blockquote class="blockquote">
-<p>“R Markdown stands on the shoulders of knitr and Pandoc. The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown. The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on).”</p>
-</blockquote>
-<p>[<a href="https://bookdown.org/yihui/rmarkdown/">Source</a>]</p>
-</section>
 </section>
 <section id="create-and-knit-your-first-r-markdown-document" class="level1">
 <h1>Create and Knit Your First R Markdown Document</h1>
@@ -2166,7 +2104,7 @@ Tip
 </div>
 </div>
 </section>
-<section id="websites-and-books-in-r-markdown" class="level1 page-columns page-full">
+<section id="websites-and-books-in-r-markdown" class="level1">
 <h1>Websites and Books in R Markdown</h1>
 <p>Now that you are on the road to using R Markdown documents, it is important to know about other wonderful things you do with these documents. For example, let’s say you have multiple <code>.Rmd</code> documents that you want to put together into a website, blog, book, etc.</p>
 <p>There are primarily two ways to build multiple <code>.Rmd</code> documents together:</p>
@@ -2206,7 +2144,7 @@ Tip
 <div class="callout-body-container callout-body">
 <p>For example, my personal website was built in blogdown:</p>
 <ul>
-<li><a href="http://lcolladotor.github.io/" class="uri">http://lcolladotor.github.io/</a></li>
+<li><a href="http://lcolladotor.github.io/" class="uri">http://lcolladotor.github.io/</a> with source code at <a href="https://github.com/lcolladotor/lcolladotorsource" class="uri">https://github.com/lcolladotor/lcolladotorsource</a></li>
 </ul>
 <p>Other really great examples can be found here:</p>
 <ul>
@@ -2267,34 +2205,23 @@ Tip
 <li><a href="https://bookdown.org/yihui/rmarkdown/basics-examples.html#examples-books" class="uri">https://bookdown.org/yihui/rmarkdown/basics-examples.html#examples-books</a></li>
 </ul>
 </section>
-<section id="distill" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="distill">distill</h3>
-<p>There is another great way to build blogs or websites using the <a href="https://rstudio.github.io/distill/">distill for R Markdown</a>.</p>
+<section id="quarto" class="level3">
+<h3 class="anchored" data-anchor-id="quarto">quarto</h3>
+<p>quarto is newer and is described in further detail at <a href="https://quarto.org/" class="uri">https://quarto.org/</a>. It’s what was was used for making this course website. As an alternative to using <code>postcards</code> for <a href="../../projects/project-0/">Project 0</a>, you could use <code>quarto</code> instead following the instructions from <a href="https://quarto.org/docs/websites/website-blog.html" class="uri">https://quarto.org/docs/websites/website-blog.html</a>. As examples check:</p>
 <ul>
-<li><a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a></li>
+<li><p><a href="https://github.com/lahuuki/lahuuki.github.io" class="uri">https://github.com/lahuuki/lahuuki.github.io</a> and <a href="https://lahuuki.github.io/" class="uri">https://lahuuki.github.io/</a></p></li>
+<li><p><a href="https://github.com/daianna21/daianna_blog" class="uri">https://github.com/daianna21/daianna_blog</a> and <a href="https://daianna21.github.io/daianna_blog/" class="uri">https://daianna21.github.io/daianna_blog/</a></p></li>
 </ul>
-<p>Distill for R Markdown combines the technical authoring features of the <a href="https://github.com/distillpub/template">Distill web framework</a> (optimized for scientific and technical communication) with <a href="https://rmarkdown.rstudio.com">R Markdown</a>, enabling a fully reproducible workflow based on literate programming <span class="citation" data-cites="knuth1984">(Knuth 1984)</span>.</p>
-<p>Distill articles include:</p>
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+</p><p>I’m super excited to share with you my personal blog. Here I’ll be posting about the math and statistics behind frequently used bioinformatic tools to analyze omics data, hopefully contributing to increasing our understanding around them. <br><br>Go check 👉🏼 <a href="https://t.co/W5PsRBCCYu">https://t.co/W5PsRBCCYu</a> <a href="https://t.co/sRgcKFxsZy">pic.twitter.com/sRgcKFxsZy</a></p>
+<p></p>
+<p>— Daianna (<span class="citation" data-cites="daianna_glez">(<strong>daianna_glez?</strong>)</span>) <a href="https://twitter.com/daianna_glez/status/1815089908371042588?ref_src=twsrc%5Etfw">July 21, 2024</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <ul>
-<li>Reader-friendly typography that adapts well to mobile devices.</li>
-<li>Features essential to technical writing like <img src="https://latex.codecogs.com/png.latex?LaTeX"> math, citations, and footnotes.</li>
-<li>Flexible figure layout options (e.g.&nbsp;displaying figures at a larger width than the article text).</li>
-<li>Attractively rendered tables with optional support for pagination.</li>
-<li>Support for a wide variety of diagramming tools for illustrating concepts. The ability to incorporate JavaScript and D3-based interactive visualizations.</li>
-<li>A variety of ways to publish articles, including support for publishing sets of articles as a Distill website or as a Distill blog.</li>
+<li><a href="https://github.com/Bioconductor/biocblog" class="uri">https://github.com/Bioconductor/biocblog</a> and <a href="https://blog.bioconductor.org/" class="uri">https://blog.bioconductor.org/</a></li>
 </ul>
-<p>The course website from 2021 was built in Distill for R Markdown:</p>
-<ul>
-<li>Website: <a href="https://stephaniehicks.com/jhustatcomputing2021" class="uri">https://stephaniehicks.com/jhustatcomputing2021</a></li>
-<li>Github: <a href="https://github.com/stephaniehicks/jhustatcomputing2021" class="uri">https://github.com/stephaniehicks/jhustatcomputing2021</a></li>
-</ul>
-<p>Some other cool things about distill is the use of footnotes and asides.</p>
-<p>For example <sup>1</sup>. The number of the footnote will be automatically generated.</p>
-<p>You can also optionally include notes in the gutter of the article (immediately to the right of the article text). To do this use the aside tag.</p>
-<aside>
-This content will appear in the gutter of the article.
-</aside>
-<p>You can also include figures in the gutter. Just enclose the code chunk which generates the figure in an aside tag</p>
 </section>
 </section>
 <section id="tips-and-tricks-in-r-markdown-in-rstudio" class="level1">
@@ -2336,7 +2263,7 @@ Ctrl + Shift + K on Windows</code></pre>
 <li><code>lib</code> to call <code>library()</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(package)</span></code></pre></div>
 </div>
@@ -2344,7 +2271,7 @@ font-style: inherit;">library</span>(package)</span></code></pre></div>
 <li><code>mat</code> to create a matrix</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">matrix</span>(data, <span class="at" style="color: #657422;
 background-color: null;
@@ -2356,67 +2283,67 @@ font-style: inherit;">ncol =</span> cols)</span></code></pre></div>
 <li><code>if</code>, <code>el</code>, and <code>ei</code> to create conditional expressions such as <code>if() {}</code>, <code>else {}</code> and <code>else if () {}</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="cf" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">if</span> (condition) {</span>
-<span id="cb10-2">    <span class="do" style="color: #5E5E5E;
+<span id="cb9-2">    <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Case 1</span></span>
-<span id="cb10-3">} <span class="cf" style="color: #003B4F;
+<span id="cb9-3">} <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">if</span> (condition) {</span>
-<span id="cb10-4">    <span class="do" style="color: #5E5E5E;
+<span id="cb9-4">    <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Case 2</span></span>
-<span id="cb10-5">} <span class="cf" style="color: #003B4F;
+<span id="cb9-5">} <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">if</span> (condition) {</span>
-<span id="cb10-6">    <span class="do" style="color: #5E5E5E;
+<span id="cb9-6">    <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Case 3</span></span>
-<span id="cb10-7">}</span></code></pre></div>
+<span id="cb9-7">}</span></code></pre></div>
 </div>
 <ul>
 <li><code>fun</code> to create a function</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">name <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">name <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span>(variables) {</span>
-<span id="cb11-2"></span>
-<span id="cb11-3">}</span></code></pre></div>
+<span id="cb10-2"></span>
+<span id="cb10-3">}</span></code></pre></div>
 </div>
 <ul>
 <li><code>for</code> to create for loops</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="cf" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">for</span> (variable <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">in</span> vector) {</span>
-<span id="cb12-2"></span>
-<span id="cb12-3">}</span></code></pre></div>
+<span id="cb11-2"></span>
+<span id="cb11-3">}</span></code></pre></div>
 </div>
 <ul>
 <li><code>ts</code> to insert a comment with the current date and time (useful if you have very long code and share it with others so they see when it has been edited)</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="co" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Tue Jan 21 20:20:14 2020 ------------------------------</span></span></code></pre></div>
 </div>
@@ -2486,19 +2413,19 @@ for (i in 1:10) {
 }</code></pre>
 <p>I also like to use the <a href="https://github.com/r-lib/styler"><code>styler</code>: Non-invasive pretty printing of R code</a> package to automatically style my R code. I also use <a href="https://lcolladotor.github.io/biocthis/reference/bioc_style.html" class="uri">https://lcolladotor.github.io/biocthis/reference/bioc_style.html</a> to style my code in a way that it is compatible with Bioconductor’s code standards.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><span class="do" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Install styler for automatically styling scripts</span></span>
-<span id="cb22-2"><span class="fu" style="color: #4758AB;
+<span id="cb21-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"styler"</span>)</span>
-<span id="cb22-3"></span>
-<span id="cb22-4"><span class="do" style="color: #5E5E5E;
+<span id="cb21-3"></span>
+<span id="cb21-4"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Install biocthis</span></span>
-<span id="cb22-5"><span class="cf" style="color: #003B4F;
+<span id="cb21-5"><span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">if</span> (<span class="sc" style="color: #5E5E5E;
@@ -2512,14 +2439,14 @@ background-color: null;
 font-style: inherit;">quietly =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span>)) {</span>
-<span id="cb22-6">    <span class="fu" style="color: #4758AB;
+<span id="cb21-6">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"BiocManager"</span>)</span>
-<span id="cb22-7">}</span>
-<span id="cb22-8"></span>
-<span id="cb22-9">BiocManager<span class="sc" style="color: #5E5E5E;
+<span id="cb21-7">}</span>
+<span id="cb21-8"></span>
+<span id="cb21-9">BiocManager<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2528,10 +2455,10 @@ background-color: null;
 font-style: inherit;">"biocthis"</span>)</span></code></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><span class="do" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Example code for styling all files that end with .qmd</span></span>
-<span id="cb23-2"><span class="fu" style="color: #4758AB;
+<span id="cb22-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">cat</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2550,16 +2477,16 @@ font-style: inherit;">"auto_style.R"</span>)))</span></code></pre></div>
 </div>
 <p>You might want to edit your <code>~/.Rprofile with `usethis::edit_r_profile()`</code> and add this line to it:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><span class="do" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## For the styler addin</span></span>
-<span id="cb25-2"><span class="co" style="color: #5E5E5E;
+<span id="cb24-2"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Affects the output of: styler:::get_addins_style_transformer_name()</span></span>
-<span id="cb25-3"><span class="co" style="color: #5E5E5E;
+<span id="cb24-3"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183</span></span>
-<span id="cb25-4"><span class="fu" style="color: #4758AB;
+<span id="cb24-4"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">options</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -2612,9 +2539,11 @@ Tip
 <h3 class="anchored" data-anchor-id="questions-1">Questions</h3>
 <ol type="1">
 <li><p>What is literate programming?</p></li>
-<li><p>What was the first literate statistical programming tool to weave together a statistical language (R) with a markup language (LaTeX)?</p></li>
-<li><p>What is <code>knitr</code> and how is different than other literate statistical programming tools?</p></li>
 <li><p>Where can you find a list of other commands that help make your code writing more efficient in RStudio?</p></li>
+<li><p>What type of output files can you make with <code>rmarkdown</code>?</p></li>
+<li><p>If you make a website with R (<code>html</code> files), where would you host them for free?</p></li>
+<li><p>What was the first literate statistical programming tool to weave together a statistical language (R) with a markup language (LaTeX)? (see former class material)</p></li>
+<li><p>What is <code>knitr</code> and how is different than other literate statistical programming tools? (see former class material)</p></li>
 </ol>
 </section>
 <section id="additional-resources" class="level3">
@@ -2641,14 +2570,14 @@ Tip
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">options</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">120</span>)</span>
-<span id="cb26-2">sessioninfo<span class="sc" style="color: #5E5E5E;
+<span id="cb25-2">sessioninfo<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2656,45 +2585,140 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.5
+ version  R version 4.4.1 (2024-06-14)
+ os       macOS Sonoma 14.5
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-09-12
- pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2024-08-28
+ pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout      1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
- digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- evaluate      0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- here          1.0.1   2020-12-13 [1] CRAN (R 4.3.0)
- htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr         1.43    2023-05-25 [1] CRAN (R 4.3.0)
- rlang         1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown     2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rprojroot     2.0.3   2022-04-02 [1] CRAN (R 4.3.0)
- rstudioapi    0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- xfun          0.40    2023-08-09 [1] CRAN (R 4.3.0)
- yaml          2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ cli           3.6.3   2024-06-21 [1] CRAN (R 4.4.0)
+ colorout    * 1.3-0.2 2024-05-03 [1] Github (jalvesaq/colorout@c6113a2)
+ digest        0.6.36  2024-06-23 [1] CRAN (R 4.4.0)
+ evaluate      0.24.0  2024-06-10 [1] CRAN (R 4.4.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.4.0)
+ here          1.0.1   2020-12-13 [1] CRAN (R 4.4.0)
+ htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.4.0)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.4.0)
+ jsonlite      1.8.8   2023-12-04 [1] CRAN (R 4.4.0)
+ knitr         1.48    2024-07-07 [1] CRAN (R 4.4.0)
+ rlang         1.1.4   2024-06-04 [1] CRAN (R 4.4.0)
+ rmarkdown     2.27    2024-05-17 [1] CRAN (R 4.4.0)
+ rprojroot     2.0.4   2023-11-05 [1] CRAN (R 4.4.0)
+ rstudioapi    0.16.0  2024-03-24 [1] CRAN (R 4.4.0)
+ sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.4.0)
+ xfun          0.46    2024-07-18 [1] CRAN (R 4.4.0)
+ yaml          2.3.10  2024-07-26 [1] CRAN (R 4.4.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
 </div>
+</section>
+<section id="former-class-material" class="level1 page-columns page-full">
+<h1>Former class material</h1>
+<p>This section contains older class material, that can be useful if you want to learn more about other valid R alternatives to the material we covered in class.</p>
+<section id="sweave" class="level3">
+<h3 class="anchored" data-anchor-id="sweave">Sweave</h3>
+<p>One of the original literate programming systems in R that was designed to do this was called Sweave. Sweave enables users to combine R code with a documentation program called <img src="https://latex.codecogs.com/png.latex?LaTeX">.</p>
+<p><strong>Sweave files ends a <code>.Rnw</code></strong> and have R code weaved through the document:</p>
+<pre><code>&lt;&lt;plot1, height=4, width=5, eval=FALSE&gt;&gt;=
+data(airquality)
+plot(airquality$Ozone ~ airquality$Wind)
+@</code></pre>
+<p>Once you have created your <code>.Rnw</code> file, Sweave will process the file, executing the R chunks and replacing them with output as appropriate before creating the PDF document.</p>
+<p>It was originally developed by Fritz Leisch, who is a core member of R, and the code base is still maintained by R Core. The Sweave system comes with any installation of R.</p>
+<p>There are many limitations to the original Sweave system.</p>
+<ul>
+<li>One of the limitations is that it is <strong>focused primarily on</strong> <img src="https://latex.codecogs.com/png.latex?LaTeX">, which is not a documentation language that many people are familiar with.</li>
+<li>Therefore, it <strong>can be difficult to learn this type of markup language</strong> if you’re not already in a field that uses it regularly.</li>
+<li>Sweave also <strong>lacks a lot of features that people find useful</strong> like caching, and multiple plots per page and mixing programming languages.</li>
+</ul>
+<p>Instead, folks have <strong>moved towards using something called knitr</strong>, which offers everything Sweave does, plus it extends it further.</p>
+<ul>
+<li>With Sweave, additional tools are required for advanced operations, whereas knitr supports more internally. We’ll discuss knitr below.</li>
+</ul>
+</section>
+<section id="knitr" class="level3">
+<h3 class="anchored" data-anchor-id="knitr">knitr</h3>
+<p>One of the alternative that has come up in recent times (it was<a href="https://en.wikipedia.org/wiki/Knitr">first released in 2012</a>; nowadays most people use <code>rmarkdown</code> directly) is something called <code>knitr</code>.</p>
+<ul>
+<li>The <code>knitr</code> package for R takes a lot of these ideas of literate programming and updates and improves upon them.</li>
+<li><code>knitr</code> still uses R as its programming language, but it allows you to mix other programming languages in.</li>
+<li>You can also use a variety of documentation languages now, such as LaTeX, markdown and HTML.</li>
+<li><code>knitr</code> was developed by Yihui Xie while he was a graduate student at Iowa State and it has become a very popular package for writing literate statistical programs.</li>
+</ul>
+<p>Knitr takes a plain text document with embedded code, executes the code and ‘knits’ the results back into the document.</p>
+<p>For for example, it converts</p>
+<ul>
+<li>An R Markdown (<code>.Rmd)</code> file into a standard markdown file (<code>.md</code>)</li>
+<li>An <code>.Rnw</code> (Sweave) file into to <code>.tex</code> format.</li>
+<li>An <code>.Rhtml</code> file into to <code>.html</code>.</li>
+</ul>
+<p>The core function is <code>knitr::knit()</code> and by default this will look at the input document and try and guess what type it is e.g.&nbsp;<code>Rnw</code>, <code>Rmd</code> etc.</p>
+<p>This core function performs three roles:</p>
+<ul>
+<li>A <strong>source parser</strong>, which looks at the input document and detects which parts are code that the user wants to be evaluated.</li>
+<li>A <strong>code evaluator</strong>, which evaluates this code</li>
+<li>An <strong>output renderer</strong>, which writes the results of evaluation back to the document in a format which is interpretable by the raw output type. For instance, if the input file is an <code>.Rmd</code>, the output render marks up the output of code evaluation in <code>.md</code> format.</li>
+</ul>
+<div class="cell" data-layout-align="center" data-preview="true">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://d33wubrfki0l68.cloudfront.net/61d189fd9cdf955058415d3e1b28dd60e1bd7c9b/9791d/images/rmarkdownflow.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption>Converting a Rmd file to many outputs using knitr and pandoc</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>[<a href="https://rmarkdown.rstudio.com/authoring_quick_tour.html">Source</a>]</p>
+<p>As seen in the figure above, from there pandoc is used to convert e.g.&nbsp;a <code>.md</code> file into many other types of file formats into a <code>.html</code>, etc.</p>
+<p>So in summary:</p>
+<blockquote class="blockquote">
+<p>“R Markdown stands on the shoulders of knitr and Pandoc. The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown. The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on).”</p>
+</blockquote>
+<p>[<a href="https://bookdown.org/yihui/rmarkdown/">Source</a>]</p>
+</section>
+<section id="distill" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="distill">distill</h3>
+<p>There is another great way to build blogs or websites using the <a href="https://rstudio.github.io/distill/">distill for R Markdown</a>.</p>
+<ul>
+<li><a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a></li>
+</ul>
+<p>Distill for R Markdown combines the technical authoring features of the <a href="https://github.com/distillpub/template">Distill web framework</a> (optimized for scientific and technical communication) with <a href="https://rmarkdown.rstudio.com">R Markdown</a>, enabling a fully reproducible workflow based on literate programming <span class="citation" data-cites="knuth1984">(Knuth 1984)</span>.</p>
+<p>Distill articles include:</p>
+<ul>
+<li>Reader-friendly typography that adapts well to mobile devices.</li>
+<li>Features essential to technical writing like <img src="https://latex.codecogs.com/png.latex?LaTeX"> math, citations, and footnotes.</li>
+<li>Flexible figure layout options (e.g.&nbsp;displaying figures at a larger width than the article text).</li>
+<li>Attractively rendered tables with optional support for pagination.</li>
+<li>Support for a wide variety of diagramming tools for illustrating concepts. The ability to incorporate JavaScript and D3-based interactive visualizations.</li>
+<li>A variety of ways to publish articles, including support for publishing sets of articles as a Distill website or as a Distill blog.</li>
+</ul>
+<p>The course website from 2021 was built in Distill for R Markdown:</p>
+<ul>
+<li>Website: <a href="https://stephaniehicks.com/jhustatcomputing2021" class="uri">https://stephaniehicks.com/jhustatcomputing2021</a></li>
+<li>Github: <a href="https://github.com/stephaniehicks/jhustatcomputing2021" class="uri">https://github.com/stephaniehicks/jhustatcomputing2021</a></li>
+</ul>
+<p>Some other cool things about distill is the use of footnotes and asides.</p>
+<p>For example <sup>1</sup>. The number of the footnote will be automatically generated.</p>
+<p>You can also optionally include notes in the gutter of the article (immediately to the right of the article text). To do this use the aside tag.</p>
+<aside>
+This content will appear in the gutter of the article.
+</aside>
+<p>You can also include figures in the gutter. Just enclose the code chunk which generates the figure in an aside tag</p>
 
 
 
+</section>
 </section>
 
 
@@ -2713,7 +2737,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3187,7 +3211,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4578,7 +4602,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6398,7 +6422,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7359,7 +7383,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8208,7 +8232,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -8721,7 +8745,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10084,7 +10108,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -14247,7 +14271,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -16002,7 +16026,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -17288,7 +17312,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -18621,7 +18645,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -21659,7 +21683,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -23667,7 +23691,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -24621,7 +24645,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -26365,7 +26389,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Thu, 29 Aug 2024 03:14:47 GMT</pubDate>
+  <pubDate>Thu, 29 Aug 2024 03:35:30 GMT</pubDate>
 </item>
 </channel>
 </rss>

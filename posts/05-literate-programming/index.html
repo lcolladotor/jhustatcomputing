@@ -298,16 +298,14 @@ window.Quarto = {
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
   <ul class="collapse">
   <li><a href="#weaving-and-tangling" id="toc-weaving-and-tangling" class="nav-link" data-scroll-target="#weaving-and-tangling">Weaving and Tangling</a></li>
-  <li><a href="#sweave" id="toc-sweave" class="nav-link" data-scroll-target="#sweave">Sweave</a></li>
   <li><a href="#rmarkdown" id="toc-rmarkdown" class="nav-link" data-scroll-target="#rmarkdown">rmarkdown</a></li>
-  <li><a href="#knitr" id="toc-knitr" class="nav-link" data-scroll-target="#knitr">knitr</a></li>
   </ul></li>
   <li><a href="#create-and-knit-your-first-r-markdown-document" id="toc-create-and-knit-your-first-r-markdown-document" class="nav-link" data-scroll-target="#create-and-knit-your-first-r-markdown-document">Create and Knit Your First R Markdown Document</a></li>
   <li><a href="#websites-and-books-in-r-markdown" id="toc-websites-and-books-in-r-markdown" class="nav-link" data-scroll-target="#websites-and-books-in-r-markdown">Websites and Books in R Markdown</a>
   <ul class="collapse">
   <li><a href="#blogdown" id="toc-blogdown" class="nav-link" data-scroll-target="#blogdown">blogdown</a></li>
   <li><a href="#bookdown" id="toc-bookdown" class="nav-link" data-scroll-target="#bookdown">bookdown</a></li>
-  <li><a href="#distill" id="toc-distill" class="nav-link" data-scroll-target="#distill">distill</a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">quarto</a></li>
   </ul></li>
   <li><a href="#tips-and-tricks-in-r-markdown-in-rstudio" id="toc-tips-and-tricks-in-r-markdown-in-rstudio" class="nav-link" data-scroll-target="#tips-and-tricks-in-r-markdown-in-rstudio">Tips and tricks in R Markdown in RStudio</a>
   <ul class="collapse">
@@ -328,6 +326,12 @@ window.Quarto = {
   <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
   </ul></li>
   <li><a href="#r-session-information" id="toc-r-session-information" class="nav-link" data-scroll-target="#r-session-information">R session information</a></li>
+  <li><a href="#former-class-material" id="toc-former-class-material" class="nav-link" data-scroll-target="#former-class-material">Former class material</a>
+  <ul class="collapse">
+  <li><a href="#sweave" id="toc-sweave" class="nav-link" data-scroll-target="#sweave">Sweave</a></li>
+  <li><a href="#knitr" id="toc-knitr" class="nav-link" data-scroll-target="#knitr">knitr</a></li>
+  <li><a href="#distill" id="toc-distill" class="nav-link" data-scroll-target="#distill">distill</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -415,30 +419,9 @@ Learning objectives
 <p>The basic idea behind literate programming in order to generate the different kinds of output you might need, <strong>you only need a single source document</strong>—you can weave and tangle to get the rest.</p>
 <p>In order to use a system like this you need a documentational language, that’s human readable, and you need a programming language that’s machine readable (or can be compiled/interpreted into something that’s machine readable).</p>
 </section>
-<section id="sweave" class="level3">
-<h3 class="anchored" data-anchor-id="sweave">Sweave</h3>
-<p>One of the original literate programming systems in R that was designed to do this was called Sweave. Sweave enables users to combine R code with a documentation program called <span class="math inline">\(LaTeX\)</span>.</p>
-<p><strong>Sweave files ends a <code>.Rnw</code></strong> and have R code weaved through the document:</p>
-<pre><code>&lt;&lt;plot1, height=4, width=5, eval=FALSE&gt;&gt;=
-data(airquality)
-plot(airquality$Ozone ~ airquality$Wind)
-@</code></pre>
-<p>Once you have created your <code>.Rnw</code> file, Sweave will process the file, executing the R chunks and replacing them with output as appropriate before creating the PDF document.</p>
-<p>It was originally developed by Fritz Leisch, who is a core member of R, and the code base is still maintained by R Core. The Sweave system comes with any installation of R.</p>
-<p>There are many limitations to the original Sweave system.</p>
-<ul>
-<li>One of the limitations is that it is <strong>focused primarily on</strong> <span class="math inline">\(LaTeX\)</span>, which is not a documentation language that many people are familiar with.</li>
-<li>Therefore, it <strong>can be difficult to learn this type of markup language</strong> if you’re not already in a field that uses it regularly.</li>
-<li>Sweave also <strong>lacks a lot of features that people find useful</strong> like caching, and multiple plots per page and mixing programming languages.</li>
-</ul>
-<p>Instead, folks have <strong>moved towards using something called knitr</strong>, which offers everything Sweave does, plus it extends it further.</p>
-<ul>
-<li>With Sweave, additional tools are required for advanced operations, whereas knitr supports more internally. We’ll discuss knitr below.</li>
-</ul>
-</section>
 <section id="rmarkdown" class="level3">
 <h3 class="anchored" data-anchor-id="rmarkdown">rmarkdown</h3>
-<p>Another choice for literate programming is to build documents based on <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> language. A markdown file is a plain text file that is typically given the extension <code>.md.</code>. The <a href="https://CRAN.R-project.org/package=rmarkdown"><code>rmarkdown</code></a> R package takes a R Markdown file (<code>.Rmd</code>) and weaves together R code chunks like this:</p>
+<p>Today’s main choice for literate programming is to build documents based on <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> language. A markdown file is a plain text file that is typically given the extension <code>.md.</code>. The <a href="https://CRAN.R-project.org/package=rmarkdown"><code>rmarkdown</code></a> R package takes a R Markdown file (<code>.Rmd</code>) and weaves together R code chunks like this:</p>
 <pre><code>```{r plot1, height=4, width=5, eval=FALSE, echo=TRUE}
 data(airquality)
 plot(airquality$Ozone ~ airquality$Wind)
@@ -469,8 +452,8 @@ Tip
 </div>
 <p>Because this is lecture is built in a <code>.qmd</code> file (which is very similar to a <code>.Rmd</code> file), let’s demonstrate how this work. I am going to change <code>eval=FALSE</code> to <code>eval=TRUE</code>.</p>
 <div class="cell" height="4" width="5">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airquality)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(airquality<span class="sc">$</span>Ozone <span class="sc">~</span> airquality<span class="sc">$</span>Wind)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airquality)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(airquality<span class="sc">$</span>Ozone <span class="sc">~</span> airquality<span class="sc">$</span>Wind)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -527,47 +510,6 @@ Tip
 </figure>
 </div>
 </section>
-<section id="knitr" class="level3">
-<h3 class="anchored" data-anchor-id="knitr">knitr</h3>
-<p>One of the alternative that has come up in recent times is something called <code>knitr</code>.</p>
-<ul>
-<li>The <code>knitr</code> package for R takes a lot of these ideas of literate programming and updates and improves upon them.</li>
-<li><code>knitr</code> still uses R as its programming language, but it allows you to mix other programming languages in.</li>
-<li>You can also use a variety of documentation languages now, such as LaTeX, markdown and HTML.</li>
-<li><code>knitr</code> was developed by Yihui Xie while he was a graduate student at Iowa State and it has become a very popular package for writing literate statistical programs.</li>
-</ul>
-<p>Knitr takes a plain text document with embedded code, executes the code and ‘knits’ the results back into the document.</p>
-<p>For for example, it converts</p>
-<ul>
-<li>An R Markdown (<code>.Rmd)</code> file into a standard markdown file (<code>.md</code>)</li>
-<li>An <code>.Rnw</code> (Sweave) file into to <code>.tex</code> format.</li>
-<li>An <code>.Rhtml</code> file into to <code>.html</code>.</li>
-</ul>
-<p>The core function is <code>knitr::knit()</code> and by default this will look at the input document and try and guess what type it is e.g.&nbsp;<code>Rnw</code>, <code>Rmd</code> etc.</p>
-<p>This core function performs three roles:</p>
-<ul>
-<li>A <strong>source parser</strong>, which looks at the input document and detects which parts are code that the user wants to be evaluated.</li>
-<li>A <strong>code evaluator</strong>, which evaluates this code</li>
-<li>An <strong>output renderer</strong>, which writes the results of evaluation back to the document in a format which is interpretable by the raw output type. For instance, if the input file is an <code>.Rmd</code>, the output render marks up the output of code evaluation in <code>.md</code> format.</li>
-</ul>
-<div class="cell" data-layout-align="center" data-preview="true">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://d33wubrfki0l68.cloudfront.net/61d189fd9cdf955058415d3e1b28dd60e1bd7c9b/9791d/images/rmarkdownflow.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption>Converting a Rmd file to many outputs using knitr and pandoc</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>[<a href="https://rmarkdown.rstudio.com/authoring_quick_tour.html">Source</a>]</p>
-<p>As seen in the figure above, from there pandoc is used to convert e.g.&nbsp;a <code>.md</code> file into many other types of file formats into a <code>.html</code>, etc.</p>
-<p>So in summary:</p>
-<blockquote class="blockquote">
-<p>“R Markdown stands on the shoulders of knitr and Pandoc. The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown. The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on).”</p>
-</blockquote>
-<p>[<a href="https://bookdown.org/yihui/rmarkdown/">Source</a>]</p>
-</section>
 </section>
 <section id="create-and-knit-your-first-r-markdown-document" class="level1">
 <h1>Create and Knit Your First R Markdown Document</h1>
@@ -593,7 +535,7 @@ Tip
 </div>
 </div>
 </section>
-<section id="websites-and-books-in-r-markdown" class="level1 page-columns page-full">
+<section id="websites-and-books-in-r-markdown" class="level1">
 <h1>Websites and Books in R Markdown</h1>
 <p>Now that you are on the road to using R Markdown documents, it is important to know about other wonderful things you do with these documents. For example, let’s say you have multiple <code>.Rmd</code> documents that you want to put together into a website, blog, book, etc.</p>
 <p>There are primarily two ways to build multiple <code>.Rmd</code> documents together:</p>
@@ -633,7 +575,7 @@ Tip
 <div class="callout-body-container callout-body">
 <p>For example, my personal website was built in blogdown:</p>
 <ul>
-<li><a href="http://lcolladotor.github.io/" class="uri">http://lcolladotor.github.io/</a></li>
+<li><a href="http://lcolladotor.github.io/" class="uri">http://lcolladotor.github.io/</a> with source code at <a href="https://github.com/lcolladotor/lcolladotorsource" class="uri">https://github.com/lcolladotor/lcolladotorsource</a></li>
 </ul>
 <p>Other really great examples can be found here:</p>
 <ul>
@@ -694,34 +636,23 @@ Tip
 <li><a href="https://bookdown.org/yihui/rmarkdown/basics-examples.html#examples-books" class="uri">https://bookdown.org/yihui/rmarkdown/basics-examples.html#examples-books</a></li>
 </ul>
 </section>
-<section id="distill" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="distill">distill</h3>
-<p>There is another great way to build blogs or websites using the <a href="https://rstudio.github.io/distill/">distill for R Markdown</a>.</p>
+<section id="quarto" class="level3">
+<h3 class="anchored" data-anchor-id="quarto">quarto</h3>
+<p>quarto is newer and is described in further detail at <a href="https://quarto.org/" class="uri">https://quarto.org/</a>. It’s what was was used for making this course website. As an alternative to using <code>postcards</code> for <a href="../../projects/project-0/">Project 0</a>, you could use <code>quarto</code> instead following the instructions from <a href="https://quarto.org/docs/websites/website-blog.html" class="uri">https://quarto.org/docs/websites/website-blog.html</a>. As examples check:</p>
 <ul>
-<li><a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a></li>
+<li><p><a href="https://github.com/lahuuki/lahuuki.github.io" class="uri">https://github.com/lahuuki/lahuuki.github.io</a> and <a href="https://lahuuki.github.io/" class="uri">https://lahuuki.github.io/</a></p></li>
+<li><p><a href="https://github.com/daianna21/daianna_blog" class="uri">https://github.com/daianna21/daianna_blog</a> and <a href="https://daianna21.github.io/daianna_blog/" class="uri">https://daianna21.github.io/daianna_blog/</a></p></li>
 </ul>
-<p>Distill for R Markdown combines the technical authoring features of the <a href="https://github.com/distillpub/template">Distill web framework</a> (optimized for scientific and technical communication) with <a href="https://rmarkdown.rstudio.com">R Markdown</a>, enabling a fully reproducible workflow based on literate programming <span class="citation" data-cites="knuth1984">(<a href="#ref-knuth1984" role="doc-biblioref">Knuth 1984</a>)</span>.</p>
-<p>Distill articles include:</p>
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+</p><p>I’m super excited to share with you my personal blog. Here I’ll be posting about the math and statistics behind frequently used bioinformatic tools to analyze omics data, hopefully contributing to increasing our understanding around them. <br><br>Go check 👉🏼 <a href="https://t.co/W5PsRBCCYu">https://t.co/W5PsRBCCYu</a> <a href="https://t.co/sRgcKFxsZy">pic.twitter.com/sRgcKFxsZy</a></p>
+<p></p>
+<p>— Daianna (<span class="citation" data-cites="daianna_glez">(<a href="#ref-daianna_glez" role="doc-biblioref"><strong>daianna_glez?</strong></a>)</span>) <a href="https://twitter.com/daianna_glez/status/1815089908371042588?ref_src=twsrc%5Etfw">July 21, 2024</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <ul>
-<li>Reader-friendly typography that adapts well to mobile devices.</li>
-<li>Features essential to technical writing like <span class="math inline">\(LaTeX\)</span> math, citations, and footnotes.</li>
-<li>Flexible figure layout options (e.g.&nbsp;displaying figures at a larger width than the article text).</li>
-<li>Attractively rendered tables with optional support for pagination.</li>
-<li>Support for a wide variety of diagramming tools for illustrating concepts. The ability to incorporate JavaScript and D3-based interactive visualizations.</li>
-<li>A variety of ways to publish articles, including support for publishing sets of articles as a Distill website or as a Distill blog.</li>
+<li><a href="https://github.com/Bioconductor/biocblog" class="uri">https://github.com/Bioconductor/biocblog</a> and <a href="https://blog.bioconductor.org/" class="uri">https://blog.bioconductor.org/</a></li>
 </ul>
-<p>The course website from 2021 was built in Distill for R Markdown:</p>
-<ul>
-<li>Website: <a href="https://stephaniehicks.com/jhustatcomputing2021" class="uri">https://stephaniehicks.com/jhustatcomputing2021</a></li>
-<li>Github: <a href="https://github.com/stephaniehicks/jhustatcomputing2021" class="uri">https://github.com/stephaniehicks/jhustatcomputing2021</a></li>
-</ul>
-<p>Some other cool things about distill is the use of footnotes and asides.</p>
-<p>For example <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. The number of the footnote will be automatically generated.</p>
-<p>You can also optionally include notes in the gutter of the article (immediately to the right of the article text). To do this use the aside tag.</p>
-<aside>
-This content will appear in the gutter of the article.
-</aside>
-<p>You can also include figures in the gutter. Just enclose the code chunk which generates the figure in an aside tag</p>
 </section>
 </section>
 <section id="tips-and-tricks-in-r-markdown-in-rstudio" class="level1">
@@ -763,47 +694,47 @@ Ctrl + Shift + K on Windows</code></pre>
 <li><code>lib</code> to call <code>library()</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(package)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(package)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><code>mat</code> to create a matrix</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(data, <span class="at">nrow =</span> rows, <span class="at">ncol =</span> cols)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(data, <span class="at">nrow =</span> rows, <span class="at">ncol =</span> cols)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><code>if</code>, <code>el</code>, and <code>ei</code> to create conditional expressions such as <code>if() {}</code>, <code>else {}</code> and <code>else if () {}</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (condition) {</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Case 1</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (condition) {</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Case 2</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (condition) {</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Case 3</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (condition) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Case 1</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (condition) {</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Case 2</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (condition) {</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Case 3</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><code>fun</code> to create a function</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="cf">function</span>(variables) {</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="cf">function</span>(variables) {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><code>for</code> to create for loops</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> vector) {</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> vector) {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><code>ts</code> to insert a comment with the current date and time (useful if you have very long code and share it with others so they see when it has been edited)</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tue Jan 21 20:20:14 2020 ------------------------------</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tue Jan 21 20:20:14 2020 ------------------------------</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can see all default code snippets and add yours by clicking on Tools &gt; Global Options… &gt; Code (left sidebar) &gt; Edit Snippets…</p>
 </section>
@@ -871,29 +802,29 @@ for (i in 1:10) {
 }</code></pre>
 <p>I also like to use the <a href="https://github.com/r-lib/styler"><code>styler</code>: Non-invasive pretty printing of R code</a> package to automatically style my R code. I also use <a href="https://lcolladotor.github.io/biocthis/reference/bioc_style.html" class="uri">https://lcolladotor.github.io/biocthis/reference/bioc_style.html</a> to style my code in a way that it is compatible with Bioconductor’s code standards.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install styler for automatically styling scripts</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"styler"</span>)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Install biocthis</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"BiocManager"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"BiocManager"</span>)</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">"biocthis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install styler for automatically styling scripts</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"styler"</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Install biocthis</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"BiocManager"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"BiocManager"</span>)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">"biocthis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Example code for styling all files that end with .qmd</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">readLines</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"scripts"</span>, <span class="st">"auto_style.R"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Example code for styling all files that end with .qmd</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">readLines</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"scripts"</span>, <span class="st">"auto_style.R"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>styler::style_dir(     here::here(),     transformers = biocthis::bioc_style(),     filetype = "qmd" )</code></pre>
 </div>
 </div>
 <p>You might want to edit your <code>~/.Rprofile with `usethis::edit_r_profile()`</code> and add this line to it:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="do">## For the styler addin</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Affects the output of: styler:::get_addins_style_transformer_name()</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="st">"styler.addins_style_transformer"</span> <span class="ot">=</span> <span class="st">"biocthis::bioc_style()"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="do">## For the styler addin</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Affects the output of: styler:::get_addins_style_transformer_name()</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="st">"styler.addins_style_transformer"</span> <span class="ot">=</span> <span class="st">"biocthis::bioc_style()"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For more information I have on my <code>~/.Rprofile</code> file check <a href="https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile" class="uri">https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile</a>.</p>
 </section>
@@ -938,9 +869,11 @@ Tip
 <h3 class="anchored" data-anchor-id="questions-1">Questions</h3>
 <ol type="1">
 <li><p>What is literate programming?</p></li>
-<li><p>What was the first literate statistical programming tool to weave together a statistical language (R) with a markup language (LaTeX)?</p></li>
-<li><p>What is <code>knitr</code> and how is different than other literate statistical programming tools?</p></li>
 <li><p>Where can you find a list of other commands that help make your code writing more efficient in RStudio?</p></li>
+<li><p>What type of output files can you make with <code>rmarkdown</code>?</p></li>
+<li><p>If you make a website with R (<code>html</code> files), where would you host them for free?</p></li>
+<li><p>What was the first literate statistical programming tool to weave together a statistical language (R) with a markup language (LaTeX)? (see former class material)</p></li>
+<li><p>What is <code>knitr</code> and how is different than other literate statistical programming tools? (see former class material)</p></li>
 </ol>
 </section>
 <section id="additional-resources" class="level3">
@@ -967,50 +900,145 @@ Tip
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.5
+ version  R version 4.4.1 (2024-06-14)
+ os       macOS Sonoma 14.5
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-09-12
- pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2024-08-28
+ pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout      1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
- digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- evaluate      0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- here          1.0.1   2020-12-13 [1] CRAN (R 4.3.0)
- htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr         1.43    2023-05-25 [1] CRAN (R 4.3.0)
- rlang         1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown     2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rprojroot     2.0.3   2022-04-02 [1] CRAN (R 4.3.0)
- rstudioapi    0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- xfun          0.40    2023-08-09 [1] CRAN (R 4.3.0)
- yaml          2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ cli           3.6.3   2024-06-21 [1] CRAN (R 4.4.0)
+ colorout    * 1.3-0.2 2024-05-03 [1] Github (jalvesaq/colorout@c6113a2)
+ digest        0.6.36  2024-06-23 [1] CRAN (R 4.4.0)
+ evaluate      0.24.0  2024-06-10 [1] CRAN (R 4.4.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.4.0)
+ here          1.0.1   2020-12-13 [1] CRAN (R 4.4.0)
+ htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.4.0)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.4.0)
+ jsonlite      1.8.8   2023-12-04 [1] CRAN (R 4.4.0)
+ knitr         1.48    2024-07-07 [1] CRAN (R 4.4.0)
+ rlang         1.1.4   2024-06-04 [1] CRAN (R 4.4.0)
+ rmarkdown     2.27    2024-05-17 [1] CRAN (R 4.4.0)
+ rprojroot     2.0.4   2023-11-05 [1] CRAN (R 4.4.0)
+ rstudioapi    0.16.0  2024-03-24 [1] CRAN (R 4.4.0)
+ sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.4.0)
+ xfun          0.46    2024-07-18 [1] CRAN (R 4.4.0)
+ yaml          2.3.10  2024-07-26 [1] CRAN (R 4.4.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
 </div>
+</section>
+<section id="former-class-material" class="level1 page-columns page-full">
+<h1>Former class material</h1>
+<p>This section contains older class material, that can be useful if you want to learn more about other valid R alternatives to the material we covered in class.</p>
+<section id="sweave" class="level3">
+<h3 class="anchored" data-anchor-id="sweave">Sweave</h3>
+<p>One of the original literate programming systems in R that was designed to do this was called Sweave. Sweave enables users to combine R code with a documentation program called <span class="math inline">\(LaTeX\)</span>.</p>
+<p><strong>Sweave files ends a <code>.Rnw</code></strong> and have R code weaved through the document:</p>
+<pre><code>&lt;&lt;plot1, height=4, width=5, eval=FALSE&gt;&gt;=
+data(airquality)
+plot(airquality$Ozone ~ airquality$Wind)
+@</code></pre>
+<p>Once you have created your <code>.Rnw</code> file, Sweave will process the file, executing the R chunks and replacing them with output as appropriate before creating the PDF document.</p>
+<p>It was originally developed by Fritz Leisch, who is a core member of R, and the code base is still maintained by R Core. The Sweave system comes with any installation of R.</p>
+<p>There are many limitations to the original Sweave system.</p>
+<ul>
+<li>One of the limitations is that it is <strong>focused primarily on</strong> <span class="math inline">\(LaTeX\)</span>, which is not a documentation language that many people are familiar with.</li>
+<li>Therefore, it <strong>can be difficult to learn this type of markup language</strong> if you’re not already in a field that uses it regularly.</li>
+<li>Sweave also <strong>lacks a lot of features that people find useful</strong> like caching, and multiple plots per page and mixing programming languages.</li>
+</ul>
+<p>Instead, folks have <strong>moved towards using something called knitr</strong>, which offers everything Sweave does, plus it extends it further.</p>
+<ul>
+<li>With Sweave, additional tools are required for advanced operations, whereas knitr supports more internally. We’ll discuss knitr below.</li>
+</ul>
+</section>
+<section id="knitr" class="level3">
+<h3 class="anchored" data-anchor-id="knitr">knitr</h3>
+<p>One of the alternative that has come up in recent times (it was<a href="https://en.wikipedia.org/wiki/Knitr">first released in 2012</a>; nowadays most people use <code>rmarkdown</code> directly) is something called <code>knitr</code>.</p>
+<ul>
+<li>The <code>knitr</code> package for R takes a lot of these ideas of literate programming and updates and improves upon them.</li>
+<li><code>knitr</code> still uses R as its programming language, but it allows you to mix other programming languages in.</li>
+<li>You can also use a variety of documentation languages now, such as LaTeX, markdown and HTML.</li>
+<li><code>knitr</code> was developed by Yihui Xie while he was a graduate student at Iowa State and it has become a very popular package for writing literate statistical programs.</li>
+</ul>
+<p>Knitr takes a plain text document with embedded code, executes the code and ‘knits’ the results back into the document.</p>
+<p>For for example, it converts</p>
+<ul>
+<li>An R Markdown (<code>.Rmd)</code> file into a standard markdown file (<code>.md</code>)</li>
+<li>An <code>.Rnw</code> (Sweave) file into to <code>.tex</code> format.</li>
+<li>An <code>.Rhtml</code> file into to <code>.html</code>.</li>
+</ul>
+<p>The core function is <code>knitr::knit()</code> and by default this will look at the input document and try and guess what type it is e.g.&nbsp;<code>Rnw</code>, <code>Rmd</code> etc.</p>
+<p>This core function performs three roles:</p>
+<ul>
+<li>A <strong>source parser</strong>, which looks at the input document and detects which parts are code that the user wants to be evaluated.</li>
+<li>A <strong>code evaluator</strong>, which evaluates this code</li>
+<li>An <strong>output renderer</strong>, which writes the results of evaluation back to the document in a format which is interpretable by the raw output type. For instance, if the input file is an <code>.Rmd</code>, the output render marks up the output of code evaluation in <code>.md</code> format.</li>
+</ul>
+<div class="cell" data-layout-align="center" data-preview="true">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://d33wubrfki0l68.cloudfront.net/61d189fd9cdf955058415d3e1b28dd60e1bd7c9b/9791d/images/rmarkdownflow.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption>Converting a Rmd file to many outputs using knitr and pandoc</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>[<a href="https://rmarkdown.rstudio.com/authoring_quick_tour.html">Source</a>]</p>
+<p>As seen in the figure above, from there pandoc is used to convert e.g.&nbsp;a <code>.md</code> file into many other types of file formats into a <code>.html</code>, etc.</p>
+<p>So in summary:</p>
+<blockquote class="blockquote">
+<p>“R Markdown stands on the shoulders of knitr and Pandoc. The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown. The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on).”</p>
+</blockquote>
+<p>[<a href="https://bookdown.org/yihui/rmarkdown/">Source</a>]</p>
+</section>
+<section id="distill" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="distill">distill</h3>
+<p>There is another great way to build blogs or websites using the <a href="https://rstudio.github.io/distill/">distill for R Markdown</a>.</p>
+<ul>
+<li><a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a></li>
+</ul>
+<p>Distill for R Markdown combines the technical authoring features of the <a href="https://github.com/distillpub/template">Distill web framework</a> (optimized for scientific and technical communication) with <a href="https://rmarkdown.rstudio.com">R Markdown</a>, enabling a fully reproducible workflow based on literate programming <span class="citation" data-cites="knuth1984">(<a href="#ref-knuth1984" role="doc-biblioref">Knuth 1984</a>)</span>.</p>
+<p>Distill articles include:</p>
+<ul>
+<li>Reader-friendly typography that adapts well to mobile devices.</li>
+<li>Features essential to technical writing like <span class="math inline">\(LaTeX\)</span> math, citations, and footnotes.</li>
+<li>Flexible figure layout options (e.g.&nbsp;displaying figures at a larger width than the article text).</li>
+<li>Attractively rendered tables with optional support for pagination.</li>
+<li>Support for a wide variety of diagramming tools for illustrating concepts. The ability to incorporate JavaScript and D3-based interactive visualizations.</li>
+<li>A variety of ways to publish articles, including support for publishing sets of articles as a Distill website or as a Distill blog.</li>
+</ul>
+<p>The course website from 2021 was built in Distill for R Markdown:</p>
+<ul>
+<li>Website: <a href="https://stephaniehicks.com/jhustatcomputing2021" class="uri">https://stephaniehicks.com/jhustatcomputing2021</a></li>
+<li>Github: <a href="https://github.com/stephaniehicks/jhustatcomputing2021" class="uri">https://github.com/stephaniehicks/jhustatcomputing2021</a></li>
+</ul>
+<p>Some other cool things about distill is the use of footnotes and asides.</p>
+<p>For example <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. The number of the footnote will be automatically generated.</p>
+<p>You can also optionally include notes in the gutter of the article (immediately to the right of the article text). To do this use the aside tag.</p>
+<aside>
+This content will appear in the gutter of the article.
+</aside>
+<p>You can also include figures in the gutter. Just enclose the code chunk which generates the figure in an aside tag</p>
 
 
 
+</section>
 </section>
 
 
