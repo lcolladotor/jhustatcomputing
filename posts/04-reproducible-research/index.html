@@ -590,12 +590,12 @@ Summary
 </div>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-08-20 14:57:46 EDT"</code></pre>
+<pre><code>[1] "2024-08-29 00:03:41 EDT"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">proc.time</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
-  0.589   0.102   0.976 </code></pre>
+  0.696   0.119   2.076 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -610,7 +610,7 @@ Summary
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-08-20
+ date     2024-08-29
  pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -676,7 +676,7 @@ Summary
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-08-20
+ date     2024-08-29
  pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -729,6 +729,7 @@ Summary
 </div>
 <p>For packages that we installed from GitHub, it includes the specific <code>git</code> commit ID for the version we installed. This is super precise information that is very useful to have.</p>
 <p>Check <a href="https://github.com/LieberInstitute/template_project/blob/main/code/01_read_data_to_r/01_read_data_to_r.R" class="uri">https://github.com/LieberInstitute/template_project/blob/main/code/01_read_data_to_r/01_read_data_to_r.R</a> for a full script example part of <a href="https://github.com/LieberInstitute/template_project" class="uri">https://github.com/LieberInstitute/template_project</a>.</p>
+<p>Remember to use <code>sessioninfo</code> when using <code>reprex::reprex()</code> as we mentioned previously at <a href="../03-introduction-to-gitgithub/#help-me-help-you-reprexreprex">posts/03-introduction-to-gitgithub/#help-me-help-you-reprexreprex</a>.</p>
 <p>Check <a href="https://github.com/Bioconductor/BiocFileCache/issues/48" class="uri">https://github.com/Bioconductor/BiocFileCache/issues/48</a> for an example on how the output from <code>sessioninfo::session_info()</code> provided useful hints that allowed me and others to resolve a problem.</p>
 <p>In this video I talked about both <code>here</code> and <code>sessioninfo</code> as well as <code>R</code> and <code>RStudio</code>:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XTuJ8vGnzBU?si=wLWZe-LuSA_fKD-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
@@ -778,7 +779,7 @@ Questions
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-08-20
+ date     2024-08-29
  pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
