@@ -69,11 +69,11 @@ This document gives a brief explanation of GitHub and how we will use it for thi
 -   Great for solo or collaborative work!
 -   Technically *GitHub* is distinct from *Git*. However, *GitHub* is in some sense the interface and *Git* the underlying engine (a bit like *RStudio* and *R*).
 
-Since we will only be using *Git* through *GitHub*, I tend to not distinguish between the two. In the following, I refer to all of it as just *GitHub*. Note that other interfaces to *Git* exist, e.g., *Bitbucket*, but *GitHub* is the most widely used one.
+Note that other interfaces to *Git* exist, e.g., *Bitbucket*, but *GitHub* is the most widely used one.
 
 ### Why use git/GitHub?
 
-You want to use *GitHub* to avoid this:
+You want to use `git` + *GitHub* to avoid this:
 
 ```{r}
 #| label: versioncontrol
@@ -85,7 +85,7 @@ knitr::include_graphics("../../images/phdversioncontrol.gif")
 
 \[[Source: PhD Comics](http://phdcomics.com/comics/archive_print.php?comicid=1531)\]
 
-*GitHub* gives you a clean way to track your projects. It is also very well suited to collaborative work. Historically, version control was used for software development. However, it has become broader and is now used for many types of projects, including data science projects.
+`git` + *GitHub* gives you a clean way to track your projects. It is also very well suited to collaborative work. Historically, version control was used for software development. However, it has become broader and is now used for many types of projects, including data science projects.
 
 To learn a bit more about Git/GitHub and why you might want to use it, [read this article by Jenny Bryan](https://peerj.com/preprints/3159/).
 
@@ -93,9 +93,9 @@ To learn a bit more about Git/GitHub and why you might want to use it, [read thi
 
 ### What to (not) do
 
-**GitHub is ideal if** you have a project with a fair number of files, most of those files are text files (such as code, $LaTeX$, (R)markdown, etc.) and different people work on different parts of the project.
+`git` + **GitHub is ideal if** you have a project with a fair number of files, most of those files are text files (such as code, $LaTeX$, (R)markdown, etc.) and different people work on different parts of the project.
 
-**GitHub is less useful if** you have a lot of non-text files (e.g. Word or Powerpoint) and different team members might want to edit the same document at the same time. In that instance, a solution like Google Docs, Word+Dropbox, Word+Onedrive, etc. might be better.
+`git` + **GitHub is less useful if** you have a lot of non-text files (e.g. Word or Powerpoint) and different team members might want to edit the same document at the same time. In that instance, a solution like Google Docs, Word+Dropbox, Word+Onedrive, etc. might be better.
 
 ### How to use Git/GitHub
 
@@ -111,7 +111,7 @@ We will mostly be using Git commands through the RStudio Git panel. This panel w
 
 # Getting Started
 
-One of my favorite resources for getting started with git/GitHub is the Happy Git with R from Jenny Bryan:
+One of my favorite resources for getting started with git/GitHub is the Happy Git with R from [Jenny Bryan](https://twitter.com/JennyBryan):
 
 -   <https://happygitwithr.com>
 
@@ -170,6 +170,12 @@ For more details on `reprex`, check this video:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8bBo3B7N8YQ?si=HQRqLn--9KTNKDcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
 </iframe>
+
+[Here's a](https://github.com/tidyverse/tidy-dev-day/issues/25#issuecomment-2233564971):
+
+> @hadley: A good example of a very detailed issue is [r-lib/pkgdown#2727](https://github.com/r-lib/pkgdown/issues/2727)
+
+Note the use of the R session information from `sessioninfo::session_info()` along with `reprex::reprex()`.
 
 # Post-lecture materials
 
