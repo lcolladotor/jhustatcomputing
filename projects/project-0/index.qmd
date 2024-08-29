@@ -330,11 +330,15 @@ Now that you have a website, feel free to edit your `index.Rmd` file as well as 
 
 You might also want to use inline R code with `fontawesome::fa()` like at <https://github.com/emarquezz/emarquezz.github.io/blob/c49eae75d53efa623e5d3bbbb29d77a3f1678a1c/index.Rmd#L9> or and emojis like at <https://github.com/emarquezz/emarquezz.github.io/blob/c49eae75d53efa623e5d3bbbb29d77a3f1678a1c/index.Rmd#L24>. Check all previous examples I linked to, though these ones have some more advanced features:
 
+-   <https://daianna21.github.io/> + <https://github.com/daianna21/daianna21.github.io>
+
 -   <https://emarquezz.github.io/> + <https://github.com/emarquezz/emarquezz.github.io>
 
 -   <https://cfausto.github.io/> + <https://github.com/cfausto/cfausto.github.io/>
 
 -   <https://davidgonilski.github.io/> + <https://github.com/davidgonilski/davidgonilski.github.io>
+
+If you don't like `postcards` and want to use `quarto` instead, then check [posts/05-literate-programming/#quarto](../../posts/05-literate-programming/#quarto) for more details.
 
 ### 10. Share your website
 
