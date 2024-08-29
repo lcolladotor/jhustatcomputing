@@ -380,11 +380,11 @@ Learning objectives
 <li>Great for solo or collaborative work!</li>
 <li>Technically <em>GitHub</em> is distinct from <em>Git</em>. However, <em>GitHub</em> is in some sense the interface and <em>Git</em> the underlying engine (a bit like <em>RStudio</em> and <em>R</em>).</li>
 </ul>
-<p>Since we will only be using <em>Git</em> through <em>GitHub</em>, I tend to not distinguish between the two. In the following, I refer to all of it as just <em>GitHub</em>. Note that other interfaces to <em>Git</em> exist, e.g., <em>Bitbucket</em>, but <em>GitHub</em> is the most widely used one.</p>
+<p>Note that other interfaces to <em>Git</em> exist, e.g., <em>Bitbucket</em>, but <em>GitHub</em> is the most widely used one.</p>
 </section>
 <section id="why-use-gitgithub" class="level3">
 <h3 class="anchored" data-anchor-id="why-use-gitgithub">Why use git/GitHub?</h3>
-<p>You want to use <em>GitHub</em> to avoid this:</p>
+<p>You want to use <code>git</code> + <em>GitHub</em> to avoid this:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -396,14 +396,14 @@ Learning objectives
 </div>
 </div>
 <p>[<a href="http://phdcomics.com/comics/archive_print.php?comicid=1531">Source: PhD Comics</a>]</p>
-<p><em>GitHub</em> gives you a clean way to track your projects. It is also very well suited to collaborative work. Historically, version control was used for software development. However, it has become broader and is now used for many types of projects, including data science projects.</p>
+<p><code>git</code> + <em>GitHub</em> gives you a clean way to track your projects. It is also very well suited to collaborative work. Historically, version control was used for software development. However, it has become broader and is now used for many types of projects, including data science projects.</p>
 <p>To learn a bit more about Git/GitHub and why you might want to use it, <a href="https://peerj.com/preprints/3159/">read this article by Jenny Bryan</a>.</p>
 <p><strong>Note her explanation of what’s special with the <code>README.md</code> file on GitHub.</strong></p>
 </section>
 <section id="what-to-not-do" class="level3">
 <h3 class="anchored" data-anchor-id="what-to-not-do">What to (not) do</h3>
-<p><strong>GitHub is ideal if</strong> you have a project with a fair number of files, most of those files are text files (such as code, <span class="math inline">\(LaTeX\)</span>, (R)markdown, etc.) and different people work on different parts of the project.</p>
-<p><strong>GitHub is less useful if</strong> you have a lot of non-text files (e.g.&nbsp;Word or Powerpoint) and different team members might want to edit the same document at the same time. In that instance, a solution like Google Docs, Word+Dropbox, Word+Onedrive, etc. might be better.</p>
+<p><code>git</code> + <strong>GitHub is ideal if</strong> you have a project with a fair number of files, most of those files are text files (such as code, <span class="math inline">\(LaTeX\)</span>, (R)markdown, etc.) and different people work on different parts of the project.</p>
+<p><code>git</code> + <strong>GitHub is less useful if</strong> you have a lot of non-text files (e.g.&nbsp;Word or Powerpoint) and different team members might want to edit the same document at the same time. In that instance, a solution like Google Docs, Word+Dropbox, Word+Onedrive, etc. might be better.</p>
 </section>
 <section id="how-to-use-gitgithub" class="level3">
 <h3 class="anchored" data-anchor-id="how-to-use-gitgithub">How to use Git/GitHub</h3>
@@ -419,7 +419,7 @@ Learning objectives
 </section>
 <section id="getting-started" class="level1">
 <h1>Getting Started</h1>
-<p>One of my favorite resources for getting started with git/GitHub is the Happy Git with R from Jenny Bryan:</p>
+<p>One of my favorite resources for getting started with git/GitHub is the Happy Git with R from <a href="https://twitter.com/JennyBryan">Jenny Bryan</a>:</p>
 <ul>
 <li><a href="https://happygitwithr.com" class="uri">https://happygitwithr.com</a></li>
 </ul>
@@ -466,6 +466,11 @@ Learning objectives
 <p>For more details on <code>reprex</code>, check this video:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8bBo3B7N8YQ?si=HQRqLn--9KTNKDcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
 </iframe>
+<p><a href="https://github.com/tidyverse/tidy-dev-day/issues/25#issuecomment-2233564971">Here’s a</a>:</p>
+<blockquote class="blockquote">
+<p><span class="citation" data-cites="hadley">@hadley</span>: A good example of a very detailed issue is <a href="https://github.com/r-lib/pkgdown/issues/2727">r-lib/pkgdown#2727</a></p>
+</blockquote>
+<p>Note the use of the R session information from <code>sessioninfo::session_info()</code> along with <code>reprex::reprex()</code>.</p>
 </section>
 <section id="post-lecture-materials" class="level1">
 <h1>Post-lecture materials</h1>
@@ -525,7 +530,7 @@ Tip
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-08-20
+ date     2024-08-28
  pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
