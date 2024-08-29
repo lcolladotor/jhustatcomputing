@@ -1,13 +1,9 @@
-## ----plot2, height=4, width=5, eval=TRUE, echo=TRUE----------------------------------------------------------------------
+## ----plot2, height=4, width=5, eval=TRUE, echo=TRUE----
 data(airquality)
 plot(airquality$Ozone ~ airquality$Wind)
 
 
-## ----rmarkdown-wizards, echo = FALSE, fig.cap = "Converting a Rmd file to many outputs using knitr and pandoc", out.width = '60%', fig.align='center', preview=TRUE----
-knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/61d189fd9cdf955058415d3e1b28dd60e1bd7c9b/9791d/images/rmarkdownflow.png")
-
-
-## ------------------------------------------------------------------------------------------------------------------------
+## --------------------------------------------------
 #| label: missionaccomplished
 #| echo: false
 #| out-width: '60%'
@@ -15,7 +11,7 @@ knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/61d189fd9cdf95505
 knitr::include_graphics("https://media.giphy.com/media/L4ZZNbDpOCfiX8uYSd/giphy.gif")
 
 
-## ------------------------------------------------------------------------------------------------------------------------
+## --------------------------------------------------
 #| label: hex-blogdown
 #| echo: false
 #| out-width: '30%'
@@ -23,7 +19,7 @@ knitr::include_graphics("https://media.giphy.com/media/L4ZZNbDpOCfiX8uYSd/giphy.
 knitr::include_graphics("https://bookdown.org/yihui/blogdown/images/logo.png")
 
 
-## ------------------------------------------------------------------------------------------------------------------------
+## --------------------------------------------------
 #| label: hex-bookdown
 #| echo: false
 #| out-width: '30%'
@@ -31,15 +27,15 @@ knitr::include_graphics("https://bookdown.org/yihui/blogdown/images/logo.png")
 knitr::include_graphics("https://bookdown.org/yihui/bookdown/images/logo.png")
 
 
-## ----eval = FALSE--------------------------------------------------------------------------------------------------------
+## ----eval = FALSE----------------------------------
 ## library(package)
 
 
-## ----eval = FALSE--------------------------------------------------------------------------------------------------------
+## ----eval = FALSE----------------------------------
 ## matrix(data, nrow = rows, ncol = cols)
 
 
-## ----eval = FALSE--------------------------------------------------------------------------------------------------------
+## ----eval = FALSE----------------------------------
 ## if (condition) {
 ##     ## Case 1
 ## } else if (condition) {
@@ -49,23 +45,23 @@ knitr::include_graphics("https://bookdown.org/yihui/bookdown/images/logo.png")
 ## }
 
 
-## ----eval = FALSE--------------------------------------------------------------------------------------------------------
+## ----eval = FALSE----------------------------------
 ## name <- function(variables) {
 ## 
 ## }
 
 
-## ----eval = FALSE--------------------------------------------------------------------------------------------------------
+## ----eval = FALSE----------------------------------
 ## for (variable in vector) {
 ## 
 ## }
 
 
-## ----eval = FALSE--------------------------------------------------------------------------------------------------------
+## ----eval = FALSE----------------------------------
 ## # Tue Jan 21 20:20:14 2020 ------------------------------
 
 
-## ------------------------------------------------------------------------------------------------------------------------
+## --------------------------------------------------
 #| eval: false
 ## ## Install styler for automatically styling scripts
 ## install.packages("styler")
@@ -78,12 +74,12 @@ knitr::include_graphics("https://bookdown.org/yihui/bookdown/images/logo.png")
 ## BiocManager::install("biocthis")
 
 
-## ------------------------------------------------------------------------------------------------------------------------
+## --------------------------------------------------
 ## Example code for styling all files that end with .qmd
 cat(readLines(here::here("scripts", "auto_style.R")))
 
 
-## ------------------------------------------------------------------------------------------------------------------------
+## --------------------------------------------------
 #| eval: false
 ## ## For the styler addin
 ## # Affects the output of: styler:::get_addins_style_transformer_name()
@@ -91,7 +87,11 @@ cat(readLines(here::here("scripts", "auto_style.R")))
 ## options("styler.addins_style_transformer" = "biocthis::bioc_style()")
 
 
-## ------------------------------------------------------------------------------------------------------------------------
+## --------------------------------------------------
 options(width = 120)
 sessioninfo::session_info()
+
+
+## ----rmarkdown-wizards, echo = FALSE, fig.cap = "Converting a Rmd file to many outputs using knitr and pandoc", out.width = '60%', fig.align='center', preview=TRUE----
+knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/61d189fd9cdf955058415d3e1b28dd60e1bd7c9b/9791d/images/rmarkdownflow.png")
 

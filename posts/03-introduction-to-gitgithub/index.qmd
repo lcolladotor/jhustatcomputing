@@ -138,6 +138,24 @@ In this course, you will use git/GitHub in the following ways:
 
 Learning these skills will be useful down the road if you ever work collaboratively on a project (i.e. writing code as a group). In this scenario, you will use the skills you have been practicing in your projects to work together as a team in a single GitHub repository.
 
+If you want to make a public `git` repository and share it via GitHub with your class notes, akin to <https://github.com/lcolladotor/biostat776classnotes>, you can do so with:
+
+```{r}
+#| eval: false
+## Install "usethis" if you don't have it already
+if (!requireNamespace("usethis", quietly = TRUE)) {
+    install.packages("usethis")
+}
+
+usethis::create_project("~/Desktop/biostat776classnotes")
+
+## Then in your new RStudio project, run the following:
+usethis::use_git()
+usethis::use_github()
+```
+
+Check [Project 0](../../projects/project-0/) for more details on how to configure `usethis` so it can recognize who you are on `git`/GitHub and how to access your GitHub account.
+
 # "Help me help you": `reprex::reprex()`
 
 Install the `reprex` R package.
