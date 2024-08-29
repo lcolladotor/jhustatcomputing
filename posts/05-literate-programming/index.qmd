@@ -79,36 +79,9 @@ The basic idea behind literate programming in order to generate the different ki
 
 In order to use a system like this you need a documentational language, that's human readable, and you need a programming language that's machine readable (or can be compiled/interpreted into something that's machine readable).
 
-### Sweave
-
-One of the original literate programming systems in R that was designed to do this was called Sweave. Sweave enables users to combine R code with a documentation program called $LaTeX$.
-
-**Sweave files ends a `.Rnw`** and have R code weaved through the document:
-
-```         
-<<plot1, height=4, width=5, eval=FALSE>>=
-data(airquality)
-plot(airquality$Ozone ~ airquality$Wind)
-@
-```
-
-Once you have created your `.Rnw` file, Sweave will process the file, executing the R chunks and replacing them with output as appropriate before creating the PDF document.
-
-It was originally developed by Fritz Leisch, who is a core member of R, and the code base is still maintained by R Core. The Sweave system comes with any installation of R.
-
-There are many limitations to the original Sweave system.
-
--   One of the limitations is that it is **focused primarily on** $LaTeX$, which is not a documentation language that many people are familiar with.
--   Therefore, it **can be difficult to learn this type of markup language** if you're not already in a field that uses it regularly.
--   Sweave also **lacks a lot of features that people find useful** like caching, and multiple plots per page and mixing programming languages.
-
-Instead, folks have **moved towards using something called knitr**, which offers everything Sweave does, plus it extends it further.
-
--   With Sweave, additional tools are required for advanced operations, whereas knitr supports more internally. We'll discuss knitr below.
-
 ### rmarkdown
 
-Another choice for literate programming is to build documents based on [Markdown](https://en.wikipedia.org/wiki/Markdown) language. A markdown file is a plain text file that is typically given the extension `.md.`. The [`rmarkdown`](https://CRAN.R-project.org/package=rmarkdown) R package takes a R Markdown file (`.Rmd`) and weaves together R code chunks like this:
+Today's main choice for literate programming is to build documents based on [Markdown](https://en.wikipedia.org/wiki/Markdown) language. A markdown file is a plain text file that is typically given the extension `.md.`. The [`rmarkdown`](https://CRAN.R-project.org/package=rmarkdown) R package takes a R Markdown file (`.Rmd`) and weaves together R code chunks like this:
 
 ````         
 ```{r plot1, height=4, width=5, eval=FALSE, echo=TRUE}`r ''`
@@ -161,45 +134,6 @@ Check out the R Markdown Quick Tour for more:
 :::
 
 ![Artwork by Allison Horst on RMarkdown](https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png){width="80%"}
-
-### knitr
-
-One of the alternative that has come up in recent times is something called `knitr`.
-
--   The `knitr` package for R takes a lot of these ideas of literate programming and updates and improves upon them.
--   `knitr` still uses R as its programming language, but it allows you to mix other programming languages in.
--   You can also use a variety of documentation languages now, such as LaTeX, markdown and HTML.
--   `knitr` was developed by Yihui Xie while he was a graduate student at Iowa State and it has become a very popular package for writing literate statistical programs.
-
-Knitr takes a plain text document with embedded code, executes the code and 'knits' the results back into the document.
-
-For for example, it converts
-
--   An R Markdown (`.Rmd)` file into a standard markdown file (`.md`)
--   An `.Rnw` (Sweave) file into to `.tex` format.
--   An `.Rhtml` file into to `.html`.
-
-The core function is `knitr::knit()` and by default this will look at the input document and try and guess what type it is e.g. `Rnw`, `Rmd` etc.
-
-This core function performs three roles:
-
--   A **source parser**, which looks at the input document and detects which parts are code that the user wants to be evaluated.
--   A **code evaluator**, which evaluates this code
--   An **output renderer**, which writes the results of evaluation back to the document in a format which is interpretable by the raw output type. For instance, if the input file is an `.Rmd`, the output render marks up the output of code evaluation in `.md` format.
-
-```{r rmarkdown-wizards, echo = FALSE, fig.cap = "Converting a Rmd file to many outputs using knitr and pandoc", out.width = '60%', fig.align='center', preview=TRUE}
-knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/61d189fd9cdf955058415d3e1b28dd60e1bd7c9b/9791d/images/rmarkdownflow.png")
-```
-
-\[[Source](https://rmarkdown.rstudio.com/authoring_quick_tour.html)\]
-
-As seen in the figure above, from there pandoc is used to convert e.g. a `.md` file into many other types of file formats into a `.html`, etc.
-
-So in summary:
-
-> "R Markdown stands on the shoulders of knitr and Pandoc. The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown. The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on)."
-
-\[[Source](https://bookdown.org/yihui/rmarkdown/)\]
 
 # Create and Knit Your First R Markdown Document
 
@@ -261,7 +195,7 @@ The `blogdown` R package is built on top of R Markdown, supports multi-page HTML
 ::: callout-tip
 For example, my personal website was built in blogdown:
 
--   <http://lcolladotor.github.io/>
+-   <http://lcolladotor.github.io/> with source code at <https://github.com/lcolladotor/lcolladotorsource>
 
 Other really great examples can be found here:
 
@@ -317,39 +251,30 @@ Another example is the [Tidyverse Skills for Data Science](https://jhudatascienc
 
 -   <https://bookdown.org/yihui/rmarkdown/basics-examples.html#examples-books>
 
-### distill
+### quarto
 
-There is another great way to build blogs or websites using the [distill for R Markdown](https://rstudio.github.io/distill/).
+quarto is newer and is described in further detail at <https://quarto.org/>. It's what was was used for making this course website. As an alternative to using `postcards` for [Project 0](../../projects/project-0/), you could use `quarto` instead following the instructions from <https://quarto.org/docs/websites/website-blog.html>. As examples check:
 
--   <https://rstudio.github.io/distill>
+-   <https://github.com/lahuuki/lahuuki.github.io> and <https://lahuuki.github.io/>
 
-Distill for R Markdown combines the technical authoring features of the [Distill web framework](https://github.com/distillpub/template) (optimized for scientific and technical communication) with [R Markdown](https://rmarkdown.rstudio.com), enabling a fully reproducible workflow based on literate programming [@knuth1984].
+-   <https://github.com/daianna21/daianna_blog> and <https://daianna21.github.io/daianna_blog/>
 
-Distill articles include:
+<blockquote class="twitter-tweet">
 
--   Reader-friendly typography that adapts well to mobile devices.
--   Features essential to technical writing like $LaTeX$ math, citations, and footnotes.
--   Flexible figure layout options (e.g. displaying figures at a larger width than the article text).
--   Attractively rendered tables with optional support for pagination.
--   Support for a wide variety of diagramming tools for illustrating concepts. The ability to incorporate JavaScript and D3-based interactive visualizations.
--   A variety of ways to publish articles, including support for publishing sets of articles as a Distill website or as a Distill blog.
+<p lang="en" dir="ltr">
 
-The course website from 2021 was built in Distill for R Markdown:
+I’m super excited to share with you my personal blog. Here I’ll be posting about the math and statistics behind frequently used bioinformatic tools to analyze omics data, hopefully contributing to increasing our understanding around them. <br><br>Go check 👉🏼 <a href="https://t.co/W5PsRBCCYu">https://t.co/W5PsRBCCYu</a> <a href="https://t.co/sRgcKFxsZy">pic.twitter.com/sRgcKFxsZy</a>
 
--   Website: <https://stephaniehicks.com/jhustatcomputing2021>
--   Github: <https://github.com/stephaniehicks/jhustatcomputing2021>
+</p>
 
-Some other cool things about distill is the use of footnotes and asides.
+— Daianna (@daianna_glez) <a href="https://twitter.com/daianna_glez/status/1815089908371042588?ref_src=twsrc%5Etfw">July 21, 2024</a>
 
-For example [^1]. The number of the footnote will be automatically generated.
+</blockquote>
 
-[^1]: This will become a hover-able footnote
-
-You can also optionally include notes in the gutter of the article (immediately to the right of the article text). To do this use the aside tag.
-
-<aside>This content will appear in the gutter of the article.</aside>
-
-You can also include figures in the gutter. Just enclose the code chunk which generates the figure in an aside tag
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+-   <https://github.com/Bioconductor/biocblog> and <https://blog.bioconductor.org/>
 
 # Tips and tricks in R Markdown in RStudio
 
@@ -607,11 +532,15 @@ Here are some post-lecture questions to help you think about the material discus
 
 1.  What is literate programming?
 
-2.  What was the first literate statistical programming tool to weave together a statistical language (R) with a markup language (LaTeX)?
+2.  Where can you find a list of other commands that help make your code writing more efficient in RStudio?
 
-3.  What is `knitr` and how is different than other literate statistical programming tools?
+3.  What type of output files can you make with `rmarkdown`?
 
-4.  Where can you find a list of other commands that help make your code writing more efficient in RStudio?
+4.  If you make a website with R (`html` files), where would you host them for free?
+
+5.  What was the first literate statistical programming tool to weave together a statistical language (R) with a markup language (LaTeX)? (see former class material)
+
+6.  What is `knitr` and how is different than other literate statistical programming tools? (see former class material)
 :::
 
 ### Additional Resources
@@ -628,3 +557,107 @@ Here are some post-lecture questions to help you think about the material discus
 options(width = 120)
 sessioninfo::session_info()
 ```
+
+# Former class material
+
+This section contains older class material, that can be useful if you want to learn more about other valid R alternatives to the material we covered in class.
+
+### Sweave
+
+One of the original literate programming systems in R that was designed to do this was called Sweave. Sweave enables users to combine R code with a documentation program called $LaTeX$.
+
+**Sweave files ends a `.Rnw`** and have R code weaved through the document:
+
+```         
+<<plot1, height=4, width=5, eval=FALSE>>=
+data(airquality)
+plot(airquality$Ozone ~ airquality$Wind)
+@
+```
+
+Once you have created your `.Rnw` file, Sweave will process the file, executing the R chunks and replacing them with output as appropriate before creating the PDF document.
+
+It was originally developed by Fritz Leisch, who is a core member of R, and the code base is still maintained by R Core. The Sweave system comes with any installation of R.
+
+There are many limitations to the original Sweave system.
+
+-   One of the limitations is that it is **focused primarily on** $LaTeX$, which is not a documentation language that many people are familiar with.
+-   Therefore, it **can be difficult to learn this type of markup language** if you're not already in a field that uses it regularly.
+-   Sweave also **lacks a lot of features that people find useful** like caching, and multiple plots per page and mixing programming languages.
+
+Instead, folks have **moved towards using something called knitr**, which offers everything Sweave does, plus it extends it further.
+
+-   With Sweave, additional tools are required for advanced operations, whereas knitr supports more internally. We'll discuss knitr below.
+
+### knitr
+
+One of the alternative that has come up in recent times (it was[first released in 2012](https://en.wikipedia.org/wiki/Knitr); nowadays most people use `rmarkdown` directly) is something called `knitr`.
+
+-   The `knitr` package for R takes a lot of these ideas of literate programming and updates and improves upon them.
+-   `knitr` still uses R as its programming language, but it allows you to mix other programming languages in.
+-   You can also use a variety of documentation languages now, such as LaTeX, markdown and HTML.
+-   `knitr` was developed by Yihui Xie while he was a graduate student at Iowa State and it has become a very popular package for writing literate statistical programs.
+
+Knitr takes a plain text document with embedded code, executes the code and 'knits' the results back into the document.
+
+For for example, it converts
+
+-   An R Markdown (`.Rmd)` file into a standard markdown file (`.md`)
+-   An `.Rnw` (Sweave) file into to `.tex` format.
+-   An `.Rhtml` file into to `.html`.
+
+The core function is `knitr::knit()` and by default this will look at the input document and try and guess what type it is e.g. `Rnw`, `Rmd` etc.
+
+This core function performs three roles:
+
+-   A **source parser**, which looks at the input document and detects which parts are code that the user wants to be evaluated.
+-   A **code evaluator**, which evaluates this code
+-   An **output renderer**, which writes the results of evaluation back to the document in a format which is interpretable by the raw output type. For instance, if the input file is an `.Rmd`, the output render marks up the output of code evaluation in `.md` format.
+
+```{r rmarkdown-wizards, echo = FALSE, fig.cap = "Converting a Rmd file to many outputs using knitr and pandoc", out.width = '60%', fig.align='center', preview=TRUE}
+knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/61d189fd9cdf955058415d3e1b28dd60e1bd7c9b/9791d/images/rmarkdownflow.png")
+```
+
+\[[Source](https://rmarkdown.rstudio.com/authoring_quick_tour.html)\]
+
+As seen in the figure above, from there pandoc is used to convert e.g. a `.md` file into many other types of file formats into a `.html`, etc.
+
+So in summary:
+
+> "R Markdown stands on the shoulders of knitr and Pandoc. The former executes the computer code embedded in Markdown, and converts R Markdown to Markdown. The latter renders Markdown to the output format you want (such as PDF, HTML, Word, and so on)."
+
+\[[Source](https://bookdown.org/yihui/rmarkdown/)\]
+
+### distill
+
+There is another great way to build blogs or websites using the [distill for R Markdown](https://rstudio.github.io/distill/).
+
+-   <https://rstudio.github.io/distill>
+
+Distill for R Markdown combines the technical authoring features of the [Distill web framework](https://github.com/distillpub/template) (optimized for scientific and technical communication) with [R Markdown](https://rmarkdown.rstudio.com), enabling a fully reproducible workflow based on literate programming [@knuth1984].
+
+Distill articles include:
+
+-   Reader-friendly typography that adapts well to mobile devices.
+-   Features essential to technical writing like $LaTeX$ math, citations, and footnotes.
+-   Flexible figure layout options (e.g. displaying figures at a larger width than the article text).
+-   Attractively rendered tables with optional support for pagination.
+-   Support for a wide variety of diagramming tools for illustrating concepts. The ability to incorporate JavaScript and D3-based interactive visualizations.
+-   A variety of ways to publish articles, including support for publishing sets of articles as a Distill website or as a Distill blog.
+
+The course website from 2021 was built in Distill for R Markdown:
+
+-   Website: <https://stephaniehicks.com/jhustatcomputing2021>
+-   Github: <https://github.com/stephaniehicks/jhustatcomputing2021>
+
+Some other cool things about distill is the use of footnotes and asides.
+
+For example [^1]. The number of the footnote will be automatically generated.
+
+[^1]: This will become a hover-able footnote
+
+You can also optionally include notes in the gutter of the article (immediately to the right of the article text). To do this use the aside tag.
+
+<aside>This content will appear in the gutter of the article.</aside>
+
+You can also include figures in the gutter. Just enclose the code chunk which generates the figure in an aside tag
