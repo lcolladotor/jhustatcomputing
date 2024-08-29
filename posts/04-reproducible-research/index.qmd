@@ -322,6 +322,8 @@ For packages that we installed from GitHub, it includes the specific `git` commi
 
 Check <https://github.com/LieberInstitute/template_project/blob/main/code/01_read_data_to_r/01_read_data_to_r.R> for a full script example part of <https://github.com/LieberInstitute/template_project>.
 
+Remember to use `sessioninfo` when using `reprex::reprex()` as we mentioned previously at [posts/03-introduction-to-gitgithub/#help-me-help-you-reprexreprex](../03-introduction-to-gitgithub/#help-me-help-you-reprexreprex).
+
 Check <https://github.com/Bioconductor/BiocFileCache/issues/48> for an example on how the output from `sessioninfo::session_info()` provided useful hints that allowed me and others to resolve a problem.
 
 In this video I talked about both `here` and `sessioninfo` as well as `R` and `RStudio`:
