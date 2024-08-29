@@ -435,7 +435,9 @@ which incorrectly renders
 When editing R Markdown documents, you will need to insert a new R code chunk many times. The following shortcuts will make your life easier:
 
 ```         
-command + option + I on Mac (or command + alt + I depending on your keyboard)
+command + option + I on Mac
+    (or command + alt + I depending on your keyboard)
+    
 Ctrl + ALT + I on Windows
 ```
 
