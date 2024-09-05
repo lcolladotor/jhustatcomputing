@@ -60,6 +60,21 @@ To access the data, you need to install the `tidytuesdayR` R package and use the
 if (!require("tidytuesdayR", quietly = TRUE)) {
     install.packages("tidytuesdayR")
 }
+
+## For the GitHub version of tidytuesdayR (in case the CRAN version is not available)
+## you'll need the "remotes" package to install it.
+## See for example https://github.com/dslc-io/tidytuesdayR/issues/94 which led
+## to tidytuesdayR not been available from CRAN at the end of August 2024
+
+## Install the remotes package if you don't have it
+if (!require("remotes", quietly = TRUE)) {
+    install.packages("remotes")
+}
+## Install the tidytuesdayR package (from GitHub) if you don't have it
+if (!require("tidytuesdayR", quietly = TRUE)) {
+    remotes::install_github("dslc-io/tidytuesdayR")
+}
+
 ```
 
 This is how you can download the data.
