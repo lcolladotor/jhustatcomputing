@@ -86,7 +86,7 @@ To see a full vignette about tibbles and how they differ from data.frame, you wi
 
 We will summarize some of the most important points here:
 
--   **Input type remains unchanged** - `data.frame` is notorious for treating strings as factors; this will not happen with tibbles
+-   **Input type remains unchanged** - `data.frame` was notorious for treating strings as factors; this will not happen with tibbles. As of R version 4.0 this is no longer the case as noted by Kurt Hornik on the [R blog](https://blog.r-project.org/2020/02/16/stringsasfactors/).
 -   **Variable names remain unchanged** - In base R, creating `data.frames` will remove spaces from names, converting them to periods or add "x" before numeric column names. Creating tibbles will not change variable (column) names.
 -   **There are no `row.names()` for a tibble** - Tidy data requires that variables be stored in a consistent way, removing the need for row names.
 -   **Tibbles print first ten rows and columns that fit on one screen** - Printing a tibble to screen will never print the entire huge data frame out. By default, it just shows what fits to your screen.
