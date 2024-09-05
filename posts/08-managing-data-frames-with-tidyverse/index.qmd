@@ -420,7 +420,7 @@ Other logical operators you should be aware of include:
 |      `==` |                   Equals |                 `city == chic` |
 |      `!=` |           Does not equal |                 `city != chic` |
 |       `>` |             Greater than |                  `tmpd > 32.0` |
-|      `>=` | Greater than or equal to |                 `tmpd >- 32.0` |
+|      `>=` | Greater than or equal to |                 `tmpd >= 32.0` |
 |       `<` |                Less than |                  `tmpd < 32.0` |
 |      `<=` |    Less than or equal to |                 `tmpd <= 32.0` |
 |    `%in%` |              Included in | `city %in% c("chic", "bmore")` |
