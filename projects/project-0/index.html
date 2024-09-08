@@ -320,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <ol start="5" type="1">
 <li><p>If you have a GitHub username, please include this in your email. If you do not have a GitHub username, read <a href="https://happygitwithr.com" class="uri">https://happygitwithr.com</a>, sign up for GitHub, and include your new username in your email to me.</p></li>
-<li><p>To make sure git is installed on your system, use the ‘Terminal’ (e.g.&nbsp;it’s next to the R Console within RStudio) (or whatever you use), run the following and include the output in your email:</p></li>
+<li><p>To make sure git is installed on your system, use the ‘Terminal’ (e.g.&nbsp;it’s next to the R Console within RStudio<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) (or whatever you use), run the following and include the output in your email:</p></li>
 </ol>
 <p>For example, this is mine:</p>
 <div class="cell">
@@ -399,15 +399,28 @@ Error in libgit2::git_signature_default :
     email = lcolladotor@gmail.com
     </code></pre>
 <p>Alternatively, you can use <code>git</code> commands directly or the <code>usethis::use_git_config()</code> function as documented at <a href="https://happygitwithr.com/hello-git.html?q=config#hello-git" class="uri">https://happygitwithr.com/hello-git.html?q=config#hello-git</a>.</p>
+<section id="what-if-i-dont-want-to-share-my-work-email" class="level4">
+<h4 class="anchored" data-anchor-id="what-if-i-dont-want-to-share-my-work-email">2. What if I don’t want to share my work email?</h4>
+<p>In my experience, this has been very rare. But my experience is primarily based from working in academia where I have tried to actively try to network with others (it’s not a prerequisite for working in academia!). But maybe you don’t want to share your work email with others and that’s fair.</p>
+<p>At <a href="https://github.com/settings/emails" class="uri">https://github.com/settings/emails</a> you might have configured your GitHub account to keep your work email private by selecting the checkbox “Keep my email addresses private”. If you did so, GitHub will have a message like this one:</p>
+<blockquote class="blockquote">
+<p>We’ll remove your public profile email and use <strong>1234567+lcolladotor@users.noreply.github.com</strong> when performing web-based Git operations (e.g.&nbsp;edits and merges) and sending email on your behalf.</p>
+</blockquote>
+<p>In that case, your <code>~/.gitconfig</code> file should use that same email that GitHub created for you:</p>
+<pre><code>[user]
+    name = lcolladotor
+    email = 1234567+lcolladotor@users.noreply.github.com 
+    </code></pre>
+</section>
 </section>
 <section id="use-the-gh-pages-branch" class="level3">
 <h3 class="anchored" data-anchor-id="use-the-gh-pages-branch">3. Use the <code>gh-pages</code> branch</h3>
 <p>GitHub provides websites for free to Git repositories they host if you use a specific Git branch name: <code>gh-pages</code>. While there are more configuration options available through GitHub, the easiest option is to use the <code>gh-pages</code> branch, which we can do with R thanks to <code>usethis::git_default_branch_rename()</code> as shown below:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## After the restart, we next need to change the default Git branch to "gh-pages".</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="do">## This will make our lives a bit easier later on, as this specific name is used by</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub pages https://pages.github.com/ for websites.</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_default_branch_rename</span>(<span class="at">to =</span> <span class="st">"gh-pages"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">## After the restart, we next need to change the default Git branch to "gh-pages".</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="do">## This will make our lives a bit easier later on, as this specific name is used by</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub pages https://pages.github.com/ for websites.</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_default_branch_rename</span>(<span class="at">to =</span> <span class="st">"gh-pages"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This was the output for me:</p>
 <pre><code>usethis::git_default_branch_rename(to = "gh-pages")
@@ -425,48 +438,69 @@ Error in libgit2::git_signature_default :
 <li><code>usethis::create_github_token()</code> will help you create a personal access token (PAT) for GitHub. Think of it as an alternative version to your GitHub password that we can use from R.</li>
 <li><code>gitcreds::gitcreds_set()</code> will allow you to save your PAT in a way that R will be able to access it again in the future. This function only works on macOS and winOS, but not on Linux.</li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">## We will next link R to GitHub so R can act on your behalf. We will create a</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub Personal Access Token (PAT) so R can say that it's acting on your behalf.</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="do">## This function guides us through the full process:</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">gh_token_help</span>()</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="do">## The above command will suggest that you read more at</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="do">## https://usethis.r-lib.org/articles/articles/git-credentials.html</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="do">## which contains the latest recommendations by the usethis authors for</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="do">## configuring your R to GitHub connection.</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>() <span class="do">## Do not type anything else when using this function</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="do">## That is, don't type gitcreds::gitcreds_set("something")</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="do">## Now read carefully the prompts from gitcreds::gitcreds_set() so you can save</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="do">## your PAT securelly through gitcreds.</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="do">## Type your GitHub token, not your password! Otherwise you might run into this</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="do">## problem: https://github.com/r-lib/usethis/issues/1347</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="for-linux-users-only" class="level4">
+<h4 class="anchored" data-anchor-id="for-linux-users-only">4. For Linux users only!</h4>
 <p>If you are a Linux user, you’ll have to save your GitHub PAT on your <code>~/.Renviron</code> file using <code>usethis::edit_r_environ()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="do">## We will next link R to GitHub so R can act on your behalf. We will create a</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub Personal Access Token (PAT) so R can say that it's acting on your behalf.</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="do">## This function guides us through the full process:</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">gh_token_help</span>()</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="do">## The above command will suggest that you read more at</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="do">## https://usethis.r-lib.org/articles/articles/git-credentials.html</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="do">## which contains the latest recommendations by the usethis authors for</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="do">## configuring your R to GitHub connection.</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="do">## Type your GitHub token, not your password! Otherwise you might run into this</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="do">## problem: https://github.com/r-lib/usethis/issues/1347</span></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="do">## In some situations, gitcreds::gitcreds_set() might not work. For example,</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="do">## gitcreds::gitcreds_set() is not supported on Linux as discussed at</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="do">## https://github.com/r-lib/gitcreds/issues/29. In these situations,</span></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="do">## you have to rely on the old workflow of editing your</span></span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="do">## .Renviron file with contents like (note the empty line at the end!):</span></span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="co"># GITHUB_PAT=YOUR_40_CHARACTERS_TOKEN</span></span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>()</span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="do">## Then re-start your R session.</span></span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>rstudioapi<span class="sc">::</span><span class="fu">restartSession</span>()</span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="do">## Editing the .Renviron is strongly discouraged now since it stores as</span></span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="do">## simple text your GitHub personal access token (PAT) instead of the</span></span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="do">## more secure approach provided by gitcreds.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="do">## We will next link R to GitHub so R can act on your behalf. We will create a</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub Personal Access Token (PAT) so R can say that it's acting on your behalf.</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="do">## This function guides us through the full process:</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">gh_token_help</span>()</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="do">## The above command will suggest that you read more at</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="do">## https://usethis.r-lib.org/articles/articles/git-credentials.html</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="do">## which contains the latest recommendations by the usethis authors for</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="do">## configuring your R to GitHub connection.</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="do">## In some situations, gitcreds::gitcreds_set() might not work. For example,</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="do">## gitcreds::gitcreds_set() is not supported on Linux as discussed at</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="do">## https://github.com/r-lib/gitcreds/issues/29. In these situations,</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="do">## you have to rely on the old workflow of editing your</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="do">## .Renviron file with contents like (note the empty line at the end!):</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="co"># GITHUB_PAT=YOUR_40_CHARACTERS_TOKEN</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>()</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="do">## Then re-start your R session.</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>rstudioapi<span class="sc">::</span><span class="fu">restartSession</span>()</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="do">## Editing the .Renviron is strongly discouraged now since it stores as</span></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a><span class="do">## simple text your GitHub personal access token (PAT) instead of the</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="do">## more secure approach provided by gitcreds.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
 </section>
 <section id="create-github-repo-and-link-your-rstudio-project-to-it" class="level3">
 <h3 class="anchored" data-anchor-id="create-github-repo-and-link-your-rstudio-project-to-it">5. Create GitHub repo and link your RStudio project to it</h3>
 <p>Next, we can can link our local Git repository to GitHub, which is a service that hosts Git repositories. We will do this through R via the <code>usethis::use_github()</code> function. Since we configured R in step 4 to act for us when interacting with GitHub, we can now use this function on our RStudio project that we made for our website.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Next we continue by connecting your local git repository to</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub. For other scenarios, you might want to use the `organisation`</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="do">## and `private` arguments</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">args</span>(usethis<span class="sc">::</span>use_github)</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Now run use_github()</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Next we continue by connecting your local git repository to</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub. For other scenarios, you might want to use the `organisation`</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="do">## and `private` arguments</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">args</span>(usethis<span class="sc">::</span>use_github)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Now run use_github()</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Following the prompts, you will end up with a GitHub repository that is <code>https://github.com/&lt;YourGithubUsername&gt;/&lt;YourGithubUsername&gt;.github.io</code> (or alternatively <code>https://github.com/&lt;YourGithubUsername&gt;/biostat776-intro-&lt;firstname&gt;-&lt;lastname&gt;</code>).</p>
 <p>For example, you can find an example that I created for myself at</p>
@@ -499,11 +533,11 @@ Error in libgit2::git_signature_default :
 <p>If you want, feel free to get creative and include other things. You can play with RMarkdown if you wish to, e.g., you can try to include some table or a video, etc.</p>
 <p>With <a href="https://github.com/seankross/postcards">postcards</a>, explore the five templates at https://github.com/seankross/postcards and then create the files using one of the following five options:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"jolla"</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"jolla-blue"</span>)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"trestles"</span>)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"onofre"</span>)</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"solana"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"jolla"</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"jolla-blue"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"trestles"</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"onofre"</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>postcards<span class="sc">::</span><span class="fu">create_postcard</span>(<span class="at">template =</span> <span class="st">"solana"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>I chose this one for example: <code>postcards::create_postcard(template = "trestles")</code>. This created two files for me: <code>index.Rmd</code> and <code>frank.jpg</code>.</p>
 </section>
@@ -550,14 +584,14 @@ Error in libgit2::git_signature_default :
 <h2 class="anchored" data-anchor-id="class-notes">Class notes</h2>
 <p>First, lets make one for our class notes where we will host data and R scripts. We won’t be hosting HTML files here, so we don’t need to use the <code>gh-pages</code> branch for hosting files on GitHub pages.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create an Rstudio project</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_project</span>(<span class="st">"~/Desktop/biostat776classnotes"</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Start version controlling it</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Share it via GitHub with the world</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create an Rstudio project</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_project</span>(<span class="st">"~/Desktop/biostat776classnotes"</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Start version controlling it</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Share it via GitHub with the world</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Above I created the <code>biostat766classnotes</code> RStudio project + <code>git</code> / GitHub repository. I saved it on my <code>~/Desktop</code> but you can save it wherever you want.</p>
 <p>Once that’s created, create the <code>R</code>/ and <code>data/</code> subdirectories. Inside <code>R/</code>, save your R scripts for every class. As for <code>data/</code>, copy the contents of <a href="https://github.com/lcolladotor/jhustatcomputing/tree/main/data" class="uri">https://github.com/lcolladotor/jhustatcomputing/tree/main/data</a> into it. That way commands like <code>here("data", "chocolate.RDS")</code> from the class lectures will work the same way.</p>
@@ -567,22 +601,22 @@ Error in libgit2::git_signature_default :
 <h2 class="anchored" data-anchor-id="for-each-project">For each project</h2>
 <p>We can go ahead and</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create an Rstudio project</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_project</span>(<span class="st">"~/Desktop/biostat776project1"</span>)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Start version controlling it</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Use the gh-pages branch in order for</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub pages https://pages.github.com/ to</span></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="do">## host our website.</span></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_default_branch_rename</span>(<span class="at">to =</span> <span class="st">"gh-pages"</span>)</span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a .nojekyll file</span></span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="fu">writeLines</span>(<span class="st">""</span>, here<span class="sc">::</span><span class="fu">here</span>(<span class="st">".nojekyll"</span>))</span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="do">## Share it via GitHub with the world</span></span>
-<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create an Rstudio project</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_project</span>(<span class="st">"~/Desktop/biostat776project1"</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Start version controlling it</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Use the gh-pages branch in order for</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub pages https://pages.github.com/ to</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="do">## host our website.</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_default_branch_rename</span>(<span class="at">to =</span> <span class="st">"gh-pages"</span>)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a .nojekyll file</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="fu">writeLines</span>(<span class="st">""</span>, here<span class="sc">::</span><span class="fu">here</span>(<span class="st">".nojekyll"</span>))</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="do">## Share it via GitHub with the world</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Once that’s done, create a <code>index.Rmd</code> (or <code>index.qmd</code> if you are using Quarto) file and make sure you version control the resulting <code>index.html</code> file (<code>git add index.html</code>) after you render your <code>index.Rmd</code> (or <code>index.qmd</code>) file.</p>
 <p>My live example is available at <a href="https://github.com/lcolladotor/biostat776project1" class="uri">https://github.com/lcolladotor/biostat776project1</a>. The rendered website is available at <a href="https://lcolladotor.github.io/biostat776project1/" class="uri">https://lcolladotor.github.io/biostat776project1/</a>.</p>
@@ -591,8 +625,8 @@ Error in libgit2::git_signature_default :
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
@@ -604,7 +638,7 @@ Error in libgit2::git_signature_default :
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-08-28
+ date     2024-09-08
  pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -634,7 +668,13 @@ Error in libgit2::git_signature_default :
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>You can open the “Terminal” panel on RStudio from Tools -&gt; Terminal -&gt; New Terminal window. On macOS and Linux, this will be a Linux terminal by default (typically <code>zsh</code> on macOS and <code>bash</code> on Linux). On Windows, it’s best to use <code>Git Bash</code>. If you followed the instructions from <a href="https://happygitwithr.com/install-git#install-git-windows" class="uri">https://happygitwithr.com/install-git#install-git-windows</a> (option 1: highly recommended) then you will have <code>Git Bash</code> installed. On Windows, you will likely still have to tell RStudio to use <code>Git Bash</code> by editing the dropdown menu from Tools -&gt; Global Options -&gt; Terminal -&gt; “New terminals open with:” (on macOS and Linux you can switch from <code>zsh</code> or <code>bash</code> to your favorite terminal shell if you prefer, though I don’t recommend doing this for new users).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

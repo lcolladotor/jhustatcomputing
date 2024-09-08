@@ -285,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="to-submit-your-project" class="level3">
 <h3 class="anchored" data-anchor-id="to-submit-your-project">To submit your project</h3>
 <p>Please write up your project using R Markdown and <code>knitr</code>. Compile your document as an <strong>HTML file</strong> and submit your HTML file to the dropbox on Courseplus. Please <strong>show all your code</strong> for each of the answers to each part.</p>
-<p>To get started, <a href="https://www.stephaniehicks.com/jhustatcomputing2021/posts/2021-09-02-literate-programming/#create-and-knit-your-first-r-markdown-document">watch this video on setting up your R Markdown document</a>.</p>
+<p>To get started, <a href="https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/#create-and-knit-your-first-r-markdown-document">watch this video on setting up your R Markdown document</a>.</p>
 </section>
 <section id="install-tidyverse" class="level3">
 <h3 class="anchored" data-anchor-id="install-tidyverse">Install <code>tidyverse</code></h3>
@@ -458,11 +458,11 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">slice</span>(dat, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
-       x
-   &lt;dbl&gt;
-1  0.644
-2 -0.881
-3 -0.581</code></pre>
+        x
+    &lt;dbl&gt;
+1 -0.0629
+2  0.0117
+3  0.905 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a new column that indicates whether the value of 'x' is positive or negative</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
@@ -474,16 +474,16 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 100 × 2
          x is_positive
      &lt;dbl&gt; &lt;chr&gt;      
- 1  0.644  Yes        
- 2 -0.881  No         
- 3 -0.581  No         
- 4  0.874  Yes        
- 5 -1.44   No         
- 6 -0.595  No         
- 7 -0.646  No         
- 8  0.993  Yes        
- 9 -0.0260 No         
-10  1.43   Yes        
+ 1 -0.0629 No         
+ 2  0.0117 Yes        
+ 3  0.905  Yes        
+ 4  0.160  Yes        
+ 5  1.45   Yes        
+ 6  0.463  Yes        
+ 7 -1.26   No         
+ 8  0.977  Yes        
+ 9  0.632  Yes        
+10 -1.25   No         
 # ℹ 90 more rows</code></pre>
 </div>
 </div>
@@ -634,7 +634,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-09-05
+ date     2024-09-08
  pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
