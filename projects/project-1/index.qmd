@@ -24,7 +24,7 @@ categories: [project 1, projects]
 
 Please write up your project using R Markdown and `knitr`. Compile your document as an **HTML file** and submit your HTML file to the dropbox on Courseplus. Please **show all your code** for each of the answers to each part.
 
-To get started, [watch this video on setting up your R Markdown document](https://www.stephaniehicks.com/jhustatcomputing2021/posts/2021-09-02-literate-programming/#create-and-knit-your-first-r-markdown-document).
+To get started, [watch this video on setting up your R Markdown document](https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/#create-and-knit-your-first-r-markdown-document).
 
 ### Install `tidyverse`
 
