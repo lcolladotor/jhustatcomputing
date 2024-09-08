@@ -175,6 +175,23 @@ If that's the case, that means that you have to configure your computer to know 
 
 Alternatively, you can use `git` commands directly or the `usethis::use_git_config()` function as documented at <https://happygitwithr.com/hello-git.html?q=config#hello-git>.
 
+#### 2. What if I don't want to share my work email?
+
+In my experience, this has been very rare. But my experience is primarily based from working in academia where I have tried to actively try to network with others (it's not a prerequisite for working in academia!). But maybe you don't want to share your work email with others and that's fair.
+
+At <https://github.com/settings/emails> you might have configured your GitHub account to keep your work email private by selecting the checkbox "Keep my email addresses private". If you did so, GitHub will have a message like this one:
+
+> We’ll remove your public profile email and use **1234567+lcolladotor\@users.noreply.github.com** when performing web-based Git operations (e.g. edits and merges) and sending email on your behalf.
+
+In that case, your `~/.gitconfig` file should use that same email that GitHub created for you:
+
+```         
+[user]
+    name = lcolladotor
+    email = 1234567+lcolladotor@users.noreply.github.com 
+    
+```
+
 ### 3. Use the `gh-pages` branch
 
 GitHub provides websites for free to Git repositories they host if you use a specific Git branch name: `gh-pages`. While there are more configuration options available through GitHub, the easiest option is to use the `gh-pages` branch, which we can do with R thanks to `usethis::git_default_branch_rename()` as shown below:
@@ -207,6 +224,30 @@ For most of you (aka anyone on macOS or winOS and not on Linux), you will use tw
 1.  `usethis::create_github_token()` will help you create a personal access token (PAT) for GitHub. Think of it as an alternative version to your GitHub password that we can use from R.
 2.  `gitcreds::gitcreds_set()` will allow you to save your PAT in a way that R will be able to access it again in the future. This function only works on macOS and winOS, but not on Linux.
 
+```{r}
+#| eval: false
+## We will next link R to GitHub so R can act on your behalf. We will create a
+## GitHub Personal Access Token (PAT) so R can say that it's acting on your behalf.
+## This function guides us through the full process:
+
+usethis::gh_token_help()
+## The above command will suggest that you read more at
+## https://usethis.r-lib.org/articles/articles/git-credentials.html
+## which contains the latest recommendations by the usethis authors for
+## configuring your R to GitHub connection.
+usethis::create_github_token()
+gitcreds::gitcreds_set() ## Do not type anything else when using this function
+## That is, don't type gitcreds::gitcreds_set("something")
+##
+## Now read carefully the prompts from gitcreds::gitcreds_set() so you can save
+## your PAT securelly through gitcreds.
+## 
+## Type your GitHub token, not your password! Otherwise you might run into this
+## problem: https://github.com/r-lib/usethis/issues/1347
+```
+
+#### 4. For Linux users only!
+
 If you are a Linux user, you'll have to save your GitHub PAT on your `~/.Renviron` file using `usethis::edit_r_environ()`.
 
 ```{r}
@@ -221,15 +262,13 @@ usethis::gh_token_help()
 ## which contains the latest recommendations by the usethis authors for
 ## configuring your R to GitHub connection.
 usethis::create_github_token()
-gitcreds::gitcreds_set()
-## Type your GitHub token, not your password! Otherwise you might run into this
-## problem: https://github.com/r-lib/usethis/issues/1347
 
 ## In some situations, gitcreds::gitcreds_set() might not work. For example,
 ## gitcreds::gitcreds_set() is not supported on Linux as discussed at
 ## https://github.com/r-lib/gitcreds/issues/29. In these situations,
 ## you have to rely on the old workflow of editing your
 ## .Renviron file with contents like (note the empty line at the end!):
+#
 # GITHUB_PAT=YOUR_40_CHARACTERS_TOKEN
 #
 usethis::edit_r_environ()
