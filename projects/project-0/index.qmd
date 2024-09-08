@@ -68,7 +68,9 @@ print(RStudio.Version()$version)
 
 5.  If you have a GitHub username, please include this in your email. If you do not have a GitHub username, read <https://happygitwithr.com>, sign up for GitHub, and include your new username in your email to me.
 
-6.  To make sure git is installed on your system, use the 'Terminal' (e.g. it's next to the R Console within RStudio) (or whatever you use), run the following and include the output in your email:
+6.  To make sure git is installed on your system, use the 'Terminal' (e.g. it's next to the R Console within RStudio[^1]) (or whatever you use), run the following and include the output in your email:
+
+[^1]: You can open the "Terminal" panel on RStudio from Tools -\> Terminal -\> New Terminal window. On macOS and Linux, this will be a Linux terminal by default (typically `zsh` on macOS and `bash` on Linux). On Windows, it's best to use `Git Bash`. If you followed the instructions from <https://happygitwithr.com/install-git#install-git-windows> (option 1: highly recommended) then you will have `Git Bash` installed. On Windows, you will likely still have to tell RStudio to use `Git Bash` by editing the dropdown menu from Tools -\> Global Options -\> Terminal -\> "New terminals open with:" (on macOS and Linux you can switch from `zsh` or `bash` to your favorite terminal shell if you prefer, though I don't recommend doing this for new users).
 
 For example, this is mine:
 
