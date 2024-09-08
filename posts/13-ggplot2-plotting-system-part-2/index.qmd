@@ -31,7 +31,7 @@ categories: [module 3, week 3, R, programming, ggplot2, data viz]
 2.  <http://vita.had.co.nz/papers/layered-grammar.pdf>
 :::
 
-I also highlighted these two free online books:
+I **highly recommend** taking a look at these two free online books:
 
 1.  *ggplot2: Elegant Graphics for Data Analysis (3e)* <https://ggplot2-book.org/>
 2.  *R Graphics Cookbook, 2nd edition* <https://r-graphics.org/>
@@ -655,7 +655,7 @@ g <- maacs %>%
 g + geom_point(alpha = 1 / 3) +
     facet_grid(bmicat ~ no2tert) +
     geom_smooth(method = "lm", se = FALSE, col = "steelblue") +
-    theme_bw(base_family = "Avenir", base_size = 10) +
+    theme_bw(base_size = 10) +
     labs(x = expression("log " * PM[2.5])) +
     labs(y = "Nocturnal Symptoms") +
     labs(title = "MAACS Cohort")
