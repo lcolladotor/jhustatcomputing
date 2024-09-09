@@ -206,10 +206,12 @@ The goal of this part of the assignment is to join two datasets together. `gapmi
 
 ### Tasks
 
-1.  Use this dataset it to create a new column called `continent` in our `chocolate` dataset that contains the continent name for each review where the country of bean origin is.
+1.  Use this dataset it to create a new column called `continent` in our `chocolate` dataset[^1] that contains the continent name for each review where the country of bean origin is.
 2.  Only keep reviews that have reviews from countries of bean origin with at least 10 reviews.
 3.  Also, remove the country of bean origin named `"Blend"`.
 4.  Make a set of violin plots with ratings on the y-axis and `continent`s on the x-axis.
+
+[^1]: Use the full `chocolate` data, regardless of any filtering you might have learned how to do on part 1.
 
 **Hint**:
 
