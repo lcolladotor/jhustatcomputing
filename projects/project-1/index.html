@@ -458,11 +458,11 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">slice</span>(dat, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
-        x
-    &lt;dbl&gt;
-1 -0.0629
-2  0.0117
-3  0.905 </code></pre>
+       x
+   &lt;dbl&gt;
+1 -0.373
+2  0.492
+3  0.413</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a new column that indicates whether the value of 'x' is positive or negative</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
@@ -472,18 +472,18 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 2
-         x is_positive
-     &lt;dbl&gt; &lt;chr&gt;      
- 1 -0.0629 No         
- 2  0.0117 Yes        
- 3  0.905  Yes        
- 4  0.160  Yes        
- 5  1.45   Yes        
- 6  0.463  Yes        
- 7 -1.26   No         
- 8  0.977  Yes        
- 9  0.632  Yes        
-10 -1.25   No         
+        x is_positive
+    &lt;dbl&gt; &lt;chr&gt;      
+ 1 -0.373 No         
+ 2  0.492 Yes        
+ 3  0.413 Yes        
+ 4  1.14  Yes        
+ 5 -0.461 No         
+ 6 -0.182 No         
+ 7  1.13  Yes        
+ 8  0.303 Yes        
+ 9 -0.555 No         
+10  0.956 Yes        
 # ℹ 90 more rows</code></pre>
 </div>
 </div>
@@ -497,7 +497,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <section id="tasks" class="level3">
 <h3 class="anchored" data-anchor-id="tasks">Tasks</h3>
 <ol type="1">
-<li>Use this dataset it to create a new column called <code>continent</code> in our <code>chocolate</code> dataset that contains the continent name for each review where the country of bean origin is.</li>
+<li>Use this dataset it to create a new column called <code>continent</code> in our <code>chocolate</code> dataset<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> that contains the continent name for each review where the country of bean origin is.</li>
 <li>Only keep reviews that have reviews from countries of bean origin with at least 10 reviews.</li>
 <li>Also, remove the country of bean origin named <code>"Blend"</code>.</li>
 <li>Make a set of violin plots with ratings on the y-axis and <code>continent</code>s on the x-axis.</li>
@@ -634,7 +634,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-09-08
+ date     2024-09-09
  pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -685,7 +685,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  tzdb          0.4.0   2023-05-12 [1] CRAN (R 4.4.0)
  utf8          1.2.4   2023-10-22 [1] CRAN (R 4.4.0)
  vctrs         0.6.5   2023-12-01 [1] CRAN (R 4.4.0)
- withr         3.0.0   2024-01-16 [1] CRAN (R 4.4.0)
+ withr         3.0.1   2024-07-31 [1] CRAN (R 4.4.0)
  xfun          0.46    2024-07-18 [1] CRAN (R 4.4.0)
  yaml          2.3.10  2024-07-26 [1] CRAN (R 4.4.0)
 
@@ -698,7 +698,13 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Use the full <code>chocolate</code> data, regardless of any filtering you might have learned how to do on part 1.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
