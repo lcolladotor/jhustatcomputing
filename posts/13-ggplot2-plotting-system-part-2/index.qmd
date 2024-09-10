@@ -223,7 +223,27 @@ Here, we can see there appears to be a slight increasing trend, suggesting that 
 ::: callout-note
 ### Question
 
-Let's use the `ggplot()` function with our `palmerpenguins` dataset example and make a scatter plot with `flipper_length_mm` on the x-axis, `bill_length_mm` on the y-axis, colored by `species`, and a smoother by adding a linear regression.
+Let's use the `ggplot()` function in another dataset, namely the [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) dataset. These data contain observations for 344 penguins. There are 3 different species of penguins in this dataset, collected from 3 islands in the Palmer Archipelago, Antarctica.
+
+```{r}
+#| echo: false
+#| fig-cap: "Palmer penguins"
+#| out-width: '60%'
+#| fig-align: 'center'
+knitr::include_graphics("https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png")
+```
+
+\[**Source**: [Artwork by Allison Horst](https://github.com/allisonhorst/stats-illustrations)\]
+
+```{r}
+library(palmerpenguins)
+```
+
+```{r}
+glimpse(penguins)
+```
+
+Now that we are familiar with `palmerpenguins` let's make a scatter plot with `flipper_length_mm` on the x-axis, `bill_length_mm` on the y-axis, colored by `species`, and a smoother by adding a linear regression.
 
 ```{r}
 # try it yourself
