@@ -150,7 +150,7 @@ The ratings are discrete values making the histogram look strange. When you make
 # Add your solution here
 ```
 
-4.  Which company (name) makes the best chocolate (or has the highest ratings on average) with beans from Ecuador?
+4.  Which company location makes the best chocolate (or has the highest ratings on average) with beans from Ecuador?
 
 ```{r}
 # Add your solution here
