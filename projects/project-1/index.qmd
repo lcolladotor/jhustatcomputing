@@ -230,6 +230,7 @@ The goal of this part of the assignment is to take a dataset that is either mess
 We are going to create a set of features for us to plot over time. Use the functions in `dplyr` and `tidyr` to perform the following steps to the `chocolate` dataset:
 
 1.  Create a new set of columns titled `beans`, `sugar`, `cocoa_butter`, `vanilla`, `letchin`, and `salt` that contain a 1 or 0 representing whether or not that review for the chocolate bar contained that ingredient (1) or not (0).
+    -   See [this public gist](https://gist.github.com/lcolladotor/3d68a76f79c271d84d066368b3f3c4a8) for how to differentiate `S` vs `S*` vs `Sa` using `str_detect()` from the `stringr` package.
 2.  Create a new set of columns titled `char_cocoa`, `char_sweet`, `char_nutty`, `char_creamy`, `char_roasty`, `char_earthy` that contain a 1 or 0 representing whether or not that the most memorable characteristic for the chocolate bar had that word (1) or not (0). For example, if the word "sweet" appears in the `most_memorable_characteristics`, then record a 1, otherwise a 0 for that review in the `char_sweet` column (**Hint**: check out `str_detect()` from the `stringr` package).
 3.  For each year (i.e. `review_date`), calculate the mean value in each new column you created across all reviews for that year. (**Hint**: If all has gone well thus far, you should have a dataset with 16 rows and 13 columns).
 4.  Convert this wide dataset into a long dataset with a new `feature` and `mean_score` column.
