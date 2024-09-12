@@ -460,9 +460,9 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 3 × 1
        x
    &lt;dbl&gt;
-1 -1.41 
-2  0.189
-3 -0.853</code></pre>
+1 -1.12 
+2  0.579
+3  1.64 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a new column that indicates whether the value of 'x' is positive or negative</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
@@ -474,16 +474,16 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 100 × 2
         x is_positive
     &lt;dbl&gt; &lt;chr&gt;      
- 1 -1.41  No         
- 2  0.189 Yes        
- 3 -0.853 No         
- 4 -0.483 No         
- 5  0.547 Yes        
- 6 -0.300 No         
- 7 -1.06  No         
- 8 -2.34  No         
- 9  0.630 Yes        
-10  1.61  Yes        
+ 1 -1.12  No         
+ 2  0.579 Yes        
+ 3  1.64  Yes        
+ 4  0.179 Yes        
+ 5  1.79  Yes        
+ 6 -1.54  No         
+ 7  0.571 Yes        
+ 8 -1.90  No         
+ 9 -0.731 No         
+10 -0.222 No         
 # ℹ 90 more rows</code></pre>
 </div>
 </div>
@@ -518,7 +518,10 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <h3 class="anchored" data-anchor-id="tasks-1">Tasks</h3>
 <p>We are going to create a set of features for us to plot over time. Use the functions in <code>dplyr</code> and <code>tidyr</code> to perform the following steps to the <code>chocolate</code> dataset:</p>
 <ol type="1">
-<li>Create a new set of columns titled <code>beans</code>, <code>sugar</code>, <code>cocoa_butter</code>, <code>vanilla</code>, <code>letchin</code>, and <code>salt</code> that contain a 1 or 0 representing whether or not that review for the chocolate bar contained that ingredient (1) or not (0).</li>
+<li>Create a new set of columns titled <code>beans</code>, <code>sugar</code>, <code>cocoa_butter</code>, <code>vanilla</code>, <code>letchin</code>, and <code>salt</code> that contain a 1 or 0 representing whether or not that review for the chocolate bar contained that ingredient (1) or not (0).
+<ul>
+<li>See <a href="https://gist.github.com/lcolladotor/3d68a76f79c271d84d066368b3f3c4a8">this public gist</a> for how to differentiate <code>S</code> vs <code>S*</code> vs <code>Sa</code> using <code>str_detect()</code> from the <code>stringr</code> package.</li>
+</ul></li>
 <li>Create a new set of columns titled <code>char_cocoa</code>, <code>char_sweet</code>, <code>char_nutty</code>, <code>char_creamy</code>, <code>char_roasty</code>, <code>char_earthy</code> that contain a 1 or 0 representing whether or not that the most memorable characteristic for the chocolate bar had that word (1) or not (0). For example, if the word “sweet” appears in the <code>most_memorable_characteristics</code>, then record a 1, otherwise a 0 for that review in the <code>char_sweet</code> column (<strong>Hint</strong>: check out <code>str_detect()</code> from the <code>stringr</code> package).</li>
 <li>For each year (i.e.&nbsp;<code>review_date</code>), calculate the mean value in each new column you created across all reviews for that year. (<strong>Hint</strong>: If all has gone well thus far, you should have a dataset with 16 rows and 13 columns).</li>
 <li>Convert this wide dataset into a long dataset with a new <code>feature</code> and <code>mean_score</code> column.</li>
@@ -634,7 +637,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-09-11
+ date     2024-09-12
  pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
