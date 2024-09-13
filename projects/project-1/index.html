@@ -460,9 +460,9 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 3 × 1
        x
    &lt;dbl&gt;
-1 -1.12 
-2  0.579
-3  1.64 </code></pre>
+1 -0.532
+2 -2.03 
+3 -0.336</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a new column that indicates whether the value of 'x' is positive or negative</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
@@ -472,18 +472,18 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 100 × 2
-        x is_positive
-    &lt;dbl&gt; &lt;chr&gt;      
- 1 -1.12  No         
- 2  0.579 Yes        
- 3  1.64  Yes        
- 4  0.179 Yes        
- 5  1.79  Yes        
- 6 -1.54  No         
- 7  0.571 Yes        
- 8 -1.90  No         
- 9 -0.731 No         
-10 -0.222 No         
+          x is_positive
+      &lt;dbl&gt; &lt;chr&gt;      
+ 1 -0.532   No         
+ 2 -2.03    No         
+ 3 -0.336   No         
+ 4 -0.277   No         
+ 5  1.79    Yes        
+ 6 -1.21    No         
+ 7  1.06    Yes        
+ 8  0.447   Yes        
+ 9  1.38    Yes        
+10 -0.00422 No         
 # ℹ 90 more rows</code></pre>
 </div>
 </div>
@@ -493,7 +493,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 </section>
 <section id="part-2-join-two-datasets-together" class="level1">
 <h1>Part 2: Join two datasets together</h1>
-<p>The goal of this part of the assignment is to join two datasets together. <code>gapminder</code> is a <a href="https://cran.r-project.org/web/packages/gapminder/README.html">R package</a> that contains an excerpt from the <a href="https://www.gapminder.org/data/">Gapminder data</a>.</p>
+<p>The goal of this part of the assignment is to join two datasets together. <code>gapminder</code> is a <a href="https://cran.r-project.org/web/packages/gapminder/README.html">R package</a> that contains an excerpt from the <a href="https://www.gapminder.org/data/">Gapminder data</a> (use the unfiltered version!).</p>
 <section id="tasks" class="level3">
 <h3 class="anchored" data-anchor-id="tasks">Tasks</h3>
 <ol type="1">
@@ -637,7 +637,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-09-12
+ date     2024-09-13
  pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
