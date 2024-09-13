@@ -202,7 +202,7 @@ dat %>%
 
 # Part 2: Join two datasets together
 
-The goal of this part of the assignment is to join two datasets together. `gapminder` is a [R package](https://cran.r-project.org/web/packages/gapminder/README.html) that contains an excerpt from the [Gapminder data](https://www.gapminder.org/data/).
+The goal of this part of the assignment is to join two datasets together. `gapminder` is a [R package](https://cran.r-project.org/web/packages/gapminder/README.html) that contains an excerpt from the [Gapminder data](https://www.gapminder.org/data/) (use the unfiltered version!).
 
 ### Tasks
 
