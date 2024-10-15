@@ -148,6 +148,20 @@ This is a challenging topic, but as you analyze data, ask yourself the following
 4.  Which stakeholders need to be involved in making decisions in and around the data analysis?
 :::
 
+<blockquote class="twitter-tweet">
+
+<p lang="en" dir="ltr">
+
+For more on this line of thought read this book by <a href="https://twitter.com/CCriadoPerez?ref_src=twsrc%5Etfw">@CCriadoPerez</a> or other books 📚 <a href="https://t.co/ws3ctX3ijr">https://t.co/ws3ctX3ijr</a> <a href="https://t.co/8IYmCpxeGx">pic.twitter.com/8IYmCpxeGx</a>
+
+</p>
+
+— 🇲🇽 Leonardo Collado-Torres (@lcolladotor) <a href="https://twitter.com/lcolladotor/status/1774996279073874359?ref_src=twsrc%5Etfw">April 2, 2024</a>
+
+</blockquote>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 # Best practices for sharing data
 
 Data sharing is an essential element of the scientific method, imperative to ensure transparency and reproducibility.
@@ -230,9 +244,74 @@ Document your data in three ways:
 3.  **With README files**. README files provide abbreviated information about a collection of files (e.g. explain organization, file locations, observations and variables present in each file, details on the experimental design, etc).
 :::
 
+# Best git/GitHub practices when adapting code
+
+The following material is from a [LIBD rstats club](https://research.libd.org/rstatsclub/) presentation I gave in 2023-09-15.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lzl1zu-HCZ4?si=OPOfarfEqpl0tEeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+*I've adapted some of the content from the [public notes](https://docs.google.com/document/d/1Hi5KN6aC0t6iF3jkXJ0r72NPW8X3sZeTOImiEFQB66M/edit?usp=sharing).*
+
+## Adapted from (file path) strategy
+
+-   Examples: <https://github.com/search?q=repo%3ALieberInstitute%2Fbrainseq_phase2%20adapted&type=code>
+
+Pros:
+
+-   Simple, you likely know the file path to which script you are adapting.
+
+Cons:
+
+-   File paths change over time
+-   Not everyone will have access to older files
+
+## Adapted from (GitHub URL) strategy
+
+-   Examples: <https://github.com/search?q=repo%3ALieberInstitute%2Fbrainseq_phase2%20adapted&type=code>
+
+Pros:
+
+-   You likely know the URL to the script you are adapting
+
+Cons:
+
+-   URLs change over time: files get renamed, code gets moved around
+    -   It's best to use GitHub permalinks documented [here](https://docs.github.com/en/repositories/working-with-files/using-files/getting-permanent-links-to-files)
+-   Not everyone will have access to private GitHub repos
+
+## Current recommended strategy
+
+1.  Copy code
+
+-   Ideally full script.
+-   Note that if you are adapting a full GitHub repository it's then best to *fork it*.
+
+2.  Prior to making any changes, version control your copy.
+
+-   On the commit message provide the [GitHub permalink](https://docs.github.com/en/repositories/working-with-files/using-files/getting-permanent-links-to-files) to the original source
+-   Use the [GitHub co-authored commit message syntax](https://github.blog/news-insights/product-news/commit-together-with-co-authors/) to provide credit to others
+    -   Enables downstream use of the *GitHub contributors graph* like at <https://github.com/LieberInstitute/living_brain_reanalysis/graphs/contributors>
+
+3.  Make edits and version control as you see fit
+4.  (highly recommended) Auto-style code using `styler` as shown here: <https://github.com/LieberInstitute/template_project/blob/devel/code/update_style.R>
+
+-   Save the auto-style changes on their own commit message to avoid mixing auto-style changes with actual changes you made. Otherwise you'll later have trouble distinguishing the two types of changes.
+
+Pros:
+
+-   Most future proof version.
+
+-   Enables downstream use of the GitHub contributor graph instead of relying on pure memory.
+
+Cons:
+
+-   Technically it involves a few steps which might take a bit of time getting used to.
+
 # Best practices for data visualizations
 
-## Motiviation
+## Motivation
 
 ::: callout-tip
 ### Quote from one of Roger Peng's heroes
@@ -300,6 +379,8 @@ The act of visualizing data typically proceeds in two broad steps:
 1.  Given the question and the audience, **what type of plot should I make?**
 2.  Given the plot I intend to make, **how can I optimize it for clarity and effectiveness?**
 :::
+
+Again I highly recommend checking the content made by [Christine Zhang](https://christineyzhang.com/)!
 
 ## Data viz principles
 
