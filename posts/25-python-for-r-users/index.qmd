@@ -188,7 +188,7 @@ python3 --version
 
 ## objects in python
 
-Everything in Python is an object. Think of an object as a data structure that contains both data as well as functions. These objects can be variables, functions, and modules which are all objects. We can operate on this objects with what are called **operators** (e.g. addition, subtraction, concatenation or other operations), define/apply functions, test/apply for conditionals statements, (e.g. `if`, `else` statements) or iterate over the objects.
+Everything in Python is an object. Think of an object as a data structure that contains both data as well as functions. These objects can be variables, functions, and modules which are all objects. We can operate on these objects with what are called **operators** (e.g. addition, subtraction, concatenation or other operations), define/apply functions, test/apply for conditionals statements, (e.g. `if`, `else` statements) or iterate over the objects.
 
 Not all objects are required to have **attributes** and **methods** to operate on the objects in Python, but **everything is an object** (i.e. all objects can be assigned to a variable or passed as an argument to a function). A user can work with built-in defined classes of objects or can create new classes of objects. Using these objects, a user can perform operations on the objects by modifying / interacting with them.
 
@@ -205,7 +205,7 @@ Variable names are case sensitive, can contain numbers and letters, can contain 
 -   Assignment operator: `=`
 -   The augmented assignment operator `+=` (or `-=`) can be used like `n += x` which is equal to `n = n + x`
 -   Boolean relational operators: `==` (equal), `!=` (not equal), `>`, `<`, `>=` (greater than or equal to), `<=` (less than or equal to)
--   Boolean expressions will produce True or False
+-   Boolean expressions will produce `True` or `False`
 -   Logical operators: `and`, `or`, and `not`. e.g. `x > 1 and x <= 5`
 
 ```{python}
@@ -248,7 +248,7 @@ All other functions need defined by the user or need to be imported from modules
 For a more detailed list on the built-in functions in Python, see [Built-in Python Functions](https://docs.python.org/2/library/functions.html).
 :::
 
-The first function we will discuss, `type()`, reports the type of any object, which is very useful when handling multiple data types (remember, everything in Python is an object). Here are some the mains types you will encounter:
+The first function we will discuss, `type()`, reports the type of any object, which is very useful when handling multiple data types (remember, everything in Python is an object). Here are some the main types you will encounter:
 
 -   integer (`int`)
 -   floating-point (`float`)
@@ -269,7 +269,7 @@ type("Let's go Ravens!")
 
 This would return the `str` type.
 
-You have also seen how to use the `print()` function. The function print will accept an argument and print the argument to the screen. Print can be used in two ways:
+You have also seen how to use the `print()` function. The function print will accept an argument and print the argument to the screen.
 
 ```{python}
 print("Let's go Ravens!")
@@ -277,7 +277,7 @@ print("Let's go Ravens!")
 
 ## new functions
 
-New functions can be defined using one of the 31 keywords in Python def.
+New functions can be `def`ined using one of the 31 keywords in Python: `def`.
 
 ```{python}
 def new_world(): 
@@ -288,9 +288,9 @@ print(new_world())
 
 The first line of the function (the header) must start with `def`, the name of the function (which can contain underscores), parentheses (with any arguments inside of it) and a colon. The arguments can be specified in any order.
 
-The rest of the function (the body) always has an indentation of four spaces. If you define a function in the interactive mode, the interpreter will print ellipses (...) to let you know the function is not complete. To complete the function, enter an empty line (not necessary in a script).
+The rest of the function (the body) always has an indentation of four spaces. If you define a function in the interactive mode, the interpreter will print ellipses (`...`) to let you know the function is not complete. To complete the function, enter an empty line (not necessary in a script).
 
-To return a value from a function, use return. The function will immediately terminate and not run any code written past this point.
+To return a value from a function, use `return`. The function will immediately terminate and not run any code written past this point.
 
 ```{python}
 def squared(x):
