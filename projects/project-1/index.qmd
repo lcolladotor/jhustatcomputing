@@ -18,7 +18,7 @@ categories: [project 1, projects]
 
 # Background
 
-**Due date: September 15th at 11:59pm**
+**Due date: September 14th at 11:59pm**
 
 ### To submit your project
 

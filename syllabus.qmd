@@ -6,7 +6,7 @@ title: "Syllabus"
 
 -   Location: In person
 -   Course time: Tuesdays and Thursdays from 9:00-10:20 a.m. (**Eastern Daylight Time** zone)
--   Course location: 140.776.01 is in person in ~~W5030~~ Sommer Hall (Wolfe E2014). **Note** that our class got reassigned to Sommer Hall for 2024/08/29 and beyond to accommodate the larger than expected enrollment.
+-   Course location: 140.776.01 is in person in Sommer Hall (Wolfe E2014).
 -   Assignments: Three projects
 
 ### How to register and participate
@@ -23,7 +23,7 @@ title: "Syllabus"
 
 ### Teaching Assistants
 
--   Jiaxin (Jessi) Huang ([jhuan206\@jh.edu](mailto:jhuan206@jh.edu))
+-   Yanting Hu ([yhu157\@jh.edu](mailto:yhu157@jh.edu))
 -   Phyllis Wei ([ywei43\@jhu.edu](mailto:ywei43@jhu.edu))
 -   Yu Lu ([ylu136\@jh.edu](mailto:ylu136@jh.edu))
 
@@ -77,10 +77,10 @@ There will be 4 assignments, due every 2--3 weeks. Projects will be submitted el
 
 The project assignments will be due on
 
--   Project 0: end of week 2 (Sunday September 8, 11:59pm) (entirely optional and not graded but hopefully useful and fun)
--   Project 1: end of week 3 (Sunday September 15, 11:59pm)
--   Project 2: end of week 5 (Sunday September 29, 11:59pm)
--   Project 3: end of week 8 (Sunday October 20, 11:59pm)
+-   Project 0: end of week 2 (Sunday September 7, 11:59pm) (entirely optional and not graded but hopefully useful and fun)
+-   Project 1: end of week 3 (Sunday September 14, 11:59pm)
+-   Project 2: end of week 5 (Sunday September 28, 11:59pm)
+-   Project 3: end of week 8 (Sunday October 19, 11:59pm)
 
 ### Project collaboration
 
@@ -184,7 +184,7 @@ Go to [https://cran.r-project.org]() and
 
 2.  Click on "base"
 
-3.  Click on "Download R 4.4.1 for Windows"
+3.  Click on "Download R 4.5.1 for Windows"
 
 ::: callout-warning
 The version in the video is not the latest version. Please download the latest version.
@@ -198,7 +198,7 @@ Goto [https://cran.r-project.org]() and
 
 1.  Click the link to "Download R for (Mac) OS X".
 
-2.  Click on "R-4.4.1.pkg"
+2.  Click on "R-4.5.1-arm64.pkg" (for Apple Silicon Macs)
 
 ::: callout-warning
 The version in the video is not the latest version. Please download the latest version.

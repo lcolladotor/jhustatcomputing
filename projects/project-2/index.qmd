@@ -18,7 +18,7 @@ categories: [project 2, projects]
 
 # Background
 
-**Due date: September 29th at 11:59pm**
+**Due date: September 28th at 11:59pm**
 
 The goal of this assignment is to practice designing and writing functions along with practicing our tidyverse skills that we learned in our previous project. Writing functions involves thinking about how code should be divided up and what the interface/arguments should be. In addition, you need to think about what the function will return as output.
 

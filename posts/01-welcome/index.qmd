@@ -37,6 +37,7 @@ I'm excited to be back this year to teach "140.776 Statistical Computing" at <a 
 ```{=html}
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ```
+
 This course is designed for ScM and PhD students at Johns Hopkins Bloomberg School of Public Health. I am pretty flexible about permitting outside students, but I want everyone to be aware of the goals and assumptions so no one feels like they are surprised by how the class works.
 
 ::: callout-note
@@ -124,7 +125,7 @@ Go to <https://cran.r-project.org> and
 
 2.  Click on "base"
 
-3.  Click on "Download R 4.4.1 for Windows"
+3.  Click on "Download R 4.5.1 for Windows"
 
 ::: callout-warning
 The version in the video is not the latest version of R. Please download the latest version.
@@ -138,7 +139,7 @@ Goto <https://cran.r-project.org> and
 
 1.  Click the link to "Download R for (Mac) OS X".
 
-2.  Click on "R-4.4.1.pkg"
+2.  Click on "R-4.5.1-arm64.pkg" (for Apple Silicon Macs)
 
 ::: callout-warning
 The version in the video is not the latest version of R. Please download the latest version.
@@ -225,15 +226,15 @@ At the Lieber Institute for Brain Development ([LIBD](https://www.libd.org/)), m
 
 Every day I use [R](http://cran.r-project.org/) and [Bioconductor](http://www.bioconductor.org/), and on some days I [write R packages](https://lcolladotor.github.io/pkgs/). Occasionally I write [blog posts](http://lcolladotor.github.io/#blog) about them and other tools. I'm a co-founder of the [LIBD rstats club](http://LieberInstitute.github.io/rstatsclub/) and the [CDSB community](https://comunidadbioinfo.github.io) of R and Bioconductor developers in Mexico and Latin America, that we described at the [R Consortium website](https://www.r-consortium.org/blog/2020/03/18/cdsb-diversity-and-outreach-hotspot-in-mexico). In the past, I also served on the [Bioconductor Community Advisory Board](http://bioconductor.org/about/community-advisory-board/).
 
-If you want, you can find me on [Twitter](https://twitter.com/lcolladotor) or [Bluesky](https://bsky.app/profile/lcolladotor.bsky.social).
+If you want, you can find me on [Bluesky](https://bsky.app/profile/lcolladotor.bsky.social), [LinkedIn](https://www.linkedin.com/in/lcollado/), among other places.
 
 #### Teaching Assistants
 
 We also have three amazing TAs this year:
 
--   Jiaxin (Jessi) Huang ([jhuan206\@jh.edu](mailto:jhuan206@jh.edu)): I am a second-year master student in the Biostatistics program, specializing in longitudinal data analysis. My current research focuses on exploring and identifying factors associated with long asymptomatic malaria infections. In my free time, I enjoy traveling, cooking, outdoor activities and watching shows.
--   Phyllis Wei ([ywei43\@jhu.edu](mailto:ywei43@jhu.edu)). She is a fourth year Ph.D. student in Biostatistics. She develops methods to help understand the genetic basis of complex traits and diseases and enhance disease risk prediction models through data integration. Outside of biostatistics, she enjoys hiking, baking, and visiting museums.
--   Yu Lu ([ylu136\@jh.edu](mailto:ylu136@jh.edu)): I am a third-year Ph.D. student in Biostatistics. My work is focused on developing functional data analysis methods inspired by physical activity data. In my free time, I enjoy the outdoor but also cuddling with my cat, Finland. (Didn’t manage to make him wear a harness and take a walk outside yet)
+-   Yanting Hu ([yhu157\@jh.edu](mailto:yhu157@jh.edu)): TODO.
+-   Phyllis Wei ([ywei43\@jhu.edu](mailto:ywei43@jhu.edu)). She is a fifth year Ph.D. student in Biostatistics. She develops methods to help understand the genetic basis of complex traits and diseases and enhance disease risk prediction models through data integration. Outside of biostatistics, she enjoys hiking, baking, and visiting museums.
+-   Yu Lu ([ylu136\@jh.edu](mailto:ylu136@jh.edu)): I am a fourth year Ph.D. student in Biostatistics. My work is focused on developing functional data analysis methods inspired by physical activity data. In my free time, I enjoy the outdoor but also cuddling with my cat, Finland. (Didn’t manage to make him wear a harness and take a walk outside yet)
 
 ### Assignment Due Dates
 
