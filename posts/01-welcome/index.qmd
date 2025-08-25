@@ -232,7 +232,7 @@ If you want, you can find me on [Bluesky](https://bsky.app/profile/lcolladotor.b
 
 We also have three amazing TAs this year:
 
--   Yanting Hu ([yhu157\@jh.edu](mailto:yhu157@jh.edu)): TODO.
+-   Yanting Hu ([yhu157\@jh.edu](mailto:yhu157@jh.edu)): I am a second-year Master’s student in Biostatistics. My research interests focus on genomics, particularly on developing and applying statistical methods to analyze high-dimensional genomic data. In my leisure time, I enjoy photography, especially capturing everyday life.
 -   Phyllis Wei ([ywei43\@jhu.edu](mailto:ywei43@jhu.edu)). She is a fifth year Ph.D. student in Biostatistics. She develops methods to help understand the genetic basis of complex traits and diseases and enhance disease risk prediction models through data integration. Outside of biostatistics, she enjoys hiking, baking, and visiting museums.
 -   Yu Lu ([ylu136\@jh.edu](mailto:ylu136@jh.edu)): I am a fourth year Ph.D. student in Biostatistics. My work is focused on developing functional data analysis methods inspired by physical activity data. In my free time, I enjoy the outdoor but also cuddling with my cat, Finland. (Didn’t manage to make him wear a harness and take a walk outside yet)
 

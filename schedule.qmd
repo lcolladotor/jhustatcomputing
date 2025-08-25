@@ -14,7 +14,7 @@ Check <https://github.com/lcolladotor/biostat776classnotes> for Leo's live class
 
 ::: column-page
 | Week | Lectures / due dates | Topics | Projects |   |
-|---------|---------|----------------------------|------------------|---------|
+|----|----|----|----|----|
 | **Module 1** |  | **Statistical and computational tools for scientific and reproducible research** |  |  |
 |  |  |  |  |  |
 | Week 1 | Lecture 1 | `r emojifont::emoji('wave')` Course introduction \[[html](posts/01-welcome/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/01-welcome/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/01-welcome/index.R)\] | `r emojifont::emoji('palm_tree')` Project 0 \[[html](projects/project-0/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/projects/project-0/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/projects/project-0/index.R)\] |  |
