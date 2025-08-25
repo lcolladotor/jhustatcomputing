@@ -106,7 +106,7 @@ These are three **different** applications that must be installed separately bef
 
 -   `RStudio IDE` is an interface into R that makes many aspects of using and programming R simpler
 
--   `Positron` is a new interface for working with R developed by [Posit](https://posit.co/) (formerly RStudio). All new features are being implemented in `Positron`, but as it was just recently released, it might have some bugs.
+-   `Positron` is a new interface for working with R developed by [Posit](https://posit.co/) (formerly RStudio). All new features are being implemented in `Positron`, but as it was just recently released, it might have some bugs. If you are choosing between `RStudio IDE` and `Positron`, check <https://positron.posit.co/faqs.html#is-rstudio-going-away>.
 
 `R`, `RStudio IDE`, and `Positron` are available for Windows, macOS, and most flavors of Unix and Linux. Please download the version that is suitable for your computing setup.
 
