@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.7.33</generator>
-<lastBuildDate>Mon, 25 Aug 2025 16:40:35 GMT</lastBuildDate>
+<lastBuildDate>Mon, 25 Aug 2025 16:58:10 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -259,8 +259,97 @@ Warning
 <h4 class="anchored" data-anchor-id="how-to-get-air-auto-code-formatter">How to get Air (auto-code formatter)</h4>
 <p>Go to <a href="https://posit-dev.github.io/air/" class="uri">https://posit-dev.github.io/air/</a> and</p>
 <ol type="1">
-<li>Click on “RStudio” if you are using <code>RStudio IDE</code>. That will take you to <a href="https://posit-dev.github.io/air/editor-rstudio.html" class="uri">https://posit-dev.github.io/air/editor-rstudio.html</a> where you will find the detailed installation instructions.</li>
-<li>Click on “VS Code and Positron” if you are using <code>Positron</code>. That will take you to <a href="https://posit-dev.github.io/air/editor-vscode.html" class="uri">https://posit-dev.github.io/air/editor-vscode.html</a> where some options are described. Note however, that <code>Air</code> is already available from <code>Positron</code>. See the <a href="positron://settings/editor.defaultFormatter">“Editor: Default Formatter” setting</a> where you can select “Air - R Language Support” from the drop down menu. You can also configure a few options at <a href="positron://settings/air.dependencyLogLevels">positron://settings/air.dependencyLogLevels</a> and related settings.</li>
+<li><p>Click on “RStudio” if you are using <code>RStudio IDE</code>. That will take you to <a href="https://posit-dev.github.io/air/editor-rstudio.html" class="uri">https://posit-dev.github.io/air/editor-rstudio.html</a> where you will find the detailed installation instructions.</p></li>
+<li><p>Click on “VS Code and Positron” if you are using <code>Positron</code>. That will take you to <a href="https://posit-dev.github.io/air/editor-vscode.html" class="uri">https://posit-dev.github.io/air/editor-vscode.html</a> where some options and configuration steps are described. Note however, that <code>Air</code> is already available from <code>Positron</code>. You will need to open your <code>settings.json</code> file from the Command Palette (<code>Shift + Cmd + P</code> on Mac/Linux, <code>Shift + Ctrl + P</code> on Windows):</p>
+<ul>
+<li><p>Run <code>Preferences: Open Workspace Settings (JSON)</code> to modify workspace specific settings (recommended).</p></li>
+<li><p>Run <code>Preferences: Open User Settings (JSON)</code> to modify global user settings (preferred option if you are not working with code from others). Then edit your <code>settings.json</code> with the relevant lines about R code formatting and <code>Air</code> as shown below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-2">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"files.associations"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-3">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"renv.lock"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"json"</span></span>
+<span id="cb2-4">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">},</span></span>
+<span id="cb2-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"positron.assistant.gitIntegration.enable"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">true</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"positron.assistant.showTokenUsage.enable"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">true</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-7">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"positron.assistant.toolDetails.enable"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">true</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-8">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"[r]"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-9">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"editor.formatOnSave"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">true</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-10">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"editor.defaultFormatter"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Posit.air-vscode"</span></span>
+<span id="cb2-11">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb2-12"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
+</div></li>
+</ul>
+<ol type="1">
+<li>You can also configure a few options at <a href="positron://settings/air.dependencyLogLevels">positron://settings/air.dependencyLogLevels</a> and related settings.</li>
+</ol></li>
 </ol>
 </section>
 </section>
@@ -424,14 +513,14 @@ Important
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">options</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">120</span>)</span>
-<span id="cb2-2">sessioninfo<span class="sc" style="color: #5E5E5E;
+<span id="cb3-2">sessioninfo<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -484,7 +573,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -986,7 +1075,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1331,7 +1420,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -1992,7 +2081,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -2838,7 +2927,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3312,7 +3401,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4703,7 +4792,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6523,7 +6612,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7484,7 +7573,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8333,7 +8422,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -8846,7 +8935,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10209,7 +10298,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -12164,7 +12253,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -13919,7 +14008,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -15205,7 +15294,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -16538,7 +16627,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -19576,7 +19665,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -21584,7 +21673,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -22538,7 +22627,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -24282,7 +24371,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Mon, 25 Aug 2025 16:40:35 GMT</pubDate>
+  <pubDate>Mon, 25 Aug 2025 16:58:10 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -509,8 +509,29 @@ Warning
 <h4 class="anchored" data-anchor-id="how-to-get-air-auto-code-formatter">How to get Air (auto-code formatter)</h4>
 <p>Go to <a href="https://posit-dev.github.io/air/" class="uri">https://posit-dev.github.io/air/</a> and</p>
 <ol type="1">
-<li>Click on “RStudio” if you are using <code>RStudio IDE</code>. That will take you to <a href="https://posit-dev.github.io/air/editor-rstudio.html" class="uri">https://posit-dev.github.io/air/editor-rstudio.html</a> where you will find the detailed installation instructions.</li>
-<li>Click on “VS Code and Positron” if you are using <code>Positron</code>. That will take you to <a href="https://posit-dev.github.io/air/editor-vscode.html" class="uri">https://posit-dev.github.io/air/editor-vscode.html</a> where some options are described. Note however, that <code>Air</code> is already available from <code>Positron</code>. See the <a href="positron://settings/editor.defaultFormatter">“Editor: Default Formatter” setting</a> where you can select “Air - R Language Support” from the drop down menu. You can also configure a few options at <a href="positron://settings/air.dependencyLogLevels">positron://settings/air.dependencyLogLevels</a> and related settings.</li>
+<li><p>Click on “RStudio” if you are using <code>RStudio IDE</code>. That will take you to <a href="https://posit-dev.github.io/air/editor-rstudio.html" class="uri">https://posit-dev.github.io/air/editor-rstudio.html</a> where you will find the detailed installation instructions.</p></li>
+<li><p>Click on “VS Code and Positron” if you are using <code>Positron</code>. That will take you to <a href="https://posit-dev.github.io/air/editor-vscode.html" class="uri">https://posit-dev.github.io/air/editor-vscode.html</a> where some options and configuration steps are described. Note however, that <code>Air</code> is already available from <code>Positron</code>. You will need to open your <code>settings.json</code> file from the Command Palette (<code>Shift + Cmd + P</code> on Mac/Linux, <code>Shift + Ctrl + P</code> on Windows):</p>
+<ul>
+<li><p>Run <code>Preferences: Open Workspace Settings (JSON)</code> to modify workspace specific settings (recommended).</p></li>
+<li><p>Run <code>Preferences: Open User Settings (JSON)</code> to modify global user settings (preferred option if you are not working with code from others). Then edit your <code>settings.json</code> with the relevant lines about R code formatting and <code>Air</code> as shown below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"files.associations"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"renv.lock"</span><span class="fu">:</span> <span class="st">"json"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"positron.assistant.gitIntegration.enable"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"positron.assistant.showTokenUsage.enable"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"positron.assistant.toolDetails.enable"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"[r]"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"editor.formatOnSave"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"editor.defaultFormatter"</span><span class="fu">:</span> <span class="st">"Posit.air-vscode"</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ul>
+<ol type="1">
+<li>You can also configure a few options at <a href="positron://settings/air.dependencyLogLevels">positron://settings/air.dependencyLogLevels</a> and related settings.</li>
+</ol></li>
 </ol>
 </section>
 </section>
@@ -674,8 +695,8 @@ Important
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
