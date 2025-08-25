@@ -159,13 +159,15 @@ This is a quantitative course. We will not discuss the mathematical details of s
 
 ### Getting set up
 
-You must install [`R`](https://cran.r-project.org) and [`RStudio`](https://rstudio.com) on your computer in order to complete this course. These are two **different** applications that must be installed separately before they can be used together:
+You must install [R](https://cran.r-project.org) and [RStudio IDE](https://posit.co/products/open-source/rstudio/?sid=1) or [Positron](https://positron.posit.co/download.html) (available from [Posit](https://posit.co/)) on your computing environment in order to complete this course. These are three **different** applications that must be installed separately before they can be used together:
 
--   R is the core underlying programming language and computing engine that we will be learning in this course
+-   `R` is the core underlying programming language and computing engine that we will be learning in this course
 
--   RStudio is an interface into R that makes many aspects of using and programming R simpler
+-   `RStudio IDE` is an interface into R that makes many aspects of using and programming R simpler
 
-Both R and RStudio are available for Windows, macOS, and most flavors of Unix and Linux. Please download the version that is suitable for your computing setup.
+-   `Positron` is a new interface for working with R developed by [Posit](https://posit.co/) (formerly RStudio). All new features are being implemented in `Positron`, but as it was just recently released, it might have some bugs.
+
+`R`, `RStudio IDE`, and `Positron` are available for Windows, macOS, and most flavors of Unix and Linux. Please download the version that is suitable for your computing setup.
 
 Throughout the course, we will make use of numerous R add-on packages that must be installed over the Internet. Packages can be installed using the `install.packages()` function in R. For example, to install the `tidyverse` package, you can run
 
@@ -175,6 +177,8 @@ install.packages("tidyverse")
 ```
 
 in the R console.
+
+We will also be encourage you to use [Git](https://git-scm.com/), following the [*Happy Git and GitHub for the useR*](https://happygitwithr.com/) book, to version control your code. Through the [GitHub Education](https://github.com/education) pack we will get free access to [GittHub Copilot Pro](https://github.com/features/copilot) to help us write code: think about it as an enhanced auto-complete. Finally, we'll use [Air](https://posit-dev.github.io/air/) for automatically formatting our R code.
 
 #### How to Download `R` for Windows
 
@@ -194,7 +198,7 @@ The version in the video is not the latest version. Please download the latest v
 
 #### How to Download `R` for the Mac
 
-Goto [https://cran.r-project.org]() and
+Go to [https://cran.r-project.org]() and
 
 1.  Click the link to "Download R for (Mac) OS X".
 
@@ -206,27 +210,77 @@ The version in the video is not the latest version. Please download the latest v
 
 ![Video Demo for Downloading R for the Mac](videos/downloadRMac.gif){width="80%"}
 
-#### How to Download `RStudio`
+#### How to Download `RStudio IDE`
 
-Goto [https://rstudio.com]() and
+Go to <https://posit.co/> (formerly [https://rstudio.com]()) and
 
-1.  Click on "Products" in the top menu
+1.  Click on "Free & Open Source" in the top menu
 
-2.  Then click on "RStudio" in the drop down menu
+2.  Click on "RStudio IDE" in the drop down menu
 
-3.  Click on "RStudio Desktop"
+3.  Click the button that says "DOWNLOAD RSTUDIO DESKTOP"
 
-4.  Click the button that says "DOWNLOAD RSTUDIO DESKTOP"
+4.  Click the button under "Download RStudio" which will take you to <https://posit.co/download/rstudio-desktop/>
 
-5.  Click the button under "RStudio Desktop" Free
-
-6.  Under the section "All Installers" choose the file that is appropriate for your operating system.
+5.  Under the section "All Installers and Tarballs" choose the file that is appropriate for your operating system.
 
 ::: callout-warning
 The video shows how to download RStudio for the Mac but you should download RStudio for whatever computing setup you have
 :::
 
 ![Video Demo for Downloading RStudio](videos/downloadRStudio.gif){width="80%"}
+
+#### How to Download Positron
+
+Go to <https://posit.co/> and
+
+1.  Click on "Free & Open Source" in the top menu
+
+2.  Click on "Positron" in the drop down menu
+
+3.  Click on "Download Positron" which will take you to <https://positron.posit.co/download.html>
+
+4.  Read the license agreement.
+
+5.  Accept the license agreement.
+
+6.  On the table with all the download options, choose the file that is appropriate for your operating system.
+
+#### How to Download Git
+
+Install `Git` on your computer following the detailed instructions at <https://happygitwithr.com/install-git>, which will depend on your operating system.
+
+#### Create your GitHub account
+
+Create a personal GitHub account following the instructions at <https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account>.
+
+Following [Jeff Leek](https://twitter.com/jtleek)'s advice on [**How to be a modern scientist**](https://leanpub.com/modernscientist) that was part of my team's bootcamps at <https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html>, try to choose a username that will be the same one you use on your email and other work-related social media platforms such as Bluesky, LinkedIn, etc.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rcX-VyxHEXA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+If you are using `Positron`, under the "Accounts" options (bottom left corner), click on "Sign in with GitHub \[...\]", provide the 8 digit code, and authorize "posit-dev".
+
+#### How to Apply for GitHub Education and configure GitHub Copilot
+
+Go to <https://github.com/education> and
+
+1.  Click on "Join GitHub education" (likely <https://github.com/settings/education/benefits?locale=en-US>)
+2.  Sign in to your GitHub account if you haven't logged in
+3.  Click on "Start Application"
+4.  There will be a few options to verify that you are a student. One of them is by having a photo of your student ID with dates showing that your student ID is still valid. I've used a screenshot of my Faculty website at <https://publichealth.jhu.edu/faculty/4647/leonardo-collado-torres> when validating my information.
+5.  Wait a few days for GitHub to process your application.
+6.  Once your application has been approved, if you are using `RStudio IDE` follow the instructions at <https://docs.posit.co/ide/user/ide/guide/tools/copilot.html> to enable GitHub Copilot in RStudio IDE. I have the "Index project files with GitHub Copilot" checkbox enabled on my preferences.
+7.  If you are using `Positron`, follow the instructions at <https://positron.posit.co/assistant> to enable "Positron assistant". Then under the "Positron Assistant" chat, click on "Add Anthropic as a Chat Provider", then select "GitHub Copilot" and click "Sign in".
+    1.  Note that you can in theory get API access to Anthropic through <https://ailabsupport.it.jh.edu/faq/> if you pay for it. Or you can pay out of pocket for it at <https://claude.ai/login>.
+
+#### How to get Air (auto-code formatter)
+
+Go to <https://posit-dev.github.io/air/> and
+
+1.  Click on "RStudio" if you are using `RStudio IDE`. That will take you to <https://posit-dev.github.io/air/editor-rstudio.html> where you will find the detailed installation instructions.
+2.  Click on "VS Code and Positron" if you are using `Positron`. That will take you to <https://posit-dev.github.io/air/editor-vscode.html> where some options are described. Note however, that `Air` is already available from `Positron`. See the ["Editor: Default Formatter" setting](positron://settings/editor.defaultFormatter) where you can select "Air - R Language Support" from the drop down menu. You can also configure a few options at [positron://settings/air.dependencyLogLevels](positron://settings/air.dependencyLogLevels) and related settings.
 
 ## General Disclaimers
 
