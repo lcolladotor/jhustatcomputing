@@ -221,7 +221,29 @@ Go to <https://github.com/education> and
 Go to <https://posit-dev.github.io/air/> and
 
 1.  Click on "RStudio" if you are using `RStudio IDE`. That will take you to <https://posit-dev.github.io/air/editor-rstudio.html> where you will find the detailed installation instructions.
-2.  Click on "VS Code and Positron" if you are using `Positron`. That will take you to <https://posit-dev.github.io/air/editor-vscode.html> where some options are described. Note however, that `Air` is already available from `Positron`. See the ["Editor: Default Formatter" setting](positron://settings/editor.defaultFormatter) where you can select "Air - R Language Support" from the drop down menu. You can also configure a few options at [positron://settings/air.dependencyLogLevels](positron://settings/air.dependencyLogLevels) and related settings.
+
+2.  Click on "VS Code and Positron" if you are using `Positron`. That will take you to <https://posit-dev.github.io/air/editor-vscode.html> where some options and configuration steps are described. Note however, that `Air` is already available from `Positron`. You will need to open your `settings.json` file from the Command Palette (`Shift + Cmd + P` on Mac/Linux, `Shift + Ctrl + P` on Windows):
+
+    -   Run `Preferences: Open Workspace Settings (JSON)` to modify workspace specific settings (recommended).
+
+    -   Run `Preferences: Open User Settings (JSON)` to modify global user settings (preferred option if you are not working with code from others). Then edit your `settings.json` with the relevant lines about R code formatting and `Air` as shown below:
+
+        ```{json}
+        {
+            "files.associations": {
+                "renv.lock": "json"
+            },
+            "positron.assistant.gitIntegration.enable": true,
+            "positron.assistant.showTokenUsage.enable": true,
+            "positron.assistant.toolDetails.enable": true,
+            "[r]": {
+                "editor.formatOnSave": true,
+                "editor.defaultFormatter": "Posit.air-vscode"
+            }
+        }
+        ```
+
+    1.  You can also configure a few options at [positron://settings/air.dependencyLogLevels](positron://settings/air.dependencyLogLevels) and related settings.
 
 # Learning Objectives
 
