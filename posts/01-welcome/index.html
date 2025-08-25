@@ -366,18 +366,20 @@ Tip
 </section>
 <section id="getting-set-up" class="level3">
 <h3 class="anchored" data-anchor-id="getting-set-up">Getting set up</h3>
-<p>You must install <a href="https://cran.r-project.org">R</a> and <a href="https://rstudio.com">RStudio</a> (available from <a href="https://posit.co/">Posit</a>) on your computing environment in order to complete this course.</p>
-<p>These are two <strong>different</strong> applications that must be installed separately before they can be used together:</p>
+<p>You must install <a href="https://cran.r-project.org">R</a> and <a href="https://posit.co/products/open-source/rstudio/?sid=1">RStudio IDE</a> or <a href="https://positron.posit.co/download.html">Positron</a> (available from <a href="https://posit.co/">Posit</a>) on your computing environment in order to complete this course.</p>
+<p>These are three <strong>different</strong> applications that must be installed separately before they can be used together:</p>
 <ul>
 <li><p><code>R</code> is the core underlying programming language and computing engine that we will be learning in this course</p></li>
-<li><p><code>RStudio</code> is an interface into R that makes many aspects of using and programming R simpler</p></li>
+<li><p><code>RStudio IDE</code> is an interface into R that makes many aspects of using and programming R simpler</p></li>
+<li><p><code>Positron</code> is a new interface for working with R developed by <a href="https://posit.co/">Posit</a> (formerly RStudio). All new features are being implemented in <code>Positron</code>, but as it was just recently released, it might have some bugs.</p></li>
 </ul>
-<p>Both <code>R</code> and <code>RStudio</code> are available for Windows, macOS, and most flavors of Unix and Linux. Please download the version that is suitable for your computing setup.</p>
+<p><code>R</code>, <code>RStudio IDE</code>, and <code>Positron</code> are available for Windows, macOS, and most flavors of Unix and Linux. Please download the version that is suitable for your computing setup.</p>
 <p>Throughout the course, we will make use of numerous R add-on packages that must be installed over the Internet. Packages can be installed using the <code>install.packages()</code> function in R. For example, to install the <code>tidyverse</code> package, you can run</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>in the R console.</p>
+<p>We will also be encourage you to use <a href="https://git-scm.com/">Git</a>, following the <a href="https://happygitwithr.com/"><em>Happy Git and GitHub for the useR</em></a> book, to version control your code. Through the <a href="https://github.com/education">GitHub Education</a> pack we will get free access to <a href="https://github.com/features/copilot">GittHub Copilot Pro</a> to help us write code: think about it as an enhanced auto-complete. Finally, we’ll use <a href="https://posit-dev.github.io/air/">Air</a> for automatically formatting our R code.</p>
 <section id="how-to-download-r-for-windows" class="level4">
 <h4 class="anchored" data-anchor-id="how-to-download-r-for-windows">How to Download R for Windows</h4>
 <p>Go to <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a> and</p>
@@ -408,7 +410,7 @@ Warning
 </section>
 <section id="how-to-download-r-for-the-mac" class="level4">
 <h4 class="anchored" data-anchor-id="how-to-download-r-for-the-mac">How to Download R for the Mac</h4>
-<p>Goto <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a> and</p>
+<p>Go to <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a> and</p>
 <ol type="1">
 <li><p>Click the link to “Download R for (Mac) OS X”.</p></li>
 <li><p>Click on “R-4.5.1-arm64.pkg” (for Apple Silicon Macs)</p></li>
@@ -433,16 +435,15 @@ Warning
 </figure>
 </div>
 </section>
-<section id="how-to-download-rstudio" class="level4">
-<h4 class="anchored" data-anchor-id="how-to-download-rstudio">How to Download RStudio</h4>
-<p>Goto <a href="https://rstudio.com" class="uri">https://rstudio.com</a> and</p>
+<section id="how-to-download-rstudio-ide" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-download-rstudio-ide">How to Download <code>RStudio IDE</code></h4>
+<p>Go to <a href="https://posit.co/" class="uri">https://posit.co/</a> (formerly <a href="">https://rstudio.com</a>) and</p>
 <ol type="1">
-<li><p>Click on “Products” in the top menu</p></li>
-<li><p>Then click on “RStudio” in the drop down menu</p></li>
-<li><p>Click on “RStudio Desktop”</p></li>
+<li><p>Click on “Free &amp; Open Source” in the top menu</p></li>
+<li><p>Click on “RStudio IDE” in the drop down menu</p></li>
 <li><p>Click the button that says “DOWNLOAD RSTUDIO DESKTOP”</p></li>
-<li><p>Click the button under “RStudio Desktop” Free</p></li>
-<li><p>Under the section “All Installers” choose the file that is appropriate for your operating system.</p></li>
+<li><p>Click the button under “Download RStudio” which will take you to <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></p></li>
+<li><p>Under the section “All Installers and Tarballs” choose the file that is appropriate for your operating system.</p></li>
 </ol>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -464,6 +465,18 @@ Warning
 </figure>
 </div>
 </section>
+<section id="how-to-download-positron" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-download-positron">How to Download Positron</h4>
+<p>Go to <a href="https://posit.co/" class="uri">https://posit.co/</a> and</p>
+<ol type="1">
+<li><p>Click on “Free &amp; Open Source” in the top menu</p></li>
+<li><p>Click on “Positron” in the drop down menu</p></li>
+<li><p>Click on “Download Positron” which will take you to <a href="https://positron.posit.co/download.html" class="uri">https://positron.posit.co/download.html</a></p></li>
+<li><p>Read the license agreement.</p></li>
+<li><p>Accept the license agreement.</p></li>
+<li><p>On the table with all the download options, choose the file that is appropriate for your operating system.</p></li>
+</ol>
+</section>
 <section id="how-to-download-git" class="level4">
 <h4 class="anchored" data-anchor-id="how-to-download-git">How to Download Git</h4>
 <p>Install <code>Git</code> on your computer following the detailed instructions at <a href="https://happygitwithr.com/install-git" class="uri">https://happygitwithr.com/install-git</a>, which will depend on your operating system.</p>
@@ -471,9 +484,34 @@ Warning
 <section id="create-your-github-account" class="level4">
 <h4 class="anchored" data-anchor-id="create-your-github-account">Create your GitHub account</h4>
 <p>Create a personal GitHub account following the instructions at <a href="https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account" class="uri">https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account</a>.</p>
-<p>Following <a href="https://twitter.com/jtleek">Jeff Leek</a>’s advice on <a href="https://leanpub.com/modernscientist"><strong>How to be a modern scientist</strong></a> that was part of my team’s bootcamps at <a href="https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html" class="uri">https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html</a>, try to choose a username that will be the same one you use on your email and other work-related social media platforms such as Twitter, Bluesky, etc.</p>
+<p>Following <a href="https://twitter.com/jtleek">Jeff Leek</a>’s advice on <a href="https://leanpub.com/modernscientist"><strong>How to be a modern scientist</strong></a> that was part of my team’s bootcamps at <a href="https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html" class="uri">https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html</a>, try to choose a username that will be the same one you use on your email and other work-related social media platforms such as Bluesky, LinkedIn, etc.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rcX-VyxHEXA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
+<p>If you are using <code>Positron</code>, under the “Accounts” options (bottom left corner), click on “Sign in with GitHub […]”, provide the 8 digit code, and authorize “posit-dev”.</p>
+</section>
+<section id="how-to-apply-for-github-education-and-configure-github-copilot" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-apply-for-github-education-and-configure-github-copilot">How to Apply for GitHub Education and configure GitHub Copilot</h4>
+<p>Go to <a href="https://github.com/education" class="uri">https://github.com/education</a> and</p>
+<ol type="1">
+<li>Click on “Join GitHub education” (likely <a href="https://github.com/settings/education/benefits?locale=en-US" class="uri">https://github.com/settings/education/benefits?locale=en-US</a>)</li>
+<li>Sign in to your GitHub account if you haven’t logged in</li>
+<li>Click on “Start Application”</li>
+<li>There will be a few options to verify that you are a student. One of them is by having a photo of your student ID with dates showing that your student ID is still valid. I’ve used a screenshot of my Faculty website at <a href="https://publichealth.jhu.edu/faculty/4647/leonardo-collado-torres" class="uri">https://publichealth.jhu.edu/faculty/4647/leonardo-collado-torres</a> when validating my information.</li>
+<li>Wait a few days for GitHub to process your application.</li>
+<li>Once your application has been approved, if you are using <code>RStudio IDE</code> follow the instructions at <a href="https://docs.posit.co/ide/user/ide/guide/tools/copilot.html" class="uri">https://docs.posit.co/ide/user/ide/guide/tools/copilot.html</a> to enable GitHub Copilot in RStudio IDE. I have the “Index project files with GitHub Copilot” checkbox enabled on my preferences.</li>
+<li>If you are using <code>Positron</code>, follow the instructions at <a href="https://positron.posit.co/assistant" class="uri">https://positron.posit.co/assistant</a> to enable “Positron assistant”. Then under the “Positron Assistant” chat, click on “Add Anthropic as a Chat Provider”, then select “GitHub Copilot” and click “Sign in”.
+<ol type="1">
+<li>Note that you can in theory get API access to Anthropic through <a href="https://ailabsupport.it.jh.edu/faq/" class="uri">https://ailabsupport.it.jh.edu/faq/</a> if you pay for it. Or you can pay out of pocket for it at <a href="https://claude.ai/login" class="uri">https://claude.ai/login</a>.</li>
+</ol></li>
+</ol>
+</section>
+<section id="how-to-get-air-auto-code-formatter" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-get-air-auto-code-formatter">How to get Air (auto-code formatter)</h4>
+<p>Go to <a href="https://posit-dev.github.io/air/" class="uri">https://posit-dev.github.io/air/</a> and</p>
+<ol type="1">
+<li>Click on “RStudio” if you are using <code>RStudio IDE</code>. That will take you to <a href="https://posit-dev.github.io/air/editor-rstudio.html" class="uri">https://posit-dev.github.io/air/editor-rstudio.html</a> where you will find the detailed installation instructions.</li>
+<li>Click on “VS Code and Positron” if you are using <code>Positron</code>. That will take you to <a href="https://posit-dev.github.io/air/editor-vscode.html" class="uri">https://posit-dev.github.io/air/editor-vscode.html</a> where some options are described. Note however, that <code>Air</code> is already available from <code>Positron</code>. See the <a href="positron://settings/editor.defaultFormatter">“Editor: Default Formatter” setting</a> where you can select “Air - R Language Support” from the drop down menu. You can also configure a few options at <a href="positron://settings/air.dependencyLogLevels">positron://settings/air.dependencyLogLevels</a> and related settings.</li>
+</ol>
 </section>
 </section>
 <section id="learning-objectives" class="level1">
@@ -524,7 +562,7 @@ Important
 <h3 class="anchored" data-anchor-id="course-staff">Course Staff</h3>
 <p>The course instructor this year is <a href="http://lcolladotor.github.io/">Leonardo Collado Torres</a> who is an Investigator at the <a href="https://www.libd.org/">Lieber Institute for Brain Development</a> and an Assistant Professor in the <a href="https://publichealth.jhu.edu/departments/biostatistics">Department of Biostatistics</a> at the <a href="https://publichealth.jhu.edu">Johns Hopkins Bloomberg School of Public Health</a>. I was actually a student of this course in Fall 2012 when <a href="https://twitter.com/rdpeng">Roger D. Peng</a> was the instructor of this course and <a href="https://twitter.com/kralljr">Jenna Krall</a> was the only teaching assistant. I first taught this course in 2023. I myself started learning and <a href="http://lcolladotor.github.io/#teaching">teaching</a> about R in 2008 and we have a lot of material in the <a href="https://research.libd.org/rstatsclub/">LIBD rstats club</a> that you might be interested in.</p>
 <p>At the Lieber Institute for Brain Development (<a href="https://www.libd.org/">LIBD</a>), my group works on understanding the roots and signatures of disease (particularly psychiatric disorders) by zooming in across dimensions of gene activity. We achieve this by studying gene expression at all expression feature levels (genes, exons, exon-exon junctions, and un-annotated regions) and by using different gene expression measurement technologies (bulk RNA-seq, single cell/nucleus RNA-seq, and spatial transcriptomics) that provide finer biological resolution and localization of gene expression. We work closely with collaborators from LIBD as well as from Johns Hopkins University (JHU) and other institutions, which reflects the cross-disciplinary approach and diversity in expertise needed to further advance our understanding of high throughput biology.</p>
-<p>Every day I use <a href="http://cran.r-project.org/">R</a> and <a href="http://www.bioconductor.org/">Bioconductor</a>, and on some days I <a href="https://lcolladotor.github.io/pkgs/">write R packages</a>. Occasionally I write <a href="http://lcolladotor.github.io/#blog">blog posts</a> about them and other tools. I’m a co-founder of the <a href="http://LieberInstitute.github.io/rstatsclub/">LIBD rstats club</a> and the <a href="https://comunidadbioinfo.github.io">CDSB community</a> of R and Bioconductor developers in Mexico and Latin America, that we described at the <a href="https://www.r-consortium.org/blog/2020/03/18/cdsb-diversity-and-outreach-hotspot-in-mexico">R Consortium website</a>. In the past, I also served on the <a href="http://bioconductor.org/about/community-advisory-board/">Bioconductor Community Advisory Board</a>.</p>
+<p>Most weeks I use <a href="http://cran.r-project.org/">R</a> and <a href="http://www.bioconductor.org/">Bioconductor</a>, and on some days I <a href="https://lcolladotor.github.io/pkgs/">write R packages</a>. Occasionally I write <a href="http://lcolladotor.github.io/#blog">blog posts</a> about them and other tools. I’m a co-founder of the <a href="http://LieberInstitute.github.io/rstatsclub/">LIBD rstats club</a> and the <a href="https://comunidadbioinfo.github.io">CDSB community</a> of R and Bioconductor developers in Mexico and Latin America, that we described at the <a href="https://www.r-consortium.org/blog/2020/03/18/cdsb-diversity-and-outreach-hotspot-in-mexico">R Consortium website</a>. In the past, I also served on the <a href="http://bioconductor.org/about/community-advisory-board/">Bioconductor Community Advisory Board</a>.</p>
 <p>If you want, you can find me on <a href="https://bsky.app/profile/lcolladotor.bsky.social">Bluesky</a>, <a href="https://www.linkedin.com/in/lcollado/">LinkedIn</a>, among other places.</p>
 <section id="teaching-assistants" class="level4">
 <h4 class="anchored" data-anchor-id="teaching-assistants">Teaching Assistants</h4>
