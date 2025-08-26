@@ -195,7 +195,7 @@ Install `Git` on your computer following the detailed instructions at <https://h
 
 Create a personal GitHub account following the instructions at <https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account>.
 
-Following [Jeff Leek](https://twitter.com/jtleek)'s advice on [**How to be a modern scientist**](https://leanpub.com/modernscientist) that was part of my team's bootcamps at <https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html>, try to choose a username that will be the same one you use on your email and other work-related social media platforms such as Bluesky, LinkedIn, etc.
+Following [Jeff Leek](https://bsky.app/profile/jtleek.bsky.social)'s advice on [**How to be a modern scientist**](https://leanpub.com/modernscientist) that was part of my team's bootcamps at <https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html>, try to choose a username that will be the same one you use on your email and other work-related social media platforms such as Bluesky, LinkedIn, etc.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rcX-VyxHEXA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
@@ -256,6 +256,7 @@ The goal is by the end of the class, students will be able to:
 3.  Write and debug code in base R and the tidyverse (and integrate code from Python modules)
 4.  Build basic data visualizations using R and the tidyverse
 5.  Discuss best practices for coding and reproducible research, basics of data ethics, basics of working with special data types, and basics of storing data
+    -   Example of why keeping track of R versions is important: <https://github.com/edward130603/BayesSpace/issues/150>.
 
 # Course logistics
 
@@ -266,6 +267,8 @@ The only option is to take the course is in-person (140.776.01).
 All communication for the course is going to take place on one of three platforms:
 
 -   **Courseplus**: for discussion, sharing resources, collaborating, and announcements
+
+    -   Important for practicing written communication in the context of asking for help with R
 
 -   **Github**: for getting access to course materials (e.g. lectures, project assignments)
 
@@ -284,7 +287,7 @@ If you are registered for the course, you should have access to Courseplus now. 
 
 ### Course Staff
 
-The course instructor this year is [Leonardo Collado Torres](http://lcolladotor.github.io/) who is an Investigator at the [Lieber Institute for Brain Development](https://www.libd.org/) and an Assistant Professor in the [Department of Biostatistics](https://publichealth.jhu.edu/departments/biostatistics) at the [Johns Hopkins Bloomberg School of Public Health](https://publichealth.jhu.edu). I was actually a student of this course in Fall 2012 when [Roger D. Peng](https://twitter.com/rdpeng) was the instructor of this course and [Jenna Krall](https://twitter.com/kralljr) was the only teaching assistant. I first taught this course in 2023. I myself started learning and [teaching](http://lcolladotor.github.io/#teaching) about R in 2008 and we have a lot of material in the [LIBD rstats club](https://research.libd.org/rstatsclub/) that you might be interested in.
+The course instructor this year is [Leonardo Collado Torres](http://lcolladotor.github.io/) who is an Investigator at the [Lieber Institute for Brain Development](https://www.libd.org/) and an Assistant Professor in the [Department of Biostatistics](https://publichealth.jhu.edu/departments/biostatistics) at the [Johns Hopkins Bloomberg School of Public Health](https://publichealth.jhu.edu). I was actually a student of this course in Fall 2012 when [Roger D. Peng](https://bsky.app/profile/rdpeng.org) was the instructor of this course and [Jenna Krall](https://bsky.app/profile/kralljr.bsky.social) was the only teaching assistant. I first taught this course in 2023. I myself started learning and [teaching](http://lcolladotor.github.io/#teaching) about R in 2008 and we have a lot of material in the [LIBD rstats club](https://research.libd.org/rstatsclub/) that you might be interested in.
 
 At the Lieber Institute for Brain Development ([LIBD](https://www.libd.org/)), my group works on understanding the roots and signatures of disease (particularly psychiatric disorders) by zooming in across dimensions of gene activity. We achieve this by studying gene expression at all expression feature levels (genes, exons, exon-exon junctions, and un-annotated regions) and by using different gene expression measurement technologies (bulk RNA-seq, single cell/nucleus RNA-seq, and spatial transcriptomics) that provide finer biological resolution and localization of gene expression. We work closely with collaborators from LIBD as well as from Johns Hopkins University (JHU) and other institutions, which reflects the cross-disciplinary approach and diversity in expertise needed to further advance our understanding of high throughput biology.
 

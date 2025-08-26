@@ -70,7 +70,7 @@ Like every programming language, R has its advantages and disadvantages. If you 
 -   R is great for statistics, data analysis, websites, web apps, data visualizations, and so much more!
 -   R integrates easily with document preparation systems like $\LaTeX$, but R files can also be used to create `.docx`, `.pdf`, `.html`, `.ppt` files with integrated R code output and graphics.
 -   The R Community is very dynamic, helpful and welcoming.
-    -   Check out the [#rstats](https://twitter.com/search?q=%23rstats) or [#rtistry](https://twitter.com/search?q=%23rtistry) on Twitter, [TidyTuesday](https://www.tidytuesday.com) podcast and community activity in the [R4DS Online Learning Community](https://www.rfordatasci.com), and [r/rstats](https://www.reddit.com/r/rstats/) subreddit.
+    -   Check out the [#RStats](https://bsky.app/search?q=%23RStats) or [#rtistry](https://bsky.app/search?q=%23rtistry) on BlueSky, [TidyTuesday](https://www.tidytuesday.com) podcast and community activity in the [R4DS Online Learning Community](https://www.rfordatasci.com), and [r/rstats](https://www.reddit.com/r/rstats/) subreddit.
     -   If you are looking for more local resources, check out [R-Ladies Baltimore](https://www.meetup.com/rladies-baltimore/).
 -   Through R packages, it is easy to get lots of state-of-the-art algorithms.
 -   Documentation and help files for R are generally good.
@@ -99,7 +99,29 @@ R has maintained the original S philosophy (see box below), which is that **it p
 For a great discussion on an overview and history of R and the S programming language, read through [this chapter](https://rdpeng.github.io/Biostat776/lecture-introduction-and-overview.html) from Roger D. Peng.
 :::
 
-Finally, one of the joys of using R has nothing to do with the language itself, but rather with the active and vibrant user community. In many ways, a language is successful inasmuch as it creates a platform with which many people can create new things. R is that platform and thousands of people around the world have come together to make contributions to R, to develop packages, and help each other use R for all kinds of applications. The R-help and R-devel mailing lists have been highly active for over a decade now and there is considerable activity on web sites like GitHub, [Posit (RStudio) Community](https://community.rstudio.com/), [Bioconductor Support](https://support.bioconductor.org/), Stack Overflow, Twitter [#rstats](https://twitter.com/search?q=%23rstats), [#rtistry](https://twitter.com/search?q=%23rtistry), and [Reddit](https://www.reddit.com/r/rstats/).
+Finally, one of the joys of using R has nothing to do with the language itself, but rather with the active and vibrant user community. In many ways, a language is successful inasmuch as it creates a platform with which many people can create new things. R is that platform and thousands of people around the world have come together to make contributions to R, to develop packages, and help each other use R for all kinds of applications. The R-help and R-devel mailing lists have been highly active for over a decade now and there is considerable activity on web sites like GitHub, [Posit (RStudio) Community](https://community.rstudio.com/), [Bioconductor Support](https://support.bioconductor.org/), Stack Overflow, BlueSky [#RStats](https://bsky.app/search?q=%23RStats), [#rtistry](https://bsky.app/search?q=%23rtistry), and [Reddit](https://www.reddit.com/r/rstats/).
+
+Here's a recent example from BlueSky [#RStats](https://bsky.app/search?q=%23RStats):
+
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:lovemlyb7wlsonhsija6z3pc/app.bsky.feed.post/3lupn6iom4s2x" data-bluesky-cid="bafyreifnzwdudqddnb6abi7tpobvdrfq2ljsub6ykdlpqvjlh4vqfk3lpq" data-bluesky-embed-color-mode="system">
+
+<p lang="en">
+
+People are being arrested by ICE. What countries are they from?
+
+I analyze public data from deportationdata.org/data/ice.html to find increased arrests for immigrants from many countries #FirstTheyCame
+
+Code so you can reproduce these trends for yourself: gist.github.com/JEFworks/1f0...`<br><br><a href="https://bsky.app/profile/did:plc:lovemlyb7wlsonhsija6z3pc/post/3lupn6iom4s2x?ref_src=embed"`{=html}\[image or embed\]</a>
+
+</p>
+
+— Dr. Jean Fan (`<a href="https://bsky.app/profile/did:plc:lovemlyb7wlsonhsija6z3pc?ref_src=embed"`{=html}@jef.works</a>) `<a href="https://bsky.app/profile/did:plc:lovemlyb7wlsonhsija6z3pc/post/3lupn6iom4s2x?ref_src=embed"`{=html}July 24, 2025 at 9:27 AM</a>
+
+</blockquote>
+
+```{=html}
+<script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+```
 
 ### Free Software
 
@@ -145,7 +167,7 @@ When you download a fresh installation of R from CRAN, you get all of the above,
 
 -   There are over `r nrow(available.packages())` packages on CRAN that have been developed by users and programmers around the world.
 
--   There are also `r length(BiocManager::available())` packages associated with the [Bioconductor project](http://bioconductor.org).
+-   There are also `r length(BiocManager::available()) - nrow(available.packages())` packages associated with the [Bioconductor project](http://bioconductor.org). That's a total of `r length(BiocManager::available())` packages available from CRAN and Bioconductor combined.
 
 -   People often make packages available on GitHub (very common) and their personal websites (not so common nowadays); there is no reliable way to keep track of how many packages are available in this fashion.
 
@@ -177,7 +199,7 @@ At a higher level one "limitation" of R is that **its functionality is based on 
 
 > If R is the engine and bare bones of your car, then RStudio is like the rest of the car. The engine is super critical part of your car. But in order to make things properly functional, you need to have a steering wheel, comfy seats, a radio, rear and side view mirrors, storage, and seatbelts. --- *Nicholas Tierney*
 
-\[[Source](https://rmd4sci.njtierney.com)\]
+\[[Source](https://qmd4sci.njtierney.com)\]
 
 The RStudio layout has the following features:
 
@@ -204,7 +226,7 @@ Installing R and RStudio should be fairly straightforward. However, a great set 
 -   <https://rafalab.github.io/dsbook/installing-r-rstudio.html>
 :::
 
-If things don't work, ask for help in the Courseplus discussion board.
+If things don't work, ask for help in the Courseplus Discussion forum.
 
 I have both a macOS and a winOS computer, and have used Linux (Ubuntu) in the past too, but I might be more limited in how much I can help you on Linux.
 
@@ -299,10 +321,10 @@ This was a quick overview of R packages. We will use a lot of them, so you will 
 
 ### Getting started in RStudio
 
-While one can use R and do pretty much every task, including all the ones we cover in this class, without using RStudio, RStudio is very useful, has lots of features that make your R coding life easier and has become pretty much the default integrated development environment (IDE) for R. Since RStudio has lots of features, it takes time to learn them. A good resource to learn more about RStudio are the [R Studio Essentials](https://resources.rstudio.com/) collection of videos.
+While one can use R and do pretty much every task, including all the ones we cover in this class, without using RStudio, RStudio is very useful, has lots of features that make your R coding life easier and has become pretty much the default integrated development environment (IDE) for R. Since RStudio has lots of features, it takes time to learn them. A good resource to learn more about RStudio are the [Posit Videos](https://posit.co/resources/videos/) collection.
 
 ::: callout-tip
-For more information on setting up and getting started with R, RStudio, and R packages, read the Getting Started chapter in the `dsbook`:
+For more information on setting up and getting started with R, RStudio IDE, and R packages, read the Getting Started chapter in the `dsbook`:
 
 -   <https://rafalab.github.io/dsbook/getting-started.html>
 
@@ -313,7 +335,7 @@ This chapter gives some tips, shortcuts, and ideas that might be of interest eve
 
 ### Links to inspiring use cases
 
--   [RStudio Conf 2019](https://www.rstudio.com/resources/rstudioconf-2019/) talk by [Brooke Watson Madubuonwu](https://x.com/brookLYNevery1) on "[R at the ACLU: Joining tables to to reunite families](https://posit.co/resources/videos/r-at-the-aclu-joining-tables-to-to-reunite-families/)"
+-   [RStudio Conf 2019](https://resources.rstudio.com/resources/rstudioconf-2019/) talk by [Brooke Watson Madubuonwu](https://x.com/brookLYNevery1) on "[R at the ACLU: Joining tables to to reunite families](https://posit.co/resources/videos/r-at-the-aclu-joining-tables-to-to-reunite-families/)"
 
 -   [RStudio Conf 2020](https://resources.rstudio.com/resources/rstudioconf-2020/) talk by [María Teresa Ortíz Mancera](https://x.com/TeresaOM) on "[Mexican electoral quick count night with R](https://posit.co/resources/videos/mexican-electoral-quick-count-night-with-r-maria-ortiz-mancera/)"
 
