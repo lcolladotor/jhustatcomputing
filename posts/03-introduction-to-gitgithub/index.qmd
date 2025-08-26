@@ -101,13 +101,14 @@ To learn a bit more about Git/GitHub and why you might want to use it, [read thi
 
 Git and GitHub is fundamentally **based on commands you type into the command line**. Lots of online resources show you how to use the command line. This is the most powerful, and the way I almost always interact with git/GitHub. However, many folks find this the most confusing way to use git/GitHub. Alternatively, there are graphical interfaces.
 
--   [GitHub itself](https://desktop.github.com/) provides a grapical interface with basic functionality.
--   RStudio also has [Git/GitHub integration](https://happygitwithr.com/rstudio-git-github.html). Of course this only works for R project GitHub integration.
+-   [GitHub itself](https://desktop.github.com/) provides a graphical interface with basic functionality.
+-   `RStudio IDE` also has [Git/GitHub integration](https://happygitwithr.com/rstudio-git-github.html). Of course this only works for R project GitHub integration.
+-   `Positron` also works very well with `Git` and `GitHub` as documented at <https://positron.posit.co/git.html>. It has several more advanced options, as `Positron` is based on `Visual Studio Code` (VS Code) and VS Code already has an in-depth integration with `Git` and `GitHub` as noted at <https://code.visualstudio.com/docs/sourcecontrol/intro-to-git>.
 -   There are also third party GitHub clients with many advanced features, most of which you won't need initially, but might eventually.
 
 **Note**: As student, you can (and should) upgrade to the Pro version of GitHub for free (i.e. access to unlimited private repositories is one benefit), see the [GitHub student developer pack](https://education.github.com/pack) on how to do this.
 
-We will mostly be using Git commands through the RStudio Git panel. This panel will show up by default if RStudio recognizes that you have installed Git already.
+We will mostly be using Git commands through the `RStudio IDE` Git panel or `Positron` Git Source Control section. This panel will show up by default if `RStudio IDE` / `Positron` recognizes that you have installed Git already.
 
 # Getting Started
 
@@ -154,7 +155,7 @@ usethis::use_git()
 usethis::use_github()
 ```
 
-Check [Project 0](../../projects/project-0/) for more details on how to configure `usethis` so it can recognize who you are on `git`/GitHub and how to access your GitHub account.
+Check [Project 0](../../projects/project-0/) for more details on how to configure `usethis` so it can recognize who you are on `git`/`GitHub` and how to access your GitHub account.
 
 # "Help me help you": `reprex::reprex()`
 
@@ -179,7 +180,7 @@ As a quick exercise:
 
 4.  Type `reprex::reprex()` in your R console.
 
-5.  Paste the output into <https://github.com/lcolladotor/jhustatcomputing/issues/7> and click on the "comment" green button.
+5.  Paste the output into <https://github.com/lcolladotor/jhustatcomputing/issues/10> and click on the "comment" green button.
 
 Here is an actual example where I used `reprex` to ask a question: <https://github.com/Bioconductor/BiocFileCache/issues/48>.
 
