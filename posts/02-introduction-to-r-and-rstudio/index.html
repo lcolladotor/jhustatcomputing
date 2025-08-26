@@ -347,7 +347,7 @@ Read ahead
 <ul>
 <li><a href="https://rdpeng.github.io/Biostat776/lecture-introduction-and-overview.html" class="uri">https://rdpeng.github.io/Biostat776/lecture-introduction-and-overview.html</a></li>
 <li><a href="https://rafalab.github.io/dsbook" class="uri">https://rafalab.github.io/dsbook</a></li>
-<li><a href="https://rmd4sci.njtierney.com" class="uri">https://rmd4sci.njtierney.com</a></li>
+<li><a href="https://qmd4sci.njtierney.com" class="uri">https://qmd4sci.njtierney.com</a></li>
 <li><a href="https://andreashandel.github.io/MADAcourse" class="uri">https://andreashandel.github.io/MADAcourse</a></li>
 </ul>
 </section>
@@ -476,8 +476,8 @@ Tip
 </ul>
 <p>When you download a fresh installation of R from CRAN, you get all of the above, which represents a substantial amount of functionality. However, there are many other packages available:</p>
 <ul>
-<li><p>There are over 21,163 packages on CRAN that have been developed by users and programmers around the world.</p></li>
-<li><p>There are also over 2,300 packages associated with the <a href="http://bioconductor.org">Bioconductor project</a>.</p></li>
+<li><p>There are over 22527 packages on CRAN that have been developed by users and programmers around the world.</p></li>
+<li><p>There are also 26233 packages associated with the <a href="http://bioconductor.org">Bioconductor project</a>.</p></li>
 <li><p>People often make packages available on GitHub (very common) and their personal websites (not so common nowadays); there is no reliable way to keep track of how many packages are available in this fashion.</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
@@ -529,7 +529,7 @@ Questions
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" class="img-fluid figure-img"></p>
+<p><a href="https://qmd4sci.njtierney.com/"><img src="https://github.com/njtierney/qmd4sci/raw/main/figs/rstudio-screenshot.jpeg" class="img-fluid figure-img"></a></p>
 <figcaption>A screenshot of the RStudio integrated developer environment (IDE) – aka the working environment</figcaption>
 </figure>
 </div>
@@ -538,8 +538,9 @@ Questions
 <section id="installing-r-and-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="installing-r-and-rstudio">Installing R and RStudio</h3>
 <ul>
-<li>If you have not already, <a href="http://cran.r-project.org">install R first</a>. If you already have R installed, make sure it is a fairly recent version, version 4.4.1 or newer. If yours is older that version 4.3.0, I suggest you update (install a new R version).</li>
-<li>Once you have R installed, install the free version of <a href="https://www.rstudio.com/products/rstudio/download/">RStudio Desktop</a>. Again, make sure it’s a recent version.</li>
+<li>If you have not already, <a href="http://cran.r-project.org">install R first</a>. If you already have R installed, make sure it is a fairly recent version, version 4.5.1 or newer. If yours is older than version 4.5.0, I suggest you update (install a new R version).</li>
+<li>Once you have R installed, install the free version of <a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop</a>. Again, make sure it’s a recent version.</li>
+<li>Alternatively, install the latest version of <a href="https://positron.posit.co/download.html">Positron</a>.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -717,36 +718,39 @@ Tip
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.4.1 (2024-06-14)
- os       macOS Sonoma 14.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-08-27
- pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-08-26
+ pandoc   3.4 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64/ (via rmarkdown)
+ quarto   1.4.550 @ /usr/local/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- cli           3.6.3   2024-06-21 [1] CRAN (R 4.4.0)
- colorout    * 1.3-0.2 2024-05-03 [1] Github (jalvesaq/colorout@c6113a2)
- digest        0.6.36  2024-06-23 [1] CRAN (R 4.4.0)
- evaluate      0.24.0  2024-06-10 [1] CRAN (R 4.4.0)
- fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.4.0)
- htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.4.0)
- htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.4.0)
- jsonlite      1.8.8   2023-12-04 [1] CRAN (R 4.4.0)
- knitr         1.48    2024-07-07 [1] CRAN (R 4.4.0)
- rlang         1.1.4   2024-06-04 [1] CRAN (R 4.4.0)
- rmarkdown     2.27    2024-05-17 [1] CRAN (R 4.4.0)
- rstudioapi    0.16.0  2024-03-24 [1] CRAN (R 4.4.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.4.0)
- xfun          0.46    2024-07-18 [1] CRAN (R 4.4.0)
- yaml          2.3.10  2024-07-26 [1] CRAN (R 4.4.0)
+ BiocManager   1.30.26 2025-06-05 [1] CRAN (R 4.5.0)
+ cli           3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout    * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ digest        0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ evaluate      1.0.4   2025-06-18 [1] CRAN (R 4.5.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite      2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr         1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ rlang         1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown     2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ rstudioapi    0.17.1  2024-10-22 [1] CRAN (R 4.5.0)
+ sessioninfo   1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ xfun          0.52    2025-04-02 [1] CRAN (R 4.5.0)
+ yaml          2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
