@@ -98,7 +98,7 @@ This part of the project is to help you introduce yourself (and your interests!)
 
 ### 1. Create an RStudio project for your website
 
-Use `usethis::create_project()` or in RStudio go to `File` -\> `New project` and create a project with the name `<YourGitHubUsername>.github.io`. That is a very specific name used by GitHub Pages <https://pages.github.com/>.
+Use `usethis::create_project()` or in `RStudio IDE` go to `File` -\> `New project` and create a project with the name `<YourGitHubUsername>.github.io`. That is a very specific name used by GitHub Pages <https://pages.github.com/>. If you are using `Positron`, you can also do this through the `File` -\> `New Folder from Template...` -\> `R Project`.
 
 ```{r}
 #| eval: false

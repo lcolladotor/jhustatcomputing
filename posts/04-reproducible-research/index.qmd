@@ -43,7 +43,7 @@ library(here)
 
 Material for this lecture was borrowed and adopted from
 
--   <https://ropensci.github.io/reproducibility-guide/sections/introduction>
+-   <https://ropensci-archive.github.io/reproducibility-guide/sections/introduction/>
 -   <https://rdpeng.github.io/Biostat776>
 -   [Reproducible Research: A Retrospective](https://www.annualreviews.org/doi/abs/10.1146/annurev-publhealth-012420-105110) by Roger Peng and Stephanie Hicks
 
@@ -266,7 +266,7 @@ install.packages(c("here", "sessioninfo"))
 
 -   The directory where you have a `.git` directory. That is, the beginning of your `git` repository.
 
--   The directory where you have an RStudio project file (`*.Rproj`). For RStudio projects with a `git` repository, this is typically the same directory.
+-   The directory where you have an RStudio project file (`*.Rproj`). For RStudio projects with a `git` repository, this is typically the same directory. Note that this file is not used by `Positron` which makes it even more important to use `git` on your project folders (directories). See <https://positron.posit.co/migrate-rstudio-rproj.html> for more details.
 
 -   The directory where you have a `.here` file (very uncommon scenario).
 
@@ -320,7 +320,7 @@ sessioninfo::session_info()
 
 For packages that we installed from GitHub, it includes the specific `git` commit ID for the version we installed. This is super precise information that is very useful to have.
 
-Check <https://github.com/LieberInstitute/template_project/blob/main/code/01_read_data_to_r/01_read_data_to_r.R> for a full script example part of <https://github.com/LieberInstitute/template_project>.
+Check <https://github.com/LieberInstitute/template_project/blob/devel/code/01_read_data_to_r/01_read_data_to_r.R> for a full script example part of <https://github.com/LieberInstitute/template_project>.
 
 Remember to use `sessioninfo` when using `reprex::reprex()` as we mentioned previously at [posts/03-introduction-to-gitgithub/#help-me-help-you-reprexreprex](../03-introduction-to-gitgithub/#help-me-help-you-reprexreprex).
 
