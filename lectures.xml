@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.7.33</generator>
-<lastBuildDate>Tue, 26 Aug 2025 19:27:38 GMT</lastBuildDate>
+<lastBuildDate>Tue, 26 Aug 2025 19:56:18 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -582,7 +582,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -1098,7 +1098,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1445,7 +1445,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -1489,7 +1489,7 @@ Read ahead
 <h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
 <p>Material for this lecture was borrowed and adopted from</p>
 <ul>
-<li><a href="https://ropensci.github.io/reproducibility-guide/sections/introduction" class="uri">https://ropensci.github.io/reproducibility-guide/sections/introduction</a></li>
+<li><a href="https://ropensci-archive.github.io/reproducibility-guide/sections/introduction/" class="uri">https://ropensci-archive.github.io/reproducibility-guide/sections/introduction/</a></li>
 <li><a href="https://rdpeng.github.io/Biostat776" class="uri">https://rdpeng.github.io/Biostat776</a></li>
 <li><a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-publhealth-012420-105110">Reproducible Research: A Retrospective</a> by Roger Peng and Stephanie Hicks</li>
 </ul>
@@ -1726,7 +1726,7 @@ font-style: inherit;">"sessioninfo"</span>))</span></code></pre></div>
 <p><code>here</code> makes it easy to write code that you can share by avoiding <em>full file paths</em> and making it easier to use <em>relative</em> file paths. The file paths are made relative to your project home, which is automatically detected based on a few files. These can be:</p>
 <ul>
 <li><p>The directory where you have a <code>.git</code> directory. That is, the beginning of your <code>git</code> repository.</p></li>
-<li><p>The directory where you have an RStudio project file (<code>*.Rproj</code>). For RStudio projects with a <code>git</code> repository, this is typically the same directory.</p></li>
+<li><p>The directory where you have an RStudio project file (<code>*.Rproj</code>). For RStudio projects with a <code>git</code> repository, this is typically the same directory. Note that this file is not used by <code>Positron</code> which makes it even more important to use <code>git</code> on your project folders (directories). See <a href="https://positron.posit.co/migrate-rstudio-rproj.html" class="uri">https://positron.posit.co/migrate-rstudio-rproj.html</a> for more details.</p></li>
 <li><p>The directory where you have a <code>.here</code> file (very uncommon scenario).</p></li>
 </ul>
 <div class="cell">
@@ -1824,14 +1824,14 @@ font-style: inherit;">"Reproducibility information:"</span>)</span></code></pre>
 background-color: null;
 font-style: inherit;">Sys.time</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-08-29 00:03:41 EDT"</code></pre>
+<pre><code>[1] "2025-08-26 15:51:17 EDT"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">proc.time</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
-  0.696   0.119   2.076 </code></pre>
+  0.632   0.099   1.007 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1848,61 +1848,61 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.4.1 (2024-06-14)
- os       macOS Sonoma 14.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-08-29
- pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-08-26
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
- package     * version date (UTC) lib source
- cli           3.6.3   2024-06-21 [1] CRAN (R 4.4.0)
- colorout    * 1.3-0.2 2024-05-03 [1] Github (jalvesaq/colorout@c6113a2)
- colorspace    2.1-1   2024-07-26 [1] CRAN (R 4.4.0)
- digest        0.6.36  2024-06-23 [1] CRAN (R 4.4.0)
- dplyr         1.1.4   2023-11-17 [1] CRAN (R 4.4.0)
- emojifont     0.5.5   2021-04-20 [1] CRAN (R 4.4.0)
- evaluate      0.24.0  2024-06-10 [1] CRAN (R 4.4.0)
- fansi         1.0.6   2023-12-08 [1] CRAN (R 4.4.0)
- fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.4.0)
- generics      0.1.3   2022-07-05 [1] CRAN (R 4.4.0)
- ggplot2       3.5.1   2024-04-23 [1] CRAN (R 4.4.0)
- glue          1.7.0   2024-01-09 [1] CRAN (R 4.4.0)
- gtable        0.3.5   2024-04-22 [1] CRAN (R 4.4.0)
- here        * 1.0.1   2020-12-13 [1] CRAN (R 4.4.0)
- htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.4.0)
- htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.4.0)
- jsonlite      1.8.8   2023-12-04 [1] CRAN (R 4.4.0)
- knitr         1.48    2024-07-07 [1] CRAN (R 4.4.0)
- lifecycle     1.0.4   2023-11-07 [1] CRAN (R 4.4.0)
- magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.4.0)
- munsell       0.5.1   2024-04-01 [1] CRAN (R 4.4.0)
- pillar        1.9.0   2023-03-22 [1] CRAN (R 4.4.0)
- pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.4.0)
- proto         1.0.0   2016-10-29 [1] CRAN (R 4.4.0)
- R6            2.5.1   2021-08-19 [1] CRAN (R 4.4.0)
- rlang         1.1.4   2024-06-04 [1] CRAN (R 4.4.0)
- rmarkdown     2.27    2024-05-17 [1] CRAN (R 4.4.0)
- rprojroot     2.0.4   2023-11-05 [1] CRAN (R 4.4.0)
- rstudioapi    0.16.0  2024-03-24 [1] CRAN (R 4.4.0)
- scales        1.3.0   2023-11-28 [1] CRAN (R 4.4.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.4.0)
- showtext      0.9-7   2024-03-02 [1] CRAN (R 4.4.0)
- showtextdb    3.0     2020-06-04 [1] CRAN (R 4.4.0)
- sysfonts      0.8.9   2024-03-02 [1] CRAN (R 4.4.0)
- tibble        3.2.1   2023-03-20 [1] CRAN (R 4.4.0)
- tidyselect    1.2.1   2024-03-11 [1] CRAN (R 4.4.0)
- utf8          1.2.4   2023-10-22 [1] CRAN (R 4.4.0)
- vctrs         0.6.5   2023-12-01 [1] CRAN (R 4.4.0)
- xfun          0.46    2024-07-18 [1] CRAN (R 4.4.0)
- yaml          2.3.10  2024-07-26 [1] CRAN (R 4.4.0)
+ package      * version date (UTC) lib source
+ cli            3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout     * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ dichromat      2.0-0.1 2022-05-02 [1] CRAN (R 4.5.0)
+ digest         0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ dplyr          1.1.4   2023-11-17 [1] CRAN (R 4.5.0)
+ emojifont      0.5.5   2021-04-20 [1] CRAN (R 4.5.0)
+ evaluate       1.0.4   2025-06-18 [1] CRAN (R 4.5.0)
+ farver         2.1.2   2024-05-13 [1] CRAN (R 4.5.0)
+ fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ generics       0.1.4   2025-05-09 [1] CRAN (R 4.5.0)
+ ggplot2        3.5.2   2025-04-09 [1] CRAN (R 4.5.0)
+ glue           1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
+ gtable         0.3.6   2024-10-25 [1] CRAN (R 4.5.0)
+ here         * 1.0.1   2020-12-13 [1] CRAN (R 4.5.0)
+ htmltools      0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite       2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr          1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ lifecycle      1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
+ magrittr       2.0.3   2022-03-30 [1] CRAN (R 4.5.0)
+ pillar         1.11.0  2025-07-04 [1] CRAN (R 4.5.0)
+ pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.5.0)
+ proto          1.0.0   2016-10-29 [1] CRAN (R 4.5.0)
+ R6             2.6.1   2025-02-15 [1] CRAN (R 4.5.0)
+ RColorBrewer   1.1-3   2022-04-03 [1] CRAN (R 4.5.0)
+ rlang          1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown      2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ rprojroot      2.1.0   2025-07-12 [1] CRAN (R 4.5.0)
+ scales         1.4.0   2025-04-24 [1] CRAN (R 4.5.0)
+ sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ showtext       0.9-7   2024-03-02 [1] CRAN (R 4.5.0)
+ showtextdb     3.0     2020-06-04 [1] CRAN (R 4.5.0)
+ sysfonts       0.8.9   2024-03-02 [1] CRAN (R 4.5.0)
+ tibble         3.3.0   2025-06-08 [1] CRAN (R 4.5.0)
+ tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.5.0)
+ vctrs          0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
+ xfun           0.52    2025-04-02 [1] CRAN (R 4.5.0)
+ yaml           2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
@@ -1924,67 +1924,67 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.4.1 (2024-06-14)
- os       macOS Sonoma 14.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-08-29
- pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-08-26
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
- package     * version date (UTC) lib source
- cli           3.6.3   2024-06-21 [1] CRAN (R 4.4.0)
- colorout    * 1.3-0.2 2024-05-03 [1] Github (jalvesaq/colorout@c6113a2)
- colorspace    2.1-1   2024-07-26 [1] CRAN (R 4.4.0)
- digest        0.6.36  2024-06-23 [1] CRAN (R 4.4.0)
- dplyr         1.1.4   2023-11-17 [1] CRAN (R 4.4.0)
- emojifont     0.5.5   2021-04-20 [1] CRAN (R 4.4.0)
- evaluate      0.24.0  2024-06-10 [1] CRAN (R 4.4.0)
- fansi         1.0.6   2023-12-08 [1] CRAN (R 4.4.0)
- fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.4.0)
- generics      0.1.3   2022-07-05 [1] CRAN (R 4.4.0)
- ggplot2       3.5.1   2024-04-23 [1] CRAN (R 4.4.0)
- glue          1.7.0   2024-01-09 [1] CRAN (R 4.4.0)
- gtable        0.3.5   2024-04-22 [1] CRAN (R 4.4.0)
- here        * 1.0.1   2020-12-13 [1] CRAN (R 4.4.0)
- htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.4.0)
- htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.4.0)
- jsonlite      1.8.8   2023-12-04 [1] CRAN (R 4.4.0)
- knitr         1.48    2024-07-07 [1] CRAN (R 4.4.0)
- lifecycle     1.0.4   2023-11-07 [1] CRAN (R 4.4.0)
- magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.4.0)
- munsell       0.5.1   2024-04-01 [1] CRAN (R 4.4.0)
- pillar        1.9.0   2023-03-22 [1] CRAN (R 4.4.0)
- pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.4.0)
- proto         1.0.0   2016-10-29 [1] CRAN (R 4.4.0)
- R6            2.5.1   2021-08-19 [1] CRAN (R 4.4.0)
- rlang         1.1.4   2024-06-04 [1] CRAN (R 4.4.0)
- rmarkdown     2.27    2024-05-17 [1] CRAN (R 4.4.0)
- rprojroot     2.0.4   2023-11-05 [1] CRAN (R 4.4.0)
- rstudioapi    0.16.0  2024-03-24 [1] CRAN (R 4.4.0)
- scales        1.3.0   2023-11-28 [1] CRAN (R 4.4.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.4.0)
- showtext      0.9-7   2024-03-02 [1] CRAN (R 4.4.0)
- showtextdb    3.0     2020-06-04 [1] CRAN (R 4.4.0)
- sysfonts      0.8.9   2024-03-02 [1] CRAN (R 4.4.0)
- tibble        3.2.1   2023-03-20 [1] CRAN (R 4.4.0)
- tidyselect    1.2.1   2024-03-11 [1] CRAN (R 4.4.0)
- utf8          1.2.4   2023-10-22 [1] CRAN (R 4.4.0)
- vctrs         0.6.5   2023-12-01 [1] CRAN (R 4.4.0)
- xfun          0.46    2024-07-18 [1] CRAN (R 4.4.0)
- yaml          2.3.10  2024-07-26 [1] CRAN (R 4.4.0)
+ package      * version date (UTC) lib source
+ cli            3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout     * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ dichromat      2.0-0.1 2022-05-02 [1] CRAN (R 4.5.0)
+ digest         0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ dplyr          1.1.4   2023-11-17 [1] CRAN (R 4.5.0)
+ emojifont      0.5.5   2021-04-20 [1] CRAN (R 4.5.0)
+ evaluate       1.0.4   2025-06-18 [1] CRAN (R 4.5.0)
+ farver         2.1.2   2024-05-13 [1] CRAN (R 4.5.0)
+ fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ generics       0.1.4   2025-05-09 [1] CRAN (R 4.5.0)
+ ggplot2        3.5.2   2025-04-09 [1] CRAN (R 4.5.0)
+ glue           1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
+ gtable         0.3.6   2024-10-25 [1] CRAN (R 4.5.0)
+ here         * 1.0.1   2020-12-13 [1] CRAN (R 4.5.0)
+ htmltools      0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite       2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr          1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ lifecycle      1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
+ magrittr       2.0.3   2022-03-30 [1] CRAN (R 4.5.0)
+ pillar         1.11.0  2025-07-04 [1] CRAN (R 4.5.0)
+ pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.5.0)
+ proto          1.0.0   2016-10-29 [1] CRAN (R 4.5.0)
+ R6             2.6.1   2025-02-15 [1] CRAN (R 4.5.0)
+ RColorBrewer   1.1-3   2022-04-03 [1] CRAN (R 4.5.0)
+ rlang          1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown      2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ rprojroot      2.1.0   2025-07-12 [1] CRAN (R 4.5.0)
+ scales         1.4.0   2025-04-24 [1] CRAN (R 4.5.0)
+ sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ showtext       0.9-7   2024-03-02 [1] CRAN (R 4.5.0)
+ showtextdb     3.0     2020-06-04 [1] CRAN (R 4.5.0)
+ sysfonts       0.8.9   2024-03-02 [1] CRAN (R 4.5.0)
+ tibble         3.3.0   2025-06-08 [1] CRAN (R 4.5.0)
+ tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.5.0)
+ vctrs          0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
+ xfun           0.52    2025-04-02 [1] CRAN (R 4.5.0)
+ yaml           2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
 </div>
 <p>For packages that we installed from GitHub, it includes the specific <code>git</code> commit ID for the version we installed. This is super precise information that is very useful to have.</p>
-<p>Check <a href="https://github.com/LieberInstitute/template_project/blob/main/code/01_read_data_to_r/01_read_data_to_r.R" class="uri">https://github.com/LieberInstitute/template_project/blob/main/code/01_read_data_to_r/01_read_data_to_r.R</a> for a full script example part of <a href="https://github.com/LieberInstitute/template_project" class="uri">https://github.com/LieberInstitute/template_project</a>.</p>
+<p>Check <a href="https://github.com/LieberInstitute/template_project/blob/devel/code/01_read_data_to_r/01_read_data_to_r.R" class="uri">https://github.com/LieberInstitute/template_project/blob/devel/code/01_read_data_to_r/01_read_data_to_r.R</a> for a full script example part of <a href="https://github.com/LieberInstitute/template_project" class="uri">https://github.com/LieberInstitute/template_project</a>.</p>
 <p>Remember to use <code>sessioninfo</code> when using <code>reprex::reprex()</code> as we mentioned previously at <a href="../03-introduction-to-gitgithub/#help-me-help-you-reprexreprex">posts/03-introduction-to-gitgithub/#help-me-help-you-reprexreprex</a>.</p>
 <p>Check <a href="https://github.com/Bioconductor/BiocFileCache/issues/48" class="uri">https://github.com/Bioconductor/BiocFileCache/issues/48</a> for an example on how the output from <code>sessioninfo::session_info()</code> provided useful hints that allowed me and others to resolve a problem.</p>
 <p>In this video I talked about both <code>here</code> and <code>sessioninfo</code> as well as <code>R</code> and <code>RStudio</code>:</p>
@@ -2037,61 +2037,61 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.4.1 (2024-06-14)
- os       macOS Sonoma 14.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-08-29
- pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-08-26
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
- package     * version date (UTC) lib source
- cli           3.6.3   2024-06-21 [1] CRAN (R 4.4.0)
- colorout    * 1.3-0.2 2024-05-03 [1] Github (jalvesaq/colorout@c6113a2)
- colorspace    2.1-1   2024-07-26 [1] CRAN (R 4.4.0)
- digest        0.6.36  2024-06-23 [1] CRAN (R 4.4.0)
- dplyr         1.1.4   2023-11-17 [1] CRAN (R 4.4.0)
- emojifont     0.5.5   2021-04-20 [1] CRAN (R 4.4.0)
- evaluate      0.24.0  2024-06-10 [1] CRAN (R 4.4.0)
- fansi         1.0.6   2023-12-08 [1] CRAN (R 4.4.0)
- fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.4.0)
- generics      0.1.3   2022-07-05 [1] CRAN (R 4.4.0)
- ggplot2       3.5.1   2024-04-23 [1] CRAN (R 4.4.0)
- glue          1.7.0   2024-01-09 [1] CRAN (R 4.4.0)
- gtable        0.3.5   2024-04-22 [1] CRAN (R 4.4.0)
- here        * 1.0.1   2020-12-13 [1] CRAN (R 4.4.0)
- htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.4.0)
- htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.4.0)
- jsonlite      1.8.8   2023-12-04 [1] CRAN (R 4.4.0)
- knitr         1.48    2024-07-07 [1] CRAN (R 4.4.0)
- lifecycle     1.0.4   2023-11-07 [1] CRAN (R 4.4.0)
- magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.4.0)
- munsell       0.5.1   2024-04-01 [1] CRAN (R 4.4.0)
- pillar        1.9.0   2023-03-22 [1] CRAN (R 4.4.0)
- pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.4.0)
- proto         1.0.0   2016-10-29 [1] CRAN (R 4.4.0)
- R6            2.5.1   2021-08-19 [1] CRAN (R 4.4.0)
- rlang         1.1.4   2024-06-04 [1] CRAN (R 4.4.0)
- rmarkdown     2.27    2024-05-17 [1] CRAN (R 4.4.0)
- rprojroot     2.0.4   2023-11-05 [1] CRAN (R 4.4.0)
- rstudioapi    0.16.0  2024-03-24 [1] CRAN (R 4.4.0)
- scales        1.3.0   2023-11-28 [1] CRAN (R 4.4.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.4.0)
- showtext      0.9-7   2024-03-02 [1] CRAN (R 4.4.0)
- showtextdb    3.0     2020-06-04 [1] CRAN (R 4.4.0)
- sysfonts      0.8.9   2024-03-02 [1] CRAN (R 4.4.0)
- tibble        3.2.1   2023-03-20 [1] CRAN (R 4.4.0)
- tidyselect    1.2.1   2024-03-11 [1] CRAN (R 4.4.0)
- utf8          1.2.4   2023-10-22 [1] CRAN (R 4.4.0)
- vctrs         0.6.5   2023-12-01 [1] CRAN (R 4.4.0)
- xfun          0.46    2024-07-18 [1] CRAN (R 4.4.0)
- yaml          2.3.10  2024-07-26 [1] CRAN (R 4.4.0)
+ package      * version date (UTC) lib source
+ cli            3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout     * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ dichromat      2.0-0.1 2022-05-02 [1] CRAN (R 4.5.0)
+ digest         0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ dplyr          1.1.4   2023-11-17 [1] CRAN (R 4.5.0)
+ emojifont      0.5.5   2021-04-20 [1] CRAN (R 4.5.0)
+ evaluate       1.0.4   2025-06-18 [1] CRAN (R 4.5.0)
+ farver         2.1.2   2024-05-13 [1] CRAN (R 4.5.0)
+ fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ generics       0.1.4   2025-05-09 [1] CRAN (R 4.5.0)
+ ggplot2        3.5.2   2025-04-09 [1] CRAN (R 4.5.0)
+ glue           1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
+ gtable         0.3.6   2024-10-25 [1] CRAN (R 4.5.0)
+ here         * 1.0.1   2020-12-13 [1] CRAN (R 4.5.0)
+ htmltools      0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite       2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr          1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ lifecycle      1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
+ magrittr       2.0.3   2022-03-30 [1] CRAN (R 4.5.0)
+ pillar         1.11.0  2025-07-04 [1] CRAN (R 4.5.0)
+ pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.5.0)
+ proto          1.0.0   2016-10-29 [1] CRAN (R 4.5.0)
+ R6             2.6.1   2025-02-15 [1] CRAN (R 4.5.0)
+ RColorBrewer   1.1-3   2022-04-03 [1] CRAN (R 4.5.0)
+ rlang          1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown      2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ rprojroot      2.1.0   2025-07-12 [1] CRAN (R 4.5.0)
+ scales         1.4.0   2025-04-24 [1] CRAN (R 4.5.0)
+ sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ showtext       0.9-7   2024-03-02 [1] CRAN (R 4.5.0)
+ showtextdb     3.0     2020-06-04 [1] CRAN (R 4.5.0)
+ sysfonts       0.8.9   2024-03-02 [1] CRAN (R 4.5.0)
+ tibble         3.3.0   2025-06-08 [1] CRAN (R 4.5.0)
+ tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.5.0)
+ vctrs          0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
+ xfun           0.52    2025-04-02 [1] CRAN (R 4.5.0)
+ yaml           2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
@@ -2106,7 +2106,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -2952,7 +2952,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3426,7 +3426,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4817,7 +4817,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6637,7 +6637,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7598,7 +7598,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8447,7 +8447,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -8960,7 +8960,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10323,7 +10323,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -12278,7 +12278,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -14033,7 +14033,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -15319,7 +15319,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -16652,7 +16652,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -19690,7 +19690,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -21698,7 +21698,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -22652,7 +22652,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -24396,7 +24396,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:56:18 GMT</pubDate>
 </item>
 </channel>
 </rss>
