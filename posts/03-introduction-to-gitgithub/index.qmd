@@ -174,7 +174,7 @@ As a quick exercise:
 
 1.  Install `reprex`
 
-2.  Log in to your GitHub account and access <https://github.com/lcolladotor/jhustatcomputing/issues/7>
+2.  Log in to your GitHub account and access <https://github.com/lcolladotor/jhustatcomputing/issues/10>
 
 3.  Copy paste the following R code `stop("This R error is weird")`.
 

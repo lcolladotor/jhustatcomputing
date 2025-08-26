@@ -20,7 +20,7 @@ categories: [project 0, projects]
 
 **Due date: September 8th at 11:59pm**
 
-Using the tools we learned in the first week (e.g. R, RStudio and Github). Let's apply them in a small (but also comprehensive) exercise.
+Using the tools we learned in the first week (e.g. `R`, `RStudio IDE` / `Positron`, and `git` + `GitHub`). Let's apply them in a small (but also comprehensive) exercise.
 
 -   **Please note this project is entirely optional** (i.e. it will not be graded), but hopefully it will be helpful to you getting set up for the rest of the course (i.e. set up these tools on your computing environment) and give you an opportunity to introduce yourself to your classmates.
 
@@ -49,7 +49,7 @@ This part of the project is to ensure that you have successfully set up your com
 
 2.  The type of computer/operating system you are using (Windows, Mac, Unix/Linux, other)
 
-3.  The version of R that you have installed on your computer. To do this, start up R and run the following in the R console and include the output in your email.
+3.  The version of `R` that you have installed on your computer. To do this, start up R and run the following in the R console and include the output in your email.
 
 ```{r}
 #| label: rv
@@ -60,15 +60,19 @@ print(R.version.string)
 
 ![Printing the R version string](../../videos/versionstring.gif)
 
-4.  The version of RStudio that you have installed on your computer. To do this start up RStudio and in the R console window, run the following and again include the output in your email:
+4.  The version of `RStudio IDE` that you have installed on your computer. To do this start up `RStudio IDE` and in the R console window, run the following and again include the output in your email:
 
 ```{r rstudiov, eval = FALSE, echo = TRUE}
 print(RStudio.Version()$version)
 ```
 
-5.  If you have a GitHub username, please include this in your email. If you do not have a GitHub username, read <https://happygitwithr.com>, sign up for GitHub, and include your new username in your email to me.
+* If you are using `Positron` instead of `RStudio IDE`, please include the version of `Positron` that you have installed on your computer. To do this, click on `Positron` -\> `About Positron` and include the version number in your email.
 
-6.  To make sure git is installed on your system, use the 'Terminal' (e.g. it's next to the R Console within RStudio[^1]) (or whatever you use), run the following and include the output in your email:
+5.  If you have a `GitHub` username, please include this in your email. If you do not have a GitHub username, read <https://happygitwithr.com>, sign up for GitHub, and include your new username in your email to me.
+
+  * Note that you will need a GitHub account if you want to get access to GitHub Copilot Pro for free as a student. See <https://education.github.com/pack> for more details.
+
+6.  To make sure `git` is installed on your system, use the 'Terminal' (e.g. it's next to the R Console within RStudio[^1]) (or whatever you use), run the following and include the output in your email:
 
 [^1]: You can open the "Terminal" panel on RStudio from Tools -\> Terminal -\> New Terminal window. On macOS and Linux, this will be a Linux terminal by default (typically `zsh` on macOS and `bash` on Linux). On Windows, it's best to use `Git Bash`. If you followed the instructions from <https://happygitwithr.com/install-git#install-git-windows> (option 1: highly recommended) then you will have `Git Bash` installed. On Windows, you will likely still have to tell RStudio to use `Git Bash` by editing the dropdown menu from Tools -\> Global Options -\> Terminal -\> "New terminals open with:" (on macOS and Linux you can switch from `zsh` or `bash` to your favorite terminal shell if you prefer, though I don't recommend doing this for new users).
 
@@ -78,7 +82,7 @@ For example, this is mine:
 git --version
 ```
 
-If you have any trouble with any of the steps above, try to first post on the discussion board on CoursePlus. The TAs and I will be checking it frequently, but other students may also be helpful in their replies. You can also use other resources to get help (Google, R4DS, colleagues/friends/relatives with R/Markdown experience, etc.). Still, try to do as much as possible yourself. We will use all the bits you are learning here repeatedly during this course.
+If you have any trouble with any of the steps above, try to first post on the CoursePlus Discussion Forum. The TAs and I will be checking it frequently, but other students may also be helpful in their replies. You can also use other resources to get help (Google, R4DS, colleagues/friends/relatives with R/Markdown experience, etc.). Still, try to do as much as possible yourself. We will use all the bits you are learning here repeatedly during this course.
 
 # Part 2: make a website using `usethis` and `postcards`
 
