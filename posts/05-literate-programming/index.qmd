@@ -125,7 +125,7 @@ Before we leave this section, I find that there is quite a bit of terminology to
 -   [`markdown`](https://CRAN.R-project.org/package=markdown) (**R package**). `markdown` is an R package which converts `.md` files into HTML. It is no longer recommended for use has been surpassed by [`rmarkdown`](https://CRAN.R-project.org/package=rmarkdown) (discussed below).
 -   R Markdown (**markup language**). R Markdown is an extension of the markdown syntax. R Markdown files are plain text files that typically have the file extension `.Rmd`.
 -   [`rmarkdown`](https://CRAN.R-project.org/package=rmarkdown) (**R package**). The R package `rmarkdown` is a library that uses pandoc to process and convert `.Rmd` files into a number of different formats. This core function is `rmarkdown::render()`. **Note**: this package only deals with the markdown language. If the input file is e.g. `.Rhtml` or `.Rnw`, then you need to use `knitr` prior to calling pandoc (see below).
--   [quarto](https://quarto.org/): Similar to `rmarkdown` but can be used outside R. It is not an R package! Input files have the `.qmd` file extension.
+-   [quarto](https://quarto.org/): Similar to `rmarkdown` but can be used outside R. It is not an R package! Input files have the `.qmd` file extension. `Positron` has mostly adopted `quarto`, so this what you will likely use instead of `R Markdown` for making the `.html` files required for the course projects. If you need a template file to get started, go to https://quarto.org/, under the "Hello, Quarto" section click on "R", then copy-paste the template code into a new `.qmd` file in `Positron` (or `RStudio IDE`).
 
 ::: callout-tip
 Check out the R Markdown Quick Tour for more:
