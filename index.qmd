@@ -4,11 +4,11 @@ image: http://lcolladotor.github.io/media/Leo_transparente.png
 about:
   template: jolla
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/lcolladotor
+    - icon: bluesky
+      text: BlueSky
+      href: https://bsky.app/profile/lcolladotor.bsky.social
     - icon: github
-      text: Github
+      text: GitHub
       href: https://github.com/lcolladotor
 ---
 

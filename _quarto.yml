@@ -26,8 +26,8 @@ website:
           href: resources.qmd
       - icon: github
         href: https://github.com/lcolladotor/jhustatcomputing
-      - icon: twitter
-        href: https://twitter.com/lcolladotor
+      - icon: bluesky
+        href: https://bsky.app/profile/lcolladotor.bsky.social
       - icon: rss
         href: index.xml
 format:
@@ -36,7 +36,8 @@ format:
     toc: true
     css: styles.css
 
-editor: visual
+editor:
+  render-on-save: true
 
 execute:
   freeze: auto
