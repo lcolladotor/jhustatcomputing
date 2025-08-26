@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.7.33</generator>
-<lastBuildDate>Tue, 26 Aug 2025 18:05:42 GMT</lastBuildDate>
+<lastBuildDate>Tue, 26 Aug 2025 19:27:38 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -582,7 +582,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -1098,7 +1098,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1212,12 +1212,13 @@ Learning objectives
 <h3 class="anchored" data-anchor-id="how-to-use-gitgithub">How to use Git/GitHub</h3>
 <p>Git and GitHub is fundamentally <strong>based on commands you type into the command line</strong>. Lots of online resources show you how to use the command line. This is the most powerful, and the way I almost always interact with git/GitHub. However, many folks find this the most confusing way to use git/GitHub. Alternatively, there are graphical interfaces.</p>
 <ul>
-<li><a href="https://desktop.github.com/">GitHub itself</a> provides a grapical interface with basic functionality.</li>
-<li>RStudio also has <a href="https://happygitwithr.com/rstudio-git-github.html">Git/GitHub integration</a>. Of course this only works for R project GitHub integration.</li>
+<li><a href="https://desktop.github.com/">GitHub itself</a> provides a graphical interface with basic functionality.</li>
+<li><code>RStudio IDE</code> also has <a href="https://happygitwithr.com/rstudio-git-github.html">Git/GitHub integration</a>. Of course this only works for R project GitHub integration.</li>
+<li><code>Positron</code> also works very well with <code>Git</code> and <code>GitHub</code> as documented at <a href="https://positron.posit.co/git.html" class="uri">https://positron.posit.co/git.html</a>. It has several more advanced options, as <code>Positron</code> is based on <code>Visual Studio Code</code> (VS Code) and VS Code already has an in-depth integration with <code>Git</code> and <code>GitHub</code> as noted at <a href="https://code.visualstudio.com/docs/sourcecontrol/intro-to-git" class="uri">https://code.visualstudio.com/docs/sourcecontrol/intro-to-git</a>.</li>
 <li>There are also third party GitHub clients with many advanced features, most of which you won’t need initially, but might eventually.</li>
 </ul>
 <p><strong>Note</strong>: As student, you can (and should) upgrade to the Pro version of GitHub for free (i.e.&nbsp;access to unlimited private repositories is one benefit), see the <a href="https://education.github.com/pack">GitHub student developer pack</a> on how to do this.</p>
-<p>We will mostly be using Git commands through the RStudio Git panel. This panel will show up by default if RStudio recognizes that you have installed Git already.</p>
+<p>We will mostly be using Git commands through the <code>RStudio IDE</code> Git panel or <code>Positron</code> Git Source Control section. This panel will show up by default if <code>RStudio IDE</code> / <code>Positron</code> recognizes that you have installed Git already.</p>
 </section>
 </section>
 <section id="getting-started" class="level1">
@@ -1296,7 +1297,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">use_github</span>()</span></code></pre></div>
 </div>
-<p>Check <a href="../../projects/project-0/">Project 0</a> for more details on how to configure <code>usethis</code> so it can recognize who you are on <code>git</code>/GitHub and how to access your GitHub account.</p>
+<p>Check <a href="../../projects/project-0/">Project 0</a> for more details on how to configure <code>usethis</code> so it can recognize who you are on <code>git</code>/<code>GitHub</code> and how to access your GitHub account.</p>
 </section>
 <section id="help-me-help-you-reprexreprex" class="level1">
 <h1>“Help me help you”: <code>reprex::reprex()</code></h1>
@@ -1313,10 +1314,10 @@ font-style: inherit;">"reprex"</span>)</span></code></pre></div>
 <p>As a quick exercise:</p>
 <ol type="1">
 <li><p>Install <code>reprex</code></p></li>
-<li><p>Log in to your GitHub account and access <a href="https://github.com/lcolladotor/jhustatcomputing/issues/7" class="uri">https://github.com/lcolladotor/jhustatcomputing/issues/7</a></p></li>
+<li><p>Log in to your GitHub account and access <a href="https://github.com/lcolladotor/jhustatcomputing/issues/10" class="uri">https://github.com/lcolladotor/jhustatcomputing/issues/10</a></p></li>
 <li><p>Copy paste the following R code <code>stop("This R error is weird")</code>.</p></li>
 <li><p>Type <code>reprex::reprex()</code> in your R console.</p></li>
-<li><p>Paste the output into <a href="https://github.com/lcolladotor/jhustatcomputing/issues/7" class="uri">https://github.com/lcolladotor/jhustatcomputing/issues/7</a> and click on the “comment” green button.</p></li>
+<li><p>Paste the output into <a href="https://github.com/lcolladotor/jhustatcomputing/issues/10" class="uri">https://github.com/lcolladotor/jhustatcomputing/issues/10</a> and click on the “comment” green button.</p></li>
 </ol>
 <p>Here is an actual example where I used <code>reprex</code> to ask a question: <a href="https://github.com/Bioconductor/BiocFileCache/issues/48" class="uri">https://github.com/Bioconductor/BiocFileCache/issues/48</a>.</p>
 <p>For more details on <code>reprex</code>, check this video:</p>
@@ -1397,36 +1398,37 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.4.1 (2024-06-14)
- os       macOS Sonoma 14.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-08-28
- pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-08-26
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- cli           3.6.3   2024-06-21 [1] CRAN (R 4.4.0)
- colorout    * 1.3-0.2 2024-05-03 [1] Github (jalvesaq/colorout@c6113a2)
- digest        0.6.36  2024-06-23 [1] CRAN (R 4.4.0)
- evaluate      0.24.0  2024-06-10 [1] CRAN (R 4.4.0)
- fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.4.0)
- htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.4.0)
- htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.4.0)
- jsonlite      1.8.8   2023-12-04 [1] CRAN (R 4.4.0)
- knitr         1.48    2024-07-07 [1] CRAN (R 4.4.0)
- rlang         1.1.4   2024-06-04 [1] CRAN (R 4.4.0)
- rmarkdown     2.27    2024-05-17 [1] CRAN (R 4.4.0)
- rstudioapi    0.16.0  2024-03-24 [1] CRAN (R 4.4.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.4.0)
- xfun          0.46    2024-07-18 [1] CRAN (R 4.4.0)
- yaml          2.3.10  2024-07-26 [1] CRAN (R 4.4.0)
+ cli           3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout    * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ digest        0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ evaluate      1.0.4   2025-06-18 [1] CRAN (R 4.5.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite      2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr         1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ rlang         1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown     2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ sessioninfo   1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ xfun          0.52    2025-04-02 [1] CRAN (R 4.5.0)
+ yaml          2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
@@ -1443,7 +1445,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -2104,7 +2106,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -2950,7 +2952,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3424,7 +3426,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4815,7 +4817,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6635,7 +6637,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7596,7 +7598,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8445,7 +8447,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -8958,7 +8960,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10321,7 +10323,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -12276,7 +12278,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -14031,7 +14033,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -15317,7 +15319,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -16650,7 +16652,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -19688,7 +19690,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -21696,7 +21698,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -22650,7 +22652,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -24394,7 +24396,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Tue, 26 Aug 2025 18:05:42 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 19:27:38 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -279,7 +279,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="background" class="level1">
 <h1>Background</h1>
 <p><strong>Due date: September 8th at 11:59pm</strong></p>
-<p>Using the tools we learned in the first week (e.g.&nbsp;R, RStudio and Github). Let’s apply them in a small (but also comprehensive) exercise.</p>
+<p>Using the tools we learned in the first week (e.g.&nbsp;<code>R</code>, <code>RStudio IDE</code> / <code>Positron</code>, and <code>git</code> + <code>GitHub</code>). Let’s apply them in a small (but also comprehensive) exercise.</p>
 <ul>
 <li><p><strong>Please note this project is entirely optional</strong> (i.e.&nbsp;it will not be graded), but hopefully it will be helpful to you getting set up for the rest of the course (i.e.&nbsp;set up these tools on your computing environment) and give you an opportunity to introduce yourself to your classmates.</p></li>
 <li><p><strong>For those of you who are new to GitHub/R/Rmarkdown</strong>: this project makes you do a lot of things that you might not be familiar with. I know that this might be time-consuming and also might feel a bit intimidating. It’s partly unavoidable and partly on purpose. You need to learn how to quickly get up to speed with all kinds of new tools that come your way. So practicing it is a good idea. You are welcome to draw on any sources for help that you want (online, classmates, instructor, etc.). I’m confident with a bit of trial and error you’ll get it to work.</p></li>
@@ -303,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li><p>Your name, JHED ID (if applicable).</p></li>
 <li><p>The type of computer/operating system you are using (Windows, Mac, Unix/Linux, other)</p></li>
-<li><p>The version of R that you have installed on your computer. To do this, start up R and run the following in the R console and include the output in your email.</p></li>
+<li><p>The version of <code>R</code> that you have installed on your computer. To do this, start up R and run the following in the R console and include the output in your email.</p></li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(R.version.string)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -315,23 +315,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <ol start="4" type="1">
-<li>The version of RStudio that you have installed on your computer. To do this start up RStudio and in the R console window, run the following and again include the output in your email:</li>
+<li>The version of <code>RStudio IDE</code> that you have installed on your computer. To do this start up <code>RStudio IDE</code> and in the R console window, run the following and again include the output in your email:</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">RStudio.Version</span>()<span class="sc">$</span>version)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<ul>
+<li>If you are using <code>Positron</code> instead of <code>RStudio IDE</code>, please include the version of <code>Positron</code> that you have installed on your computer. To do this, click on <code>Positron</code> -&gt; <code>About Positron</code> and include the version number in your email.</li>
+</ul>
 <ol start="5" type="1">
-<li><p>If you have a GitHub username, please include this in your email. If you do not have a GitHub username, read <a href="https://happygitwithr.com" class="uri">https://happygitwithr.com</a>, sign up for GitHub, and include your new username in your email to me.</p></li>
-<li><p>To make sure git is installed on your system, use the ‘Terminal’ (e.g.&nbsp;it’s next to the R Console within RStudio<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) (or whatever you use), run the following and include the output in your email:</p></li>
+<li>If you have a <code>GitHub</code> username, please include this in your email. If you do not have a GitHub username, read <a href="https://happygitwithr.com" class="uri">https://happygitwithr.com</a>, sign up for GitHub, and include your new username in your email to me.</li>
+</ol>
+<ul>
+<li>Note that you will need a GitHub account if you want to get access to GitHub Copilot Pro for free as a student. See <a href="https://education.github.com/pack" class="uri">https://education.github.com/pack</a> for more details.</li>
+</ul>
+<ol start="6" type="1">
+<li>To make sure <code>git</code> is installed on your system, use the ‘Terminal’ (e.g.&nbsp;it’s next to the R Console within RStudio<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) (or whatever you use), run the following and include the output in your email:</li>
 </ol>
 <p>For example, this is mine:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>git version 2.45.1</code></pre>
+<pre><code>git version 2.51.0</code></pre>
 </div>
 </div>
-<p>If you have any trouble with any of the steps above, try to first post on the discussion board on CoursePlus. The TAs and I will be checking it frequently, but other students may also be helpful in their replies. You can also use other resources to get help (Google, R4DS, colleagues/friends/relatives with R/Markdown experience, etc.). Still, try to do as much as possible yourself. We will use all the bits you are learning here repeatedly during this course.</p>
+<p>If you have any trouble with any of the steps above, try to first post on the CoursePlus Discussion Forum. The TAs and I will be checking it frequently, but other students may also be helpful in their replies. You can also use other resources to get help (Google, R4DS, colleagues/friends/relatives with R/Markdown experience, etc.). Still, try to do as much as possible yourself. We will use all the bits you are learning here repeatedly during this course.</p>
 </section>
 </section>
 <section id="part-2-make-a-website-using-usethis-and-postcards" class="level1">
@@ -633,7 +641,7 @@ Error in libgit2::git_signature_default :
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.5.1 (2025-06-13)
- os       macOS Sequoia 15.6
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
@@ -641,8 +649,8 @@ Error in libgit2::git_signature_default :
  ctype    en_US.UTF-8
  tz       America/New_York
  date     2025-08-26
- pandoc   3.4 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64/ (via rmarkdown)
- quarto   1.4.550 @ /usr/local/bin/quarto
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
@@ -657,7 +665,6 @@ Error in libgit2::git_signature_default :
  knitr         1.50    2025-03-16 [1] CRAN (R 4.5.0)
  rlang         1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
  rmarkdown     2.29    2024-11-04 [1] CRAN (R 4.5.0)
- rstudioapi    0.17.1  2024-10-22 [1] CRAN (R 4.5.0)
  sessioninfo   1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
  xfun          0.52    2025-04-02 [1] CRAN (R 4.5.0)
  yaml          2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
