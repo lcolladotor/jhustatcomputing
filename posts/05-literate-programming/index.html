@@ -487,7 +487,7 @@ Questions
 <li><a href="https://CRAN.R-project.org/package=markdown"><code>markdown</code></a> (<strong>R package</strong>). <code>markdown</code> is an R package which converts <code>.md</code> files into HTML. It is no longer recommended for use has been surpassed by <a href="https://CRAN.R-project.org/package=rmarkdown"><code>rmarkdown</code></a> (discussed below).</li>
 <li>R Markdown (<strong>markup language</strong>). R Markdown is an extension of the markdown syntax. R Markdown files are plain text files that typically have the file extension <code>.Rmd</code>.</li>
 <li><a href="https://CRAN.R-project.org/package=rmarkdown"><code>rmarkdown</code></a> (<strong>R package</strong>). The R package <code>rmarkdown</code> is a library that uses pandoc to process and convert <code>.Rmd</code> files into a number of different formats. This core function is <code>rmarkdown::render()</code>. <strong>Note</strong>: this package only deals with the markdown language. If the input file is e.g.&nbsp;<code>.Rhtml</code> or <code>.Rnw</code>, then you need to use <code>knitr</code> prior to calling pandoc (see below).</li>
-<li><a href="https://quarto.org/">quarto</a>: Similar to <code>rmarkdown</code> but can be used outside R. It is not an R package! Input files have the <code>.qmd</code> file extension.</li>
+<li><a href="https://quarto.org/">quarto</a>: Similar to <code>rmarkdown</code> but can be used outside R. It is not an R package! Input files have the <code>.qmd</code> file extension. <code>Positron</code> has mostly adopted <code>quarto</code>, so this what you will likely use instead of <code>R Markdown</code> for making the <code>.html</code> files required for the course projects. If you need a template file to get started, go to https://quarto.org/, under the “Hello, Quarto” section click on “R”, then copy-paste the template code into a new <code>.qmd</code> file in <code>Positron</code> (or <code>RStudio IDE</code>).</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -909,38 +909,39 @@ Tip
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.4.1 (2024-06-14)
- os       macOS Sonoma 14.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-08-28
- pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-08-26
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- cli           3.6.3   2024-06-21 [1] CRAN (R 4.4.0)
- colorout    * 1.3-0.2 2024-05-03 [1] Github (jalvesaq/colorout@c6113a2)
- digest        0.6.36  2024-06-23 [1] CRAN (R 4.4.0)
- evaluate      0.24.0  2024-06-10 [1] CRAN (R 4.4.0)
- fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.4.0)
- here          1.0.1   2020-12-13 [1] CRAN (R 4.4.0)
- htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.4.0)
- htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.4.0)
- jsonlite      1.8.8   2023-12-04 [1] CRAN (R 4.4.0)
- knitr         1.48    2024-07-07 [1] CRAN (R 4.4.0)
- rlang         1.1.4   2024-06-04 [1] CRAN (R 4.4.0)
- rmarkdown     2.27    2024-05-17 [1] CRAN (R 4.4.0)
- rprojroot     2.0.4   2023-11-05 [1] CRAN (R 4.4.0)
- rstudioapi    0.16.0  2024-03-24 [1] CRAN (R 4.4.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.4.0)
- xfun          0.46    2024-07-18 [1] CRAN (R 4.4.0)
- yaml          2.3.10  2024-07-26 [1] CRAN (R 4.4.0)
+ cli           3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout    * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ digest        0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ evaluate      1.0.4   2025-06-18 [1] CRAN (R 4.5.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ here          1.0.1   2020-12-13 [1] CRAN (R 4.5.0)
+ htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite      2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr         1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ rlang         1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown     2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ rprojroot     2.1.0   2025-07-12 [1] CRAN (R 4.5.0)
+ sessioninfo   1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ xfun          0.52    2025-04-02 [1] CRAN (R 4.5.0)
+ yaml          2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
