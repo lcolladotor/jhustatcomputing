@@ -281,6 +281,8 @@ Go to <https://posit-dev.github.io/air/> and
 
 1.  Click on "RStudio" if you are using `RStudio IDE`. That will take you to <https://posit-dev.github.io/air/editor-rstudio.html> where you will find the detailed installation instructions.
 
+    -   Note that I recommend enabling the `Tools -> Global Options -> Code -> Saving` and check `Reformat documents on save` option. Particularly if you are working on your own code.
+
 2.  Click on "VS Code and Positron" if you are using `Positron`. That will take you to <https://posit-dev.github.io/air/editor-vscode.html> where some options and configuration steps are described. Note however, that `Air` is already available from `Positron`. You will need to open your `settings.json` file from the Command Palette (`Shift + Cmd + P` on Mac/Linux, `Shift + Ctrl + P` on Windows):
 
     -   Run `Preferences: Open Workspace Settings (JSON)` to modify workspace specific settings (recommended).

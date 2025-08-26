@@ -39,7 +39,7 @@ Material for this lecture was borrowed and adopted from
 
 -   <https://rdpeng.github.io/Biostat776/lecture-introduction-and-overview.html>
 -   <https://rafalab.github.io/dsbook>
--   <https://rmd4sci.njtierney.com>
+-   <https://qmd4sci.njtierney.com>
 -   <https://andreashandel.github.io/MADAcourse>
 
 # Learning objectives
@@ -143,9 +143,9 @@ R functionality is divided into a number of *packages*.
 
 When you download a fresh installation of R from CRAN, you get all of the above, which represents a substantial amount of functionality. However, there are many other packages available:
 
--   There are over 21,163 packages on CRAN that have been developed by users and programmers around the world.
+-   There are over `r nrow(available.packages())` packages on CRAN that have been developed by users and programmers around the world.
 
--   There are also over 2,300 packages associated with the [Bioconductor project](http://bioconductor.org).
+-   There are also `r length(BiocManager::available())` packages associated with the [Bioconductor project](http://bioconductor.org).
 
 -   People often make packages available on GitHub (very common) and their personal websites (not so common nowadays); there is no reliable way to keep track of how many packages are available in this fashion.
 
@@ -186,7 +186,7 @@ The RStudio layout has the following features:
 -   On the lower right, the view for files, plots, packages, help, and viewer.
 -   On the upper right, the environment / history pane
 
-![A screenshot of the RStudio integrated developer environment (IDE) -- aka the working environment](https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png)
+[![A screenshot of the RStudio integrated developer environment (IDE) -- aka the working environment](https://github.com/njtierney/qmd4sci/raw/main/figs/rstudio-screenshot.jpeg)](https://qmd4sci.njtierney.com/)
 
 The R console is the bit where you can run your code. This is where the R code in your Rmarkdown document gets sent to run (we'll learn about these files later).
 
@@ -194,8 +194,9 @@ The file/plot/pkg viewer is a handy browser for your current files, like Finder,
 
 ### Installing R and RStudio
 
--   If you have not already, [install R first](http://cran.r-project.org). If you already have R installed, make sure it is a fairly recent version, version 4.4.1 or newer. If yours is older that version 4.3.0, I suggest you update (install a new R version).
--   Once you have R installed, install the free version of [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/). Again, make sure it's a recent version.
+-   If you have not already, [install R first](http://cran.r-project.org). If you already have R installed, make sure it is a fairly recent version, version 4.5.1 or newer. If yours is older than version 4.5.0, I suggest you update (install a new R version).
+-   Once you have R installed, install the free version of [RStudio Desktop](https://posit.co/download/rstudio-desktop/). Again, make sure it's a recent version.
+-   Alternatively, install the latest version of [Positron](https://positron.posit.co/download.html).
 
 ::: callout-tip
 Installing R and RStudio should be fairly straightforward. However, a great set of detailed instructions is in Rafael Irizarry's `dsbook`
