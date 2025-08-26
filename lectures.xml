@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.7.33</generator>
-<lastBuildDate>Tue, 26 Aug 2025 11:01:45 GMT</lastBuildDate>
+<lastBuildDate>Tue, 26 Aug 2025 16:22:02 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -234,7 +234,7 @@ Warning
 <section id="create-your-github-account" class="level4">
 <h4 class="anchored" data-anchor-id="create-your-github-account">Create your GitHub account</h4>
 <p>Create a personal GitHub account following the instructions at <a href="https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account" class="uri">https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account</a>.</p>
-<p>Following <a href="https://twitter.com/jtleek">Jeff Leek</a>’s advice on <a href="https://leanpub.com/modernscientist"><strong>How to be a modern scientist</strong></a> that was part of my team’s bootcamps at <a href="https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html" class="uri">https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html</a>, try to choose a username that will be the same one you use on your email and other work-related social media platforms such as Bluesky, LinkedIn, etc.</p>
+<p>Following <a href="https://bsky.app/profile/jtleek.bsky.social">Jeff Leek</a>’s advice on <a href="https://leanpub.com/modernscientist"><strong>How to be a modern scientist</strong></a> that was part of my team’s bootcamps at <a href="https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html" class="uri">https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html</a>, try to choose a username that will be the same one you use on your email and other work-related social media platforms such as Bluesky, LinkedIn, etc.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rcX-VyxHEXA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 <p>If you are using <code>Positron</code>, under the “Accounts” options (bottom left corner), click on “Sign in with GitHub […]”, provide the 8 digit code, and authorize “posit-dev”.</p>
@@ -364,7 +364,10 @@ font-style: inherit;">}</span></span></code></pre></div>
 <li>Discuss generic programming language concepts as they are implemented in a high-level statistical language</li>
 <li>Write and debug code in base R and the tidyverse (and integrate code from Python modules)</li>
 <li>Build basic data visualizations using R and the tidyverse</li>
-<li>Discuss best practices for coding and reproducible research, basics of data ethics, basics of working with special data types, and basics of storing data</li>
+<li>Discuss best practices for coding and reproducible research, basics of data ethics, basics of working with special data types, and basics of storing data
+<ul>
+<li>Example of why keeping track of R versions is important: <a href="https://github.com/edward130603/BayesSpace/issues/150" class="uri">https://github.com/edward130603/BayesSpace/issues/150</a>.</li>
+</ul></li>
 </ol>
 </section>
 <section id="course-logistics" class="level1">
@@ -375,7 +378,10 @@ font-style: inherit;">}</span></span></code></pre></div>
 </ul>
 <p>All communication for the course is going to take place on one of three platforms:</p>
 <ul>
-<li><p><strong>Courseplus</strong>: for discussion, sharing resources, collaborating, and announcements</p></li>
+<li><p><strong>Courseplus</strong>: for discussion, sharing resources, collaborating, and announcements</p>
+<ul>
+<li>Important for practicing written communication in the context of asking for help with R</li>
+</ul></li>
 <li><p><strong>Github</strong>: for getting access to course materials (e.g.&nbsp;lectures, project assignments)</p>
 <ul>
 <li>Course Github: <a href="https://github.com/lcolladotor/jhustatcomputing" class="uri">https://github.com/lcolladotor/jhustatcomputing</a></li>
@@ -402,7 +408,7 @@ Important
 </div>
 <section id="course-staff" class="level3">
 <h3 class="anchored" data-anchor-id="course-staff">Course Staff</h3>
-<p>The course instructor this year is <a href="http://lcolladotor.github.io/">Leonardo Collado Torres</a> who is an Investigator at the <a href="https://www.libd.org/">Lieber Institute for Brain Development</a> and an Assistant Professor in the <a href="https://publichealth.jhu.edu/departments/biostatistics">Department of Biostatistics</a> at the <a href="https://publichealth.jhu.edu">Johns Hopkins Bloomberg School of Public Health</a>. I was actually a student of this course in Fall 2012 when <a href="https://twitter.com/rdpeng">Roger D. Peng</a> was the instructor of this course and <a href="https://twitter.com/kralljr">Jenna Krall</a> was the only teaching assistant. I first taught this course in 2023. I myself started learning and <a href="http://lcolladotor.github.io/#teaching">teaching</a> about R in 2008 and we have a lot of material in the <a href="https://research.libd.org/rstatsclub/">LIBD rstats club</a> that you might be interested in.</p>
+<p>The course instructor this year is <a href="http://lcolladotor.github.io/">Leonardo Collado Torres</a> who is an Investigator at the <a href="https://www.libd.org/">Lieber Institute for Brain Development</a> and an Assistant Professor in the <a href="https://publichealth.jhu.edu/departments/biostatistics">Department of Biostatistics</a> at the <a href="https://publichealth.jhu.edu">Johns Hopkins Bloomberg School of Public Health</a>. I was actually a student of this course in Fall 2012 when <a href="https://bsky.app/profile/rdpeng.org">Roger D. Peng</a> was the instructor of this course and <a href="https://bsky.app/profile/kralljr.bsky.social">Jenna Krall</a> was the only teaching assistant. I first taught this course in 2023. I myself started learning and <a href="http://lcolladotor.github.io/#teaching">teaching</a> about R in 2008 and we have a lot of material in the <a href="https://research.libd.org/rstatsclub/">LIBD rstats club</a> that you might be interested in.</p>
 <p>At the Lieber Institute for Brain Development (<a href="https://www.libd.org/">LIBD</a>), my group works on understanding the roots and signatures of disease (particularly psychiatric disorders) by zooming in across dimensions of gene activity. We achieve this by studying gene expression at all expression feature levels (genes, exons, exon-exon junctions, and un-annotated regions) and by using different gene expression measurement technologies (bulk RNA-seq, single cell/nucleus RNA-seq, and spatial transcriptomics) that provide finer biological resolution and localization of gene expression. We work closely with collaborators from LIBD as well as from Johns Hopkins University (JHU) and other institutions, which reflects the cross-disciplinary approach and diversity in expertise needed to further advance our understanding of high throughput biology.</p>
 <p>Most weeks I use <a href="http://cran.r-project.org/">R</a> and <a href="http://www.bioconductor.org/">Bioconductor</a>, and on some days I <a href="https://lcolladotor.github.io/pkgs/">write R packages</a>. Occasionally I write <a href="http://lcolladotor.github.io/#blog">blog posts</a> about them and other tools. I’m a co-founder of the <a href="http://LieberInstitute.github.io/rstatsclub/">LIBD rstats club</a> and the <a href="https://comunidadbioinfo.github.io">CDSB community</a> of R and Bioconductor developers in Mexico and Latin America, that we described at the <a href="https://www.r-consortium.org/blog/2020/03/18/cdsb-diversity-and-outreach-hotspot-in-mexico">R Consortium website</a>. In the past, I also served on the <a href="http://bioconductor.org/about/community-advisory-board/">Bioconductor Community Advisory Board</a>.</p>
 <p>If you want, you can find me on <a href="https://bsky.app/profile/lcolladotor.bsky.social">Bluesky</a>, <a href="https://www.linkedin.com/in/lcollado/">LinkedIn</a>, among other places.</p>
@@ -532,7 +538,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.5.1 (2025-06-13)
- os       macOS Sequoia 15.6
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
@@ -576,7 +582,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -665,7 +671,7 @@ Learning objectives
 <li>R integrates easily with document preparation systems like <img src="https://latex.codecogs.com/png.latex?%5CLaTeX">, but R files can also be used to create <code>.docx</code>, <code>.pdf</code>, <code>.html</code>, <code>.ppt</code> files with integrated R code output and graphics.</li>
 <li>The R Community is very dynamic, helpful and welcoming.
 <ul>
-<li>Check out the <a href="https://twitter.com/search?q=%23rstats">#rstats</a> or <a href="https://twitter.com/search?q=%23rtistry">#rtistry</a> on Twitter, <a href="https://www.tidytuesday.com">TidyTuesday</a> podcast and community activity in the <a href="https://www.rfordatasci.com">R4DS Online Learning Community</a>, and <a href="https://www.reddit.com/r/rstats/">r/rstats</a> subreddit.</li>
+<li>Check out the <a href="https://bsky.app/search?q=%23RStats">#RStats</a> or <a href="https://bsky.app/search?q=%23rtistry">#rtistry</a> on BlueSky, <a href="https://www.tidytuesday.com">TidyTuesday</a> podcast and community activity in the <a href="https://www.rfordatasci.com">R4DS Online Learning Community</a>, and <a href="https://www.reddit.com/r/rstats/">r/rstats</a> subreddit.</li>
 <li>If you are looking for more local resources, check out <a href="https://www.meetup.com/rladies-baltimore/">R-Ladies Baltimore</a>.</li>
 </ul></li>
 <li>Through R packages, it is easy to get lots of state-of-the-art algorithms.</li>
@@ -701,11 +707,21 @@ Tip
 <p>For a great discussion on an overview and history of R and the S programming language, read through <a href="https://rdpeng.github.io/Biostat776/lecture-introduction-and-overview.html">this chapter</a> from Roger D. Peng.</p>
 </div>
 </div>
-<p>Finally, one of the joys of using R has nothing to do with the language itself, but rather with the active and vibrant user community. In many ways, a language is successful inasmuch as it creates a platform with which many people can create new things. R is that platform and thousands of people around the world have come together to make contributions to R, to develop packages, and help each other use R for all kinds of applications. The R-help and R-devel mailing lists have been highly active for over a decade now and there is considerable activity on web sites like GitHub, <a href="https://community.rstudio.com/">Posit (RStudio) Community</a>, <a href="https://support.bioconductor.org/">Bioconductor Support</a>, Stack Overflow, Twitter <a href="https://twitter.com/search?q=%23rstats">#rstats</a>, <a href="https://twitter.com/search?q=%23rtistry">#rtistry</a>, and <a href="https://www.reddit.com/r/rstats/">Reddit</a>.</p>
-</section>
-<section id="free-software" class="level3">
+<p>Finally, one of the joys of using R has nothing to do with the language itself, but rather with the active and vibrant user community. In many ways, a language is successful inasmuch as it creates a platform with which many people can create new things. R is that platform and thousands of people around the world have come together to make contributions to R, to develop packages, and help each other use R for all kinds of applications. The R-help and R-devel mailing lists have been highly active for over a decade now and there is considerable activity on web sites like GitHub, <a href="https://community.rstudio.com/">Posit (RStudio) Community</a>, <a href="https://support.bioconductor.org/">Bioconductor Support</a>, Stack Overflow, BlueSky <a href="https://bsky.app/search?q=%23RStats">#RStats</a>, <a href="https://bsky.app/search?q=%23rtistry">#rtistry</a>, and <a href="https://www.reddit.com/r/rstats/">Reddit</a>.</p>
+<p>Here’s a recent example from BlueSky <a href="https://bsky.app/search?q=%23RStats">#RStats</a>:</p>
+<blockquote class="bluesky-embed blockquote" data-bluesky-uri="at://did:plc:lovemlyb7wlsonhsija6z3pc/app.bsky.feed.post/3lupn6iom4s2x" data-bluesky-cid="bafyreifnzwdudqddnb6abi7tpobvdrfq2ljsub6ykdlpqvjlh4vqfk3lpq" data-bluesky-embed-color-mode="system">
+<p lang="en">
+</p><p>People are being arrested by ICE. What countries are they from?</p>
+<p>I analyze public data from deportationdata.org/data/ice.html to find increased arrests for immigrants from many countries #FirstTheyCame</p>
+<p>Code so you can reproduce these trends for yourself: gist.github.com/JEFworks/1f0…<br><br><a href="https://bsky.app/profile/did:plc:lovemlyb7wlsonhsija6z3pc/post/3lupn6iom4s2x?ref_src=embed" [image="" or="" embed]<="" a=""></a></p><a href="https://bsky.app/profile/did:plc:lovemlyb7wlsonhsija6z3pc/post/3lupn6iom4s2x?ref_src=embed" [image="" or="" embed]<="" a="">
+<p></p>
+</a><p><a href="https://bsky.app/profile/did:plc:lovemlyb7wlsonhsija6z3pc/post/3lupn6iom4s2x?ref_src=embed" [image="" or="" embed]<="" a="">— Dr.&nbsp;Jean Fan (</a><a href="https://bsky.app/profile/did:plc:lovemlyb7wlsonhsija6z3pc?ref_src=embed" <span="" class="citation" data-cites="jef.works">@jef.works</a>) <a href="https://bsky.app/profile/did:plc:lovemlyb7wlsonhsija6z3pc/post/3lupn6iom4s2x?ref_src=embed" july="" 24,="" 2025="" at="" 9:27="" am<="" a=""></a></p><a href="https://bsky.app/profile/did:plc:lovemlyb7wlsonhsija6z3pc/post/3lupn6iom4s2x?ref_src=embed" july="" 24,="" 2025="" at="" 9:27="" am<="" a="">
+</a></blockquote><a href="https://bsky.app/profile/did:plc:lovemlyb7wlsonhsija6z3pc/post/3lupn6iom4s2x?ref_src=embed" july="" 24,="" 2025="" at="" 9:27="" am<="" a="">
+<script async="" src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+</a></section><a href="https://bsky.app/profile/did:plc:lovemlyb7wlsonhsija6z3pc/post/3lupn6iom4s2x?ref_src=embed" july="" 24,="" 2025="" at="" 9:27="" am<="" a="">
+</a><section id="free-software" class="level3"><a href="https://bsky.app/profile/did:plc:lovemlyb7wlsonhsija6z3pc/post/3lupn6iom4s2x?ref_src=embed" july="" 24,="" 2025="" at="" 9:27="" am<="" a="">
 <h3 class="anchored" data-anchor-id="free-software">Free Software</h3>
-<p>A major advantage that R has over many other statistical packages and is that it’s free in the sense of free software (it’s also free in the sense of free beer). The copyright for the primary source code for R is held by the <a href="http://www.r-project.org/foundation/">R Foundation</a> and is published under the <a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2.0</a>.</p>
+</a><p><a href="https://bsky.app/profile/did:plc:lovemlyb7wlsonhsija6z3pc/post/3lupn6iom4s2x?ref_src=embed" july="" 24,="" 2025="" at="" 9:27="" am<="" a="">A major advantage that R has over many other statistical packages and is that it’s free in the sense of free software (it’s also free in the sense of free beer). The copyright for the primary source code for R is held by the </a><a href="http://www.r-project.org/foundation/">R Foundation</a> and is published under the <a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2.0</a>.</p>
 <p>According to the Free Software Foundation, with <em>free software</em>, you are granted the following <a href="http://www.gnu.org/philosophy/free-sw.html">four freedoms</a></p>
 <ul>
 <li><p>The freedom to run the program, for any purpose (freedom 0).</p></li>
@@ -750,8 +766,8 @@ Tip
 </ul>
 <p>When you download a fresh installation of R from CRAN, you get all of the above, which represents a substantial amount of functionality. However, there are many other packages available:</p>
 <ul>
-<li><p>There are over 22527 packages on CRAN that have been developed by users and programmers around the world.</p></li>
-<li><p>There are also 26233 packages associated with the <a href="http://bioconductor.org">Bioconductor project</a>.</p></li>
+<li><p>There are over 22533 packages on CRAN that have been developed by users and programmers around the world.</p></li>
+<li><p>There are also 3706 packages associated with the <a href="http://bioconductor.org">Bioconductor project</a>. That’s a total of 26239 packages available from CRAN and Bioconductor combined.</p></li>
 <li><p>People often make packages available on GitHub (very common) and their personal websites (not so common nowadays); there is no reliable way to keep track of how many packages are available in this fashion.</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
@@ -793,7 +809,7 @@ Questions
 <blockquote class="blockquote">
 <p>If R is the engine and bare bones of your car, then RStudio is like the rest of the car. The engine is super critical part of your car. But in order to make things properly functional, you need to have a steering wheel, comfy seats, a radio, rear and side view mirrors, storage, and seatbelts. — <em>Nicholas Tierney</em></p>
 </blockquote>
-<p>[<a href="https://rmd4sci.njtierney.com">Source</a>]</p>
+<p>[<a href="https://qmd4sci.njtierney.com">Source</a>]</p>
 <p>The RStudio layout has the following features:</p>
 <ul>
 <li>On the upper left, something called a Rmarkdown script</li>
@@ -832,7 +848,7 @@ Tip
 </ul>
 </div>
 </div>
-<p>If things don’t work, ask for help in the Courseplus discussion board.</p>
+<p>If things don’t work, ask for help in the Courseplus Discussion forum.</p>
 <p>I have both a macOS and a winOS computer, and have used Linux (Ubuntu) in the past too, but I might be more limited in how much I can help you on Linux.</p>
 </section>
 <section id="rstudio-default-options" class="level3">
@@ -944,7 +960,7 @@ font-style: inherit;">"ggplot2"</span>)</span></code></pre></div>
 </section>
 <section id="getting-started-in-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="getting-started-in-rstudio">Getting started in RStudio</h3>
-<p>While one can use R and do pretty much every task, including all the ones we cover in this class, without using RStudio, RStudio is very useful, has lots of features that make your R coding life easier and has become pretty much the default integrated development environment (IDE) for R. Since RStudio has lots of features, it takes time to learn them. A good resource to learn more about RStudio are the <a href="https://resources.rstudio.com/">R Studio Essentials</a> collection of videos.</p>
+<p>While one can use R and do pretty much every task, including all the ones we cover in this class, without using RStudio, RStudio is very useful, has lots of features that make your R coding life easier and has become pretty much the default integrated development environment (IDE) for R. Since RStudio has lots of features, it takes time to learn them. A good resource to learn more about RStudio are the <a href="https://posit.co/resources/videos/">Posit Videos</a> collection.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -955,7 +971,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For more information on setting up and getting started with R, RStudio, and R packages, read the Getting Started chapter in the <code>dsbook</code>:</p>
+<p>For more information on setting up and getting started with R, RStudio IDE, and R packages, read the Getting Started chapter in the <code>dsbook</code>:</p>
 <ul>
 <li><a href="https://rafalab.github.io/dsbook/getting-started.html" class="uri">https://rafalab.github.io/dsbook/getting-started.html</a></li>
 </ul>
@@ -969,7 +985,7 @@ Tip
 <section id="links-to-inspiring-use-cases" class="level3">
 <h3 class="anchored" data-anchor-id="links-to-inspiring-use-cases">Links to inspiring use cases</h3>
 <ul>
-<li><p><a href="https://www.rstudio.com/resources/rstudioconf-2019/">RStudio Conf 2019</a> talk by <a href="https://x.com/brookLYNevery1">Brooke Watson Madubuonwu</a> on “<a href="https://posit.co/resources/videos/r-at-the-aclu-joining-tables-to-to-reunite-families/">R at the ACLU: Joining tables to to reunite families</a>”</p></li>
+<li><p><a href="https://resources.rstudio.com/resources/rstudioconf-2019/">RStudio Conf 2019</a> talk by <a href="https://x.com/brookLYNevery1">Brooke Watson Madubuonwu</a> on “<a href="https://posit.co/resources/videos/r-at-the-aclu-joining-tables-to-to-reunite-families/">R at the ACLU: Joining tables to to reunite families</a>”</p></li>
 <li><p><a href="https://resources.rstudio.com/resources/rstudioconf-2020/">RStudio Conf 2020</a> talk by <a href="https://x.com/TeresaOM">María Teresa Ortíz Mancera</a> on “<a href="https://posit.co/resources/videos/mexican-electoral-quick-count-night-with-r-maria-ortiz-mancera/">Mexican electoral quick count night with R</a>”</p></li>
 </ul>
 </section>
@@ -1035,7 +1051,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.5.1 (2025-06-13)
- os       macOS Sequoia 15.6
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
@@ -1082,7 +1098,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1427,7 +1443,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -2088,7 +2104,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -2934,7 +2950,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3408,7 +3424,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4799,7 +4815,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6619,7 +6635,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7580,7 +7596,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8429,7 +8445,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -8942,7 +8958,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10305,7 +10321,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -12260,7 +12276,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -14015,7 +14031,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -15301,7 +15317,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -16634,7 +16650,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -19672,7 +19688,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -21680,7 +21696,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -22634,7 +22650,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -24378,7 +24394,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Tue, 26 Aug 2025 11:01:45 GMT</pubDate>
+  <pubDate>Tue, 26 Aug 2025 16:22:02 GMT</pubDate>
 </item>
 </channel>
 </rss>
