@@ -482,7 +482,7 @@ Questions
 </div>
 <p>Before we leave this section, I find that there is quite a bit of terminology to understand the magic behind <code>rmarkdown</code> that can be confusing, so let’s break it down:</p>
 <ul>
-<li><a href="https://pandoc.org">Pandoc</a>. Pandoc is a command line tool with no GUI that converts documents (e.g.&nbsp;from number of different markup formats to many other formats, such as .doc, .pdf etc). It is completely independent from R (but does come bundled with RStudio).</li>
+<li><a href="https://pandoc.org">Pandoc</a>. Pandoc is a command line tool with no GUI that converts documents (e.g.&nbsp;from number of different markup formats to many other formats, such as .doc, .pdf etc). It is completely independent from R (but does come bundled with <code>RStudio IDE</code> or <code>Positron</code>).</li>
 <li><a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> (<strong>markup language</strong>). Markdown is a lightweight <a href="https://en.wikipedia.org/wiki/Markup_language">markup language</a> with plain text formatting syntax designed so that it can be converted to HTML and many other formats. A markdown file is a plain text file that is typically given the extension <code>.md.</code> It is completely independent from R.</li>
 <li><a href="https://CRAN.R-project.org/package=markdown"><code>markdown</code></a> (<strong>R package</strong>). <code>markdown</code> is an R package which converts <code>.md</code> files into HTML. It is no longer recommended for use has been surpassed by <a href="https://CRAN.R-project.org/package=rmarkdown"><code>rmarkdown</code></a> (discussed below).</li>
 <li>R Markdown (<strong>markup language</strong>). R Markdown is an extension of the markdown syntax. R Markdown files are plain text files that typically have the file extension <code>.Rmd</code>.</li>
@@ -788,6 +788,7 @@ Ctrl + ALT + I on Windows</code></pre>
 </section>
 <section id="reformat-code" class="level3">
 <h3 class="anchored" data-anchor-id="reformat-code">Reformat code</h3>
+<p><em>Note that we are going to be using <code>Air</code> for re-formatting code. The options below are other alternatives.</em></p>
 <p>A clear and readable code is always easier and faster to read (and look more professional when sharing it to collaborators). To automatically apply the most common coding guidelines such as white spaces, indents, etc., use:</p>
 <pre><code>cmd + Shift + A on Mac
 Ctrl + Shift + A on Windows</code></pre>
@@ -917,7 +918,7 @@ Tip
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2025-08-26
+ date     2025-08-28
  pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
