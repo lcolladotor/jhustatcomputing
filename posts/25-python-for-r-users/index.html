@@ -403,9 +403,9 @@ Pro-tip for installing python
 </div>
 <p>We will also load the <code>here</code> and <code>tidyverse</code> packages for our lesson:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"here"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"reticulate"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="python-path" class="level2">
@@ -418,8 +418,8 @@ Pro-tip for installing python
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.which</span>(<span class="st">"python3"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                                                  python3 
-"/Users/leocollado/.virtualenvs/r-reticulate/bin/python3" </code></pre>
+<pre><code>                                                python3 
+"/Users/leocollado/.pyenv/versions/3.11.13/bin/python3" </code></pre>
 </div>
 </div>
 <p>The <code>use_python()</code> function enables you to specify an alternate version, for example:</p>
@@ -432,16 +432,17 @@ Pro-tip for installing python
 </div>
 <p>You can confirm that <code>reticulate</code> is using the correct version of python that you requested using the <code>py_discover_config</code> function:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">py_discover_config</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">use_python</span>(<span class="st">"/Users/leocollado/.pyenv/versions/3.11.13/bin/python3.11"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">py_discover_config</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>python:         /Users/leocollado/.virtualenvs/r-reticulate/bin/python
-libpython:      /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/config-3.13-darwin/libpython3.13.dylib
-pythonhome:     /Users/leocollado/.virtualenvs/r-reticulate:/Users/leocollado/.virtualenvs/r-reticulate
-version:        3.13.1 (main, Dec  3 2024, 17:59:52) [Clang 16.0.0 (clang-1600.0.26.4)]
-numpy:          /Users/leocollado/.virtualenvs/r-reticulate/lib/python3.13/site-packages/numpy
-numpy_version:  2.2.2
+<pre><code>python:         /Users/leocollado/.pyenv/versions/3.11.13/bin/python3.11
+libpython:      /Users/leocollado/.pyenv/versions/3.11.13/lib/libpython3.11.dylib
+pythonhome:     /Users/leocollado/.pyenv/versions/3.11.13:/Users/leocollado/.pyenv/versions/3.11.13
+version:        3.11.13 (main, Aug 28 2025, 10:40:47) [Clang 17.0.0 (clang-1700.0.13.5)]
+numpy:          /Users/leocollado/.pyenv/versions/3.11.13/lib/python3.11/site-packages/numpy
+numpy_version:  2.3.2
 
-NOTE: Python version was forced by VIRTUAL_ENV</code></pre>
+NOTE: Python version was forced by use_python() function</code></pre>
 </div>
 </div>
 </section>
@@ -776,13 +777,18 @@ Conversions
 </div>
 <p>Next, we <strong>use Python to read in the file</strong> and do some data wrangling</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>flights_path <span class="op">=</span> <span class="st">"/Users/leocollado/Dropbox/Code/jhustatcomputing/data/flights.csv"</span></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>flights <span class="op">=</span> pandas.read_csv(flights_path)</span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>flights <span class="op">=</span> flights[flights[<span class="st">'dest'</span>] <span class="op">==</span> <span class="st">"ORD"</span>]</span>
-<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>flights <span class="op">=</span> flights[[<span class="st">'carrier'</span>, <span class="st">'dep_delay'</span>, <span class="st">'arr_delay'</span>]]</span>
-<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>flights <span class="op">=</span> flights.dropna()</span>
-<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>flights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co">## If needed, here are the commands to install pandas and scikit-learn</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/Users/leocollado/.pyenv/versions/3.11.13/bin/pip</span> install pandas</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/Users/leocollado/.pyenv/versions/3.11.13/bin/pip</span> install scikit-learn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>flights_path <span class="op">=</span> <span class="st">"/Users/leocollado/Dropbox/Code/jhustatcomputing/data/flights.csv"</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>flights <span class="op">=</span> pandas.read_csv(flights_path)</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>flights <span class="op">=</span> flights[flights[<span class="st">'dest'</span>] <span class="op">==</span> <span class="st">"ORD"</span>]</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>flights <span class="op">=</span> flights[[<span class="st">'carrier'</span>, <span class="st">'dep_delay'</span>, <span class="st">'arr_delay'</span>]]</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>flights <span class="op">=</span> flights.dropna()</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>flights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       carrier  dep_delay  arr_delay
 5           UA       -4.0       12.0
@@ -801,7 +807,7 @@ Conversions
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(py<span class="sc">$</span>flights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(py<span class="sc">$</span>flights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   carrier dep_delay arr_delay
 5       UA        -4        12
@@ -811,17 +817,17 @@ Conversions
 57      AA        -4         4
 70      UA         9        20</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>py<span class="sc">$</span>flights_path</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>py<span class="sc">$</span>flights_path</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "/Users/leocollado/Dropbox/Code/jhustatcomputing/data/flights.csv"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(py<span class="sc">$</span>flights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(py<span class="sc">$</span>flights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "data.frame"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(py<span class="sc">$</span>flights_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(py<span class="sc">$</span>flights_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
@@ -829,13 +835,13 @@ Conversions
 <p>Next, we can use R to <strong>visualize the Pandas</strong> <code>DataFrame</code>.</p>
 <p>The data frame is <strong>loaded in as an R object now</strong> stored in the variable <code>py</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(py<span class="sc">$</span>flights, <span class="fu">aes</span>(<span class="at">x =</span> carrier, <span class="at">y =</span> arr_delay)) <span class="sc">+</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(py<span class="sc">$</span>flights, <span class="fu">aes</span>(<span class="at">x =</span> carrier, <span class="at">y =</span> arr_delay)) <span class="sc">+</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/ggplot2-using-py,-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -857,11 +863,11 @@ Note
 <h3 class="anchored" data-anchor-id="from-r-to-python">From R to Python</h3>
 <p>Use R to read and manipulate data</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>flights <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"flights.csv"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(dest <span class="sc">==</span> <span class="st">"ORD"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(carrier, dep_delay, arr_delay) <span class="sc">%&gt;%</span></span>
-<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">na.omit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>flights <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"flights.csv"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(dest <span class="sc">==</span> <span class="st">"ORD"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(carrier, dep_delay, arr_delay) <span class="sc">%&gt;%</span></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">na.omit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 336776 Columns: 19
 ── Column specification ────────────────────────────────────────────────────────
@@ -873,7 +879,7 @@ dttm  (1): time_hour
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>flights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>flights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 16,566 × 3
    carrier dep_delay arr_delay
@@ -897,7 +903,7 @@ dttm  (1): time_hour
 <p>If you recall, we can <strong>access objects created within R chunks from Python</strong> using the <code>r</code> object (e.g.&nbsp;<code>r.x</code> would access to <code>x</code> variable created within R from Python).</p>
 <p>We can then ask for the first ten rows using the <code>head()</code> function in python.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>r.flights.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>r.flights.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  carrier  dep_delay  arr_delay
 0      UA       -4.0       12.0
@@ -918,8 +924,8 @@ dttm  (1): time_hour
 <h2 class="anchored" data-anchor-id="import-python-modules">import python modules</h2>
 <p>You can use the <code>import()</code> function to import any Python module and call it from R. For example, this code imports the Python <code>os</code> module in python and calls the <code>listdir()</code> function:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>os <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">"os"</span>)</span>
-<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>os<span class="sc">$</span><span class="fu">listdir</span>(<span class="st">"."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>os <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">"os"</span>)</span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>os<span class="sc">$</span><span class="fu">listdir</span>(<span class="st">"."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "index.R"         "index.qmd"       "index_files"     "index.rmarkdown"</code></pre>
 </div>
@@ -939,9 +945,9 @@ dttm  (1): time_hour
 <p>[<strong>Source</strong>: <a href="https://rstudio.github.io/reticulate">Rstudio</a>]</p>
 <p>Similarly, we can import the pandas library:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>pd <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">"pandas"</span>)</span>
-<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> pd<span class="sc">$</span><span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"flights.csv"</span>))</span>
-<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>pd <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">"pandas"</span>)</span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> pd<span class="sc">$</span><span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"flights.csv"</span>))</span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time
 1 2013     1   1      517            515         2      830            819
@@ -965,15 +971,15 @@ dttm  (1): time_hour
 5 2013-01-01T11:00:00Z
 6 2013-01-01T10:00:00Z</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "data.frame"</code></pre>
 </div>
 </div>
 <p>or the scikit-learn python library:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>skl_lr <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">"sklearn.linear_model"</span>)</span>
-<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>skl_lr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>skl_lr <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">"sklearn.linear_model"</span>)</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>skl_lr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Module(sklearn.linear_model)</code></pre>
 </div>
@@ -982,15 +988,15 @@ dttm  (1): time_hour
 <section id="calling-python-scripts" class="level2">
 <h2 class="anchored" data-anchor-id="calling-python-scripts">Calling python scripts</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source_python</span>(<span class="st">"secret_functions.py"</span>)</span>
-<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>subject_1 <span class="ot">&lt;-</span> <span class="fu">read_subject</span>(<span class="st">"secret_data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source_python</span>(<span class="st">"secret_functions.py"</span>)</span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>subject_1 <span class="ot">&lt;-</span> <span class="fu">read_subject</span>(<span class="st">"secret_data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="calling-the-python-repl" class="level2">
 <h2 class="anchored" data-anchor-id="calling-the-python-repl">Calling the python repl</h2>
 <p>If you want to work with Python interactively you can call the <code>repl_python()</code> function, which provides a Python REPL embedded within your R session.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">repl_python</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">repl_python</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Objects created within the Python REPL can be accessed from R using the <code>py</code> object exported from <code>reticulate</code>. For example:</p>
 <div class="cell" data-layout-align="center">
@@ -1057,94 +1063,95 @@ Questions
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
-<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.4.2 Patched (2024-12-07 r87428)
- os       macOS Sonoma 14.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2025-01-24
- pandoc   3.2 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64/ (via rmarkdown)
+ date     2025-08-28
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package      * version date (UTC) lib source
- bit            4.5.0.1 2024-12-03 [1] CRAN (R 4.4.1)
- bit64          4.6.0-1 2025-01-16 [1] CRAN (R 4.4.1)
- cli            3.6.3   2024-06-21 [1] CRAN (R 4.4.0)
- colorout     * 1.3-2   2024-11-21 [1] Github (jalvesaq/colorout@2a5f214)
- colorspace     2.1-1   2024-07-26 [1] CRAN (R 4.4.0)
- crayon         1.5.3   2024-06-20 [1] CRAN (R 4.4.0)
- digest         0.6.37  2024-08-19 [1] CRAN (R 4.4.1)
- dplyr        * 1.1.4   2023-11-17 [1] CRAN (R 4.4.0)
- evaluate       1.0.3   2025-01-10 [1] CRAN (R 4.4.1)
- farver         2.1.2   2024-05-13 [1] CRAN (R 4.4.0)
- fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.4.0)
- forcats      * 1.0.0   2023-01-29 [1] CRAN (R 4.4.0)
- generics       0.1.3   2022-07-05 [1] CRAN (R 4.4.0)
- ggplot2      * 3.5.1   2024-04-23 [1] CRAN (R 4.4.0)
- glue           1.8.0   2024-09-30 [1] CRAN (R 4.4.1)
- gtable         0.3.6   2024-10-25 [1] CRAN (R 4.4.1)
- here         * 1.0.1   2020-12-13 [1] CRAN (R 4.4.0)
- hms            1.1.3   2023-03-21 [1] CRAN (R 4.4.0)
- htmltools      0.5.8.1 2024-04-04 [1] CRAN (R 4.4.0)
- htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.4.0)
- jsonlite       1.8.9   2024-09-20 [1] CRAN (R 4.4.1)
- knitr          1.49    2024-11-08 [1] CRAN (R 4.4.1)
- labeling       0.4.3   2023-08-29 [1] CRAN (R 4.4.0)
- lattice        0.22-6  2024-03-20 [1] CRAN (R 4.4.2)
- lifecycle      1.0.4   2023-11-07 [1] CRAN (R 4.4.0)
- lubridate    * 1.9.4   2024-12-08 [1] CRAN (R 4.4.1)
- magrittr       2.0.3   2022-03-30 [1] CRAN (R 4.4.0)
- Matrix         1.7-1   2024-10-18 [1] CRAN (R 4.4.1)
- munsell        0.5.1   2024-04-01 [1] CRAN (R 4.4.0)
- nycflights13   1.0.2   2021-04-12 [1] CRAN (R 4.4.0)
- pillar         1.10.1  2025-01-07 [1] CRAN (R 4.4.1)
- pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.4.0)
- png            0.1-8   2022-11-29 [1] CRAN (R 4.4.0)
- purrr        * 1.0.2   2023-08-10 [1] CRAN (R 4.4.0)
- R6             2.5.1   2021-08-19 [1] CRAN (R 4.4.0)
- Rcpp           1.0.14  2025-01-12 [1] CRAN (R 4.4.1)
- readr        * 2.1.5   2024-01-10 [1] CRAN (R 4.4.0)
- reticulate   * 1.40.0  2024-11-15 [1] CRAN (R 4.4.1)
- rlang          1.1.4   2024-06-04 [1] CRAN (R 4.4.0)
- rmarkdown      2.29    2024-11-04 [1] CRAN (R 4.4.1)
- rprojroot      2.0.4   2023-11-05 [1] CRAN (R 4.4.0)
- rstudioapi     0.17.1  2024-10-22 [1] CRAN (R 4.4.1)
- scales         1.3.0   2023-11-28 [1] CRAN (R 4.4.0)
- sessioninfo    1.2.2   2021-12-06 [1] CRAN (R 4.4.0)
- stringi        1.8.4   2024-05-06 [1] CRAN (R 4.4.0)
- stringr      * 1.5.1   2023-11-14 [1] CRAN (R 4.4.0)
- tibble       * 3.2.1   2023-03-20 [1] CRAN (R 4.4.0)
- tidyr        * 1.3.1   2024-01-24 [1] CRAN (R 4.4.0)
- tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.4.0)
- tidyverse    * 2.0.0   2023-02-22 [1] CRAN (R 4.4.0)
- timechange     0.3.0   2024-01-18 [1] CRAN (R 4.4.0)
- tzdb           0.4.0   2023-05-12 [1] CRAN (R 4.4.0)
- utf8           1.2.4   2023-10-22 [1] CRAN (R 4.4.0)
- vctrs          0.6.5   2023-12-01 [1] CRAN (R 4.4.0)
- vroom          1.6.5   2023-12-05 [1] CRAN (R 4.4.0)
- withr          3.0.2   2024-10-28 [1] CRAN (R 4.4.1)
- xfun           0.50    2025-01-07 [1] CRAN (R 4.4.1)
- yaml           2.3.10  2024-07-26 [1] CRAN (R 4.4.0)
+ bit            4.6.0   2025-03-06 [1] CRAN (R 4.5.0)
+ bit64          4.6.0-1 2025-01-16 [1] CRAN (R 4.5.0)
+ cli            3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout     * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ crayon         1.5.3   2024-06-20 [1] CRAN (R 4.5.0)
+ dichromat      2.0-0.1 2022-05-02 [1] CRAN (R 4.5.0)
+ digest         0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ dplyr        * 1.1.4   2023-11-17 [1] CRAN (R 4.5.0)
+ evaluate       1.0.4   2025-06-18 [1] CRAN (R 4.5.0)
+ farver         2.1.2   2024-05-13 [1] CRAN (R 4.5.0)
+ fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ forcats      * 1.0.0   2023-01-29 [1] CRAN (R 4.5.0)
+ generics       0.1.4   2025-05-09 [1] CRAN (R 4.5.0)
+ ggplot2      * 3.5.2   2025-04-09 [1] CRAN (R 4.5.0)
+ glue           1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
+ gtable         0.3.6   2024-10-25 [1] CRAN (R 4.5.0)
+ here         * 1.0.1   2020-12-13 [1] CRAN (R 4.5.0)
+ hms            1.1.3   2023-03-21 [1] CRAN (R 4.5.0)
+ htmltools      0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite       2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr          1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ labeling       0.4.3   2023-08-29 [1] CRAN (R 4.5.0)
+ lattice        0.22-7  2025-04-02 [1] CRAN (R 4.5.1)
+ lifecycle      1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
+ lubridate    * 1.9.4   2024-12-08 [1] CRAN (R 4.5.0)
+ magrittr       2.0.3   2022-03-30 [1] CRAN (R 4.5.0)
+ Matrix         1.7-3   2025-03-11 [1] CRAN (R 4.5.1)
+ nycflights13   1.0.2   2021-04-12 [1] CRAN (R 4.5.0)
+ pillar         1.11.0  2025-07-04 [1] CRAN (R 4.5.0)
+ pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.5.0)
+ png            0.1-8   2022-11-29 [1] CRAN (R 4.5.0)
+ purrr        * 1.1.0   2025-07-10 [1] CRAN (R 4.5.0)
+ R6             2.6.1   2025-02-15 [1] CRAN (R 4.5.0)
+ RColorBrewer   1.1-3   2022-04-03 [1] CRAN (R 4.5.0)
+ Rcpp           1.1.0   2025-07-02 [1] CRAN (R 4.5.0)
+ readr        * 2.1.5   2024-01-10 [1] CRAN (R 4.5.0)
+ reticulate   * 1.43.0  2025-07-21 [1] CRAN (R 4.5.0)
+ rlang          1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown      2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ rprojroot      2.1.0   2025-07-12 [1] CRAN (R 4.5.0)
+ scales         1.4.0   2025-04-24 [1] CRAN (R 4.5.0)
+ sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ stringi        1.8.7   2025-03-27 [1] CRAN (R 4.5.0)
+ stringr      * 1.5.1   2023-11-14 [1] CRAN (R 4.5.0)
+ tibble       * 3.3.0   2025-06-08 [1] CRAN (R 4.5.0)
+ tidyr        * 1.3.1   2024-01-24 [1] CRAN (R 4.5.0)
+ tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.5.0)
+ tidyverse    * 2.0.0   2023-02-22 [1] CRAN (R 4.5.0)
+ timechange     0.3.0   2024-01-18 [1] CRAN (R 4.5.0)
+ tzdb           0.5.0   2025-03-15 [1] CRAN (R 4.5.0)
+ utf8           1.2.6   2025-06-08 [1] CRAN (R 4.5.0)
+ vctrs          0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
+ vroom          1.6.5   2023-12-05 [1] CRAN (R 4.5.0)
+ withr          3.0.2   2024-10-28 [1] CRAN (R 4.5.0)
+ xfun           0.52    2025-04-02 [1] CRAN (R 4.5.0)
+ yaml           2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ─ Python configuration ───────────────────────────────────────────────────────────────────────────────────────────────
- python:         /Users/leocollado/.virtualenvs/r-reticulate/bin/python
- libpython:      /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13/config-3.13-darwin/libpython3.13.dylib
- pythonhome:     /Users/leocollado/.virtualenvs/r-reticulate:/Users/leocollado/.virtualenvs/r-reticulate
- version:        3.13.1 (main, Dec  3 2024, 17:59:52) [Clang 16.0.0 (clang-1600.0.26.4)]
- numpy:          /Users/leocollado/.virtualenvs/r-reticulate/lib/python3.13/site-packages/numpy
- numpy_version:  2.2.2
+ python:         /Users/leocollado/.pyenv/versions/3.11.13/bin/python3.11
+ libpython:      /Users/leocollado/.pyenv/versions/3.11.13/lib/libpython3.11.dylib
+ pythonhome:     /Users/leocollado/.pyenv/versions/3.11.13:/Users/leocollado/.pyenv/versions/3.11.13
+ version:        3.11.13 (main, Aug 28 2025, 10:40:47) [Clang 17.0.0 (clang-1700.0.13.5)]
+ numpy:          /Users/leocollado/.pyenv/versions/3.11.13/lib/python3.11/site-packages/numpy
+ numpy_version:  2.3.2
  
- NOTE: Python version was forced by VIRTUAL_ENV
+ NOTE: Python version was forced by use_python() function
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
