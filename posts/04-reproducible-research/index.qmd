@@ -188,6 +188,12 @@ Understanding what someone did in a data analysis now **requires looking at code
 
 The bottom line with all these different trends is that for every field "X", there is now "Computational X". There's computational biology, computational astronomy---whatever it is you want, there is a computational version of it.
 
+### Example: Leo's work in neuroscience
+
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7366586600010481666" height="1061" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+
+This was posted by coincidence 14 hours before I was going to give this lecture on 2025-08-28.
+
 ### Example: machine learning in the life sciences
 
 One example of an area where reproducibility is important comes from research that I have conducted in the area of [machine learning in the life sciences](https://www.nature.com/articles/s41592-021-01256-7).
