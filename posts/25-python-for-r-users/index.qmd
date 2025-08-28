@@ -99,9 +99,9 @@ We will also load the `here` and `tidyverse` packages for our lesson:
 
 ```{r}
 #| message: false
-library(here)
-library(tidyverse)
-library(reticulate)
+library("here")
+library("tidyverse")
+library("reticulate")
 ```
 
 ## python path
@@ -131,6 +131,7 @@ use_python("/opt/homebrew/Caskroom/miniforge/base/bin/python")
 You can confirm that `reticulate` is using the correct version of python that you requested using the `py_discover_config` function:
 
 ```{r}
+use_python("/Users/leocollado/.pyenv/versions/3.11.13/bin/python3.11")
 py_discover_config()
 ```
 
@@ -415,6 +416,12 @@ nycflights13::flights %>%
 
 Next, we **use Python to read in the file** and do some data wrangling
 
+```{bash, eval=FALSE}
+## If needed, here are the commands to install pandas and scikit-learn
+/Users/leocollado/.pyenv/versions/3.11.13/bin/pip install pandas
+/Users/leocollado/.pyenv/versions/3.11.13/bin/pip install scikit-learn
+```
+
 ```{python}
 import pandas
 flights_path = "/Users/leocollado/Dropbox/Code/jhustatcomputing/data/flights.csv"
@@ -440,6 +447,8 @@ Next, we can use R to **visualize the Pandas** `DataFrame`.
 The data frame is **loaded in as an R object now** stored in the variable `py`.
 
 ```{r}
+#| ggplot2-using-py,
+
 ggplot(py$flights, aes(x = carrier, y = arr_delay)) +
     geom_point() +
     geom_jitter()
@@ -456,7 +465,7 @@ The `reticulate` Python engine is enabled by default within R Markdown whenever 
 Use R to read and manipulate data
 
 ```{r}
-library(tidyverse)
+library("tidyverse")
 flights <- read_csv(here("data", "flights.csv")) %>%
     filter(dest == "ORD") %>%
     select(carrier, dep_delay, arr_delay) %>%
