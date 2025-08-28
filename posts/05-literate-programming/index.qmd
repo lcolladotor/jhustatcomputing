@@ -135,6 +135,8 @@ Check out the R Markdown Quick Tour for more:
 
 ![Artwork by Allison Horst on RMarkdown](https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png){width="80%"}
 
+![Artwork by Allison Horst on Quarto](https://github.com/allisonhorst/stats-illustrations/raw/main/julie-mine-quarto-keynote/quarto_schematic.png){width="80%"}
+
 # Create and Knit Your First R Markdown Document
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dY9KNat_vYs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -443,7 +445,9 @@ Ctrl + ALT + I on Windows
 
 ### Reformat code
 
-_Note that we are going to be using `Air` for re-formatting code. The options below are other alternatives._
+_Note that we are going to be using `Air` for re-formatting code. See the instructions for installing `Air` and configuring it on [the first lecture](../01-welcome/#how-to-get-air-auto-code-formatter). The options below are other alternatives, which were discussed in the 2025-03-14 LIBD RStats club as shown on the video below._
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fKfH__OXuTY?si=fH_QWdXbJmYo2Vba" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 A clear and readable code is always easier and faster to read (and look more professional when sharing it to collaborators). To automatically apply the most common coding guidelines such as white spaces, indents, etc., use:
 
