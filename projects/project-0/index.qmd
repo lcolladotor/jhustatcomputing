@@ -383,6 +383,8 @@ You might also want to use inline R code with `fontawesome::fa()` like at <https
 
 -   <https://davidgonilski.github.io/> + <https://github.com/davidgonilski/davidgonilski.github.io>
 
+You might also be interested in creating a `favicon` for your website. See <https://github.com/seankross/postcards/issues/65> for more details.
+
 If you don't like `postcards` and want to use `quarto` instead, then check [posts/05-literate-programming/#quarto](../../posts/05-literate-programming/#quarto) for more details.
 
 ### 10. Share your website
