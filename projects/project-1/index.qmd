@@ -47,11 +47,11 @@ library("tidyverse")
 
 That data for this part of the assignment comes from [TidyTuesday](https://www.tidytuesday.com), which is a weekly podcast and global [community activity](https://github.com/rfordatascience/tidytuesday) brought to you by the R4DS Online Learning Community. The goal of TidyTuesday is to help R learners learn in real-world contexts.
 
-![](https://github.com/rfordatascience/tidytuesday/raw/master/static/tt_logo.png){.preview-image}
+![](https://github.com/rfordatascience/tidytuesday/raw/main/static/tt_logo.png){.preview-image}
 
-\[**Source**: [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/static/tt_logo.png)\]
+\[**Source**: [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/main/static/tt_logo.png)\]
 
-If we look at the [TidyTuesday github repo](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022#2022-data) from 2022, we see this dataset chocolate bar reviews.
+If we look at the [TidyTuesday github repo](https://github.com/rfordatascience/tidytuesday/tree/main/data/2022#2022-data) from 2022, we see this dataset chocolate bar reviews.
 
 To access the data, you need to install the `tidytuesdayR` R package and use the function `tt_load()` with the date of '2022-01-18' to load the data.
 
@@ -99,7 +99,7 @@ if (!dir.exists(here("data"))) {
 
 # saves data only once (not each time you knit a R Markdown)
 if (!file.exists(here("data", "chocolate.RDS"))) {
-    url_csv <- "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-18/chocolate.csv"
+    url_csv <- "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-01-18/chocolate.csv"
     chocolate <- readr::read_csv(url_csv)
 
     # save the file to RDS objects
@@ -124,7 +124,7 @@ glimpse(chocolate)
 
 Here is a data dictionary for what all the column names mean:
 
--   <https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-01-18/readme.md#data-dictionary>
+-   <https://github.com/rfordatascience/tidytuesday/blob/main/data/2022/2022-01-18/readme.md#data-dictionary>
 
 # Part 1: Explore data
 
