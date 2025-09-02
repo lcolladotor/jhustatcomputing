@@ -90,6 +90,20 @@ plot(airquality$Ozone ~ airquality$Wind)
 ```
 ````
 
+or the newer multi-line syntax:
+
+````         
+```{r}`r ''`
+#| label: plot1b
+#| height: 4
+#| width: 5
+#| eval: FALSE
+#| echo: TRUE
+data(airquality)
+plot(airquality$Ozone ~ airquality$Wind)
+```
+````
+
 ::: callout-tip
 The best resource for learning about R Markdown this by Yihui Xie, J. J. Allaire, and Garrett Grolemund:
 
@@ -110,6 +124,18 @@ Because this is lecture is built in a `.qmd` file (which is very similar to a `.
 data(airquality)
 plot(airquality$Ozone ~ airquality$Wind)
 ```
+
+```{r}
+#| label: plot1b
+#| height: 4
+#| width: 5
+#| eval: TRUE
+#| echo: TRUE
+data(airquality)
+plot(airquality$Ozone ~ airquality$Wind)
+```
+
+We can't tell which syntax was used to make the code chunk above, but you can see that the code was executed and the plot was made.
 
 ::: callout-tip
 ### Questions
@@ -277,6 +303,31 @@ I’m super excited to share with you my personal blog. Here I’ll be posting a
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ```
 -   <https://github.com/Bioconductor/biocblog> and <https://blog.bioconductor.org/>
+
+#### Host your websites on GitHub Pages for free
+
+If you already completed [Project 0](../../projects/project-0/), you can adapt those steps to create a new project (directory / folder), where you will create an `index.Rmd` (or `index.qmd`) file that will be the homepage of your website. Render / knit the `index.Rmd` (or `index.qmd`) file to create the `index.html` file. Then version control your project directory using `git`, set the branch to `gh-pages`, and link it to `GitHub`. Once you've pushed all files to GitHub, GitHub Pages will automatically host your `index.html` file. That is, run these steps:
+
+```{r}
+#| eval: false
+#| label: host-website
+
+## Create a project directory
+usethis::create_project("~/Desktop/StatComputing_ProjectX")
+
+## Start using git to version control your project
+usethis::use_git()
+
+## Set the default branch to gh-pages (special name for GitHub Pages)
+usethis::use_git_branch("gh-pages")
+
+## Create the repository on GitHub
+usethis::use_github()
+
+## Create an index.Rmd (or index.qmd) file
+## Knit / Render the file to create index.html
+## Make a commit and push all files to GitHub
+```
 
 # Tips and tricks in R Markdown in RStudio
 
@@ -477,6 +528,10 @@ for (i in 1:10) {
 }
 ```
 
+<details>
+
+<summary>For details on formatting R code with `styler` and `biocthis`, click here.</summary>
+
 I also like to use the [`styler`: Non-invasive pretty printing of R code](https://github.com/r-lib/styler) package to automatically style my R code. I also use <https://lcolladotor.github.io/biocthis/reference/bioc_style.html> to style my code in a way that it is compatible with Bioconductor's code standards.
 
 ```{r}
@@ -508,6 +563,8 @@ options("styler.addins_style_transformer" = "biocthis::bioc_style()")
 ```
 
 For more information I have on my `~/.Rprofile` file check <https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile>.
+
+</details>
 
 ### RStudio addins
 
