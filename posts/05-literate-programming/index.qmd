@@ -319,7 +319,7 @@ usethis::create_project("~/Desktop/StatComputing_ProjectX")
 usethis::use_git()
 
 ## Set the default branch to gh-pages (special name for GitHub Pages)
-usethis::use_git_branch("gh-pages")
+usethis::git_default_branch_rename(to = "gh-pages")
 
 ## Create the repository on GitHub
 usethis::use_github()
