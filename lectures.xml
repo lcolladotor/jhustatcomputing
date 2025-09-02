@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.7.34</generator>
-<lastBuildDate>Fri, 29 Aug 2025 14:09:09 GMT</lastBuildDate>
+<lastBuildDate>Tue, 02 Sep 2025 01:51:13 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -582,7 +582,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -1098,7 +1098,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1445,7 +1445,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -2112,7 +2112,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -2204,6 +2204,16 @@ Learning objectives
 data(airquality)
 plot(airquality$Ozone ~ airquality$Wind)
 ```</code></pre>
+<p>or the newer multi-line syntax:</p>
+<pre><code>```{r}
+#| label: plot1b
+#| height: 4
+#| width: 5
+#| eval: FALSE
+#| echo: TRUE
+data(airquality)
+plot(airquality$Ozone ~ airquality$Wind)
+```</code></pre>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2230,10 +2240,10 @@ Tip
 </div>
 <p>Because this is lecture is built in a <code>.qmd</code> file (which is very similar to a <code>.Rmd</code> file), let’s demonstrate how this work. I am going to change <code>eval=FALSE</code> to <code>eval=TRUE</code>.</p>
 <div class="cell" height="4" width="5">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">data</span>(airquality)</span>
-<span id="cb2-2"><span class="fu" style="color: #4758AB;
+<span id="cb3-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">plot</span>(airquality<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2250,6 +2260,28 @@ font-style: inherit;">$</span>Wind)</span></code></pre></div>
 </div>
 </div>
 </div>
+<div class="cell" height="4" width="5">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data</span>(airquality)</span>
+<span id="cb4-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plot</span>(airquality<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>Ozone <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> airquality<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>Wind)</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/index_files/figure-html/plot1b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We can’t tell which syntax was used to make the code chunk above, but you can see that the code was executed and the plot was made.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2447,6 +2479,61 @@ Tip
 <ul>
 <li><a href="https://github.com/Bioconductor/biocblog" class="uri">https://github.com/Bioconductor/biocblog</a> and <a href="https://blog.bioconductor.org/" class="uri">https://blog.bioconductor.org/</a></li>
 </ul>
+<section id="host-your-websites-on-github-pages-for-free" class="level4">
+<h4 class="anchored" data-anchor-id="host-your-websites-on-github-pages-for-free">Host your websites on GitHub Pages for free</h4>
+<p>If you already completed <a href="../../projects/project-0/">Project 0</a>, you can adapt those steps to create a new project (directory / folder), where you will create an <code>index.Rmd</code> (or <code>index.qmd</code>) file that will be the homepage of your website. Render / knit the <code>index.Rmd</code> (or <code>index.qmd</code>) file to create the <code>index.html</code> file. Then version control your project directory using <code>git</code>, set the branch to <code>gh-pages</code>, and link it to <code>GitHub</code>. Once you’ve pushed all files to GitHub, GitHub Pages will automatically host your <code>index.html</code> file. That is, run these steps:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Create a project directory</span></span>
+<span id="cb5-2">usethis<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create_project</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"~/Desktop/StatComputing_ProjectX"</span>)</span>
+<span id="cb5-3"></span>
+<span id="cb5-4"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Start using git to version control your project</span></span>
+<span id="cb5-5">usethis<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">use_git</span>()</span>
+<span id="cb5-6"></span>
+<span id="cb5-7"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Set the default branch to gh-pages (special name for GitHub Pages)</span></span>
+<span id="cb5-8">usethis<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">use_git_branch</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gh-pages"</span>)</span>
+<span id="cb5-9"></span>
+<span id="cb5-10"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Create the repository on GitHub</span></span>
+<span id="cb5-11">usethis<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">use_github</span>()</span>
+<span id="cb5-12"></span>
+<span id="cb5-13"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Create an index.Rmd (or index.qmd) file</span></span>
+<span id="cb5-14"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Knit / Render the file to create index.html</span></span>
+<span id="cb5-15"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Make a commit and push all files to GitHub</span></span></code></pre></div>
+</div>
+</section>
 </section>
 </section>
 <section id="tips-and-tricks-in-r-markdown-in-rstudio" class="level1">
@@ -2488,7 +2575,7 @@ Ctrl + Shift + K on Windows</code></pre>
 <li><code>lib</code> to call <code>library()</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(package)</span></code></pre></div>
 </div>
@@ -2496,7 +2583,7 @@ font-style: inherit;">library</span>(package)</span></code></pre></div>
 <li><code>mat</code> to create a matrix</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">matrix</span>(data, <span class="at" style="color: #657422;
 background-color: null;
@@ -2508,67 +2595,67 @@ font-style: inherit;">ncol =</span> cols)</span></code></pre></div>
 <li><code>if</code>, <code>el</code>, and <code>ei</code> to create conditional expressions such as <code>if() {}</code>, <code>else {}</code> and <code>else if () {}</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="cf" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">if</span> (condition) {</span>
-<span id="cb9-2">    <span class="do" style="color: #5E5E5E;
+<span id="cb12-2">    <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Case 1</span></span>
-<span id="cb9-3">} <span class="cf" style="color: #003B4F;
+<span id="cb12-3">} <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">if</span> (condition) {</span>
-<span id="cb9-4">    <span class="do" style="color: #5E5E5E;
+<span id="cb12-4">    <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Case 2</span></span>
-<span id="cb9-5">} <span class="cf" style="color: #003B4F;
+<span id="cb12-5">} <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">if</span> (condition) {</span>
-<span id="cb9-6">    <span class="do" style="color: #5E5E5E;
+<span id="cb12-6">    <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Case 3</span></span>
-<span id="cb9-7">}</span></code></pre></div>
+<span id="cb12-7">}</span></code></pre></div>
 </div>
 <ul>
 <li><code>fun</code> to create a function</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">name <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">name <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span>(variables) {</span>
-<span id="cb10-2"></span>
-<span id="cb10-3">}</span></code></pre></div>
+<span id="cb13-2"></span>
+<span id="cb13-3">}</span></code></pre></div>
 </div>
 <ul>
 <li><code>for</code> to create for loops</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="cf" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">for</span> (variable <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">in</span> vector) {</span>
-<span id="cb11-2"></span>
-<span id="cb11-3">}</span></code></pre></div>
+<span id="cb14-2"></span>
+<span id="cb14-3">}</span></code></pre></div>
 </div>
 <ul>
 <li><code>ts</code> to insert a comment with the current date and time (useful if you have very long code and share it with others so they see when it has been edited)</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Tue Jan 21 20:20:14 2020 ------------------------------</span></span></code></pre></div>
 </div>
@@ -2641,21 +2728,25 @@ for (i in 1:10) {
   }
   print(i)
 }</code></pre>
+<details>
+<summary>
+For details on formatting R code with <code>styler</code> and <code>biocthis</code>, click here.
+</summary>
 <p>I also like to use the <a href="https://github.com/r-lib/styler"><code>styler</code>: Non-invasive pretty printing of R code</a> package to automatically style my R code. I also use <a href="https://lcolladotor.github.io/biocthis/reference/bioc_style.html" class="uri">https://lcolladotor.github.io/biocthis/reference/bioc_style.html</a> to style my code in a way that it is compatible with Bioconductor’s code standards.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="do" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Install styler for automatically styling scripts</span></span>
-<span id="cb21-2"><span class="fu" style="color: #4758AB;
+<span id="cb24-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"styler"</span>)</span>
-<span id="cb21-3"></span>
-<span id="cb21-4"><span class="do" style="color: #5E5E5E;
+<span id="cb24-3"></span>
+<span id="cb24-4"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Install biocthis</span></span>
-<span id="cb21-5"><span class="cf" style="color: #003B4F;
+<span id="cb24-5"><span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">if</span> (<span class="sc" style="color: #5E5E5E;
@@ -2669,14 +2760,14 @@ background-color: null;
 font-style: inherit;">quietly =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span>)) {</span>
-<span id="cb21-6">    <span class="fu" style="color: #4758AB;
+<span id="cb24-6">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"BiocManager"</span>)</span>
-<span id="cb21-7">}</span>
-<span id="cb21-8"></span>
-<span id="cb21-9">BiocManager<span class="sc" style="color: #5E5E5E;
+<span id="cb24-7">}</span>
+<span id="cb24-8"></span>
+<span id="cb24-9">BiocManager<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2685,10 +2776,10 @@ background-color: null;
 font-style: inherit;">"biocthis"</span>)</span></code></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><span class="do" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Example code for styling all files that end with .qmd</span></span>
-<span id="cb22-2"><span class="fu" style="color: #4758AB;
+<span id="cb25-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">cat</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2707,16 +2798,16 @@ font-style: inherit;">"auto_style.R"</span>)))</span></code></pre></div>
 </div>
 <p>You might want to edit your <code>~/.Rprofile with `usethis::edit_r_profile()`</code> and add this line to it:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><span class="do" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## For the styler addin</span></span>
-<span id="cb24-2"><span class="co" style="color: #5E5E5E;
+<span id="cb27-2"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Affects the output of: styler:::get_addins_style_transformer_name()</span></span>
-<span id="cb24-3"><span class="co" style="color: #5E5E5E;
+<span id="cb27-3"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183</span></span>
-<span id="cb24-4"><span class="fu" style="color: #4758AB;
+<span id="cb27-4"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">options</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -2727,6 +2818,7 @@ background-color: null;
 font-style: inherit;">"biocthis::bioc_style()"</span>)</span></code></pre></div>
 </div>
 <p>For more information I have on my <code>~/.Rprofile</code> file check <a href="https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile" class="uri">https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile</a>.</p>
+</details>
 </section>
 <section id="rstudio-addins" class="level3">
 <h3 class="anchored" data-anchor-id="rstudio-addins">RStudio addins</h3>
@@ -2800,14 +2892,14 @@ Tip
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">options</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">120</span>)</span>
-<span id="cb25-2">sessioninfo<span class="sc" style="color: #5E5E5E;
+<span id="cb28-2">sessioninfo<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2823,7 +2915,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2025-08-28
+ date     2025-09-01
  pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
@@ -2968,7 +3060,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3002,6 +3094,7 @@ Read ahead
 <li>Authoring in <a href="https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html">R Markdown from RStudio</a></li>
 <li>Citations from <a href="https://monashdatafluency.github.io/r-rep-res/citations.html">Reproducible Research in R</a> from the <a href="https://monashdatafluency.github.io">Monash Data Fluency</a> initiative</li>
 <li>Bibliography from <a href="https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html">R Markdown Cookbook</a></li>
+<li>Managing using <a href="https://quarto.org/docs/tools/positron/visual-editor.html#zotero-citations">Zotero Citations with Positron</a></li>
 </ol>
 </div>
 </div>
@@ -3014,6 +3107,7 @@ Read ahead
 <li><a href="https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html" class="uri">https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html</a></li>
 <li><a href="https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html</a></li>
 <li><a href="https://monashdatafluency.github.io/r-rep-res/citations.html" class="uri">https://monashdatafluency.github.io/r-rep-res/citations.html</a></li>
+<li><a href="https://quarto.org/docs/tools/positron/visual-editor.html#zotero-citations" class="uri">https://quarto.org/docs/tools/positron/visual-editor.html#zotero-citations</a></li>
 </ul>
 </section>
 </section>
@@ -3052,8 +3146,8 @@ font-style: inherit;">"rmarkdown"</span>)</span></code></pre></div>
 <pre><code>To cite package 'rmarkdown' in publications use:
 
   Allaire J, Xie Y, Dervieux C, McPherson J, Luraschi J, Ushey K,
-  Atkins A, Wickham H, Cheng J, Chang W, Iannone R (2023). _rmarkdown:
-  Dynamic Documents for R_. R package version 2.24,
+  Atkins A, Wickham H, Cheng J, Chang W, Iannone R (2024). _rmarkdown:
+  Dynamic Documents for R_. R package version 2.29,
   &lt;https://github.com/rstudio/rmarkdown&gt;.
 
   Xie Y, Allaire J, Grolemund G (2018). _R Markdown: The Definitive
@@ -3099,7 +3193,7 @@ font-style: inherit;">"my-refs.bib"</span>)</span></code></pre></div>
 background-color: null;
 font-style: inherit;">list.files</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "index.qmd"       "index.rmarkdown" "my-refs.bib"    </code></pre>
+<pre><code>[1] "index.qmd"       "index.R"         "index.rmarkdown" "my-refs.bib"    </code></pre>
 </div>
 </div>
 <p>If you open up the <code>my-refs.bib</code> file, you will see</p>
@@ -3216,7 +3310,7 @@ font-style: inherit;">---</span></span></code></pre></div>
 </ul>
 <p>Let’s start by citing the <code>rmarkdown</code> package using the following code and press <code>Knit</code> button:</p>
 <hr>
-<p>I have been using the amazing Rmarkdown package <span class="citation" data-cites="R-rmarkdown">(Allaire et al. 2023)</span>! I should also go and read <span class="citation" data-cites="rmarkdown2018 rmarkdown2020">(Xie, Allaire, and Grolemund 2018; and Xie, Dervieux, and Riederer 2020)</span> books.</p>
+<p>I have been using the amazing Rmarkdown package <span class="citation" data-cites="R-rmarkdown">(Allaire et al. 2024)</span>! I should also go and read <span class="citation" data-cites="rmarkdown2018 rmarkdown2020">(Xie, Allaire, and Grolemund 2018; and Xie, Dervieux, and Riederer 2020)</span> books.</p>
 <hr>
 <p>Pretty cool, eh??</p>
 </section>
@@ -3322,12 +3416,16 @@ font-style: inherit;">---</span></span></code></pre></div>
 <section id="other-useful-tips" class="level1">
 <h1>Other useful tips</h1>
 <p>We have learned that inside your file that contains all your references (e.g.&nbsp;<code>my-refs.bib</code>), typically each reference gets a key, which is a shorthand that is generated by the reference manager or you can create yourself.</p>
-<p>For instance, I use a format of lower-case first author last name followed by 4 digit year for each reference followed by a keyword (e.g name of a software package). Alternatively, you can omit the keyword. But note that if I cite a paper by the same first author that was published in the same year, then a lower case letter is added to the end. For instance, for a paper that I wrote as 1st author in 2010, my bibtex key might be <code>hicks2022</code> or <code>hicks2022a</code>. You can decide what scheme to use, just pick one and use it <em>forever</em>.</p>
-<p>In your R Markdown document, you can then cite the reference by adding the key, such as <code>...in the paper by Hicks et al. [@hicks2022]...</code>.</p>
+<p>For instance, I use a format of lower-case first author last name followed by 4 digit year for each reference followed by a keyword (e.g name of a software package). Alternatively, you can omit the keyword. But note that if I cite a paper by the same first author that was published in the same year, then a lower case letter is added to the end. For instance, for a paper that I wrote as 1st author in 2022, my bibtex key might be <code>colladotorres2022</code> or <code>colladotorres2022a</code>. You can decide what scheme to use, just pick one and use it <em>forever</em>.</p>
+<p>In your R Markdown document, you can then cite the reference by adding the key, such as <code>...in the paper by Collado-Torres et al. [@colladotorres2022]...</code>.</p>
 </section>
 <section id="sciwheel" class="level1">
 <h1>SciWheel</h1>
-<p>I use <a href="https://sciwheel.com/">SciWheel</a> for managing citations and writing papers on Google Docs as documented at <a href="https://lcolladotor.github.io/bioc_team_ds/writing-papers.html" class="uri">https://lcolladotor.github.io/bioc_team_ds/writing-papers.html</a>. I mention it here because you can import <img src="https://latex.codecogs.com/png.latex?BibTeX"> files (<code>.bib</code>) on SciWheel, which can make your life easier if you want to import R package citations that way.</p>
+<p>I use <a href="https://sciwheel.com/">LeanLibrary Workspace (formerly SciWheel)</a> for managing citations and writing papers on Google Docs as documented at <a href="https://lcolladotor.github.io/bioc_team_ds/writing-papers.html" class="uri">https://lcolladotor.github.io/bioc_team_ds/writing-papers.html</a>. I mention it here because you can import <img src="https://latex.codecogs.com/png.latex?BibTeX"> files (<code>.bib</code>) on SciWheel, which can make your life easier if you want to import R package citations that way.</p>
+</section>
+<section id="positron-and-zotero" class="level1">
+<h1>Positron and Zotero</h1>
+<p>If you are using <code>Positron</code> visual editor, you can link your <code>Zotero</code> library to it, as documented at <a href="https://quarto.org/docs/tools/positron/visual-editor.html#zotero-citations" class="uri">https://quarto.org/docs/tools/positron/visual-editor.html#zotero-citations</a>. That’s a neat feature although others likely won’t have access to your Zotero library, which can you break the reproducibility of your work. There’s the “Zotero Groups” feature that might help with that, but the ability to reproduce the work (render the <code>index.html</code>) is still limited to those in the group. So you might want to consider exporting the relevant subset of your Zotero library (or all of it if you don’t mind sharing it all!) as a <code>.bib</code> file, include the <code>.bib</code> file in your project, version control it, and share it on GitHub.</p>
 </section>
 <section id="post-lecture-materials" class="level1">
 <h1>Post-lecture materials</h1>
@@ -3387,36 +3485,37 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
- tz       America/Mexico_City
- date     2023-08-29
- pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+ tz       America/New_York
+ date     2025-09-01
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout      1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
- digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- evaluate      0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr         1.43    2023-05-25 [1] CRAN (R 4.3.0)
- rlang         1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown     2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rstudioapi    0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- xfun          0.40    2023-08-09 [1] CRAN (R 4.3.0)
- yaml          2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ cli           3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout    * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ digest        0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ evaluate      1.0.4   2025-06-18 [1] CRAN (R 4.5.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite      2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr         1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ rlang         1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown     2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ sessioninfo   1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ xfun          0.52    2025-04-02 [1] CRAN (R 4.5.0)
+ yaml          2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
@@ -3428,7 +3527,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-R-rmarkdown" class="csl-entry">
-Allaire, JJ, Yihui Xie, Christophe Dervieux, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, et al. 2023. <em>Rmarkdown: Dynamic Documents for r</em>. <a href="https://CRAN.R-project.org/package=rmarkdown">https://CRAN.R-project.org/package=rmarkdown</a>.
+Allaire, JJ, Yihui Xie, Christophe Dervieux, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, et al. 2024. <em>Rmarkdown: Dynamic Documents for r</em>. <a href="https://github.com/rstudio/rmarkdown">https://github.com/rstudio/rmarkdown</a>.
 </div>
 <div id="ref-rmarkdown2018" class="csl-entry">
 Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown: The Definitive Guide</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown">https://bookdown.org/yihui/rmarkdown</a>.
@@ -3442,7 +3541,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3458,7 +3557,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
 <p><em>This lecture, as the rest of the course, is adapted from the version <a href="https://www.stephaniehicks.com/">Stephanie C. Hicks</a> designed and maintained in 2021 and 2022. Check the recent changes to this file through the <a href="https://github.com/lcolladotor/jhustatcomputing/commits/main/posts/07-reading-and-writing-data/index.qmd">GitHub history</a>.</em></p>
 <!-- Add interesting quote -->
 <blockquote class="blockquote">
-<p>“When writing code, you’re always collaborating with future-you; and past-you doesn’t respond to emails”. —<em>Hadley Wickham</em></p>
+<p>“When writing code, you’re always collaborating with future-you; and past-you doesn’t respond to emails”. —<a href="https://bsky.app/profile/hadley.nz"><em>Hadley Wickham</em></a></p>
 </blockquote>
 <p>[<a href="https://fivebooks.com/best-books/computer-science-data-science-hadley-wickham/">Source</a>]</p>
 <section id="pre-lecture-materials" class="level1">
@@ -3522,8 +3621,8 @@ Learning objectives
 </section>
 <section id="relative-versus-absolute-paths" class="level1">
 <h1>Relative versus absolute paths</h1>
-<p>When you are starting a data analysis, you can create a new <code>.Rproj</code> file that asks RStudio to change the path (location on your computer) to the <code>.Rproj</code> location.</p>
-<p>Let’s try this out. In RStudio, click <code>Project: (None)</code> in the top right corner and <code>New Project</code>.</p>
+<p>When you are starting a data analysis, you can create a new <code>.Rproj</code> file that asks <code>RStudio IDE</code> to change the path (location on your computer) to the <code>.Rproj</code> location. If you are using <code>Positron</code>, you open a project folder as <code>.Rproj</code> files are not supported. See <a href="https://positron.posit.co/migrate-rstudio-rproj.html" class="uri">https://positron.posit.co/migrate-rstudio-rproj.html</a> for more details.</p>
+<p>Let’s try this out. In <code>RStudio IDE</code>, click <code>Project: (None)</code> in the top right corner and <code>New Project</code>. For <code>Positron</code>, click on <code>File</code> -&gt; <code>New Folder from Template ...</code>. With R commands, use <code>usethis::create_project("path/to/your/project/folder")</code>.</p>
 <p>After opening up a <code>.Rproj</code> file, you can test this by</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
@@ -3907,7 +4006,11 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">here</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"functions.R"</span>))</span></code></pre></div>
+font-style: inherit;">"functions.R"</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">echo =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span></code></pre></div>
 </div>
 </section>
 <section id="r-objects" class="level2">
@@ -4765,57 +4868,57 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.4.1 (2024-06-14)
- os       macOS Sonoma 14.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-08-20
- pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-09-01
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- bit           4.0.5   2022-11-15 [1] CRAN (R 4.4.0)
- bit64         4.0.5   2020-08-30 [1] CRAN (R 4.4.0)
- cli           3.6.3   2024-06-21 [1] CRAN (R 4.4.0)
- colorout    * 1.3-0.2 2024-05-03 [1] Github (jalvesaq/colorout@c6113a2)
- crayon        1.5.3   2024-06-20 [1] CRAN (R 4.4.0)
- digest        0.6.36  2024-06-23 [1] CRAN (R 4.4.0)
- evaluate      0.24.0  2024-06-10 [1] CRAN (R 4.4.0)
- fansi         1.0.6   2023-12-08 [1] CRAN (R 4.4.0)
- fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.4.0)
- glue          1.7.0   2024-01-09 [1] CRAN (R 4.4.0)
- here        * 1.0.1   2020-12-13 [1] CRAN (R 4.4.0)
- hms           1.1.3   2023-03-21 [1] CRAN (R 4.4.0)
- htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.4.0)
- htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.4.0)
- jsonlite      1.8.8   2023-12-04 [1] CRAN (R 4.4.0)
- knitr         1.48    2024-07-07 [1] CRAN (R 4.4.0)
- lifecycle     1.0.4   2023-11-07 [1] CRAN (R 4.4.0)
- magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.4.0)
- pillar        1.9.0   2023-03-22 [1] CRAN (R 4.4.0)
- pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.4.0)
- R6            2.5.1   2021-08-19 [1] CRAN (R 4.4.0)
- readr       * 2.1.5   2024-01-10 [1] CRAN (R 4.4.0)
- rlang         1.1.4   2024-06-04 [1] CRAN (R 4.4.0)
- rmarkdown     2.27    2024-05-17 [1] CRAN (R 4.4.0)
- rprojroot     2.0.4   2023-11-05 [1] CRAN (R 4.4.0)
- rstudioapi    0.16.0  2024-03-24 [1] CRAN (R 4.4.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.4.0)
- tibble        3.2.1   2023-03-20 [1] CRAN (R 4.4.0)
- tidyselect    1.2.1   2024-03-11 [1] CRAN (R 4.4.0)
- tzdb          0.4.0   2023-05-12 [1] CRAN (R 4.4.0)
- utf8          1.2.4   2023-10-22 [1] CRAN (R 4.4.0)
- vctrs         0.6.5   2023-12-01 [1] CRAN (R 4.4.0)
- vroom         1.6.5   2023-12-05 [1] CRAN (R 4.4.0)
- withr         3.0.0   2024-01-16 [1] CRAN (R 4.4.0)
- xfun          0.46    2024-07-18 [1] CRAN (R 4.4.0)
- yaml          2.3.10  2024-07-26 [1] CRAN (R 4.4.0)
+ bit           4.6.0   2025-03-06 [1] CRAN (R 4.5.0)
+ bit64         4.6.0-1 2025-01-16 [1] CRAN (R 4.5.0)
+ cli           3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout    * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ crayon        1.5.3   2024-06-20 [1] CRAN (R 4.5.0)
+ digest        0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ evaluate      1.0.4   2025-06-18 [1] CRAN (R 4.5.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ glue          1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
+ here        * 1.0.1   2020-12-13 [1] CRAN (R 4.5.0)
+ hms           1.1.3   2023-03-21 [1] CRAN (R 4.5.0)
+ htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite      2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr         1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ lifecycle     1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
+ magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.5.0)
+ pillar        1.11.0  2025-07-04 [1] CRAN (R 4.5.0)
+ pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.5.0)
+ R6            2.6.1   2025-02-15 [1] CRAN (R 4.5.0)
+ readr       * 2.1.5   2024-01-10 [1] CRAN (R 4.5.0)
+ rlang         1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown     2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ rprojroot     2.1.0   2025-07-12 [1] CRAN (R 4.5.0)
+ sessioninfo   1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ tibble        3.3.0   2025-06-08 [1] CRAN (R 4.5.0)
+ tidyselect    1.2.1   2024-03-11 [1] CRAN (R 4.5.0)
+ tzdb          0.5.0   2025-03-15 [1] CRAN (R 4.5.0)
+ utf8          1.2.6   2025-06-08 [1] CRAN (R 4.5.0)
+ vctrs         0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
+ vroom         1.6.5   2023-12-05 [1] CRAN (R 4.5.0)
+ withr         3.0.2   2024-10-28 [1] CRAN (R 4.5.0)
+ xfun          0.52    2025-04-02 [1] CRAN (R 4.5.0)
+ yaml          2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
@@ -4833,7 +4936,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6653,7 +6756,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7614,7 +7717,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8463,7 +8566,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -8976,7 +9079,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10339,7 +10442,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -12294,7 +12397,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -14049,7 +14152,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -15335,7 +15438,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -16668,7 +16771,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -19706,7 +19809,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -21714,7 +21817,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -22668,7 +22771,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -24412,7 +24515,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Fri, 29 Aug 2025 14:09:09 GMT</pubDate>
+  <pubDate>Tue, 02 Sep 2025 01:51:13 GMT</pubDate>
 </item>
 </channel>
 </rss>

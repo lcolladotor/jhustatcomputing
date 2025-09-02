@@ -306,9 +306,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
 <p>That data for this part of the assignment comes from <a href="https://www.tidytuesday.com">TidyTuesday</a>, which is a weekly podcast and global <a href="https://github.com/rfordatascience/tidytuesday">community activity</a> brought to you by the R4DS Online Learning Community. The goal of TidyTuesday is to help R learners learn in real-world contexts.</p>
-<p><img src="https://github.com/rfordatascience/tidytuesday/raw/master/static/tt_logo.png" class="preview-image img-fluid"></p>
-<p>[<strong>Source</strong>: <a href="https://github.com/rfordatascience/tidytuesday/blob/master/static/tt_logo.png">TidyTuesday</a>]</p>
-<p>If we look at the <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2022#2022-data">TidyTuesday github repo</a> from 2022, we see this dataset chocolate bar reviews.</p>
+<p><img src="https://github.com/rfordatascience/tidytuesday/raw/main/static/tt_logo.png" class="preview-image img-fluid"></p>
+<p>[<strong>Source</strong>: <a href="https://github.com/rfordatascience/tidytuesday/blob/main/static/tt_logo.png">TidyTuesday</a>]</p>
+<p>If we look at the <a href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2022#2022-data">TidyTuesday github repo</a> from 2022, we see this dataset chocolate bar reviews.</p>
 <p>To access the data, you need to install the <code>tidytuesdayR</code> R package and use the function <code>tt_load()</code> with the date of ‘2022-01-18’ to load the data.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the tidytuesdayR package if you don't have it</span></span>
@@ -347,7 +347,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># saves data only once (not each time you knit a R Markdown)</span></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"chocolate.RDS"</span>))) {</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    url_csv <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-18/chocolate.csv"</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    url_csv <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-01-18/chocolate.csv"</span></span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    chocolate <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(url_csv)</span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># save the file to RDS objects</span></span>
@@ -398,7 +398,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 </div>
 <p>Here is a data dictionary for what all the column names mean:</p>
 <ul>
-<li><a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-01-18/readme.md#data-dictionary" class="uri">https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-01-18/readme.md#data-dictionary</a></li>
+<li><a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2022/2022-01-18/readme.md#data-dictionary" class="uri">https://github.com/rfordatascience/tidytuesday/blob/main/data/2022/2022-01-18/readme.md#data-dictionary</a></li>
 </ul>
 </section>
 </section>
@@ -462,9 +462,9 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 3 × 1
         x
     &lt;dbl&gt;
-1  1.36  
-2  0.771 
-3 -0.0926</code></pre>
+1 -0.0497
+2  0.497 
+3 -0.0810</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a new column that indicates whether the value of 'x' is positive or negative</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
@@ -476,16 +476,16 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 100 × 2
          x is_positive
      &lt;dbl&gt; &lt;chr&gt;      
- 1  1.36   Yes        
- 2  0.771  Yes        
- 3 -0.0926 No         
- 4 -1.93   No         
- 5 -0.694  No         
- 6 -2.14   No         
- 7 -0.216  No         
- 8  0.628  Yes        
- 9  0.738  Yes        
-10 -1.97   No         
+ 1 -0.0497 No         
+ 2  0.497  Yes        
+ 3 -0.0810 No         
+ 4 -1.45   No         
+ 5  0.244  Yes        
+ 6  0.655  Yes        
+ 7 -0.743  No         
+ 8 -1.66   No         
+ 9 -0.204  No         
+10 -1.66   No         
 # ℹ 90 more rows</code></pre>
 </div>
 </div>
@@ -632,16 +632,16 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.5.1 (2025-06-13)
- os       macOS Sequoia 15.6
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2025-08-19
- pandoc   3.4 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64/ (via rmarkdown)
- quarto   1.4.550 @ /usr/local/bin/quarto
+ date     2025-09-01
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package      * version date (UTC) lib source
@@ -677,7 +677,6 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  rlang          1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
  rmarkdown      2.29    2024-11-04 [1] CRAN (R 4.5.0)
  rprojroot      2.1.0   2025-07-12 [1] CRAN (R 4.5.0)
- rstudioapi     0.17.1  2024-10-22 [1] CRAN (R 4.5.0)
  scales         1.4.0   2025-04-24 [1] CRAN (R 4.5.0)
  sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
  stringi        1.8.7   2025-03-27 [1] CRAN (R 4.5.0)
