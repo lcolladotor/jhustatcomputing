@@ -1,43 +1,43 @@
-## -----------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------
 #| eval: false
 # install.packages(
 #     c("postcards", "usethis", "gitcreds")
 # )
 
 
-## -----------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------
 #| label: rv
 #| eval: false
 #| echo: true
 # print(R.version.string)
 
 
-## ----rstudiov, eval = FALSE, echo = TRUE--------------------------------------
+## ----rstudiov, eval = FALSE, echo = TRUE------------------------------------------
 # print(RStudio.Version()$version)
 
 
 ## git --version
 
-## -----------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------
 #| eval: false
 # ## My GitHub username is "lcolladotor", so this would create the RStudio project
 # ## on my Desktop
 # usethis::create_project("~/Desktop/lcolladotor.github.io")
 
 
-## -----------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------
 #| eval: false
 # usethis::create_project("~/Desktop/biostat776-intro-Leonardo-ColladoTorres")
 
 
-## -----------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------
 #| eval: false
 # usethis::use_git() ## Choose the option to make the commit, then to restart RStudio
 # ## If you don't have git installed, you will likely benefit from reading
 # ## "Happy Git and GitHub for the useR" at https://happygitwithr.com/.
 
 
-## -----------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------
 #| eval: false
 # ## After the restart, we next need to change the default Git branch to "gh-pages".
 # ## This will make our lives a bit easier later on, as this specific name is used by
@@ -45,7 +45,7 @@
 # usethis::git_default_branch_rename(to = "gh-pages")
 
 
-## -----------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------
 #| eval: false
 # ## We will next link R to GitHub so R can act on your behalf. We will create a
 # ## GitHub Personal Access Token (PAT) so R can say that it's acting on your behalf.
@@ -67,7 +67,7 @@
 # ## problem: https://github.com/r-lib/usethis/issues/1347
 
 
-## -----------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------
 #| eval: false
 # ## We will next link R to GitHub so R can act on your behalf. We will create a
 # ## GitHub Personal Access Token (PAT) so R can say that it's acting on your behalf.
@@ -96,7 +96,7 @@
 # ## more secure approach provided by gitcreds.
 
 
-## -----------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------
 #| eval: false
 # ## Next we continue by connecting your local git repository to
 # ## GitHub. For other scenarios, you might want to use the `organisation`
@@ -107,7 +107,7 @@
 # usethis::use_github()
 
 
-## -----------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------
 #| eval: false
 # postcards::create_postcard(template = "jolla")
 # postcards::create_postcard(template = "jolla-blue")
@@ -116,7 +116,7 @@
 # postcards::create_postcard(template = "solana")
 
 
-## -----------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------
 #| eval: false
 # ## Create an Rstudio project
 # usethis::create_project("~/Desktop/biostat776classnotes")
@@ -128,7 +128,7 @@
 # usethis::use_github()
 
 
-## -----------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------
 #| eval: false
 # ## Create an Rstudio project
 # usethis::create_project("~/Desktop/biostat776project1")
@@ -148,7 +148,7 @@
 # usethis::use_github()
 
 
-## -----------------------------------------------------------------------------
+## ---------------------------------------------------------------------------------
 options(width = 120)
 sessioninfo::session_info()
 
