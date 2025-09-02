@@ -24,7 +24,7 @@ library(here)
 
 <!-- Add interesting quote -->
 
-> "When writing code, you're always collaborating with future-you; and past-you doesn't respond to emails". ---*Hadley Wickham*
+> "When writing code, you're always collaborating with future-you; and past-you doesn't respond to emails". ---[*Hadley Wickham*](https://bsky.app/profile/hadley.nz)
 
 \[[Source](https://fivebooks.com/best-books/computer-science-data-science-hadley-wickham/)\]
 
