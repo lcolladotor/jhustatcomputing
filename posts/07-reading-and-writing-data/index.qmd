@@ -70,9 +70,9 @@ We will also briefly describe different ways for reading and writing other data 
 
 # Relative versus absolute paths
 
-When you are starting a data analysis, you can create a new `.Rproj` file that asks RStudio to change the path (location on your computer) to the `.Rproj` location.
+When you are starting a data analysis, you can create a new `.Rproj` file that asks `RStudio IDE` to change the path (location on your computer) to the `.Rproj` location. If you are using `Positron`, you open a project folder as `.Rproj` files are not supported. See <https://positron.posit.co/migrate-rstudio-rproj.html> for more details.  
 
-Let's try this out. In RStudio, click `Project: (None)` in the top right corner and `New Project`.
+Let's try this out. In `RStudio IDE`, click `Project: (None)` in the top right corner and `New Project`. For `Positron`, click on `File` -> `New Folder from Template ...`. With R commands, use `usethis::create_project("path/to/your/project/folder")`.
 
 After opening up a `.Rproj` file, you can test this by
 
@@ -240,7 +240,7 @@ The function you want to use is
 For example, it might be something like this:
 
 ```{r,eval=FALSE}
-source(here::here("functions.R"))
+source(here::here("functions.R"), echo = TRUE)
 ```
 
 ## R objects
