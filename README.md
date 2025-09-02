@@ -16,4 +16,4 @@ To check previous versions of this course, see <https://github.com/lcolladotor/j
 
 # Bugs
 
-Github pull requests are welcome for bugs
+[GitHub pull requests](https://github.com/lcolladotor/jhustatcomputing/pulls) are welcome for bugs
