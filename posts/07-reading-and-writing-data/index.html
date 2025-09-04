@@ -251,6 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   </ul></li>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#downloading-the-full-course-data-directory" id="toc-downloading-the-full-course-data-directory" class="nav-link" data-scroll-target="#downloading-the-full-course-data-directory">Downloading the full course “data” directory</a></li>
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#relative-versus-absolute-paths" id="toc-relative-versus-absolute-paths" class="nav-link" data-scroll-target="#relative-versus-absolute-paths">Relative versus absolute paths</a>
   <ul class="collapse">
@@ -354,6 +355,27 @@ Learning objectives
 <li>Be able to calculate memory requirements for R objects</li>
 <li>Use modern R packages for reading and writing data</li>
 </ul>
+</div>
+</div>
+</section>
+<section id="downloading-the-full-course-data-directory" class="level1">
+<h1>Downloading the full course “data” directory</h1>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Download course data
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To download the “data” directory at <a href="https://github.com/lcolladotor/jhustatcomputing/tree/main/data" class="uri">https://github.com/lcolladotor/jhustatcomputing/tree/main/data</a>, you can do so manually 1 file at a time. But you can also:</p>
+<ul>
+<li><p>Use the green “Code (down arrow)” button at <a href="https://github.com/lcolladotor/jhustatcomputing/tree/main" class="uri">https://github.com/lcolladotor/jhustatcomputing/tree/main</a> to download the full course website. Either “git clone” via HTTPS (easier) or SSH (advanced), or download the full course zip file (easiest option but is not linked via Git/GitHub; aka hard to update in the future).</p></li>
+<li><p>Use <code>usethis::use_course()</code> as documented <a href="https://usethis.r-lib.org/reference/zip-utils.html">here</a>. That is, use <code>usethis::use_course("lcolladotor/jhustatcomputing")</code> to download the full course repository contents.</p></li>
+</ul>
+<p>To make it easier for you, I wrote the R code you can run inside your RStudio project for your class notes. Your equivalent to <a href="https://github.com/lcolladotor/biostat776classnotes" class="uri">https://github.com/lcolladotor/biostat776classnotes</a>. See <a href="https://github.com/lcolladotor/biostat776classnotes/blob/92b6fd7a6eda9f64aab47dc0f741df4f35474a9d/R/2024-09-03.R#L47-L76">these lines</a> for the full code.</p>
 </div>
 </div>
 </section>
@@ -1200,7 +1222,7 @@ Tip
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2025-09-01
+ date     2025-09-04
  pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
