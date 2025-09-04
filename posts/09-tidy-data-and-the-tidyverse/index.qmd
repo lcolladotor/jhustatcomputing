@@ -33,7 +33,7 @@ categories: [module 2, week 2, R, programming, tidyr, here, tidyverse]
 
 1.  [Tidy Data](https://www.jstatsoft.org/article/view/v059i10) paper published in the Journal of Statistical Software
 2.  <https://r4ds.had.co.nz/tidy-data>
-3.  [tidyr cheat sheet from RStudio](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+3.  [`tidyr` cheat sheet from Posit](https://rstudio.github.io/cheatsheets/html/tidyr.html)
 :::
 
 ### Acknowledgements
@@ -87,7 +87,7 @@ As a quick example, consider the following data illustrating **religion and inco
 This is in a classic table format:
 
 ```{r}
-library(tidyr)
+library("tidyr")
 relig_income
 ```
 :::
@@ -101,11 +101,18 @@ While this format is canonical and is useful for quickly observing the relations
 Converting this data to tidy format would give us
 
 ```{r, message=FALSE}
-library(tidyverse)
+library("tidyverse")
 
 relig_income %>%
-    pivot_longer(-religion, names_to = "income", values_to = "respondents") %>%
-    mutate(religion = factor(religion), income = factor(income))
+    pivot_longer(
+        -religion,
+        names_to = "income",
+        values_to = "respondents"
+    ) %>%
+    mutate(
+        religion = factor(religion),
+        income = factor(income)
+    )
 ```
 
 Some of these functions you have seen before, others might be new to you. Let's talk about each one in the context of the `tidyverse` R packages.
@@ -121,7 +128,7 @@ A subset of the "Tidyverse" packages include:
 
 -   [ggplot2](https://cran.r-project.org/package=ggplot2): a plotting system based on the grammar of graphics
 
--   [magrittr](https://cran.r-project.org/package=magrittr%22): defines the `%>%` operator for chaining functions together in a series of operations on data
+-   [magrittr](https://cran.r-project.org/package=magrittr%22): defines the `%>%` operator for chaining functions together in a series of operations on data. You can also use the pipe operator from base R (`|>`) for most things, though the `magrittr` pipe `%>%` has some additional features that make it more flexible.
 
 -   [dplyr](https://cran.r-project.org/package=dplyr): a suite of (fast) functions for working with data frames
 
@@ -137,16 +144,16 @@ The "tidyverse" package can be used to install all of the packages in the tidyve
 For example, instead of starting an R script with this:
 
 ```{r, eval = FALSE}
-library(dplyr)
-library(tidyr)
-library(readr)
-library(ggplot2)
+library("dplyr")
+library("tidyr")
+library("readr")
+library("ggplot2")
 ```
 
 You can start with this:
 
 ```{r, eval = FALSE}
-library(tidyverse)
+library("tidyverse")
 ```
 
 In the example above, let's talk about what we did using the `pivot_longer()` function.
@@ -321,7 +328,7 @@ tibble(x = c("a,b,c", "d,e", "f,g,i")) %>%
 ::: callout-tip
 -   [Tidy Data](https://www.jstatsoft.org/article/view/v059i10) paper published in the Journal of Statistical Software
 -   https://r4ds.had.co.nz/tidy-data.html
--   [tidyr cheat sheet from RStudio](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+-   [tidyr cheat sheet from RStudio](https://rstudio.github.io/cheatsheets/html/tidyr.html)
 :::
 
 # R session information
