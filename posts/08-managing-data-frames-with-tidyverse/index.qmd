@@ -102,7 +102,7 @@ library(tidyverse)
 
 ### `as_tibble()`
 
-Since many packages use the historical `data.frame` from base R, you will often find yourself in the situation that you have a `data.frame` and want to convert that `data.frame` to a `tibbl`e.
+Since many packages use the historical `data.frame` from base R, you will often find yourself in the situation that you have a `data.frame` and want to convert that `data.frame` to a `tibble`.
 
 To do so, the `as_tibble()` function is exactly what you are looking for.
 
@@ -111,7 +111,7 @@ For the example, here we use a dataset (`chicago.rds`) containing air pollution 
 The dataset is available in the `/data` repository. You can load the data into R using the `readRDS()` function.
 
 ```{r}
-library(here)
+library("here")
 chicago <- readRDS(here("data", "chicago.rds"))
 ```
 
@@ -146,9 +146,9 @@ Additionally, you will note that the **type of the variable is printed for each 
 
 If you *do* want to see more rows from the tibble, there are a few options!
 
-1.  The `View()` function in RStudio is incredibly helpful. The input to this function is the `data.frame` or tibble you would like to see.
+1.  The `View()` function in `RStudio IDE` is incredibly helpful (although it's been enhanced in `Positron`!). The input to this function is the `data.frame` or tibble you would like to see.
 
-Specifically, `View(chicago)` would provide you, the viewer, with a scrollable view (in a new tab) of the complete dataset.
+Specifically, `View(chicago)` would provide you, the viewer, with a scrollable view (in a new tab) of the complete dataset. In `Positron` you also get small histograms for numerical variables as well as little bars showing what percent of the observations are missing for each variable. You can also click on a given numerical column and get the summary statistics for that column (equivalent of `summary(chicago$column_name)`).
 
 2.  Use the fact that `print()` enables you to specify how many rows and columns you would like to display.
 
@@ -265,7 +265,7 @@ Some of the key "verbs" provided by the `dplyr` package are
 
 -   `summarise()` / `summarize()`: generate summary statistics of different variables in the data frame, possibly within strata
 
--   `%>%`: the "pipe" operator is used to connect multiple verb actions together into a pipeline
+-   `%>%`: the "pipe" operator is used to connect multiple verb actions together into a pipeline. Note that the base R package now includes a pipe operator `|>` that has similar functionality.
 
 ::: callout-tip
 ### Note
@@ -293,7 +293,7 @@ All of the functions that we will discuss here will have a few common characteri
 
 ### `dplyr` installation
 
-The `dplyr` package can be installed from CRAN or from GitHub using the `devtools` package and the `install_github()` function. The GitHub repository will usually contain the latest updates to the package and the development version.
+The `dplyr` package can be installed from CRAN or from GitHub using the `remotes` package and the `install_github()` function. The GitHub repository will usually contain the latest updates to the package and the development version.
 
 To install from CRAN, just run
 
@@ -306,7 +306,7 @@ The `dplyr` package is also installed when you install the `tidyverse` meta-pack
 After installing the package it is important that you load it into your R session with the `library()` function.
 
 ```{r}
-library(dplyr)
+library("dplyr")
 ```
 
 You may get some warnings when the package is loaded because there are functions in the `dplyr` package that have the same name as functions in other packages. For now you can ignore the warnings.
@@ -456,7 +456,7 @@ and the last few rows.
 tail(select(chicago, date, pm25tmean2), 3)
 ```
 
-Columns can be arranged in descending order too by useing the special `desc()` operator.
+Columns can be arranged in descending order too by using the special `desc()` operator.
 
 ```{r}
 chicago <- arrange(chicago, desc(date))
@@ -511,7 +511,10 @@ For example, with air pollution data, we often want to *detrend* the data by sub
 Here, we create a `pm25detrend` variable that subtracts the mean from the `pm25` variable.
 
 ```{r}
-chicago <- mutate(chicago, pm25detrend = pm25 - mean(pm25, na.rm = TRUE))
+chicago <- mutate(
+    chicago, 
+    pm25detrend = pm25 - mean(pm25, na.rm = TRUE)
+)
 head(chicago)
 ```
 
