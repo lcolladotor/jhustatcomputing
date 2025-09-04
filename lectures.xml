@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.7.34</generator>
-<lastBuildDate>Thu, 04 Sep 2025 03:25:11 GMT</lastBuildDate>
+<lastBuildDate>Thu, 04 Sep 2025 03:34:45 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -582,7 +582,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:45 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -1098,7 +1098,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:45 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1445,7 +1445,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:45 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -2112,7 +2112,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:45 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -3062,7 +3062,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:45 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3543,7 +3543,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:45 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4938,7 +4938,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:45 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6766,7 +6766,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:45 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -6804,7 +6804,7 @@ Read ahead
 <ol type="1">
 <li><a href="https://www.jstatsoft.org/article/view/v059i10">Tidy Data</a> paper published in the Journal of Statistical Software</li>
 <li><a href="https://r4ds.had.co.nz/tidy-data" class="uri">https://r4ds.had.co.nz/tidy-data</a></li>
-<li><a href="http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">tidyr cheat sheet from RStudio</a></li>
+<li><a href="https://rstudio.github.io/cheatsheets/html/tidyr.html"><code>tidyr</code> cheat sheet from Posit</a></li>
 </ol>
 </div>
 </div>
@@ -6877,7 +6877,9 @@ Example
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(tidyr)</span>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"tidyr"</span>)</span>
 <span id="cb1-2">relig_income</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 18 × 11
@@ -6916,37 +6918,46 @@ font-style: inherit;">library</span>(tidyr)</span>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(tidyverse)</span>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"tidyverse"</span>)</span>
 <span id="cb3-2"></span>
 <span id="cb3-3">relig_income <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
 <span id="cb3-4">    <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">pivot_longer</span>(<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">pivot_longer</span>(</span>
+<span id="cb3-5">        <span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">-</span>religion, <span class="at" style="color: #657422;
+font-style: inherit;">-</span>religion,</span>
+<span id="cb3-6">        <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">names_to =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"income"</span>, <span class="at" style="color: #657422;
+font-style: inherit;">"income"</span>,</span>
+<span id="cb3-7">        <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">values_to =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"respondents"</span>) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">"respondents"</span></span>
+<span id="cb3-8">    ) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb3-5">    <span class="fu" style="color: #4758AB;
+<span id="cb3-9">    <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb3-10">        <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">religion =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">factor</span>(religion), <span class="at" style="color: #657422;
+font-style: inherit;">factor</span>(religion),</span>
+<span id="cb3-11">        <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">income =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">factor</span>(income))</span></code></pre></div>
+font-style: inherit;">factor</span>(income)</span>
+<span id="cb3-12">    )</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 180 × 3
    religion income             respondents
@@ -6982,7 +6993,7 @@ Note
 <p>A subset of the “Tidyverse” packages include:</p>
 <ul>
 <li><p><a href="https://cran.r-project.org/package=ggplot2">ggplot2</a>: a plotting system based on the grammar of graphics</p></li>
-<li><p><a href="https://cran.r-project.org/package=magrittr%22">magrittr</a>: defines the <code>%&gt;%</code> operator for chaining functions together in a series of operations on data</p></li>
+<li><p><a href="https://cran.r-project.org/package=magrittr%22">magrittr</a>: defines the <code>%&gt;%</code> operator for chaining functions together in a series of operations on data. You can also use the pipe operator from base R (<code>|&gt;</code>) for most things, though the <code>magrittr</code> pipe <code>%&gt;%</code> has some additional features that make it more flexible.</p></li>
 <li><p><a href="https://cran.r-project.org/package=dplyr">dplyr</a>: a suite of (fast) functions for working with data frames</p></li>
 <li><p><a href="https://cran.r-project.org/package=tidyr">tidyr</a>: easily tidy data with <code>pivot_wider()</code> and <code>pivot_longer()</code> functions (also <code>separate()</code> and <code>unite()</code>)</p></li>
 </ul>
@@ -6995,22 +7006,32 @@ Note
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(dplyr)</span>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"dplyr"</span>)</span>
 <span id="cb5-2"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(tidyr)</span>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"tidyr"</span>)</span>
 <span id="cb5-3"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(readr)</span>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"readr"</span>)</span>
 <span id="cb5-4"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(ggplot2)</span></code></pre></div>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ggplot2"</span>)</span></code></pre></div>
 </div>
 <p>You can start with this:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(tidyverse)</span></code></pre></div>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"tidyverse"</span>)</span></code></pre></div>
 </div>
 <p>In the example above, let’s talk about what we did using the <code>pivot_longer()</code> function.</p>
 <p>We will also talk about <code>pivot_wider()</code>.</p>
@@ -7393,18 +7414,18 @@ font-style: inherit;">12</span>),</span>
 <pre><code># A tibble: 12 × 6
    company  year    Q1    Q2    Q3    Q4
      &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;
- 1       1  2006    56    45    48    15
- 2       1  2007    89    94    43    59
- 3       1  2008    78    14    34    12
- 4       1  2009    79    64    67    97
- 5       2  2006    68     3    16    56
- 6       2  2007    52     7    56    53
- 7       2  2008     2    12    24     1
- 8       2  2009    86    82    45    27
- 9       3  2006    65    32    32    29
-10       3  2007    34    88    93    67
-11       3  2008    95    16    46    47
-12       3  2009    44    86    49    35</code></pre>
+ 1       1  2006    70    44    76    39
+ 2       1  2007    42    14     6    53
+ 3       1  2008    75     1    21    59
+ 4       1  2009     9    45    77    18
+ 5       2  2006    23    90    22    17
+ 6       2  2007   100    65    74    29
+ 7       2  2008    51    61    55    56
+ 8       2  2009    56    93    44    30
+ 9       3  2006    71    12     2    70
+10       3  2007    21    49    13    69
+11       3  2008    93    43    39     4
+12       3  2009    58    83    18    84</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -7625,7 +7646,7 @@ Tip
 <ul>
 <li><a href="https://www.jstatsoft.org/article/view/v059i10">Tidy Data</a> paper published in the Journal of Statistical Software</li>
 <li>https://r4ds.had.co.nz/tidy-data.html</li>
-<li><a href="http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">tidyr cheat sheet from RStudio</a></li>
+<li><a href="https://rstudio.github.io/cheatsheets/html/tidyr.html">tidyr cheat sheet from RStudio</a></li>
 </ul>
 </div>
 </div>
@@ -7728,7 +7749,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:46 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8577,7 +8598,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:46 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -9090,7 +9111,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:46 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10453,7 +10474,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:46 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -12408,7 +12429,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:46 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -14163,7 +14184,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:46 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -15449,7 +15470,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:46 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -16782,7 +16803,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:46 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -19820,7 +19841,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:46 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -21828,7 +21849,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:46 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -22782,7 +22803,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:46 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -24526,7 +24547,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:34:46 GMT</pubDate>
 </item>
 </channel>
 </rss>

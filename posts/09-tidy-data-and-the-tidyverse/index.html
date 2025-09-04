@@ -304,7 +304,7 @@ Read ahead
 <ol type="1">
 <li><a href="https://www.jstatsoft.org/article/view/v059i10">Tidy Data</a> paper published in the Journal of Statistical Software</li>
 <li><a href="https://r4ds.had.co.nz/tidy-data" class="uri">https://r4ds.had.co.nz/tidy-data</a></li>
-<li><a href="http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">tidyr cheat sheet from RStudio</a></li>
+<li><a href="https://rstudio.github.io/cheatsheets/html/tidyr.html"><code>tidyr</code> cheat sheet from Posit</a></li>
 </ol>
 </div>
 </div>
@@ -375,7 +375,7 @@ Example
 <p>As a quick example, consider the following data illustrating <strong>religion and income survey data</strong> with the number of respondents with income range in column name.</p>
 <p>This is in a classic table format:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyr"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>relig_income</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 18 × 11
@@ -412,11 +412,18 @@ Example
 </ul>
 <p>Converting this data to tidy format would give us</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>relig_income <span class="sc">%&gt;%</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pivot_longer</span>(<span class="sc">-</span>religion, <span class="at">names_to =</span> <span class="st">"income"</span>, <span class="at">values_to =</span> <span class="st">"respondents"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">religion =</span> <span class="fu">factor</span>(religion), <span class="at">income =</span> <span class="fu">factor</span>(income))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pivot_longer</span>(</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="sc">-</span>religion,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">names_to =</span> <span class="st">"income"</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">values_to =</span> <span class="st">"respondents"</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">religion =</span> <span class="fu">factor</span>(religion),</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">income =</span> <span class="fu">factor</span>(income)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 180 × 3
    religion income             respondents
@@ -452,7 +459,7 @@ Note
 <p>A subset of the “Tidyverse” packages include:</p>
 <ul>
 <li><p><a href="https://cran.r-project.org/package=ggplot2">ggplot2</a>: a plotting system based on the grammar of graphics</p></li>
-<li><p><a href="https://cran.r-project.org/package=magrittr%22">magrittr</a>: defines the <code>%&gt;%</code> operator for chaining functions together in a series of operations on data</p></li>
+<li><p><a href="https://cran.r-project.org/package=magrittr%22">magrittr</a>: defines the <code>%&gt;%</code> operator for chaining functions together in a series of operations on data. You can also use the pipe operator from base R (<code>|&gt;</code>) for most things, though the <code>magrittr</code> pipe <code>%&gt;%</code> has some additional features that make it more flexible.</p></li>
 <li><p><a href="https://cran.r-project.org/package=dplyr">dplyr</a>: a suite of (fast) functions for working with data frames</p></li>
 <li><p><a href="https://cran.r-project.org/package=tidyr">tidyr</a>: easily tidy data with <code>pivot_wider()</code> and <code>pivot_longer()</code> functions (also <code>separate()</code> and <code>unite()</code>)</p></li>
 </ul>
@@ -463,14 +470,14 @@ Note
 <p>The “tidyverse” package can be used to install all of the packages in the tidyverse at once.</p>
 <p>For example, instead of starting an R script with this:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"dplyr"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyr"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"readr"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can start with this:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the example above, let’s talk about what we did using the <code>pivot_longer()</code> function.</p>
 <p>We will also talk about <code>pivot_wider()</code>.</p>
@@ -671,18 +678,18 @@ Example
 <pre><code># A tibble: 12 × 6
    company  year    Q1    Q2    Q3    Q4
      &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;
- 1       1  2006    56    45    48    15
- 2       1  2007    89    94    43    59
- 3       1  2008    78    14    34    12
- 4       1  2009    79    64    67    97
- 5       2  2006    68     3    16    56
- 6       2  2007    52     7    56    53
- 7       2  2008     2    12    24     1
- 8       2  2009    86    82    45    27
- 9       3  2006    65    32    32    29
-10       3  2007    34    88    93    67
-11       3  2008    95    16    46    47
-12       3  2009    44    86    49    35</code></pre>
+ 1       1  2006    70    44    76    39
+ 2       1  2007    42    14     6    53
+ 3       1  2008    75     1    21    59
+ 4       1  2009     9    45    77    18
+ 5       2  2006    23    90    22    17
+ 6       2  2007   100    65    74    29
+ 7       2  2008    51    61    55    56
+ 8       2  2009    56    93    44    30
+ 9       3  2006    71    12     2    70
+10       3  2007    21    49    13    69
+11       3  2008    93    43    39     4
+12       3  2009    58    83    18    84</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -803,7 +810,7 @@ Tip
 <ul>
 <li><a href="https://www.jstatsoft.org/article/view/v059i10">Tidy Data</a> paper published in the Journal of Statistical Software</li>
 <li>https://r4ds.had.co.nz/tidy-data.html</li>
-<li><a href="http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">tidyr cheat sheet from RStudio</a></li>
+<li><a href="https://rstudio.github.io/cheatsheets/html/tidyr.html">tidyr cheat sheet from RStudio</a></li>
 </ul>
 </div>
 </div>
