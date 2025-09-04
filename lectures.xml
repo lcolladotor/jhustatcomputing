@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.7.34</generator>
-<lastBuildDate>Thu, 04 Sep 2025 03:06:37 GMT</lastBuildDate>
+<lastBuildDate>Thu, 04 Sep 2025 03:25:11 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -582,7 +582,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -1098,7 +1098,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1445,7 +1445,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -2112,7 +2112,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -3062,7 +3062,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3543,7 +3543,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4938,7 +4938,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -5054,14 +5054,16 @@ font-style: inherit;">library</span>(tidyverse)</span></code></pre></div>
 </div>
 <section id="as_tibble" class="level3">
 <h3 class="anchored" data-anchor-id="as_tibble"><code>as_tibble()</code></h3>
-<p>Since many packages use the historical <code>data.frame</code> from base R, you will often find yourself in the situation that you have a <code>data.frame</code> and want to convert that <code>data.frame</code> to a <code>tibbl</code>e.</p>
+<p>Since many packages use the historical <code>data.frame</code> from base R, you will often find yourself in the situation that you have a <code>data.frame</code> and want to convert that <code>data.frame</code> to a <code>tibble</code>.</p>
 <p>To do so, the <code>as_tibble()</code> function is exactly what you are looking for.</p>
 <p>For the example, here we use a dataset (<code>chicago.rds</code>) containing air pollution and temperature data for the city of Chicago in the U.S.</p>
 <p>The dataset is available in the <code>/data</code> repository. You can load the data into R using the <code>readRDS()</code> function.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(here)</span></code></pre></div>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"here"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>here() starts at /Users/leocollado/Dropbox/Code/jhustatcomputing</code></pre>
 </div>
@@ -5140,9 +5142,9 @@ Note
 <h4 class="anchored" data-anchor-id="want-to-see-more-of-the-tibble">Want to see more of the tibble?</h4>
 <p>If you <em>do</em> want to see more rows from the tibble, there are a few options!</p>
 <ol type="1">
-<li>The <code>View()</code> function in RStudio is incredibly helpful. The input to this function is the <code>data.frame</code> or tibble you would like to see.</li>
+<li>The <code>View()</code> function in <code>RStudio IDE</code> is incredibly helpful (although it’s been enhanced in <code>Positron</code>!). The input to this function is the <code>data.frame</code> or tibble you would like to see.</li>
 </ol>
-<p>Specifically, <code>View(chicago)</code> would provide you, the viewer, with a scrollable view (in a new tab) of the complete dataset.</p>
+<p>Specifically, <code>View(chicago)</code> would provide you, the viewer, with a scrollable view (in a new tab) of the complete dataset. In <code>Positron</code> you also get small histograms for numerical variables as well as little bars showing what percent of the observations are missing for each variable. You can also click on a given numerical column and get the summary statistics for that column (equivalent of <code>summary(chicago$column_name)</code>).</p>
 <ol start="2" type="1">
 <li>Use the fact that <code>print()</code> enables you to specify how many rows and columns you would like to display.</li>
 </ol>
@@ -5421,7 +5423,7 @@ font-style: inherit;">4</span>]]</span></code></pre></div>
 <li><p><code>rename()</code>: rename variables in a data frame</p></li>
 <li><p><code>mutate()</code>: add new variables/columns or transform existing variables</p></li>
 <li><p><code>summarise()</code> / <code>summarize()</code>: generate summary statistics of different variables in the data frame, possibly within strata</p></li>
-<li><p><code>%&gt;%</code>: the “pipe” operator is used to connect multiple verb actions together into a pipeline</p></li>
+<li><p><code>%&gt;%</code>: the “pipe” operator is used to connect multiple verb actions together into a pipeline. Note that the base R package now includes a pipe operator <code>|&gt;</code> that has similar functionality.</p></li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -5457,7 +5459,7 @@ Note
 </section>
 <section id="dplyr-installation" class="level3">
 <h3 class="anchored" data-anchor-id="dplyr-installation"><code>dplyr</code> installation</h3>
-<p>The <code>dplyr</code> package can be installed from CRAN or from GitHub using the <code>devtools</code> package and the <code>install_github()</code> function. The GitHub repository will usually contain the latest updates to the package and the development version.</p>
+<p>The <code>dplyr</code> package can be installed from CRAN or from GitHub using the <code>remotes</code> package and the <code>install_github()</code> function. The GitHub repository will usually contain the latest updates to the package and the development version.</p>
 <p>To install from CRAN, just run</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><span class="fu" style="color: #4758AB;
@@ -5471,7 +5473,9 @@ font-style: inherit;">"dplyr"</span>)</span></code></pre></div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(dplyr)</span></code></pre></div>
+font-style: inherit;">library</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"dplyr"</span>)</span></code></pre></div>
 </div>
 <p>You may get some warnings when the package is loaded because there are functions in the <code>dplyr</code> package that have the same name as functions in other packages. For now you can ignore the warnings.</p>
 </section>
@@ -5871,7 +5875,7 @@ font-style: inherit;">3</span>)</span></code></pre></div>
 3 2005-12-31      15   </code></pre>
 </div>
 </div>
-<p>Columns can be arranged in descending order too by useing the special <code>desc()</code> operator.</p>
+<p>Columns can be arranged in descending order too by using the special <code>desc()</code> operator.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1">chicago <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -6007,7 +6011,9 @@ Question
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">mutate</span>(chicago, <span class="at" style="color: #657422;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb57-2">    chicago, </span>
+<span id="cb57-3">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">pm25detrend =</span> pm25 <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -6017,8 +6023,9 @@ font-style: inherit;">mean</span>(pm25, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">na.rm =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
-font-style: inherit;">TRUE</span>))</span>
-<span id="cb57-2"><span class="fu" style="color: #4758AB;
+font-style: inherit;">TRUE</span>)</span>
+<span id="cb57-4">)</span>
+<span id="cb57-5"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">head</span>(chicago)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -6532,16 +6539,16 @@ font-style: inherit;">10</span>)</span></code></pre></div>
 <pre><code># A tibble: 10 × 11
    city   tmpd dewpoint date        pm25 pm10tmean2 o3tmean2 no2tmean2
    &lt;chr&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;date&gt;     &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
- 1 chic   66.5     52   1988-10-15  NA         51      35.0       25.5
- 2 chic   76.5     61.1 1995-09-05  NA         90      28.6       52.1
- 3 chic   35.5     25.9 1996-03-19  NA         26      32.5       22.4
- 4 chic   35       28.7 2005-02-21  17.5       21.6     8.71      22.3
- 5 chic   64       54.5 2001-04-20  17.3       56      34.2       21.5
- 6 chic   43       16.6 1987-03-20  NA         28      36.6       46.0
- 7 chic   55       41.1 2000-09-28   8.8       16      15.2       17.5
- 8 chic   66.5     57.1 1990-06-22  NA         24.6    20.3       19.0
- 9 chic   24       19.1 1989-02-11  NA         33      15.4       26.2
-10 chic   27.5     19.2 1996-02-14  NA         21       6.62      32.6
+ 1 chic   27.5     22.4 1995-11-22  NA         43.5     2.26      32.4
+ 2 chic   67       48.5 1999-11-09  NA         51      22.1       29.8
+ 3 chic   47.5     44.4 1994-11-27  NA         22       9.61      15.2
+ 4 chic   58       46.3 2001-05-05   8.1       18      30.8       14.1
+ 5 chic   37.5     35.2 1991-12-13  NA         41       2.88      22.5
+ 6 chic   58       43.7 2004-06-04   9.5       23.5    29.4       29.9
+ 7 chic   80.5     67.4 1995-07-27  NA         38      41.1       23.2
+ 8 chic   81.5     71.6 1993-08-27  NA         85.5    30.5       24.1
+ 9 chic   80       70.4 1990-06-30  NA         40      35.3       24.4
+10 chic   63       52.9 1996-09-30  NA         27.5    13.9       35.2
 # ℹ 3 more variables: pm25detrend &lt;dbl&gt;, year &lt;dbl&gt;, pm25.quint &lt;fct&gt;</code></pre>
 </div>
 </div>
@@ -6759,7 +6766,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7721,7 +7728,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8570,7 +8577,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -9083,7 +9090,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10446,7 +10453,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -12401,7 +12408,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -14156,7 +14163,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -15442,7 +15449,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -16775,7 +16782,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -19813,7 +19820,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -21821,7 +21828,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -22775,7 +22782,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -24519,7 +24526,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Thu, 04 Sep 2025 03:06:37 GMT</pubDate>
+  <pubDate>Thu, 04 Sep 2025 03:25:11 GMT</pubDate>
 </item>
 </channel>
 </rss>

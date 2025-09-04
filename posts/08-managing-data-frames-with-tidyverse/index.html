@@ -402,12 +402,12 @@ Note
 </div>
 <section id="as_tibble" class="level3">
 <h3 class="anchored" data-anchor-id="as_tibble"><code>as_tibble()</code></h3>
-<p>Since many packages use the historical <code>data.frame</code> from base R, you will often find yourself in the situation that you have a <code>data.frame</code> and want to convert that <code>data.frame</code> to a <code>tibbl</code>e.</p>
+<p>Since many packages use the historical <code>data.frame</code> from base R, you will often find yourself in the situation that you have a <code>data.frame</code> and want to convert that <code>data.frame</code> to a <code>tibble</code>.</p>
 <p>To do so, the <code>as_tibble()</code> function is exactly what you are looking for.</p>
 <p>For the example, here we use a dataset (<code>chicago.rds</code>) containing air pollution and temperature data for the city of Chicago in the U.S.</p>
 <p>The dataset is available in the <code>/data</code> repository. You can load the data into R using the <code>readRDS()</code> function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"here"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>here() starts at /Users/leocollado/Dropbox/Code/jhustatcomputing</code></pre>
 </div>
@@ -468,9 +468,9 @@ Note
 <h4 class="anchored" data-anchor-id="want-to-see-more-of-the-tibble">Want to see more of the tibble?</h4>
 <p>If you <em>do</em> want to see more rows from the tibble, there are a few options!</p>
 <ol type="1">
-<li>The <code>View()</code> function in RStudio is incredibly helpful. The input to this function is the <code>data.frame</code> or tibble you would like to see.</li>
+<li>The <code>View()</code> function in <code>RStudio IDE</code> is incredibly helpful (although it’s been enhanced in <code>Positron</code>!). The input to this function is the <code>data.frame</code> or tibble you would like to see.</li>
 </ol>
-<p>Specifically, <code>View(chicago)</code> would provide you, the viewer, with a scrollable view (in a new tab) of the complete dataset.</p>
+<p>Specifically, <code>View(chicago)</code> would provide you, the viewer, with a scrollable view (in a new tab) of the complete dataset. In <code>Positron</code> you also get small histograms for numerical variables as well as little bars showing what percent of the observations are missing for each variable. You can also click on a given numerical column and get the summary statistics for that column (equivalent of <code>summary(chicago$column_name)</code>).</p>
 <ol start="2" type="1">
 <li>Use the fact that <code>print()</code> enables you to specify how many rows and columns you would like to display.</li>
 </ol>
@@ -623,7 +623,7 @@ Note
 <li><p><code>rename()</code>: rename variables in a data frame</p></li>
 <li><p><code>mutate()</code>: add new variables/columns or transform existing variables</p></li>
 <li><p><code>summarise()</code> / <code>summarize()</code>: generate summary statistics of different variables in the data frame, possibly within strata</p></li>
-<li><p><code>%&gt;%</code>: the “pipe” operator is used to connect multiple verb actions together into a pipeline</p></li>
+<li><p><code>%&gt;%</code>: the “pipe” operator is used to connect multiple verb actions together into a pipeline. Note that the base R package now includes a pipe operator <code>|&gt;</code> that has similar functionality.</p></li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -659,7 +659,7 @@ Note
 </section>
 <section id="dplyr-installation" class="level3">
 <h3 class="anchored" data-anchor-id="dplyr-installation"><code>dplyr</code> installation</h3>
-<p>The <code>dplyr</code> package can be installed from CRAN or from GitHub using the <code>devtools</code> package and the <code>install_github()</code> function. The GitHub repository will usually contain the latest updates to the package and the development version.</p>
+<p>The <code>dplyr</code> package can be installed from CRAN or from GitHub using the <code>remotes</code> package and the <code>install_github()</code> function. The GitHub repository will usually contain the latest updates to the package and the development version.</p>
 <p>To install from CRAN, just run</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -667,7 +667,7 @@ Note
 <p>The <code>dplyr</code> package is also installed when you install the <code>tidyverse</code> meta-package.</p>
 <p>After installing the package it is important that you load it into your R session with the <code>library()</code> function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"dplyr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You may get some warnings when the package is loaded because there are functions in the <code>dplyr</code> package that have the same name as functions in other packages. For now you can ignore the warnings.</p>
 </section>
@@ -951,7 +951,7 @@ Note
 3 2005-12-31      15   </code></pre>
 </div>
 </div>
-<p>Columns can be arranged in descending order too by useing the special <code>desc()</code> operator.</p>
+<p>Columns can be arranged in descending order too by using the special <code>desc()</code> operator.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>chicago <span class="ot">&lt;-</span> <span class="fu">arrange</span>(chicago, <span class="fu">desc</span>(date))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1037,8 +1037,11 @@ Question
 </ul>
 <p>Here, we create a <code>pm25detrend</code> variable that subtracts the mean from the <code>pm25</code> variable.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>chicago <span class="ot">&lt;-</span> <span class="fu">mutate</span>(chicago, <span class="at">pm25detrend =</span> pm25 <span class="sc">-</span> <span class="fu">mean</span>(pm25, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(chicago)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>chicago <span class="ot">&lt;-</span> <span class="fu">mutate</span>(</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>    chicago, </span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">pm25detrend =</span> pm25 <span class="sc">-</span> <span class="fu">mean</span>(pm25, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(chicago)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 9
   city   tmpd dewpoint date        pm25 pm10tmean2 o3tmean2 no2tmean2
@@ -1322,16 +1325,16 @@ Example
 <pre><code># A tibble: 10 × 11
    city   tmpd dewpoint date        pm25 pm10tmean2 o3tmean2 no2tmean2
    &lt;chr&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;date&gt;     &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
- 1 chic   66.5     52   1988-10-15  NA         51      35.0       25.5
- 2 chic   76.5     61.1 1995-09-05  NA         90      28.6       52.1
- 3 chic   35.5     25.9 1996-03-19  NA         26      32.5       22.4
- 4 chic   35       28.7 2005-02-21  17.5       21.6     8.71      22.3
- 5 chic   64       54.5 2001-04-20  17.3       56      34.2       21.5
- 6 chic   43       16.6 1987-03-20  NA         28      36.6       46.0
- 7 chic   55       41.1 2000-09-28   8.8       16      15.2       17.5
- 8 chic   66.5     57.1 1990-06-22  NA         24.6    20.3       19.0
- 9 chic   24       19.1 1989-02-11  NA         33      15.4       26.2
-10 chic   27.5     19.2 1996-02-14  NA         21       6.62      32.6
+ 1 chic   27.5     22.4 1995-11-22  NA         43.5     2.26      32.4
+ 2 chic   67       48.5 1999-11-09  NA         51      22.1       29.8
+ 3 chic   47.5     44.4 1994-11-27  NA         22       9.61      15.2
+ 4 chic   58       46.3 2001-05-05   8.1       18      30.8       14.1
+ 5 chic   37.5     35.2 1991-12-13  NA         41       2.88      22.5
+ 6 chic   58       43.7 2004-06-04   9.5       23.5    29.4       29.9
+ 7 chic   80.5     67.4 1995-07-27  NA         38      41.1       23.2
+ 8 chic   81.5     71.6 1993-08-27  NA         85.5    30.5       24.1
+ 9 chic   80       70.4 1990-06-30  NA         40      35.3       24.4
+10 chic   63       52.9 1996-09-30  NA         27.5    13.9       35.2
 # ℹ 3 more variables: pm25detrend &lt;dbl&gt;, year &lt;dbl&gt;, pm25.quint &lt;fct&gt;</code></pre>
 </div>
 </div>
