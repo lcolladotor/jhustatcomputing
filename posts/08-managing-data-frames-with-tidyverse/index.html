@@ -1322,16 +1322,16 @@ Example
 <pre><code># A tibble: 10 × 11
    city   tmpd dewpoint date        pm25 pm10tmean2 o3tmean2 no2tmean2
    &lt;chr&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;date&gt;     &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
- 1 chic     73     49.9 1988-07-04 NA          51      47.1       38.1
- 2 chic     56     50.6 2000-06-04 12.8        20      28.0       14.4
- 3 chic     66     47.4 1988-07-01 NA          19      22.8       20.9
- 4 chic     74     61.8 2002-09-07 32.0        59.5    38.8       40.1
- 5 chic     51     46.5 2002-03-08 13.6        12      19.0       23.2
- 6 chic     66     51.5 2001-10-03 16.2        66.5    35.5       21.5
- 7 chic     34     26.1 1989-03-09 NA          77       8.54      50.3
- 8 chic     79     68.9 2005-08-12 NA          27      30.8       24.0
- 9 chic     45     35   2002-10-30  7.43        9      20.2       20.1
-10 chic     44     35   1998-02-22 27.8        39.1    11.8       23.3
+ 1 chic   66.5     52   1988-10-15  NA         51      35.0       25.5
+ 2 chic   76.5     61.1 1995-09-05  NA         90      28.6       52.1
+ 3 chic   35.5     25.9 1996-03-19  NA         26      32.5       22.4
+ 4 chic   35       28.7 2005-02-21  17.5       21.6     8.71      22.3
+ 5 chic   64       54.5 2001-04-20  17.3       56      34.2       21.5
+ 6 chic   43       16.6 1987-03-20  NA         28      36.6       46.0
+ 7 chic   55       41.1 2000-09-28   8.8       16      15.2       17.5
+ 8 chic   66.5     57.1 1990-06-22  NA         24.6    20.3       19.0
+ 9 chic   24       19.1 1989-02-11  NA         33      15.4       26.2
+10 chic   27.5     19.2 1996-02-14  NA         21       6.62      32.6
 # ℹ 3 more variables: pm25detrend &lt;dbl&gt;, year &lt;dbl&gt;, pm25.quint &lt;fct&gt;</code></pre>
 </div>
 </div>
@@ -1444,68 +1444,69 @@ Tip
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.4.1 (2024-06-14)
- os       macOS Sonoma 14.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2024-09-05
- pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-09-03
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
- package     * version date (UTC) lib source
- cli           3.6.3   2024-06-21 [1] CRAN (R 4.4.0)
- colorout    * 1.3-0.2 2024-05-03 [1] Github (jalvesaq/colorout@c6113a2)
- colorspace    2.1-1   2024-07-26 [1] CRAN (R 4.4.0)
- digest        0.6.36  2024-06-23 [1] CRAN (R 4.4.0)
- dplyr       * 1.1.4   2023-11-17 [1] CRAN (R 4.4.0)
- evaluate      0.24.0  2024-06-10 [1] CRAN (R 4.4.0)
- fansi         1.0.6   2023-12-08 [1] CRAN (R 4.4.0)
- fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.4.0)
- forcats     * 1.0.0   2023-01-29 [1] CRAN (R 4.4.0)
- generics      0.1.3   2022-07-05 [1] CRAN (R 4.4.0)
- ggplot2     * 3.5.1   2024-04-23 [1] CRAN (R 4.4.0)
- glue          1.7.0   2024-01-09 [1] CRAN (R 4.4.0)
- gtable        0.3.5   2024-04-22 [1] CRAN (R 4.4.0)
- here        * 1.0.1   2020-12-13 [1] CRAN (R 4.4.0)
- hms           1.1.3   2023-03-21 [1] CRAN (R 4.4.0)
- htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.4.0)
- htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.4.0)
- jsonlite      1.8.8   2023-12-04 [1] CRAN (R 4.4.0)
- knitr         1.48    2024-07-07 [1] CRAN (R 4.4.0)
- lifecycle     1.0.4   2023-11-07 [1] CRAN (R 4.4.0)
- lubridate   * 1.9.3   2023-09-27 [1] CRAN (R 4.4.0)
- magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.4.0)
- munsell       0.5.1   2024-04-01 [1] CRAN (R 4.4.0)
- pillar        1.9.0   2023-03-22 [1] CRAN (R 4.4.0)
- pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.4.0)
- purrr       * 1.0.2   2023-08-10 [1] CRAN (R 4.4.0)
- R6            2.5.1   2021-08-19 [1] CRAN (R 4.4.0)
- readr       * 2.1.5   2024-01-10 [1] CRAN (R 4.4.0)
- rlang         1.1.4   2024-06-04 [1] CRAN (R 4.4.0)
- rmarkdown     2.27    2024-05-17 [1] CRAN (R 4.4.0)
- rprojroot     2.0.4   2023-11-05 [1] CRAN (R 4.4.0)
- rstudioapi    0.16.0  2024-03-24 [1] CRAN (R 4.4.0)
- scales        1.3.0   2023-11-28 [1] CRAN (R 4.4.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.4.0)
- stringi       1.8.4   2024-05-06 [1] CRAN (R 4.4.0)
- stringr     * 1.5.1   2023-11-14 [1] CRAN (R 4.4.0)
- tibble      * 3.2.1   2023-03-20 [1] CRAN (R 4.4.0)
- tidyr       * 1.3.1   2024-01-24 [1] CRAN (R 4.4.0)
- tidyselect    1.2.1   2024-03-11 [1] CRAN (R 4.4.0)
- tidyverse   * 2.0.0   2023-02-22 [1] CRAN (R 4.4.0)
- timechange    0.3.0   2024-01-18 [1] CRAN (R 4.4.0)
- tzdb          0.4.0   2023-05-12 [1] CRAN (R 4.4.0)
- utf8          1.2.4   2023-10-22 [1] CRAN (R 4.4.0)
- vctrs         0.6.5   2023-12-01 [1] CRAN (R 4.4.0)
- withr         3.0.0   2024-01-16 [1] CRAN (R 4.4.0)
- xfun          0.46    2024-07-18 [1] CRAN (R 4.4.0)
- yaml          2.3.10  2024-07-26 [1] CRAN (R 4.4.0)
+ package      * version date (UTC) lib source
+ cli            3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout     * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ dichromat      2.0-0.1 2022-05-02 [1] CRAN (R 4.5.0)
+ digest         0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ dplyr        * 1.1.4   2023-11-17 [1] CRAN (R 4.5.0)
+ evaluate       1.0.4   2025-06-18 [1] CRAN (R 4.5.0)
+ farver         2.1.2   2024-05-13 [1] CRAN (R 4.5.0)
+ fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ forcats      * 1.0.0   2023-01-29 [1] CRAN (R 4.5.0)
+ generics       0.1.4   2025-05-09 [1] CRAN (R 4.5.0)
+ ggplot2      * 3.5.2   2025-04-09 [1] CRAN (R 4.5.0)
+ glue           1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
+ gtable         0.3.6   2024-10-25 [1] CRAN (R 4.5.0)
+ here         * 1.0.1   2020-12-13 [1] CRAN (R 4.5.0)
+ hms            1.1.3   2023-03-21 [1] CRAN (R 4.5.0)
+ htmltools      0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite       2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr          1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ lifecycle      1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
+ lubridate    * 1.9.4   2024-12-08 [1] CRAN (R 4.5.0)
+ magrittr       2.0.3   2022-03-30 [1] CRAN (R 4.5.0)
+ pillar         1.11.0  2025-07-04 [1] CRAN (R 4.5.0)
+ pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.5.0)
+ purrr        * 1.1.0   2025-07-10 [1] CRAN (R 4.5.0)
+ R6             2.6.1   2025-02-15 [1] CRAN (R 4.5.0)
+ RColorBrewer   1.1-3   2022-04-03 [1] CRAN (R 4.5.0)
+ readr        * 2.1.5   2024-01-10 [1] CRAN (R 4.5.0)
+ rlang          1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown      2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ rprojroot      2.1.0   2025-07-12 [1] CRAN (R 4.5.0)
+ scales         1.4.0   2025-04-24 [1] CRAN (R 4.5.0)
+ sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ stringi        1.8.7   2025-03-27 [1] CRAN (R 4.5.0)
+ stringr      * 1.5.1   2023-11-14 [1] CRAN (R 4.5.0)
+ tibble       * 3.3.0   2025-06-08 [1] CRAN (R 4.5.0)
+ tidyr        * 1.3.1   2024-01-24 [1] CRAN (R 4.5.0)
+ tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.5.0)
+ tidyverse    * 2.0.0   2023-02-22 [1] CRAN (R 4.5.0)
+ timechange     0.3.0   2024-01-18 [1] CRAN (R 4.5.0)
+ tzdb           0.5.0   2025-03-15 [1] CRAN (R 4.5.0)
+ utf8           1.2.6   2025-06-08 [1] CRAN (R 4.5.0)
+ vctrs          0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
+ withr          3.0.2   2024-10-28 [1] CRAN (R 4.5.0)
+ xfun           0.52    2025-04-02 [1] CRAN (R 4.5.0)
+ yaml           2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
