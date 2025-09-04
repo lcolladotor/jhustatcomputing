@@ -62,6 +62,21 @@ Material for this lecture was borrowed and adopted from
 -   Use modern R packages for reading and writing data
 :::
 
+# Downloading the full course "data" directory
+
+::: callout-tip
+
+# Download course data
+
+To download the "data" directory at <https://github.com/lcolladotor/jhustatcomputing/tree/main/data>, you can do so manually 1 file at a time. But you can also:
+
+* Use the green "Code (down arrow)" button at <https://github.com/lcolladotor/jhustatcomputing/tree/main> to download the full course website. Either "git clone" via HTTPS (easier) or SSH (advanced), or download the full course zip file (easiest option but is not linked via Git/GitHub; aka hard to update in the future).
+
+* Use `usethis::use_course()` as documented [here](https://usethis.r-lib.org/reference/zip-utils.html). That is, use `usethis::use_course("lcolladotor/jhustatcomputing")` to download the full course repository contents.
+
+To make it easier for you, I wrote the R code you can run inside your RStudio project for your class notes. Your equivalent to <https://github.com/lcolladotor/biostat776classnotes>. See [these lines](https://github.com/lcolladotor/biostat776classnotes/blob/92b6fd7a6eda9f64aab47dc0f741df4f35474a9d/R/2024-09-03.R#L47-L76) for the full code.
+:::
+
 # Introduction
 
 This lesson introduces **ways to read and write data** (e.g. `.txt` and `.csv` files) using base R functions as well as more modern R packages, such as `readr`, which is typically [10x faster than base R](https://r4ds.had.co.nz/data-import.html#compared-to-base-r).
