@@ -71,7 +71,7 @@ To work with relational data you **need verbs that work with pairs of tables**.
 There are three families of verbs designed to work with relational data:
 
 -   [**Mutating joins**](https://r4ds.had.co.nz/relational-data.html#mutating-joins): A mutating join allows you to **combine variables from two tables**. It first matches observations by their keys, then copies across variables from one table to the other on the right side of the table (similar to `mutate()`). We will discuss a few of these below.
-    -   See @sec-mutjoins for Table of mutating joins.
+    -   See @sec-mutjoins for a table of mutating joins.
 -   [**Filtering joins**](https://r4ds.had.co.nz/relational-data.html#filtering-joins): Filtering joins **match observations** in the same way as mutating joins, **but affect the observations, not the variables** (i.e. filter observations from one data frame based on whether or not they match an observation in the other).
     -   Two types: `semi_join(x, y)` and `anti_join(x, y)`.
 -   [**Set operations**](https://r4ds.had.co.nz/relational-data.html#set-operations): Treat **observations as if they were set elements**. Typically used less frequently, but occasionally useful when you want to break a single complex filter into simpler pieces. All these operations work with a complete row, comparing the values of every variable. These expect the x and y inputs to have the same variables, and treat the observations like sets:

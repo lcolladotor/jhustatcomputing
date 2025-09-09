@@ -236,7 +236,7 @@ knitr::include_graphics("https://allisonhorst.github.io/palmerpenguins/reference
 \[**Source**: [Artwork by Allison Horst](https://github.com/allisonhorst/stats-illustrations)\]
 
 ```{r}
-library(palmerpenguins)
+library("palmerpenguins")
 ```
 
 ```{r}
