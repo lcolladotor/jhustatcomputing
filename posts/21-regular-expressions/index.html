@@ -1166,7 +1166,7 @@ Example
 </section>
 <section id="the-stringr-package" class="level1">
 <h1>The stringr package</h1>
-<p>The <a href="https://github.com/hadley/stringr"><code>stringr</code></a> package, written by <a href="http://hadley.nz/">Hadley Wickham</a>, is part of the <a href="https://twitter.com/hadleywickham/status/751805589425000450">Tidyverse</a> group of R packages.</p>
+<p>The <a href="https://github.com/hadley/stringr"><code>stringr</code></a> package, written by <a href="https://bsky.app/profile/hadley.nz">Hadley Wickham</a>, is part of the <code>tidyverse</code> group of R packages.</p>
 <p>This package <strong>takes a “data first” approach to functions involving regex</strong>, so usually the string is the first argument and the regex is the second argument.</p>
 <p>The majority of the function names in <code>stringr</code> <strong>begin</strong> with <code>str_*()</code>.</p>
 <p><img src="https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/strings-cheatsheet-thumbs.png" class="img-fluid" data-preview="TRUE"></p>
@@ -1435,42 +1435,43 @@ Tip
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-08-17
- pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-09-10
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout      1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
- digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- evaluate      0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- glue          1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
- htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr       * 1.43    2023-05-25 [1] CRAN (R 4.3.0)
- lifecycle     1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
- magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
- rlang         1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown     2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rstudioapi    0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- stringi       1.7.12  2023-01-11 [1] CRAN (R 4.3.0)
- stringr     * 1.5.0   2022-12-02 [1] CRAN (R 4.3.0)
- vctrs         0.6.3   2023-06-14 [1] CRAN (R 4.3.0)
- xfun          0.40    2023-08-09 [1] CRAN (R 4.3.0)
- yaml          2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ cli           3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout    * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ digest        0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ evaluate      1.0.4   2025-06-18 [1] CRAN (R 4.5.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ glue          1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
+ htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite      2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr       * 1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ lifecycle     1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
+ magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.5.0)
+ rlang         1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown     2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ sessioninfo   1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ stringi       1.8.7   2025-03-27 [1] CRAN (R 4.5.0)
+ stringr     * 1.5.2   2025-09-08 [1] CRAN (R 4.5.0)
+ vctrs         0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
+ xfun          0.52    2025-04-02 [1] CRAN (R 4.5.0)
+ yaml          2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>

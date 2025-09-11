@@ -460,11 +460,11 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">slice</span>(dat, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
-        x
-    &lt;dbl&gt;
-1 -0.0497
-2  0.497 
-3 -0.0810</code></pre>
+       x
+   &lt;dbl&gt;
+1 -0.845
+2  0.925
+3  0.643</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a new column that indicates whether the value of 'x' is positive or negative</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
@@ -476,16 +476,16 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 100 × 2
          x is_positive
      &lt;dbl&gt; &lt;chr&gt;      
- 1 -0.0497 No         
- 2  0.497  Yes        
- 3 -0.0810 No         
- 4 -1.45   No         
- 5  0.244  Yes        
- 6  0.655  Yes        
- 7 -0.743  No         
- 8 -1.66   No         
- 9 -0.204  No         
-10 -1.66   No         
+ 1 -0.845  No         
+ 2  0.925  Yes        
+ 3  0.643  Yes        
+ 4 -0.589  No         
+ 5  1.48   Yes        
+ 6 -0.421  No         
+ 7  0.0952 Yes        
+ 8  0.0939 Yes        
+ 9 -2.34   No         
+10  0.820  Yes        
 # ℹ 90 more rows</code></pre>
 </div>
 </div>
@@ -595,7 +595,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 </section>
 <section id="part-6-make-my-plot-a-better-plot" class="level1">
 <h1>Part 6: Make my plot a better plot!</h1>
-<p>The goal is to take my sad looking plot and make it better! If you’d like an <a href="https://twitter.com/drmowinckels/status/1392136510468763652">example</a>, here is a tweet I came across of someone who gave a talk about how to zhoosh up your ggplots.</p>
+<p>The goal is to take my sad looking plot and make it better!</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>chocolate <span class="sc">%&gt;%</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(</span>
@@ -639,7 +639,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2025-09-01
+ date     2025-09-10
  pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
@@ -680,7 +680,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  scales         1.4.0   2025-04-24 [1] CRAN (R 4.5.0)
  sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
  stringi        1.8.7   2025-03-27 [1] CRAN (R 4.5.0)
- stringr      * 1.5.1   2023-11-14 [1] CRAN (R 4.5.0)
+ stringr      * 1.5.2   2025-09-08 [1] CRAN (R 4.5.0)
  tibble       * 3.3.0   2025-06-08 [1] CRAN (R 4.5.0)
  tidyr        * 1.3.1   2024-01-24 [1] CRAN (R 4.5.0)
  tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.5.0)
