@@ -12,6 +12,17 @@ For Qmd files (markdown document with [Quarto](https://quarto.org/docs/authoring
 
 Check <https://github.com/lcolladotor/biostat776classnotes> for Leo's live class notes.
 
+::: callout-tip
+### Downloading course data files
+To download the "data" directory at <https://github.com/lcolladotor/jhustatcomputing/tree/main/data>, you can do so manually 1 file at a time. But you can also:
+
+* Use the green "Code (downarrow)" button at <https://github.com/lcolladotor/jhustatcomputing/tree/main> to download the full course website. Either "git clone" via HTTPS (easier) or SSH (advanced), or download the full course zip file (easiest option but it is not linked via Git/GitHub; aka hard to update in the future).
+
+* Use `usethis::use_course()` as documented at <https://usethis.r-lib.org/reference/zip-utils.html>.
+
+To make it easier for you, I wrote the R code you can run inside your `RStudio IDE` project / `Positron` directory for your class notes. Your equivalent to <https://github.com/lcolladotor/biostat776classnotes>. See [these lines of code](https://github.com/lcolladotor/biostat776classnotes/blob/92b6fd7a6eda9f64aab47dc0f741df4f35474a9d/R/2024-09-03.R#L47-L76) for the details.
+:::
+
 ::: column-page
 | Week | Lectures / due dates | Topics | Projects |   |
 |----|----|----|----|----|
