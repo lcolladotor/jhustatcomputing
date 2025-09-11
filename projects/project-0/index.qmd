@@ -310,7 +310,7 @@ Following the prompts, you will end up with a GitHub repository that is `https:/
 
 For example, you can find an example that I created for myself at
 
--   github repo: <https://github.com/lcolladotor/biostat776-intro-Leonardo-ColladoTorres>
+-   GitHub repo: <https://github.com/lcolladotor/biostat776-intro-Leonardo-ColladoTorres>
 
 ### 6. Build a website using R Markdown
 
@@ -393,15 +393,23 @@ You might also want to use inline R code with `fontawesome::fa()` like at <https
 
 You might also be interested in creating a `favicon` for your website. See <https://github.com/seankross/postcards/issues/65> for more details.
 
+::: callout-note
+### Link syntax common pitfalls
+
+1. It's common for students to remove the `mailto:` part of an email link. If you do that, then your email link will not work, as your browser will interpret it as: "your website URL" + "your email", which is not a valid URL. For example, if your website is `https://lcolladotor.github.io/biostat776-intro-Leonardo-ColladoTorres/` and you want to email to `myemail@email.com`, then the link will be interpreted as `https://lcolladotor.github.io/biostat776-intro-Leonardo-ColladoTorres/myemail@email.com`, which is not a valid URL. Instead, you need to use `mailto:myemail@email.com` so that the link works correctly. This is an HTML syntax requirement, not something specific to R Markdown.
+
+2. Frequently students forget to put `https://` before a URL. If you forget that part, then your browser will interpret it as: "your website URL" + "the URL you wanted to link to", which is not a valid URL. For example, if your website is `https://lcolladotor.github.io/biostat776-intro-Leonardo-ColladoTorres/` and you want to link to `www.google.com`, then the link will be interpreted as `https://lcolladotor.github.io/biostat776-intro-Leonardo-ColladoTorres/www.google.com`, which is not a valid URL. Instead, you need to use `https://www.google.com` so that the link works correctly.
+:::
+
 If you don't like `postcards` and want to use `quarto` instead, then check [posts/05-literate-programming/#quarto](../../posts/05-literate-programming/#quarto) for more details.
 
 ### 10. Share your website
 
 -   Go to the Discussion Board in CoursePlus and write a short post with a link (URL) to your website (and URL to the corresponding GitHub repository) that you created.
 -   As you read the introductions from other folks in the class, feel free to comment/reply using Discussion board.
--   Feel free to share your website with the world. If you use Twitter, use the `#postcards` hashtag and tag the author `@seankross` <https://twitter.com/seankross>.
+-   Feel free to share your website with the world. If you use Bluesky, use the `#postcards` hashtag and tag the author `@seankross.com` <https://bsky.app/profile/seankross.com>. Sean has a mostly inactive account on X (formerly Twitter) at <https://twitter.com/seankross>.
 
-In class on for the 5th Lecture, I will show as many websites as I can from Courseplus!
+On the 5th Lecture, I will show as many websites as I can from CoursePlus during our class!
 
 # Part 3: repositories for class notes and projects
 
@@ -419,13 +427,21 @@ usethis::create_project("~/Desktop/biostat776classnotes")
 ## Start version controlling it
 usethis::use_git()
 
+###### Only run this if you do plan on hosting HTML files! ##########
+## Set the default branch to gh-pages (special name for GitHub Pages)
+# usethis::git_default_branch_rename(to = "gh-pages")
+
+## Create a .nojekyll file
+# writeLines("", here::here(".nojekyll"))
+#####################################################################
+
 ## Share it via GitHub with the world
 usethis::use_github()
 ```
 
 Above I created the `biostat766classnotes` RStudio project + `git` / GitHub repository. I saved it on my `~/Desktop` but you can save it wherever you want.
 
-Once that's created, create the `R`/ and `data/` subdirectories. Inside `R/`, save your R scripts for every class. As for `data/`, copy the contents of <https://github.com/lcolladotor/jhustatcomputing/tree/main/data> into it. That way commands like `here("data", "chocolate.RDS")` from the class lectures will work the same way.
+Once that's created, create the `R`/ and `data/` subdirectories. Inside `R/`, save your R scripts for every class. As for `data/`, copy the contents of <https://github.com/lcolladotor/jhustatcomputing/tree/main/data> into it. That way commands like `here("data", "chocolate.RDS")` from the class lectures will work the same way. See the tip about _Downloading course data files_ at the top of the [schedule](../../schedule.html#schedule-and-course-materials) for more details.
 
 My live example is available at <https://github.com/lcolladotor/biostat776classnotes>.
 
