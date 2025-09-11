@@ -324,13 +324,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>If you are using <code>Positron</code> instead of <code>RStudio IDE</code>, please include the version of <code>Positron</code> that you have installed on your computer. To do this, click on <code>Positron</code> -&gt; <code>About Positron</code> and include the version number in your email.</li>
 </ul>
 <ol start="5" type="1">
-<li>If you have a <code>GitHub</code> username, please include this in your email. If you do not have a GitHub username, read <a href="https://happygitwithr.com" class="uri">https://happygitwithr.com</a>, sign up for GitHub, and include your new username in your email to me.</li>
+<li>If you have a <code>GitHub</code> username, please include the link to your GitHub profile in your email. For example, mine is <a href="https://github.com/lcolladotor" class="uri">https://github.com/lcolladotor</a>. If you do not have a GitHub username, read <a href="https://happygitwithr.com" class="uri">https://happygitwithr.com</a>, sign up for GitHub, and include your new username in your email to me.</li>
 </ol>
-<ul>
-<li>Note that you will need a GitHub account if you want to get access to GitHub Copilot Pro for free as a student. See <a href="https://education.github.com/pack" class="uri">https://education.github.com/pack</a> for more details.</li>
-</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tips about GitHub profiles
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I realize that several of you just created your GitHub profiles for this class, or haven’t used GitHub much before. This is noticeable by looking at your GitHub profiles, as several of them look a bit empty. Thus, you might want to edit it and link to your other work social media profiles, email, write some quick text about yourself, etc. See mine for example <a href="https://github.com/lcolladotor" class="uri">https://github.com/lcolladotor</a>.</p>
+<p>You could also make a special GitHub repo (named with your GitHub username) with a README.md file such as <a href="https://github.com/lcolladotor/lcolladotor/blob/main/README.md" class="uri">https://github.com/lcolladotor/lcolladotor/blob/main/README.md</a> if you’d like to have a longer self description. In my case, I only have the image with my GitHub stats made with this line of code: <a href="https://github.com/lcolladotor/lcolladotor/blob/main/README.md?plain=1#L1" class="uri">https://github.com/lcolladotor/lcolladotor/blob/main/README.md?plain=1#L1</a>.</p>
+</div>
+</div>
 <ol start="6" type="1">
-<li>To make sure <code>git</code> is installed on your system, use the ‘Terminal’ (e.g.&nbsp;it’s next to the R Console within RStudio<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) (or whatever you use), run the following and include the output in your email:</li>
+<li><p>Apply to get free access to GitHub Copilot Pro as a student through the GitHub education pack: <a href="https://education.github.com/pack" class="uri">https://education.github.com/pack</a>. Let me know if you were successful in your application.</p></li>
+<li><p>To make sure <code>git</code> is installed on your system, use the ‘Terminal’ (e.g.&nbsp;it’s next to the R Console within RStudio<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) (or whatever you use), run the following and include the output in your email:</p></li>
 </ol>
 <p>For example, this is mine:</p>
 <div class="cell">
@@ -515,7 +527,7 @@ Error in libgit2::git_signature_default :
 <p>Following the prompts, you will end up with a GitHub repository that is <code>https://github.com/&lt;YourGithubUsername&gt;/&lt;YourGithubUsername&gt;.github.io</code> (or alternatively <code>https://github.com/&lt;YourGithubUsername&gt;/biostat776-intro-&lt;firstname&gt;-&lt;lastname&gt;</code>).</p>
 <p>For example, you can find an example that I created for myself at</p>
 <ul>
-<li>github repo: <a href="https://github.com/lcolladotor/biostat776-intro-Leonardo-ColladoTorres" class="uri">https://github.com/lcolladotor/biostat776-intro-Leonardo-ColladoTorres</a></li>
+<li>GitHub repo: <a href="https://github.com/lcolladotor/biostat776-intro-Leonardo-ColladoTorres" class="uri">https://github.com/lcolladotor/biostat776-intro-Leonardo-ColladoTorres</a></li>
 </ul>
 </section>
 <section id="build-a-website-using-r-markdown" class="level3">
@@ -576,6 +588,22 @@ Error in libgit2::git_signature_default :
 <li><p><a href="https://davidgonilski.github.io/" class="uri">https://davidgonilski.github.io/</a> + <a href="https://github.com/davidgonilski/davidgonilski.github.io" class="uri">https://github.com/davidgonilski/davidgonilski.github.io</a></p></li>
 </ul>
 <p>You might also be interested in creating a <code>favicon</code> for your website. See <a href="https://github.com/seankross/postcards/issues/65" class="uri">https://github.com/seankross/postcards/issues/65</a> for more details.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Link syntax common pitfalls
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>It’s common for students to remove the <code>mailto:</code> part of an email link. If you do that, then your email link will not work, as your browser will interpret it as: “your website URL” + “your email”, which is not a valid URL. For example, if your website is <code>https://lcolladotor.github.io/biostat776-intro-Leonardo-ColladoTorres/</code> and you want to email to <code>myemail@email.com</code>, then the link will be interpreted as <code>https://lcolladotor.github.io/biostat776-intro-Leonardo-ColladoTorres/myemail@email.com</code>, which is not a valid URL. Instead, you need to use <code>mailto:myemail@email.com</code> so that the link works correctly. This is an HTML syntax requirement, not something specific to R Markdown.</p></li>
+<li><p>Frequently students forget to put <code>https://</code> before a URL. If you forget that part, then your browser will interpret it as: “your website URL” + “the URL you wanted to link to”, which is not a valid URL. For example, if your website is <code>https://lcolladotor.github.io/biostat776-intro-Leonardo-ColladoTorres/</code> and you want to link to <code>www.google.com</code>, then the link will be interpreted as <code>https://lcolladotor.github.io/biostat776-intro-Leonardo-ColladoTorres/www.google.com</code>, which is not a valid URL. Instead, you need to use <code>https://www.google.com</code> so that the link works correctly.</p></li>
+</ol>
+</div>
+</div>
 <p>If you don’t like <code>postcards</code> and want to use <code>quarto</code> instead, then check <a href="../../posts/05-literate-programming/#quarto">posts/05-literate-programming/#quarto</a> for more details.</p>
 </section>
 <section id="share-your-website" class="level3">
@@ -583,9 +611,9 @@ Error in libgit2::git_signature_default :
 <ul>
 <li>Go to the Discussion Board in CoursePlus and write a short post with a link (URL) to your website (and URL to the corresponding GitHub repository) that you created.</li>
 <li>As you read the introductions from other folks in the class, feel free to comment/reply using Discussion board.</li>
-<li>Feel free to share your website with the world. If you use Twitter, use the <code>#postcards</code> hashtag and tag the author <code>@seankross</code> <a href="https://twitter.com/seankross" class="uri">https://twitter.com/seankross</a>.</li>
+<li>Feel free to share your website with the world. If you use Bluesky, use the <code>#postcards</code> hashtag and tag the author <code>@seankross.com</code> <a href="https://bsky.app/profile/seankross.com" class="uri">https://bsky.app/profile/seankross.com</a>. Sean has a mostly inactive account on X (formerly Twitter) at <a href="https://twitter.com/seankross" class="uri">https://twitter.com/seankross</a>.</li>
 </ul>
-<p>In class on for the 5th Lecture, I will show as many websites as I can from Courseplus!</p>
+<p>On the 5th Lecture, I will show as many websites as I can from CoursePlus during our class!</p>
 </section>
 </section>
 <section id="part-3-repositories-for-class-notes-and-projects" class="level1">
@@ -601,11 +629,19 @@ Error in libgit2::git_signature_default :
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Start version controlling it</span></span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Share it via GitHub with the world</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="do">###### Only run this if you do plan on hosting HTML files! ##########</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Set the default branch to gh-pages (special name for GitHub Pages)</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co"># usethis::git_default_branch_rename(to = "gh-pages")</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a .nojekyll file</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="co"># writeLines("", here::here(".nojekyll"))</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="do">#####################################################################</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="do">## Share it via GitHub with the world</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Above I created the <code>biostat766classnotes</code> RStudio project + <code>git</code> / GitHub repository. I saved it on my <code>~/Desktop</code> but you can save it wherever you want.</p>
-<p>Once that’s created, create the <code>R</code>/ and <code>data/</code> subdirectories. Inside <code>R/</code>, save your R scripts for every class. As for <code>data/</code>, copy the contents of <a href="https://github.com/lcolladotor/jhustatcomputing/tree/main/data" class="uri">https://github.com/lcolladotor/jhustatcomputing/tree/main/data</a> into it. That way commands like <code>here("data", "chocolate.RDS")</code> from the class lectures will work the same way.</p>
+<p>Once that’s created, create the <code>R</code>/ and <code>data/</code> subdirectories. Inside <code>R/</code>, save your R scripts for every class. As for <code>data/</code>, copy the contents of <a href="https://github.com/lcolladotor/jhustatcomputing/tree/main/data" class="uri">https://github.com/lcolladotor/jhustatcomputing/tree/main/data</a> into it. That way commands like <code>here("data", "chocolate.RDS")</code> from the class lectures will work the same way. See the tip about <em>Downloading course data files</em> at the top of the <a href="../../schedule.html#schedule-and-course-materials">schedule</a> for more details.</p>
 <p>My live example is available at <a href="https://github.com/lcolladotor/biostat776classnotes" class="uri">https://github.com/lcolladotor/biostat776classnotes</a>.</p>
 </section>
 <section id="for-each-project" class="level2">
@@ -649,7 +685,7 @@ Error in libgit2::git_signature_default :
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2025-08-29
+ date     2025-09-10
  pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.4.550 @ /Applications/quarto/bin/quarto
 

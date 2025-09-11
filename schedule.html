@@ -195,6 +195,24 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="schedule-and-course-materials">Schedule and course materials</h2>
 <p>For Qmd files (markdown document with <a href="https://quarto.org/docs/authoring/markdown-basics.html">Quarto</a> cross-language executable code), go to the <a href="https://github.com/lcolladotor/jhustatcomputing">course GitHub repository</a> and navigate the directories, or best of all to <code>git clone</code> the repo and navigate within <code>RStudio</code>.</p>
 <p>Check <a href="https://github.com/lcolladotor/biostat776classnotes" class="uri">https://github.com/lcolladotor/biostat776classnotes</a> for Leo’s live class notes.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Downloading course data files
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To download the “data” directory at <a href="https://github.com/lcolladotor/jhustatcomputing/tree/main/data" class="uri">https://github.com/lcolladotor/jhustatcomputing/tree/main/data</a>, you can do so manually 1 file at a time. But you can also:</p>
+<ul>
+<li><p>Use the green “Code (downarrow)” button at <a href="https://github.com/lcolladotor/jhustatcomputing/tree/main" class="uri">https://github.com/lcolladotor/jhustatcomputing/tree/main</a> to download the full course website. Either “git clone” via HTTPS (easier) or SSH (advanced), or download the full course zip file (easiest option but it is not linked via Git/GitHub; aka hard to update in the future).</p></li>
+<li><p>Use <code>usethis::use_course()</code> as documented at <a href="https://usethis.r-lib.org/reference/zip-utils.html" class="uri">https://usethis.r-lib.org/reference/zip-utils.html</a>.</p></li>
+</ul>
+<p>To make it easier for you, I wrote the R code you can run inside your <code>RStudio IDE</code> project / <code>Positron</code> directory for your class notes. Your equivalent to <a href="https://github.com/lcolladotor/biostat776classnotes" class="uri">https://github.com/lcolladotor/biostat776classnotes</a>. See <a href="https://github.com/lcolladotor/biostat776classnotes/blob/92b6fd7a6eda9f64aab47dc0f741df4f35474a9d/R/2024-09-03.R#L47-L76">these lines of code</a> for the details.</p>
+</div>
+</div>
 <div class="column-page">
 <table class="caption-top table">
 <colgroup>
