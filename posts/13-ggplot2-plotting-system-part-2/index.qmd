@@ -27,7 +27,7 @@ categories: [module 3, week 3, R, programming, ggplot2, data viz]
 
 **Before class, you can prepare by reading the following materials:**
 
-1.  <https://r4ds.had.co.nz/data-visualisation>
+1.  <https://r4ds.hadley.nz/data-visualize.html>
 2.  <http://vita.had.co.nz/papers/layered-grammar.pdf>
 :::
 
@@ -35,6 +35,24 @@ I **highly recommend** taking a look at these two free online books:
 
 1.  *ggplot2: Elegant Graphics for Data Analysis (3e)* <https://ggplot2-book.org/>
 2.  *R Graphics Cookbook, 2nd edition* <https://r-graphics.org/>
+
+::: callout-tip
+_From CoursePlus Discussion forum on 2025-09-10:_
+
+A student asked today in office hours about resources for learning what functions one can use. I recommended:
+
+* The Posit cheatsheets available at <https://posit.co/resources/cheatsheets/>. I have a binder of them in my office and they can be quite useful when learning about `tidyverse` packages.
+* Browsing <https://r-graphics.org/> or buying the printed copy to scan quickly the pages of this book, till you find a graphic that looks kind of similar to something you'd like to build.
+* Searching <https://r4ds.hadley.nz/> (or using the printed copy: I bought it to support the authors but mostly use the website when I need to).
+
+Then for after the course, you might want to keep learning about R packages through:
+
+* CRAN task views <https://cran.r-project.org/web/views/> (there's a list of like 50 fields, each with something like 200 packages selected for that research field)
+* `biocViews` for Bioconductor packages <https://bioconductor.org/packages/release/BiocViews.html#___Software>
+Bioconductor release notes such as <https://bioconductor.org/news/bioc_3_21_release/> for version 3.21 (the latest one). See <https://bioconductor.org/about/release-announcements/> for the full list of release note announcements. We've done this activity a few times at the [LIBD RStats club](https://research.libd.org/rstatsclub/) such as <https://youtu.be/13bIatqNHH8> for bioc version 3.14.
+
+As for `swirl`, even though it was initially developed at JHBSPH Biostatistics, I see at <https://github.com/swirldev/swirl_courses> that most courses are outdated now: the last updates are mostly from 7 - 10 years ago.
+:::
 
 ### Acknowledgements
 
@@ -55,9 +73,9 @@ Material for this lecture was borrowed and adopted from
 
 # The ggplot2 Plotting System
 
-In this lesson, we will get into a little more of the nitty gritty of **how `ggplot2` builds plots** and how you can customize various aspects of any plot.
+In this lesson, we will get into the nitty gritty of **how `ggplot2` builds plots** and how you can customize various aspects of any plot.
 
-Previously, we used the `qplot()` function to quickly put points on a page.
+While we can use the `ggplot2::qplot()` function to quickly put points on a page as [described in this optional lecture](../12-ggplot2-plotting-system-part-1/).
 
 -   The `qplot()` function's syntax is very similar to that of the `plot()` function in base graphics so for those switching over, it makes for an easy transition.
 
@@ -173,7 +191,7 @@ You can see above that the object `g` contains the dataset `maacs` and the mappi
 Now, normally if you were to `print()` a `ggplot` object a plot would appear on the plot device, however, our object `g` actually does not contain enough information to make a plot yet.
 
 ```{r}
-#| fig-cap: "Nothing to see here!"
+#| fig-cap: "No data to see here!"
 g <- maacs %>%
     ggplot(aes(logpm25, NocturnalSympt))
 print(g)
@@ -223,7 +241,7 @@ Here, we can see there appears to be a slight increasing trend, suggesting that 
 ::: callout-note
 ### Question
 
-Let's use the `ggplot()` function in another dataset, namely the [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) dataset. These data contain observations for 344 penguins. There are 3 different species of penguins in this dataset, collected from 3 islands in the Palmer Archipelago, Antarctica.
+Let's use the `ggplot()` function in another dataset, namely the [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) dataset. Check out [this post explaining the controversy](https://www.meganstodel.com/posts/no-to-iris/) with the `iris` dataset which was previously used in many examples. 
 
 ```{r}
 #| echo: false
@@ -231,6 +249,18 @@ Let's use the `ggplot()` function in another dataset, namely the [palmerpenguins
 #| out-width: '60%'
 #| fig-align: 'center'
 knitr::include_graphics("https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png")
+```
+
+\[**Source**: [Artwork by Allison Horst](https://github.com/allisonhorst/stats-illustrations)\]
+
+In any case, the `palmerpenguins` data contains observations for 344 penguins. There are 3 different species of penguins in this dataset, collected from 3 islands in the Palmer Archipelago, Antarctica.
+
+```{r}
+#| echo: false
+#| fig-cap: "Palmer penguins bill depth and length"
+#| out-width: '60%'
+#| fig-align: 'center'
+knitr::include_graphics("https://allisonhorst.github.io/palmerpenguins/reference/figures/culmen_depth.png")
 ```
 
 \[**Source**: [Artwork by Allison Horst](https://github.com/allisonhorst/stats-illustrations)\]
@@ -257,7 +287,7 @@ penguins
 
 Because our primary question involves comparing overweight individuals to normal weight individuals, we can **stratify the scatter plot** of PM2.5 and nocturnal symptoms by the BMI category (`bmicat`) variable, which indicates whether an individual is overweight or not.
 
-To visualize this we can **add a `facet_grid()`**, which takes a formula argument.
+To visualize this we can **add a `facet_grid()`**, which takes a _formula_ argument.
 
 ::: callout-tip
 ### Example
@@ -525,7 +555,7 @@ g +
 
 Voilà! Hopefully our editor likes the plot we made!
 
-P.S. Follow [Christine Zhang](https://twitter.com/christinezhang) on Twitter / X for more [#dataviz](https://twitter.com/hashtag/dataviz?src=hashtag_click) and data journalism.
+P.S. Follow [Christine Zhang on Bluesky](https://bsky.app/profile/christinezhang.bsky.social) or [Twitter / X](https://twitter.com/christinezhang) for more [#dataviz](https://bsky.app/search?q=%23dataviz) and data journalism.
 
 # What about Barbenheimer?
 
@@ -621,7 +651,7 @@ We can use the `cvd_grid()` function to plot a given `ggplot` object with colors
 colorblindr::cvd_grid(g_complete)
 ```
 
-At <https://github.com/LieberInstitute/Visium_SPG_AD/blob/master/plots/09_pathology_vs_BayesSpace/pathology_groups_colorblind.pdf> you can find an example of an actual use case for my work that I made with <https://github.com/LieberInstitute/Visium_SPG_AD/blob/master/code/09_pathology_vs_BayesSpace/04_label_pathology_spots.R>.
+[Here](https://github.com/LieberInstitute/Visium_SPG_AD/blob/master/plots/09_pathology_vs_BayesSpace/pathology_groups_colorblind.pdf) you can find an example of an actual use case for my work that I made with [this script](https://github.com/LieberInstitute/Visium_SPG_AD/blob/master/code/09_pathology_vs_BayesSpace/04_label_pathology_spots.R). This work was published at doi: [10.1089/genbio.2023.0019](https://doi.org/10.1089/genbio.2023.0019).
 
 # Post-lecture materials
 
@@ -702,7 +732,7 @@ Here are some post-lecture questions to help you think about the material discus
 ### Additional Resources
 
 ::: callout-tip
--   <https://r4ds.had.co.nz/data-visualisation>
+-   <https://r4ds.hadley.nz/data-visualize.html>
 -   <https://rdpeng.github.io/Biostat776/lecture-the-ggplot2-plotting-system-part-2>
 :::
 
