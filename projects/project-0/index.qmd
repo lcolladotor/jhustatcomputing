@@ -68,11 +68,19 @@ print(RStudio.Version()$version)
 
 * If you are using `Positron` instead of `RStudio IDE`, please include the version of `Positron` that you have installed on your computer. To do this, click on `Positron` -\> `About Positron` and include the version number in your email.
 
-5.  If you have a `GitHub` username, please include this in your email. If you do not have a GitHub username, read <https://happygitwithr.com>, sign up for GitHub, and include your new username in your email to me.
+5.  If you have a `GitHub` username, please include the link to your GitHub profile in your email. For example, mine is <https://github.com/lcolladotor>. If you do not have a GitHub username, read <https://happygitwithr.com>, sign up for GitHub, and include your new username in your email to me.
 
-  * Note that you will need a GitHub account if you want to get access to GitHub Copilot Pro for free as a student. See <https://education.github.com/pack> for more details.
+::: callout-tip
+### Tips about GitHub profiles
 
-6.  To make sure `git` is installed on your system, use the 'Terminal' (e.g. it's next to the R Console within RStudio[^1]) (or whatever you use), run the following and include the output in your email:
+I realize that several of you just created your GitHub profiles for this class, or haven't used GitHub much before. This is noticeable by looking at your GitHub profiles, as several of them look a bit empty. Thus, you might want to edit it and link to your other work social media profiles, email, write some quick text about yourself, etc. See mine for example <https://github.com/lcolladotor>.
+
+You could also make a special GitHub repo (named with your GitHub username) with a README.md file such as <https://github.com/lcolladotor/lcolladotor/blob/main/README.md> if you'd like to have a longer self description. In my case, I only have the image with my GitHub stats made with this line of code: <https://github.com/lcolladotor/lcolladotor/blob/main/README.md?plain=1#L1>.
+:::
+
+6. Apply to get free access to GitHub Copilot Pro as a student through the GitHub education pack: <https://education.github.com/pack>. Let me know if you were successful in your application.
+
+7.  To make sure `git` is installed on your system, use the 'Terminal' (e.g. it's next to the R Console within RStudio[^1]) (or whatever you use), run the following and include the output in your email:
 
 [^1]: You can open the "Terminal" panel on RStudio from Tools -\> Terminal -\> New Terminal window. On macOS and Linux, this will be a Linux terminal by default (typically `zsh` on macOS and `bash` on Linux). On Windows, it's best to use `Git Bash`. If you followed the instructions from <https://happygitwithr.com/install-git#install-git-windows> (option 1: highly recommended) then you will have `Git Bash` installed. On Windows, you will likely still have to tell RStudio to use `Git Bash` by editing the dropdown menu from Tools -\> Global Options -\> Terminal -\> "New terminals open with:" (on macOS and Linux you can switch from `zsh` or `bash` to your favorite terminal shell if you prefer, though I don't recommend doing this for new users).
 
