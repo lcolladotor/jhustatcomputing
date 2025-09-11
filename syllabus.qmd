@@ -254,7 +254,7 @@ Install `Git` on your computer following the detailed instructions at <https://h
 
 Create a personal GitHub account following the instructions at <https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account>.
 
-Following [Jeff Leek](https://twitter.com/jtleek)'s advice on [**How to be a modern scientist**](https://leanpub.com/modernscientist) that was part of my team's bootcamps at <https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html>, try to choose a username that will be the same one you use on your email and other work-related social media platforms such as Bluesky, LinkedIn, etc.
+Following [Jeff Leek](https://bsky.app/profile/jtleek.bsky.social)'s advice on [**How to be a modern scientist**](https://leanpub.com/modernscientist) that was part of my team's bootcamps at <https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html>, try to choose a username that will be the same one you use on your email and other work-related social media platforms such as Bluesky, LinkedIn, etc.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rcX-VyxHEXA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 

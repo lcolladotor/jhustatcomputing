@@ -304,7 +304,7 @@ Using the `chocolate` dataset (or any of the modified versions you made througho
 
 # Part 6: Make my plot a better plot!
 
-The goal is to take my sad looking plot and make it better! If you'd like an [example](https://twitter.com/drmowinckels/status/1392136510468763652), here is a tweet I came across of someone who gave a talk about how to zhoosh up your ggplots.
+The goal is to take my sad looking plot and make it better!
 
 ```{r}
 chocolate %>%

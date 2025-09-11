@@ -593,7 +593,7 @@ strsplit(x = two_s, split = "ss")
 
 # The stringr package
 
-The [`stringr`](https://github.com/hadley/stringr) package, written by [Hadley Wickham](http://hadley.nz/), is part of the [Tidyverse](https://twitter.com/hadleywickham/status/751805589425000450) group of R packages.
+The [`stringr`](https://github.com/hadley/stringr) package, written by [Hadley Wickham](https://bsky.app/profile/hadley.nz), is part of the `tidyverse` group of R packages.
 
 This package **takes a "data first" approach to functions involving regex**, so usually the string is the first argument and the regex is the second argument.
 

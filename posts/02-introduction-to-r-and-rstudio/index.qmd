@@ -335,9 +335,9 @@ This chapter gives some tips, shortcuts, and ideas that might be of interest eve
 
 ### Links to inspiring use cases
 
--   [RStudio Conf 2019](https://resources.rstudio.com/resources/rstudioconf-2019/) talk by [Brooke Watson Madubuonwu](https://x.com/brookLYNevery1) on "[R at the ACLU: Joining tables to to reunite families](https://posit.co/resources/videos/r-at-the-aclu-joining-tables-to-to-reunite-families/)"
+-   [RStudio Conf 2019](https://resources.rstudio.com/resources/rstudioconf-2019/) talk by [Brooke Watson Madubuonwu](https://www.linkedin.com/in/brookemadu/) on "[R at the ACLU: Joining tables to to reunite families](https://posit.co/resources/videos/r-at-the-aclu-joining-tables-to-to-reunite-families/)"
 
--   [RStudio Conf 2020](https://resources.rstudio.com/resources/rstudioconf-2020/) talk by [María Teresa Ortíz Mancera](https://x.com/TeresaOM) on "[Mexican electoral quick count night with R](https://posit.co/resources/videos/mexican-electoral-quick-count-night-with-r-maria-ortiz-mancera/)"
+-   [RStudio Conf 2020](https://resources.rstudio.com/resources/rstudioconf-2020/) talk by [María Teresa Ortíz Mancera](https://tereom.netlify.app/) on "[Mexican electoral quick count night with R](https://posit.co/resources/videos/mexican-electoral-quick-count-night-with-r-maria-ortiz-mancera/)"
 
 ### Final Questions
 
