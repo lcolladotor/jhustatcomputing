@@ -18,6 +18,93 @@ categories: [module 4, week 4, R, programming]
 
 <!-- Add interesting quote -->
 
+# Interacting with LLMs in RStudio IDE / Positron
+
+> Can we use ChatGPT or other LLMs to help us write R code in this class?
+
+Or what about outside of this class? After all, it'll be done sooner rather than later.
+
+Yes you can! Though I think that using GitHub Copilot is likely the most efficient option, I want to highlight a new package called `chattr` that allows you to use LLMs like GPT-4.1 directly from RStudio IDE / Positron. `chattr` is documented at <https://mlverse.github.io/chattr/>. At this point, hopefully your application to use GitHub Copilot has been approved. If you haven't completed this application, see [our first lecture](../01-welcome/#how-to-apply-for-github-education-and-configure-github-copilot) for the details.
+
+In general, you might want to follow the news from the _Posit AI newsletter_ which was launched last month: <https://posit.co/blog/2025-08-29-ai-newsletter/>. You might want to follow both [Simon P. Couch](https://bsky.app/profile/simonpcouch.com) and [Sara Altman](https://bsky.app/profile/sara-altman.bsky.social) on Bluesky or on LinkedIn: [Simon P. Couch](https://www.linkedin.com/in/simonpcouch/) and [Sara Altman](https://www.linkedin.com/in/sarakaltman/).
+
+Below is a demo of how to use `chattr` with the GitHub Copilot LLM model.
+
+
+```{r}
+#| eval: false
+#| label: install chattr and demonstrate it
+
+## Install ellmer and chattr
+install.packages(c("ellmer", "chattr"))
+
+## Load both packages
+library("ellmer")
+library("chattr")
+
+## Specify that you'll use the GitHub Copilot model
+my_chat <- ellmer::chat_github()
+chattr::chattr_use(my_chat)
+
+## Load some packages for analysis
+library("tidyverse")
+
+## Load the penguins dataset to have something we can
+## explore with
+library("palmerpenguins")
+glimpse(penguins)
+
+## You can now either interact with the LLM through
+## commands like this one:
+my_chat$chat("Explore the relationship between bill_length_mm and bill_depth_mm across species and island using ggplot2 color aesthetics and facets.")
+my_chat$chat("What do we know the variables in the penguins dataset?")
+my_chat$chat("Please provide me a more detailed description and code for exploring this dataset")
+
+## or launch the chattr app
+chattr::chattr_app()
+
+## Edit the option to include at least 1 data frame.
+## Then type the following prompt:
+## Explore the relationship between bill_length_mm and bill_depth_mm across species and island using ggplot2 color aesthetics and facets.
+
+## This was my answer by the gpt-4.1 model:
+library(tidyverse)
+penguins <- readr::read_csv('https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv')
+
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+  geom_point(na.rm = TRUE) +
+  facet_wrap(~ island) +
+  theme_minimal()
+## Notice how it used a "theme_minimal()" although I didn't ask for it!
+
+## If you open the chattr chat again, you'll see 
+## your full chat history there too. Now you can
+## use the option to also send your chat history
+## when sending prompts to the LLM.
+
+## Try:
+## Now make the graph interactive using plotly.
+
+## Here was my answer from the LLM:
+library(tidyverse)
+library(plotly)
+
+penguins <- readr::read_csv('https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv')
+
+p <- ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+  geom_point(na.rm = TRUE) +
+  facet_wrap(~ island) +
+  theme_minimal()
+
+ggplotly(p)
+```
+
+See `chattr::chatter_defaults()` for more options on how to customize your experience with `chattr` <https://mlverse.github.io/chattr/reference/chattr_defaults.html>.
+
+For more about AI and R, you might want to check the LIBD RStats club 2025-01-31 session on ["R coding using GitHub Copilot with RStudio and related R packages"](https://docs.google.com/document/d/16VP6nWsuXvskyQ6askViEx21e1hhMjK3xKVFWC3SfKY/edit?usp=sharing).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qWuoVQG5BZw?si=zcJIKn09AvqvF_gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 # Pre-lecture materials
 
 ### Read ahead
@@ -377,7 +464,7 @@ as.logical(x)
 ::: callout-note
 ### Question
 
-Let's try to convert the `x` vector above to integers.
+Let's try to convert the `x` vector above into integers.
 
 ```{r}
 ## try it here 
@@ -453,7 +540,7 @@ Lists are a special type of **vector** that **can contain elements of different 
 ::: callout-tip
 ### Pro-tip
 
-Lists, in combination with the various "apply" functions discussed later, make for a powerful combination.
+Lists, in combination with the various base R "apply" or `tidyverse` functions from `purrr` discussed later, make for a powerful combination.
 :::
 
 Lists can be explicitly created using the `list()` function, which takes an arbitrary number of arguments.
