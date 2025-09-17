@@ -27,7 +27,7 @@ categories: [module 4, week 4, R, programming, functions]
 
 **Before class, you can prepare by reading the following materials:**
 
-1.  <https://r4ds.had.co.nz/functions>
+1.  <https://r4ds.hadley.nz/functions.html>
 2.  <https://adv-r.hadley.nz/functions.html?#functions>
 3.  <https://swcarpentry.github.io/r-novice-inflammation/02-func-R>
 :::
@@ -38,8 +38,8 @@ Material for this lecture was borrowed and adopted from
 
 -   <https://rdpeng.github.io/Biostat776/lecture-functions>
 -   <https://rdpeng.github.io/Biostat776/lecture-scoping-rules-of-r>
--   <https://r4ds.had.co.nz/functions>
--   <https://r4ds.had.co.nz/functions.html#environment>
+-   <https://r4ds.hadley.nz/functions.html>
+-   <https://r4ds.had.co.nz/functions#environment>
 
 # Learning objectives
 
@@ -57,7 +57,7 @@ Material for this lecture was borrowed and adopted from
 
 # Introduction
 
-Writing functions is a **core activity** of an R programmer. It represents the key step of the transition from a mere "user" to a developer who creates new functionality for R.
+Writing functions is a **core activity** of an R programmer. It represents the key step of the transition from a "user" to a "developer" who creates new functionality for R.
 
 **Functions** are often used to **encapsulate a sequence of expressions that need to be executed numerous times**, perhaps under slightly different conditions.
 
@@ -77,11 +77,11 @@ Functions in R are "first class objects", which means that they can be treated m
 ### Important facts about R functions
 
 -   Functions can be passed as arguments to other functions.
-    -   This is very handy for the various apply functions, like `lapply()` and `sapply()`.
+    -   This is very handy for the various apply functions, like `lapply()` and `sapply()` from base R and `tidyverse` loop functions implemented in `purrr`.
 -   Functions can be nested, so that you can define a function inside of another function.
 :::
 
-If you are familiar with common language like C, these features might appear a bit strange. However, they are really important in R and can be useful for data analysis.
+If you are familiar with a common coding language like C, these features might appear a bit strange. However, they are really important in R and can be useful for data analysis.
 
 ## Your First Function
 
@@ -161,7 +161,7 @@ Finally, the function above doesn't **return** anything.
 
 It just prints "Hello, world!" to the console `num` number of times and then exits.
 
-But often it is useful **if a function returns something** that perhaps can be fed into another section of code.
+But often it is useful **if a function returns something** that perhaps can be fed into another section of code. As we've seen before, `dplyr` functions often return a modified version of the input data frame so you can keep piping the functions together.
 
 This next function returns the total number of characters printed to the console.
 
@@ -364,6 +364,8 @@ The order of operations when given an argument is
 
 **Partial matching should be avoided when writing longer code or programs**, because it may lead to confusion if someone is reading the code. However, partial matching is very useful when calling functions interactively that have very long argument names.
 
+In my team guidelines for writing papers, I recommend that all non-default arguments be specified in the methods section of papers. See <https://lcolladotor.github.io/bioc_team_ds/writing-papers.html#styling> for more details.
+
 ## Lazy Evaluation
 
 Arguments to functions are **evaluated lazily**, so they are evaluated only as needed in the body of the function.
@@ -398,7 +400,7 @@ Once the function tried to evaluate `print(b)` the function had to throw an erro
 
 ## The `...` Argument
 
-There is a **special argument in R known as the `...` argument**, which indicates **a variable number of arguments** that are usually passed on to other functions.
+There is a **special argument in R known as the `...` argument** (the ellipsis argument), which indicates **a variable number of arguments** that are usually passed on to other functions.
 
 The `...` argument is **often used when extending another function** and you do not want to copy the entire argument list of the original function
 
@@ -454,6 +456,8 @@ If I don't specify the `sep` argument in full and attempt to rely on partial mat
 ```{r}
 paste("a", "b", se = ":")
 ```
+
+See <https://lcolladotor.github.io/dots/dots.html> for some work I did in 2014 around the `...` argument that I described in this blog post <https://lcolladotor.github.io/2014/12/11/use-hidden-advanced-arguments-for-user-friendly-functions/>. Though `dots` is not actively maintained.
 
 # Functions are for humans and computers
 
@@ -656,8 +660,8 @@ x / sum(x, na.rm = TRUE)
 ::: callout-tip
 -   <https://rdpeng.github.io/Biostat776/lecture-functions>
 -   <https://rdpeng.github.io/Biostat776/lecture-scoping-rules-of-r>
--   <https://r4ds.had.co.nz/functions>
--   <https://r4ds.had.co.nz/functions.html#environment>
+-   <https://r4ds.hadley.nz/functions.html>
+-   <https://r4ds.had.co.nz/functions#environment>
 :::
 
 # R session information
