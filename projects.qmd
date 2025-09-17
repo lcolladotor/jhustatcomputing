@@ -27,3 +27,12 @@ Taking https://github.com/lcolladotor/StatComputing_ProjectDemo as an example, t
 
 If needed, you can download your own project submission from CoursePlus to verify that it looks as you intended. To do so, I recommend downloading your submission to your `~/Desktop` or `~/Downloads` directory (one that is separate from where you did the initial work). Then open the HTML file on your browser to verify that it does indeed look as you intended.
 :::
+
+::: callout-note
+### Can I use LLMs for my projects?
+
+Can I use LLMs (e.g., ChatGPT, GitHub Copilot, etc.) for my projects? The answer is **yes**. Remember to cite all tools that you used! You can do so just before including your R session information at the end of your document.
+
+I recommend that you start by configuring your `RStudio IDE` or `Positron` to use GitHub Copilot as discussed in the [01 - Welcome! lecture](posts/01-welcome/#how-to-apply-for-github-education-and-configure-github-copilot). That might be enough for most of you. However, if you want to interact with LLMs via chat windows, I recommend that you use `chattr` and `ellmer` so you can interact with LLMs directly from R IDE environments. See the details about this on the [14 - R Nuts and Bolts lecture](posts/14-r-nuts-and-bolts/#interacting-with-llms-in-rstudio-ide-positron).
+
+:::
