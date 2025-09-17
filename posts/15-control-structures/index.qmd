@@ -28,7 +28,7 @@ categories: [module 4, week 4, R, programming]
 **Before class, you can prepare by reading the following materials:**
 
 1.  <https://rafalab.github.io/dsbook/programming-basics>
-2.  <https://r4ds.had.co.nz/iteration>
+2.  <https://r4ds.hadley.nz/iteration.html>
 :::
 
 ### Acknowledgements
@@ -36,7 +36,7 @@ categories: [module 4, week 4, R, programming]
 Material for this lecture was borrowed and adopted from
 
 -   <https://rdpeng.github.io/Biostat776/lecture-control-structures>
--   <https://r4ds.had.co.nz/iteration>
+-   <https://r4ds.hadley.nz/iteration.html>
 
 # Learning objectives
 
@@ -82,43 +82,43 @@ However, these constructs do not have to be used in functions and it's a good id
 
 ## `if`-`else`
 
-The `if`-`else` combination is probably the most commonly used control structure in R (or perhaps any language). This structure allows you to test a condition and act on it depending on whether it's true or false.
+The `if`-`else` combination is probably the most commonly used control structure in R (or perhaps any language). This structure allows you to test a condition and act on it depending on whether it's `TRUE` or `FALSE`.
 
 For starters, you can just use the `if` statement.
 
 ``` r
-if(<condition>) {
-        ## do something
+if (<condition>) {
+    ## do something
 } 
-## Continue with rest of code
+## Continue with rest of your code
 ```
 
-The above code does nothing if the condition is false. If you have an action you want to execute when the condition is false, then you need an `else` clause.
+The above code does nothing if the condition is `FALSE`. If you have an action you want to execute when the condition is `FALSE`, then you need an `else` clause.
 
 ``` r
-if(<condition>) {
-        ## do something
+if (<condition>) {
+    ## do something
 } 
 else {
-        ## do something else
+    ## do something else
 }
 ```
 
 You can have a series of tests by following the initial `if` with any number of `else if`s.
 
 ``` r
-if(<condition1>) {
-        ## do something
-} else if(<condition2>)  {
-        ## do something different
+if (<condition1>) {
+    ## do something
+} else if (<condition2>)  {
+    ## do something different
 } else {
-        ## do something different
+    ## do something entirely different
 }
 ```
 
 Here is an example of a valid if/else structure.
 
-Let's use the `runif(n, min=0, max=1)` function which draws a random value between a min and max value with the default being between 0 and 1.
+Let's use the `runif(n, min=0, max=1)` function which draws a random value between a `min` and `max` value with the default being between 0 and 1.
 
 ```{r}
 x <- runif(n = 1, min = 0, max = 10)
@@ -170,12 +170,12 @@ Which one you use will **depend on your preference** and perhaps those of the te
 Of course, the `else` clause is not necessary. You could have a series of if clauses that always get executed if their respective conditions are true.
 
 ``` r
-if(<condition1>) {
-
+if (<condition1>) {
+    ## Do something for this first condition
 }
 
-if(<condition2>) {
-
+if (<condition2>) {
+    ## Do something for this second condition
 }
 ```
 
@@ -187,7 +187,7 @@ Let's use the `palmerpenguins` dataset and write a if-else statement that
 1.  Randomly samples a value from a standard normal distribution (**Hint**: check out the `rnorm(n, mean = 0, sd = 1)` function in base R).
 2.  If the value is larger than 0, use `dplyr` functions to keep only the `Chinstrap` penguins.
 3.  Otherwise, keep only the `Gentoo` penguins.
-4.  Re-run the code 10 times and look at output.
+4.  Re-run the code 10 times and look at the output.
 
 ```{r}
 #| message: false
@@ -454,7 +454,7 @@ for (i in 1:100) {
         ## Skip the first 20 iterations
         next
     }
-    ## Do something here
+    ## Do something here on iteration 21 and beyond
 }
 ```
 
@@ -498,7 +498,7 @@ Here are some post-lecture questions to help you think about the material discus
 ::: callout-tip
 -   <https://rdpeng.github.io/Biostat776/lecture-control-structures>
 -   <https://rafalab.github.io/dsbook/programming-basics>
--   <https://r4ds.had.co.nz/iteration>
+-   <https://r4ds.hadley.nz/iteration.html>
 :::
 
 # R session information
