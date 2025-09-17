@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.8.24</generator>
-<lastBuildDate>Wed, 17 Sep 2025 01:52:56 GMT</lastBuildDate>
+<lastBuildDate>Wed, 17 Sep 2025 02:24:03 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -582,7 +582,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -1097,7 +1097,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1444,7 +1444,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -2111,7 +2111,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -3076,7 +3076,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3557,7 +3557,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4973,7 +4973,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6801,7 +6801,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7784,7 +7784,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8634,7 +8634,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -9147,7 +9147,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10510,7 +10510,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -12514,7 +12514,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -14531,7 +14531,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -15823,7 +15823,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -15853,7 +15853,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 <div class="callout-body-container callout-body">
 <p><strong>Before class, you can prepare by reading the following materials:</strong></p>
 <ol type="1">
-<li><a href="https://r4ds.had.co.nz/functions" class="uri">https://r4ds.had.co.nz/functions</a></li>
+<li><a href="https://r4ds.hadley.nz/functions.html" class="uri">https://r4ds.hadley.nz/functions.html</a></li>
 <li><a href="https://adv-r.hadley.nz/functions.html?#functions" class="uri">https://adv-r.hadley.nz/functions.html?#functions</a></li>
 <li><a href="https://swcarpentry.github.io/r-novice-inflammation/02-func-R" class="uri">https://swcarpentry.github.io/r-novice-inflammation/02-func-R</a></li>
 </ol>
@@ -15866,8 +15866,8 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 <ul>
 <li><a href="https://rdpeng.github.io/Biostat776/lecture-functions" class="uri">https://rdpeng.github.io/Biostat776/lecture-functions</a></li>
 <li><a href="https://rdpeng.github.io/Biostat776/lecture-scoping-rules-of-r" class="uri">https://rdpeng.github.io/Biostat776/lecture-scoping-rules-of-r</a></li>
-<li><a href="https://r4ds.had.co.nz/functions" class="uri">https://r4ds.had.co.nz/functions</a></li>
-<li><a href="https://r4ds.had.co.nz/functions.html#environment" class="uri">https://r4ds.had.co.nz/functions.html#environment</a></li>
+<li><a href="https://r4ds.hadley.nz/functions.html" class="uri">https://r4ds.hadley.nz/functions.html</a></li>
+<li><a href="https://r4ds.had.co.nz/functions#environment" class="uri">https://r4ds.had.co.nz/functions#environment</a></li>
 </ul>
 </section>
 </section>
@@ -15896,7 +15896,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 </section>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>Writing functions is a <strong>core activity</strong> of an R programmer. It represents the key step of the transition from a mere “user” to a developer who creates new functionality for R.</p>
+<p>Writing functions is a <strong>core activity</strong> of an R programmer. It represents the key step of the transition from a “user” to a “developer” who creates new functionality for R.</p>
 <p><strong>Functions</strong> are often used to <strong>encapsulate a sequence of expressions that need to be executed numerous times</strong>, perhaps under slightly different conditions.</p>
 <p>Also, functions are also often written <strong>when code must be shared with others or the public</strong>.</p>
 <p>The writing of a function allows a developer to create an interface to the code, that is explicitly specified with a set of <strong>arguments</strong> (or parameters).</p>
@@ -15918,13 +15918,13 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 <ul>
 <li>Functions can be passed as arguments to other functions.
 <ul>
-<li>This is very handy for the various apply functions, like <code>lapply()</code> and <code>sapply()</code>.</li>
+<li>This is very handy for the various apply functions, like <code>lapply()</code> and <code>sapply()</code> from base R and <code>tidyverse</code> loop functions implemented in <code>purrr</code>.</li>
 </ul></li>
 <li>Functions can be nested, so that you can define a function inside of another function.</li>
 </ul>
 </div>
 </div>
-<p>If you are familiar with common language like C, these features might appear a bit strange. However, they are really important in R and can be useful for data analysis.</p>
+<p>If you are familiar with a common coding language like C, these features might appear a bit strange. However, they are really important in R and can be useful for data analysis.</p>
 </section>
 <section id="your-first-function" class="level2">
 <h2 class="anchored" data-anchor-id="your-first-function">Your First Function</h2>
@@ -16103,7 +16103,7 @@ Hello, world!</code></pre>
 </div>
 <p>Finally, the function above doesn’t <strong>return</strong> anything.</p>
 <p>It just prints “Hello, world!” to the console <code>num</code> number of times and then exits.</p>
-<p>But often it is useful <strong>if a function returns something</strong> that perhaps can be fed into another section of code.</p>
+<p>But often it is useful <strong>if a function returns something</strong> that perhaps can be fed into another section of code. As we’ve seen before, <code>dplyr</code> functions often return a modified version of the input data frame so you can keep piping the functions together.</p>
 <p>This next function returns the total number of characters printed to the console.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">f <span class="ot" style="color: #003B4F;
@@ -16374,7 +16374,7 @@ font-style: italic;">## Positional match first argument, default for 'na.rm'</sp
 background-color: null;
 font-style: inherit;">sd</span>(mydata)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.014286</code></pre>
+<pre><code>[1] 0.922964</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -16385,7 +16385,7 @@ font-style: inherit;">sd</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">x =</span> mydata)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.014286</code></pre>
+<pre><code>[1] 0.922964</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -16400,7 +16400,7 @@ font-style: inherit;">na.rm =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.014286</code></pre>
+<pre><code>[1] 0.922964</code></pre>
 </div>
 </div>
 </div>
@@ -16421,7 +16421,7 @@ font-style: inherit;">FALSE</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">x =</span> mydata)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.014286</code></pre>
+<pre><code>[1] 0.922964</code></pre>
 </div>
 </div>
 <p>You <strong>can mix positional matching with matching by name</strong>.</p>
@@ -16435,7 +16435,7 @@ font-style: inherit;">na.rm =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>, mydata)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.014286</code></pre>
+<pre><code>[1] 0.922964</code></pre>
 </div>
 </div>
 <p>Here, the <code>mydata</code> object is assigned to the <code>x</code> argument, because it’s the only argument not yet specified.</p>
@@ -16545,6 +16545,7 @@ font-style: inherit;">FALSE</span>)</span></code></pre></div></div>
 </div>
 </div>
 <p><strong>Partial matching should be avoided when writing longer code or programs</strong>, because it may lead to confusion if someone is reading the code. However, partial matching is very useful when calling functions interactively that have very long argument names.</p>
+<p>In my team guidelines for writing papers, I recommend that all non-default arguments be specified in the methods section of papers. See <a href="https://lcolladotor.github.io/bioc_team_ds/writing-papers.html#styling" class="uri">https://lcolladotor.github.io/bioc_team_ds/writing-papers.html#styling</a> for more details.</p>
 </section>
 <section id="lazy-evaluation" class="level2">
 <h2 class="anchored" data-anchor-id="lazy-evaluation">Lazy Evaluation</h2>
@@ -16606,7 +16607,7 @@ font-style: inherit;">45</span>)</span></code></pre></div></div>
 </section>
 <section id="the-...-argument" class="level2">
 <h2 class="anchored" data-anchor-id="the-...-argument">The <code>...</code> Argument</h2>
-<p>There is a <strong>special argument in R known as the <code>...</code> argument</strong>, which indicates <strong>a variable number of arguments</strong> that are usually passed on to other functions.</p>
+<p>There is a <strong>special argument in R known as the <code>...</code> argument</strong> (the ellipsis argument), which indicates <strong>a variable number of arguments</strong> that are usually passed on to other functions.</p>
 <p>The <code>...</code> argument is <strong>often used when extending another function</strong> and you do not want to copy the entire argument list of the original function</p>
 <p>For example, a custom plotting function may want to make use of the default <code>plot()</code> function along with its entire argument list. The function below changes the default for the <code>type</code> argument to the value <code>type = "l"</code> (the original default was <code>type = "p"</code>).</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1">myplot <span class="ot" style="color: #003B4F;
@@ -16633,7 +16634,7 @@ font-style: italic;">## Pass '...' to 'plot' function</span></span>
 <div class="cell-output cell-output-stdout">
 <pre><code>function (x, ...) 
 UseMethod("mean")
-&lt;bytecode: 0x1075ea1e8&gt;
+&lt;bytecode: 0x14cc3b688&gt;
 &lt;environment: namespace:base&gt;</code></pre>
 </div>
 </div>
@@ -16732,6 +16733,7 @@ font-style: inherit;">":"</span>)</span></code></pre></div></div>
 <pre><code>[1] "a b :"</code></pre>
 </div>
 </div>
+<p>See <a href="https://lcolladotor.github.io/dots/dots.html" class="uri">https://lcolladotor.github.io/dots/dots.html</a> for some work I did in 2014 around the <code>...</code> argument that I described in this blog post <a href="https://lcolladotor.github.io/2014/12/11/use-hidden-advanced-arguments-for-user-friendly-functions/" class="uri">https://lcolladotor.github.io/2014/12/11/use-hidden-advanced-arguments-for-user-friendly-functions/</a>. Though <code>dots</code> is not actively maintained.</p>
 </section>
 </section>
 <section id="functions-are-for-humans-and-computers" class="level1">
@@ -16984,7 +16986,7 @@ font-style: inherit;">2</span>))</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
   3 3.3 
- 82 918 </code></pre>
+111 889 </code></pre>
 </div>
 </div>
 <div class="cell">
@@ -17086,8 +17088,8 @@ Tip
 <ul>
 <li><a href="https://rdpeng.github.io/Biostat776/lecture-functions" class="uri">https://rdpeng.github.io/Biostat776/lecture-functions</a></li>
 <li><a href="https://rdpeng.github.io/Biostat776/lecture-scoping-rules-of-r" class="uri">https://rdpeng.github.io/Biostat776/lecture-scoping-rules-of-r</a></li>
-<li><a href="https://r4ds.had.co.nz/functions" class="uri">https://r4ds.had.co.nz/functions</a></li>
-<li><a href="https://r4ds.had.co.nz/functions.html#environment" class="uri">https://r4ds.had.co.nz/functions.html#environment</a></li>
+<li><a href="https://r4ds.hadley.nz/functions.html" class="uri">https://r4ds.hadley.nz/functions.html</a></li>
+<li><a href="https://r4ds.had.co.nz/functions#environment" class="uri">https://r4ds.had.co.nz/functions#environment</a></li>
 </ul>
 </div>
 </div>
@@ -17111,36 +17113,37 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-08-17
- pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-09-16
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout      1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
- digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- evaluate      0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr         1.43    2023-05-25 [1] CRAN (R 4.3.0)
- rlang         1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown     2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rstudioapi    0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- xfun          0.40    2023-08-09 [1] CRAN (R 4.3.0)
- yaml          2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ cli           3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout    * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ digest        0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ evaluate      1.0.5   2025-08-27 [1] CRAN (R 4.5.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite      2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr         1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ rlang         1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown     2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ sessioninfo   1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ xfun          0.53    2025-08-19 [1] CRAN (R 4.5.0)
+ yaml          2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
@@ -17156,7 +17159,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -20194,7 +20197,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -22202,7 +22205,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -23156,7 +23159,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -24900,7 +24903,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Wed, 17 Sep 2025 01:52:56 GMT</pubDate>
+  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
 </item>
 </channel>
 </rss>

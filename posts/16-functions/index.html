@@ -314,7 +314,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <p><strong>Before class, you can prepare by reading the following materials:</strong></p>
 <ol type="1">
-<li><a href="https://r4ds.had.co.nz/functions" class="uri">https://r4ds.had.co.nz/functions</a></li>
+<li><a href="https://r4ds.hadley.nz/functions.html" class="uri">https://r4ds.hadley.nz/functions.html</a></li>
 <li><a href="https://adv-r.hadley.nz/functions.html?#functions" class="uri">https://adv-r.hadley.nz/functions.html?#functions</a></li>
 <li><a href="https://swcarpentry.github.io/r-novice-inflammation/02-func-R" class="uri">https://swcarpentry.github.io/r-novice-inflammation/02-func-R</a></li>
 </ol>
@@ -327,8 +327,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="https://rdpeng.github.io/Biostat776/lecture-functions" class="uri">https://rdpeng.github.io/Biostat776/lecture-functions</a></li>
 <li><a href="https://rdpeng.github.io/Biostat776/lecture-scoping-rules-of-r" class="uri">https://rdpeng.github.io/Biostat776/lecture-scoping-rules-of-r</a></li>
-<li><a href="https://r4ds.had.co.nz/functions" class="uri">https://r4ds.had.co.nz/functions</a></li>
-<li><a href="https://r4ds.had.co.nz/functions.html#environment" class="uri">https://r4ds.had.co.nz/functions.html#environment</a></li>
+<li><a href="https://r4ds.hadley.nz/functions.html" class="uri">https://r4ds.hadley.nz/functions.html</a></li>
+<li><a href="https://r4ds.had.co.nz/functions#environment" class="uri">https://r4ds.had.co.nz/functions#environment</a></li>
 </ul>
 </section>
 </section>
@@ -357,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>Writing functions is a <strong>core activity</strong> of an R programmer. It represents the key step of the transition from a mere “user” to a developer who creates new functionality for R.</p>
+<p>Writing functions is a <strong>core activity</strong> of an R programmer. It represents the key step of the transition from a “user” to a “developer” who creates new functionality for R.</p>
 <p><strong>Functions</strong> are often used to <strong>encapsulate a sequence of expressions that need to be executed numerous times</strong>, perhaps under slightly different conditions.</p>
 <p>Also, functions are also often written <strong>when code must be shared with others or the public</strong>.</p>
 <p>The writing of a function allows a developer to create an interface to the code, that is explicitly specified with a set of <strong>arguments</strong> (or parameters).</p>
@@ -379,13 +379,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Functions can be passed as arguments to other functions.
 <ul>
-<li>This is very handy for the various apply functions, like <code>lapply()</code> and <code>sapply()</code>.</li>
+<li>This is very handy for the various apply functions, like <code>lapply()</code> and <code>sapply()</code> from base R and <code>tidyverse</code> loop functions implemented in <code>purrr</code>.</li>
 </ul></li>
 <li>Functions can be nested, so that you can define a function inside of another function.</li>
 </ul>
 </div>
 </div>
-<p>If you are familiar with common language like C, these features might appear a bit strange. However, they are really important in R and can be useful for data analysis.</p>
+<p>If you are familiar with a common coding language like C, these features might appear a bit strange. However, they are really important in R and can be useful for data analysis.</p>
 </section>
 <section id="your-first-function" class="level2">
 <h2 class="anchored" data-anchor-id="your-first-function">Your First Function</h2>
@@ -491,7 +491,7 @@ Hello, world!</code></pre>
 </div>
 <p>Finally, the function above doesn’t <strong>return</strong> anything.</p>
 <p>It just prints “Hello, world!” to the console <code>num</code> number of times and then exits.</p>
-<p>But often it is useful <strong>if a function returns something</strong> that perhaps can be fed into another section of code.</p>
+<p>But often it is useful <strong>if a function returns something</strong> that perhaps can be fed into another section of code. As we’ve seen before, <code>dplyr</code> functions often return a modified version of the input data frame so you can keep piping the functions together.</p>
 <p>This next function returns the total number of characters printed to the console.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(num) {</span>
@@ -654,17 +654,17 @@ Hello, world!</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Positional match first argument, default for 'na.rm'</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(mydata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.014286</code></pre>
+<pre><code>[1] 0.922964</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Specify 'x' argument by name, default for 'na.rm'</span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(<span class="at">x =</span> mydata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.014286</code></pre>
+<pre><code>[1] 0.922964</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Specify both arguments by name</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(<span class="at">x =</span> mydata, <span class="at">na.rm =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.014286</code></pre>
+<pre><code>[1] 0.922964</code></pre>
 </div>
 </div>
 </div>
@@ -675,7 +675,7 @@ Hello, world!</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Specify both arguments by name</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(<span class="at">na.rm =</span> <span class="cn">FALSE</span>, <span class="at">x =</span> mydata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.014286</code></pre>
+<pre><code>[1] 0.922964</code></pre>
 </div>
 </div>
 <p>You <strong>can mix positional matching with matching by name</strong>.</p>
@@ -683,7 +683,7 @@ Hello, world!</code></pre>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(<span class="at">na.rm =</span> <span class="cn">FALSE</span>, mydata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.014286</code></pre>
+<pre><code>[1] 0.922964</code></pre>
 </div>
 </div>
 <p>Here, the <code>mydata</code> object is assigned to the <code>x</code> argument, because it’s the only argument not yet specified.</p>
@@ -759,6 +759,7 @@ NULL</code></pre>
 </div>
 </div>
 <p><strong>Partial matching should be avoided when writing longer code or programs</strong>, because it may lead to confusion if someone is reading the code. However, partial matching is very useful when calling functions interactively that have very long argument names.</p>
+<p>In my team guidelines for writing papers, I recommend that all non-default arguments be specified in the methods section of papers. See <a href="https://lcolladotor.github.io/bioc_team_ds/writing-papers.html#styling" class="uri">https://lcolladotor.github.io/bioc_team_ds/writing-papers.html#styling</a> for more details.</p>
 </section>
 <section id="lazy-evaluation" class="level2">
 <h2 class="anchored" data-anchor-id="lazy-evaluation">Lazy Evaluation</h2>
@@ -794,7 +795,7 @@ NULL</code></pre>
 </section>
 <section id="the-...-argument" class="level2">
 <h2 class="anchored" data-anchor-id="the-...-argument">The <code>...</code> Argument</h2>
-<p>There is a <strong>special argument in R known as the <code>...</code> argument</strong>, which indicates <strong>a variable number of arguments</strong> that are usually passed on to other functions.</p>
+<p>There is a <strong>special argument in R known as the <code>...</code> argument</strong> (the ellipsis argument), which indicates <strong>a variable number of arguments</strong> that are usually passed on to other functions.</p>
 <p>The <code>...</code> argument is <strong>often used when extending another function</strong> and you do not want to copy the entire argument list of the original function</p>
 <p>For example, a custom plotting function may want to make use of the default <code>plot()</code> function along with its entire argument list. The function below changes the default for the <code>type</code> argument to the value <code>type = "l"</code> (the original default was <code>type = "p"</code>).</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>myplot <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y, <span class="at">type =</span> <span class="st">"l"</span>, ...) {</span>
@@ -806,7 +807,7 @@ NULL</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>function (x, ...) 
 UseMethod("mean")
-&lt;bytecode: 0x1075ea1e8&gt;
+&lt;bytecode: 0x14cc3b688&gt;
 &lt;environment: namespace:base&gt;</code></pre>
 </div>
 </div>
@@ -857,6 +858,7 @@ NULL</code></pre>
 <pre><code>[1] "a b :"</code></pre>
 </div>
 </div>
+<p>See <a href="https://lcolladotor.github.io/dots/dots.html" class="uri">https://lcolladotor.github.io/dots/dots.html</a> for some work I did in 2014 around the <code>...</code> argument that I described in this blog post <a href="https://lcolladotor.github.io/2014/12/11/use-hidden-advanced-arguments-for-user-friendly-functions/" class="uri">https://lcolladotor.github.io/2014/12/11/use-hidden-advanced-arguments-for-user-friendly-functions/</a>. Though <code>dots</code> is not actively maintained.</p>
 </section>
 </section>
 <section id="functions-are-for-humans-and-computers" class="level1">
@@ -982,7 +984,7 @@ NULL</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>
   3 3.3 
- 82 918 </code></pre>
+111 889 </code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1064,8 +1066,8 @@ Tip
 <ul>
 <li><a href="https://rdpeng.github.io/Biostat776/lecture-functions" class="uri">https://rdpeng.github.io/Biostat776/lecture-functions</a></li>
 <li><a href="https://rdpeng.github.io/Biostat776/lecture-scoping-rules-of-r" class="uri">https://rdpeng.github.io/Biostat776/lecture-scoping-rules-of-r</a></li>
-<li><a href="https://r4ds.had.co.nz/functions" class="uri">https://r4ds.had.co.nz/functions</a></li>
-<li><a href="https://r4ds.had.co.nz/functions.html#environment" class="uri">https://r4ds.had.co.nz/functions.html#environment</a></li>
+<li><a href="https://r4ds.hadley.nz/functions.html" class="uri">https://r4ds.hadley.nz/functions.html</a></li>
+<li><a href="https://r4ds.had.co.nz/functions#environment" class="uri">https://r4ds.had.co.nz/functions#environment</a></li>
 </ul>
 </div>
 </div>
@@ -1079,36 +1081,37 @@ Tip
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-08-17
- pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-09-16
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout      1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
- digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- evaluate      0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr         1.43    2023-05-25 [1] CRAN (R 4.3.0)
- rlang         1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown     2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rstudioapi    0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- xfun          0.40    2023-08-09 [1] CRAN (R 4.3.0)
- yaml          2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ cli           3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout    * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ digest        0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ evaluate      1.0.5   2025-08-27 [1] CRAN (R 4.5.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite      2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr         1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ rlang         1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown     2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ sessioninfo   1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ xfun          0.53    2025-08-19 [1] CRAN (R 4.5.0)
+ yaml          2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
