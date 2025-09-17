@@ -242,13 +242,47 @@ window.Quarto = {
 </header>
 
 
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Submitting Quarto documents to CoursePlus
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some of you might choose to use Quarto for making your HTML project files instead of Rmarkdown. If so, keep in mind that Quarto will create a directory that has to be shared along with the HTML file <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. That is, you will have to make a ZIP file that contains both the (A) HTML file made with Quarto, and (B) the *_quarto_files directory that Quarto also made. Then upload the ZIP file to CoursePlus.</p>
+<p>Taking <a href="https://github.com/lcolladotor/StatComputing_ProjectDemo" class="uri">https://github.com/lcolladotor/StatComputing_ProjectDemo</a> as an example, the ZIP file would have to contain:</p>
+<ul>
+<li>The HTML file <a href="https://github.com/lcolladotor/StatComputing_ProjectDemo/blob/gh-pages/2025-09-02_demo_quarto.html" class="uri">https://github.com/lcolladotor/StatComputing_ProjectDemo/blob/gh-pages/2025-09-02_demo_quarto.html</a></li>
+<li>The <code>"*_quarto_files"</code> directory <a href="https://github.com/lcolladotor/StatComputing_ProjectDemo/tree/gh-pages/2025-09-02_demo_quarto_files" class="uri">https://github.com/lcolladotor/StatComputing_ProjectDemo/tree/gh-pages/2025-09-02_demo_quarto_files</a></li>
+</ul>
+<p>If needed, you can download your own project submission from CoursePlus to verify that it looks as you intended. To do so, I recommend downloading your submission to your <code>~/Desktop</code> or <code>~/Downloads</code> directory (one that is separate from where you did the initial work). Then open the HTML file on your browser to verify that it does indeed look as you intended.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Can I use LLMs for my projects?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Can I use LLMs (e.g., ChatGPT, GitHub Copilot, etc.) for my projects? The answer is <strong>yes</strong>. Remember to cite all tools that you used! You can do so just before including your R session information at the end of your document.</p>
+<p>I recommend that you start by configuring your <code>RStudio IDE</code> or <code>Positron</code> to use GitHub Copilot as discussed in the <a href="posts/01-welcome/#how-to-apply-for-github-education-and-configure-github-copilot">01 - Welcome! lecture</a>. That might be enough for most of you. However, if you want to interact with LLMs via chat windows, I recommend that you use <code>chattr</code> and <code>ellmer</code> so you can interact with LLMs directly from R IDE environments. See the details about this on the <a href="posts/14-r-nuts-and-bolts/#interacting-with-llms-in-rstudio-ide-positron">14 - R Nuts and Bolts lecture</a>.</p>
+</div>
+</div>
+
 
 
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-projects">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="cHJvamVjdCUyMDAlMkNwcm9qZWN0cw==" data-listing-file-modified-sort="1757990503980" data-listing-reading-time-sort="19" data-listing-word-count-sort="3650">
+<div class="quarto-post image-right" data-index="0" data-categories="cHJvamVjdCUyMDAlMkNwcm9qZWN0cw==" data-listing-file-modified-sort="1758072713782" data-listing-reading-time-sort="19" data-listing-word-count-sort="3650">
 <div class="thumbnail"><a href="./projects/project-0/index.html" class="no-external">
 
 <p class="card-img-top"><img src="videos/versionstring.gif"  class="thumbnail-image card-img"/></p>
@@ -277,7 +311,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="cHJvamVjdCUyMDElMkNwcm9qZWN0cw==" data-listing-file-modified-sort="1757990503981" data-listing-reading-time-sort="12" data-listing-word-count-sort="2307">
+<div class="quarto-post image-right" data-index="1" data-categories="cHJvamVjdCUyMDElMkNwcm9qZWN0cw==" data-listing-file-modified-sort="1758072713782" data-listing-reading-time-sort="12" data-listing-word-count-sort="2307">
 <div class="thumbnail"><a href="./projects/project-1/index.html" class="no-external">
 
 <p class="card-img-top"><img src="https://github.com/rfordatascience/tidytuesday/raw/main/static/tt_logo.png"  class="thumbnail-image card-img"/></p>
@@ -306,7 +340,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="cHJvamVjdCUyMDIlMkNwcm9qZWN0cw==" data-listing-file-modified-sort="1757990503981" data-listing-reading-time-sort="10" data-listing-word-count-sort="1989">
+<div class="quarto-post image-right" data-index="2" data-categories="cHJvamVjdCUyMDIlMkNwcm9qZWN0cw==" data-listing-file-modified-sort="1758072713783" data-listing-reading-time-sort="10" data-listing-word-count-sort="1989">
 <div class="thumbnail"><a href="./projects/project-2/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -335,7 +369,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="cHJvamVjdCUyMDMlMkNwcm9qZWN0cw==" data-listing-file-modified-sort="1757990503981" data-listing-reading-time-sort="8" data-listing-word-count-sort="1407">
+<div class="quarto-post image-right" data-index="3" data-categories="cHJvamVjdCUyMDMlMkNwcm9qZWN0cw==" data-listing-file-modified-sort="1758072713783" data-listing-reading-time-sort="8" data-listing-word-count-sort="1407">
 <div class="thumbnail"><a href="./projects/project-3/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -366,7 +400,12 @@ Leonardo Collado Torres
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>RMarkdown generates self-contained HTML files whereas Quarto does not.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
