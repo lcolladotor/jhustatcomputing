@@ -303,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Before class, you can prepare by reading the following materials:</strong></p>
 <ol type="1">
 <li><a href="https://rafalab.github.io/dsbook/programming-basics" class="uri">https://rafalab.github.io/dsbook/programming-basics</a></li>
-<li><a href="https://r4ds.had.co.nz/iteration" class="uri">https://r4ds.had.co.nz/iteration</a></li>
+<li><a href="https://r4ds.hadley.nz/iteration.html" class="uri">https://r4ds.hadley.nz/iteration.html</a></li>
 </ol>
 </div>
 </div>
@@ -313,7 +313,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Material for this lecture was borrowed and adopted from</p>
 <ul>
 <li><a href="https://rdpeng.github.io/Biostat776/lecture-control-structures" class="uri">https://rdpeng.github.io/Biostat776/lecture-control-structures</a></li>
-<li><a href="https://r4ds.had.co.nz/iteration" class="uri">https://r4ds.had.co.nz/iteration</a></li>
+<li><a href="https://r4ds.hadley.nz/iteration.html" class="uri">https://r4ds.hadley.nz/iteration.html</a></li>
 </ul>
 </section>
 </section>
@@ -368,34 +368,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="if-else" class="level2">
 <h2 class="anchored" data-anchor-id="if-else"><code>if</code>-<code>else</code></h2>
-<p>The <code>if</code>-<code>else</code> combination is probably the most commonly used control structure in R (or perhaps any language). This structure allows you to test a condition and act on it depending on whether it’s true or false.</p>
+<p>The <code>if</code>-<code>else</code> combination is probably the most commonly used control structure in R (or perhaps any language). This structure allows you to test a condition and act on it depending on whether it’s <code>TRUE</code> or <code>FALSE</code>.</p>
 <p>For starters, you can just use the <code>if</code> statement.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">&lt;</span>condition<span class="sc">&gt;</span>) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>        <span class="do">## do something</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">&lt;</span>condition<span class="sc">&gt;</span>) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="do">## do something</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>} </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Continue with rest of code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The above code does nothing if the condition is false. If you have an action you want to execute when the condition is false, then you need an <code>else</code> clause.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">&lt;</span>condition<span class="sc">&gt;</span>) {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>        <span class="do">## do something</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Continue with rest of your code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The above code does nothing if the condition is <code>FALSE</code>. If you have an action you want to execute when the condition is <code>FALSE</code>, then you need an <code>else</code> clause.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">&lt;</span>condition<span class="sc">&gt;</span>) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="do">## do something</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>} </span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> {</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="do">## do something else</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="do">## do something else</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You can have a series of tests by following the initial <code>if</code> with any number of <code>else if</code>s.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">&lt;</span>condition1<span class="sc">&gt;</span>) {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="do">## do something</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span>(<span class="sc">&lt;</span>condition2<span class="sc">&gt;</span>)  {</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="do">## do something different</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">&lt;</span>condition1<span class="sc">&gt;</span>) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="do">## do something</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (<span class="sc">&lt;</span>condition2<span class="sc">&gt;</span>)  {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="do">## do something different</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="do">## do something different</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="do">## do something entirely different</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here is an example of a valid if/else structure.</p>
-<p>Let’s use the <code>runif(n, min=0, max=1)</code> function which draws a random value between a min and max value with the default being between 0 and 1.</p>
+<p>Let’s use the <code>runif(n, min=0, max=1)</code> function which draws a random value between a <code>min</code> and <code>max</code> value with the default being between 0 and 1.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="at">n =</span> <span class="dv">1</span>, <span class="at">min =</span> <span class="dv">0</span>, <span class="at">max =</span> <span class="dv">10</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.521267</code></pre>
+<pre><code>[1] 8.821108</code></pre>
 </div>
 </div>
 <p>Then, we can write and <code>if</code>-<code>else</code> statement that tests whethere <code>x</code> is greater than 3 or not.</p>
@@ -448,12 +448,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Of course, the <code>else</code> clause is not necessary. You could have a series of if clauses that always get executed if their respective conditions are true.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">&lt;</span>condition1<span class="sc">&gt;</span>) {</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">&lt;</span>condition1<span class="sc">&gt;</span>) {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Do something for this first condition</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">&lt;</span>condition2<span class="sc">&gt;</span>) {</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">&lt;</span>condition2<span class="sc">&gt;</span>) {</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Do something for this second condition</span></span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -470,7 +470,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Randomly samples a value from a standard normal distribution (<strong>Hint</strong>: check out the <code>rnorm(n, mean = 0, sd = 1)</code> function in base R).</li>
 <li>If the value is larger than 0, use <code>dplyr</code> functions to keep only the <code>Chinstrap</code> penguins.</li>
 <li>Otherwise, keep only the <code>Gentoo</code> penguins.</li>
-<li>Re-run the code 10 times and look at output.</li>
+<li>Re-run the code 10 times and look at the output.</li>
 </ol>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># try it yourself</span></span>
@@ -623,7 +623,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="dv">1999</span>)</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
-<pre><code>Error: &lt;text&gt;:1:6: unexpected numeric constant
+<pre><code>Error in parse(text = input): &lt;text&gt;:1:6: unexpected numeric constant
 1: for (1999
          ^</code></pre>
 </div>
@@ -858,7 +858,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>        <span class="do">## Skip the first 20 iterations</span></span>
 <span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">next</span></span>
 <span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Do something here</span></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Do something here on iteration 21 and beyond</span></span>
 <span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>break</code> is used to exit a loop immediately, regardless of what iteration the loop may be on.</p>
@@ -920,7 +920,7 @@ Tip
 <ul>
 <li><a href="https://rdpeng.github.io/Biostat776/lecture-control-structures" class="uri">https://rdpeng.github.io/Biostat776/lecture-control-structures</a></li>
 <li><a href="https://rafalab.github.io/dsbook/programming-basics" class="uri">https://rafalab.github.io/dsbook/programming-basics</a></li>
-<li><a href="https://r4ds.had.co.nz/iteration" class="uri">https://r4ds.had.co.nz/iteration</a></li>
+<li><a href="https://r4ds.hadley.nz/iteration.html" class="uri">https://r4ds.hadley.nz/iteration.html</a></li>
 </ul>
 </div>
 </div>
@@ -934,67 +934,69 @@ Tip
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.5
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-08-17
- pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-09-16
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package        * version date (UTC) lib source
- cli              3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout         1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
- colorspace       2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
- digest           0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- dplyr          * 1.1.2   2023-04-20 [1] CRAN (R 4.3.0)
- evaluate         0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fansi            1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
- fastmap          1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- forcats        * 1.0.0   2023-01-29 [1] CRAN (R 4.3.0)
- generics         0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
- ggplot2        * 3.4.3   2023-08-14 [1] CRAN (R 4.3.1)
- glue             1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
- gtable           0.3.3   2023-03-21 [1] CRAN (R 4.3.0)
- hms              1.1.3   2023-03-21 [1] CRAN (R 4.3.0)
- htmltools        0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets      1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- jsonlite         1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr            1.43    2023-05-25 [1] CRAN (R 4.3.0)
- lifecycle        1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
- lubridate      * 1.9.2   2023-02-10 [1] CRAN (R 4.3.0)
- magrittr         2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
- munsell          0.5.0   2018-06-12 [1] CRAN (R 4.3.0)
- palmerpenguins * 0.1.1   2022-08-15 [1] CRAN (R 4.3.0)
- pillar           1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
- pkgconfig        2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
- purrr          * 1.0.2   2023-08-10 [1] CRAN (R 4.3.0)
- R6               2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
- readr          * 2.1.4   2023-02-10 [1] CRAN (R 4.3.0)
- rlang            1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown        2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rstudioapi       0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- scales           1.2.1   2022-08-20 [1] CRAN (R 4.3.0)
- sessioninfo      1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- stringi          1.7.12  2023-01-11 [1] CRAN (R 4.3.0)
- stringr        * 1.5.0   2022-12-02 [1] CRAN (R 4.3.0)
- tibble         * 3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
- tidyr          * 1.3.0   2023-01-24 [1] CRAN (R 4.3.0)
- tidyselect       1.2.0   2022-10-10 [1] CRAN (R 4.3.0)
- tidyverse      * 2.0.0   2023-02-22 [1] CRAN (R 4.3.0)
- timechange       0.2.0   2023-01-11 [1] CRAN (R 4.3.0)
- tzdb             0.4.0   2023-05-12 [1] CRAN (R 4.3.0)
- utf8             1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
- vctrs            0.6.3   2023-06-14 [1] CRAN (R 4.3.0)
- withr            2.5.0   2022-03-03 [1] CRAN (R 4.3.0)
- xfun             0.40    2023-08-09 [1] CRAN (R 4.3.0)
- yaml             2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ cli              3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout       * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ dichromat        2.0-0.1 2022-05-02 [1] CRAN (R 4.5.0)
+ digest           0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ dplyr          * 1.1.4   2023-11-17 [1] CRAN (R 4.5.0)
+ evaluate         1.0.5   2025-08-27 [1] CRAN (R 4.5.0)
+ farver           2.1.2   2024-05-13 [1] CRAN (R 4.5.0)
+ fastmap          1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ forcats        * 1.0.0   2023-01-29 [1] CRAN (R 4.5.0)
+ generics         0.1.4   2025-05-09 [1] CRAN (R 4.5.0)
+ ggplot2        * 4.0.0   2025-09-11 [1] CRAN (R 4.5.0)
+ glue             1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
+ gtable           0.3.6   2024-10-25 [1] CRAN (R 4.5.0)
+ hms              1.1.3   2023-03-21 [1] CRAN (R 4.5.0)
+ htmltools        0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets      1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite         2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr            1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ lifecycle        1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
+ lubridate      * 1.9.4   2024-12-08 [1] CRAN (R 4.5.0)
+ magrittr         2.0.4   2025-09-12 [1] CRAN (R 4.5.0)
+ palmerpenguins * 0.1.1   2022-08-15 [1] CRAN (R 4.5.0)
+ pillar           1.11.0  2025-07-04 [1] CRAN (R 4.5.0)
+ pkgconfig        2.0.3   2019-09-22 [1] CRAN (R 4.5.0)
+ purrr          * 1.1.0   2025-07-10 [1] CRAN (R 4.5.0)
+ R6               2.6.1   2025-02-15 [1] CRAN (R 4.5.0)
+ RColorBrewer     1.1-3   2022-04-03 [1] CRAN (R 4.5.0)
+ readr          * 2.1.5   2024-01-10 [1] CRAN (R 4.5.0)
+ rlang            1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown        2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ S7               0.2.0   2024-11-07 [1] CRAN (R 4.5.0)
+ scales           1.4.0   2025-04-24 [1] CRAN (R 4.5.0)
+ sessioninfo      1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ stringi          1.8.7   2025-03-27 [1] CRAN (R 4.5.0)
+ stringr        * 1.5.2   2025-09-08 [1] CRAN (R 4.5.0)
+ tibble         * 3.3.0   2025-06-08 [1] CRAN (R 4.5.0)
+ tidyr          * 1.3.1   2024-01-24 [1] CRAN (R 4.5.0)
+ tidyselect       1.2.1   2024-03-11 [1] CRAN (R 4.5.0)
+ tidyverse      * 2.0.0   2023-02-22 [1] CRAN (R 4.5.0)
+ timechange       0.3.0   2024-01-18 [1] CRAN (R 4.5.0)
+ tzdb             0.5.0   2025-03-15 [1] CRAN (R 4.5.0)
+ utf8             1.2.6   2025-06-08 [1] CRAN (R 4.5.0)
+ vctrs            0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
+ withr            3.0.2   2024-10-28 [1] CRAN (R 4.5.0)
+ xfun             0.53    2025-08-19 [1] CRAN (R 4.5.0)
+ yaml             2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
