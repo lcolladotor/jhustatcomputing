@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.8.24</generator>
-<lastBuildDate>Wed, 17 Sep 2025 02:24:03 GMT</lastBuildDate>
+<lastBuildDate>Mon, 22 Sep 2025 22:28:04 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -582,7 +582,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -1097,7 +1097,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1444,7 +1444,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -2111,7 +2111,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -3076,7 +3076,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3557,7 +3557,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -4973,7 +4973,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6801,7 +6801,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7784,7 +7784,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8634,7 +8634,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -9147,7 +9147,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10510,7 +10510,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -12514,7 +12514,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -14531,7 +14531,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -15823,7 +15823,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -16329,13 +16329,26 @@ Hello, world!</code></pre>
 </ul>
 <p>So, in the following call to <code>rnorm()</code></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## structure of the object</span></span>
+<span id="cb30-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">str</span>(rnorm)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>function (n, mean = 0, sd = 1)  </code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1">mydata <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## or arguments of the function</span></span>
+<span id="cb32-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">args</span>(rnorm)</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>function (n, mean = 0, sd = 1) 
+NULL</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1">mydata <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -16367,30 +16380,30 @@ font-style: italic;">## Generate some data</span></span></code></pre></div></div
 <li><code>na.rm</code> is a logical indicating whether missing values should be removed or not (default is <code>FALSE</code>)</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><span class="do" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Positional match first argument, default for 'na.rm'</span></span>
-<span id="cb33-2"><span class="fu" style="color: #4758AB;
+<span id="cb35-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sd</span>(mydata)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.922964</code></pre>
+<pre><code>[1] 1.044801</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><span class="do" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Specify 'x' argument by name, default for 'na.rm'</span></span>
-<span id="cb35-2"><span class="fu" style="color: #4758AB;
+<span id="cb37-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sd</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">x =</span> mydata)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.922964</code></pre>
+<pre><code>[1] 1.044801</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><span class="do" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Specify both arguments by name</span></span>
-<span id="cb37-2"><span class="fu" style="color: #4758AB;
+<span id="cb39-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sd</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -16400,7 +16413,7 @@ font-style: inherit;">na.rm =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.922964</code></pre>
+<pre><code>[1] 1.044801</code></pre>
 </div>
 </div>
 </div>
@@ -16408,10 +16421,10 @@ font-style: inherit;">FALSE</span>)</span></code></pre></div></div>
 <p>When <strong>specifying the function arguments by name</strong>, it <strong>doesn’t matter in what order</strong> you specify them.</p>
 <p>In the example below, we specify the <code>na.rm</code> argument first, followed by <code>x</code>, even though <code>x</code> is the first argument defined in the function definition.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><span class="do" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Specify both arguments by name</span></span>
-<span id="cb39-2"><span class="fu" style="color: #4758AB;
+<span id="cb41-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sd</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -16421,13 +16434,13 @@ font-style: inherit;">FALSE</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">x =</span> mydata)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.922964</code></pre>
+<pre><code>[1] 1.044801</code></pre>
 </div>
 </div>
 <p>You <strong>can mix positional matching with matching by name</strong>.</p>
 <p>When an argument is matched by name, <strong>it is “taken out” of the argument list</strong> and the remaining unnamed arguments are matched in the order that they are listed in the function definition.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sd</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -16435,7 +16448,7 @@ font-style: inherit;">na.rm =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>, mydata)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.922964</code></pre>
+<pre><code>[1] 1.044801</code></pre>
 </div>
 </div>
 <p>Here, the <code>mydata</code> object is assigned to the <code>x</code> argument, because it’s the only argument not yet specified.</p>
@@ -16451,7 +16464,7 @@ font-style: inherit;">FALSE</span>, mydata)</span></code></pre></div></div>
 <div class="callout-body-container callout-body">
 <p>The <code>args()</code> function displays the argument names and corresponding default values of a function</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">args</span>(f)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
@@ -16463,7 +16476,7 @@ NULL</code></pre>
 </div>
 <p>Below is the argument list for the <code>lm()</code> function, which fits linear models to a dataset.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">args</span>(lm)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
@@ -16474,7 +16487,7 @@ NULL</code></pre>
 </div>
 </div>
 <p>The following two calls are equivalent.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">lm</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -16491,7 +16504,7 @@ background-color: null;
 font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">100</span>)</span>
-<span id="cb47-2"><span class="fu" style="color: #4758AB;
+<span id="cb49-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">lm</span>(y <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -16552,19 +16565,19 @@ font-style: inherit;">FALSE</span>)</span></code></pre></div></div>
 <p>Arguments to functions are <strong>evaluated lazily</strong>, so they are evaluated only as needed in the body of the function.</p>
 <p>In this example, the function <code>f()</code> has two arguments: <code>a</code> and <code>b</code>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1">f <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1">f <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span>(a, b) {</span>
-<span id="cb48-2">    a<span class="sc" style="color: #5E5E5E;
+<span id="cb50-2">    a<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span></span>
-<span id="cb48-3">}</span>
-<span id="cb48-4"><span class="fu" style="color: #4758AB;
+<span id="cb50-3">}</span>
+<span id="cb50-4"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">f</span>(<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -16577,20 +16590,20 @@ font-style: inherit;">2</span>)</span></code></pre></div></div>
 <p>This behavior can be good or bad. It’s common to write a function that doesn’t use an argument and not notice it simply because R never throws an error.</p>
 <p>This example also shows lazy evaluation at work, but does eventually result in an error.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1">f <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1">f <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span>(a, b) {</span>
-<span id="cb50-2">    <span class="fu" style="color: #4758AB;
+<span id="cb52-2">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(a)</span>
-<span id="cb50-3">    <span class="fu" style="color: #4758AB;
+<span id="cb52-3">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(b)</span>
-<span id="cb50-4">}</span>
-<span id="cb50-5"><span class="fu" style="color: #4758AB;
+<span id="cb52-4">}</span>
+<span id="cb52-5"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">f</span>(<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -16610,7 +16623,7 @@ font-style: inherit;">45</span>)</span></code></pre></div></div>
 <p>There is a <strong>special argument in R known as the <code>...</code> argument</strong> (the ellipsis argument), which indicates <strong>a variable number of arguments</strong> that are usually passed on to other functions.</p>
 <p>The <code>...</code> argument is <strong>often used when extending another function</strong> and you do not want to copy the entire argument list of the original function</p>
 <p>For example, a custom plotting function may want to make use of the default <code>plot()</code> function along with its entire argument list. The function below changes the default for the <code>type</code> argument to the value <code>type = "l"</code> (the original default was <code>type = "p"</code>).</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1">myplot <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1">myplot <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -16620,27 +16633,27 @@ background-color: null;
 font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"l"</span>, ...) {</span>
-<span id="cb53-2">        <span class="fu" style="color: #4758AB;
+<span id="cb55-2">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">plot</span>(x, y, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">type =</span> type, ...)    <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Pass '...' to 'plot' function</span></span>
-<span id="cb53-3">}</span></code></pre></div></div>
+<span id="cb55-3">}</span></code></pre></div></div>
 <p>Generic functions use <code>...</code> so that extra arguments can be passed to methods.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1">mean</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1">mean</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>function (x, ...) 
 UseMethod("mean")
-&lt;bytecode: 0x14cc3b688&gt;
+&lt;bytecode: 0x15098de88&gt;
 &lt;environment: namespace:base&gt;</code></pre>
 </div>
 </div>
 <p>The <code>...</code> argument is necessary when the number of arguments passed to the function cannot be known in advance. This is clear in functions like <code>paste()</code> and <code>cat()</code>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">paste</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -16652,7 +16665,7 @@ font-style: inherit;">"three"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "one two three"</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">paste</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -16674,7 +16687,7 @@ font-style: inherit;">"_"</span>)</span></code></pre></div></div>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">args</span>(paste)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
@@ -16690,7 +16703,7 @@ NULL</code></pre>
 <p>One catch with <code>...</code> is that any <strong>arguments that appear after</strong> <code>...</code> on the argument list <strong>must be named explicitly and cannot be partially matched or matched positionally</strong>.</p>
 <p>Take a look at the arguments to the <code>paste()</code> function.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">args</span>(paste)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
@@ -16701,7 +16714,7 @@ NULL</code></pre>
 <p>With the <code>paste()</code> function, the arguments <code>sep</code> and <code>collapse</code> must be named explicitly and in full if the default values are not going to be used.</p>
 <p>Here, I specify that I want “a” and “b” to be pasted together and separated by a colon.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">paste</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -16718,7 +16731,7 @@ font-style: inherit;">":"</span>)</span></code></pre></div></div>
 </div>
 <p>If I don’t specify the <code>sep</code> argument in full and attempt to rely on partial matching, I don’t get the expected result.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">paste</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -16750,27 +16763,27 @@ font-style: inherit;">":"</span>)</span></code></pre></div></div>
 <li>A good sign that a noun might be a better choice is if you are using a very broad verb like “get”, “compute”, “calculate”, or “determine”. Use your best judgement and do not be afraid to rename a function if you figure out a better name later.</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Too short</span></span>
-<span id="cb68-2"><span class="fu" style="color: #4758AB;
+<span id="cb70-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">f</span>()</span>
-<span id="cb68-3"></span>
-<span id="cb68-4"><span class="co" style="color: #5E5E5E;
+<span id="cb70-3"></span>
+<span id="cb70-4"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Not a verb, or descriptive</span></span>
-<span id="cb68-5"><span class="fu" style="color: #4758AB;
+<span id="cb70-5"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">my_awesome_function</span>()</span>
-<span id="cb68-6"></span>
-<span id="cb68-7"><span class="co" style="color: #5E5E5E;
+<span id="cb70-6"></span>
+<span id="cb70-7"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Long, but clear</span></span>
-<span id="cb68-8"><span class="fu" style="color: #4758AB;
+<span id="cb70-8"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">impute_missing</span>()</span>
-<span id="cb68-9"><span class="fu" style="color: #4758AB;
+<span id="cb70-9"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">collapse_years</span>()</span></code></pre></div></div>
 </div>
@@ -16781,16 +16794,16 @@ font-style: inherit;">collapse_years</span>()</span></code></pre></div></div>
 <p>“camelCase” is a popular alternative. It does not really matter which one you pick, the important thing is to be consistent: <strong>pick one or the other and stick with it</strong>.</p>
 <p>R itself is not very consistent, but there is nothing you can do about that. Make sure you do not fall into the same trap by making your code as consistent as possible.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Never do this!</span></span>
-<span id="cb69-2">col_mins <span class="ot" style="color: #003B4F;
+<span id="cb71-2">col_mins <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span>(x, y) {}</span>
-<span id="cb69-3">rowMaxes <span class="ot" style="color: #003B4F;
+<span id="cb71-3">rowMaxes <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -16803,29 +16816,29 @@ font-style: inherit;">function</span>(x, y) {}</span></code></pre></div></div>
 <p>If you have a family of functions that do similar things, make sure they have consistent names and arguments.</p>
 <p>It’s a good idea to indicate that they are connected. That is better than a common suffix because autocomplete allows you to type the prefix and see all the members of the family.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb72" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Good</span></span>
-<span id="cb70-2"><span class="fu" style="color: #4758AB;
+<span id="cb72-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">input_select</span>()</span>
-<span id="cb70-3"><span class="fu" style="color: #4758AB;
+<span id="cb72-3"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">input_checkbox</span>()</span>
-<span id="cb70-4"><span class="fu" style="color: #4758AB;
+<span id="cb72-4"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">input_text</span>()</span>
-<span id="cb70-5"></span>
-<span id="cb70-6"><span class="co" style="color: #5E5E5E;
+<span id="cb72-5"></span>
+<span id="cb72-6"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Not so good</span></span>
-<span id="cb70-7"><span class="fu" style="color: #4758AB;
+<span id="cb72-7"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">select_input</span>()</span>
-<span id="cb70-8"><span class="fu" style="color: #4758AB;
+<span id="cb72-8"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">checkbox_input</span>()</span>
-<span id="cb70-9"><span class="fu" style="color: #4758AB;
+<span id="cb72-9"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">text_input</span>()</span></code></pre></div></div>
 </div>
@@ -16835,20 +16848,20 @@ font-style: inherit;">text_input</span>()</span></code></pre></div></div>
 <p>Where possible, avoid overriding existing functions and variables.</p>
 <p>It is impossible to do in general because so many good names are already taken by other packages, but avoiding the most common names from base R will avoid confusion.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Don't do this!</span></span>
-<span id="cb71-2">T <span class="ot" style="color: #003B4F;
+<span id="cb73-2">T <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span></span>
-<span id="cb71-3">c <span class="ot" style="color: #003B4F;
+<span id="cb73-3">c <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">10</span></span>
-<span id="cb71-4">mean <span class="ot" style="color: #003B4F;
+<span id="cb73-4">mean <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -16881,27 +16894,27 @@ font-style: inherit;">sum</span>(x)</span></code></pre></div></div>
 <p>The <strong>environment of a function</strong> controls how R finds the value associated with a name.</p>
 <p>For example, take this function:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb72" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1">f <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb74" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1">f <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span>(x) {</span>
-<span id="cb72-2">    x <span class="sc" style="color: #5E5E5E;
+<span id="cb74-2">    x <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> y</span>
-<span id="cb72-3">}</span></code></pre></div></div>
+<span id="cb74-3">}</span></code></pre></div></div>
 </div>
 <p>In many programming languages, this would be an error, because <code>y</code> is not defined inside the function.</p>
 <p>In R, this is valid code because R uses rules called <strong>lexical scoping</strong> to find the value associated with a name.</p>
 <p>Since <code>y</code> is not defined inside the function, R will look in the environment where the function was defined:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1">y <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1">y <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">100</span></span>
-<span id="cb73-2"><span class="fu" style="color: #4758AB;
+<span id="cb75-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">f</span>(<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -16909,12 +16922,12 @@ font-style: inherit;">10</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 110</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1">y <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1">y <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1000</span></span>
-<span id="cb75-2"><span class="fu" style="color: #4758AB;
+<span id="cb77-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">f</span>(<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -16930,7 +16943,7 @@ font-style: inherit;">10</span>)</span></code></pre></div></div>
 </ul>
 <p>For <code>f()</code> that includes the behavior of two things that you might not expect: <code>{</code> and <code>+</code>. This allows you to do devious things like:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><span class="st" style="color: #20794D;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">`</span><span class="at" style="color: #657422;
 background-color: null;
@@ -16942,7 +16955,7 @@ font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span>(x, y) {</span>
-<span id="cb77-2">    <span class="cf" style="color: #003B4F;
+<span id="cb79-2">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">if</span> (<span class="fu" style="color: #4758AB;
@@ -16954,23 +16967,23 @@ background-color: null;
 font-style: inherit;">&lt;</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0.1</span>) {</span>
-<span id="cb77-3">        <span class="fu" style="color: #4758AB;
+<span id="cb79-3">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sum</span>(x, y)</span>
-<span id="cb77-4">    } <span class="cf" style="color: #003B4F;
+<span id="cb79-4">    } <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">else</span> {</span>
-<span id="cb77-5">        <span class="fu" style="color: #4758AB;
+<span id="cb79-5">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sum</span>(x, y) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1.1</span></span>
-<span id="cb77-6">    }</span>
-<span id="cb77-7">}</span>
-<span id="cb77-8"><span class="fu" style="color: #4758AB;
+<span id="cb79-6">    }</span>
+<span id="cb79-7">}</span>
+<span id="cb79-8"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">table</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -16986,11 +16999,11 @@ font-style: inherit;">2</span>))</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
   3 3.3 
-111 889 </code></pre>
+104 896 </code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">rm</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -17048,13 +17061,13 @@ font-style: inherit;">`</span>)</span></code></pre></div></div>
 <li>Practice turning the following code snippets into functions. Think about what each function does. What would you call it? How many arguments does it need? Can you rewrite it to be more expressive or less duplicative?</li>
 </ol>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb80" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb82" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mean</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">is.na</span>(x))</span>
-<span id="cb80-2"></span>
-<span id="cb80-3">x <span class="sc" style="color: #5E5E5E;
+<span id="cb82-2"></span>
+<span id="cb82-3">x <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">/</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -17098,14 +17111,14 @@ Tip
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">options</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">120</span>)</span>
-<span id="cb81-2">sessioninfo<span class="sc" style="color: #5E5E5E;
+<span id="cb83-2">sessioninfo<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -17121,7 +17134,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2025-09-16
+ date     2025-09-22
  pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
@@ -17159,7 +17172,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -17363,10 +17376,11 @@ background-color: null;
 font-style: inherit;">==</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">length</span>(y))</span>
-<span id="cb12-3"><span class="do" style="color: #5E5E5E;
+<span id="cb12-3"></span>
+<span id="cb12-4"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Create our result object</span></span>
-<span id="cb12-4">result <span class="ot" style="color: #003B4F;
+<span id="cb12-5">result <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -17379,13 +17393,14 @@ background-color: null;
 font-style: inherit;">length =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">length</span>(x))</span>
-<span id="cb12-5"><span class="do" style="color: #5E5E5E;
+<span id="cb12-6"></span>
+<span id="cb12-7"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Loop through each element of x and y, calculate the sum,</span></span>
-<span id="cb12-6"><span class="do" style="color: #5E5E5E;
+<span id="cb12-8"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## then store it on 'result'</span></span>
-<span id="cb12-7"><span class="cf" style="color: #003B4F;
+<span id="cb12-9"><span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
@@ -17394,16 +17409,17 @@ font-weight: bold;
 font-style: inherit;">in</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">seq_along</span>(x)) {</span>
-<span id="cb12-8">    result[i] <span class="ot" style="color: #003B4F;
+<span id="cb12-10">    result[i] <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> x[i] <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> y[i]</span>
-<span id="cb12-9">}</span>
-<span id="cb12-10"><span class="do" style="color: #5E5E5E;
+<span id="cb12-11">}</span>
+<span id="cb12-12"></span>
+<span id="cb12-13"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Check that we got the same answer</span></span>
-<span id="cb12-11"><span class="fu" style="color: #4758AB;
+<span id="cb12-14"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">identical</span>(result, x <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -17722,7 +17738,7 @@ background-color: null;
 font-style: inherit;">5</span>)))</span>
 <span id="cb18-7">})</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Test passed 🎉</code></pre>
+<pre><code>Test passed 🥳</code></pre>
 </div>
 </div>
 </section>
@@ -18007,7 +18023,7 @@ font-style: inherit;">+</span> .y)</span></code></pre></div></div>
         X &lt;- as.list(X)
     .Internal(lapply(X, FUN))
 }
-&lt;bytecode: 0x15c1335d0&gt;
+&lt;bytecode: 0x11f13b800&gt;
 &lt;environment: namespace:base&gt;</code></pre>
 </div>
 </div>
@@ -18062,8 +18078,8 @@ font-style: inherit;">10</span>))</span>
 [1] 1 2 3 4 5
 
 $b
- [1]  0.9722200  0.6674662  0.7846470 -0.2022569 -0.4246955 -0.1146525
- [7]  1.0289155  1.7111564  1.2365643  0.2786648</code></pre>
+ [1]  1.74674240  0.61327895  0.07430473  0.42115141 -0.64381753  1.42263258
+ [7]  0.28278509 -0.15372358  0.22298620  0.23411131</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -18073,7 +18089,7 @@ font-style: inherit;">lapply</span>(x, mean)</span></code></pre></div></div>
 [1] 3
 
 $b
-[1] 0.5938029</code></pre>
+[1] 0.4220452</code></pre>
 </div>
 </div>
 <p>Notice that here we are passing the <code>mean()</code> function as an argument to the <code>lapply()</code> function.</p>
@@ -18085,7 +18101,7 @@ background-color: null;
 font-style: inherit;">map_dbl</span>(x, mean)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        a         b 
-3.0000000 0.5938029 </code></pre>
+3.0000000 0.4220452 </code></pre>
 </div>
 </div>
 <p>What difference do you notice in terms of the output of <code>lapply()</code> and <code>purrr::map_dbl()</code>?</p>
@@ -18100,7 +18116,7 @@ font-style: inherit;">map</span>(x, mean)</span></code></pre></div></div>
 [1] 3
 
 $b
-[1] 0.5938029</code></pre>
+[1] 0.4220452</code></pre>
 </div>
 </div>
 </div>
@@ -18162,13 +18178,13 @@ font-style: inherit;">lapply</span>(x, mean)</span></code></pre></div></div>
 [1] 2.5
 
 $b
-[1] 0.002605756
+[1] 0.1018754
 
 $c
-[1] 0.930439
+[1] 1.175001
 
 $d
-[1] 5.101692</code></pre>
+[1] 5.067207</code></pre>
 </div>
 </div>
 </div>
@@ -18190,16 +18206,16 @@ background-color: null;
 font-style: inherit;">lapply</span>(x, runif)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
-[1] 0.1590025
+[1] 0.9155942
 
 [[2]]
-[1] 0.7318223 0.6817140
+[1] 0.602441604 0.005958148
 
 [[3]]
-[1] 0.7664481 0.2030166 0.2405505
+[1] 0.3745703 0.4737332 0.1189540
 
 [[4]]
-[1] 0.4222646 0.4648125 0.6745461 0.9553146</code></pre>
+[1] 0.53275194 0.02855169 0.47440699 0.61104526</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -18223,16 +18239,16 @@ background-color: null;
 font-style: inherit;">map</span>(x, runif)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
-[1] 0.1129995
+[1] 0.8648622
 
 [[2]]
-[1] 0.5138907 0.3849256
+[1] 0.4445934 0.4638005
 
 [[3]]
-[1] 0.5426743 0.1539097 0.9295260
+[1] 0.1732884 0.3674504 0.6362085
 
 [[4]]
-[1] 0.2136414 0.6829276 0.1135764 0.1645305</code></pre>
+[1] 0.4247436 0.4139468 0.8514355 0.7666486</code></pre>
 </div>
 </div>
 </div>
@@ -18279,16 +18295,16 @@ background-color: null;
 font-style: inherit;">10</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
-[1] 0.9344134
+[1] 5.62294
 
 [[2]]
-[1] 2.812775 5.972051
+[1] 6.120768 6.683343
 
 [[3]]
-[1] 5.788086 7.568036 2.865283
+[1] 6.387056 4.371937 4.937801
 
 [[4]]
-[1] 9.554248 9.098009 7.881458 2.779307</code></pre>
+[1] 9.680522 4.438564 3.734991 6.373060</code></pre>
 </div>
 </div>
 <p>So now, instead of the random numbers being between 0 and 1 (the default), the are all between 0 and 10. Again, this also works with <code>purrr</code> functions.</p>
@@ -18308,16 +18324,16 @@ background-color: null;
 font-style: inherit;">10</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
-[1] 5.169658
+[1] 1.801176
 
 [[2]]
-[1] 8.415324 8.916783
+[1] 7.973248 6.898636
 
 [[3]]
-[1] 1.512034 7.947503 5.909642
+[1] 5.3614468 1.4021785 0.3117477
 
 [[4]]
-[1] 6.654542 1.721982 2.589741 2.074400</code></pre>
+[1] 7.1906605 4.8297006 0.3616360 0.3355722</code></pre>
 </div>
 </div>
 <p>The <code>lapply()</code> function (and its friends) makes heavy use of <em>anonymous</em> functions. Anonymous functions are like members of <a href="http://en.wikipedia.org/wiki/Fight_Club">Project Mayhem</a>—they have no names. These functions are generated “on the fly” as you are using <code>lapply()</code>. Once the call to <code>lapply()</code> is finished, the function disappears and does not appear in the workspace.</p>
@@ -18498,13 +18514,13 @@ font-style: inherit;">lapply</span>(x, mean)</span></code></pre></div></div>
 [1] 2.5
 
 $b
-[1] 0.0286998
+[1] -0.0289228
 
 $c
-[1] 1.373758
+[1] 0.8240488
 
 $d
-[1] 4.986047</code></pre>
+[1] 5.089893</code></pre>
 </div>
 </div>
 <p>Notice that <code>lapply()</code> returns a list (as usual), but that each element of the list has length 1.</p>
@@ -18514,8 +18530,8 @@ $d
 background-color: null;
 font-style: inherit;">sapply</span>(x, mean)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>        a         b         c         d 
-2.5000000 0.0286998 1.3737582 4.9860467 </code></pre>
+<pre><code>         a          b          c          d 
+ 2.5000000 -0.0289228  0.8240488  5.0898927 </code></pre>
 </div>
 </div>
 <p>Because the result of <code>lapply()</code> was a list where each element had length 1, <code>sapply()</code> collapsed the output into a numeric vector, which is often more useful than a list.</p>
@@ -18531,13 +18547,13 @@ font-style: inherit;">map</span>(x, mean)</span></code></pre></div></div>
 [1] 2.5
 
 $b
-[1] 0.0286998
+[1] -0.0289228
 
 $c
-[1] 1.373758
+[1] 0.8240488
 
 $d
-[1] 4.986047</code></pre>
+[1] 5.089893</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1">purrr<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -18545,8 +18561,8 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">map_dbl</span>(x, mean)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>        a         b         c         d 
-2.5000000 0.0286998 1.3737582 4.9860467 </code></pre>
+<pre><code>         a          b          c          d 
+ 2.5000000 -0.0289228  0.8240488  5.0898927 </code></pre>
 </div>
 </div>
 </section>
@@ -18613,16 +18629,16 @@ background-color: null;
 font-style: inherit;">split</span>(x, f)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$`1`
- [1]  1.47261027 -0.11778728  1.22907340 -0.36511061  0.62913588  1.34891088
- [7]  0.15830704 -0.30661119  0.81886489  0.01370576
+ [1]  0.036889250  0.439156242 -0.171449018  0.268308762 -0.005784603
+ [6] -0.037474725  0.571768648 -0.509378178 -2.206236031 -0.622883084
 
 $`2`
- [1] 0.23388354 0.67620425 0.01498285 0.76791031 0.02144240 0.08805958
- [7] 0.54305526 0.06950228 0.83105730 0.25459071
+ [1] 0.4008668 0.2120854 0.9700646 0.7878063 0.6285846 0.1459494 0.9827753
+ [8] 0.4098482 0.1778611 0.4292090
 
 $`3`
- [1] -0.6992556 -0.4615856  3.5409743  1.1184335  0.5501715  0.6915062
- [7]  1.4495427  2.0629720  2.1100236  0.3229176</code></pre>
+ [1] -0.73843715 -0.11862435  1.13214158  0.82010277  0.55687342 -0.07636030
+ [7]  2.45904045  0.57225537  0.02053563  0.44537470</code></pre>
 </div>
 </div>
 <p>A common idiom is <code>split</code> followed by an <code>lapply</code>.</p>
@@ -18634,13 +18650,13 @@ background-color: null;
 font-style: inherit;">split</span>(x, f), mean)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$`1`
-[1] 0.4881099
+[1] -0.2237083
 
 $`2`
-[1] 0.3500688
+[1] 0.5145051
 
 $`3`
-[1] 1.06857</code></pre>
+[1] 0.5072902</code></pre>
 </div>
 </div>
 <section id="splitting-a-data-frame" class="level3">
@@ -19511,8 +19527,8 @@ Levels: 1 2 3</code></pre>
 background-color: null;
 font-style: inherit;">tapply</span>(x, f, mean)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>         1          2          3 
--0.2196580  0.5022941  0.7477475 </code></pre>
+<pre><code>          1           2           3 
+0.008496425 0.434576502 1.051060161 </code></pre>
 </div>
 </div>
 </div>
@@ -19524,13 +19540,13 @@ background-color: null;
 font-style: inherit;">tapply</span>(x, f, range)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$`1`
-[1] -1.483876  0.519538
+[1] -1.35972  1.39826
 
 $`2`
-[1] 0.1970253 0.8083186
+[1] 0.08806992 0.92058272
 
 $`3`
-[1] -0.5991801  2.3153189</code></pre>
+[1] -0.1887393  3.0773427</code></pre>
 </div>
 </div>
 <p>With <code>purrr</code>, we don’t have a <code>tapply()</code> direct equivalent but we can still get similar results thanks to the <code>split()</code> function.</p>
@@ -19545,8 +19561,8 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">map_dbl</span>(mean)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>         1          2          3 
--0.2196580  0.5022941  0.7477475 </code></pre>
+<pre><code>          1           2           3 
+0.008496425 0.434576502 1.051060161 </code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb123" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb123-1"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -19559,13 +19575,13 @@ background-color: null;
 font-style: inherit;">map</span>(range)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$`1`
-[1] -1.483876  0.519538
+[1] -1.35972  1.39826
 
 $`2`
-[1] 0.1970253 0.8083186
+[1] 0.08806992 0.92058272
 
 $`3`
-[1] -0.5991801  2.3153189</code></pre>
+[1] -0.1887393  3.0773427</code></pre>
 </div>
 </div>
 </section>
@@ -19616,20 +19632,20 @@ font-style: inherit;">10</span>)</span>
 background-color: null;
 font-style: inherit;">head</span>(x)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>           [,1]        [,2]        [,3]       [,4]       [,5]       [,6]
-[1,]  0.1478102  0.78194041  1.39597861  0.3374186 -0.3772066 -0.1551193
-[2,]  1.1928082 -0.55047148 -0.44067310  0.1790926  0.7971628  1.2972090
-[3,] -0.3666672 -0.21764989  0.03522523  0.2310200 -0.3687196  0.9050708
-[4,]  0.8768993 -0.38795209  0.17159879  1.0665414 -2.0481121 -0.6035171
-[5,] -1.1538589  0.05690375  0.73959609  0.1201938 -0.6753521 -0.1134883
-[6,]  0.1468126  1.89473187  0.46806980 -0.9837391 -1.3275220 -0.5301819
-            [,7]        [,8]       [,9]      [,10]
-[1,] -1.07378726  0.33293402 -0.9171032  1.0278666
-[2,]  2.24127950  0.58601091  1.4886753 -0.4868490
-[3,] -0.69385309  0.55338482 -0.6974887  1.4257935
-[4,] -1.04739364 -0.42479752 -0.3919240 -2.2119075
-[5,]  0.20018890  0.04881347  0.3149072 -0.9598799
-[6,] -0.01155237  1.28176329 -0.1662271  1.1416646</code></pre>
+<pre><code>            [,1]        [,2]       [,3]      [,4]       [,5]       [,6]
+[1,]  0.50046809  0.01319246 -1.2257339 0.6534950  2.0240798 -0.5110592
+[2,] -0.97947352 -0.74034878 -0.7333293 0.0852587  0.9646342  1.0375407
+[3,] -0.76175904 -0.78276570 -1.3256824 0.5074134 -0.5256627 -1.8718745
+[4,] -0.05374418  1.40241236 -1.1572989 0.4923247  1.1692155  1.2495283
+[5,]  0.21665370  2.49795506  1.0303902 0.1020464  0.7384473  0.6245013
+[6,]  0.21451380 -1.58611504 -0.3422167 0.5026345 -1.0660648  0.2152146
+           [,7]       [,8]       [,9]       [,10]
+[1,]  3.0450395  0.4156979 -1.5711215  1.16470122
+[2,] -1.1407109 -1.3683067 -0.8307222 -0.01687646
+[3,] -0.9718256  0.6301801  0.2372567  0.27668133
+[4,]  0.8450216 -1.2188740 -0.7058502 -0.65473690
+[5,]  0.7673133  0.3547224  1.3843766 -0.84345422
+[6,]  0.6824437  0.3520303  0.5901982 -0.52446529</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb129" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb129-1"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -19639,8 +19655,8 @@ font-style: inherit;">2</span>, mean) <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Take the mean of each column</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  0.21491707  0.15897344  0.10584976 -0.10490596 -0.61422150 -0.11846196
- [7] -0.26240120  0.28376379 -0.24176678  0.05051771</code></pre>
+<pre><code> [1] -0.01626919  0.10659913 -0.31981647  0.09469021  0.30397538 -0.16036582
+ [7]  0.39368026 -0.13370231 -0.12090136  0.04522372</code></pre>
 </div>
 </div>
 </div>
@@ -19665,10 +19681,10 @@ font-style: inherit;">1</span>, sum) <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Take the mean of each row</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  1.5007321  6.3042448  0.8061160 -5.0005644 -1.4219760  1.9138196
- [7] -3.2819941 -1.0722210  0.7149896  1.4356676 -4.7687756  1.6602942
-[13]  1.4402500 -3.6041757  0.8561434 -2.3253953 -2.1542951 -1.5485611
-[19] -2.3146864  0.3056750</code></pre>
+<pre><code> [1]  4.5087595 -3.7223342 -4.5880384  1.3679983  6.8729520 -0.9618265
+ [7]  0.3539245  3.6576807  2.3910655 -1.8471082  1.9953436 -6.0260360
+[13] -6.2214171 -0.1334884 -0.9813945  0.6822732  5.7145910 -3.5023396
+[19]  5.2571158 -0.9554501</code></pre>
 </div>
 </div>
 </div>
@@ -19717,8 +19733,8 @@ font-style: inherit;">%&gt;%</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">map_dbl</span>(mean)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  0.21491707  0.15897344  0.10584976 -0.10490596 -0.61422150 -0.11846196
- [7] -0.26240120  0.28376379 -0.24176678  0.05051771</code></pre>
+<pre><code> [1] -0.01626919  0.10659913 -0.31981647  0.09469021  0.30397538 -0.16036582
+ [7]  0.39368026 -0.13370231 -0.12090136  0.04522372</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb137" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb137-1"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -19730,10 +19746,10 @@ font-style: inherit;">%&gt;%</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">map_dbl</span>(sum)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  1.5007321  6.3042448  0.8061160 -5.0005644 -1.4219760  1.9138196
- [7] -3.2819941 -1.0722210  0.7149896  1.4356676 -4.7687756  1.6602942
-[13]  1.4402500 -3.6041757  0.8561434 -2.3253953 -2.1542951 -1.5485611
-[19] -2.3146864  0.3056750</code></pre>
+<pre><code> [1]  4.5087595 -3.7223342 -4.5880384  1.3679983  6.8729520 -0.9618265
+ [7]  0.3539245  3.6576807  2.3910655 -1.8471082  1.9953436 -6.0260360
+[13] -6.2214171 -0.1334884 -0.9813945  0.6822732  5.7145910 -3.5023396
+[19]  5.2571158 -0.9554501</code></pre>
 </div>
 </div>
 <section id="colrow-sums-and-means" class="level3">
@@ -19792,20 +19808,20 @@ font-style: inherit;">10</span>)</span>
 background-color: null;
 font-style: inherit;">head</span>(x)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>            [,1]         [,2]       [,3]       [,4]        [,5]        [,6]
-[1,]  0.40643783  0.535177795 -0.7178755 -0.8254484 -0.09009748  0.27766089
-[2,]  1.67337736  1.101405423  0.3616568  2.2453738  0.34282464 -0.36570372
-[3,]  1.30327515 -0.950264855  0.1474001 -0.3453589 -1.18043640 -0.56348912
-[4,] -0.01095906 -0.519561336  0.9359043 -2.9031949  0.85979431 -0.53688648
-[5,]  2.14990998  0.007775716 -2.0175120  0.4995306  0.30601808 -0.09258318
-[6,]  0.32169081 -0.631104172  1.1239667  0.5120566  0.20922259 -0.12703800
-            [,7]       [,8]       [,9]      [,10]
-[1,]  0.08226073  0.4265114 -0.5363039 -0.3771463
-[2,] -1.04995918 -0.9506480  2.4528800  1.0970088
-[3,]  0.30150996  0.8995539 -0.2999293 -1.5529530
-[4,]  0.06780358 -1.7505990 -1.0639637  0.6571155
-[5,] -0.26781160 -0.5434376  0.5430396 -0.1144159
-[6,] -0.46197713  0.3387829  0.1298647 -0.5817599</code></pre>
+<pre><code>           [,1]       [,2]       [,3]       [,4]       [,5]        [,6]
+[1,]  0.8558389  1.2785114 -1.1288694  0.3338215  1.6094488 -0.22610146
+[2,] -0.2651168  0.9989627 -0.9657882 -0.2079840  2.8384617 -0.07137058
+[3,] -0.1270123  0.2804062  0.2954063 -0.6753049  1.6021894 -0.04851862
+[4,]  0.3901520 -0.3279092 -0.2545932  0.7519181  1.4313260 -1.87021854
+[5,]  0.1027492 -0.2221477 -0.2716407  0.6181248 -1.1347917  0.66075218
+[6,] -0.6223277  0.5674514  0.2159777 -0.3270915 -0.2631378 -0.02378593
+           [,7]         [,8]       [,9]      [,10]
+[1,]  0.2544274 -0.192036937 -0.6799559  0.6865429
+[2,] -0.3435362 -0.005259005 -0.6227724 -2.0137902
+[3,]  1.1365090 -0.774514378  0.2140942  0.3998026
+[4,]  0.2192841 -0.291010481  1.0355954 -1.2352538
+[5,]  0.3817243 -0.968810389  0.3682024 -1.9738577
+[6,] -0.3255215 -1.031961178 -1.1926808 -0.5793324</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb141" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb141-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -19824,18 +19840,18 @@ font-style: inherit;">0.25</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0.75</span>))</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>          [,1]       [,2]       [,3]       [,4]       [,5]       [,6]
-25% -0.4965145 -0.1885716 -0.8535709 -0.9321944 -0.2294627 -0.3782423
-75%  0.3742436  1.5303844  0.2629825  0.5097875  0.4511525  0.3345099
-          [,7]        [,8]       [,9]       [,10]      [,11]      [,12]
-25% -0.1430691 -1.12572468 -0.4371619 -0.95760593 -0.3397996 -1.0746719
-75%  0.4073344 -0.05669309  1.3434728 -0.02388901  0.5526121  0.5678845
-         [,13]      [,14]      [,15]       [,16]      [,17]      [,18]
-25% -0.3667007 -0.1613415 -0.2481536 -0.93456633 -1.2079463 -0.3128054
-75%  0.1239238  0.6210515  0.6465062  0.03738274 -0.4282615  0.4599200
-         [,19]      [,20]
-25% -0.8690319 -0.5120423
-75%  0.2777756  0.1436458</code></pre>
+<pre><code>          [,1]       [,2]       [,3]       [,4]       [,5]       [,6]      [,7]
+25% -0.2175853 -0.5529634 -0.1073889 -0.3186845 -0.7945180 -0.6115789 -1.222741
+75%  0.8135149 -0.0217869  0.3737035  0.6614765  0.3783438 -0.0836239  1.109337
+          [,8]       [,9]      [,10]       [,11]      [,12]        [,13]
+25% -0.6131110 -0.7269225 0.01274949 -0.06737453 -0.6219057 -0.948169094
+75%  0.4474504  0.4613348 0.41963659  1.18111557  0.3751943  0.006215612
+         [,14]      [,15]      [,16]      [,17]      [,18]      [,19]
+25% -0.1027043 -1.4287004 -0.2514263 -0.7535182 -0.7057536 -0.2993755
+75%  0.6071806  0.2703042  0.4057326  0.1918586  0.2537656  0.2507634
+         [,20]
+25% -0.5239071
+75%  0.5436785</code></pre>
 </div>
 </div>
 <p>Notice that I had to pass the <code>probs = c(0.25, 0.75)</code> argument to <code>quantile()</code> via the <code>...</code> argument to <code>apply()</code>.</p>
@@ -19875,27 +19891,27 @@ font-style: inherit;">%&gt;%</span></span>
 background-color: null;
 font-style: inherit;">list_rbind</span>()</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>          25%         75%
-1  -0.4965145  0.37424360
-2  -0.1885716  1.53038438
-3  -0.8535709  0.26298250
-4  -0.9321944  0.50978749
-5  -0.2294627  0.45115247
-6  -0.3782423  0.33450989
-7  -0.1430691  0.40733437
-8  -1.1257247 -0.05669309
-9  -0.4371619  1.34347278
-10 -0.9576059 -0.02388901
-11 -0.3397996  0.55261206
-12 -1.0746719  0.56788448
-13 -0.3667007  0.12392384
-14 -0.1613415  0.62105147
-15 -0.2481536  0.64650623
-16 -0.9345663  0.03738274
-17 -1.2079463 -0.42826149
-18 -0.3128054  0.45992000
-19 -0.8690319  0.27777558
-20 -0.5120423  0.14364577</code></pre>
+<pre><code>           25%          75%
+1  -0.21758533  0.813514883
+2  -0.55296337 -0.021786899
+3  -0.10738885  0.373703518
+4  -0.31868455  0.661476538
+5  -0.79451797  0.378343841
+6  -0.61157890 -0.083623902
+7  -1.22274071  1.109337157
+8  -0.61311097  0.447450354
+9  -0.72692253  0.461334754
+10  0.01274949  0.419636588
+11 -0.06737453  1.181115568
+12 -0.62190573  0.375194348
+13 -0.94816909  0.006215612
+14 -0.10270429  0.607180553
+15 -1.42870045  0.270304169
+16 -0.25142633  0.405732633
+17 -0.75351818  0.191858582
+18 -0.70575359  0.253765591
+19 -0.29937550  0.250763397
+20 -0.52390708  0.543678487</code></pre>
 </div>
 </div>
 </div>
@@ -19964,7 +19980,7 @@ font-style: inherit;">1</span>, x) <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## This works (returns one value)</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 193.3047</code></pre>
+<pre><code>[1] 222.3181</code></pre>
 </div>
 </div>
 <p>However, passing a vector of <code>mu</code>s or <code>sigma</code>s won’t work with this function because it’s not vectorized.</p>
@@ -19987,7 +20003,7 @@ font-style: inherit;">10</span>, x) <span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## This is not what we want</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 124.5871</code></pre>
+<pre><code>[1] 108.6111</code></pre>
 </div>
 </div>
 </div>
@@ -20022,8 +20038,8 @@ font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">10</span>, x)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 193.30472 120.56844 107.91586 103.76324 101.96723 101.05972 100.55345
- [8] 100.25137 100.06243  99.94026</code></pre>
+<pre><code> [1] 222.3181 135.4636 117.9323 111.3079 108.0185 106.1111 104.8885 104.0480
+ [9] 103.4396 102.9814</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb152" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb152-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -20036,14 +20052,12 @@ font-style: italic;">## as we can see below</span></span>
 <pre><code>function (mu, sigma, x) 
 {
     args &lt;- lapply(as.list(match.call())[-1L], eval, parent.frame())
-    names &lt;- if (is.null(names(args))) 
-        character(length(args))
-    else names(args)
+    names &lt;- names(args) %||% character(length(args))
     dovec &lt;- names %in% vectorize.args
     do.call("mapply", c(FUN = FUN, args[dovec], MoreArgs = list(args[!dovec]), 
         SIMPLIFY = SIMPLIFY, USE.NAMES = USE.NAMES))
 }
-&lt;environment: 0x11c9347b8&gt;</code></pre>
+&lt;environment: 0x1284014f8&gt;</code></pre>
 </div>
 </div>
 <p>Pretty cool, right?</p>
@@ -20130,58 +20144,58 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.6
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-09-28
- pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-09-22
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- brio          1.1.3   2021-11-30 [1] CRAN (R 4.3.0)
- cli           3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout      1.3-0   2023-09-28 [1] Github (jalvesaq/colorout@8384882)
- desc          1.4.2   2022-09-08 [1] CRAN (R 4.3.0)
- digest        0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- dplyr         1.1.3   2023-09-03 [1] CRAN (R 4.3.0)
- evaluate      0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fansi         1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
- fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- generics      0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
- glue          1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
- htmltools     0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets   1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- jsonlite      1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr         1.44    2023-09-11 [1] CRAN (R 4.3.0)
- lifecycle     1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
- magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
- pillar        1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
- pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
- pkgload       1.3.2.1 2023-07-08 [1] CRAN (R 4.3.0)
- purrr       * 1.0.2   2023-08-10 [1] CRAN (R 4.3.0)
- R6            2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
- rlang         1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown     2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rprojroot     2.0.3   2022-04-02 [1] CRAN (R 4.3.0)
- rstudioapi    0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- sum776        0.99.0  2023-09-25 [1] Github (lcolladotor/sum776@b9cb6e3)
- testthat    * 3.1.10  2023-07-06 [1] CRAN (R 4.3.0)
- tibble        3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
- tidyselect    1.2.0   2022-10-10 [1] CRAN (R 4.3.0)
- utf8          1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
- vctrs         0.6.3   2023-06-14 [1] CRAN (R 4.3.0)
- waldo         0.5.1   2023-05-08 [1] CRAN (R 4.3.0)
- withr         2.5.0   2022-03-03 [1] CRAN (R 4.3.0)
- xfun          0.40    2023-08-09 [1] CRAN (R 4.3.0)
- yaml          2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ brio          1.1.5   2024-04-24 [1] CRAN (R 4.5.0)
+ cli           3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout    * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ desc          1.4.3   2023-12-10 [1] CRAN (R 4.5.0)
+ digest        0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ dplyr         1.1.4   2023-11-17 [1] CRAN (R 4.5.0)
+ evaluate      1.0.5   2025-08-27 [1] CRAN (R 4.5.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ generics      0.1.4   2025-05-09 [1] CRAN (R 4.5.0)
+ glue          1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
+ htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite      2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr         1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ lifecycle     1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
+ magrittr      2.0.4   2025-09-12 [1] CRAN (R 4.5.0)
+ pillar        1.11.1  2025-09-17 [1] CRAN (R 4.5.0)
+ pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.5.0)
+ pkgload       1.4.0   2024-06-28 [1] CRAN (R 4.5.0)
+ purrr       * 1.1.0   2025-07-10 [1] CRAN (R 4.5.0)
+ R6            2.6.1   2025-02-15 [1] CRAN (R 4.5.0)
+ rlang         1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown     2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ rprojroot     2.1.1   2025-08-26 [1] CRAN (R 4.5.0)
+ sessioninfo   1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ sum776        0.99.0  2025-09-22 [1] Github (lcolladotor/sum776@fa92a67)
+ testthat    * 3.2.3   2025-01-13 [1] CRAN (R 4.5.0)
+ tibble        3.3.0   2025-06-08 [1] CRAN (R 4.5.0)
+ tidyselect    1.2.1   2024-03-11 [1] CRAN (R 4.5.0)
+ utf8          1.2.6   2025-06-08 [1] CRAN (R 4.5.0)
+ vctrs         0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
+ waldo         0.6.2   2025-07-11 [1] CRAN (R 4.5.0)
+ withr         3.0.2   2024-10-28 [1] CRAN (R 4.5.0)
+ xfun          0.53    2025-08-19 [1] CRAN (R 4.5.0)
+ yaml          2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
@@ -20197,7 +20211,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -22205,7 +22219,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -23159,7 +23173,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -24903,7 +24917,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Wed, 17 Sep 2025 02:24:03 GMT</pubDate>
+  <pubDate>Mon, 22 Sep 2025 22:28:04 GMT</pubDate>
 </item>
 </channel>
 </rss>
