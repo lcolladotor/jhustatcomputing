@@ -107,13 +107,16 @@ That is, we don't write a `for` loop that takes each element of `x` and each ele
 ```{r}
 ## Check that x and y have the same length
 stopifnot(length(x) == length(y))
+
 ## Create our result object
 result <- vector(mode = "integer", length = length(x))
+
 ## Loop through each element of x and y, calculate the sum,
 ## then store it on 'result'
 for (i in seq_along(x)) {
     result[i] <- x[i] + y[i]
 }
+
 ## Check that we got the same answer
 identical(result, x + y)
 ```

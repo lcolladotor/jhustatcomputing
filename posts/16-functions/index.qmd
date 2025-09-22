@@ -269,7 +269,10 @@ This may be confusing at first, but it's really handy when doing interactive wor
 So, in the following call to `rnorm()`
 
 ```{r}
+## structure of the object
 str(rnorm)
+## or arguments of the function
+args(rnorm)
 mydata <- rnorm(100, 2, 1) ## Generate some data
 ```
 
