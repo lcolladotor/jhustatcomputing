@@ -19,7 +19,7 @@ title-block-banner: false
 
 Some of you might choose to use Quarto for making your HTML project files instead of Rmarkdown. If so, keep in mind that Quarto will create a directory that has to be shared along with the HTML file ^[RMarkdown generates self-contained HTML files whereas Quarto does not.]. 
 
-In this case, open the HTML file on your browser, then create a PDF by printing the HTML file to PDF from your browser. You can then upload the PDF file to CoursePlus.
+In this case, open the HTML file on your browser, then create a PDF by printing the HTML file to PDF from your browser. You can then upload the PDF file to CoursePlus. Keep in mind that long lines of code might get cut off when printing to PDF, so you might want to adjust the width of your code chunks in your Quarto document accordingly.
 
 Previously I had stated that you could submit a ZIP file, but we found this to add unnecessary complexity to the submission process. So please submit a PDF file instead for Quarto documents.
 
