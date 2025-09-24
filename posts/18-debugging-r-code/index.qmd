@@ -28,7 +28,7 @@ categories: [module 4, week 5, programming, debugging]
 **Before class, you can prepare by reading the following materials:**
 
 1.  <https://adv-r.hadley.nz/debugging>
-2.  <https://rstats.wtf/debugging-r-code>
+2.  <https://rstats.wtf/debugging-r>
 :::
 
 ### Acknowledgements
@@ -769,7 +769,7 @@ Describe in words what is happening above?
 ::: callout-tip
 -   <https://rdpeng.github.io/Biostat776/lecture-debugging-r-code>
 -   <https://adv-r.hadley.nz/debugging>
--   <https://rstats.wtf/debugging-r-code>
+-   <https://rstats.wtf/debugging-r>
 :::
 
 # R session information
