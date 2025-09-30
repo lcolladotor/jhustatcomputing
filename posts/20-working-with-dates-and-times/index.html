@@ -331,7 +331,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <p><strong>Before class, you can prepare by reading the following materials:</strong></p>
 <ol type="1">
-<li><a href="https://r4ds.had.co.nz/dates-and-times" class="uri">https://r4ds.had.co.nz/dates-and-times</a></li>
+<li><a href="https://r4ds.hadley.nz/datetimes.html" class="uri">https://r4ds.hadley.nz/datetimes.html</a></li>
 </ol>
 </div>
 </div>
@@ -341,7 +341,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Material for this lecture was borrowed and adopted from</p>
 <ul>
 <li><a href="https://jhu-advdatasci.github.io/2018/lectures/09-dates-times" class="uri">https://jhu-advdatasci.github.io/2018/lectures/09-dates-times</a></li>
-<li><a href="https://r4ds.had.co.nz/dates-and-times" class="uri">https://r4ds.had.co.nz/dates-and-times</a></li>
+<li><a href="https://r4ds.hadley.nz/datetimes.html" class="uri">https://r4ds.hadley.nz/datetimes.html</a></li>
 </ul>
 </section>
 </section>
@@ -477,20 +477,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## lubridate versions</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">today</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-10-02"</code></pre>
+<pre><code>[1] "2025-09-29"</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">now</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-10-02 20:28:00 EDT"</code></pre>
+<pre><code>[1] "2025-09-29 23:29:24 EDT"</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## base R versions</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>base<span class="sc">::</span><span class="fu">Sys.Date</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-10-02"</code></pre>
+<pre><code>[1] "2025-09-29"</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>base<span class="sc">::</span><span class="fu">Sys.time</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-10-02 20:28:00 EDT"</code></pre>
+<pre><code>[1] "2025-09-29 23:29:24 EDT"</code></pre>
 </div>
 </div>
 <p>Otherwise, there are three ways you are likely to create a date/time:</p>
@@ -717,19 +717,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">today</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-10-02"</code></pre>
+<pre><code>[1] "2025-09-29"</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_datetime</span>(<span class="fu">today</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-10-02 UTC"</code></pre>
+<pre><code>[1] "2025-09-29 UTC"</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">now</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-10-02 20:28:01 EDT"</code></pre>
+<pre><code>[1] "2025-09-29 23:29:25 EDT"</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_date</span>(<span class="fu">now</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2023-10-02"</code></pre>
+<pre><code>[1] "2025-09-29"</code></pre>
 </div>
 </div>
 </section>
@@ -901,7 +901,7 @@ $tzone
 <p>A few other fun things to think about related to time zones:</p>
 <ul>
 <li><p>Almost always better to specify time zone when possible to avoid ambiguity</p></li>
-<li><p>Daylight savings time (DST)</p></li>
+<li><p>Daylight savings time (DST): not all countries use it! Mexico stopped using it in 2022-10-30.</p></li>
 <li><p>Some states are in two time zones</p></li>
 <li><p>Southern hemisphere is opposite</p></li>
 </ul>
@@ -1301,7 +1301,7 @@ $tzone
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb141"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb141-1"><a href="#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unclass</span>(<span class="fu">today</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 19632</code></pre>
+<pre><code>[1] 20360</code></pre>
 </div>
 </div>
 <ol start="3" type="1">
@@ -1337,7 +1337,7 @@ Tip
 <li><a href="https://lubridate.tidyverse.org" class="uri">https://lubridate.tidyverse.org</a></li>
 <li><code>lubridate</code> cheat sheet: <a href="https://rawgit.com/rstudio/cheatsheets/master/lubridate.pdf" class="uri">https://rawgit.com/rstudio/cheatsheets/master/lubridate.pdf</a></li>
 <li><a href="https://jhu-advdatasci.github.io/2018/lectures/09-dates-times" class="uri">https://jhu-advdatasci.github.io/2018/lectures/09-dates-times</a></li>
-<li><a href="https://r4ds.had.co.nz/dates-and-times" class="uri">https://r4ds.had.co.nz/dates-and-times</a></li>
+<li><a href="https://r4ds.hadley.nz/datetimes.html" class="uri">https://r4ds.hadley.nz/datetimes.html</a></li>
 </ul>
 </div>
 </div>
@@ -1351,80 +1351,81 @@ Tip
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.6
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-10-02
- pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-09-29
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package      * version date (UTC) lib source
- bit            4.0.5   2022-11-15 [1] CRAN (R 4.3.0)
- bit64          4.0.5   2020-08-30 [1] CRAN (R 4.3.0)
- cli            3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout       1.3-0   2023-09-28 [1] Github (jalvesaq/colorout@8384882)
- colorspace     2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
- crayon         1.5.2   2022-09-29 [1] CRAN (R 4.3.0)
- digest         0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- dplyr        * 1.1.3   2023-09-03 [1] CRAN (R 4.3.0)
- emojifont      0.5.5   2021-04-20 [1] CRAN (R 4.3.0)
- evaluate       0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fansi          1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
- farver         2.1.1   2022-07-06 [1] CRAN (R 4.3.0)
- fastmap        1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- forcats      * 1.0.0   2023-01-29 [1] CRAN (R 4.3.0)
- generics       0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
- ggplot2      * 3.4.3   2023-08-14 [1] CRAN (R 4.3.0)
- glue           1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
- gtable         0.3.4   2023-08-21 [1] CRAN (R 4.3.0)
- here         * 1.0.1   2020-12-13 [1] CRAN (R 4.3.0)
- hms            1.1.3   2023-03-21 [1] CRAN (R 4.3.0)
- htmltools      0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets    1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- jsonlite       1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr          1.44    2023-09-11 [1] CRAN (R 4.3.0)
- labeling       0.4.3   2023-08-29 [1] CRAN (R 4.3.0)
- lifecycle      1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
- lubridate    * 1.9.2   2023-02-10 [1] CRAN (R 4.3.0)
- magrittr       2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
- munsell        0.5.0   2018-06-12 [1] CRAN (R 4.3.0)
- nycflights13 * 1.0.2   2021-04-12 [1] CRAN (R 4.3.0)
- pillar         1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
- pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
- proto          1.0.0   2016-10-29 [1] CRAN (R 4.3.0)
- purrr        * 1.0.2   2023-08-10 [1] CRAN (R 4.3.0)
- R6             2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
- readr        * 2.1.4   2023-02-10 [1] CRAN (R 4.3.0)
- rlang          1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown      2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rprojroot      2.0.3   2022-04-02 [1] CRAN (R 4.3.0)
- rstudioapi     0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- scales         1.2.1   2022-08-20 [1] CRAN (R 4.3.0)
- sessioninfo    1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- showtext       0.9-6   2023-05-03 [1] CRAN (R 4.3.0)
- showtextdb     3.0     2020-06-04 [1] CRAN (R 4.3.0)
- stringi        1.7.12  2023-01-11 [1] CRAN (R 4.3.0)
- stringr      * 1.5.0   2022-12-02 [1] CRAN (R 4.3.0)
- sysfonts       0.8.8   2022-03-13 [1] CRAN (R 4.3.0)
- tibble       * 3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
- tidyr        * 1.3.0   2023-01-24 [1] CRAN (R 4.3.0)
- tidyselect     1.2.0   2022-10-10 [1] CRAN (R 4.3.0)
- tidyverse    * 2.0.0   2023-02-22 [1] CRAN (R 4.3.0)
- timechange     0.2.0   2023-01-11 [1] CRAN (R 4.3.0)
- tzdb           0.4.0   2023-05-12 [1] CRAN (R 4.3.0)
- utf8           1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
- vctrs          0.6.3   2023-06-14 [1] CRAN (R 4.3.0)
- vroom          1.6.3   2023-04-28 [1] CRAN (R 4.3.0)
- withr          2.5.0   2022-03-03 [1] CRAN (R 4.3.0)
- xfun           0.40    2023-08-09 [1] CRAN (R 4.3.0)
- yaml           2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ bit            4.6.0   2025-03-06 [1] CRAN (R 4.5.0)
+ bit64          4.6.0-1 2025-01-16 [1] CRAN (R 4.5.0)
+ cli            3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout     * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ crayon         1.5.3   2024-06-20 [1] CRAN (R 4.5.0)
+ dichromat      2.0-0.1 2022-05-02 [1] CRAN (R 4.5.0)
+ digest         0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ dplyr        * 1.1.4   2023-11-17 [1] CRAN (R 4.5.0)
+ emojifont      0.5.5   2021-04-20 [1] CRAN (R 4.5.0)
+ evaluate       1.0.5   2025-08-27 [1] CRAN (R 4.5.0)
+ farver         2.1.2   2024-05-13 [1] CRAN (R 4.5.0)
+ fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ forcats      * 1.0.1   2025-09-25 [1] CRAN (R 4.5.0)
+ generics       0.1.4   2025-05-09 [1] CRAN (R 4.5.0)
+ ggplot2      * 4.0.0   2025-09-11 [1] CRAN (R 4.5.0)
+ glue           1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
+ gtable         0.3.6   2024-10-25 [1] CRAN (R 4.5.0)
+ here         * 1.0.2   2025-09-15 [1] CRAN (R 4.5.0)
+ hms            1.1.3   2023-03-21 [1] CRAN (R 4.5.0)
+ htmltools      0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ jsonlite       2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr          1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ labeling       0.4.3   2023-08-29 [1] CRAN (R 4.5.0)
+ lifecycle      1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
+ lubridate    * 1.9.4   2024-12-08 [1] CRAN (R 4.5.0)
+ magrittr       2.0.4   2025-09-12 [1] CRAN (R 4.5.0)
+ nycflights13 * 1.0.2   2021-04-12 [1] CRAN (R 4.5.0)
+ pillar         1.11.1  2025-09-17 [1] CRAN (R 4.5.0)
+ pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.5.0)
+ proto          1.0.0   2016-10-29 [1] CRAN (R 4.5.0)
+ purrr        * 1.1.0   2025-07-10 [1] CRAN (R 4.5.0)
+ R6             2.6.1   2025-02-15 [1] CRAN (R 4.5.0)
+ RColorBrewer   1.1-3   2022-04-03 [1] CRAN (R 4.5.0)
+ readr        * 2.1.5   2024-01-10 [1] CRAN (R 4.5.0)
+ rlang          1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown      2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ rprojroot      2.1.1   2025-08-26 [1] CRAN (R 4.5.0)
+ S7             0.2.0   2024-11-07 [1] CRAN (R 4.5.0)
+ scales         1.4.0   2025-04-24 [1] CRAN (R 4.5.0)
+ sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ showtext       0.9-7   2024-03-02 [1] CRAN (R 4.5.0)
+ showtextdb     3.0     2020-06-04 [1] CRAN (R 4.5.0)
+ stringi        1.8.7   2025-03-27 [1] CRAN (R 4.5.0)
+ stringr      * 1.5.2   2025-09-08 [1] CRAN (R 4.5.0)
+ sysfonts       0.8.9   2024-03-02 [1] CRAN (R 4.5.0)
+ tibble       * 3.3.0   2025-06-08 [1] CRAN (R 4.5.0)
+ tidyr        * 1.3.1   2024-01-24 [1] CRAN (R 4.5.0)
+ tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.5.0)
+ tidyverse    * 2.0.0   2023-02-22 [1] CRAN (R 4.5.0)
+ timechange     0.3.0   2024-01-18 [1] CRAN (R 4.5.0)
+ tzdb           0.5.0   2025-03-15 [1] CRAN (R 4.5.0)
+ utf8           1.2.6   2025-06-08 [1] CRAN (R 4.5.0)
+ vctrs          0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
+ vroom          1.6.6   2025-09-19 [1] CRAN (R 4.5.0)
+ withr          3.0.2   2024-10-28 [1] CRAN (R 4.5.0)
+ xfun           0.53    2025-08-19 [1] CRAN (R 4.5.0)
+ yaml           2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>

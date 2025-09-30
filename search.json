@@ -767,7 +767,7 @@
     "href": "posts/20-working-with-dates-and-times/index.html#from-other-types",
     "title": "20 - Working with dates and times",
     "section": "3. From other types",
-    "text": "3. From other types\nYou may want to switch between a date-time and a date.\nThat is the job of as_datetime() and as_date():\n\ntoday()\n\n[1] \"2023-10-02\"\n\nas_datetime(today())\n\n[1] \"2023-10-02 UTC\"\n\nnow()\n\n[1] \"2023-10-02 20:28:01 EDT\"\n\nas_date(now())\n\n[1] \"2023-10-02\""
+    "text": "3. From other types\nYou may want to switch between a date-time and a date.\nThat is the job of as_datetime() and as_date():\n\ntoday()\n\n[1] \"2025-09-29\"\n\nas_datetime(today())\n\n[1] \"2025-09-29 UTC\"\n\nnow()\n\n[1] \"2025-09-29 23:29:25 EDT\"\n\nas_date(now())\n\n[1] \"2025-09-29\""
   },
   {
     "objectID": "posts/20-working-with-dates-and-times/index.html#from-a-string-1",
