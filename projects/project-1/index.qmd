@@ -130,7 +130,7 @@ Here is a data dictionary for what all the column names mean:
 
 In this part, use functions from `dplyr` and `ggplot2` to answer the following questions.
 
-1.  Make a histogram of the `rating` scores to visualize the overall distribution of scores. Change the number of bins from the default to 10, 15, 20, and 25. Pick on the one that you think looks the best. Explain what the difference is when you change the number of bins and explain why you picked the one you did.
+1.  Make a histogram of the `rating` scores to visualize the overall distribution of scores. Change the number of bins from the default to 10, 15, 20, and 25 ^[Include all plots in your solution.]. Pick on the one that you think looks the best. Explain what the difference is when you change the number of bins and explain why you picked the one you did.
 
 ```{r}
 # Add your solution here and describe your answer afterwards
