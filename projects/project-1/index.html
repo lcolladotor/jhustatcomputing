@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-a074b3e8914223beb79d52c55ba55bce.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -409,7 +409,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <h1>Part 1: Explore data</h1>
 <p>In this part, use functions from <code>dplyr</code> and <code>ggplot2</code> to answer the following questions.</p>
 <ol type="1">
-<li>Make a histogram of the <code>rating</code> scores to visualize the overall distribution of scores. Change the number of bins from the default to 10, 15, 20, and 25. Pick on the one that you think looks the best. Explain what the difference is when you change the number of bins and explain why you picked the one you did.</li>
+<li>Make a histogram of the <code>rating</code> scores to visualize the overall distribution of scores. Change the number of bins from the default to 10, 15, 20, and 25 <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Pick on the one that you think looks the best. Explain what the difference is when you change the number of bins and explain why you picked the one you did.</li>
 </ol>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add your solution here and describe your answer afterwards</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -465,9 +465,9 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 3 × 1
        x
    &lt;dbl&gt;
-1 -0.845
-2  0.925
-3  0.643</code></pre>
+1 -0.300
+2 -0.291
+3 -1.04 </code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a new column that indicates whether the value of 'x' is positive or negative</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
@@ -479,16 +479,16 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <pre><code># A tibble: 100 × 2
          x is_positive
      &lt;dbl&gt; &lt;chr&gt;      
- 1 -0.845  No         
- 2  0.925  Yes        
- 3  0.643  Yes        
- 4 -0.589  No         
- 5  1.48   Yes        
- 6 -0.421  No         
- 7  0.0952 Yes        
- 8  0.0939 Yes        
- 9 -2.34   No         
-10  0.820  Yes        
+ 1 -0.300  No         
+ 2 -0.291  No         
+ 3 -1.04   No         
+ 4 -0.673  No         
+ 5 -0.667  No         
+ 6 -0.905  No         
+ 7  1.06   Yes        
+ 8  0.131  Yes        
+ 9 -0.499  No         
+10 -0.0179 No         
 # ℹ 90 more rows</code></pre>
 </div>
 </div>
@@ -502,7 +502,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <section id="tasks" class="level3">
 <h3 class="anchored" data-anchor-id="tasks">Tasks</h3>
 <ol type="1">
-<li>Use this dataset it to create a new column called <code>continent</code> in our <code>chocolate</code> dataset<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> that contains the continent name for each review where the country of bean origin is.</li>
+<li>Use this dataset it to create a new column called <code>continent</code> in our <code>chocolate</code> dataset<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> that contains the continent name for each review where the country of bean origin is.</li>
 <li>Only keep reviews that have reviews from countries of bean origin with at least 10 reviews.</li>
 <li>Also, remove the country of bean origin named <code>"Blend"</code>.</li>
 <li>Make a set of violin plots with ratings on the y-axis and <code>continent</code>s on the x-axis.</li>
@@ -642,7 +642,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2025-09-10
+ date     2025-09-29
  pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
@@ -653,15 +653,15 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  dichromat      2.0-0.1 2022-05-02 [1] CRAN (R 4.5.0)
  digest         0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
  dplyr        * 1.1.4   2023-11-17 [1] CRAN (R 4.5.0)
- evaluate       1.0.4   2025-06-18 [1] CRAN (R 4.5.0)
+ evaluate       1.0.5   2025-08-27 [1] CRAN (R 4.5.0)
  farver         2.1.2   2024-05-13 [1] CRAN (R 4.5.0)
  fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
- forcats      * 1.0.0   2023-01-29 [1] CRAN (R 4.5.0)
+ forcats      * 1.0.1   2025-09-25 [1] CRAN (R 4.5.0)
  generics       0.1.4   2025-05-09 [1] CRAN (R 4.5.0)
- ggplot2      * 3.5.2   2025-04-09 [1] CRAN (R 4.5.0)
+ ggplot2      * 4.0.0   2025-09-11 [1] CRAN (R 4.5.0)
  glue           1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
  gtable         0.3.6   2024-10-25 [1] CRAN (R 4.5.0)
- here         * 1.0.1   2020-12-13 [1] CRAN (R 4.5.0)
+ here         * 1.0.2   2025-09-15 [1] CRAN (R 4.5.0)
  hms            1.1.3   2023-03-21 [1] CRAN (R 4.5.0)
  htmltools      0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
  htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
@@ -670,8 +670,8 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  labeling       0.4.3   2023-08-29 [1] CRAN (R 4.5.0)
  lifecycle      1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
  lubridate    * 1.9.4   2024-12-08 [1] CRAN (R 4.5.0)
- magrittr       2.0.3   2022-03-30 [1] CRAN (R 4.5.0)
- pillar         1.11.0  2025-07-04 [1] CRAN (R 4.5.0)
+ magrittr       2.0.4   2025-09-12 [1] CRAN (R 4.5.0)
+ pillar         1.11.1  2025-09-17 [1] CRAN (R 4.5.0)
  pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.5.0)
  purrr        * 1.1.0   2025-07-10 [1] CRAN (R 4.5.0)
  R6             2.6.1   2025-02-15 [1] CRAN (R 4.5.0)
@@ -679,7 +679,8 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  readr        * 2.1.5   2024-01-10 [1] CRAN (R 4.5.0)
  rlang          1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
  rmarkdown      2.29    2024-11-04 [1] CRAN (R 4.5.0)
- rprojroot      2.1.0   2025-07-12 [1] CRAN (R 4.5.0)
+ rprojroot      2.1.1   2025-08-26 [1] CRAN (R 4.5.0)
+ S7             0.2.0   2024-11-07 [1] CRAN (R 4.5.0)
  scales         1.4.0   2025-04-24 [1] CRAN (R 4.5.0)
  sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
  stringi        1.8.7   2025-03-27 [1] CRAN (R 4.5.0)
@@ -693,7 +694,7 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
  utf8           1.2.6   2025-06-08 [1] CRAN (R 4.5.0)
  vctrs          0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
  withr          3.0.2   2024-10-28 [1] CRAN (R 4.5.0)
- xfun           0.52    2025-04-02 [1] CRAN (R 4.5.0)
+ xfun           0.53    2025-08-19 [1] CRAN (R 4.5.0)
  yaml           2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
  [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
@@ -710,7 +711,8 @@ $ rating                           &lt;dbl&gt; 3.25, 3.50, 3.75, 3.00, 3.00, 3.2
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Use the full <code>chocolate</code> data, regardless of any filtering you might have learned how to do on part 1.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Include all plots in your solution.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Use the full <code>chocolate</code> data, regardless of any filtering you might have learned how to do on part 1.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
