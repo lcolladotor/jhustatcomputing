@@ -27,7 +27,7 @@ categories: [module 5, week 6, tidyverse, R, programming, dates and times]
 
 **Before class, you can prepare by reading the following materials:**
 
-1.  <https://r4ds.had.co.nz/dates-and-times>
+1.  <https://r4ds.hadley.nz/datetimes.html>
 :::
 
 ### Acknowledgements
@@ -35,7 +35,7 @@ categories: [module 5, week 6, tidyverse, R, programming, dates and times]
 Material for this lecture was borrowed and adopted from
 
 -   <https://jhu-advdatasci.github.io/2018/lectures/09-dates-times>
--   <https://r4ds.had.co.nz/dates-and-times>
+-   <https://r4ds.hadley.nz/datetimes.html>
 
 # Learning objectives
 
@@ -389,7 +389,7 @@ A few other fun things to think about related to time zones:
 
 -   Almost always better to specify time zone when possible to avoid ambiguity
 
--   Daylight savings time (DST)
+-   Daylight savings time (DST): not all countries use it! Mexico stopped using it in 2022-10-30.
 
 -   Some states are in two time zones
 
@@ -677,7 +677,7 @@ d5 <- "12/30/14" # Dec 30, 20
 -   <https://lubridate.tidyverse.org>
 -   `lubridate` cheat sheet: <https://rawgit.com/rstudio/cheatsheets/master/lubridate.pdf>
 -   <https://jhu-advdatasci.github.io/2018/lectures/09-dates-times>
--   <https://r4ds.had.co.nz/dates-and-times>
+-   <https://r4ds.hadley.nz/datetimes.html>
 :::
 
 # R session information
