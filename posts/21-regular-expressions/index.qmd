@@ -27,7 +27,7 @@ categories: [module 5, week 6, tidyverse, R, programming, strings and regex]
 
 **Before class, you can prepare by reading the following materials:**
 
-1.  <https://r4ds.had.co.nz/strings>
+1.  <https://r4ds.hadley.nz/strings.html>
 :::
 
 ### Acknowledgements
@@ -35,7 +35,7 @@ categories: [module 5, week 6, tidyverse, R, programming, strings and regex]
 Material for this lecture was borrowed and adopted from
 
 -   <https://rdpeng.github.io/Biostat776/lecture-regular-expressions>
--   <https://r4ds.had.co.nz/strings>
+-   <https://r4ds.hadley.nz/strings.html>
 
 # Learning objectives
 
@@ -733,7 +733,7 @@ length(stringr::words)
 ::: callout-tip
 -   <https://stringr.tidyverse.org>
 -   <https://rdpeng.github.io/Biostat776/lecture-regular-expressions>
--   <https://r4ds.had.co.nz/strings>
+-   <https://r4ds.hadley.nz/strings.html>
 :::
 
 # R session information
