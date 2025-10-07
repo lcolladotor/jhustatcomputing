@@ -35,7 +35,7 @@ categories: [module 5, week 7, tidyverse, factors, categorial variables]
 Material for this lecture was borrowed and adopted from
 
 -   [Wrangling Categorical Data in R](https://peerj.com/preprints/3163) by Amelia McNamara, Nicholas J Horton
--   <https://r4ds.had.co.nz/factors>
+-   <https://r4ds.hadley.nz/factors.html>
 
 # Learning objectives
 
@@ -690,7 +690,7 @@ Here are some post-lecture questions to help you think about the material discus
 ### Additional Resources
 
 ::: callout-tip
--   <https://r4ds.had.co.nz/factors>
+-   <https://r4ds.hadley.nz/factors.html>
 -   [Wrangling Categorical Data in R](https://peerj.com/preprints/3163) by Amelia McNamara, Nicholas J Horton
 -   <https://swcarpentry.github.io/r-novice-inflammation/12-supp-factors>
 -   <https://forcats.tidyverse.org>
