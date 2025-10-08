@@ -1007,7 +1007,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1103,7 +1103,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1389,7 +1389,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1411,14 +1411,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stderr">
 <pre><code>Joining with `by = join_by(word)`</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in wordcloud(word, n, max.words = 100): miss could not be fit on page.
-It will not be plotted.</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1468,15 +1464,15 @@ Click here for how to convert to and from tidy and non-tidy formats to build mac
 <p>Perhaps the most widely used implementation of DTMs in R is the <code>DocumentTermMatrix</code> class in the <code>tm</code> package. Many available text mining datasets are provided in this format.</p>
 <p>Let’s create a sparse with <code>cast_sparse()</code> function and then a <code>dtm</code> with the <code>cast_dtm()</code> function:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>tidy_austen <span class="ot">&lt;-</span></span>
-<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">austen_books</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">line =</span> <span class="fu">row_number</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest_tokens</span>(word, text) <span class="sc">%&gt;%</span></span>
-<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">anti_join</span>(stop_words)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>tidy_austen <span class="ot">&lt;-</span></span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">austen_books</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">line =</span> <span class="fu">row_number</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest_tokens</span>(word, text) <span class="sc">%&gt;%</span></span>
+<span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">anti_join</span>(stop_words)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Joining with `by = join_by(word)`</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>tidy_austen</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>tidy_austen</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 217,609 × 3
    book                 line word       
@@ -1496,11 +1492,11 @@ Click here for how to convert to and from tidy and non-tidy formats to build mac
 </div>
 <p>First, we’ll make a sparse matrix with <code>cast_sparse(data, row, column, value)</code>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>austen_sparse <span class="ot">&lt;-</span> tidy_austen <span class="sc">%&gt;%</span></span>
-<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(line, word) <span class="sc">%&gt;%</span></span>
-<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cast_sparse</span>(<span class="at">row =</span> line, <span class="at">column =</span> word, <span class="at">value =</span> n)</span>
-<span id="cb89-4"><a href="#cb89-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb89-5"><a href="#cb89-5" aria-hidden="true" tabindex="-1"></a>austen_sparse[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>austen_sparse <span class="ot">&lt;-</span> tidy_austen <span class="sc">%&gt;%</span></span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(line, word) <span class="sc">%&gt;%</span></span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cast_sparse</span>(<span class="at">row =</span> line, <span class="at">column =</span> word, <span class="at">value =</span> n)</span>
+<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a>austen_sparse[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>10 x 10 sparse Matrix of class "dgCMatrix"</code></pre>
 </div>
@@ -1523,11 +1519,11 @@ Click here for how to convert to and from tidy and non-tidy formats to build mac
 </div>
 <p>Next, we’ll make a <code>dtm</code> object with <code>cast_dtm(data, document, matrix)</code>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>austen_dtm <span class="ot">&lt;-</span> tidy_austen <span class="sc">%&gt;%</span></span>
-<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(line, word) <span class="sc">%&gt;%</span></span>
-<span id="cb93-3"><a href="#cb93-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cast_dtm</span>(<span class="at">document =</span> line, <span class="at">term =</span> word, <span class="at">value =</span> n)</span>
-<span id="cb93-4"><a href="#cb93-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb93-5"><a href="#cb93-5" aria-hidden="true" tabindex="-1"></a>austen_dtm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>austen_dtm <span class="ot">&lt;-</span> tidy_austen <span class="sc">%&gt;%</span></span>
+<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(line, word) <span class="sc">%&gt;%</span></span>
+<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cast_dtm</span>(<span class="at">document =</span> line, <span class="at">term =</span> word, <span class="at">value =</span> n)</span>
+<span id="cb92-4"><a href="#cb92-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb92-5"><a href="#cb92-5" aria-hidden="true" tabindex="-1"></a>austen_dtm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;&lt;DocumentTermMatrix (documents: 61010, terms: 13914)&gt;&gt;
 Non-/sparse entries: 216128/848677012
@@ -1537,15 +1533,15 @@ Weighting          : term frequency (tf)</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(austen_dtm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(austen_dtm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "DocumentTermMatrix"    "simple_triplet_matrix"</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(austen_dtm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(austen_dtm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 61010 13914</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.matrix</span>(austen_dtm[<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.matrix</span>(austen_dtm[<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    Terms
 Docs sense sensibility austen jane 1811 1 chapter dashwood estate family
@@ -1582,89 +1578,89 @@ Docs sense sensibility austen jane 1811 1 chapter dashwood estate family
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
-<span id="cb101-2"><a href="#cb101-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.6
+ version  R version 4.5.1 (2025-06-13)
+ os       macOS Sequoia 15.6.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-10-12
- pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2025-10-08
+ pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.4.550 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package      * version date (UTC) lib source
- cli            3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout       1.3-0   2023-09-28 [1] Github (jalvesaq/colorout@8384882)
- colorspace     2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
- digest         0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- dplyr        * 1.1.3   2023-09-03 [1] CRAN (R 4.3.0)
- evaluate       0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fansi          1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
- farver         2.1.1   2022-07-06 [1] CRAN (R 4.3.0)
- fastmap        1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- forcats      * 1.0.0   2023-01-29 [1] CRAN (R 4.3.0)
- fs             1.6.3   2023-07-20 [1] CRAN (R 4.3.0)
- generics       0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
- ggplot2      * 3.4.3   2023-08-14 [1] CRAN (R 4.3.0)
- glue           1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
- gtable         0.3.4   2023-08-21 [1] CRAN (R 4.3.0)
- hms            1.1.3   2023-03-21 [1] CRAN (R 4.3.0)
- htmltools      0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets    1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- janeaustenr  * 1.0.0   2022-08-26 [1] CRAN (R 4.3.0)
- jsonlite       1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr          1.44    2023-09-11 [1] CRAN (R 4.3.0)
- labeling       0.4.3   2023-08-29 [1] CRAN (R 4.3.0)
- lattice        0.21-8  2023-04-05 [1] CRAN (R 4.3.1)
- lifecycle      1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
- lubridate    * 1.9.2   2023-02-10 [1] CRAN (R 4.3.0)
- magrittr       2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
- Matrix         1.6-1   2023-08-14 [1] CRAN (R 4.3.0)
- munsell        0.5.0   2018-06-12 [1] CRAN (R 4.3.0)
- NLP            0.2-1   2020-10-14 [1] CRAN (R 4.3.0)
- pillar         1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
- pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
- purrr        * 1.0.2   2023-08-10 [1] CRAN (R 4.3.0)
- R6             2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
- rappdirs       0.3.3   2021-01-31 [1] CRAN (R 4.3.0)
- RColorBrewer * 1.1-3   2022-04-03 [1] CRAN (R 4.3.0)
- Rcpp           1.0.11  2023-07-06 [1] CRAN (R 4.3.0)
- readr        * 2.1.4   2023-02-10 [1] CRAN (R 4.3.0)
- rlang          1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown      2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rstudioapi     0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- scales         1.2.1   2022-08-20 [1] CRAN (R 4.3.0)
- sessioninfo    1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- slam           0.1-50  2022-01-08 [1] CRAN (R 4.3.0)
- SnowballC      0.7.1   2023-04-25 [1] CRAN (R 4.3.0)
- stringi        1.7.12  2023-01-11 [1] CRAN (R 4.3.0)
- stringr      * 1.5.0   2022-12-02 [1] CRAN (R 4.3.0)
- textdata       0.4.4   2022-09-02 [1] CRAN (R 4.3.0)
- tibble       * 3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
- tidyr        * 1.3.0   2023-01-24 [1] CRAN (R 4.3.0)
- tidyselect     1.2.0   2022-10-10 [1] CRAN (R 4.3.0)
- tidytext     * 0.4.1   2023-01-07 [1] CRAN (R 4.3.0)
- tidyverse    * 2.0.0   2023-02-22 [1] CRAN (R 4.3.0)
- timechange     0.2.0   2023-01-11 [1] CRAN (R 4.3.0)
- tm             0.7-11  2023-02-05 [1] CRAN (R 4.3.0)
- tokenizers     0.3.0   2022-12-22 [1] CRAN (R 4.3.0)
- tzdb           0.4.0   2023-05-12 [1] CRAN (R 4.3.0)
- utf8           1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
- vctrs          0.6.3   2023-06-14 [1] CRAN (R 4.3.0)
- withr          2.5.0   2022-03-03 [1] CRAN (R 4.3.0)
- wordcloud    * 2.6     2018-08-24 [1] CRAN (R 4.3.0)
- xfun           0.40    2023-08-09 [1] CRAN (R 4.3.0)
- xml2           1.3.5   2023-07-06 [1] CRAN (R 4.3.0)
- yaml           2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ cli            3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
+ colorout     * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
+ dichromat      2.0-0.1 2022-05-02 [1] CRAN (R 4.5.0)
+ digest         0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
+ dplyr        * 1.1.4   2023-11-17 [1] CRAN (R 4.5.0)
+ evaluate       1.0.5   2025-08-27 [1] CRAN (R 4.5.0)
+ farver         2.1.2   2024-05-13 [1] CRAN (R 4.5.0)
+ fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
+ forcats      * 1.0.1   2025-09-25 [1] CRAN (R 4.5.0)
+ fs             1.6.6   2025-04-12 [1] CRAN (R 4.5.0)
+ generics       0.1.4   2025-05-09 [1] CRAN (R 4.5.0)
+ ggplot2      * 4.0.0   2025-09-11 [1] CRAN (R 4.5.0)
+ glue           1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
+ gtable         0.3.6   2024-10-25 [1] CRAN (R 4.5.0)
+ hms            1.1.3   2023-03-21 [1] CRAN (R 4.5.0)
+ htmltools      0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
+ htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
+ janeaustenr  * 1.0.0   2022-08-26 [1] CRAN (R 4.5.0)
+ jsonlite       2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
+ knitr          1.50    2025-03-16 [1] CRAN (R 4.5.0)
+ labeling       0.4.3   2023-08-29 [1] CRAN (R 4.5.0)
+ lattice        0.22-7  2025-04-02 [1] CRAN (R 4.5.1)
+ lifecycle      1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
+ lubridate    * 1.9.4   2024-12-08 [1] CRAN (R 4.5.0)
+ magrittr       2.0.4   2025-09-12 [1] CRAN (R 4.5.0)
+ Matrix         1.7-4   2025-08-28 [1] CRAN (R 4.5.0)
+ NLP            0.3-2   2024-11-20 [1] CRAN (R 4.5.0)
+ pillar         1.11.1  2025-09-17 [1] CRAN (R 4.5.0)
+ pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.5.0)
+ purrr        * 1.1.0   2025-07-10 [1] CRAN (R 4.5.0)
+ R6             2.6.1   2025-02-15 [1] CRAN (R 4.5.0)
+ rappdirs       0.3.3   2021-01-31 [1] CRAN (R 4.5.0)
+ RColorBrewer * 1.1-3   2022-04-03 [1] CRAN (R 4.5.0)
+ Rcpp           1.1.0   2025-07-02 [1] CRAN (R 4.5.0)
+ readr        * 2.1.5   2024-01-10 [1] CRAN (R 4.5.0)
+ rlang          1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
+ rmarkdown      2.29    2024-11-04 [1] CRAN (R 4.5.0)
+ S7             0.2.0   2024-11-07 [1] CRAN (R 4.5.0)
+ scales         1.4.0   2025-04-24 [1] CRAN (R 4.5.0)
+ sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
+ slam           0.1-55  2024-11-13 [1] CRAN (R 4.5.0)
+ SnowballC      0.7.1   2023-04-25 [1] CRAN (R 4.5.0)
+ stringi        1.8.7   2025-03-27 [1] CRAN (R 4.5.0)
+ stringr      * 1.5.2   2025-09-08 [1] CRAN (R 4.5.0)
+ textdata       0.4.5   2024-05-28 [1] CRAN (R 4.5.0)
+ tibble       * 3.3.0   2025-06-08 [1] CRAN (R 4.5.0)
+ tidyr        * 1.3.1   2024-01-24 [1] CRAN (R 4.5.0)
+ tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.5.0)
+ tidytext     * 0.4.3   2025-07-25 [1] CRAN (R 4.5.0)
+ tidyverse    * 2.0.0   2023-02-22 [1] CRAN (R 4.5.0)
+ timechange     0.3.0   2024-01-18 [1] CRAN (R 4.5.0)
+ tm             0.7-16  2025-02-19 [1] CRAN (R 4.5.0)
+ tokenizers     0.3.0   2022-12-22 [1] CRAN (R 4.5.0)
+ tzdb           0.5.0   2025-03-15 [1] CRAN (R 4.5.0)
+ utf8           1.2.6   2025-06-08 [1] CRAN (R 4.5.0)
+ vctrs          0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
+ withr          3.0.2   2024-10-28 [1] CRAN (R 4.5.0)
+ wordcloud    * 2.6     2018-08-24 [1] CRAN (R 4.5.0)
+ xfun           0.53    2025-08-19 [1] CRAN (R 4.5.0)
+ xml2           1.4.0   2025-08-20 [1] CRAN (R 4.5.0)
+ yaml           2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
