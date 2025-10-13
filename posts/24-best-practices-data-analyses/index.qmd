@@ -380,7 +380,7 @@ The act of visualizing data typically proceeds in two broad steps:
 2.  Given the plot I intend to make, **how can I optimize it for clarity and effectiveness?**
 :::
 
-Again I highly recommend checking the content made by [Christine Zhang](https://christineyzhang.com/)!
+Again I highly recommend checking the content made by [Christine Zhang](https://www.one-tab.com/page/wazgGeFlRA6O-aDeRqTgtw)!
 
 ## Data viz principles
 
