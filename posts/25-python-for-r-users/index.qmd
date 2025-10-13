@@ -564,13 +564,14 @@ Yet, we are all unique. You might have had some privileges, you likely faced obs
 -   <https://rweekly.org/>
 -   <https://bsky.app/profile/rladies.org>
 -   <https://twitter.com/RLadiesBmore>
+    * See [this example RLadiesBmore presentation](https://github.com/rladies/meetup-presentations_baltimore/blob/master/20181114_industry.md). It was given by [Christine Zhang](https://www.one-tab.com/page/wazgGeFlRA6O-aDeRqTgtw) in 2018.
 -   <https://twitter.com/search?q=%23RLadiesMX&src=typed_query>
 -   <https://bsky.app/profile/bioconductor.bsky.social>
 -   <https://bsky.app/profile/ropensci.org>
 -   <https://bsky.app/profile/libdrstats.bsky.social>
 -   <https://bsky.app/profile/cdsbmexico.bsky.social>
 
-RUGS (R User Groups) Program from the R Consortium: <https://www.r-consortium.org/all-projects/r-user-group-support-program>. Get \$200 to \$1000 USD for supporting your group.
+RUGS (R User Groups) Program from the R Consortium: <https://r-consortium.org/all-projects/rugsprogram.html>. Get \$500 to \$1,250 USD for supporting your group.
 
 # Post-lecture materials
 
