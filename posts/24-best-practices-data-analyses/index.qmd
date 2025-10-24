@@ -380,7 +380,53 @@ The act of visualizing data typically proceeds in two broad steps:
 2.  Given the plot I intend to make, **how can I optimize it for clarity and effectiveness?**
 :::
 
+## Christine Y. Zhang: data journalist and graphics editor
+
 Again I highly recommend checking the content made by [Christine Zhang](https://www.one-tab.com/page/wazgGeFlRA6O-aDeRqTgtw)!
+
+Actually, on 2025-10-16 we were lucky enough to have Christine visit us in person and give a guest lecture. Below you can watch a recording of it and check her slides. The YouTube video has the links to all the resources she listed. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SeLucCb05Dk?si=ur5GO7r3kZzRDUzY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Slides:
+
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/97a8106d6b284458a401f4f32bb78ce5" title="data-viz-talk-cz-2025" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+
+Zoom AI summary:
+
+> Christine Zhang, a data journalist and graphics editor at the New York Times, discussed the importance of community in the R programming language and shared her experience with data visualization principles and election result mapping. She explored various visualization techniques, including the use of color scales, annotations, and uncertainty representation in election polls, while emphasizing the importance of accurate data representation and visual consistency. Christine also shared examples of creative data visualizations and discussed the collaboration between graphics editors and reporters in creating effective visual storytelling across different platforms.
+
+Zoom AI next steps:
+ 
+> 1. Students to explore the GitHub repo Christine created for the Anne Arundel County election map project.
+> 2. Students to review the Visual Vocabulary poster at https://ft.com/vocabulary for guidance on chart selection.
+
+Tools mentioned by Christine:
+
+* `R`: <https://cran.r-project.org/>
+* `ggplot2`: <https://ggplot2.tidyverse.org/>
+* `skimr`: <https://docs.ropensci.org/skimr/>
+* `Adobe Illustrator`: <https://www.adobe.com/products/illustrator.html>
+* `rawgraphs`: <https://www.rawgraphs.io/>
+* `Datawrapper`: <https://www.datawrapper.de/>
+* `Layer Cake`: <https://layercake.graphics/>
+
+Self practice links:
+
+* OpenTable data <https://www.opentable.com/c/state-of-industry/> and <https://docs.google.com/spreadsheets/d/1XjICn2GNcpfoZIcIKdRxGNjZ_6TROioMgGyY9rdJ_UQ/edit?usp=sharing>
+* <https://www.stlouisfed.org/on-the-economy/2025/may/broad-continuing-rise-delinquent-us-credit-card-debt-revisited>
+* <https://factfinder.census.gov/bkmk/table/1.0/en/ACS/17_5YR/B03002/0400000US24.05000>
+* <https://github.com/underthecurve/bars-pies-waffles>
+
+Other recommended resources by Christine:
+
+* <https://learn.r-journalism.com/en/>
+
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:h7p2smbyfobkpcs7dbgvhmeh/app.bsky.feed.post/3m3xmeem65s2f" data-bluesky-cid="bafyreihjiolsvf3ja2flpsdhqkph2cidfpdtxi2ldv2dsib5cccjcqewmm" data-bluesky-embed-color-mode="system"><p lang="en">Thank you very much @christinezhang.bsky.social for taking the time to share your experience with us! I’m sure that everyone who attended your talk or sees the recording will benefit from it when crafted their own data visualizations 🎨
+
+Feel free to come visit us in Baltimore 🦀 whenever you want ^^<br><br><a href="https://bsky.app/profile/did:plc:h7p2smbyfobkpcs7dbgvhmeh/post/3m3xmeem65s2f?ref_src=embed">[image or embed]</a></p>&mdash; 🇲🇽 Leonardo Collado-Torres (<a href="https://bsky.app/profile/did:plc:h7p2smbyfobkpcs7dbgvhmeh?ref_src=embed">@lcolladotor.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:h7p2smbyfobkpcs7dbgvhmeh/post/3m3xmeem65s2f?ref_src=embed">October 24, 2025 at 3:30 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+
+_[LinkedIn](https://www.linkedin.com/posts/lcollado_2025-10-16-what-makes-a-good-data-visualization-activity-7387569949642387457-umoT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAVwMEMBomcSUST_hBDdt_hdo02zu-hZLiA) and [Twitter/X](https://x.com/lcolladotor/status/1981803929361858811) posts._
 
 ## Data viz principles
 
