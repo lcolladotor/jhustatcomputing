@@ -186,9 +186,7 @@ Here is an actual example where I used `reprex` to ask a question: <https://gith
 
 For more details on `reprex`, check this video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8bBo3B7N8YQ?si=HQRqLn--9KTNKDcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LfUFxHFhXTE?si=K8wxSbrNZIj2BplM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 [Here's a nice comment](https://github.com/tidyverse/tidy-dev-day/issues/25#issuecomment-2233564971) from [Hadley Wickham](https://bsky.app/profile/hadley.nz) about an issue I made:
 
