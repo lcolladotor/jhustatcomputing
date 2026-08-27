@@ -299,8 +299,8 @@ If you want, you can find me on [Bluesky](https://bsky.app/profile/lcolladotor.b
 
 We also have two amazing TAs this year:
 
--   Lidio Jaimes Jr ([ljaimes1\@jh.edu](mailto:ljaimes1@jh.edu)): (TODO: update)
--   Bella Satpathy-Horton ([ghorton2\@jhmi.edu](mailto:ghorton2@jhmi.edu)). (TODO: update)
+-   Lidio Jaimes Jr ([ljaimes1\@jh.edu](mailto:ljaimes1@jh.edu)): I am a second-year Biostatistics ScM student. My primary research interest is aging, particularly cognitive aging and Alzheimer's disease, and I am currently working on methods for addressing attrition. During my free time, I enjoy traveling, watching documentaries, and keeping up with sports (soccer and college football). 
+-   Bella Satpathy-Horton ([ghorton2\@jhmi.edu](mailto:ghorton2@jhmi.edu)). I am an MD-PhD student in my third year of the PhD in Biostatistics. My research focuses on extracting latent structures across different data sets to improve phenotyping and risk prediction, with applications to chronic pain and substance use. In my free time, I'm mostly hanging out with my two dogs, but also enjoy puzzles and board games. 
 
 ### Assignment Due Dates
 
