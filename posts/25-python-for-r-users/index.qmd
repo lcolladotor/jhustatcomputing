@@ -131,7 +131,7 @@ use_python("/opt/homebrew/Caskroom/miniforge/base/bin/python")
 You can confirm that `reticulate` is using the correct version of python that you requested using the `py_discover_config` function:
 
 ```{r}
-use_python("/Users/leocollado/.pyenv/versions/3.11.13/bin/python3.11")
+use_python("/Library/Frameworks/Python.framework/Versions/3.14/bin/python3")
 py_discover_config()
 ```
 
@@ -418,13 +418,13 @@ Next, we **use Python to read in the file** and do some data wrangling
 
 ```{bash, eval=FALSE}
 ## If needed, here are the commands to install pandas and scikit-learn
-/Users/leocollado/.pyenv/versions/3.11.13/bin/pip install pandas
-/Users/leocollado/.pyenv/versions/3.11.13/bin/pip install scikit-learn
+pip3 install pandas
+pip3 install scikit-learn
 ```
 
 ```{python}
 import pandas
-flights_path = "/Users/leocollado/Dropbox/Code/jhustatcomputing/data/flights.csv"
+flights_path = "/Users/leo.collado/Dropbox/Code/jhustatcomputing/data/flights.csv"
 flights = pandas.read_csv(flights_path)
 flights = flights[flights['dest'] == "ORD"]
 flights = flights[['carrier', 'dep_delay', 'arr_delay']]

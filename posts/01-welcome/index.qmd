@@ -129,7 +129,7 @@ Go to <https://cran.r-project.org> and
 
 2.  Click on "base"
 
-3.  Click on "Download R 4.5.1 for Windows"
+3.  Click on "Download R 4.6.1 for Windows"
 
 ::: callout-warning
 The version in the video is not the latest version of R. Please download the latest version.
@@ -143,7 +143,7 @@ Go to <https://cran.r-project.org> and
 
 1.  Click the link to "Download R for (Mac) OS X".
 
-2.  Click on "R-4.5.1-arm64.pkg" (for Apple Silicon Macs)
+2.  Click on "R-4.6.1-arm64.pkg" (for Apple Silicon Macs)
 
 ::: callout-warning
 The version in the video is not the latest version of R. Please download the latest version.
@@ -297,11 +297,10 @@ If you want, you can find me on [Bluesky](https://bsky.app/profile/lcolladotor.b
 
 #### Teaching Assistants
 
-We also have three amazing TAs this year:
+We also have two amazing TAs this year:
 
--   Yanting Hu ([yhu157\@jh.edu](mailto:yhu157@jh.edu)): I am a second-year Master’s student in Biostatistics. My research interests focus on genomics, particularly on developing and applying statistical methods to analyze high-dimensional genomic data. In my leisure time, I enjoy photography, especially capturing everyday life.
--   Phyllis Wei ([ywei43\@jhu.edu](mailto:ywei43@jhu.edu)). She is a fifth year Ph.D. student in Biostatistics. She develops methods to help understand the genetic basis of complex traits and diseases and enhance disease risk prediction models through data integration. Outside of biostatistics, she enjoys hiking, baking, and visiting museums.
--   Yu Lu ([ylu136\@jh.edu](mailto:ylu136@jh.edu)): I am a fourth year Ph.D. student in Biostatistics. My work is focused on developing functional data analysis methods inspired by physical activity data. In my free time, I enjoy the outdoor but also cuddling with my cat, Finland. (Didn’t manage to make him wear a harness and take a walk outside yet)
+-   Lidio Jaimes Jr ([ljaimes1\@jh.edu](mailto:ljaimes1@jh.edu)): (TODO: update)
+-   Bella Satpathy-Horton ([ghorton2\@jhmi.edu](mailto:ghorton2@jhmi.edu)). (TODO: update)
 
 ### Assignment Due Dates
 

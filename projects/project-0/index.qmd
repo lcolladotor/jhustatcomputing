@@ -18,7 +18,7 @@ categories: [project 0, projects]
 
 # Background
 
-**Due date: September 8th at 11:59pm**
+**Due date: September 13th at 11:59pm**
 
 Using the tools we learned in the first week (e.g. `R`, `RStudio IDE` / `Positron`, and `git` + `GitHub`). Let's apply them in a small (but also comprehensive) exercise.
 
@@ -329,8 +329,6 @@ Overall, your website should ideally say something about you, your interests, yo
 -   <https://amy-peterson.github.io/> + <https://github.com/amy-peterson/amy-peterson.github.com>
 
 -   <http://jtleek.com/> + <https://github.com/jtleek/jtleek.github.io>
-
--   <http://aejaffe.com/> + <https://github.com/andrewejaffe/andrewejaffe.github.io>
 
 -   <https://hadley.nz/> + <https://github.com/hadley/hadley.github.com>
 

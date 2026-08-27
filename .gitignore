@@ -5,3 +5,5 @@
 /.quarto/
 /_site/
 project_answers
+
+**/*.quarto_ipynb

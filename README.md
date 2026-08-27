@@ -10,9 +10,8 @@ To check previous versions of this course, see <https://github.com/lcolladotor/j
 
 ## Teaching Assistants
 
--   Phyllis Wei
--   Yanting Hu
--   Yu Lu
+-   Lidio Jaimes Jr 
+-   Bella Satpathy-Horton
 
 # Bugs
 

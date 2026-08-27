@@ -23,9 +23,8 @@ title: "Syllabus"
 
 ### Teaching Assistants
 
--   Yanting Hu ([yhu157\@jh.edu](mailto:yhu157@jh.edu))
--   Phyllis Wei ([ywei43\@jhu.edu](mailto:ywei43@jhu.edu))
--   Yu Lu ([ylu136\@jh.edu](mailto:ylu136@jh.edu))
+-   Lidio Jaimes Jr ([ljaimes1\@jh.edu](mailto:ljaimes1@jh.edu))
+-   Bella Satpathy-Horton ([ghorton2\@jhmi.edu](mailto:ghorton2@jhmi.edu))
 
 ### Office hours
 
@@ -188,7 +187,7 @@ Go to [https://cran.r-project.org]() and
 
 2.  Click on "base"
 
-3.  Click on "Download R 4.5.1 for Windows"
+3.  Click on "Download R 4.6.1 for Windows"
 
 ::: callout-warning
 The version in the video is not the latest version. Please download the latest version.
@@ -202,7 +201,7 @@ Go to [https://cran.r-project.org]() and
 
 1.  Click the link to "Download R for (Mac) OS X".
 
-2.  Click on "R-4.5.1-arm64.pkg" (for Apple Silicon Macs)
+2.  Click on "R-4.6.1-arm64.pkg" (for Apple Silicon Macs)
 
 ::: callout-warning
 The version in the video is not the latest version. Please download the latest version.

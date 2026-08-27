@@ -43,7 +43,7 @@ To make it easier for you, I wrote the R code you can run inside your `RStudio I
 |  | Lecture 4 | `r emojifont::emoji('scissors')` Managing data frames with Tidyverse \[[html](posts/08-managing-data-frames-with-tidyverse/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/08-managing-data-frames-with-tidyverse/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/08-managing-data-frames-with-tidyverse/index.R)\] |  |  |
 |  |  | `r emojifont::emoji('heart_eyes_cat')` Tidy data and the Tidyverse \[[html](posts/09-tidy-data-and-the-tidyverse/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/09-tidy-data-and-the-tidyverse/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/09-tidy-data-and-the-tidyverse/index.R)\] |  |  |
 |  |  |  |  |  |
-|  | Sept 7 |  | \``r emojifont::emoji('fallen_leaf')` Project 0 due |  |
+|  | Sept 13 |  | \``r emojifont::emoji('fallen_leaf')` Project 0 due |  |
 |  |  |  |  |  |
 | **Module 3** |  | **Data visualizations R** |  |  |
 |  |  |  |  |  |
@@ -52,7 +52,7 @@ To make it easier for you, I wrote the R code you can run inside your `RStudio I
 |  |  |  |  |  |
 |  | Lecture 6 | `r emojifont::emoji('bar_chart')` The ggplot2 plotting system: ggplot() \[[html](posts/13-ggplot2-plotting-system-part-2/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/13-ggplot2-plotting-system-part-2/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/13-ggplot2-plotting-system-part-2/index.R)\] | `r emojifont::emoji('palm_tree')` Project 2 \[[html](projects/project-2/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/projects/project-2/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/projects/project-2/index.R)\] |  |
 |  |  |  |  |  |
-|  | Sept 14 |  | `r emojifont::emoji('fallen_leaf')` Project 1 due |  |
+|  | Sept 20 |  | `r emojifont::emoji('fallen_leaf')` Project 1 due |  |
 |  |  |  |  |  |
 | **Module 4** |  | **Nuts and bolts of R** |  |  |
 |  |  |  |  |  |
@@ -61,12 +61,12 @@ To make it easier for you, I wrote the R code you can run inside your `RStudio I
 |  | Lecture 8 | `r emojifont::emoji('nut_and_bolt')` Control structures in R \[[html](posts/15-control-structures/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/15-control-structures/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/15-control-structures/index.R)\] |  |  |
 |  |  | `r emojifont::emoji('nut_and_bolt')` Functions in R \[[html](posts/16-functions/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/16-functions/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/16-functions/index.R)\] |  |  |
 |  |  |  |  |  |
-| Week 5 | Lecture 9 | `r emojifont::emoji('nut_and_bolt')` Loop functions \[[html](posts/17-loop-functions/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/17-loop-functions/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/17-loop-functions/index.R)\] |  |  |
+| Week 5 (classes will be on Zoom this week) | Lecture 9 | `r emojifont::emoji('nut_and_bolt')` Loop functions \[[html](posts/17-loop-functions/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/17-loop-functions/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/17-loop-functions/index.R)\] |  |  |
 |  |  |  |  |  |
 |  | Lecture 10 | `r emojifont::emoji('bug')` Debugging code in R \[[html](posts/18-debugging-r-code/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/18-debugging-r-code/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/18-debugging-r-code/index.R)\] |  |  |
 |  |  | `r emojifont::emoji('bug')` Error handling code in R \[[html](posts/19-error-handling-and-generation/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/19-error-handling-and-generation/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/19-error-handling-and-generation/index.R)\] |  |  |
 |  |  |  |  |  |
-|  | Sept 28 |  | `r emojifont::emoji('fallen_leaf')` Project 2 due |  |
+|  | Oct 4 |  | `r emojifont::emoji('fallen_leaf')` Project 2 due |  |
 |  |  |  |  |  |
 | **Module 5** |  | **Special data types in R** |  |  |
 |  |  |  |  |  |
@@ -84,7 +84,7 @@ To make it easier for you, I wrote the R code you can run inside your `RStudio I
 |  |  |  |  |  |
 |  | Lecture 16 | `r emojifont::emoji('snake')` Leveraging Python within R \[[html](posts/25-python-for-r-users/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/25-python-for-r-users/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/25-python-for-r-users/index.R)\] |  |  |
 |  |  |  |  |  |
-|  | Oct 19 |  | `r emojifont::emoji('fallen_leaf')` Project 3 due |  |
+|  | Oct 25 |  | `r emojifont::emoji('fallen_leaf')` Project 3 due |  |
 | **Historial lectures** |  | **Lectures used in previous years that you might want to browse out of curiosity.** They cover aspects of R that are not as used as they used to be around \~2012. |  |  |
 |  |  | `r emojifont::emoji('bar_chart')` Plotting systems in R \[[html](posts/11-plotting-systems/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/11-plotting-systems/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/11-plotting-systems/index.R)\] |  |  |
 |  |  | `r emojifont::emoji('bar_chart')` The ggplot2 plotting system: qplot() \[[html](posts/12-ggplot2-plotting-system-part-1/index.html)\] \[[Qmd](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/12-ggplot2-plotting-system-part-1/index.qmd)\] \[[R](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/12-ggplot2-plotting-system-part-1/index.R)\] |  |  |
