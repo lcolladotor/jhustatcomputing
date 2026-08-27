@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Lectures – Statistical Computing (BSPH 140.776)</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -35,15 +41,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a074b3e8914223beb79d52c55ba55bce.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-76f08249a15154a0e09b12d439daf3e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -102,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -246,10 +251,10 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-lectures">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Y291cnNlLWFkbWluJTJDbW9kdWxlJTIwMSUyQ3dlZWslMjAx" data-listing-file-modified-sort="1769532804159" data-listing-reading-time-sort="22" data-listing-word-count-sort="4288">
+<div class="quarto-post image-right" data-index="0" data-categories="Y291cnNlLWFkbWluJTJDbW9kdWxlJTIwMSUyQ3dlZWslMjAx" data-listing-file-modified-sort="1787850109237" data-listing-reading-time-sort="21" data-listing-word-count-sort="4156">
 <div class="thumbnail"><a href="./posts/01-welcome/index.html" class="no-external">
 
-<p class="card-img-top"><img src="videos/downloadRWindows.gif"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img loading='lazy' src="videos/downloadRWindows.gif"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -277,7 +282,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="bW9kdWxlJTIwMSUyQ3dlZWslMjAxJTJDUiUyQ3Byb2dyYW1taW5nJTJDUlN0dWRpbw==" data-listing-file-modified-sort="1769532804160" data-listing-reading-time-sort="18" data-listing-word-count-sort="3421">
+<div class="quarto-post image-right" data-index="1" data-categories="bW9kdWxlJTIwMSUyQ3dlZWslMjAxJTJDUiUyQ3Byb2dyYW1taW5nJTJDUlN0dWRpbw==" data-listing-file-modified-sort="1787850109237" data-listing-reading-time-sort="18" data-listing-word-count-sort="3421">
 <div class="thumbnail"><a href="./posts/02-introduction-to-r-and-rstudio/index.html" class="no-external">
 
 <img loading="lazy" src="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" class="thumbnail-image">
@@ -312,7 +317,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="bW9kdWxlJTIwMSUyQ3dlZWslMjAxJTJDcHJvZ3JhbW1pbmclMkN2ZXJzaW9uJTIwY29udHJvbCUyQ2dpdCUyQ0dpdEh1Yg==" data-listing-file-modified-sort="1769532804160" data-listing-reading-time-sort="7" data-listing-word-count-sort="1323">
+<div class="quarto-post image-right" data-index="2" data-categories="bW9kdWxlJTIwMSUyQ3dlZWslMjAxJTJDcHJvZ3JhbW1pbmclMkN2ZXJzaW9uJTIwY29udHJvbCUyQ2dpdCUyQ0dpdEh1Yg==" data-listing-file-modified-sort="1787850109237" data-listing-reading-time-sort="7" data-listing-word-count-sort="1323">
 <div class="thumbnail"><a href="./posts/03-introduction-to-gitgithub/index.html" class="no-external">
 
 <img loading="lazy" src="./images/happygitwithr.png" class="thumbnail-image">
@@ -349,10 +354,10 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="bW9kdWxlJTIwMSUyQ3dlZWslMjAxJTJDUiUyQ3JlcHJvZHVjaWJpbGl0eQ==" data-listing-file-modified-sort="1769532804160" data-listing-reading-time-sort="17" data-listing-word-count-sort="3288">
+<div class="quarto-post image-right" data-index="3" data-categories="bW9kdWxlJTIwMSUyQ3dlZWslMjAxJTJDUiUyQ3JlcHJvZHVjaWJpbGl0eQ==" data-listing-file-modified-sort="1787850109237" data-listing-reading-time-sort="17" data-listing-word-count-sort="3288">
 <div class="thumbnail"><a href="./posts/04-reproducible-research/index.html" class="no-external">
 
-<p class="card-img-top"><img src="images/dspipeline.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img loading='lazy' src="images/dspipeline.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -382,7 +387,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="bW9kdWxlJTIwMSUyQ3dlZWslMjAxJTJDUiUyME1hcmtkb3duJTJDcHJvZ3JhbW1pbmc=" data-listing-file-modified-sort="1769532804160" data-listing-reading-time-sort="22" data-listing-word-count-sort="4247">
+<div class="quarto-post image-right" data-index="4" data-categories="bW9kdWxlJTIwMSUyQ3dlZWslMjAxJTJDUiUyME1hcmtkb3duJTJDcHJvZ3JhbW1pbmc=" data-listing-file-modified-sort="1787850109237" data-listing-reading-time-sort="22" data-listing-word-count-sort="4247">
 <div class="thumbnail"><a href="./posts/05-literate-programming/index.html" class="no-external">
 
 <img loading="lazy" src="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" class="thumbnail-image">
@@ -415,7 +420,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="bW9kdWxlJTIwMSUyQ3dlZWslMjAxJTJDUiUyME1hcmtkb3duJTJDcHJvZ3JhbW1pbmc=" data-listing-file-modified-sort="1769532804160" data-listing-reading-time-sort="8" data-listing-word-count-sort="1435">
+<div class="quarto-post image-right" data-index="5" data-categories="bW9kdWxlJTIwMSUyQ3dlZWslMjAxJTJDUiUyME1hcmtkb3duJTJDcHJvZ3JhbW1pbmc=" data-listing-file-modified-sort="1787850109238" data-listing-reading-time-sort="8" data-listing-word-count-sort="1435">
 <div class="thumbnail"><a href="./posts/06-reference-management/index.html" class="no-external">
 
 <img loading="lazy" src="https://www.bibtex.com/img/bibtex-format-700x402.png" class="thumbnail-image">
@@ -448,7 +453,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="bW9kdWxlJTIwMiUyQ3dlZWslMjAyJTJDUiUyQ3Byb2dyYW1taW5nJTJDcmVhZHIlMkNoZXJlJTJDdGlkeXZlcnNl" data-listing-file-modified-sort="1769532804161" data-listing-reading-time-sort="20" data-listing-word-count-sort="3941">
+<div class="quarto-post image-right" data-index="6" data-categories="bW9kdWxlJTIwMiUyQ3dlZWslMjAyJTJDUiUyQ3Byb2dyYW1taW5nJTJDcmVhZHIlMkNoZXJlJTJDdGlkeXZlcnNl" data-listing-file-modified-sort="1787850109238" data-listing-reading-time-sort="20" data-listing-word-count-sort="3941">
 <div class="thumbnail"><a href="./posts/07-reading-and-writing-data/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -487,7 +492,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="bW9kdWxlJTIwMiUyQ3dlZWslMjAyJTJDUiUyQ3Byb2dyYW1taW5nJTJDZHBseXIlMkNoZXJlJTJDdGliYmxlJTJDdGlkeXZlcnNl" data-listing-file-modified-sort="1769532804161" data-listing-reading-time-sort="22" data-listing-word-count-sort="4277">
+<div class="quarto-post image-right" data-index="7" data-categories="bW9kdWxlJTIwMiUyQ3dlZWslMjAyJTJDUiUyQ3Byb2dyYW1taW5nJTJDZHBseXIlMkNoZXJlJTJDdGliYmxlJTJDdGlkeXZlcnNl" data-listing-file-modified-sort="1787850109238" data-listing-reading-time-sort="22" data-listing-word-count-sort="4277">
 <div class="thumbnail"><a href="./posts/08-managing-data-frames-with-tidyverse/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -528,7 +533,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="bW9kdWxlJTIwMiUyQ3dlZWslMjAyJTJDUiUyQ3Byb2dyYW1taW5nJTJDdGlkeXIlMkNoZXJlJTJDdGlkeXZlcnNl" data-listing-file-modified-sort="1769532804161" data-listing-reading-time-sort="9" data-listing-word-count-sort="1670">
+<div class="quarto-post image-right" data-index="8" data-categories="bW9kdWxlJTIwMiUyQ3dlZWslMjAyJTJDUiUyQ3Byb2dyYW1taW5nJTJDdGlkeXIlMkNoZXJlJTJDdGlkeXZlcnNl" data-listing-file-modified-sort="1787850109238" data-listing-reading-time-sort="9" data-listing-word-count-sort="1670">
 <div class="thumbnail"><a href="./posts/09-tidy-data-and-the-tidyverse/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -567,7 +572,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="bW9kdWxlJTIwMiUyQ3dlZWslMjAyJTJDUiUyQ3Byb2dyYW1taW5nJTJDZHBseXIlMkNoZXJlJTJDdGlkeXZlcnNl" data-listing-file-modified-sort="1769532804161" data-listing-reading-time-sort="8" data-listing-word-count-sort="1588">
+<div class="quarto-post image-right" data-index="9" data-categories="bW9kdWxlJTIwMiUyQ3dlZWslMjAyJTJDUiUyQ3Byb2dyYW1taW5nJTJDZHBseXIlMkNoZXJlJTJDdGlkeXZlcnNl" data-listing-file-modified-sort="1787850109239" data-listing-reading-time-sort="8" data-listing-word-count-sort="1588">
 <div class="thumbnail"><a href="./posts/10-joining-data-in-r/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -606,10 +611,10 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="bW9kdWxlJTIwMyUyQ3dlZWslMjAzJTJDUiUyQ3Byb2dyYW1taW5nJTJDZ2dwbG90MiUyQ2RhdGElMjB2aXo=" data-listing-file-modified-sort="1769532804162" data-listing-reading-time-sort="7" data-listing-word-count-sort="1344">
+<div class="quarto-post image-right" data-index="10" data-categories="bW9kdWxlJTIwMyUyQ3dlZWslMjAzJTJDUiUyQ3Byb2dyYW1taW5nJTJDZ2dwbG90MiUyQ2RhdGElMjB2aXo=" data-listing-file-modified-sort="1787850109239" data-listing-reading-time-sort="7" data-listing-word-count-sort="1344">
 <div class="thumbnail"><a href="./posts/11-plotting-systems/index.html" class="no-external">
 
-<p class="card-img-top"><img src="posts/11-plotting-systems/index_files/figure-html/unnamed-chunk-1-1.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img loading='lazy' src="posts/11-plotting-systems/index_files/figure-html/unnamed-chunk-1-1.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -643,10 +648,10 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="bW9kdWxlJTIwMyUyQ3dlZWslMjAzJTJDUiUyQ3Byb2dyYW1taW5nJTJDZ2dwbG90MiUyQ2RhdGElMjB2aXo=" data-listing-file-modified-sort="1769532804162" data-listing-reading-time-sort="18" data-listing-word-count-sort="3567">
+<div class="quarto-post image-right" data-index="11" data-categories="bW9kdWxlJTIwMyUyQ3dlZWslMjAzJTJDUiUyQ3Byb2dyYW1taW5nJTJDZ2dwbG90MiUyQ2RhdGElMjB2aXo=" data-listing-file-modified-sort="1787850109239" data-listing-reading-time-sort="18" data-listing-word-count-sort="3567">
 <div class="thumbnail"><a href="./posts/12-ggplot2-plotting-system-part-1/index.html" class="no-external">
 
-<p class="card-img-top"><img src="posts/12-ggplot2-plotting-system-part-1/index_files/figure-html/unnamed-chunk-1-1.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img loading='lazy' src="posts/12-ggplot2-plotting-system-part-1/index_files/figure-html/unnamed-chunk-1-1.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -680,10 +685,10 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="bW9kdWxlJTIwMyUyQ3dlZWslMjAzJTJDUiUyQ3Byb2dyYW1taW5nJTJDZ2dwbG90MiUyQ2RhdGElMjB2aXo=" data-listing-file-modified-sort="1769532804162" data-listing-reading-time-sort="20" data-listing-word-count-sort="3844">
+<div class="quarto-post image-right" data-index="12" data-categories="bW9kdWxlJTIwMyUyQ3dlZWslMjAzJTJDUiUyQ3Byb2dyYW1taW5nJTJDZ2dwbG90MiUyQ2RhdGElMjB2aXo=" data-listing-file-modified-sort="1787850109239" data-listing-reading-time-sort="20" data-listing-word-count-sort="3844">
 <div class="thumbnail"><a href="./posts/13-ggplot2-plotting-system-part-2/index.html" class="no-external">
 
-<p class="card-img-top"><img src="posts/13-ggplot2-plotting-system-part-2/index_files/figure-html/unnamed-chunk-3-1.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img loading='lazy' src="posts/13-ggplot2-plotting-system-part-2/index_files/figure-html/unnamed-chunk-3-1.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -717,10 +722,10 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="bW9kdWxlJTIwNCUyQ3dlZWslMjA0JTJDUiUyQ3Byb2dyYW1taW5n" data-listing-file-modified-sort="1769532804162" data-listing-reading-time-sort="17" data-listing-word-count-sort="3324">
+<div class="quarto-post image-right" data-index="13" data-categories="bW9kdWxlJTIwNCUyQ3dlZWslMjA0JTJDUiUyQ3Byb2dyYW1taW5n" data-listing-file-modified-sort="1787850109239" data-listing-reading-time-sort="17" data-listing-word-count-sort="3324">
 <div class="thumbnail"><a href="./posts/14-r-nuts-and-bolts/index.html" class="no-external">
 
-<p class="card-img-top"><img src="https://d33wubrfki0l68.cloudfront.net/1d1b4e1cf0dc5f6e80f621b0225354b0addb9578/6ee1c/diagrams/data-structures-overview.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img loading='lazy' src="https://d33wubrfki0l68.cloudfront.net/1d1b4e1cf0dc5f6e80f621b0225354b0addb9578/6ee1c/diagrams/data-structures-overview.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -750,7 +755,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="bW9kdWxlJTIwNCUyQ3dlZWslMjA0JTJDUiUyQ3Byb2dyYW1taW5n" data-listing-file-modified-sort="1769532804162" data-listing-reading-time-sort="11" data-listing-word-count-sort="2139">
+<div class="quarto-post image-right" data-index="14" data-categories="bW9kdWxlJTIwNCUyQ3dlZWslMjA0JTJDUiUyQ3Byb2dyYW1taW5n" data-listing-file-modified-sort="1787850109239" data-listing-reading-time-sort="11" data-listing-word-count-sort="2139">
 <div class="thumbnail"><a href="./posts/15-control-structures/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -783,7 +788,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="bW9kdWxlJTIwNCUyQ3dlZWslMjA0JTJDUiUyQ3Byb2dyYW1taW5nJTJDZnVuY3Rpb25z" data-listing-file-modified-sort="1769532804163" data-listing-reading-time-sort="18" data-listing-word-count-sort="3496">
+<div class="quarto-post image-right" data-index="15" data-categories="bW9kdWxlJTIwNCUyQ3dlZWslMjA0JTJDUiUyQ3Byb2dyYW1taW5nJTJDZnVuY3Rpb25z" data-listing-file-modified-sort="1787850109240" data-listing-reading-time-sort="18" data-listing-word-count-sort="3496">
 <div class="thumbnail"><a href="./posts/16-functions/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -818,7 +823,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="bW9kdWxlJTIwNCUyQ3dlZWslMjA1JTJDUiUyQ3Byb2dyYW1taW5nJTJDZnVuY3Rpb25z" data-listing-file-modified-sort="1769532804163" data-listing-reading-time-sort="22" data-listing-word-count-sort="4334">
+<div class="quarto-post image-right" data-index="16" data-categories="bW9kdWxlJTIwNCUyQ3dlZWslMjA1JTJDUiUyQ3Byb2dyYW1taW5nJTJDZnVuY3Rpb25z" data-listing-file-modified-sort="1787850109240" data-listing-reading-time-sort="22" data-listing-word-count-sort="4334">
 <div class="thumbnail"><a href="./posts/17-loop-functions/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -853,7 +858,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="bW9kdWxlJTIwNCUyQ3dlZWslMjA1JTJDcHJvZ3JhbW1pbmclMkNkZWJ1Z2dpbmc=" data-listing-file-modified-sort="1769532804163" data-listing-reading-time-sort="23" data-listing-word-count-sort="4424">
+<div class="quarto-post image-right" data-index="17" data-categories="bW9kdWxlJTIwNCUyQ3dlZWslMjA1JTJDcHJvZ3JhbW1pbmclMkNkZWJ1Z2dpbmc=" data-listing-file-modified-sort="1787850109240" data-listing-reading-time-sort="23" data-listing-word-count-sort="4424">
 <div class="thumbnail"><a href="./posts/18-debugging-r-code/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -886,7 +891,7 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="bW9kdWxlJTIwNCUyQ3dlZWslMjA1JTJDcHJvZ3JhbW1pbmclMkNkZWJ1Z2dpbmc=" data-listing-file-modified-sort="1769532804163" data-listing-reading-time-sort="12" data-listing-word-count-sort="2295">
+<div class="quarto-post image-right" data-index="18" data-categories="bW9kdWxlJTIwNCUyQ3dlZWslMjA1JTJDcHJvZ3JhbW1pbmclMkNkZWJ1Z2dpbmc=" data-listing-file-modified-sort="1787850109240" data-listing-reading-time-sort="12" data-listing-word-count-sort="2295">
 <div class="thumbnail"><a href="./posts/19-error-handling-and-generation/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -919,10 +924,10 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="bW9kdWxlJTIwNSUyQ3dlZWslMjA2JTJDdGlkeXZlcnNlJTJDUiUyQ3Byb2dyYW1taW5nJTJDZGF0ZXMlMjBhbmQlMjB0aW1lcw==" data-listing-file-modified-sort="1769532804164" data-listing-reading-time-sort="12" data-listing-word-count-sort="2325">
+<div class="quarto-post image-right" data-index="19" data-categories="bW9kdWxlJTIwNSUyQ3dlZWslMjA2JTJDdGlkeXZlcnNlJTJDUiUyQ3Byb2dyYW1taW5nJTJDZGF0ZXMlMjBhbmQlMjB0aW1lcw==" data-listing-file-modified-sort="1787850109241" data-listing-reading-time-sort="12" data-listing-word-count-sort="2325">
 <div class="thumbnail"><a href="./posts/20-working-with-dates-and-times/index.html" class="no-external">
 
-<p class="card-img-top"><img src="posts/20-working-with-dates-and-times/index_files/figure-html/unnamed-chunk-37-1.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img loading='lazy' src="posts/20-working-with-dates-and-times/index_files/figure-html/unnamed-chunk-37-1.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -956,10 +961,10 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="bW9kdWxlJTIwNSUyQ3dlZWslMjA2JTJDdGlkeXZlcnNlJTJDUiUyQ3Byb2dyYW1taW5nJTJDc3RyaW5ncyUyMGFuZCUyMHJlZ2V4" data-listing-file-modified-sort="1769532804164" data-listing-reading-time-sort="16" data-listing-word-count-sort="3010">
+<div class="quarto-post image-right" data-index="20" data-categories="bW9kdWxlJTIwNSUyQ3dlZWslMjA2JTJDdGlkeXZlcnNlJTJDUiUyQ3Byb2dyYW1taW5nJTJDc3RyaW5ncyUyMGFuZCUyMHJlZ2V4" data-listing-file-modified-sort="1787850109241" data-listing-reading-time-sort="16" data-listing-word-count-sort="3010">
 <div class="thumbnail"><a href="./posts/21-regular-expressions/index.html" class="no-external">
 
-<p class="card-img-top"><img src="https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/strings-cheatsheet-thumbs.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img loading='lazy' src="https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/strings-cheatsheet-thumbs.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -993,10 +998,10 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="bW9kdWxlJTIwNSUyQ3dlZWslMjA3JTJDdGlkeXZlcnNlJTJDZmFjdG9ycyUyQ2NhdGVnb3JpYWwlMjB2YXJpYWJsZXM=" data-listing-file-modified-sort="1769532804164" data-listing-reading-time-sort="18" data-listing-word-count-sort="3523">
+<div class="quarto-post image-right" data-index="21" data-categories="bW9kdWxlJTIwNSUyQ3dlZWslMjA3JTJDdGlkeXZlcnNlJTJDZmFjdG9ycyUyQ2NhdGVnb3JpYWwlMjB2YXJpYWJsZXM=" data-listing-file-modified-sort="1787850109241" data-listing-reading-time-sort="18" data-listing-word-count-sort="3523">
 <div class="thumbnail"><a href="./posts/22-working-with-factors/index.html" class="no-external">
 
-<p class="card-img-top"><img src="posts/22-working-with-factors/index_files/figure-html/unnamed-chunk-21-1.png" alt="A bar chart showing the distribution of race. There are ~2000 records with race "Other", 3000 with race "Black", and other 15,000 with race "White"."  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img loading='lazy' src="posts/22-working-with-factors/index_files/figure-html/unnamed-chunk-21-1.png" alt="A bar chart showing the distribution of race. There are ~2000 records with race "Other", 3000 with race "Black", and other 15,000 with race "White"."  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -1028,10 +1033,10 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="bW9kdWxlJTIwNSUyQ3dlZWslMjA3JTJDdGlkeXZlcnNlJTJDdGlkeXRleHQlMkNzZW50aW1lbnQlMjBhbmFseXNpcw==" data-listing-file-modified-sort="1769532804164" data-listing-reading-time-sort="23" data-listing-word-count-sort="4478">
+<div class="quarto-post image-right" data-index="22" data-categories="bW9kdWxlJTIwNSUyQ3dlZWslMjA3JTJDdGlkeXZlcnNlJTJDdGlkeXRleHQlMkNzZW50aW1lbnQlMjBhbmFseXNpcw==" data-listing-file-modified-sort="1787850109241" data-listing-reading-time-sort="23" data-listing-word-count-sort="4478">
 <div class="thumbnail"><a href="./posts/23-working-with-text-sentiment-analysis/index.html" class="no-external">
 
-<p class="card-img-top"><img src="images/peng_preface.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img loading='lazy' src="images/peng_preface.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -1063,10 +1068,10 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="bW9kdWxlJTIwNiUyQ3dlZWslMjA4JTJDYmVzdCUyMHByYWN0aWNlcw==" data-listing-file-modified-sort="1769532804165" data-listing-reading-time-sort="32" data-listing-word-count-sort="6379">
+<div class="quarto-post image-right" data-index="23" data-categories="bW9kdWxlJTIwNiUyQ3dlZWslMjA4JTJDYmVzdCUyMHByYWN0aWNlcw==" data-listing-file-modified-sort="1787850109241" data-listing-reading-time-sort="32" data-listing-word-count-sort="6379">
 <div class="thumbnail"><a href="./posts/24-best-practices-data-analyses/index.html" class="no-external">
 
-<p class="card-img-top"><img src="images/lippman.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img loading='lazy' src="images/lippman.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -1094,10 +1099,10 @@ Leonardo Collado Torres
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="d2VlayUyMDglMkNtb2R1bGUlMjA2JTJDcHl0aG9uJTJDUiUyQ3Byb2dyYW1taW5n" data-listing-file-modified-sort="1769532804165" data-listing-reading-time-sort="14" data-listing-word-count-sort="2696">
+<div class="quarto-post image-right" data-index="24" data-categories="d2VlayUyMDglMkNtb2R1bGUlMjA2JTJDcHl0aG9uJTJDUiUyQ3Byb2dyYW1taW5n" data-listing-file-modified-sort="1787850109242" data-listing-reading-time-sort="14" data-listing-word-count-sort="2696">
 <div class="thumbnail"><a href="./posts/25-python-for-r-users/index.html" class="no-external">
 
-<p class="card-img-top"><img src="posts/25-python-for-r-users/index_files/figure-html/ggplot2-using-py,-1.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img loading='lazy' src="posts/25-python-for-r-users/index_files/figure-html/ggplot2-using-py,-1.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">

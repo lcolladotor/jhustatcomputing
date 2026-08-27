@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,16 @@
 
 <title>25 - Python for R Users – Statistical Computing (BSPH 140.776)</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -70,15 +76,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../icon_32.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a074b3e8914223beb79d52c55ba55bce.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-76f08249a15154a0e09b12d439daf3e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -419,8 +424,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.which</span>(<span class="st">"python3"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                                                python3 
-"/Users/leocollado/.pyenv/versions/3.11.13/bin/python3" </code></pre>
+<pre><code>                                                         python3 
+"/Library/Frameworks/Python.framework/Versions/3.14/bin/python3" </code></pre>
 </div>
 </div>
 <p>The <code>use_python()</code> function enables you to specify an alternate version, for example:</p>
@@ -433,15 +438,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>You can confirm that <code>reticulate</code> is using the correct version of python that you requested using the <code>py_discover_config</code> function:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">use_python</span>(<span class="st">"/Users/leocollado/.pyenv/versions/3.11.13/bin/python3.11"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">use_python</span>(<span class="st">"/Library/Frameworks/Python.framework/Versions/3.14/bin/python3"</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">py_discover_config</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>python:         /Users/leocollado/.pyenv/versions/3.11.13/bin/python3.11
-libpython:      /Users/leocollado/.pyenv/versions/3.11.13/lib/libpython3.11.dylib
-pythonhome:     /Users/leocollado/.pyenv/versions/3.11.13:/Users/leocollado/.pyenv/versions/3.11.13
-version:        3.11.13 (main, Aug 28 2025, 10:40:47) [Clang 17.0.0 (clang-1700.0.13.5)]
-numpy:          /Users/leocollado/.pyenv/versions/3.11.13/lib/python3.11/site-packages/numpy
-numpy_version:  2.3.2
+<pre><code>python:         /Library/Frameworks/Python.framework/Versions/3.14/bin/python3
+libpython:      /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/config-3.14-darwin/libpython3.14.dylib
+pythonhome:     /Library/Frameworks/Python.framework/Versions/3.14:/Library/Frameworks/Python.framework/Versions/3.14
+version:        3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]
+numpy:          /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/numpy
+numpy_version:  2.5.2
 
 NOTE: Python version was forced by use_python() function</code></pre>
 </div>
@@ -779,12 +784,12 @@ Baby shark, doo doo doo doo doo doo!</code></pre>
 <p>Next, we <strong>use Python to read in the file</strong> and do some data wrangling</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co">## If needed, here are the commands to install pandas and scikit-learn</span></span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/Users/leocollado/.pyenv/versions/3.11.13/bin/pip</span> install pandas</span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/Users/leocollado/.pyenv/versions/3.11.13/bin/pip</span> install scikit-learn</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip3</span> install pandas</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip3</span> install scikit-learn</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>flights_path <span class="op">=</span> <span class="st">"/Users/leocollado/Dropbox/Code/jhustatcomputing/data/flights.csv"</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>flights_path <span class="op">=</span> <span class="st">"/Users/leo.collado/Dropbox/Code/jhustatcomputing/data/flights.csv"</span></span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>flights <span class="op">=</span> pandas.read_csv(flights_path)</span>
 <span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>flights <span class="op">=</span> flights[flights[<span class="st">'dest'</span>] <span class="op">==</span> <span class="st">"ORD"</span>]</span>
 <span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>flights <span class="op">=</span> flights[[<span class="st">'carrier'</span>, <span class="st">'dep_delay'</span>, <span class="st">'arr_delay'</span>]]</span>
@@ -820,7 +825,7 @@ Baby shark, doo doo doo doo doo doo!</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>py<span class="sc">$</span>flights_path</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "/Users/leocollado/Dropbox/Code/jhustatcomputing/data/flights.csv"</code></pre>
+<pre><code>[1] "/Users/leo.collado/Dropbox/Code/jhustatcomputing/data/flights.csv"</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1072,89 +1077,94 @@ dttm  (1): time_hour
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.5.1 (2025-06-13)
- os       macOS Sequoia 15.6.1
- system   aarch64, darwin20
+ version  R version 4.6.1 (2026-06-24)
+ os       macOS Tahoe 26.6.2
+ system   aarch64, darwin23
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2025-10-13
- pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
- quarto   1.4.550 @ /Applications/quarto/bin/quarto
+ date     2026-08-27
+ pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package      * version date (UTC) lib source
- bit            4.6.0   2025-03-06 [1] CRAN (R 4.5.0)
- bit64          4.6.0-1 2025-01-16 [1] CRAN (R 4.5.0)
- cli            3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
- colorout     * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
- crayon         1.5.3   2024-06-20 [1] CRAN (R 4.5.0)
- dichromat      2.0-0.1 2022-05-02 [1] CRAN (R 4.5.0)
- digest         0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
- dplyr        * 1.1.4   2023-11-17 [1] CRAN (R 4.5.0)
- evaluate       1.0.5   2025-08-27 [1] CRAN (R 4.5.0)
- farver         2.1.2   2024-05-13 [1] CRAN (R 4.5.0)
- fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
- forcats      * 1.0.1   2025-09-25 [1] CRAN (R 4.5.0)
- generics       0.1.4   2025-05-09 [1] CRAN (R 4.5.0)
- ggplot2      * 4.0.0   2025-09-11 [1] CRAN (R 4.5.0)
- glue           1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
- gtable         0.3.6   2024-10-25 [1] CRAN (R 4.5.0)
- here         * 1.0.2   2025-09-15 [1] CRAN (R 4.5.0)
- hms            1.1.3   2023-03-21 [1] CRAN (R 4.5.0)
- htmltools      0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
- htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
- jsonlite       2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
- knitr          1.50    2025-03-16 [1] CRAN (R 4.5.0)
- labeling       0.4.3   2023-08-29 [1] CRAN (R 4.5.0)
- lattice        0.22-7  2025-04-02 [1] CRAN (R 4.5.1)
- lifecycle      1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
- lubridate    * 1.9.4   2024-12-08 [1] CRAN (R 4.5.0)
- magrittr       2.0.4   2025-09-12 [1] CRAN (R 4.5.0)
- Matrix         1.7-4   2025-08-28 [1] CRAN (R 4.5.0)
- nycflights13   1.0.2   2021-04-12 [1] CRAN (R 4.5.0)
- pillar         1.11.1  2025-09-17 [1] CRAN (R 4.5.0)
- pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.5.0)
- png            0.1-8   2022-11-29 [1] CRAN (R 4.5.0)
- purrr        * 1.1.0   2025-07-10 [1] CRAN (R 4.5.0)
- R6             2.6.1   2025-02-15 [1] CRAN (R 4.5.0)
- RColorBrewer   1.1-3   2022-04-03 [1] CRAN (R 4.5.0)
- Rcpp           1.1.0   2025-07-02 [1] CRAN (R 4.5.0)
- readr        * 2.1.5   2024-01-10 [1] CRAN (R 4.5.0)
- reticulate   * 1.43.0  2025-07-21 [1] CRAN (R 4.5.0)
- rlang          1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
- rmarkdown      2.29    2024-11-04 [1] CRAN (R 4.5.0)
- rprojroot      2.1.1   2025-08-26 [1] CRAN (R 4.5.0)
- S7             0.2.0   2024-11-07 [1] CRAN (R 4.5.0)
- scales         1.4.0   2025-04-24 [1] CRAN (R 4.5.0)
- sessioninfo    1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
- stringi        1.8.7   2025-03-27 [1] CRAN (R 4.5.0)
- stringr      * 1.5.2   2025-09-08 [1] CRAN (R 4.5.0)
- tibble       * 3.3.0   2025-06-08 [1] CRAN (R 4.5.0)
- tidyr        * 1.3.1   2024-01-24 [1] CRAN (R 4.5.0)
- tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.5.0)
- tidyverse    * 2.0.0   2023-02-22 [1] CRAN (R 4.5.0)
- timechange     0.3.0   2024-01-18 [1] CRAN (R 4.5.0)
- tzdb           0.5.0   2025-03-15 [1] CRAN (R 4.5.0)
- utf8           1.2.6   2025-06-08 [1] CRAN (R 4.5.0)
- vctrs          0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
- vroom          1.6.6   2025-09-19 [1] CRAN (R 4.5.0)
- withr          3.0.2   2024-10-28 [1] CRAN (R 4.5.0)
- xfun           0.53    2025-08-19 [1] CRAN (R 4.5.0)
- yaml           2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
+ bit            4.6.0   2025-03-06 [1] CRAN (R 4.6.0)
+ bit64          4.8.2   2026-05-19 [1] CRAN (R 4.6.0)
+ cli            3.6.6   2026-04-09 [1] CRAN (R 4.6.0)
+ colorout     * 1.3-3   2026-07-30 [1] Github (jalvesaq/colorout@64863bb)
+ coro           1.1.0   2024-11-05 [1] CRAN (R 4.6.0)
+ crayon         1.5.3   2024-06-20 [1] CRAN (R 4.6.0)
+ dichromat      2.0-1   2026-07-22 [1] CRAN (R 4.6.1)
+ digest         0.6.39  2025-11-19 [1] CRAN (R 4.6.0)
+ dplyr        * 1.2.1   2026-04-03 [1] CRAN (R 4.6.0)
+ ellmer         0.4.2   2026-07-13 [1] CRAN (R 4.6.1)
+ evaluate       1.0.5   2025-08-27 [1] CRAN (R 4.6.0)
+ farver         2.1.2   2024-05-13 [1] CRAN (R 4.6.0)
+ fastmap        1.2.0   2024-05-15 [1] CRAN (R 4.6.0)
+ forcats      * 1.0.1   2025-09-25 [1] CRAN (R 4.6.0)
+ generics       0.1.4   2025-05-09 [1] CRAN (R 4.6.0)
+ ggplot2      * 4.0.3   2026-04-22 [1] CRAN (R 4.6.0)
+ gitcreds       0.1.2   2022-09-08 [1] CRAN (R 4.6.0)
+ glue           1.8.1   2026-04-17 [1] CRAN (R 4.6.0)
+ gtable         0.3.6   2024-10-25 [1] CRAN (R 4.6.0)
+ here         * 1.0.2   2025-09-15 [1] CRAN (R 4.6.0)
+ hms            1.1.4   2025-10-17 [1] CRAN (R 4.6.0)
+ htmltools      0.5.9   2025-12-04 [1] CRAN (R 4.6.0)
+ htmlwidgets    1.6.4   2023-12-06 [1] CRAN (R 4.6.0)
+ httr2          1.3.0   2026-07-13 [1] CRAN (R 4.6.1)
+ jsonlite       2.0.0   2025-03-27 [1] CRAN (R 4.6.0)
+ knitr          1.51    2025-12-20 [1] CRAN (R 4.6.0)
+ labeling       0.4.3   2023-08-29 [1] CRAN (R 4.6.0)
+ lattice        0.22-9  2026-02-09 [1] CRAN (R 4.6.1)
+ lifecycle      1.0.5   2026-01-08 [1] CRAN (R 4.6.0)
+ lubridate    * 1.9.5   2026-02-04 [1] CRAN (R 4.6.0)
+ magrittr       2.0.5   2026-04-04 [1] CRAN (R 4.6.0)
+ Matrix         1.7-6   2026-07-25 [1] CRAN (R 4.6.1)
+ nycflights13   1.0.2   2021-04-12 [1] CRAN (R 4.6.0)
+ otel           0.2.0   2025-08-29 [1] CRAN (R 4.6.0)
+ pillar         1.11.1  2025-09-17 [1] CRAN (R 4.6.0)
+ pkgconfig      2.0.3   2019-09-22 [1] CRAN (R 4.6.0)
+ png            0.1-9   2026-03-15 [1] CRAN (R 4.6.0)
+ purrr        * 1.2.2   2026-04-10 [1] CRAN (R 4.6.0)
+ R6             2.6.1   2025-02-15 [1] CRAN (R 4.6.0)
+ RColorBrewer   1.1-3   2022-04-03 [1] CRAN (R 4.6.0)
+ Rcpp           1.1.2   2026-07-05 [1] CRAN (R 4.6.1)
+ readr        * 2.2.0   2026-02-19 [1] CRAN (R 4.6.0)
+ reticulate   * 1.46.0  2026-04-09 [1] CRAN (R 4.6.0)
+ rlang          1.3.0   2026-07-05 [1] CRAN (R 4.6.1)
+ rmarkdown      2.31    2026-03-26 [1] CRAN (R 4.6.0)
+ rprojroot      2.1.1   2025-08-26 [1] CRAN (R 4.6.0)
+ S7             0.2.2   2026-04-22 [1] CRAN (R 4.6.0)
+ scales         1.4.0   2025-04-24 [1] CRAN (R 4.6.0)
+ sessioninfo    1.2.4   2026-06-04 [1] CRAN (R 4.6.0)
+ stringi        1.8.9   2026-08-04 [1] CRAN (R 4.6.1)
+ stringr      * 1.6.0   2025-11-04 [1] CRAN (R 4.6.0)
+ tibble       * 3.3.1   2026-01-11 [1] CRAN (R 4.6.0)
+ tidyr        * 1.3.2   2025-12-19 [1] CRAN (R 4.6.0)
+ tidyselect     1.2.1   2024-03-11 [1] CRAN (R 4.6.0)
+ tidyverse    * 2.0.0   2023-02-22 [1] CRAN (R 4.6.0)
+ timechange     0.4.0   2026-01-29 [1] CRAN (R 4.6.0)
+ tzdb           0.5.0   2025-03-15 [1] CRAN (R 4.6.0)
+ utf8           1.2.6   2025-06-08 [1] CRAN (R 4.6.0)
+ vctrs          0.7.3   2026-04-11 [1] CRAN (R 4.6.0)
+ vroom          1.7.1   2026-03-31 [1] CRAN (R 4.6.0)
+ withr          3.0.3   2026-06-19 [1] CRAN (R 4.6.0)
+ xfun           0.60    2026-07-09 [1] CRAN (R 4.6.1)
+ yaml           2.3.12  2025-12-10 [1] CRAN (R 4.6.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.6/Resources/library
  * ── Packages attached to the search path.
 
 ─ Python configuration ───────────────────────────────────────────────────────────────────────────────────────────────
- python:         /Users/leocollado/.pyenv/versions/3.11.13/bin/python3.11
- libpython:      /Users/leocollado/.pyenv/versions/3.11.13/lib/libpython3.11.dylib
- pythonhome:     /Users/leocollado/.pyenv/versions/3.11.13:/Users/leocollado/.pyenv/versions/3.11.13
- version:        3.11.13 (main, Aug 28 2025, 10:40:47) [Clang 17.0.0 (clang-1700.0.13.5)]
- numpy:          /Users/leocollado/.pyenv/versions/3.11.13/lib/python3.11/site-packages/numpy
- numpy_version:  2.3.2
+ python:         /Library/Frameworks/Python.framework/Versions/3.14/bin/python3
+ libpython:      /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/config-3.14-darwin/libpython3.14.dylib
+ pythonhome:     /Library/Frameworks/Python.framework/Versions/3.14:/Library/Frameworks/Python.framework/Versions/3.14
+ version:        3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]
+ numpy:          /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/numpy
+ numpy_version:  2.5.2
  
  NOTE: Python version was forced by use_python() function
 

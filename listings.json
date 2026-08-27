@@ -1,5 +1,14 @@
 [
   {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/project-0/index.html",
+      "/projects/project-1/index.html",
+      "/projects/project-2/index.html",
+      "/projects/project-3/index.html"
+    ]
+  },
+  {
     "listing": "/lectures.html",
     "items": [
       "/posts/01-welcome/index.html",
@@ -27,15 +36,6 @@
       "/posts/23-working-with-text-sentiment-analysis/index.html",
       "/posts/24-best-practices-data-analyses/index.html",
       "/posts/25-python-for-r-users/index.html"
-    ]
-  },
-  {
-    "listing": "/projects.html",
-    "items": [
-      "/projects/project-0/index.html",
-      "/projects/project-1/index.html",
-      "/projects/project-2/index.html",
-      "/projects/project-3/index.html"
     ]
   }
 ]

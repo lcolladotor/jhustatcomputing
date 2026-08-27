@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,16 @@
 
 <title>12 - The ggplot2 plotting system: qplot() – Statistical Computing (BSPH 140.776)</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -70,15 +76,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../icon_32.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a074b3e8914223beb79d52c55ba55bce.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-76f08249a15154a0e09b12d439daf3e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -669,9 +674,18 @@ $ class        &lt;chr&gt; "compact", "compact", "compact", "compact", "compact"
 <p>[<strong>Source</strong>: <a href="https://github.com/allisonhorst/stats-illustrations">Artwork by Allison Horst</a>]</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'palmerpenguins'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:datasets':
+
+    penguins, penguins_raw</code></pre>
+</div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(penguins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(penguins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 344
 Columns: 8
@@ -687,8 +701,8 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <p>If we wanted to count the number of penguins for each of the three species, we can use the <code>count()</code> function in <code>dplyr</code>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">%&gt;%</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(species)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(species)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   species       n
@@ -713,11 +727,11 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <div class="callout-body-container callout-body">
 <p>If we wanted to use <code>qplot()</code> to map <code>flipper_length_mm</code> and <code>bill_length_mm</code> to the x and y coordinates, what would we do?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># try it yourself</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># try it yourself</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Now try mapping color to the <code>species</code> variable on top of the code you just wrote:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># try it yourself</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># try it yourself</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -738,7 +752,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(displ, hwy, <span class="at">data =</span> mpg, <span class="at">geom =</span> <span class="fu">c</span>(<span class="st">"point"</span>, <span class="st">"smooth"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(displ, hwy, <span class="at">data =</span> mpg, <span class="at">geom =</span> <span class="fu">c</span>(<span class="st">"point"</span>, <span class="st">"smooth"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
 </div>
@@ -770,7 +784,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <p>Look at what happens if we <em>do not</em> include the <code>point</code> geom.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(displ, hwy, <span class="at">data =</span> mpg, <span class="at">geom =</span> <span class="fu">c</span>(<span class="st">"smooth"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(displ, hwy, <span class="at">data =</span> mpg, <span class="at">geom =</span> <span class="fu">c</span>(<span class="st">"smooth"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
 </div>
@@ -797,7 +811,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p>Let’s <strong>add a smoother</strong> to our <code>palmerpenguins</code> dataset example.</p>
 <p>Using the code we previously wrote mapping variables to points and color, add a “point” and “smooth” geom:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># try it yourself</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># try it yourself</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -818,7 +832,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <div class="callout-body-container callout-body">
 <p>We can make a histogram of the highway mileage data and stratify on the drive class. So technically this is three histograms on top of each other.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(hwy, <span class="at">data =</span> mpg, <span class="at">fill =</span> drv, <span class="at">binwidth =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(hwy, <span class="at">data =</span> mpg, <span class="at">fill =</span> drv, <span class="at">binwidth =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -842,14 +856,14 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <div class="callout-body-container callout-body">
 <p>Notice, I used <code>fill</code> here to map color to the <code>drv</code> variable. Why is this? What happens when you use <code>color</code> instead?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># try it yourself</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># try it yourself</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
 <p>Having the different colors for each drive class is nice, but the three histograms can be a bit difficult to separate out.</p>
 <p><strong>Side-by-side boxplots</strong> are one solution to this problem.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(drv, hwy, <span class="at">data =</span> mpg, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(drv, hwy, <span class="at">data =</span> mpg, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -894,7 +908,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <div class="callout-body-container callout-body">
 <p>Here, we just want three rows of histograms (and just one column), one for each drive class, so we specify <code>drv</code> on the left hand side and <code>.</code> on the right hand side indicating that there’s no variable there (it’s empty).</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(hwy, <span class="at">data =</span> mpg, <span class="at">facets =</span> drv <span class="sc">~</span> ., <span class="at">binwidth =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(hwy, <span class="at">data =</span> mpg, <span class="at">facets =</span> drv <span class="sc">~</span> ., <span class="at">binwidth =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -909,7 +923,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p>We could also look at <strong>more data using facets</strong>, so instead of histograms we could look at scatter plots of engine displacement and highway mileage by drive class.</p>
 <p>Here, we put the <code>drv</code> variable on the right hand side to indicate that we want a column for each drive class (as opposed to splitting by rows like we did above).</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(displ, hwy, <span class="at">data =</span> mpg, <span class="at">facets =</span> . <span class="sc">~</span> drv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(displ, hwy, <span class="at">data =</span> mpg, <span class="at">facets =</span> . <span class="sc">~</span> drv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -921,8 +935,8 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <p>What if you wanted to <strong>add a smoother to each one of those panels</strong>? Simple, you literally just add the smoother as another <strong>geom</strong>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(displ, hwy, <span class="at">data =</span> mpg, <span class="at">facets =</span> . <span class="sc">~</span> drv) <span class="sc">+</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(displ, hwy, <span class="at">data =</span> mpg, <span class="at">facets =</span> . <span class="sc">~</span> drv) <span class="sc">+</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -963,11 +977,11 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <li>Add a linear regression line to each the types of <code>species</code></li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># try it yourself</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># try it yourself</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Next, make a histogram of the <code>body_mass_g</code> for each of the species colored by the three species.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># try it yourself</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># try it yourself</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -991,12 +1005,12 @@ Click here for case study practicing the <code>qplot()</code> function.
 </div>
 <p>Here is a snapshot of what the data look like.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>here() starts at /Users/leocollado/Dropbox/Code/jhustatcomputing2023</code></pre>
+<pre><code>here() starts at /Users/leo.collado/Dropbox/Code/jhustatcomputing</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>maacs <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"maacs_sim.csv"</span>), <span class="at">col_types =</span> <span class="st">"icnn"</span>)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>maacs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>maacs <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"maacs_sim.csv"</span>), <span class="at">col_types =</span> <span class="st">"icnn"</span>)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>maacs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 750 × 4
       id mopos  pm25    eno
@@ -1022,9 +1036,9 @@ Click here for case study practicing the <code>qplot()</code> function.
 </ul>
 <p>The outcome of interest for this analysis will be exhaled nitric oxide (eNO), which is a measure of pulmonary inflamation. We can get a sense of how eNO is distributed in this population by making a quick histogram of the variable. Here, we take the log of eNO because some right-skew in the data.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(eno), <span class="at">data =</span> maacs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(eno), <span class="at">data =</span> maacs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
 </div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1037,9 +1051,9 @@ Click here for case study practicing the <code>qplot()</code> function.
 </div>
 <p>A quick glance suggests that the histogram is a bit “fat”, suggesting that there might be multiple groups of people being lumped together. We can stratify the histogram by whether they are allergic to mouse.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">fill =</span> mopos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">fill =</span> mopos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
 </div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1053,7 +1067,7 @@ Click here for case study practicing the <code>qplot()</code> function.
 <p>We can see from this plot that the non-allergic subjects are shifted slightly to the left, indicating a lower eNO and less pulmonary inflammation. That said, there is significant overlap between the two groups.</p>
 <p>An alternative to histograms is a density smoother, which sometimes can be easier to visualize when there are multiple groups. Here is a density smooth of the entire study population.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">geom =</span> <span class="st">"density"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">geom =</span> <span class="st">"density"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1065,7 +1079,7 @@ Click here for case study practicing the <code>qplot()</code> function.
 </div>
 <p>And here are the densities straitified by allergic status. We can map the color aesthetic to the <code>mopos</code> variable.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">geom =</span> <span class="st">"density"</span>, <span class="at">color =</span> mopos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">geom =</span> <span class="st">"density"</span>, <span class="at">color =</span> mopos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1078,7 +1092,7 @@ Click here for case study practicing the <code>qplot()</code> function.
 <p>These tell the same story as the stratified histograms, which should come as no surprise.</p>
 <p>Now we can examine the indoor environment and its relationship to eNO. Here, we use the level of indoor PM2.5 as a measure of indoor environment air quality. We can make a simple scatterplot of PM2.5 and eNO.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">geom =</span> <span class="fu">c</span>(<span class="st">"point"</span>, <span class="st">"smooth"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">geom =</span> <span class="fu">c</span>(<span class="st">"point"</span>, <span class="st">"smooth"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
 </div>
@@ -1094,7 +1108,7 @@ Click here for case study practicing the <code>qplot()</code> function.
 <p>The relationship appears modest at best, as there is substantial noise in the data. However, one question that we might be interested in is whether allergic individuals are perhaps more sensitive to PM2.5 inhalation than non-allergic individuals. To examine that question we can stratify the data into two groups.</p>
 <p>This first plot uses different plot symbols for the two groups and overlays them on a single canvas. We can do this by mapping the <code>mopos</code> variable to the <code>shape</code> aesthetic.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">shape =</span> mopos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">shape =</span> mopos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1107,7 +1121,7 @@ Click here for case study practicing the <code>qplot()</code> function.
 <p>Because there is substantial overlap in the data it is a bit challenging to discern the circles from the triangles. Part of the reason might be that all of the symbols are the same color (black).</p>
 <p>We can plot each group a different color to see if that helps.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">color =</span> mopos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">color =</span> mopos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1119,8 +1133,8 @@ Click here for case study practicing the <code>qplot()</code> function.
 </div>
 <p>This is slightly better but the substantial overlap makes it difficult to discern any trends in the data. For this we need to add a smoother of some sort. Here we add a linear regression line (a type of smoother) to each group to see if there’s any difference.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">color =</span> mopos) <span class="sc">+</span></span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">color =</span> mopos) <span class="sc">+</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
@@ -1135,8 +1149,8 @@ Click here for case study practicing the <code>qplot()</code> function.
 <p>Here we see quite clearly that the red group and the green group exhibit rather different relationships between PM2.5 and eNO. For the non-allergic individuals, there appears to be a slightly negative relationship between PM2.5 and eNO and for the allergic individuals, there is a positive relationship. This suggests a strong interaction between PM2.5 and allergic status, an hypothesis perhaps worth following up on in greater detail than this brief exploratory analysis.</p>
 <p>Another, and perhaps more clear, way to visualize this interaction is to use separate panels for the non-allergic and allergic individuals using the <code>facets</code> argument to <code>qplot()</code>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">facets =</span> . <span class="sc">~</span> mopos) <span class="sc">+</span></span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="fu">log</span>(pm25), <span class="fu">log</span>(eno), <span class="at">data =</span> maacs, <span class="at">facets =</span> . <span class="sc">~</span> mopos) <span class="sc">+</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
@@ -1167,7 +1181,7 @@ Click here for case study practicing the <code>qplot()</code> function.
 <li>What is gone wrong with this code? Why are the points not blue?</li>
 </ol>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy, <span class="at">data =</span> mpg, <span class="at">color =</span> <span class="st">"blue"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy, <span class="at">data =</span> mpg, <span class="at">color =</span> <span class="st">"blue"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1206,84 +1220,90 @@ Tip
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.3.1 (2023-06-16)
- os       macOS Ventura 13.5
- system   aarch64, darwin20
+ version  R version 4.6.1 (2026-06-24)
+ os       macOS Tahoe 26.6.2
+ system   aarch64, darwin23
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2023-09-12
- pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2026-08-27
+ pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package        * version date (UTC) lib source
- bit              4.0.5   2022-11-15 [1] CRAN (R 4.3.0)
- bit64            4.0.5   2020-08-30 [1] CRAN (R 4.3.0)
- cli              3.6.1   2023-03-23 [1] CRAN (R 4.3.0)
- colorout         1.2-2   2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
- colorspace       2.1-0   2023-01-23 [1] CRAN (R 4.3.0)
- crayon           1.5.2   2022-09-29 [1] CRAN (R 4.3.0)
- digest           0.6.33  2023-07-07 [1] CRAN (R 4.3.0)
- dplyr          * 1.1.3   2023-09-03 [1] CRAN (R 4.3.0)
- evaluate         0.21    2023-05-05 [1] CRAN (R 4.3.0)
- fansi            1.0.4   2023-01-22 [1] CRAN (R 4.3.0)
- farver           2.1.1   2022-07-06 [1] CRAN (R 4.3.0)
- fastmap          1.1.1   2023-02-24 [1] CRAN (R 4.3.0)
- forcats        * 1.0.0   2023-01-29 [1] CRAN (R 4.3.0)
- generics         0.1.3   2022-07-05 [1] CRAN (R 4.3.0)
- ggplot2        * 3.4.3   2023-08-14 [1] CRAN (R 4.3.0)
- glue             1.6.2   2022-02-24 [1] CRAN (R 4.3.0)
- gtable           0.3.4   2023-08-21 [1] CRAN (R 4.3.0)
- here           * 1.0.1   2020-12-13 [1] CRAN (R 4.3.0)
- hms              1.1.3   2023-03-21 [1] CRAN (R 4.3.0)
- htmltools        0.5.6   2023-08-10 [1] CRAN (R 4.3.0)
- htmlwidgets      1.6.2   2023-03-17 [1] CRAN (R 4.3.0)
- jsonlite         1.8.7   2023-06-29 [1] CRAN (R 4.3.0)
- knitr            1.43    2023-05-25 [1] CRAN (R 4.3.0)
- labeling         0.4.3   2023-08-29 [1] CRAN (R 4.3.0)
- lattice          0.21-8  2023-04-05 [1] CRAN (R 4.3.1)
- lifecycle        1.0.3   2022-10-07 [1] CRAN (R 4.3.0)
- lubridate      * 1.9.2   2023-02-10 [1] CRAN (R 4.3.0)
- magrittr         2.0.3   2022-03-30 [1] CRAN (R 4.3.0)
- Matrix           1.6-1   2023-08-14 [1] CRAN (R 4.3.0)
- mgcv             1.9-0   2023-07-11 [1] CRAN (R 4.3.0)
- munsell          0.5.0   2018-06-12 [1] CRAN (R 4.3.0)
- nlme             3.1-163 2023-08-09 [1] CRAN (R 4.3.0)
- palmerpenguins * 0.1.1   2022-08-15 [1] CRAN (R 4.3.0)
- pillar           1.9.0   2023-03-22 [1] CRAN (R 4.3.0)
- pkgconfig        2.0.3   2019-09-22 [1] CRAN (R 4.3.0)
- purrr          * 1.0.2   2023-08-10 [1] CRAN (R 4.3.0)
- R6               2.5.1   2021-08-19 [1] CRAN (R 4.3.0)
- readr          * 2.1.4   2023-02-10 [1] CRAN (R 4.3.0)
- rlang            1.1.1   2023-04-28 [1] CRAN (R 4.3.0)
- rmarkdown        2.24    2023-08-14 [1] CRAN (R 4.3.1)
- rprojroot        2.0.3   2022-04-02 [1] CRAN (R 4.3.0)
- rstudioapi       0.15.0  2023-07-07 [1] CRAN (R 4.3.0)
- scales           1.2.1   2022-08-20 [1] CRAN (R 4.3.0)
- sessioninfo      1.2.2   2021-12-06 [1] CRAN (R 4.3.0)
- stringi          1.7.12  2023-01-11 [1] CRAN (R 4.3.0)
- stringr        * 1.5.0   2022-12-02 [1] CRAN (R 4.3.0)
- tibble         * 3.2.1   2023-03-20 [1] CRAN (R 4.3.0)
- tidyr          * 1.3.0   2023-01-24 [1] CRAN (R 4.3.0)
- tidyselect       1.2.0   2022-10-10 [1] CRAN (R 4.3.0)
- tidyverse      * 2.0.0   2023-02-22 [1] CRAN (R 4.3.0)
- timechange       0.2.0   2023-01-11 [1] CRAN (R 4.3.0)
- tzdb             0.4.0   2023-05-12 [1] CRAN (R 4.3.0)
- utf8             1.2.3   2023-01-31 [1] CRAN (R 4.3.0)
- vctrs            0.6.3   2023-06-14 [1] CRAN (R 4.3.0)
- vroom            1.6.3   2023-04-28 [1] CRAN (R 4.3.0)
- withr            2.5.0   2022-03-03 [1] CRAN (R 4.3.0)
- xfun             0.40    2023-08-09 [1] CRAN (R 4.3.0)
- yaml             2.3.7   2023-01-23 [1] CRAN (R 4.3.0)
+ bit              4.6.0   2025-03-06 [1] CRAN (R 4.6.0)
+ bit64            4.8.2   2026-05-19 [1] CRAN (R 4.6.0)
+ cli              3.6.6   2026-04-09 [1] CRAN (R 4.6.0)
+ colorout       * 1.3-3   2026-07-30 [1] Github (jalvesaq/colorout@64863bb)
+ coro             1.1.0   2024-11-05 [1] CRAN (R 4.6.0)
+ crayon           1.5.3   2024-06-20 [1] CRAN (R 4.6.0)
+ dichromat        2.0-1   2026-07-22 [1] CRAN (R 4.6.1)
+ digest           0.6.39  2025-11-19 [1] CRAN (R 4.6.0)
+ dplyr          * 1.2.1   2026-04-03 [1] CRAN (R 4.6.0)
+ ellmer           0.4.2   2026-07-13 [1] CRAN (R 4.6.1)
+ evaluate         1.0.5   2025-08-27 [1] CRAN (R 4.6.0)
+ farver           2.1.2   2024-05-13 [1] CRAN (R 4.6.0)
+ fastmap          1.2.0   2024-05-15 [1] CRAN (R 4.6.0)
+ forcats        * 1.0.1   2025-09-25 [1] CRAN (R 4.6.0)
+ generics         0.1.4   2025-05-09 [1] CRAN (R 4.6.0)
+ ggplot2        * 4.0.3   2026-04-22 [1] CRAN (R 4.6.0)
+ gitcreds         0.1.2   2022-09-08 [1] CRAN (R 4.6.0)
+ glue             1.8.1   2026-04-17 [1] CRAN (R 4.6.0)
+ gtable           0.3.6   2024-10-25 [1] CRAN (R 4.6.0)
+ here           * 1.0.2   2025-09-15 [1] CRAN (R 4.6.0)
+ hms              1.1.4   2025-10-17 [1] CRAN (R 4.6.0)
+ htmltools        0.5.9   2025-12-04 [1] CRAN (R 4.6.0)
+ htmlwidgets      1.6.4   2023-12-06 [1] CRAN (R 4.6.0)
+ httr2            1.3.0   2026-07-13 [1] CRAN (R 4.6.1)
+ jsonlite         2.0.0   2025-03-27 [1] CRAN (R 4.6.0)
+ knitr            1.51    2025-12-20 [1] CRAN (R 4.6.0)
+ labeling         0.4.3   2023-08-29 [1] CRAN (R 4.6.0)
+ lattice          0.22-9  2026-02-09 [1] CRAN (R 4.6.1)
+ lifecycle        1.0.5   2026-01-08 [1] CRAN (R 4.6.0)
+ lubridate      * 1.9.5   2026-02-04 [1] CRAN (R 4.6.0)
+ magrittr         2.0.5   2026-04-04 [1] CRAN (R 4.6.0)
+ Matrix           1.7-6   2026-07-25 [1] CRAN (R 4.6.1)
+ mgcv             1.9-4   2025-11-07 [1] CRAN (R 4.6.1)
+ nlme             3.1-170 2026-07-15 [1] CRAN (R 4.6.1)
+ otel             0.2.0   2025-08-29 [1] CRAN (R 4.6.0)
+ palmerpenguins * 0.1.1   2022-08-15 [1] CRAN (R 4.6.0)
+ pillar           1.11.1  2025-09-17 [1] CRAN (R 4.6.0)
+ pkgconfig        2.0.3   2019-09-22 [1] CRAN (R 4.6.0)
+ purrr          * 1.2.2   2026-04-10 [1] CRAN (R 4.6.0)
+ R6               2.6.1   2025-02-15 [1] CRAN (R 4.6.0)
+ RColorBrewer     1.1-3   2022-04-03 [1] CRAN (R 4.6.0)
+ readr          * 2.2.0   2026-02-19 [1] CRAN (R 4.6.0)
+ rlang            1.3.0   2026-07-05 [1] CRAN (R 4.6.1)
+ rmarkdown        2.31    2026-03-26 [1] CRAN (R 4.6.0)
+ rprojroot        2.1.1   2025-08-26 [1] CRAN (R 4.6.0)
+ S7               0.2.2   2026-04-22 [1] CRAN (R 4.6.0)
+ scales           1.4.0   2025-04-24 [1] CRAN (R 4.6.0)
+ sessioninfo      1.2.4   2026-06-04 [1] CRAN (R 4.6.0)
+ stringi          1.8.9   2026-08-04 [1] CRAN (R 4.6.1)
+ stringr        * 1.6.0   2025-11-04 [1] CRAN (R 4.6.0)
+ tibble         * 3.3.1   2026-01-11 [1] CRAN (R 4.6.0)
+ tidyr          * 1.3.2   2025-12-19 [1] CRAN (R 4.6.0)
+ tidyselect       1.2.1   2024-03-11 [1] CRAN (R 4.6.0)
+ tidyverse      * 2.0.0   2023-02-22 [1] CRAN (R 4.6.0)
+ timechange       0.4.0   2026-01-29 [1] CRAN (R 4.6.0)
+ tzdb             0.5.0   2025-03-15 [1] CRAN (R 4.6.0)
+ utf8             1.2.6   2025-06-08 [1] CRAN (R 4.6.0)
+ vctrs            0.7.3   2026-04-11 [1] CRAN (R 4.6.0)
+ vroom            1.7.1   2026-03-31 [1] CRAN (R 4.6.0)
+ withr            3.0.3   2026-06-19 [1] CRAN (R 4.6.0)
+ xfun             0.60    2026-07-09 [1] CRAN (R 4.6.1)
+ yaml             2.3.12  2025-12-10 [1] CRAN (R 4.6.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.6/Resources/library
+ * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>

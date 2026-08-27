@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,16 @@
 
 <title>07 - Reading and Writing data – Statistical Computing (BSPH 140.776)</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -70,15 +76,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../icon_32.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a074b3e8914223beb79d52c55ba55bce.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-76f08249a15154a0e09b12d439daf3e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -444,7 +449,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "/Users/leocollado/Dropbox/Code/jhustatcomputing/posts/07-reading-and-writing-data"</code></pre>
+<pre><code>[1] "/Users/leo.collado/Dropbox/Code/jhustatcomputing/posts/07-reading-and-writing-data"</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -585,7 +590,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"team_standings.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "/Users/leocollado/Dropbox/Code/jhustatcomputing/data/team_standings.csv"</code></pre>
+<pre><code>[1] "/Users/leo.collado/Dropbox/Code/jhustatcomputing/data/team_standings.csv"</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -999,6 +1004,16 @@ dbl (1): Standing
 <span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">skip =</span> <span class="dv">2</span></span>
 <span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
+<pre><code>Warning: The `file` argument of `read_csv()` should use `I()` for literal data as of
+readr 2.2.0.
+  
+  # Bad (for example):
+  read_csv("x,y\n1,2")
+  
+  # Good:
+  read_csv(I("x,y\n1,2"))</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
 <pre><code>Rows: 1 Columns: 3
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: ","
@@ -1016,11 +1031,11 @@ dbl (3): x, y, z
 </div>
 <p>Alternatively, you can use the <code>comment</code> argument:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">"# A comment I want to skip</span></span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="st">  x,y,z</span></span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="st">  1,2,3"</span>,</span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">comment =</span> <span class="st">"#"</span></span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">"# A comment I want to skip</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="st">  x,y,z</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="st">  1,2,3"</span>,</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">comment =</span> <span class="st">"#"</span></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 1 Columns: 3
 ── Column specification ────────────────────────────────────────────────────────
@@ -1059,9 +1074,9 @@ dbl (3): x, y, z
 </div>
 <p>Here is an example of how to specify the column types explicitly:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>teams <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"team_standings.csv"</span>),</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_types =</span> <span class="st">"cc"</span></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>teams <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"team_standings.csv"</span>),</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_types =</span> <span class="st">"cc"</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Note that the <code>col_types</code> argument accepts a compact representation. Here <code>"cc"</code> indicates that the first column is <code>character</code> and the second column is <code>character</code> (there are only two columns). Using the <code>col_types</code> argument is useful because often it is not easy to automatically figure out the type of a column by looking at a few rows (especially if a column has many missing values).</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -1080,9 +1095,9 @@ dbl (3): x, y, z
 </div>
 <p>The following call reads a gzip-compressed CSV file containing download logs from the RStudio CRAN mirror.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>logs <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"2016-07-19.csv.bz2"</span>),</span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_max =</span> <span class="dv">10</span></span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>logs <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"2016-07-19.csv.bz2"</span>),</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_max =</span> <span class="dv">10</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 10 Columns: 10
 ── Column specification ────────────────────────────────────────────────────────
@@ -1098,11 +1113,11 @@ time (1): time
 </div>
 <p>Note that the warnings indicate that <code>read_csv()</code> may have had some difficulty identifying the type of each column. This can be solved by using the <code>col_types</code> argument.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>logs <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"2016-07-19.csv.bz2"</span>),</span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_types =</span> <span class="st">"ccicccccci"</span>,</span>
-<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_max =</span> <span class="dv">10</span></span>
-<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>logs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>logs <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"2016-07-19.csv.bz2"</span>),</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_types =</span> <span class="st">"ccicccccci"</span>,</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_max =</span> <span class="dv">10</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>logs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 10
    date       time     size r_version r_arch r_os  package version country ip_id
@@ -1123,11 +1138,11 @@ time (1): time
 <p>For example, in the log data above, the first column is actually a date, so it might make more sense to read it in as a <code>Date</code> object.</p>
 <p>If we wanted to just read in that first column, we could do</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>logdates <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"2016-07-19.csv.bz2"</span>),</span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_types =</span> <span class="fu">cols_only</span>(<span class="at">date =</span> <span class="fu">col_date</span>()),</span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_max =</span> <span class="dv">10</span></span>
-<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>logdates</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>logdates <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"2016-07-19.csv.bz2"</span>),</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_types =</span> <span class="fu">cols_only</span>(<span class="at">date =</span> <span class="fu">col_date</span>()),</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_max =</span> <span class="dv">10</span></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>logdates</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 1
    date      
@@ -1210,61 +1225,67 @@ Tip
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.5.1 (2025-06-13)
- os       macOS Sequoia 15.6.1
- system   aarch64, darwin20
+ version  R version 4.6.1 (2026-06-24)
+ os       macOS Tahoe 26.6.2
+ system   aarch64, darwin23
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2025-09-04
- pandoc   3.7.0.2 @ /opt/homebrew/bin/ (via rmarkdown)
- quarto   1.4.550 @ /Applications/quarto/bin/quarto
+ date     2026-08-27
+ pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
+ quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
- bit           4.6.0   2025-03-06 [1] CRAN (R 4.5.0)
- bit64         4.6.0-1 2025-01-16 [1] CRAN (R 4.5.0)
- cli           3.6.5   2025-04-23 [1] CRAN (R 4.5.0)
- colorout    * 1.3-2   2025-05-09 [1] Github (jalvesaq/colorout@572ab10)
- crayon        1.5.3   2024-06-20 [1] CRAN (R 4.5.0)
- digest        0.6.37  2024-08-19 [1] CRAN (R 4.5.0)
- evaluate      1.0.4   2025-06-18 [1] CRAN (R 4.5.0)
- fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.5.0)
- glue          1.8.0   2024-09-30 [1] CRAN (R 4.5.0)
- here        * 1.0.1   2020-12-13 [1] CRAN (R 4.5.0)
- hms           1.1.3   2023-03-21 [1] CRAN (R 4.5.0)
- htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.5.0)
- htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.5.0)
- jsonlite      2.0.0   2025-03-27 [1] CRAN (R 4.5.0)
- knitr         1.50    2025-03-16 [1] CRAN (R 4.5.0)
- lifecycle     1.0.4   2023-11-07 [1] CRAN (R 4.5.0)
- magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.5.0)
- pillar        1.11.0  2025-07-04 [1] CRAN (R 4.5.0)
- pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.5.0)
- R6            2.6.1   2025-02-15 [1] CRAN (R 4.5.0)
- readr       * 2.1.5   2024-01-10 [1] CRAN (R 4.5.0)
- rlang         1.1.6   2025-04-11 [1] CRAN (R 4.5.0)
- rmarkdown     2.29    2024-11-04 [1] CRAN (R 4.5.0)
- rprojroot     2.1.0   2025-07-12 [1] CRAN (R 4.5.0)
- sessioninfo   1.2.3   2025-02-05 [1] CRAN (R 4.5.0)
- tibble        3.3.0   2025-06-08 [1] CRAN (R 4.5.0)
- tidyselect    1.2.1   2024-03-11 [1] CRAN (R 4.5.0)
- tzdb          0.5.0   2025-03-15 [1] CRAN (R 4.5.0)
- utf8          1.2.6   2025-06-08 [1] CRAN (R 4.5.0)
- vctrs         0.6.5   2023-12-01 [1] CRAN (R 4.5.0)
- vroom         1.6.5   2023-12-05 [1] CRAN (R 4.5.0)
- withr         3.0.2   2024-10-28 [1] CRAN (R 4.5.0)
- xfun          0.52    2025-04-02 [1] CRAN (R 4.5.0)
- yaml          2.3.10  2024-07-26 [1] CRAN (R 4.5.0)
+ bit           4.6.0   2025-03-06 [1] CRAN (R 4.6.0)
+ bit64         4.8.2   2026-05-19 [1] CRAN (R 4.6.0)
+ cli           3.6.6   2026-04-09 [1] CRAN (R 4.6.0)
+ colorout    * 1.3-3   2026-07-30 [1] Github (jalvesaq/colorout@64863bb)
+ coro          1.1.0   2024-11-05 [1] CRAN (R 4.6.0)
+ crayon        1.5.3   2024-06-20 [1] CRAN (R 4.6.0)
+ digest        0.6.39  2025-11-19 [1] CRAN (R 4.6.0)
+ ellmer        0.4.2   2026-07-13 [1] CRAN (R 4.6.1)
+ evaluate      1.0.5   2025-08-27 [1] CRAN (R 4.6.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.6.0)
+ gitcreds      0.1.2   2022-09-08 [1] CRAN (R 4.6.0)
+ glue          1.8.1   2026-04-17 [1] CRAN (R 4.6.0)
+ here        * 1.0.2   2025-09-15 [1] CRAN (R 4.6.0)
+ hms           1.1.4   2025-10-17 [1] CRAN (R 4.6.0)
+ htmltools     0.5.9   2025-12-04 [1] CRAN (R 4.6.0)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.6.0)
+ httr2         1.3.0   2026-07-13 [1] CRAN (R 4.6.1)
+ jsonlite      2.0.0   2025-03-27 [1] CRAN (R 4.6.0)
+ knitr         1.51    2025-12-20 [1] CRAN (R 4.6.0)
+ lifecycle     1.0.5   2026-01-08 [1] CRAN (R 4.6.0)
+ magrittr      2.0.5   2026-04-04 [1] CRAN (R 4.6.0)
+ otel          0.2.0   2025-08-29 [1] CRAN (R 4.6.0)
+ pillar        1.11.1  2025-09-17 [1] CRAN (R 4.6.0)
+ pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.6.0)
+ R6            2.6.1   2025-02-15 [1] CRAN (R 4.6.0)
+ readr       * 2.2.0   2026-02-19 [1] CRAN (R 4.6.0)
+ rlang         1.3.0   2026-07-05 [1] CRAN (R 4.6.1)
+ rmarkdown     2.31    2026-03-26 [1] CRAN (R 4.6.0)
+ rprojroot     2.1.1   2025-08-26 [1] CRAN (R 4.6.0)
+ S7            0.2.2   2026-04-22 [1] CRAN (R 4.6.0)
+ sessioninfo   1.2.4   2026-06-04 [1] CRAN (R 4.6.0)
+ tibble        3.3.1   2026-01-11 [1] CRAN (R 4.6.0)
+ tidyselect    1.2.1   2024-03-11 [1] CRAN (R 4.6.0)
+ tzdb          0.5.0   2025-03-15 [1] CRAN (R 4.6.0)
+ utf8          1.2.6   2025-06-08 [1] CRAN (R 4.6.0)
+ vctrs         0.7.3   2026-04-11 [1] CRAN (R 4.6.0)
+ vroom         1.7.1   2026-03-31 [1] CRAN (R 4.6.0)
+ withr         3.0.3   2026-06-19 [1] CRAN (R 4.6.0)
+ xfun          0.60    2026-07-09 [1] CRAN (R 4.6.1)
+ yaml          2.3.12  2025-12-10 [1] CRAN (R 4.6.0)
 
- [1] /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/library
+ [1] /Library/Frameworks/R.framework/Versions/4.6/Resources/library
  * ── Packages attached to the search path.
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
