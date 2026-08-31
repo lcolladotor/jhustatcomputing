@@ -166,13 +166,13 @@ You must install [R](https://cran.r-project.org) and [Positron](https://positron
 
 -   `R` is the core underlying programming language and computing engine that we will be learning in this course
 
--   `Positron` is a new interface for working with R developed by [Posit](https://posit.co/) (formerly RStudio). All new features are primarily being implemented in `Positron` and it will be ideal for working for both `R` and `Python`. If you are choosing between `RStudio IDE` and `Positron`, check <https://positron.posit.co/faqs.html#is-rstudio-going-away>.
+-   `Positron` is a new interface for working with `R` developed by [Posit](https://posit.co/) (formerly RStudio). All new features are primarily being implemented in `Positron` and it will be ideal for working for both `R` and `Python`. If you are choosing between `RStudio IDE` and `Positron`, check <https://positron.posit.co/faqs.html#is-rstudio-going-away>.
 
--   `RStudio IDE` is an interface into R that makes many aspects of using and programming R simpler.
+-   `RStudio IDE` is an interface into `R` that makes many aspects of using and programming `R` simpler.
 
 `R`, `Positron`, and `RStudio IDE` are available for Windows, macOS, and most flavors of Unix and Linux. Please download the version that is suitable for your computing setup.
 
-Throughout the course, we will make use of numerous R add-on packages that must be installed over the Internet. Packages can be installed using the `install.packages()` function in R. For example, to install the `tidyverse` package, you can run
+Throughout the course, we will make use of numerous `R` add-on packages that must be installed over the Internet. Packages can be installed using the `install.packages()` function in `R`. For example, to install the `tidyverse` package, you can run
 
 ```{r}
 #| eval: false
@@ -231,7 +231,7 @@ Go to <https://posit.co/> and
 
 #### How to Download `RStudio IDE`
 
-Go to <https://posit.co/> (formerly [https://rstudio.com]()) and
+Go to <https://posit.co/> (formerly <https://rstudio.com>) and
 
 1.  Click on "Free & Open Source" in the top menu
 
@@ -275,7 +275,8 @@ Go to <https://github.com/education> and
 4.  There will be a few options to verify that you are a student. One of them is by having a photo of your student ID with dates showing that your student ID is still valid. I've used a screenshot of my Faculty website at <https://publichealth.jhu.edu/faculty/4647/leonardo-collado-torres> when validating my information.
 5.  Wait a few days for GitHub to process your application.
 6a.  Once your application has been approved, If you are using `Positron`, follow the instructions at <https://positron.posit.co/assistant> to enable "Positron assistant". Then under the "Positron Assistant" chat, click on "Add Anthropic as a Chat Provider", then select "GitHub Copilot" and click "Sign in".
-    1.  Note that you can in theory get API access to Anthropic through <https://ailabsupport.it.jh.edu/faq/> if you pay for it. Or you can pay out of pocket for it at <https://claude.ai/login>.
+    1. Alternatively, you might want to sign up for the 30 day [Posit AI](https://posit.co/products/ai) free trial.
+    2. You can pay out of pocket for Claude Anthropic at <https://claude.ai/login> as another option.
 6b.  If you are using `RStudio IDE` follow the instructions at <https://docs.posit.co/ide/user/ide/guide/tools/copilot.html> to enable `GitHub Copilot` in `RStudio IDE`. I have the "Index project files with GitHub Copilot" checkbox enabled on my preferences.
 
 #### How to get Air (auto-code formatter)
