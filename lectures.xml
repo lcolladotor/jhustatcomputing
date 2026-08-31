@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Mon, 31 Aug 2026 17:33:48 GMT</lastBuildDate>
+<lastBuildDate>Mon, 31 Aug 2026 17:48:50 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -32,6 +32,85 @@
 <p>— 🇲🇽 Leonardo Collado-Torres (<span class="citation" data-cites="lcolladotor">@lcolladotor</span>) <a href="https://twitter.com/lcolladotor/status/1828455658481430960?ref_src=twsrc%5Etfw">August 27, 2024</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="instagram-media blockquote" data-instgrm-permalink="https://www.instagram.com/p/DcU7XAZR4sM/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+<div style="padding:16px;">
+<a href="https://www.instagram.com/p/DcU7XAZR4sM/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+<div style=" display: flex; flex-direction: row; align-items: center;">
+<div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+<div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+
+</div>
+<div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+
+</div>
+</div>
+</div>
+<div style="padding: 19% 0;">
+
+</div>
+<div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+<svg width="50px" height="50px" viewbox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xlink="https://www.w3.org/1999/xlink">
+<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g>
+</svg>
+</div>
+<div style="padding-top: 8px;">
+<div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+View this post on Instagram
+</div>
+</div>
+<div style="padding: 12.5% 0;">
+
+</div>
+<div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+<div>
+<div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+
+</div>
+<div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+
+</div>
+<div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+
+</div>
+</div>
+<div style="margin-left: 8px;">
+<div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+
+</div>
+<div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+
+</div>
+</div>
+<div style="margin-left: auto;">
+<div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+
+</div>
+<div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+
+</div>
+<div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+
+</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+<div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+
+</div>
+<div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+
+</div>
+</div>
+</a>
+<p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+<a href="https://www.instagram.com/p/DcU7XAZR4sM/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Leonardo Collado Torres (<span class="citation" data-cites="lcolladotor">@lcolladotor</span>)</a>
+</p>
+</div>
+</blockquote>
+<script async="" src="//www.instagram.com/embed.js"></script>
 <p>This course is designed for ScM and PhD students at Johns Hopkins Bloomberg School of Public Health. I am pretty flexible about permitting outside students, but I want everyone to be aware of the goals and assumptions so no one feels like they are surprised by how the class works.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -112,15 +191,15 @@ Tip
 </section>
 <section id="getting-set-up" class="level3">
 <h3 class="anchored" data-anchor-id="getting-set-up">Getting set up</h3>
-<p>You must install <a href="https://cran.r-project.org">R</a> and <a href="https://posit.co/products/open-source/rstudio/?sid=1">RStudio IDE</a> or <a href="https://positron.posit.co/download.html">Positron</a> (available from <a href="https://posit.co/">Posit</a>) on your computing environment in order to complete this course.</p>
+<p>You must install <a href="https://cran.r-project.org">R</a> and <a href="https://positron.posit.co/download.html">Positron</a> (alternatively you can use <a href="https://posit.co/products/open-source/rstudio/?sid=1">RStudio IDE</a>; both are available from <a href="https://posit.co/">Posit</a>) on your computing environment in order to complete this course.</p>
 <p>These are three <strong>different</strong> applications that must be installed separately before they can be used together:</p>
 <ul>
 <li><p><code>R</code> is the core underlying programming language and computing engine that we will be learning in this course</p></li>
-<li><p><code>RStudio IDE</code> is an interface into R that makes many aspects of using and programming R simpler</p></li>
-<li><p><code>Positron</code> is a new interface for working with R developed by <a href="https://posit.co/">Posit</a> (formerly RStudio). All new features are being implemented in <code>Positron</code>, but as it was just recently released, it might have some bugs. If you are choosing between <code>RStudio IDE</code> and <code>Positron</code>, check <a href="https://positron.posit.co/faqs.html#is-rstudio-going-away" class="uri">https://positron.posit.co/faqs.html#is-rstudio-going-away</a>.</p></li>
+<li><p><code>Positron</code> is a new interface for working with <code>R</code> developed by <a href="https://posit.co/">Posit</a> (formerly RStudio). All new features are primarily being implemented in <code>Positron</code> and it will be ideal for working for both <code>R</code> and <code>Python</code>. If you are choosing between <code>RStudio IDE</code> and <code>Positron</code>, check <a href="https://positron.posit.co/faqs.html#is-rstudio-going-away" class="uri">https://positron.posit.co/faqs.html#is-rstudio-going-away</a>.</p></li>
+<li><p><code>RStudio IDE</code> is an interface into <code>R</code> that makes many aspects of using and programming <code>R</code> simpler.</p></li>
 </ul>
-<p><code>R</code>, <code>RStudio IDE</code>, and <code>Positron</code> are available for Windows, macOS, and most flavors of Unix and Linux. Please download the version that is suitable for your computing setup.</p>
-<p>Throughout the course, we will make use of numerous R add-on packages that must be installed over the Internet. Packages can be installed using the <code>install.packages()</code> function in R. For example, to install the <code>tidyverse</code> package, you can run</p>
+<p><code>R</code>, <code>Positron</code>, and <code>RStudio IDE</code> are available for Windows, macOS, and most flavors of Unix and Linux. Please download the version that is suitable for your computing setup.</p>
+<p>Throughout the course, we will make use of numerous <code>R</code> add-on packages that must be installed over the Internet. Packages can be installed using the <code>install.packages()</code> function in <code>R</code>. For example, to install the <code>tidyverse</code> package, you can run</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -128,8 +207,8 @@ font-style: inherit;">install.packages</span>(<span class="st" style="color: #20
 background-color: null;
 font-style: inherit;">"tidyverse"</span>)</span></code></pre></div></div>
 </div>
-<p>in the R console.</p>
-<p>We will also be encourage you to use <a href="https://git-scm.com/">Git</a>, following the <a href="https://happygitwithr.com/"><em>Happy Git and GitHub for the useR</em></a> book, to version control your code. Through the <a href="https://github.com/education">GitHub Education</a> pack we will get free access to <a href="https://github.com/features/copilot">GittHub Copilot Pro</a> to help us write code: think about it as an enhanced auto-complete. Finally, we’ll use <a href="https://posit-dev.github.io/air/">Air</a> for automatically formatting our R code.</p>
+<p>in the <code>R</code> console.</p>
+<p>We will also be encourage you to use <a href="https://git-scm.com/">Git</a>, following the <a href="https://happygitwithr.com/"><em>Happy Git and GitHub for the useR</em></a> book, to version control your code. Through the <a href="https://github.com/education">GitHub Education</a> pack we will get free access to <a href="https://github.com/features/copilot">GitHub Copilot Pro</a> to help us write code: think about it as an enhanced auto-complete. Alternatively, you can sign up for the 30 day <a href="https://posit.co/products/ai">Posit AI</a> free trial, or get an account with another AI token provider. Finally, we’ll use <a href="https://posit-dev.github.io/air/">Air</a> for automatically formatting our R code.</p>
 <section id="how-to-download-r-for-windows" class="level4">
 <h4 class="anchored" data-anchor-id="how-to-download-r-for-windows">How to Download R for Windows</h4>
 <p>Go to <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a> and</p>
@@ -185,9 +264,21 @@ Warning
 </figure>
 </div>
 </section>
+<section id="how-to-download-positron" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-download-positron">How to Download Positron</h4>
+<p>Go to <a href="https://posit.co/" class="uri">https://posit.co/</a> and</p>
+<ol type="1">
+<li><p>Click on “Free &amp; Open Source” in the top menu</p></li>
+<li><p>Click on “Positron” in the drop down menu</p></li>
+<li><p>Click on “Download Positron” which will take you to <a href="https://positron.posit.co/download.html" class="uri">https://positron.posit.co/download.html</a></p></li>
+<li><p>Read the license agreement.</p></li>
+<li><p>Accept the license agreement.</p></li>
+<li><p>On the table with all the download options, choose the file that is appropriate for your operating system.</p></li>
+</ol>
+</section>
 <section id="how-to-download-rstudio-ide" class="level4">
 <h4 class="anchored" data-anchor-id="how-to-download-rstudio-ide">How to Download <code>RStudio IDE</code></h4>
-<p>Go to <a href="https://posit.co/" class="uri">https://posit.co/</a> (formerly <a href="">https://rstudio.com</a>) and</p>
+<p>Go to <a href="https://posit.co/" class="uri">https://posit.co/</a> (formerly <a href="https://rstudio.com" class="uri">https://rstudio.com</a>) and</p>
 <ol type="1">
 <li><p>Click on “Free &amp; Open Source” in the top menu</p></li>
 <li><p>Click on “RStudio IDE” in the drop down menu</p></li>
@@ -215,18 +306,6 @@ Warning
 </figure>
 </div>
 </section>
-<section id="how-to-download-positron" class="level4">
-<h4 class="anchored" data-anchor-id="how-to-download-positron">How to Download Positron</h4>
-<p>Go to <a href="https://posit.co/" class="uri">https://posit.co/</a> and</p>
-<ol type="1">
-<li><p>Click on “Free &amp; Open Source” in the top menu</p></li>
-<li><p>Click on “Positron” in the drop down menu</p></li>
-<li><p>Click on “Download Positron” which will take you to <a href="https://positron.posit.co/download.html" class="uri">https://positron.posit.co/download.html</a></p></li>
-<li><p>Read the license agreement.</p></li>
-<li><p>Accept the license agreement.</p></li>
-<li><p>On the table with all the download options, choose the file that is appropriate for your operating system.</p></li>
-</ol>
-</section>
 <section id="how-to-download-git" class="level4">
 <h4 class="anchored" data-anchor-id="how-to-download-git">How to Download Git</h4>
 <p>Install <code>Git</code> on your computer following the detailed instructions at <a href="https://happygitwithr.com/install-git" class="uri">https://happygitwithr.com/install-git</a>, which will depend on your operating system.</p>
@@ -247,11 +326,10 @@ Warning
 <li>Sign in to your GitHub account if you haven’t logged in</li>
 <li>Click on “Start Application”</li>
 <li>There will be a few options to verify that you are a student. One of them is by having a photo of your student ID with dates showing that your student ID is still valid. I’ve used a screenshot of my Faculty website at <a href="https://publichealth.jhu.edu/faculty/4647/leonardo-collado-torres" class="uri">https://publichealth.jhu.edu/faculty/4647/leonardo-collado-torres</a> when validating my information.</li>
-<li>Wait a few days for GitHub to process your application.</li>
-<li>Once your application has been approved, if you are using <code>RStudio IDE</code> follow the instructions at <a href="https://docs.posit.co/ide/user/ide/guide/tools/copilot.html" class="uri">https://docs.posit.co/ide/user/ide/guide/tools/copilot.html</a> to enable GitHub Copilot in RStudio IDE. I have the “Index project files with GitHub Copilot” checkbox enabled on my preferences.</li>
-<li>If you are using <code>Positron</code>, follow the instructions at <a href="https://positron.posit.co/assistant" class="uri">https://positron.posit.co/assistant</a> to enable “Positron assistant”. Then under the “Positron Assistant” chat, click on “Add Anthropic as a Chat Provider”, then select “GitHub Copilot” and click “Sign in”.
+<li>Wait a few days for GitHub to process your application. 6a. Once your application has been approved, If you are using <code>Positron</code>, follow the instructions at <a href="https://positron.posit.co/assistant" class="uri">https://positron.posit.co/assistant</a> to enable “Positron assistant”. Then under the “Positron Assistant” chat, click on “Add Anthropic as a Chat Provider”, then select “GitHub Copilot” and click “Sign in”.
 <ol type="1">
-<li>Note that you can in theory get API access to Anthropic through <a href="https://ailabsupport.it.jh.edu/faq/" class="uri">https://ailabsupport.it.jh.edu/faq/</a> if you pay for it. Or you can pay out of pocket for it at <a href="https://claude.ai/login" class="uri">https://claude.ai/login</a>.</li>
+<li>Alternatively, you might want to sign up for the 30 day <a href="https://posit.co/products/ai">Posit AI</a> free trial.</li>
+<li>You can pay out of pocket for Claude Anthropic at <a href="https://claude.ai/login" class="uri">https://claude.ai/login</a> as another option. 6b. If you are using <code>RStudio IDE</code> follow the instructions at <a href="https://docs.posit.co/ide/user/ide/guide/tools/copilot.html" class="uri">https://docs.posit.co/ide/user/ide/guide/tools/copilot.html</a> to enable <code>GitHub Copilot</code> in <code>RStudio IDE</code>. I have the “Index project files with GitHub Copilot” checkbox enabled on my preferences.</li>
 </ol></li>
 </ol>
 </section>
@@ -259,10 +337,6 @@ Warning
 <h4 class="anchored" data-anchor-id="how-to-get-air-auto-code-formatter">How to get Air (auto-code formatter)</h4>
 <p>Go to <a href="https://posit-dev.github.io/air/" class="uri">https://posit-dev.github.io/air/</a> and</p>
 <ol type="1">
-<li><p>Click on “RStudio” if you are using <code>RStudio IDE</code>. That will take you to <a href="https://posit-dev.github.io/air/editor-rstudio.html" class="uri">https://posit-dev.github.io/air/editor-rstudio.html</a> where you will find the detailed installation instructions.</p>
-<ul>
-<li>Note that I recommend enabling the <code>Tools -&gt; Global Options -&gt; Code -&gt; Saving</code> and check <code>Reformat documents on save</code> option. Particularly if you are working on your own code.</li>
-</ul></li>
 <li><p>Click on “VS Code and Positron” if you are using <code>Positron</code>. That will take you to <a href="https://posit-dev.github.io/air/editor-vscode.html" class="uri">https://posit-dev.github.io/air/editor-vscode.html</a> where some options and configuration steps are described. Note however, that <code>Air</code> is already available from <code>Positron</code>. You will need to open your <code>settings.json</code> file from the Command Palette (<code>Shift + Cmd + P</code> on Mac/Linux, <code>Shift + Ctrl + P</code> on Windows):</p>
 <ul>
 <li><p>Run <code>Preferences: Open Workspace Settings (JSON)</code> to modify workspace specific settings (recommended).</p></li>
@@ -349,10 +423,12 @@ font-style: inherit;">}</span></span>
 background-color: null;
 font-style: inherit;">}</span></span></code></pre></div></div>
 </div></li>
-</ul>
-<ol type="1">
-<li>You can also configure a few options at <a href="positron://settings/air.dependencyLogLevels">positron://settings/air.dependencyLogLevels</a> and related settings.</li>
-</ol></li>
+<li><p>You can also configure a few options at <a href="positron://settings/air.dependencyLogLevels">positron://settings/air.dependencyLogLevels</a> and related settings.</p></li>
+</ul></li>
+<li><p>Click on “RStudio” if you are using <code>RStudio IDE</code>. That will take you to <a href="https://posit-dev.github.io/air/editor-rstudio.html" class="uri">https://posit-dev.github.io/air/editor-rstudio.html</a> where you will find the detailed installation instructions.</p>
+<ul>
+<li>Note that I recommend enabling the <code>Tools -&gt; Global Options -&gt; Code -&gt; Saving</code> and check <code>Reformat documents on save</code> option. Particularly if you are working on your own code.</li>
+</ul></li>
 </ol>
 </section>
 </section>
@@ -362,8 +438,8 @@ font-style: inherit;">}</span></span></code></pre></div></div>
 <ol type="1">
 <li>Install and configure software necessary for a statistical programming environment</li>
 <li>Discuss generic programming language concepts as they are implemented in a high-level statistical language</li>
-<li>Write and debug code in base R and the tidyverse (and integrate code from Python modules)</li>
-<li>Build basic data visualizations using R and the tidyverse</li>
+<li>Write and debug code in <code>R</code> using <code>tidyverse</code> packages (and integrate code from <code>Python</code> modules)</li>
+<li>Build basic data visualizations using <code>R</code> and the <code>tidyverse</code></li>
 <li>Discuss best practices for coding and reproducible research, basics of data ethics, basics of working with special data types, and basics of storing data
 <ul>
 <li>Example of why keeping track of R versions is important: <a href="https://github.com/edward130603/BayesSpace/issues/150" class="uri">https://github.com/edward130603/BayesSpace/issues/150</a>.</li>
@@ -410,7 +486,7 @@ Important
 <h3 class="anchored" data-anchor-id="course-staff">Course Staff</h3>
 <p>The course instructor this year is <a href="http://lcolladotor.github.io/">Leonardo Collado Torres</a> who is an Investigator at the <a href="https://www.libd.org/">Lieber Institute for Brain Development</a> and an Assistant Professor in the <a href="https://publichealth.jhu.edu/departments/biostatistics">Department of Biostatistics</a> at the <a href="https://publichealth.jhu.edu">Johns Hopkins Bloomberg School of Public Health</a>. I was actually a student of this course in Fall 2012 when <a href="https://bsky.app/profile/rdpeng.org">Roger D. Peng</a> was the instructor of this course and <a href="https://bsky.app/profile/kralljr.bsky.social">Jenna Krall</a> was the only teaching assistant. I first taught this course in 2023. I myself started learning and <a href="http://lcolladotor.github.io/#teaching">teaching</a> about R in 2008 and we have a lot of material in the <a href="https://research.libd.org/rstatsclub/">LIBD rstats club</a> that you might be interested in.</p>
 <p>At the Lieber Institute for Brain Development (<a href="https://www.libd.org/">LIBD</a>), my group works on understanding the roots and signatures of disease (particularly psychiatric disorders) by zooming in across dimensions of gene activity. We achieve this by studying gene expression at all expression feature levels (genes, exons, exon-exon junctions, and un-annotated regions) and by using different gene expression measurement technologies (bulk RNA-seq, single cell/nucleus RNA-seq, and spatial transcriptomics) that provide finer biological resolution and localization of gene expression. We work closely with collaborators from LIBD as well as from Johns Hopkins University (JHU) and other institutions, which reflects the cross-disciplinary approach and diversity in expertise needed to further advance our understanding of high throughput biology.</p>
-<p>Most weeks I use <a href="http://cran.r-project.org/">R</a> and <a href="http://www.bioconductor.org/">Bioconductor</a>, and on some days I <a href="https://lcolladotor.github.io/pkgs/">write R packages</a>. Occasionally I write <a href="http://lcolladotor.github.io/#blog">blog posts</a> about them and other tools. I’m a co-founder of the <a href="http://LieberInstitute.github.io/rstatsclub/">LIBD rstats club</a> and the <a href="https://comunidadbioinfo.github.io">CDSB community</a> of R and Bioconductor developers in Mexico and Latin America, that we described at the <a href="https://www.r-consortium.org/blog/2020/03/18/cdsb-diversity-and-outreach-hotspot-in-mexico">R Consortium website</a>. In the past, I also served on the <a href="http://bioconductor.org/about/community-advisory-board/">Bioconductor Community Advisory Board</a>.</p>
+<p>Some weeks I use <a href="http://cran.r-project.org/">R</a> and <a href="http://www.bioconductor.org/">Bioconductor</a>, and on some days I <a href="https://lcolladotor.github.io/pkgs/">write R packages</a>. Occasionally I write <a href="http://lcolladotor.github.io/#blog">blog posts</a> about them and other tools. I’m a co-founder of the <a href="http://LieberInstitute.github.io/rstatsclub/">LIBD rstats club</a> and the <a href="https://comunidadbioinfo.github.io">CDSB community</a> of R and Bioconductor developers in Mexico and Latin America, that we described at the <a href="https://www.r-consortium.org/blog/2020/03/18/cdsb-diversity-and-outreach-hotspot-in-mexico">R Consortium website</a>. In the past, I also served on the <a href="http://bioconductor.org/about/community-advisory-board/">Bioconductor Community Advisory Board</a>.</p>
 <p>If you want, you can find me on <a href="https://bsky.app/profile/lcolladotor.bsky.social">Bluesky</a>, <a href="https://www.linkedin.com/in/lcollado/">LinkedIn</a>, among other places.</p>
 <section id="teaching-assistants" class="level4">
 <h4 class="anchored" data-anchor-id="teaching-assistants">Teaching Assistants</h4>
@@ -544,7 +620,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2026-08-27
+ date     2026-08-31
  pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
@@ -590,7 +666,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -1115,7 +1191,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1472,7 +1548,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -2157,7 +2233,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -3132,7 +3208,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3623,7 +3699,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -5055,7 +5131,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6889,7 +6965,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7878,7 +7954,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8734,7 +8810,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -9252,7 +9328,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10630,7 +10706,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -12625,7 +12701,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -14647,7 +14723,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -15944,7 +16020,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -17307,7 +17383,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -20352,7 +20428,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -22369,7 +22445,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -23342,7 +23418,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -25093,7 +25169,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Mon, 31 Aug 2026 17:33:48 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 17:48:50 GMT</pubDate>
 </item>
 </channel>
 </rss>
