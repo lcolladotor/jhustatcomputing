@@ -60,15 +60,19 @@ We will have in person lectures that will be recorded enabling students who miss
 
 ## Textbook and Other Course Material
 
-There is no required textbook. We will make use of several freely available textbooks and other materials. All course materials will be provided. We will use the R software for data analysis, which is freely available for download.
+There is no required textbook. We will make use of several freely available textbooks and other materials. All course materials will be provided. We will use the `R` software for data analysis, which is freely available for download. We will also use `Git` for code version control and create a `GitHub` account. `Git` is also free to download and `GitHub` provides free accounts. We will also use `Air` (free also) for automatically formatting our `R` code.
+
+While some of you might have access to free trials or free programs for students that give you access to AI tokens for coding, some of you might have to pay for these service (about $20 USD a month for basic accounts: those should be enough for the course). Some options include [GitHub Copilot](https://github.com/features/copilot) (could be free through [GitHub Education](https://education.github.com/pack)) and [Posit AI](https://posit.co/products/ai) (has a 30 day free trial).
 
 ## Software
 
-We will make heavy use of R in this course, so you should have R installed. You can obtain R from the [Comprehensive R Archive Network](https://cran.r-project.org). There are versions available for Mac, Windows, and Unix/Linux. This software is **required** for this course.
+We will make heavy use of `R` in this course, so you should have `R` installed. You can obtain R from the [Comprehensive R Archive Network](https://cran.r-project.org). There are versions available for Mac, Windows, and Unix/Linux. This software is **required** for this course.
 
-It is important that you have the latest version of R installed. For this course we will be using **R version `r paste(version$major, version$minor, sep = ".")`**. You can determine what version of R you have by starting up R and typing into the console `R.version.string` and hitting the `return`/`enter` key. If you do not have the proper version of R installed, go to [CRAN](https://cran.r-project.org) and download and install the latest version.
+It is important that you have the latest version of `R` installed. For this course we will be using **R version `r paste(version$major, version$minor, sep = ".")`**. You can determine what version of `R` you have by starting up `R` and typing into the console `R.version.string` and hitting the `return`/`enter` key. If you do not have the proper version of `R` installed, go to [CRAN](https://cran.r-project.org) and download and install the latest version.
 
-We will also make use of the `RStudio` interactive development environment (IDE). `RStudio` requires that R be installed, and so is an "add-on" to R. You can obtain the RStudio Desktop for free from the [RStudio web site](https://www.rstudio.com/). In particular, we will make heavy use of it when developing R packages. It is also essential that you have the latest release of RStudio. You can determine the version of RStudio by looking at menu item `Help > About RStudio`. You should be using **RStudio version RStudio 2024.04.2 or higher**.
+We will also make use of the `Positron` interactive development environment (IDE). `Positron` requires that `R` be installed, and so is an "add-on" to `R`. You can obtain `Positron` for free from the [Posit web site](https://positron.posit.co/download.html). It is also essential that you have the latest release of `Positron`. You can determine the version of `Positron` by looking at menu item `Positron > About Positron`. You should be using **`Positron` version 2026.08.2 or higher**.
+
+Alternatively to `Positron`, you can use the older `RStudio IDE`. `RStudio IDE` also requires that `R` be installed first. You can obtain the `RStudio IDE` for free from the [Posit web site](https://posit.co/downloads). It is also essential that you have the latest release of `RStudio IDE`. You can determine the version of `RStudio IDE` by looking at menu item `Help > About RStudio`. You should be using **RStudio IDE version 2026.08.2 or higher**.
 
 ## Projects
 
@@ -76,10 +80,10 @@ There will be 4 assignments, due every 2--3 weeks. Projects will be submitted el
 
 The project assignments will be due on
 
--   Project 0: end of week 2 (Sunday September 7, 11:59pm) (entirely optional and not graded but hopefully useful and fun)
--   Project 1: end of week 3 (Sunday September 14, 11:59pm)
--   Project 2: end of week 5 (Sunday September 28, 11:59pm)
--   Project 3: end of week 8 (Sunday October 19, 11:59pm)
+-   Project 0: end of week 2 (Sunday September 13, 11:59pm) (entirely optional and not graded but hopefully useful and fun)
+-   Project 1: end of week 3 (Sunday September 20, 11:59pm)
+-   Project 2: end of week 5 (Sunday October 4, 11:59pm)
+-   Project 3: end of week 8 (Sunday October 25, 11:59pm)
 
 ### Project collaboration
 
@@ -158,15 +162,15 @@ This is a quantitative course. We will not discuss the mathematical details of s
 
 ### Getting set up
 
-You must install [R](https://cran.r-project.org) and [RStudio IDE](https://posit.co/products/open-source/rstudio/?sid=1) or [Positron](https://positron.posit.co/download.html) (available from [Posit](https://posit.co/)) on your computing environment in order to complete this course. These are three **different** applications that must be installed separately before they can be used together:
+You must install [R](https://cran.r-project.org) and [Positron](https://positron.posit.co/download.html) (or [RStudio IDE](https://posit.co/products/open-source/rstudio/?sid=1); both `Positron` and `RStudio IDE` are available from [Posit](https://posit.co/)) on your computing environment in order to complete this course. These are three **different** applications that must be installed separately before they can be used together:
 
 -   `R` is the core underlying programming language and computing engine that we will be learning in this course
 
--   `RStudio IDE` is an interface into R that makes many aspects of using and programming R simpler
+-   `Positron` is a new interface for working with R developed by [Posit](https://posit.co/) (formerly RStudio). All new features are primarily being implemented in `Positron` and it will be ideal for working for both `R` and `Python`. If you are choosing between `RStudio IDE` and `Positron`, check <https://positron.posit.co/faqs.html#is-rstudio-going-away>.
 
--   `Positron` is a new interface for working with R developed by [Posit](https://posit.co/) (formerly RStudio). All new features are being implemented in `Positron`, but as it was just recently released, it might have some bugs. If you are choosing between `RStudio IDE` and `Positron`, check <https://positron.posit.co/faqs.html#is-rstudio-going-away>.
+-   `RStudio IDE` is an interface into R that makes many aspects of using and programming R simpler.
 
-`R`, `RStudio IDE`, and `Positron` are available for Windows, macOS, and most flavors of Unix and Linux. Please download the version that is suitable for your computing setup.
+`R`, `Positron`, and `RStudio IDE` are available for Windows, macOS, and most flavors of Unix and Linux. Please download the version that is suitable for your computing setup.
 
 Throughout the course, we will make use of numerous R add-on packages that must be installed over the Internet. Packages can be installed using the `install.packages()` function in R. For example, to install the `tidyverse` package, you can run
 
@@ -209,6 +213,22 @@ The version in the video is not the latest version. Please download the latest v
 
 ![Video Demo for Downloading R for the Mac](videos/downloadRMac.gif){width="80%"}
 
+#### How to Download Positron
+
+Go to <https://posit.co/> and
+
+1.  Click on "Free & Open Source" in the top menu
+
+2.  Click on "Positron" in the drop down menu
+
+3.  Click on "Download Positron" which will take you to <https://positron.posit.co/download.html>
+
+4.  Read the license agreement.
+
+5.  Accept the license agreement.
+
+6.  On the table with all the download options, choose the file that is appropriate for your operating system.
+
 #### How to Download `RStudio IDE`
 
 Go to <https://posit.co/> (formerly [https://rstudio.com]()) and
@@ -228,22 +248,6 @@ The video shows how to download RStudio for the Mac but you should download RStu
 :::
 
 ![Video Demo for Downloading RStudio](videos/downloadRStudio.gif){width="80%"}
-
-#### How to Download Positron
-
-Go to <https://posit.co/> and
-
-1.  Click on "Free & Open Source" in the top menu
-
-2.  Click on "Positron" in the drop down menu
-
-3.  Click on "Download Positron" which will take you to <https://positron.posit.co/download.html>
-
-4.  Read the license agreement.
-
-5.  Accept the license agreement.
-
-6.  On the table with all the download options, choose the file that is appropriate for your operating system.
 
 #### How to Download Git
 
@@ -270,19 +274,15 @@ Go to <https://github.com/education> and
 3.  Click on "Start Application"
 4.  There will be a few options to verify that you are a student. One of them is by having a photo of your student ID with dates showing that your student ID is still valid. I've used a screenshot of my Faculty website at <https://publichealth.jhu.edu/faculty/4647/leonardo-collado-torres> when validating my information.
 5.  Wait a few days for GitHub to process your application.
-6.  Once your application has been approved, if you are using `RStudio IDE` follow the instructions at <https://docs.posit.co/ide/user/ide/guide/tools/copilot.html> to enable GitHub Copilot in RStudio IDE. I have the "Index project files with GitHub Copilot" checkbox enabled on my preferences.
-7.  If you are using `Positron`, follow the instructions at <https://positron.posit.co/assistant> to enable "Positron assistant". Then under the "Positron Assistant" chat, click on "Add Anthropic as a Chat Provider", then select "GitHub Copilot" and click "Sign in".
+6a.  Once your application has been approved, If you are using `Positron`, follow the instructions at <https://positron.posit.co/assistant> to enable "Positron assistant". Then under the "Positron Assistant" chat, click on "Add Anthropic as a Chat Provider", then select "GitHub Copilot" and click "Sign in".
     1.  Note that you can in theory get API access to Anthropic through <https://ailabsupport.it.jh.edu/faq/> if you pay for it. Or you can pay out of pocket for it at <https://claude.ai/login>.
+6b.  If you are using `RStudio IDE` follow the instructions at <https://docs.posit.co/ide/user/ide/guide/tools/copilot.html> to enable `GitHub Copilot` in `RStudio IDE`. I have the "Index project files with GitHub Copilot" checkbox enabled on my preferences.
 
 #### How to get Air (auto-code formatter)
 
 Go to <https://posit-dev.github.io/air/> and
 
-1.  Click on "RStudio" if you are using `RStudio IDE`. That will take you to <https://posit-dev.github.io/air/editor-rstudio.html> where you will find the detailed installation instructions.
-
-    -   Note that I recommend enabling the `Tools -> Global Options -> Code -> Saving` and check `Reformat documents on save` option. Particularly if you are working on your own code.
-
-2.  Click on "VS Code and Positron" if you are using `Positron`. That will take you to <https://posit-dev.github.io/air/editor-vscode.html> where some options and configuration steps are described. Note however, that `Air` is already available from `Positron`. You will need to open your `settings.json` file from the Command Palette (`Shift + Cmd + P` on Mac/Linux, `Shift + Ctrl + P` on Windows):
+1.  Click on "VS Code and Positron" if you are using `Positron`. That will take you to <https://posit-dev.github.io/air/editor-vscode.html> where some options and configuration steps are described. Note however, that `Air` is already available from `Positron`. You will need to open your `settings.json` file from the Command Palette (`Shift + Cmd + P` on Mac/Linux, `Shift + Ctrl + P` on Windows):
 
     -   Run `Preferences: Open Workspace Settings (JSON)` to modify workspace specific settings (recommended).
 
@@ -303,7 +303,11 @@ Go to <https://posit-dev.github.io/air/> and
         }
         ```
 
-    1.  You can also configure a few options at [positron://settings/air.dependencyLogLevels](positron://settings/air.dependencyLogLevels) and related settings.
+    -  You can also configure a few options at [positron://settings/air.dependencyLogLevels](positron://settings/air.dependencyLogLevels) and related settings.
+
+2.  Click on "RStudio" if you are using `RStudio IDE`. That will take you to <https://posit-dev.github.io/air/editor-rstudio.html> where you will find the detailed installation instructions.
+
+    -   Note that I recommend enabling the `Tools -> Global Options -> Code -> Saving` and check `Reformat documents on save` option. Particularly if you are working on your own code.
 
 ## General Disclaimers
 
