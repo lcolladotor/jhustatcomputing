@@ -50,9 +50,10 @@ Upon successfully completing this course, students will be able to:
 
 1.  Install and configure software necessary for a statistical programming environment
 2.  Discuss generic programming language concepts as they are implemented in a high-level statistical language
-3.  Write and debug code in base R and the tidyverse (and integrate code from Python modules)
-4.  Build basic data visualizations using R and the tidyverse
+3.  Write and debug code in `R` using `tidyverse` packages (and integrate code from `Python` modules)
+4.  Build basic data visualizations using `R` and the `tidyverse`
 5.  Discuss best practices for coding and reproducible research, basics of data ethics, basics of working with special data types, and basics of storing data
+    -   Example of why keeping track of R versions is important: <https://github.com/edward130603/BayesSpace/issues/150>.
 
 ## Lectures
 
@@ -62,7 +63,7 @@ We will have in person lectures that will be recorded enabling students who miss
 
 There is no required textbook. We will make use of several freely available textbooks and other materials. All course materials will be provided. We will use the `R` software for data analysis, which is freely available for download. We will also use `Git` for code version control and create a `GitHub` account. `Git` is also free to download and `GitHub` provides free accounts. We will also use `Air` (free also) for automatically formatting our `R` code.
 
-While some of you might have access to free trials or free programs for students that give you access to AI tokens for coding, some of you might have to pay for these service (about $20 USD a month for basic accounts: those should be enough for the course). Some options include [GitHub Copilot](https://github.com/features/copilot) (could be free through [GitHub Education](https://education.github.com/pack)) and [Posit AI](https://posit.co/products/ai) (has a 30 day free trial).
+I also welcome the use of AI in coding through [Posit Assistant](https://positron.posit.co/assistant.html) (so you don't have to copy paste into a browser). For `Posit Assistant` to work, you have to have access to `GitHub Copilot Pro`, `Posit AI`, `Claude Anthropic`, or some other service that gives you AI tokens. This will be useful to you regardless of your pre-existing level of familiarity with R and coding. Some of you might already have access to [GitHub Copilot](https://github.com/features/copilot) Pro through the [GitHub Education Pack](https://education.github.com/pack), otherwise you can sign up for it (it takes a few days to get verified). Alternatively, you might want to sign up for the 30 day [Posit AI](https://posit.co/products/ai) free trial (about $20 / month afterward).
 
 ## Software
 
