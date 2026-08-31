@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Mon, 31 Aug 2026 18:46:13 GMT</lastBuildDate>
+<lastBuildDate>Mon, 31 Aug 2026 18:56:06 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -666,7 +666,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -1225,7 +1225,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1292,8 +1292,8 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 </div>
 </section>
 <section id="introduction-to-gitgithub" class="level1">
-<h1>Introduction to <code>git</code>/GitHub</h1>
-<p>This document gives a brief explanation of GitHub and how we will use it for this course.</p>
+<h1>Introduction to <code>git</code>/<code>GitHub</code></h1>
+<p>This document gives a brief explanation of <code>GitHub</code> and how we will use it for this course.</p>
 <section id="git" class="level3">
 <h3 class="anchored" data-anchor-id="git">git</h3>
 <p><em>Git</em> is what is called a <em>version control system</em> for file management. The main idea is that as you (and your collaborators) work on a project, the software tracks, and records any changes made by anyone.</p>
@@ -1304,17 +1304,13 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 </section>
 <section id="github" class="level3">
 <h3 class="anchored" data-anchor-id="github">GitHub</h3>
-<p><em>GitHub</em> is a hosting service on internet for <code>git</code>-aware folders and projects</p>
-<ul>
-<li>Similar to the DropBox or Google, but more structured, powerful, and programmatic</li>
-<li>Great for solo or collaborative work!</li>
-<li>Technically <em>GitHub</em> is distinct from <em>Git</em>. However, <em>GitHub</em> is in some sense the interface and <em>Git</em> the underlying engine (a bit like <em>RStudio</em> and <em>R</em>).</li>
-</ul>
-<p>Note that other interfaces to <em>Git</em> exist, e.g., <em>Bitbucket</em>, but <em>GitHub</em> is the most widely used one.</p>
+<p><em><code>GitHub</code></em> is a hosting service on internet for <code>git</code>-aware folders and projects</p>
+<p>Technically <em><code>GitHub</code></em> is distinct from <em><code>Git</code></em>. However, <em><code>GitHub</code></em> is in some sense the interface and <em><code>Git</code></em> the underlying engine (a bit like <em><code>RStudio IDE</code></em> and <em><code>R</code></em>).</p>
+<p>Note that other interfaces to <em><code>Git</code></em> exist, e.g., <em><code>Bitbucket</code></em>, but <em><code>GitHub</code></em> is the most widely used one.</p>
 </section>
 <section id="why-use-gitgithub" class="level3">
 <h3 class="anchored" data-anchor-id="why-use-gitgithub">Why use git/GitHub?</h3>
-<p>You want to use <code>git</code> + <em>GitHub</em> to avoid this:</p>
+<p>You want to use <code>git</code> + <em><code>GitHub</code></em> to avoid this:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1326,31 +1322,32 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 </div>
 </div>
 <p>[<a href="http://phdcomics.com/comics/archive_print.php?comicid=1531">Source: PhD Comics</a>]</p>
-<p><code>git</code> + <em>GitHub</em> gives you a clean way to track your projects. It is also very well suited to collaborative work. Historically, version control was used for software development. However, it has become broader and is now used for many types of projects, including data science projects.</p>
+<p><code>git</code> + <em><code>GitHub</code></em> gives you a clean way to track your projects. It is also very well suited to collaborative work. Historically, version control was used for software development. However, it has become broader and is now used for many types of projects, including data science projects.</p>
 <p>To learn a bit more about Git/GitHub and why you might want to use it, <a href="https://peerj.com/preprints/3159/">read this article by Jenny Bryan</a>.</p>
 <p><strong>Note her explanation of what’s special with the <code>README.md</code> file on GitHub.</strong></p>
 </section>
 <section id="what-to-not-do" class="level3">
 <h3 class="anchored" data-anchor-id="what-to-not-do">What to (not) do</h3>
-<p><code>git</code> + <strong>GitHub is ideal if</strong> you have a project with a fair number of files, most of those files are text files (such as code, <img src="https://latex.codecogs.com/png.latex?LaTeX">, (R)markdown, etc.) and different people work on different parts of the project.</p>
-<p><code>git</code> + <strong>GitHub is less useful if</strong> you have a lot of non-text files (e.g.&nbsp;Word or Powerpoint) and different team members might want to edit the same document at the same time. In that instance, a solution like Google Docs, Word+Dropbox, Word+Onedrive, etc. might be better.</p>
+<p><em>Note</em>: In the following, I will use <em><code>GitHub</code></em> to refer to the hosting service and <code>git</code> to refer to the version control system.</p>
+<p><code>git</code> + <strong><code>GitHub</code> is ideal if</strong> you have a project with a fair number of files, most of those files are text files (such as code, <img src="https://latex.codecogs.com/png.latex?LaTeX">, (R)markdown, etc.) and different people work on different parts of the project.</p>
+<p><code>git</code> + <strong><code>GitHub</code> is less useful if</strong> you have a lot of non-text files (e.g.&nbsp;Word or Powerpoint) and different team members might want to edit the same document at the same time. In that instance, a solution like Google Docs, Word+Dropbox, Word+Onedrive, etc. might be better.</p>
 </section>
 <section id="how-to-use-gitgithub" class="level3">
 <h3 class="anchored" data-anchor-id="how-to-use-gitgithub">How to use Git/GitHub</h3>
-<p>Git and GitHub is fundamentally <strong>based on commands you type into the command line</strong>. Lots of online resources show you how to use the command line. This is the most powerful, and the way I almost always interact with git/GitHub. However, many folks find this the most confusing way to use git/GitHub. Alternatively, there are graphical interfaces.</p>
+<p><code>git</code> and <em><code>GitHub</code></em> is fundamentally <strong>based on commands you type into the command line</strong>. Lots of online resources show you how to use the command line. This is the most powerful, and I use it frequently to interact with <code>git</code>/<code>GitHub</code>. However, many folks find this the most confusing way to use <code>git</code>/<code>GitHub</code>. Alternatively, there are graphical interfaces.</p>
 <ul>
 <li><a href="https://desktop.github.com/">GitHub itself</a> provides a graphical interface with basic functionality.</li>
-<li><code>RStudio IDE</code> also has <a href="https://happygitwithr.com/rstudio-git-github.html">Git/GitHub integration</a>. Of course this only works for R project GitHub integration.</li>
-<li><code>Positron</code> also works very well with <code>Git</code> and <code>GitHub</code> as documented at <a href="https://positron.posit.co/git.html" class="uri">https://positron.posit.co/git.html</a>. It has several more advanced options, as <code>Positron</code> is based on <code>Visual Studio Code</code> (VS Code) and VS Code already has an in-depth integration with <code>Git</code> and <code>GitHub</code> as noted at <a href="https://code.visualstudio.com/docs/sourcecontrol/intro-to-git" class="uri">https://code.visualstudio.com/docs/sourcecontrol/intro-to-git</a>.</li>
-<li>There are also third party GitHub clients with many advanced features, most of which you won’t need initially, but might eventually.</li>
+<li><code>Positron</code> works very well with <code>Git</code> and <code>GitHub</code> as documented at <a href="https://positron.posit.co/git.html" class="uri">https://positron.posit.co/git.html</a>. It has several more advanced options, as <code>Positron</code> is based on <code>Visual Studio Code</code> (VS Code) and VS Code already has an in-depth integration with <code>Git</code> and <code>GitHub</code> as noted at <a href="https://code.visualstudio.com/docs/sourcecontrol/intro-to-git" class="uri">https://code.visualstudio.com/docs/sourcecontrol/intro-to-git</a>.</li>
+<li><code>RStudio IDE</code> also has <a href="https://happygitwithr.com/rstudio-git-github.html">Git/GitHub integration</a>. Of course this only works for <code>R</code> project <code>GitHub</code> integration.</li>
+<li>There are also third party <code>GitHub</code> clients with many advanced features, most of which you won’t need initially, but might eventually.</li>
 </ul>
-<p><strong>Note</strong>: As student, you can (and should) upgrade to the Pro version of GitHub for free (i.e.&nbsp;access to unlimited private repositories is one benefit), see the <a href="https://education.github.com/pack">GitHub student developer pack</a> on how to do this.</p>
+<p><strong>Note</strong>: As a student, you can (and should) upgrade to the Pro version of <code>GitHub</code> for free (i.e.&nbsp;access to unlimited private repositories is one benefit), see the <a href="https://education.github.com/pack"><code>GitHub</code> student developer pack</a> on how to do this.</p>
 <p>We will mostly be using Git commands through the <code>RStudio IDE</code> Git panel or <code>Positron</code> Git Source Control section. This panel will show up by default if <code>RStudio IDE</code> / <code>Positron</code> recognizes that you have installed Git already.</p>
 </section>
 </section>
 <section id="getting-started" class="level1">
 <h1>Getting Started</h1>
-<p>One of my favorite resources for getting started with git/GitHub is the Happy Git with R from <a href="https://bsky.app/profile/jennybryan.bsky.social">Jenny Bryan</a>:</p>
+<p>One of my favorite resources for getting started with git/GitHub is the <em>Happy Git with R</em> from <a href="https://bsky.app/profile/jennybryan.bsky.social">Jenny Bryan</a>:</p>
 <ul>
 <li><a href="https://happygitwithr.com" class="uri">https://happygitwithr.com</a></li>
 </ul>
@@ -1364,19 +1361,19 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 </div>
 </div>
 </div>
-<p>It truly is one of the <strong>best resources</strong> out there for getting started with git/GitHub, especially with the integration to RStudio. Therefore, at this point, I will encourage all of you to go read through the online book.</p>
+<p>It truly is one of the <strong>best resources</strong> out there for getting started with <code>git</code>/<code>GitHub</code>, especially with the integration to <code>RStudio IDE</code>. Therefore, at this point, I will encourage all of you to go read through the online book.</p>
 <p>Some of you may only need to skim it, others will need to spend some time reading through it. Either way, I will bet that you won’t regret the time investment.</p>
 <p>Alternatively, check the <a href="https://research.libd.org/rstatsclub/2018/04/17/git-to-know-git/">git to know git: an 8 minute introduction</a> blog post by <a href="https://amy-peterson.github.io/">Amy Peterson</a>.</p>
 </section>
 <section id="using-gitgithub-in-our-course" class="level1">
-<h1>Using git/GitHub in our course</h1>
-<p>In this course, you will use git/GitHub in the following ways:</p>
+<h1>Using <code>git</code>/<code>GitHub</code> in our course</h1>
+<p>In this course, you will use <code>git</code>/<code>GitHub</code> in the following ways:</p>
 <ol type="1">
-<li>Project 0 (optional) - You will create a website introducing yourself to folks in the course and deploy it on GitHub.</li>
-<li>Projects 1-3 - You can practice using git locally (on your compute environment) to track your changes over time and, if you wish (but highly suggested), you can practice pushing your project solutions to a private GitHub repository on your GitHub account (i.e.&nbsp;<code>git add</code>, <code>git commit</code>, <code>git push</code>, <code>git pull</code>, etc) .</li>
+<li>Project 0 (optional) - You will create a website introducing yourself to folks in the course and deploy it on <code>GitHub</code>.</li>
+<li>Projects 1-3 - You can practice using <code>git</code> locally (on your compute environment) to track your changes over time and, if you wish (but highly suggested), you can practice pushing your project solutions to a private <code>GitHub</code> repository on your <code>GitHub</code> account (i.e.&nbsp;<code>git add</code>, <code>git commit</code>, <code>git push</code>, <code>git pull</code>, etc) .</li>
 </ol>
 <p>Learning these skills will be useful down the road if you ever work collaboratively on a project (i.e.&nbsp;writing code as a group). In this scenario, you will use the skills you have been practicing in your projects to work together as a team in a single GitHub repository.</p>
-<p>If you want to make a public <code>git</code> repository and share it via GitHub with your class notes, akin to <a href="https://github.com/lcolladotor/biostat776classnotes" class="uri">https://github.com/lcolladotor/biostat776classnotes</a>, you can do so with:</p>
+<p>If you want to make a public <code>git</code> repository and share it via <code>GitHub</code> with your class notes, akin to <a href="https://github.com/lcolladotor/biostat776classnotes" class="uri">https://github.com/lcolladotor/biostat776classnotes</a>, you can do so with:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -1412,7 +1409,7 @@ font-style: inherit;">"~/Desktop/biostat776classnotes"</span>)</span>
 <span id="cb1-7"></span>
 <span id="cb1-8"><span class="do" style="color: #5E5E5E;
 background-color: null;
-font-style: italic;">## Then in your new RStudio project, run the following:</span></span>
+font-style: italic;">## Then in your new Positron window / RStudio project, run the following:</span></span>
 <span id="cb1-9">usethis<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
@@ -1444,7 +1441,7 @@ font-style: inherit;">"reprex"</span>)</span></code></pre></div></div>
 <li><p>Log in to your GitHub account and access <a href="https://github.com/lcolladotor/jhustatcomputing/issues/10" class="uri">https://github.com/lcolladotor/jhustatcomputing/issues/10</a></p></li>
 <li><p>Copy paste the following R code <code>stop("This R error is weird")</code>.</p></li>
 <li><p>Type <code>reprex::reprex()</code> in your R console.</p></li>
-<li><p>Paste the output into <a href="https://github.com/lcolladotor/jhustatcomputing/issues/10" class="uri">https://github.com/lcolladotor/jhustatcomputing/issues/10</a> and click on the “comment” green button.</p></li>
+<li><p>Paste the output into <a href="https://github.com/lcolladotor/jhustatcomputing/issues/12" class="uri">https://github.com/lcolladotor/jhustatcomputing/issues/12</a> and click on the “comment” green button.</p></li>
 </ol>
 <p>Here is an actual example where I used <code>reprex</code> to ask a question: <a href="https://github.com/Bioconductor/BiocFileCache/issues/48" class="uri">https://github.com/Bioconductor/BiocFileCache/issues/48</a>.</p>
 <p>For more details on <code>reprex</code>, check this video:</p>
@@ -1482,8 +1479,8 @@ to convey.
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><p>What is version control?</p></li>
-<li><p>What is the difference between git and GitHub?</p></li>
-<li><p>What are other version controls software/tools that are available besides git?</p></li>
+<li><p>What is the difference between <code>git</code> and <code>GitHub</code>?</p></li>
+<li><p>What are other version controls software/tools that are available besides <code>git</code>?</p></li>
 </ol>
 </div>
 </div>
@@ -1533,7 +1530,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2026-08-27
+ date     2026-08-31
  pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
@@ -1582,7 +1579,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -2267,7 +2264,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -3242,7 +3239,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3733,7 +3730,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -5165,7 +5162,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6999,7 +6996,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7988,7 +7985,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8844,7 +8841,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -9362,7 +9359,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10740,7 +10737,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -12735,7 +12732,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -14757,7 +14754,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -16054,7 +16051,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -17417,7 +17414,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -20462,7 +20459,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -22479,7 +22476,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -23452,7 +23449,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -25203,7 +25200,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Mon, 31 Aug 2026 18:46:13 GMT</pubDate>
+  <pubDate>Mon, 31 Aug 2026 18:56:06 GMT</pubDate>
 </item>
 </channel>
 </rss>
