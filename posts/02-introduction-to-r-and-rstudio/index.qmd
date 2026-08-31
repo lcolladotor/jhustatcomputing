@@ -213,6 +213,8 @@ At a higher level one "limitation" of `R` is that **its functionality is based o
 
 _Source: [Positron IDE Layout](https://positron.posit.co/layout.html)._
 
+You might also find the [quick tour of `Positron`](https://posit.co/blog/a-quick-tour-of-positron) very useful.
+
 ## `RStudio IDE`
 
 The `RStudio IDE` layout has the following features:
@@ -340,7 +342,7 @@ You may or may not see a short message on the screen. Some packages show message
 
 This was a quick overview of `R` packages. We will use a lot of them, so you will get used to them rather quickly.
 
-### Getting started in `RStudio`
+### Getting started in `Positron` (or `RStudio IDE`)
 
 While one can use `R` and do pretty much every task, including all the ones we cover in this class, without using `Positron IDE` or `RStudio IDE`, they are both very useful, have lots of features that make your `R` coding life easier and have both become pretty much the default integrated development environment (IDE) for `R`. Since `Positron IDE` and `RStudio IDE` have lots of features, it takes time to learn them. A good resource to learn more about `Positron IDE` or `RStudio IDE` are the [Posit Videos](https://posit.co/resources/videos/) collection.
 

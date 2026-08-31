@@ -215,10 +215,10 @@ Go to <https://github.com/education> and
 3.  Click on "Start Application"
 4.  There will be a few options to verify that you are a student. One of them is by having a photo of your student ID with dates showing that your student ID is still valid. I've used a screenshot of my Faculty website at <https://publichealth.jhu.edu/faculty/4647/leonardo-collado-torres> when validating my information.
 5.  Wait a few days for GitHub to process your application.
-6a.  Once your application has been approved, If you are using `Positron`, follow the instructions at <https://positron.posit.co/assistant> to enable "Positron assistant". Then under the "Positron Assistant" chat, click on "Add Anthropic as a Chat Provider", then select "GitHub Copilot" and click "Sign in".
+6.  Once your application has been approved, If you are using `Positron`, follow the instructions at <https://positron.posit.co/assistant> to enable "Positron assistant". Then under the "Positron Assistant" chat, click on "Add Anthropic as a Chat Provider", then select "GitHub Copilot" and click "Sign in".
     1. Alternatively, you might want to sign up for the 30 day [Posit AI](https://posit.co/products/ai) free trial.
     2. You can pay out of pocket for Claude Anthropic at <https://claude.ai/login> as another option.
-6b.  If you are using `RStudio IDE` follow the instructions at <https://docs.posit.co/ide/user/ide/guide/tools/copilot.html> to enable `GitHub Copilot` in `RStudio IDE`. I have the "Index project files with GitHub Copilot" checkbox enabled on my preferences.
+7.  If you are using `RStudio IDE` follow the instructions at <https://docs.posit.co/ide/user/ide/guide/tools/copilot.html> to enable `GitHub Copilot` in `RStudio IDE`. I have the "Index project files with GitHub Copilot" checkbox enabled on my preferences.
 
 #### How to get Air (auto-code formatter)
 
