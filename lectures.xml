@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Tue, 01 Sep 2026 17:31:42 GMT</lastBuildDate>
+<lastBuildDate>Thu, 03 Sep 2026 02:15:58 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -668,7 +668,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -1228,7 +1228,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1582,7 +1582,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -2267,7 +2267,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -2622,7 +2622,8 @@ Tip
 <p>quarto is newer and is described in further detail at <a href="https://quarto.org/" class="uri">https://quarto.org/</a>. It’s what was was used for making this course website. As an alternative to using <code>postcards</code> for <a href="../../projects/project-0/">Project 0</a>, you could use <code>quarto</code> instead following the instructions from <a href="https://quarto.org/docs/websites/website-blog.html" class="uri">https://quarto.org/docs/websites/website-blog.html</a>. As examples check:</p>
 <ul>
 <li><p><a href="https://github.com/lahuuki/lahuuki.github.io" class="uri">https://github.com/lahuuki/lahuuki.github.io</a> and <a href="https://lahuuki.github.io/" class="uri">https://lahuuki.github.io/</a></p></li>
-<li><p><a href="https://github.com/daianna21/daianna_blog" class="uri">https://github.com/daianna21/daianna_blog</a> and <a href="https://daianna21.github.io/daianna_blog/" class="uri">https://daianna21.github.io/daianna_blog/</a></p></li>
+<li><p><a href="https://github.com/daianna-glez/daianna_blog" class="uri">https://github.com/daianna-glez/daianna_blog</a> and <a href="https://daianna-glez.github.io/daianna_blog/" class="uri">https://daianna-glez.github.io/daianna_blog/</a></p></li>
+<li><p><a href="https://github.com/gabrielramirezv/gabrielramirezv.github.io" class="uri">https://github.com/gabrielramirezv/gabrielramirezv.github.io</a> and <a href="https://gabrielramirezv.github.io/" class="uri">https://gabrielramirezv.github.io/</a></p></li>
 </ul>
 <blockquote class="twitter-tweet blockquote">
 <p lang="en" dir="ltr">
@@ -3087,7 +3088,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2026-08-27
+ date     2026-09-02
  pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
@@ -3242,7 +3243,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3733,7 +3734,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -5165,7 +5166,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -6999,7 +7000,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7988,7 +7989,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8844,7 +8845,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -9362,7 +9363,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10740,7 +10741,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -12735,7 +12736,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -14757,7 +14758,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -16054,7 +16055,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -17417,7 +17418,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -20462,7 +20463,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -22479,7 +22480,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -23452,7 +23453,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -25203,7 +25204,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Tue, 01 Sep 2026 17:31:42 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:15:58 GMT</pubDate>
 </item>
 </channel>
 </rss>
