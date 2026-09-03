@@ -156,7 +156,7 @@ What do we need for computational reproducibility? There are a variety of ways t
 
 2.  **Analytic code**. The analytic code is the code that was applied to the analytic data to produce the key results. This may be preprocessing code, regression modeling code, or really any other code used to produce the results from the analytic data.
 
-    1.  You can share analytic code through GitHub and Zenodo. See <https://github.com/LieberInstitute/spatialDLPFC> and <https://zenodo.org/record/7925134> for example. Follow <https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content> in order to share your GitHub files through Zenodo and obtain a DOI (digital object identifier) that people can then cite. You could also use Figshare instead of Zenodo.
+    1.  You can share analytic code through `GitHub` and `Zenodo`. See <https://github.com/LieberInstitute/spatialDLPFC> and <https://zenodo.org/record/7925134> for example. Follow <https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content> in order to share your `GitHub` files through `Zenodo` and obtain a DOI (digital object identifier) that people can then cite. You could also use `Figshare` instead of `Zenodo`.
 
 3.  **Documentation**. Documentation of that code and the data is very important.
 
@@ -235,7 +235,7 @@ It is important to realize that there are multiple players when you talk about r
 One current **challenge is that authors of research have to undergo considerable effort to make their results available to a wide audience**.
 
 -   Publishing data and code today is not necessarily a trivial task. Although there are a number of resources available now, that were not available even five years ago, it is still a bit of a challenge to get things out on the web (or at least distributed widely).
--   Resources like [GitHub](https://github.com), [kipoi](https://kipoi.org), and [RPubs](http://rpubs.com) and various data repositories have made a big difference, but there is still a ways to go with respect to building up the public reproducibility infrastructure.
+-   Resources like [GitHub](https://github.com), [kipoi](https://kipoi.org), and [RPubs](http://rpubs.com) (sadly it'll be retired in June 2027 and replaced by *Posit Cloud* as documented on [this blog post](https://posit.co/blog/migrating-connect-cloud-posits-unified-publishing-solution)) and various data repositories have made a big difference, but there is still a ways to go with respect to building up the public reproducibility infrastructure.
 
 Furthermore, **even when data and code are available**, readers often have to download the data, download the code, and then they have to piece everything together, usually by hand. It's **not always an easy task to put the data and code together**.
 
@@ -272,7 +272,9 @@ install.packages(c("here", "sessioninfo"))
 
 -   The directory where you have a `.git` directory. That is, the beginning of your `git` repository.
 
--   The directory where you have an RStudio project file (`*.Rproj`). For RStudio projects with a `git` repository, this is typically the same directory. Note that this file is not used by `Positron` which makes it even more important to use `git` on your project folders (directories). See <https://positron.posit.co/migrate-rstudio-rproj.html> for more details.
+-   The directory where you have an `RStudio IDE` project file (`*.Rproj`). For `RStudio IDE` projects with a `git` repository, this is typically the same directory.
+
+    * Note that this file is not used by `Positron` which makes it even more important to use `git` on your project folders (directories). See <https://positron.posit.co/migrate-rstudio-rproj.html> for more details.
 
 -   The directory where you have a `.here` file (very uncommon scenario).
 
@@ -304,7 +306,7 @@ options(width = 120)
 sessioninfo::session_info()
 ```
 
-Note that I made a *GitHub permalink* (*perma*nent *link*) above, which is another way we can communicate precisely with others. It's very useful to include GitHub permalinks when asking questions about code you or others have made public on GitHub. See <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet> for more details about how to create GitHub permalinks.
+Note that I made a *GitHub permalink* (*perma*nent *link*) above, which is another way we can communicate precisely with others. It's very useful to include `GitHub` permalinks when asking questions about code you or others have made public on `GitHub`. See <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet> for more details about how to create `GitHub` permalinks.
 
 Here is the actual output of those commands:
 
@@ -317,14 +319,14 @@ options(width = 120)
 sessioninfo::session_info()
 ```
 
-`sessioninfo::session_info()` has a first section that includes information about my R installation and other computer environment variables (like my operating system). The second section includes information about the R packages that I used, their version numbers, and where I installed them from.
+`sessioninfo::session_info()` has a first section that includes information about my `R` installation and other computer environment variables (like my operating system). The second section includes information about the `R` packages that I used, their version numbers, and where I installed them from.
 
 ```{r}
 library("colorout") ## Load a package I installed from GitHub
 sessioninfo::session_info()
 ```
 
-For packages that we installed from GitHub, it includes the specific `git` commit ID for the version we installed. This is super precise information that is very useful to have.
+For packages that we installed from `GitHub`, it includes the specific `git` commit ID for the version we installed. This is super precise information that is very useful to have.
 
 Check <https://github.com/LieberInstitute/template_project/blob/devel/code/01_read_data_to_r/01_read_data_to_r.R> for a full script example part of <https://github.com/LieberInstitute/template_project>.
 
