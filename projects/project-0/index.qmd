@@ -20,7 +20,7 @@ categories: [project 0, projects]
 
 **Due date: September 13th at 11:59pm**
 
-Using the tools we learned in the first week (e.g. `R`, `RStudio IDE` / `Positron`, and `git` + `GitHub`). Let's apply them in a small (but also comprehensive) exercise.
+Using the tools we learned in the first week (e.g. `R`, `Positron` or `RStudio IDE`, and `git` + `GitHub`). Let's apply them in a small (but also comprehensive) exercise.
 
 -   **Please note this project is entirely optional** (i.e. it will not be graded), but hopefully it will be helpful to you getting set up for the rest of the course (i.e. set up these tools on your computing environment) and give you an opportunity to introduce yourself to your classmates.
 
@@ -37,7 +37,7 @@ install.packages(
 )
 ```
 
-You will also need to have installed Git on your computer. Follow <https://happygitwithr.com/install-git> for more detailed instructions depending on your operating system.
+You will also need to have installed `git` on your computer. Follow <https://happygitwithr.com/install-git> for more detailed instructions depending on your operating system.
 
 # Part 1
 
@@ -49,7 +49,7 @@ This part of the project is to ensure that you have successfully set up your com
 
 2.  The type of computer/operating system you are using (Windows, Mac, Unix/Linux, other)
 
-3.  The version of `R` that you have installed on your computer. To do this, start up R and run the following in the R console and include the output in your email.
+3.  The version of `R` that you have installed on your computer. To do this, start up `R` and run the following in the `R` console and include the output in your email.
 
 ```{r}
 #| label: rv
@@ -60,13 +60,13 @@ print(R.version.string)
 
 ![Printing the R version string](../../videos/versionstring.gif)
 
-4.  The version of `RStudio IDE` that you have installed on your computer. To do this start up `RStudio IDE` and in the R console window, run the following and again include the output in your email:
+4.  The version of `Positron` that you have installed on your computer. To do this, click on `Positron` -\> `About Positron` and include the version number in your email.
+
+* If you are using `RStudio IDE` instead of `Positron`, then include the version of `RStudio IDE` that you have installed on your computer. To do this start up `RStudio IDE` and in the R console window, run the following and again include the output in your email:
 
 ```{r rstudiov, eval = FALSE, echo = TRUE}
 print(RStudio.Version()$version)
 ```
-
-* If you are using `Positron` instead of `RStudio IDE`, please include the version of `Positron` that you have installed on your computer. To do this, click on `Positron` -\> `About Positron` and include the version number in your email.
 
 5.  If you have a `GitHub` username, please include the link to your GitHub profile in your email. For example, mine is <https://github.com/lcolladotor>. If you do not have a GitHub username, read <https://happygitwithr.com>, sign up for GitHub, and include your new username in your email to me.
 
@@ -80,7 +80,7 @@ You could also make a special GitHub repo (named with your GitHub username) with
 
 6. Apply to get free access to GitHub Copilot Pro as a student through the GitHub education pack: <https://education.github.com/pack>. Let me know if you were successful in your application.
 
-7.  To make sure `git` is installed on your system, use the 'Terminal' (e.g. it's next to the R Console within RStudio[^1]) (or whatever you use), run the following and include the output in your email:
+7.  To make sure `git` is installed on your system, use the 'Terminal' (e.g. it's next to the R Console within `Positron` or `RStudio IDE`[^1]) (or whatever you use), run the following and include the output in your email:
 
 [^1]: You can open the "Terminal" panel on RStudio from Tools -\> Terminal -\> New Terminal window. On macOS and Linux, this will be a Linux terminal by default (typically `zsh` on macOS and `bash` on Linux). On Windows, it's best to use `Git Bash`. If you followed the instructions from <https://happygitwithr.com/install-git#install-git-windows> (option 1: highly recommended) then you will have `Git Bash` installed. On Windows, you will likely still have to tell RStudio to use `Git Bash` by editing the dropdown menu from Tools -\> Global Options -\> Terminal -\> "New terminals open with:" (on macOS and Linux you can switch from `zsh` or `bash` to your favorite terminal shell if you prefer, though I don't recommend doing this for new users).
 
@@ -106,7 +106,9 @@ This part of the project is to help you introduce yourself (and your interests!)
 
 ### 1. Create an RStudio project for your website
 
-Use `usethis::create_project()` or in `RStudio IDE` go to `File` -\> `New project` and create a project with the name `<YourGitHubUsername>.github.io`. That is a very specific name used by GitHub Pages <https://pages.github.com/>. If you are using `Positron`, you can also do this through the `File` -\> `New Folder from Template...` -\> `R Project`.
+Use `usethis::create_project()` or in `RStudio IDE` go to `File` -\> `New project` and create a project with the name `<YourGitHubUsername>.github.io`. That is a very specific name used by GitHub Pages <https://pages.github.com/>.
+
+If you are using `Positron`, you can also do this through the `File` -\> `New Folder from Template...` -\> `R Project`.
 
 ```{r}
 #| eval: false
@@ -122,11 +124,11 @@ If you already have a GitHub repository with that name, then choose the followin
 usethis::create_project("~/Desktop/biostat776-intro-Leonardo-ColladoTorres")
 ```
 
-`usethis::create_project()` will create a new RStudio window for your website project.
+`usethis::create_project()` will create a new `RStudio IDE` / `Positron` window for your website project.
 
-### 2. Create a local Git repo for your RStudio project
+### 2. Create a local Git repo for your website project
 
-We will use utilities from `usethis` to link our RStudio project to GitHub. Assuming that you already have Git installed in your computer (see <https://happygitwithr.com/install-git> for detailed instructions on how to install Git), on your RStudio project you made on step 1 above type this on your R console: `usethis::use_git()`. This will run `git init` behind the scenes and setup a Git repository on your computer. On your R console you will get asked if it's OK to restart RStudio. Say yes, as that will now enable the `Git` panel in RStudio, which will make your life easier later on.
+We will use utilities from `usethis` to link our project (our directoy with our website files) to GitHub. Assuming that you already have `git` installed in your computer (see <https://happygitwithr.com/install-git> for detailed instructions on how to install `git`), on your project you made on step 1 above type this on your R console: `usethis::use_git()`. This will run `git init` behind the scenes and setup a Git repository on your computer. On your R console you will get asked if it's OK to restart `RStudio IDE` or `Positron`. Say yes, as that will now enable the `git` panel in `RStudio IDE` / `Positron`, which will make your life easier later on.
 
 ```{r}
 #| eval: false
@@ -206,7 +208,7 @@ In that case, your `~/.gitconfig` file should use that same email that GitHub cr
 
 ### 3. Use the `gh-pages` branch
 
-GitHub provides websites for free to Git repositories they host if you use a specific Git branch name: `gh-pages`. While there are more configuration options available through GitHub, the easiest option is to use the `gh-pages` branch, which we can do with R thanks to `usethis::git_default_branch_rename()` as shown below:
+GitHub provides websites for free to `git` repositories they host if you use a specific `git` branch name: `gh-pages`. While there are more configuration options available through `GitHub`, the easiest option is to use the `gh-pages` branch, which we can do with `R` thanks to `usethis::git_default_branch_rename()` as shown below:
 
 ```{r}
 #| eval: false
@@ -229,7 +231,7 @@ usethis::git_default_branch_rename(to = "gh-pages")
 
 ### 4. Link R to GitHub
 
-We will need to provide R the information to act on your behalf when doing things for you on GitHub. We will need to follow the instructions from `usethis::gh_token_help()` for this. This is a function from the authors of <https://happygitwithr.com/> that guides you through the full process.
+We will need to provide `R` the information to act on your behalf when doing things for you on `GitHub`. We will need to follow the instructions from `usethis::gh_token_help()` for this. This is a function from the authors of <https://happygitwithr.com/> that guides you through the full process.
 
 For most of you (aka anyone on macOS or winOS and not on Linux), you will use two functions:
 
@@ -293,7 +295,7 @@ rstudioapi::restartSession()
 
 ### 5. Create GitHub repo and link your RStudio project to it
 
-Next, we can can link our local Git repository to GitHub, which is a service that hosts Git repositories. We will do this through R via the `usethis::use_github()` function. Since we configured R in step 4 to act for us when interacting with GitHub, we can now use this function on our RStudio project that we made for our website.
+Next, we can can link our local `git` repository to `GitHub`, which is a service that hosts `git` repositories. We will do this through `R` via the `usethis::use_github()` function. Since we configured `R` in step 4 to act for us when interacting with `GitHub`, we can now use this function on our website project.
 
 ```{r}
 #| eval: false
@@ -306,7 +308,7 @@ args(usethis::use_github)
 usethis::use_github()
 ```
 
-Following the prompts, you will end up with a GitHub repository that is `https://github.com/<YourGithubUsername>/<YourGithubUsername>.github.io` (or alternatively `https://github.com/<YourGithubUsername>/biostat776-intro-<firstname>-<lastname>`).
+Following the prompts, you will end up with a `GitHub` repository that is `https://github.com/<YourGithubUsername>/<YourGithubUsername>.github.io` (or alternatively `https://github.com/<YourGithubUsername>/biostat776-intro-<firstname>-<lastname>`).
 
 For example, you can find an example that I created for myself at
 
@@ -336,13 +338,11 @@ Overall, your website should ideally say something about you, your interests, yo
 
 -   <https://bpardo99.github.io/> + <https://github.com/bpardo99/bpardo99.github.io>
 
--   <https://daianna21.github.io/> + <https://github.com/daianna21/daianna21.github.io>
+-   <https://daianna-glez.github.io/> + <https://github.com/daianna-glez/daianna-glez.github.io>
 
 -   <https://reneegf.github.io/> + <https://github.com/reneegf/reneegf.github.io>
 
 -   <https://cfausto.github.io/> + <https://github.com/cfausto/cfausto.github.io/>
-
--   <https://davidgonilski.github.io/> + <https://github.com/davidgonilski/davidgonilski.github.io>
 
 If you want, feel free to get creative and include other things. You can play with RMarkdown if you wish to, e.g., you can try to include some table or a video, etc.
 
@@ -381,13 +381,11 @@ Now that you have a website, feel free to edit your `index.Rmd` file as well as 
 
 You might also want to use inline R code with `fontawesome::fa()` like at <https://github.com/emarquezz/emarquezz.github.io/blob/c49eae75d53efa623e5d3bbbb29d77a3f1678a1c/index.Rmd#L9> or and emojis like at <https://github.com/emarquezz/emarquezz.github.io/blob/c49eae75d53efa623e5d3bbbb29d77a3f1678a1c/index.Rmd#L24>. Check all previous examples I linked to, though these ones have some more advanced features:
 
--   <https://daianna21.github.io/> + <https://github.com/daianna21/daianna21.github.io>
+-   <https://daianna-glez.github.io/> + <https://github.com/daianna-glez/daianna-glez.github.io>
 
 -   <https://emarquezz.github.io/> + <https://github.com/emarquezz/emarquezz.github.io>
 
 -   <https://cfausto.github.io/> + <https://github.com/cfausto/cfausto.github.io/>
-
--   <https://davidgonilski.github.io/> + <https://github.com/davidgonilski/davidgonilski.github.io>
 
 You might also be interested in creating a `favicon` for your website. See <https://github.com/seankross/postcards/issues/65> for more details.
 
@@ -398,6 +396,8 @@ You might also be interested in creating a `favicon` for your website. See <http
 
 2. Frequently students forget to put `https://` before a URL. If you forget that part, then your browser will interpret it as: "your website URL" + "the URL you wanted to link to", which is not a valid URL. For example, if your website is `https://lcolladotor.github.io/biostat776-intro-Leonardo-ColladoTorres/` and you want to link to `www.google.com`, then the link will be interpreted as `https://lcolladotor.github.io/biostat776-intro-Leonardo-ColladoTorres/www.google.com`, which is not a valid URL. Instead, you need to use `https://www.google.com` so that the link works correctly.
 :::
+
+#### `quarto` websites
 
 If you don't like `postcards` and want to use `quarto` instead, then check [posts/05-literate-programming/#quarto](../../posts/05-literate-programming/#quarto) for more details.
 

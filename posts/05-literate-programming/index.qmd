@@ -285,7 +285,9 @@ quarto is newer and is described in further detail at <https://quarto.org/>. It'
 
 -   <https://github.com/lahuuki/lahuuki.github.io> and <https://lahuuki.github.io/>
 
--   <https://github.com/daianna21/daianna_blog> and <https://daianna21.github.io/daianna_blog/>
+-   <https://github.com/daianna-glez/daianna_blog> and <https://daianna-glez.github.io/daianna_blog/>
+
+-   <https://github.com/gabrielramirezv/gabrielramirezv.github.io> and <https://gabrielramirezv.github.io/>
 
 <blockquote class="twitter-tweet">
 
