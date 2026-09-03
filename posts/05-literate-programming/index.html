@@ -314,16 +314,12 @@ window.Quarto = {
   <li><a href="#bookdown" id="toc-bookdown" class="nav-link" data-scroll-target="#bookdown">bookdown</a></li>
   <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">quarto</a></li>
   </ul></li>
-  <li><a href="#tips-and-tricks-in-r-markdown-in-rstudio" id="toc-tips-and-tricks-in-r-markdown-in-rstudio" class="nav-link" data-scroll-target="#tips-and-tricks-in-r-markdown-in-rstudio">Tips and tricks in R Markdown in RStudio</a>
+  <li><a href="#tips-and-tricks-in-positron" id="toc-tips-and-tricks-in-positron" class="nav-link" data-scroll-target="#tips-and-tricks-in-positron">Tips and tricks in <code>Positron</code></a>
   <ul class="collapse">
   <li><a href="#run-code" id="toc-run-code" class="nav-link" data-scroll-target="#run-code">Run code</a></li>
   <li><a href="#insert-a-comment-in-r-and-r-markdown" id="toc-insert-a-comment-in-r-and-r-markdown" class="nav-link" data-scroll-target="#insert-a-comment-in-r-and-r-markdown">Insert a comment in R and R Markdown</a></li>
-  <li><a href="#knit-a-r-markdown-document" id="toc-knit-a-r-markdown-document" class="nav-link" data-scroll-target="#knit-a-r-markdown-document">Knit a R Markdown document</a></li>
-  <li><a href="#code-snippets" id="toc-code-snippets" class="nav-link" data-scroll-target="#code-snippets">Code snippets</a></li>
-  <li><a href="#ordered-list-in-r-markdown" id="toc-ordered-list-in-r-markdown" class="nav-link" data-scroll-target="#ordered-list-in-r-markdown">Ordered list in R Markdown</a></li>
-  <li><a href="#new-code-chunk-in-r-markdown" id="toc-new-code-chunk-in-r-markdown" class="nav-link" data-scroll-target="#new-code-chunk-in-r-markdown">New code chunk in R Markdown</a></li>
-  <li><a href="#reformat-code" id="toc-reformat-code" class="nav-link" data-scroll-target="#reformat-code">Reformat code</a></li>
-  <li><a href="#rstudio-addins" id="toc-rstudio-addins" class="nav-link" data-scroll-target="#rstudio-addins">RStudio addins</a></li>
+  <li><a href="#ordered-list-in-markdown" id="toc-ordered-list-in-markdown" class="nav-link" data-scroll-target="#ordered-list-in-markdown">Ordered list in <code>markdown</code></a></li>
+  <li><a href="#new-code-chunk-in-quarto-or-r-markdown" id="toc-new-code-chunk-in-quarto-or-r-markdown" class="nav-link" data-scroll-target="#new-code-chunk-in-quarto-or-r-markdown">New code chunk in <code>quarto</code> or <code>R Markdown</code></a></li>
   <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others">Others</a></li>
   </ul></li>
   <li><a href="#post-lecture-materials" id="toc-post-lecture-materials" class="nav-link" data-scroll-target="#post-lecture-materials">Post-lecture materials</a>
@@ -338,6 +334,14 @@ window.Quarto = {
   <li><a href="#sweave" id="toc-sweave" class="nav-link" data-scroll-target="#sweave">Sweave</a></li>
   <li><a href="#knitr" id="toc-knitr" class="nav-link" data-scroll-target="#knitr">knitr</a></li>
   <li><a href="#distill" id="toc-distill" class="nav-link" data-scroll-target="#distill">distill</a></li>
+  <li><a href="#tips-and-tricks-in-r-markdown-in-rstudio-ide" id="toc-tips-and-tricks-in-r-markdown-in-rstudio-ide" class="nav-link" data-scroll-target="#tips-and-tricks-in-r-markdown-in-rstudio-ide">Tips and tricks in <code>R Markdown</code> in <code>RStudio IDE</code></a>
+  <ul class="collapse">
+  <li><a href="#knit-a-r-markdown-document" id="toc-knit-a-r-markdown-document" class="nav-link" data-scroll-target="#knit-a-r-markdown-document">Knit a R Markdown document</a></li>
+  <li><a href="#code-snippets" id="toc-code-snippets" class="nav-link" data-scroll-target="#code-snippets">Code snippets</a></li>
+  <li><a href="#reformat-code" id="toc-reformat-code" class="nav-link" data-scroll-target="#reformat-code">Reformat code</a></li>
+  <li><a href="#rstudio-addins" id="toc-rstudio-addins" class="nav-link" data-scroll-target="#rstudio-addins">RStudio addins</a></li>
+  <li><a href="#others-1" id="toc-others-1" class="nav-link" data-scroll-target="#others-1">Others</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -402,8 +406,8 @@ window.Quarto = {
 <ul>
 <li>Be able to define literate programming</li>
 <li>Recognize differences between available tools to for literate programming</li>
-<li>Know how to efficiently work within RStudio for efficient literate programming</li>
-<li>Create a R Markdown document</li>
+<li>Know how to efficiently work within <code>Positron</code> or <code>RStudio IDE</code> for efficient literate programming</li>
+<li>Create a <code>quarto</code> or <code>R Markdown</code> document</li>
 </ul>
 </div>
 </div>
@@ -467,7 +471,7 @@ Tip
 </blockquote>
 </div>
 </div>
-<p>Because this is lecture is built in a <code>.qmd</code> file (which is very similar to a <code>.Rmd</code> file), let’s demonstrate how this work. I am going to change <code>eval=FALSE</code> to <code>eval=TRUE</code>.</p>
+<p>Because this is lecture is built in using these tools <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, let’s demonstrate how this work. I am going to change <code>eval=FALSE</code> to <code>eval=TRUE</code>.</p>
 <div class="cell" height="4" width="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airquality)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(airquality<span class="sc">$</span>Ozone <span class="sc">~</span> airquality<span class="sc">$</span>Wind)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -479,6 +483,7 @@ Tip
 </div>
 </div>
 </div>
+<p>The source file for this lecture is <a href="https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/05-literate-programming/index.qmd"><code>posts/05-literate-programming/index.qmd</code></a>. There, we can see another <code>R</code> code chunk syntax.</p>
 <div class="cell" height="4" width="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airquality)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(airquality<span class="sc">$</span>Ozone <span class="sc">~</span> airquality<span class="sc">$</span>Wind)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -490,7 +495,7 @@ Tip
 </div>
 </div>
 </div>
-<p>We can’t tell which syntax was used to make the code chunk above, but you can see that the code was executed and the plot was made.</p>
+<p>The results are identical on the <code>html</code> file, so we can’t tell which syntax was used to make the code chunk above. In any case, you can see that the code was executed and the plot was made.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -514,7 +519,7 @@ Tip
 <li><a href="https://CRAN.R-project.org/package=markdown"><code>markdown</code></a> (<strong>R package</strong>). <code>markdown</code> is an R package which converts <code>.md</code> files into HTML. It is no longer recommended for use has been surpassed by <a href="https://CRAN.R-project.org/package=rmarkdown"><code>rmarkdown</code></a> (discussed below).</li>
 <li>R Markdown (<strong>markup language</strong>). R Markdown is an extension of the markdown syntax. R Markdown files are plain text files that typically have the file extension <code>.Rmd</code>.</li>
 <li><a href="https://CRAN.R-project.org/package=rmarkdown"><code>rmarkdown</code></a> (<strong>R package</strong>). The R package <code>rmarkdown</code> is a library that uses pandoc to process and convert <code>.Rmd</code> files into a number of different formats. This core function is <code>rmarkdown::render()</code>. <strong>Note</strong>: this package only deals with the markdown language. If the input file is e.g.&nbsp;<code>.Rhtml</code> or <code>.Rnw</code>, then you need to use <code>knitr</code> prior to calling pandoc (see below).</li>
-<li><a href="https://quarto.org/">quarto</a>: Similar to <code>rmarkdown</code> but can be used outside R. It is not an R package! Input files have the <code>.qmd</code> file extension. <code>Positron</code> has mostly adopted <code>quarto</code>, so this what you will likely use instead of <code>R Markdown</code> for making the <code>.html</code> files required for the course projects. If you need a template file to get started, go to https://quarto.org/, under the “Hello, Quarto” section click on “R”, then copy-paste the template code into a new <code>.qmd</code> file in <code>Positron</code> (or <code>RStudio IDE</code>).</li>
+<li><a href="https://quarto.org/">quarto</a>: Similar to <code>rmarkdown</code> but can be used outside <code>R</code>. It is not an <code>R</code> package! Input files have the <code>.qmd</code> file extension. <code>Positron</code> has mostly adopted <code>quarto</code>, so this what you will likely use instead of <code>R Markdown</code> for making the <code>.html</code> files required for the course projects. If you need a template file to get started, go to https://quarto.org/, under the “Hello, Quarto” section click on “R”, then copy-paste the template code into a new <code>.qmd</code> file in <code>Positron</code> (or <code>RStudio IDE</code>).</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -677,7 +682,6 @@ Tip
 <ul>
 <li><p><a href="https://github.com/lahuuki/lahuuki.github.io" class="uri">https://github.com/lahuuki/lahuuki.github.io</a> and <a href="https://lahuuki.github.io/" class="uri">https://lahuuki.github.io/</a></p></li>
 <li><p><a href="https://github.com/daianna-glez/daianna_blog" class="uri">https://github.com/daianna-glez/daianna_blog</a> and <a href="https://daianna-glez.github.io/daianna_blog/" class="uri">https://daianna-glez.github.io/daianna_blog/</a></p></li>
-<li><p><a href="https://github.com/gabrielramirezv/gabrielramirezv.github.io" class="uri">https://github.com/gabrielramirezv/gabrielramirezv.github.io</a> and <a href="https://gabrielramirezv.github.io/" class="uri">https://gabrielramirezv.github.io/</a></p></li>
 </ul>
 <blockquote class="twitter-tweet blockquote">
 <p lang="en" dir="ltr">
@@ -687,7 +691,8 @@ Tip
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <ul>
-<li><a href="https://github.com/Bioconductor/biocblog" class="uri">https://github.com/Bioconductor/biocblog</a> and <a href="https://blog.bioconductor.org/" class="uri">https://blog.bioconductor.org/</a></li>
+<li><p><a href="https://github.com/gabrielramirezv/gabrielramirezv.github.io" class="uri">https://github.com/gabrielramirezv/gabrielramirezv.github.io</a> and <a href="https://gabrielramirezv.github.io/" class="uri">https://gabrielramirezv.github.io/</a></p></li>
+<li><p><a href="https://github.com/Bioconductor/biocblog" class="uri">https://github.com/Bioconductor/biocblog</a> and <a href="https://blog.bioconductor.org/" class="uri">https://blog.bioconductor.org/</a></p></li>
 </ul>
 <section id="host-your-websites-on-github-pages-for-free" class="level4">
 <h4 class="anchored" data-anchor-id="host-your-websites-on-github-pages-for-free">Host your websites on GitHub Pages for free</h4>
@@ -712,17 +717,22 @@ Tip
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="do">## Knit / Render the file to create index.html</span></span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="do">## Make a commit and push all files to GitHub</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p>Here’s an example:</p>
+<ul>
+<li><a href="https://github.com/lcolladotor/StatComputing_ProjectDemo" class="uri">https://github.com/lcolladotor/StatComputing_ProjectDemo</a> and <a href="https://lcolladotor.github.io/StatComputing_ProjectDemo/" class="uri">https://lcolladotor.github.io/StatComputing_ProjectDemo/</a></li>
+</ul>
 </section>
 </section>
 </section>
-<section id="tips-and-tricks-in-r-markdown-in-rstudio" class="level1">
-<h1>Tips and tricks in R Markdown in RStudio</h1>
-<p>Here are shortcuts and tips on efficiently using RStudio to improve how you write code.</p>
+<section id="tips-and-tricks-in-positron" class="level1">
+<h1>Tips and tricks in <code>Positron</code></h1>
+<p>Here are shortcuts and tips on efficiently using <code>Positron</code> to improve how you write code. See <a href="https://positron.posit.co/keyboard-shortcuts.html" class="uri">https://positron.posit.co/keyboard-shortcuts.html</a> for the keyboard shortcuts in <code>Positron</code>. The <em>run code</em> shortcut is the same in <code>Positron</code> and <code>RStudio IDE</code>:</p>
 <section id="run-code" class="level3">
 <h3 class="anchored" data-anchor-id="run-code">Run code</h3>
 <p>If you want to run a code chunk:</p>
 <pre><code>command + Enter on Mac
 Ctrl + Enter on Windows</code></pre>
+<p>If you are used to <code>RStudio IDE</code> keybindings, check also <a href="https://positron.posit.co/migrate-rstudio-keybindings.html" class="uri">https://positron.posit.co/migrate-rstudio-keybindings.html</a>. For example, the <em>insert a comment</em> shortcut is one of them:</p>
 </section>
 <section id="insert-a-comment-in-r-and-r-markdown" class="level3">
 <h3 class="anchored" data-anchor-id="insert-a-comment-in-r-and-r-markdown">Insert a comment in R and R Markdown</h3>
@@ -736,71 +746,9 @@ Ctrl + Shift + C on Windows</code></pre>
 </ul>
 <p>Note that if you want to comment more than one line, select all the lines you want to comment then use the shortcut. If you want to uncomment a comment, apply the same shortcut.</p>
 </section>
-<section id="knit-a-r-markdown-document" class="level3">
-<h3 class="anchored" data-anchor-id="knit-a-r-markdown-document">Knit a R Markdown document</h3>
-<p>You can knit R Markdown documents by using this shortcut:</p>
-<pre><code>command + Shift + K on Mac
-Ctrl + Shift + K on Windows</code></pre>
-</section>
-<section id="code-snippets" class="level3">
-<h3 class="anchored" data-anchor-id="code-snippets">Code snippets</h3>
-<p>Code snippets is usually a few characters long and is used as a shortcut to insert a common piece of code. You simply type a few characters then press <code>Tab</code> and it will complete your code with a larger code. <code>Tab</code> is then used again to navigate through the code where customization is required. For instance, if you type <code>fun</code> then press <code>Tab</code>, it will auto-complete the code with the required code to create a function:</p>
-<pre><code>name &lt;- function(variables) {
-  
-}</code></pre>
-<p>Pressing <code>Tab</code> again will jump through the placeholders for you to edit it. So you can first edit the name of the function, then the variables and finally the code inside the function (try by yourself!).</p>
-<p>There are many code snippets by default in RStudio. Here are the code snippets you might want to use:</p>
-<ul>
-<li><code>lib</code> to call <code>library()</code></li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(package)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<ul>
-<li><code>mat</code> to create a matrix</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(data, <span class="at">nrow =</span> rows, <span class="at">ncol =</span> cols)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<ul>
-<li><code>if</code>, <code>el</code>, and <code>ei</code> to create conditional expressions such as <code>if() {}</code>, <code>else {}</code> and <code>else if () {}</code></li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (condition) {</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Case 1</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (condition) {</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Case 2</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (condition) {</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Case 3</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<ul>
-<li><code>fun</code> to create a function</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="cf">function</span>(variables) {</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<ul>
-<li><code>for</code> to create for loops</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> vector) {</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<ul>
-<li><code>ts</code> to insert a comment with the current date and time (useful if you have very long code and share it with others so they see when it has been edited)</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tue Jan 21 20:20:14 2020 ------------------------------</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>You can see all default code snippets and add yours by clicking on Tools &gt; Global Options… &gt; Code (left sidebar) &gt; Edit Snippets…</p>
-</section>
-<section id="ordered-list-in-r-markdown" class="level3">
-<h3 class="anchored" data-anchor-id="ordered-list-in-r-markdown">Ordered list in R Markdown</h3>
-<p>In R Markdown, when creating an ordered list such as this one:</p>
+<section id="ordered-list-in-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="ordered-list-in-markdown">Ordered list in <code>markdown</code></h3>
+<p>In <code>markdown</code> (applies to both <code>R Markdown</code> and <code>quarto</code>), when creating an ordered list such as this one:</p>
 <ol type="1">
 <li>Item 1</li>
 <li>Item 2</li>
@@ -836,88 +784,13 @@ Ctrl + Shift + K on Windows</code></pre>
 <li>Item 3</li>
 </ol>
 </section>
-<section id="new-code-chunk-in-r-markdown" class="level3">
-<h3 class="anchored" data-anchor-id="new-code-chunk-in-r-markdown">New code chunk in R Markdown</h3>
-<p>When editing R Markdown documents, you will need to insert a new R code chunk many times. The following shortcuts will make your life easier:</p>
+<section id="new-code-chunk-in-quarto-or-r-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="new-code-chunk-in-quarto-or-r-markdown">New code chunk in <code>quarto</code> or <code>R Markdown</code></h3>
+<p>When editing <code>quarto</code> or <code>R Markdown</code> documents, you will need to insert a new <code>R</code> code chunk many times. The following shortcuts will make your life easier:</p>
 <pre><code>command + option + I on Mac
     (or command + alt + I depending on your keyboard)
     
 Ctrl + ALT + I on Windows</code></pre>
-</section>
-<section id="reformat-code" class="level3">
-<h3 class="anchored" data-anchor-id="reformat-code">Reformat code</h3>
-<p><em>Note that we are going to be using <code>Air</code> for re-formatting code. See the instructions for installing <code>Air</code> and configuring it on <a href="../01-welcome/#how-to-get-air-auto-code-formatter">the first lecture</a>. The options below are other alternatives, which were discussed in the 2025-03-14 LIBD RStats club as shown on the video below.</em></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fKfH__OXuTY?si=fH_QWdXbJmYo2Vba" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<p>A clear and readable code is always easier and faster to read (and look more professional when sharing it to collaborators). To automatically apply the most common coding guidelines such as white spaces, indents, etc., use:</p>
-<pre><code>cmd + Shift + A on Mac
-Ctrl + Shift + A on Windows</code></pre>
-<p>So for example the following code which does not respect the guidelines (and which is not easy to read):</p>
-<pre><code>1+1
-  for(i in 1:10){if(!i%%2){next}
-print(i)
- }</code></pre>
-<p>becomes much more neat and readable:</p>
-<pre><code>1 + 1
-for (i in 1:10) {
-  if (!i %% 2) {
-    next
-  }
-  print(i)
-}</code></pre>
-<details>
-<summary>
-For details on formatting R code with <code>styler</code> and <code>biocthis</code>, click here.
-</summary>
-<p>I also like to use the <a href="https://github.com/r-lib/styler"><code>styler</code>: Non-invasive pretty printing of R code</a> package to automatically style my R code. I also use <a href="https://lcolladotor.github.io/biocthis/reference/bioc_style.html" class="uri">https://lcolladotor.github.io/biocthis/reference/bioc_style.html</a> to style my code in a way that it is compatible with Bioconductor’s code standards.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install styler for automatically styling scripts</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"styler"</span>)</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Install biocthis</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"BiocManager"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"BiocManager"</span>)</span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">"biocthis"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Example code for styling all files that end with .qmd</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">readLines</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"scripts"</span>, <span class="st">"auto_style.R"</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>styler::style_dir(     here::here(),     transformers = biocthis::bioc_style(),     filetype = "qmd" )</code></pre>
-</div>
-</div>
-<p>You might want to edit your <code>~/.Rprofile with `usethis::edit_r_profile()`</code> and add this line to it:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="do">## For the styler addin</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Affects the output of: styler:::get_addins_style_transformer_name()</span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183</span></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="st">"styler.addins_style_transformer"</span> <span class="ot">=</span> <span class="st">"biocthis::bioc_style()"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>For more information I have on my <code>~/.Rprofile</code> file check <a href="https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile" class="uri">https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile</a>.</p>
-</details>
-</section>
-<section id="rstudio-addins" class="level3">
-<h3 class="anchored" data-anchor-id="rstudio-addins">RStudio addins</h3>
-<p>RStudio addins are extensions which provide a simple mechanism for executing advanced R functions from within RStudio. In simpler words, when executing an addin (by clicking a button in the Addins menu), the corresponding code is executed without you having to write the code. RStudio addins have the advantage that they allow you to execute complex and advanced code much more easily than if you would have to write it yourself.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>For more information about RStudio addins, check out</strong>:</p>
-<ul>
-<li><a href="https://rstudio.github.io/rstudioaddins" class="uri">https://rstudio.github.io/rstudioaddins</a></li>
-<li><a href="https://statsandr.com/blog/tips-and-tricks-in-rstudio-and-r-markdown" class="uri">https://statsandr.com/blog/tips-and-tricks-in-rstudio-and-r-markdown</a></li>
-</ul>
-</div>
-</div>
 </section>
 <section id="others" class="level3">
 <h3 class="anchored" data-anchor-id="others">Others</h3>
@@ -926,7 +799,6 @@ Tip
 <li><code>command + Shift + N</code> on Mac and <code>Ctrl + Shift + N</code> on Windows to open a new R Script</li>
 <li><code>command + S</code> on Mac and <code>Ctrl + S</code> on Windows to save your current script or R Markdown document</li>
 </ul>
-<p>Check out Tools –&gt; Keyboard Shortcuts Help to see a long list of these shortcuts.</p>
 </section>
 </section>
 <section id="post-lecture-materials" class="level1">
@@ -970,8 +842,8 @@ Tip
 <section id="r-session-information" class="level1">
 <h1>R session information</h1>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
@@ -998,7 +870,6 @@ Tip
  fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.6.0)
  gitcreds      0.1.2   2022-09-08 [1] CRAN (R 4.6.0)
  glue          1.8.1   2026-04-17 [1] CRAN (R 4.6.0)
- here          1.0.2   2025-09-15 [1] CRAN (R 4.6.0)
  htmltools     0.5.9   2025-12-04 [1] CRAN (R 4.6.0)
  htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.6.0)
  httr2         1.3.0   2026-07-13 [1] CRAN (R 4.6.1)
@@ -1010,7 +881,6 @@ Tip
  R6            2.6.1   2025-02-15 [1] CRAN (R 4.6.0)
  rlang         1.3.0   2026-07-05 [1] CRAN (R 4.6.1)
  rmarkdown     2.31    2026-03-26 [1] CRAN (R 4.6.0)
- rprojroot     2.1.1   2025-08-26 [1] CRAN (R 4.6.0)
  S7            0.2.2   2026-04-22 [1] CRAN (R 4.6.0)
  sessioninfo   1.2.4   2026-06-04 [1] CRAN (R 4.6.0)
  xfun          0.60    2026-07-09 [1] CRAN (R 4.6.1)
@@ -1110,15 +980,159 @@ plot(airquality$Ozone ~ airquality$Wind)
 <li>Github: <a href="https://github.com/stephaniehicks/jhustatcomputing2021" class="uri">https://github.com/stephaniehicks/jhustatcomputing2021</a></li>
 </ul>
 <p>Some other cool things about distill is the use of footnotes and asides.</p>
-<p>For example <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. The number of the footnote will be automatically generated.</p>
+<p>For example <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. The number of the footnote will be automatically generated.</p>
 <p>You can also optionally include notes in the gutter of the article (immediately to the right of the article text). To do this use the aside tag.</p>
 <aside>
 This content will appear in the gutter of the article.
 </aside>
 <p>You can also include figures in the gutter. Just enclose the code chunk which generates the figure in an aside tag.</p>
+</section>
+<section id="tips-and-tricks-in-r-markdown-in-rstudio-ide" class="level2">
+<h2 class="anchored" data-anchor-id="tips-and-tricks-in-r-markdown-in-rstudio-ide">Tips and tricks in <code>R Markdown</code> in <code>RStudio IDE</code></h2>
+<section id="knit-a-r-markdown-document" class="level3">
+<h3 class="anchored" data-anchor-id="knit-a-r-markdown-document">Knit a R Markdown document</h3>
+<p>You can knit R Markdown documents by using this shortcut:</p>
+<pre><code>command + Shift + K on Mac
+Ctrl + Shift + K on Windows</code></pre>
+</section>
+<section id="code-snippets" class="level3">
+<h3 class="anchored" data-anchor-id="code-snippets">Code snippets</h3>
+<p>Code snippets is usually a few characters long and is used as a shortcut to insert a common piece of code. You simply type a few characters then press <code>Tab</code> and it will complete your code with a larger code. <code>Tab</code> is then used again to navigate through the code where customization is required. For instance, if you type <code>fun</code> then press <code>Tab</code>, it will auto-complete the code with the required code to create a function:</p>
+<pre><code>name &lt;- function(variables) {
+  
+}</code></pre>
+<p>Pressing <code>Tab</code> again will jump through the placeholders for you to edit it. So you can first edit the name of the function, then the variables and finally the code inside the function (try by yourself!).</p>
+<p>There are many code snippets by default in RStudio. Here are the code snippets you might want to use:</p>
+<ul>
+<li><code>lib</code> to call <code>library()</code></li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(package)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li><code>mat</code> to create a matrix</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(data, <span class="at">nrow =</span> rows, <span class="at">ncol =</span> cols)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li><code>if</code>, <code>el</code>, and <code>ei</code> to create conditional expressions such as <code>if() {}</code>, <code>else {}</code> and <code>else if () {}</code></li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (condition) {</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Case 1</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (condition) {</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Case 2</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (condition) {</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Case 3</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li><code>fun</code> to create a function</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="cf">function</span>(variables) {</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li><code>for</code> to create for loops</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> vector) {</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li><code>ts</code> to insert a comment with the current date and time (useful if you have very long code and share it with others so they see when it has been edited)</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tue Jan 21 20:20:14 2020 ------------------------------</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>You can see all default code snippets and add yours by clicking on Tools &gt; Global Options… &gt; Code (left sidebar) &gt; Edit Snippets…</p>
+</section>
+<section id="reformat-code" class="level3">
+<h3 class="anchored" data-anchor-id="reformat-code">Reformat code</h3>
+<p><em>Note that we are going to be using <code>Air</code> for re-formatting code. See the instructions for installing <code>Air</code> and configuring it on <a href="../01-welcome/#how-to-get-air-auto-code-formatter">the first lecture</a>. The options below are other alternatives, which were discussed in the 2025-03-14 LIBD RStats club as shown on the video below.</em></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fKfH__OXuTY?si=fH_QWdXbJmYo2Vba" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p>A clear and readable code is always easier and faster to read (and look more professional when sharing it to collaborators). To automatically apply the most common coding guidelines such as white spaces, indents, etc., use:</p>
+<pre><code>cmd + Shift + A on Mac
+Ctrl + Shift + A on Windows</code></pre>
+<p>So for example the following code which does not respect the guidelines (and which is not easy to read):</p>
+<pre><code>1+1
+  for(i in 1:10){if(!i%%2){next}
+print(i)
+ }</code></pre>
+<p>becomes much more neat and readable:</p>
+<pre><code>1 + 1
+for (i in 1:10) {
+  if (!i %% 2) {
+    next
+  }
+  print(i)
+}</code></pre>
+<details>
+<summary>
+For details on formatting R code with <code>styler</code> and <code>biocthis</code>, click here.
+</summary>
+<p>I also like to use the <a href="https://github.com/r-lib/styler"><code>styler</code>: Non-invasive pretty printing of R code</a> package to automatically style my R code. I also use <a href="https://lcolladotor.github.io/biocthis/reference/bioc_style.html" class="uri">https://lcolladotor.github.io/biocthis/reference/bioc_style.html</a> to style my code in a way that it is compatible with Bioconductor’s code standards.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install styler for automatically styling scripts</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"styler"</span>)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Install biocthis</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"BiocManager"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"BiocManager"</span>)</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">"biocthis"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Example code for styling all files that end with .qmd</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">readLines</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"scripts"</span>, <span class="st">"auto_style.R"</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>styler::style_dir(     here::here(),     transformers = biocthis::bioc_style(),     filetype = "qmd" )</code></pre>
+</div>
+</div>
+<p>You might want to edit your <code>~/.Rprofile with `usethis::edit_r_profile()`</code> and add this line to it:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="do">## For the styler addin</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Affects the output of: styler:::get_addins_style_transformer_name()</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="st">"styler.addins_style_transformer"</span> <span class="ot">=</span> <span class="st">"biocthis::bioc_style()"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>For more information I have on my <code>~/.Rprofile</code> file check <a href="https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile" class="uri">https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile</a>.</p>
+</details>
+</section>
+<section id="rstudio-addins" class="level3">
+<h3 class="anchored" data-anchor-id="rstudio-addins">RStudio addins</h3>
+<p>RStudio addins are extensions which provide a simple mechanism for executing advanced R functions from within RStudio. In simpler words, when executing an addin (by clicking a button in the Addins menu), the corresponding code is executed without you having to write the code. RStudio addins have the advantage that they allow you to execute complex and advanced code much more easily than if you would have to write it yourself.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>For more information about RStudio addins, check out</strong>:</p>
+<ul>
+<li><a href="https://rstudio.github.io/rstudioaddins" class="uri">https://rstudio.github.io/rstudioaddins</a></li>
+<li><a href="https://statsandr.com/blog/tips-and-tricks-in-rstudio-and-r-markdown" class="uri">https://statsandr.com/blog/tips-and-tricks-in-rstudio-and-r-markdown</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="others-1" class="level3">
+<h3 class="anchored" data-anchor-id="others-1">Others</h3>
+<p>Check out Tools –&gt; Keyboard Shortcuts Help to see a long list of these shortcuts.</p>
 
 
 
+</section>
 </section>
 </section>
 
@@ -1130,7 +1144,8 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>This will become a hover-able footnote<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Technically it’s a <code>quarto</code> file with a <code>.qmd</code> file extention. But <code>quarto</code> is very similar to <code>R markdown</code>, aka <code>.qmd</code> files are similar to <code>.Rmd</code> files.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This will become a hover-able footnote<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
