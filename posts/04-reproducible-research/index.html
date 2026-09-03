@@ -441,7 +441,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol></li>
 <li><p><strong>Analytic code</strong>. The analytic code is the code that was applied to the analytic data to produce the key results. This may be preprocessing code, regression modeling code, or really any other code used to produce the results from the analytic data.</p>
 <ol type="1">
-<li>You can share analytic code through GitHub and Zenodo. See <a href="https://github.com/LieberInstitute/spatialDLPFC" class="uri">https://github.com/LieberInstitute/spatialDLPFC</a> and <a href="https://zenodo.org/record/7925134" class="uri">https://zenodo.org/record/7925134</a> for example. Follow <a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content" class="uri">https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content</a> in order to share your GitHub files through Zenodo and obtain a DOI (digital object identifier) that people can then cite. You could also use Figshare instead of Zenodo.</li>
+<li>You can share analytic code through <code>GitHub</code> and <code>Zenodo</code>. See <a href="https://github.com/LieberInstitute/spatialDLPFC" class="uri">https://github.com/LieberInstitute/spatialDLPFC</a> and <a href="https://zenodo.org/record/7925134" class="uri">https://zenodo.org/record/7925134</a> for example. Follow <a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content" class="uri">https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content</a> in order to share your <code>GitHub</code> files through <code>Zenodo</code> and obtain a DOI (digital object identifier) that people can then cite. You could also use <code>Figshare</code> instead of <code>Zenodo</code>.</li>
 </ol></li>
 <li><p><strong>Documentation</strong>. Documentation of that code and the data is very important.</p>
 <ol type="1">
@@ -521,7 +521,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>One current <strong>challenge is that authors of research have to undergo considerable effort to make their results available to a wide audience</strong>.</p>
 <ul>
 <li>Publishing data and code today is not necessarily a trivial task. Although there are a number of resources available now, that were not available even five years ago, it is still a bit of a challenge to get things out on the web (or at least distributed widely).</li>
-<li>Resources like <a href="https://github.com">GitHub</a>, <a href="https://kipoi.org">kipoi</a>, and <a href="http://rpubs.com">RPubs</a> and various data repositories have made a big difference, but there is still a ways to go with respect to building up the public reproducibility infrastructure.</li>
+<li>Resources like <a href="https://github.com">GitHub</a>, <a href="https://kipoi.org">kipoi</a>, and <a href="http://rpubs.com">RPubs</a> (sadly it’ll be retired in June 2027 and replaced by <em>Posit Cloud</em> as documented on <a href="https://posit.co/blog/migrating-connect-cloud-posits-unified-publishing-solution">this blog post</a>) and various data repositories have made a big difference, but there is still a ways to go with respect to building up the public reproducibility infrastructure.</li>
 </ul>
 <p>Furthermore, <strong>even when data and code are available</strong>, readers often have to download the data, download the code, and then they have to piece everything together, usually by hand. It’s <strong>not always an easy task to put the data and code together</strong>.</p>
 <ul>
@@ -563,7 +563,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><code>here</code> makes it easy to write code that you can share by avoiding <em>full file paths</em> and making it easier to use <em>relative</em> file paths. The file paths are made relative to your project home, which is automatically detected based on a few files. These can be:</p>
 <ul>
 <li><p>The directory where you have a <code>.git</code> directory. That is, the beginning of your <code>git</code> repository.</p></li>
-<li><p>The directory where you have an RStudio project file (<code>*.Rproj</code>). For RStudio projects with a <code>git</code> repository, this is typically the same directory. Note that this file is not used by <code>Positron</code> which makes it even more important to use <code>git</code> on your project folders (directories). See <a href="https://positron.posit.co/migrate-rstudio-rproj.html" class="uri">https://positron.posit.co/migrate-rstudio-rproj.html</a> for more details.</p></li>
+<li><p>The directory where you have an <code>RStudio IDE</code> project file (<code>*.Rproj</code>). For <code>RStudio IDE</code> projects with a <code>git</code> repository, this is typically the same directory.</p>
+<ul>
+<li>Note that this file is not used by <code>Positron</code> which makes it even more important to use <code>git</code> on your project folders (directories). See <a href="https://positron.posit.co/migrate-rstudio-rproj.html" class="uri">https://positron.posit.co/migrate-rstudio-rproj.html</a> for more details.</li>
+</ul></li>
 <li><p>The directory where you have a <code>.here</code> file (very uncommon scenario).</p></li>
 </ul>
 <div class="cell">
@@ -595,7 +598,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Note that I made a <em>GitHub permalink</em> (<em>perma</em>nent <em>link</em>) above, which is another way we can communicate precisely with others. It’s very useful to include GitHub permalinks when asking questions about code you or others have made public on GitHub. See <a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet" class="uri">https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet</a> for more details about how to create GitHub permalinks.</p>
+<p>Note that I made a <em>GitHub permalink</em> (<em>perma</em>nent <em>link</em>) above, which is another way we can communicate precisely with others. It’s very useful to include <code>GitHub</code> permalinks when asking questions about code you or others have made public on <code>GitHub</code>. See <a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet" class="uri">https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet</a> for more details about how to create <code>GitHub</code> permalinks.</p>
 <p>Here is the actual output of those commands:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Reproducibility information</span></span>
@@ -605,12 +608,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-08-27 10:04:22 EDT"</code></pre>
+<pre><code>[1] "2026-09-02 22:33:09 EDT"</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">proc.time</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
-  0.539   0.108   0.736 </code></pre>
+  0.537   0.136   0.814 </code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -625,7 +628,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2026-08-27
+ date     2026-09-02
  pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
@@ -682,7 +685,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
 </div>
-<p><code>sessioninfo::session_info()</code> has a first section that includes information about my R installation and other computer environment variables (like my operating system). The second section includes information about the R packages that I used, their version numbers, and where I installed them from.</p>
+<p><code>sessioninfo::session_info()</code> has a first section that includes information about my <code>R</code> installation and other computer environment variables (like my operating system). The second section includes information about the <code>R</code> packages that I used, their version numbers, and where I installed them from.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"colorout"</span>) <span class="do">## Load a package I installed from GitHub</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -697,7 +700,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2026-08-27
+ date     2026-09-02
  pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
@@ -754,7 +757,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
 </div>
-<p>For packages that we installed from GitHub, it includes the specific <code>git</code> commit ID for the version we installed. This is super precise information that is very useful to have.</p>
+<p>For packages that we installed from <code>GitHub</code>, it includes the specific <code>git</code> commit ID for the version we installed. This is super precise information that is very useful to have.</p>
 <p>Check <a href="https://github.com/LieberInstitute/template_project/blob/devel/code/01_read_data_to_r/01_read_data_to_r.R" class="uri">https://github.com/LieberInstitute/template_project/blob/devel/code/01_read_data_to_r/01_read_data_to_r.R</a> for a full script example part of <a href="https://github.com/LieberInstitute/template_project" class="uri">https://github.com/LieberInstitute/template_project</a>.</p>
 <p>Remember to use <code>sessioninfo</code> when using <code>reprex::reprex()</code> as we mentioned previously at <a href="../03-introduction-to-gitgithub/#help-me-help-you-reprexreprex">posts/03-introduction-to-gitgithub/#help-me-help-you-reprexreprex</a>.</p>
 <p>Check <a href="https://github.com/Bioconductor/BiocFileCache/issues/48" class="uri">https://github.com/Bioconductor/BiocFileCache/issues/48</a> for an example on how the output from <code>sessioninfo::session_info()</code> provided useful hints that allowed me and others to resolve a problem.</p>
@@ -806,7 +809,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2026-08-27
+ date     2026-09-02
  pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.10.18 @ /Applications/quarto/bin/quarto
 

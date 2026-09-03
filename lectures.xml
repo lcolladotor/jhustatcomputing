@@ -10,7 +10,7 @@
 <atom:link href="https://lcolladotor.github.io/jhustatcomputing/lectures.xml" rel="self" type="application/rss+xml"/>
 <description>Course website for Statistical Computing (BSPH 140.776)</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Thu, 03 Sep 2026 02:25:17 GMT</lastBuildDate>
+<lastBuildDate>Thu, 03 Sep 2026 02:34:58 GMT</lastBuildDate>
 <item>
   <title>01 - Welcome!</title>
   <dc:creator>Leonardo Collado Torres</dc:creator>
@@ -668,7 +668,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>module 1</category>
   <category>week 1</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>02 - Introduction to R and RStudio!</title>
@@ -1228,7 +1228,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>RStudio</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/02-introduction-to-r-and-rstudio/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
   <media:content url="https://github.com/njtierney/rmd4sci/raw/master/figs/rstudio-screenshot.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -1582,7 +1582,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>git</category>
   <category>GitHub</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/03-introduction-to-gitgithub/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
   <media:content url="https://lcolladotor.github.io/jhustatcomputing/images/happygitwithr.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -1739,7 +1739,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 </ol></li>
 <li><p><strong>Analytic code</strong>. The analytic code is the code that was applied to the analytic data to produce the key results. This may be preprocessing code, regression modeling code, or really any other code used to produce the results from the analytic data.</p>
 <ol type="1">
-<li>You can share analytic code through GitHub and Zenodo. See <a href="https://github.com/LieberInstitute/spatialDLPFC" class="uri">https://github.com/LieberInstitute/spatialDLPFC</a> and <a href="https://zenodo.org/record/7925134" class="uri">https://zenodo.org/record/7925134</a> for example. Follow <a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content" class="uri">https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content</a> in order to share your GitHub files through Zenodo and obtain a DOI (digital object identifier) that people can then cite. You could also use Figshare instead of Zenodo.</li>
+<li>You can share analytic code through <code>GitHub</code> and <code>Zenodo</code>. See <a href="https://github.com/LieberInstitute/spatialDLPFC" class="uri">https://github.com/LieberInstitute/spatialDLPFC</a> and <a href="https://zenodo.org/record/7925134" class="uri">https://zenodo.org/record/7925134</a> for example. Follow <a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content" class="uri">https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content</a> in order to share your <code>GitHub</code> files through <code>Zenodo</code> and obtain a DOI (digital object identifier) that people can then cite. You could also use <code>Figshare</code> instead of <code>Zenodo</code>.</li>
 </ol></li>
 <li><p><strong>Documentation</strong>. Documentation of that code and the data is very important.</p>
 <ol type="1">
@@ -1819,7 +1819,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 <p>One current <strong>challenge is that authors of research have to undergo considerable effort to make their results available to a wide audience</strong>.</p>
 <ul>
 <li>Publishing data and code today is not necessarily a trivial task. Although there are a number of resources available now, that were not available even five years ago, it is still a bit of a challenge to get things out on the web (or at least distributed widely).</li>
-<li>Resources like <a href="https://github.com">GitHub</a>, <a href="https://kipoi.org">kipoi</a>, and <a href="http://rpubs.com">RPubs</a> and various data repositories have made a big difference, but there is still a ways to go with respect to building up the public reproducibility infrastructure.</li>
+<li>Resources like <a href="https://github.com">GitHub</a>, <a href="https://kipoi.org">kipoi</a>, and <a href="http://rpubs.com">RPubs</a> (sadly it’ll be retired in June 2027 and replaced by <em>Posit Cloud</em> as documented on <a href="https://posit.co/blog/migrating-connect-cloud-posits-unified-publishing-solution">this blog post</a>) and various data repositories have made a big difference, but there is still a ways to go with respect to building up the public reproducibility infrastructure.</li>
 </ul>
 <p>Furthermore, <strong>even when data and code are available</strong>, readers often have to download the data, download the code, and then they have to piece everything together, usually by hand. It’s <strong>not always an easy task to put the data and code together</strong>.</p>
 <ul>
@@ -1869,7 +1869,10 @@ font-style: inherit;">"sessioninfo"</span>))</span></code></pre></div></div>
 <p><code>here</code> makes it easy to write code that you can share by avoiding <em>full file paths</em> and making it easier to use <em>relative</em> file paths. The file paths are made relative to your project home, which is automatically detected based on a few files. These can be:</p>
 <ul>
 <li><p>The directory where you have a <code>.git</code> directory. That is, the beginning of your <code>git</code> repository.</p></li>
-<li><p>The directory where you have an RStudio project file (<code>*.Rproj</code>). For RStudio projects with a <code>git</code> repository, this is typically the same directory. Note that this file is not used by <code>Positron</code> which makes it even more important to use <code>git</code> on your project folders (directories). See <a href="https://positron.posit.co/migrate-rstudio-rproj.html" class="uri">https://positron.posit.co/migrate-rstudio-rproj.html</a> for more details.</p></li>
+<li><p>The directory where you have an <code>RStudio IDE</code> project file (<code>*.Rproj</code>). For <code>RStudio IDE</code> projects with a <code>git</code> repository, this is typically the same directory.</p>
+<ul>
+<li>Note that this file is not used by <code>Positron</code> which makes it even more important to use <code>git</code> on your project folders (directories). See <a href="https://positron.posit.co/migrate-rstudio-rproj.html" class="uri">https://positron.posit.co/migrate-rstudio-rproj.html</a> for more details.</li>
+</ul></li>
 <li><p>The directory where you have a <code>.here</code> file (very uncommon scenario).</p></li>
 </ul>
 <div class="cell">
@@ -1949,7 +1952,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 </div>
-<p>Note that I made a <em>GitHub permalink</em> (<em>perma</em>nent <em>link</em>) above, which is another way we can communicate precisely with others. It’s very useful to include GitHub permalinks when asking questions about code you or others have made public on GitHub. See <a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet" class="uri">https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet</a> for more details about how to create GitHub permalinks.</p>
+<p>Note that I made a <em>GitHub permalink</em> (<em>perma</em>nent <em>link</em>) above, which is another way we can communicate precisely with others. It’s very useful to include <code>GitHub</code> permalinks when asking questions about code you or others have made public on <code>GitHub</code>. See <a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet" class="uri">https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet</a> for more details about how to create <code>GitHub</code> permalinks.</p>
 <p>Here is the actual output of those commands:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="do" style="color: #5E5E5E;
@@ -1967,14 +1970,14 @@ font-style: inherit;">"Reproducibility information:"</span>)</span></code></pre>
 background-color: null;
 font-style: inherit;">Sys.time</span>()</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-08-27 10:04:22 EDT"</code></pre>
+<pre><code>[1] "2026-09-02 22:33:09 EDT"</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">proc.time</span>()</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
-  0.539   0.108   0.736 </code></pre>
+  0.537   0.136   0.814 </code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1999,7 +2002,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2026-08-27
+ date     2026-09-02
  pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
@@ -2056,7 +2059,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
 </div>
-<p><code>sessioninfo::session_info()</code> has a first section that includes information about my R installation and other computer environment variables (like my operating system). The second section includes information about the R packages that I used, their version numbers, and where I installed them from.</p>
+<p><code>sessioninfo::session_info()</code> has a first section that includes information about my <code>R</code> installation and other computer environment variables (like my operating system). The second section includes information about the <code>R</code> packages that I used, their version numbers, and where I installed them from.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2081,7 +2084,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2026-08-27
+ date     2026-09-02
  pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
@@ -2138,7 +2141,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
 </div>
-<p>For packages that we installed from GitHub, it includes the specific <code>git</code> commit ID for the version we installed. This is super precise information that is very useful to have.</p>
+<p>For packages that we installed from <code>GitHub</code>, it includes the specific <code>git</code> commit ID for the version we installed. This is super precise information that is very useful to have.</p>
 <p>Check <a href="https://github.com/LieberInstitute/template_project/blob/devel/code/01_read_data_to_r/01_read_data_to_r.R" class="uri">https://github.com/LieberInstitute/template_project/blob/devel/code/01_read_data_to_r/01_read_data_to_r.R</a> for a full script example part of <a href="https://github.com/LieberInstitute/template_project" class="uri">https://github.com/LieberInstitute/template_project</a>.</p>
 <p>Remember to use <code>sessioninfo</code> when using <code>reprex::reprex()</code> as we mentioned previously at <a href="../03-introduction-to-gitgithub/#help-me-help-you-reprexreprex">posts/03-introduction-to-gitgithub/#help-me-help-you-reprexreprex</a>.</p>
 <p>Check <a href="https://github.com/Bioconductor/BiocFileCache/issues/48" class="uri">https://github.com/Bioconductor/BiocFileCache/issues/48</a> for an example on how the output from <code>sessioninfo::session_info()</code> provided useful hints that allowed me and others to resolve a problem.</p>
@@ -2200,7 +2203,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2026-08-27
+ date     2026-09-02
  pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
@@ -2267,7 +2270,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>reproducibility</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/04-reproducible-research/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>05 - Literate Statistical Programming</title>
@@ -3243,7 +3246,7 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/05-literate-programming/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
   <media:content url="https://github.com/allisonhorst/stats-illustrations/raw/main/rstats-artwork/rmarkdown_rockstar.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -3734,7 +3737,7 @@ Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbo
   <category>R Markdown</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/06-reference-management/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
   <media:content url="https://www.bibtex.com/img/bibtex-format-700x402.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -5166,7 +5169,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/07-reading-and-writing-data/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>08 - Managing data frames with the Tidyverse</title>
@@ -7000,7 +7003,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>tibble</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/08-managing-data-frames-with-tidyverse/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>09 - Tidy data and the Tidyverse</title>
@@ -7989,7 +7992,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/09-tidy-data-and-the-tidyverse/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>10 - Joining data in R</title>
@@ -8845,7 +8848,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>here</category>
   <category>tidyverse</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/10-joining-data-in-r/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>11 - Plotting Systems</title>
@@ -9363,7 +9366,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/11-plotting-systems/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>12 - The ggplot2 plotting system: qplot()</title>
@@ -10741,7 +10744,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/12-ggplot2-plotting-system-part-1/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>13 - The ggplot2 plotting system: ggplot()</title>
@@ -12736,7 +12739,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>ggplot2</category>
   <category>data viz</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/13-ggplot2-plotting-system-part-2/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>14 - R Nuts and Bolts</title>
@@ -14758,7 +14761,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/14-r-nuts-and-bolts/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>15 - Control Structures</title>
@@ -16055,7 +16058,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>R</category>
   <category>programming</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/15-control-structures/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>16 - Functions</title>
@@ -17418,7 +17421,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/16-functions/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>17 - Vectorization and loop functionals</title>
@@ -20463,7 +20466,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>functions</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/17-loop-functions/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>18 - Debugging R Code</title>
@@ -22480,7 +22483,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/18-debugging-r-code/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>19 - Error Handling and Generation</title>
@@ -23453,7 +23456,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>debugging</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/19-error-handling-and-generation/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 <item>
   <title>20 - Working with dates and times</title>
@@ -25204,7 +25207,7 @@ font-style: inherit;">session_info</span>()</span></code></pre></div></div>
   <category>programming</category>
   <category>dates and times</category>
   <guid>https://lcolladotor.github.io/jhustatcomputing/posts/20-working-with-dates-and-times/</guid>
-  <pubDate>Thu, 03 Sep 2026 02:25:17 GMT</pubDate>
+  <pubDate>Thu, 03 Sep 2026 02:34:58 GMT</pubDate>
 </item>
 </channel>
 </rss>
