@@ -63,15 +63,15 @@ This document gives a brief explanation of `GitHub` and how we will use it for t
 
 ### GitHub
 
-*`GitHub`* is a hosting service on internet for `git`-aware folders and projects
+`GitHub` is a hosting service on internet for `git`-aware folders and projects
 
-   Technically *`GitHub`* is distinct from *`Git`*. However, *`GitHub`* is in some sense the interface and *`Git`* the underlying engine (a bit like *`RStudio IDE`* and *`R`*).
+   Technically `GitHub` is distinct from `git`. However, `GitHub` is in some sense the interface and `git` the underlying engine (a bit like `Positron` or `RStudio IDE` and `R`).
 
-Note that other interfaces to *`Git`* exist, e.g., *`Bitbucket`*, but *`GitHub`* is the most widely used one.
+Note that other interfaces to `git` exist, e.g., `Bitbucket`, but `GitHub` is the most widely used one.
 
 ### Why use git/GitHub?
 
-You want to use `git` + *`GitHub`* to avoid this:
+You want to use `git` + `GitHub` to avoid this:
 
 ```{r}
 #| label: versioncontrol
@@ -83,36 +83,36 @@ knitr::include_graphics("../../images/phdversioncontrol.gif")
 
 \[[Source: PhD Comics](http://phdcomics.com/comics/archive_print.php?comicid=1531)\]
 
-`git` + *`GitHub`* gives you a clean way to track your projects. It is also very well suited to collaborative work. Historically, version control was used for software development. However, it has become broader and is now used for many types of projects, including data science projects.
+`git` + `GitHub` gives you a clean way to track your projects. It is also very well suited to collaborative work. Historically, version control was used for software development. However, it has become broader and is now used for many types of projects, including data science projects.
 
-To learn a bit more about Git/GitHub and why you might want to use it, [read this article by Jenny Bryan](https://peerj.com/preprints/3159/).
+To learn a bit more about `git`/`GitHub` and why you might want to use it, [read this article by Jenny Bryan](https://doi.org/10.1080/00031305.2017.1399928) (or the [preprint](https://peerj.com/preprints/3159/)).
 
-**Note her explanation of what's special with the `README.md` file on GitHub.**
+**Note her explanation of what's special with the `README.md` file on `GitHub`.**
 
 ### What to (not) do
 
-*Note*: In the following, I will use *`GitHub`* to refer to the hosting service and `git` to refer to the version control system.
+*Note*: In the following, I will use `GitHub` to refer to the hosting service and `git` to refer to the version control system.
 
-`git` + **`GitHub` is ideal if** you have a project with a fair number of files, most of those files are text files (such as code, $LaTeX$, (R)markdown, etc.) and different people work on different parts of the project.
+`git` + **`GitHub` is ideal if** you have a project with a fair number of files, most of those files are text files (such as code, $LaTeX$, (R)`markdown`, `quarto`, etc.) and different people work on different parts of the project.
 
 `git` + **`GitHub` is less useful if** you have a lot of non-text files (e.g. Word or Powerpoint) and different team members might want to edit the same document at the same time. In that instance, a solution like Google Docs, Word+Dropbox, Word+Onedrive, etc. might be better.
 
 ### How to use Git/GitHub
 
-`git` and *`GitHub`* is fundamentally **based on commands you type into the command line**. Lots of online resources show you how to use the command line. This is the most powerful, and I use it frequently to interact with `git`/`GitHub`. However, many folks find this the most confusing way to use `git`/`GitHub`. Alternatively, there are graphical interfaces.
+`git` and `GitHub` is fundamentally **based on commands you type into the command line**. Lots of online resources show you how to use the command line. This is the most powerful, and I use it frequently to interact with `git`/`GitHub`. However, many folks find this the most confusing way to use `git`/`GitHub`. Alternatively, there are graphical interfaces.
 
 -   [GitHub itself](https://desktop.github.com/) provides a graphical interface with basic functionality.
 -   `Positron` works very well with `Git` and `GitHub` as documented at <https://positron.posit.co/git.html>. It has several more advanced options, as `Positron` is based on `Visual Studio Code` (VS Code) and VS Code already has an in-depth integration with `Git` and `GitHub` as noted at <https://code.visualstudio.com/docs/sourcecontrol/intro-to-git>.
--   `RStudio IDE` also has [Git/GitHub integration](https://happygitwithr.com/rstudio-git-github.html). Of course this only works for `R` project `GitHub` integration.
+-   `RStudio IDE` also has [Git/GitHub integration](https://happygitwithr.com/rstudio-git-github.html). This only works for `R` project `GitHub` integration.
 -   There are also third party `GitHub` clients with many advanced features, most of which you won't need initially, but might eventually.
 
 **Note**: As a student, you can (and should) upgrade to the Pro version of `GitHub` for free (i.e. access to unlimited private repositories is one benefit), see the [`GitHub` student developer pack](https://education.github.com/pack) on how to do this.
 
-We will mostly be using Git commands through the `RStudio IDE` Git panel or `Positron` Git Source Control section. This panel will show up by default if `RStudio IDE` / `Positron` recognizes that you have installed Git already.
+We will mostly be using `git` commands through the `Positron` Git Source Control section or `RStudio IDE` Git panel. This panel will show up by default if `RStudio IDE` / `Positron` recognizes that you have installed `git` already.
 
 # Getting Started
 
-One of my favorite resources for getting started with git/GitHub is the *Happy Git with R* from [Jenny Bryan](https://bsky.app/profile/jennybryan.bsky.social):
+One of my favorite resources for getting started with `git`/`GitHub` is the *Happy Git with R* from [Jenny Bryan](https://bsky.app/profile/jennybryan.bsky.social):
 
 -   <https://happygitwithr.com>
 
@@ -128,7 +128,7 @@ It truly is one of the **best resources** out there for getting started with `gi
 
 Some of you may only need to skim it, others will need to spend some time reading through it. Either way, I will bet that you won't regret the time investment.
 
-Alternatively, check the [git to know git: an 8 minute introduction](https://research.libd.org/rstatsclub/2018/04/17/git-to-know-git/) blog post by [Amy Peterson](https://amy-peterson.github.io/).
+Alternatively, check the [git to know git: an 8 minute introduction](https://research.libd.org/rstatsclub/2018/04/17/git-to-know-git/) blog post by [Amy Peterson](https://amy-peterson.github.io/) ([LinkedIn](https://www.linkedin.com/in/amypeterson6/)).
 
 # Using `git`/`GitHub` in our course
 
@@ -137,7 +137,7 @@ In this course, you will use `git`/`GitHub` in the following ways:
 1.  Project 0 (optional) - You will create a website introducing yourself to folks in the course and deploy it on `GitHub`.
 2.  Projects 1-3 - You can practice using `git` locally (on your compute environment) to track your changes over time and, if you wish (but highly suggested), you can practice pushing your project solutions to a private `GitHub` repository on your `GitHub` account (i.e. `git add`, `git commit`, `git push`, `git pull`, etc) .
 
-Learning these skills will be useful down the road if you ever work collaboratively on a project (i.e. writing code as a group). In this scenario, you will use the skills you have been practicing in your projects to work together as a team in a single GitHub repository.
+Learning these skills will be useful down the road if you ever work collaboratively on a project (i.e. writing code as a group). In this scenario, you will use the skills you have been practicing in your projects to work together as a team in a single `GitHub` repository.
 
 If you want to make a public `git` repository and share it via `GitHub` with your class notes, akin to <https://github.com/lcolladotor/biostat776classnotes>, you can do so with:
 
@@ -174,7 +174,7 @@ As a quick exercise:
 
 1.  Install `reprex`
 
-2.  Log in to your GitHub account and access <https://github.com/lcolladotor/jhustatcomputing/issues/10>
+2.  Log in to your GitHub account and access <https://github.com/lcolladotor/jhustatcomputing/issues/12>
 
 3.  Copy paste the following R code `stop("This R error is weird")`.
 
