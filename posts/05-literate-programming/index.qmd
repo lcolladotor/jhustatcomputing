@@ -49,8 +49,8 @@ Material for this lecture was borrowed and adopted from
 
 -   Be able to define literate programming
 -   Recognize differences between available tools to for literate programming
--   Know how to efficiently work within RStudio for efficient literate programming
--   Create a R Markdown document
+-   Know how to efficiently work within `Positron` or `RStudio IDE` for efficient literate programming
+-   Create a `quarto` or `R Markdown` document
 :::
 
 # Introduction
@@ -118,12 +118,14 @@ The authors of the 2nd book describe the motivation for the 2nd book as:
 > "However, we have received comments from our readers and publisher that it would be beneficial to provide more practical and relatively short examples to show the interesting and useful usage of R Markdown, because it can be daunting to find out how to achieve a certain task from the aforementioned reference book (put another way, that book is too dry to read). As a result, this cookbook was born."
 :::
 
-Because this is lecture is built in a `.qmd` file (which is very similar to a `.Rmd` file), let's demonstrate how this work. I am going to change `eval=FALSE` to `eval=TRUE`.
+Because this is lecture is built in using these tools ^[Technically it's a `quarto` file with a `.qmd` file extention. But `quarto` is very similar to `R markdown`, aka `.qmd` files are similar to `.Rmd` files.], let's demonstrate how this work. I am going to change `eval=FALSE` to `eval=TRUE`.
 
 ```{r plot2, height=4, width=5, eval=TRUE, echo=TRUE}
 data(airquality)
 plot(airquality$Ozone ~ airquality$Wind)
 ```
+
+The source file for this lecture is [`posts/05-literate-programming/index.qmd`](https://github.com/lcolladotor/jhustatcomputing/blob/main/posts/05-literate-programming/index.qmd). There, we can see another `R` code chunk syntax.
 
 ```{r}
 #| label: plot1b
@@ -135,7 +137,7 @@ data(airquality)
 plot(airquality$Ozone ~ airquality$Wind)
 ```
 
-We can't tell which syntax was used to make the code chunk above, but you can see that the code was executed and the plot was made.
+The results are identical on the `html` file, so we can't tell which syntax was used to make the code chunk above. In any case, you can see that the code was executed and the plot was made.
 
 ::: callout-tip
 ### Questions
@@ -151,7 +153,7 @@ Before we leave this section, I find that there is quite a bit of terminology to
 -   [`markdown`](https://CRAN.R-project.org/package=markdown) (**R package**). `markdown` is an R package which converts `.md` files into HTML. It is no longer recommended for use has been surpassed by [`rmarkdown`](https://CRAN.R-project.org/package=rmarkdown) (discussed below).
 -   R Markdown (**markup language**). R Markdown is an extension of the markdown syntax. R Markdown files are plain text files that typically have the file extension `.Rmd`.
 -   [`rmarkdown`](https://CRAN.R-project.org/package=rmarkdown) (**R package**). The R package `rmarkdown` is a library that uses pandoc to process and convert `.Rmd` files into a number of different formats. This core function is `rmarkdown::render()`. **Note**: this package only deals with the markdown language. If the input file is e.g. `.Rhtml` or `.Rnw`, then you need to use `knitr` prior to calling pandoc (see below).
--   [quarto](https://quarto.org/): Similar to `rmarkdown` but can be used outside R. It is not an R package! Input files have the `.qmd` file extension. `Positron` has mostly adopted `quarto`, so this what you will likely use instead of `R Markdown` for making the `.html` files required for the course projects. If you need a template file to get started, go to https://quarto.org/, under the "Hello, Quarto" section click on "R", then copy-paste the template code into a new `.qmd` file in `Positron` (or `RStudio IDE`).
+-   [quarto](https://quarto.org/): Similar to `rmarkdown` but can be used outside `R`. It is not an `R` package! Input files have the `.qmd` file extension. `Positron` has mostly adopted `quarto`, so this what you will likely use instead of `R Markdown` for making the `.html` files required for the course projects. If you need a template file to get started, go to https://quarto.org/, under the "Hello, Quarto" section click on "R", then copy-paste the template code into a new `.qmd` file in `Positron` (or `RStudio IDE`).
 
 ::: callout-tip
 Check out the R Markdown Quick Tour for more:
@@ -287,8 +289,6 @@ quarto is newer and is described in further detail at <https://quarto.org/>. It'
 
 -   <https://github.com/daianna-glez/daianna_blog> and <https://daianna-glez.github.io/daianna_blog/>
 
--   <https://github.com/gabrielramirezv/gabrielramirezv.github.io> and <https://gabrielramirezv.github.io/>
-
 <blockquote class="twitter-tweet">
 
 <p lang="en" dir="ltr">
@@ -304,6 +304,9 @@ I’m super excited to share with you my personal blog. Here I’ll be posting a
 ```{=html}
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ```
+
+-   <https://github.com/gabrielramirezv/gabrielramirezv.github.io> and <https://gabrielramirezv.github.io/>
+
 -   <https://github.com/Bioconductor/biocblog> and <https://blog.bioconductor.org/>
 
 #### Host your websites on GitHub Pages for free
@@ -334,9 +337,13 @@ usethis::use_github()
 ## Make a commit and push all files to GitHub
 ```
 
-# Tips and tricks in R Markdown in RStudio
+Here's an example:
 
-Here are shortcuts and tips on efficiently using RStudio to improve how you write code.
+-   <https://github.com/lcolladotor/StatComputing_ProjectDemo> and <https://lcolladotor.github.io/StatComputing_ProjectDemo/>
+
+# Tips and tricks in `Positron`
+
+Here are shortcuts and tips on efficiently using `Positron` to improve how you write code. See <https://positron.posit.co/keyboard-shortcuts.html> for the keyboard shortcuts in `Positron`. The *run code* shortcut is the same in `Positron` and `RStudio IDE`:
 
 ### Run code
 
@@ -346,6 +353,10 @@ If you want to run a code chunk:
 command + Enter on Mac
 Ctrl + Enter on Windows
 ```
+
+
+If you are used to `RStudio IDE` keybindings, check also <https://positron.posit.co/migrate-rstudio-keybindings.html>. For example, the *insert a comment* shortcut is one of them:
+
 
 ### Insert a comment in R and R Markdown
 
@@ -363,80 +374,9 @@ This shortcut can be used both for:
 
 Note that if you want to comment more than one line, select all the lines you want to comment then use the shortcut. If you want to uncomment a comment, apply the same shortcut.
 
-### Knit a R Markdown document
+### Ordered list in `markdown`
 
-You can knit R Markdown documents by using this shortcut:
-
-```         
-command + Shift + K on Mac
-Ctrl + Shift + K on Windows
-```
-
-### Code snippets
-
-Code snippets is usually a few characters long and is used as a shortcut to insert a common piece of code. You simply type a few characters then press `Tab` and it will complete your code with a larger code. `Tab` is then used again to navigate through the code where customization is required. For instance, if you type `fun` then press `Tab`, it will auto-complete the code with the required code to create a function:
-
-```         
-name <- function(variables) {
-  
-}
-```
-
-Pressing `Tab` again will jump through the placeholders for you to edit it. So you can first edit the name of the function, then the variables and finally the code inside the function (try by yourself!).
-
-There are many code snippets by default in RStudio. Here are the code snippets you might want to use:
-
--   `lib` to call `library()`
-
-```{r, eval = FALSE}
-library(package)
-```
-
--   `mat` to create a matrix
-
-```{r, eval = FALSE}
-matrix(data, nrow = rows, ncol = cols)
-```
-
--   `if`, `el`, and `ei` to create conditional expressions such as `if() {}`, `else {}` and `else if () {}`
-
-```{r, eval = FALSE}
-if (condition) {
-    ## Case 1
-} else if (condition) {
-    ## Case 2
-} else if (condition) {
-    ## Case 3
-}
-```
-
--   `fun` to create a function
-
-```{r, eval = FALSE}
-name <- function(variables) {
-
-}
-```
-
--   `for` to create for loops
-
-```{r, eval = FALSE}
-for (variable in vector) {
-
-}
-```
-
--   `ts` to insert a comment with the current date and time (useful if you have very long code and share it with others so they see when it has been edited)
-
-```{r, eval = FALSE}
-# Tue Jan 21 20:20:14 2020 ------------------------------
-```
-
-You can see all default code snippets and add yours by clicking on Tools \> Global Options... \> Code (left sidebar) \> Edit Snippets...
-
-### Ordered list in R Markdown
-
-In R Markdown, when creating an ordered list such as this one:
+In `markdown` (applies to both `R Markdown` and `quarto`), when creating an ordered list such as this one:
 
 1.  Item 1
 2.  Item 2
@@ -488,9 +428,9 @@ which incorrectly renders
 8.  Item 1
 9.  Item 3
 
-### New code chunk in R Markdown
+### New code chunk in `quarto` or `R Markdown`
 
-When editing R Markdown documents, you will need to insert a new R code chunk many times. The following shortcuts will make your life easier:
+When editing `quarto` or `R Markdown` documents, you will need to insert a new `R` code chunk many times. The following shortcuts will make your life easier:
 
 ```         
 command + option + I on Mac
@@ -499,89 +439,6 @@ command + option + I on Mac
 Ctrl + ALT + I on Windows
 ```
 
-### Reformat code
-
-_Note that we are going to be using `Air` for re-formatting code. See the instructions for installing `Air` and configuring it on [the first lecture](../01-welcome/#how-to-get-air-auto-code-formatter). The options below are other alternatives, which were discussed in the 2025-03-14 LIBD RStats club as shown on the video below._
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fKfH__OXuTY?si=fH_QWdXbJmYo2Vba" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-A clear and readable code is always easier and faster to read (and look more professional when sharing it to collaborators). To automatically apply the most common coding guidelines such as white spaces, indents, etc., use:
-
-```         
-cmd + Shift + A on Mac
-Ctrl + Shift + A on Windows
-```
-
-So for example the following code which does not respect the guidelines (and which is not easy to read):
-
-```         
-1+1
-  for(i in 1:10){if(!i%%2){next}
-print(i)
- }
-```
-
-becomes much more neat and readable:
-
-```         
-1 + 1
-for (i in 1:10) {
-  if (!i %% 2) {
-    next
-  }
-  print(i)
-}
-```
-
-<details>
-
-<summary>For details on formatting R code with `styler` and `biocthis`, click here.</summary>
-
-I also like to use the [`styler`: Non-invasive pretty printing of R code](https://github.com/r-lib/styler) package to automatically style my R code. I also use <https://lcolladotor.github.io/biocthis/reference/bioc_style.html> to style my code in a way that it is compatible with Bioconductor's code standards.
-
-```{r}
-#| eval: false
-## Install styler for automatically styling scripts
-install.packages("styler")
-
-## Install biocthis
-if (!require("BiocManager", quietly = TRUE)) {
-    install.packages("BiocManager")
-}
-
-BiocManager::install("biocthis")
-```
-
-```{r}
-## Example code for styling all files that end with .qmd
-cat(readLines(here::here("scripts", "auto_style.R")))
-```
-
-You might want to edit your `` ~/.Rprofile with `usethis::edit_r_profile()` `` and add this line to it:
-
-```{r}
-#| eval: false
-## For the styler addin
-# Affects the output of: styler:::get_addins_style_transformer_name()
-# https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183
-options("styler.addins_style_transformer" = "biocthis::bioc_style()")
-```
-
-For more information I have on my `~/.Rprofile` file check <https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile>.
-
-</details>
-
-### RStudio addins
-
-RStudio addins are extensions which provide a simple mechanism for executing advanced R functions from within RStudio. In simpler words, when executing an addin (by clicking a button in the Addins menu), the corresponding code is executed without you having to write the code. RStudio addins have the advantage that they allow you to execute complex and advanced code much more easily than if you would have to write it yourself.
-
-::: callout-tip
-**For more information about RStudio addins, check out**:
-
--   <https://rstudio.github.io/rstudioaddins>
--   <https://statsandr.com/blog/tips-and-tricks-in-rstudio-and-r-markdown>
-:::
-
 ### Others
 
 Similar to many other programs, you can also use:
@@ -589,7 +446,6 @@ Similar to many other programs, you can also use:
 -   `command + Shift + N` on Mac and `Ctrl + Shift + N` on Windows to open a new R Script
 -   `command + S` on Mac and `Ctrl + S` on Windows to save your current script or R Markdown document
 
-Check out Tools --\> Keyboard Shortcuts Help to see a long list of these shortcuts.
 
 # Post-lecture materials
 
@@ -731,3 +587,163 @@ You can also optionally include notes in the gutter of the article (immediately 
 <aside>This content will appear in the gutter of the article.</aside>
 
 You can also include figures in the gutter. Just enclose the code chunk which generates the figure in an aside tag.
+
+## Tips and tricks in `R Markdown` in `RStudio IDE`
+
+### Knit a R Markdown document
+
+You can knit R Markdown documents by using this shortcut:
+
+```         
+command + Shift + K on Mac
+Ctrl + Shift + K on Windows
+```
+
+### Code snippets
+
+Code snippets is usually a few characters long and is used as a shortcut to insert a common piece of code. You simply type a few characters then press `Tab` and it will complete your code with a larger code. `Tab` is then used again to navigate through the code where customization is required. For instance, if you type `fun` then press `Tab`, it will auto-complete the code with the required code to create a function:
+
+```         
+name <- function(variables) {
+  
+}
+```
+
+Pressing `Tab` again will jump through the placeholders for you to edit it. So you can first edit the name of the function, then the variables and finally the code inside the function (try by yourself!).
+
+There are many code snippets by default in RStudio. Here are the code snippets you might want to use:
+
+-   `lib` to call `library()`
+
+```{r, eval = FALSE}
+library(package)
+```
+
+-   `mat` to create a matrix
+
+```{r, eval = FALSE}
+matrix(data, nrow = rows, ncol = cols)
+```
+
+-   `if`, `el`, and `ei` to create conditional expressions such as `if() {}`, `else {}` and `else if () {}`
+
+```{r, eval = FALSE}
+if (condition) {
+    ## Case 1
+} else if (condition) {
+    ## Case 2
+} else if (condition) {
+    ## Case 3
+}
+```
+
+-   `fun` to create a function
+
+```{r, eval = FALSE}
+name <- function(variables) {
+
+}
+```
+
+-   `for` to create for loops
+
+```{r, eval = FALSE}
+for (variable in vector) {
+
+}
+```
+
+-   `ts` to insert a comment with the current date and time (useful if you have very long code and share it with others so they see when it has been edited)
+
+```{r, eval = FALSE}
+# Tue Jan 21 20:20:14 2020 ------------------------------
+```
+
+You can see all default code snippets and add yours by clicking on Tools \> Global Options... \> Code (left sidebar) \> Edit Snippets...
+
+### Reformat code
+
+_Note that we are going to be using `Air` for re-formatting code. See the instructions for installing `Air` and configuring it on [the first lecture](../01-welcome/#how-to-get-air-auto-code-formatter). The options below are other alternatives, which were discussed in the 2025-03-14 LIBD RStats club as shown on the video below._
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fKfH__OXuTY?si=fH_QWdXbJmYo2Vba" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+A clear and readable code is always easier and faster to read (and look more professional when sharing it to collaborators). To automatically apply the most common coding guidelines such as white spaces, indents, etc., use:
+
+```         
+cmd + Shift + A on Mac
+Ctrl + Shift + A on Windows
+```
+
+So for example the following code which does not respect the guidelines (and which is not easy to read):
+
+```         
+1+1
+  for(i in 1:10){if(!i%%2){next}
+print(i)
+ }
+```
+
+becomes much more neat and readable:
+
+```         
+1 + 1
+for (i in 1:10) {
+  if (!i %% 2) {
+    next
+  }
+  print(i)
+}
+```
+
+<details>
+
+<summary>For details on formatting R code with `styler` and `biocthis`, click here.</summary>
+
+I also like to use the [`styler`: Non-invasive pretty printing of R code](https://github.com/r-lib/styler) package to automatically style my R code. I also use <https://lcolladotor.github.io/biocthis/reference/bioc_style.html> to style my code in a way that it is compatible with Bioconductor's code standards.
+
+```{r}
+#| eval: false
+## Install styler for automatically styling scripts
+install.packages("styler")
+
+## Install biocthis
+if (!require("BiocManager", quietly = TRUE)) {
+    install.packages("BiocManager")
+}
+
+BiocManager::install("biocthis")
+```
+
+```{r}
+## Example code for styling all files that end with .qmd
+cat(readLines(here::here("scripts", "auto_style.R")))
+```
+
+You might want to edit your `` ~/.Rprofile with `usethis::edit_r_profile()` `` and add this line to it:
+
+```{r}
+#| eval: false
+## For the styler addin
+# Affects the output of: styler:::get_addins_style_transformer_name()
+# https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183
+options("styler.addins_style_transformer" = "biocthis::bioc_style()")
+```
+
+For more information I have on my `~/.Rprofile` file check <https://lcolladotor.github.io/bioc_team_ds/config-files.html#rprofile>.
+
+</details>
+
+### RStudio addins
+
+RStudio addins are extensions which provide a simple mechanism for executing advanced R functions from within RStudio. In simpler words, when executing an addin (by clicking a button in the Addins menu), the corresponding code is executed without you having to write the code. RStudio addins have the advantage that they allow you to execute complex and advanced code much more easily than if you would have to write it yourself.
+
+::: callout-tip
+**For more information about RStudio addins, check out**:
+
+-   <https://rstudio.github.io/rstudioaddins>
+-   <https://statsandr.com/blog/tips-and-tricks-in-rstudio-and-r-markdown>
+:::
+
+### Others
+
+Check out Tools --\> Keyboard Shortcuts Help to see a long list of these shortcuts.
