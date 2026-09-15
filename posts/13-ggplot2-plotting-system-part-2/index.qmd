@@ -49,7 +49,7 @@ Then for after the course, you might want to keep learning about R packages thro
 
 * CRAN task views <https://cran.r-project.org/web/views/> (there's a list of like 50 fields, each with something like 200 packages selected for that research field)
 * `biocViews` for Bioconductor packages <https://bioconductor.org/packages/release/BiocViews.html#___Software>
-Bioconductor release notes such as <https://bioconductor.org/news/bioc_3_21_release/> for version 3.21 (the latest one). See <https://bioconductor.org/about/release-announcements/> for the full list of release note announcements. We've done this activity a few times at the [LIBD RStats club](https://research.libd.org/rstatsclub/) such as <https://youtu.be/13bIatqNHH8> for bioc version 3.14.
+Bioconductor release notes such as <https://bioconductor.org/news/bioc_3_23_release/> for version 3.23 (the latest one as of September 2026). See <https://bioconductor.org/about/release-announcements/> for the full list of release note announcements. We've done this activity a few times at the [LIBD RStats club](https://research.libd.org/rstatsclub/) such as <https://youtu.be/13bIatqNHH8> for bioc version 3.14.
 
 As for `swirl`, even though it was initially developed at JHBSPH Biostatistics, I see at <https://github.com/swirldev/swirl_courses> that most courses are outdated now: the last updates are mostly from 7 - 10 years ago.
 :::
