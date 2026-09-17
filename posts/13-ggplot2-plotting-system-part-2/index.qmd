@@ -557,6 +557,10 @@ Voilà! Hopefully our editor likes the plot we made!
 
 P.S. Follow [Christine Zhang on Bluesky](https://bsky.app/profile/christinezhang.bsky.social) or [Twitter / X](https://twitter.com/christinezhang) for more [#dataviz](https://bsky.app/search?q=%23dataviz) and data journalism.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hZEMksgE6LI?si=gcgtO7ioex-0fxuf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+You might want to watch her guest lecture for this course from October 16th, 2025.
+
 # What about Barbenheimer?
 
 Well, there's <https://github.com/MatthewBJane/theme_park> now. Here are some examples with it:
