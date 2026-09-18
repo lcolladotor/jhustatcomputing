@@ -22,11 +22,11 @@ categories: [module 4, week 4, R, programming]
 
 > Can we use ChatGPT or other LLMs to help us write R code in this class?
 
-Or what about outside of this class? After all, it'll be done sooner rather than later.
+Or what about outside of this class? After all, it is very common to use AI (LLMs) to help with coding nowadays. So, yes you can use AI in this class. Today we will demonstrate the basics of how to code using AI.
 
-Yes you can! At this point, hopefully your application to use GitHub Copilot Pro (part of the GitHub Education Pack) has been approved. If you haven't completed this application, see [our first lecture](../01-welcome/#how-to-apply-for-github-education-and-configure-github-copilot) for the details.
+At this point, hopefully your application to use GitHub Copilot Pro (part of the GitHub Education Pack) has been approved. If you haven't completed this application, see [our first lecture](../01-welcome/#how-to-apply-for-github-education-and-configure-github-copilot) for the details.
 
-In general, you might want to follow the news from the _Posit AI newsletter_ which was launched last month: <https://posit.co/blog/2025-08-29-ai-newsletter/>. You might want to follow both [Simon P. Couch](https://bsky.app/profile/simonpcouch.com) and [Sara Altman](https://bsky.app/profile/sara-altman.bsky.social) on Bluesky or on LinkedIn: [Simon P. Couch](https://www.linkedin.com/in/simonpcouch/) and [Sara Altman](https://www.linkedin.com/in/sarakaltman/).
+In general, you might want to follow the news from the _Posit AI newsletter_ which was launched in August 2025: <https://posit.co/blog/2025-08-29-ai-newsletter/>. You might want to follow both [Simon P. Couch](https://bsky.app/profile/simonpcouch.com) and [Sara Altman](https://bsky.app/profile/sara-altman.bsky.social) on Bluesky or on LinkedIn: [Simon P. Couch](https://www.linkedin.com/in/simonpcouch/) and [Sara Altman](https://www.linkedin.com/in/sarakaltman/).
 
 # Intro to Posit Assistant
 
