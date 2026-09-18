@@ -18,15 +18,38 @@ categories: [module 4, week 4, R, programming]
 
 <!-- Add interesting quote -->
 
-# Interacting with LLMs in RStudio IDE / Positron
+# Using AI in this class
 
 > Can we use ChatGPT or other LLMs to help us write R code in this class?
 
 Or what about outside of this class? After all, it'll be done sooner rather than later.
 
-Yes you can! Though I think that using GitHub Copilot is likely the most efficient option, I want to highlight a new package called `chattr` that allows you to use LLMs like GPT-4.1 directly from RStudio IDE / Positron. `chattr` is documented at <https://mlverse.github.io/chattr/>. At this point, hopefully your application to use GitHub Copilot has been approved. If you haven't completed this application, see [our first lecture](../01-welcome/#how-to-apply-for-github-education-and-configure-github-copilot) for the details.
+Yes you can! At this point, hopefully your application to use GitHub Copilot Pro (part of the GitHub Education Pack) has been approved. If you haven't completed this application, see [our first lecture](../01-welcome/#how-to-apply-for-github-education-and-configure-github-copilot) for the details.
 
 In general, you might want to follow the news from the _Posit AI newsletter_ which was launched last month: <https://posit.co/blog/2025-08-29-ai-newsletter/>. You might want to follow both [Simon P. Couch](https://bsky.app/profile/simonpcouch.com) and [Sara Altman](https://bsky.app/profile/sara-altman.bsky.social) on Bluesky or on LinkedIn: [Simon P. Couch](https://www.linkedin.com/in/simonpcouch/) and [Sara Altman](https://www.linkedin.com/in/sarakaltman/).
+
+# Intro to Posit Assistant
+
+On 2026-09-22 we had [Nicholas J. Eagles](https://nick-eagles.github.io/) joined us as a guest to present on how to use [Posit Assisstant](https://assistant.posit.co/docs/getting-started/) for coding with AI directly on `Positron`. The notes he shared with the class are available [here](https://docs.google.com/document/d/12ykHhK6xf9Mky1172GQZMfrfZQh8bLZAlmBRLVa2zKE/edit?usp=sharing).
+
+::: callout-tip
+
+Below is the recorded practice presentation he did on 2026-09-18 at the [LIBD RStats Club](https://research.libd.org/rstatsclub/).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AlvBbUxgVJM?si=wIBip-GuxiYDlY1T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+:::
+
+
+# Interacting with LLMs in RStudio IDE / Positron
+
+::: callout-important
+
+These notes are from the course version in 2025. Coding with AI has been evolving very fast, so while these tools are still useful, nowadays I recommend that you use `Posit Assistant` instead.
+
+:::
+
+While I think that using `Posit Assistant` is the most efficient option, I want to highlight a new package called `chattr` that allows you to use LLMs like GPT-4.1 directly from `RStudio IDE` / `Positron`. `chattr` is documented at <https://mlverse.github.io/chattr/>.
 
 Below is a demo of how to use `chattr` with the GitHub Copilot LLM model.
 
