@@ -277,7 +277,9 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#interacting-with-llms-in-rstudio-ide-positron" id="toc-interacting-with-llms-in-rstudio-ide-positron" class="nav-link active" data-scroll-target="#interacting-with-llms-in-rstudio-ide-positron">Interacting with LLMs in RStudio IDE / Positron</a></li>
+  <li><a href="#using-ai-in-this-class" id="toc-using-ai-in-this-class" class="nav-link active" data-scroll-target="#using-ai-in-this-class">Using AI in this class</a></li>
+  <li><a href="#intro-to-posit-assistant" id="toc-intro-to-posit-assistant" class="nav-link" data-scroll-target="#intro-to-posit-assistant">Intro to Posit Assistant</a></li>
+  <li><a href="#interacting-with-llms-in-rstudio-ide-positron" id="toc-interacting-with-llms-in-rstudio-ide-positron" class="nav-link" data-scroll-target="#interacting-with-llms-in-rstudio-ide-positron">Interacting with LLMs in RStudio IDE / Positron</a></li>
   <li><a href="#pre-lecture-materials" id="toc-pre-lecture-materials" class="nav-link" data-scroll-target="#pre-lecture-materials">Pre-lecture materials</a>
   <ul class="collapse">
   <li><a href="#read-ahead" id="toc-read-ahead" class="nav-link" data-scroll-target="#read-ahead">Read ahead</a></li>
@@ -330,14 +332,50 @@ window.Quarto = {
 
 <p><em>This lecture, as the rest of the course, is adapted from the version <a href="https://www.stephaniehicks.com/">Stephanie C. Hicks</a> designed and maintained in 2021 and 2022. Check the recent changes to this file through the <a href="https://github.com/lcolladotor/jhustatcomputing/commits/main/posts/14-r-nuts-and-bolts/index.qmd">GitHub history</a>.</em></p>
 <!-- Add interesting quote -->
-<section id="interacting-with-llms-in-rstudio-ide-positron" class="level1">
-<h1>Interacting with LLMs in RStudio IDE / Positron</h1>
+<section id="using-ai-in-this-class" class="level1">
+<h1>Using AI in this class</h1>
 <blockquote class="blockquote">
 <p>Can we use ChatGPT or other LLMs to help us write R code in this class?</p>
 </blockquote>
 <p>Or what about outside of this class? After all, it’ll be done sooner rather than later.</p>
-<p>Yes you can! Though I think that using GitHub Copilot is likely the most efficient option, I want to highlight a new package called <code>chattr</code> that allows you to use LLMs like GPT-4.1 directly from RStudio IDE / Positron. <code>chattr</code> is documented at <a href="https://mlverse.github.io/chattr/" class="uri">https://mlverse.github.io/chattr/</a>. At this point, hopefully your application to use GitHub Copilot has been approved. If you haven’t completed this application, see <a href="../01-welcome/#how-to-apply-for-github-education-and-configure-github-copilot">our first lecture</a> for the details.</p>
+<p>Yes you can! At this point, hopefully your application to use GitHub Copilot Pro (part of the GitHub Education Pack) has been approved. If you haven’t completed this application, see <a href="../01-welcome/#how-to-apply-for-github-education-and-configure-github-copilot">our first lecture</a> for the details.</p>
 <p>In general, you might want to follow the news from the <em>Posit AI newsletter</em> which was launched last month: <a href="https://posit.co/blog/2025-08-29-ai-newsletter/" class="uri">https://posit.co/blog/2025-08-29-ai-newsletter/</a>. You might want to follow both <a href="https://bsky.app/profile/simonpcouch.com">Simon P. Couch</a> and <a href="https://bsky.app/profile/sara-altman.bsky.social">Sara Altman</a> on Bluesky or on LinkedIn: <a href="https://www.linkedin.com/in/simonpcouch/">Simon P. Couch</a> and <a href="https://www.linkedin.com/in/sarakaltman/">Sara Altman</a>.</p>
+</section>
+<section id="intro-to-posit-assistant" class="level1">
+<h1>Intro to Posit Assistant</h1>
+<p>On 2026-09-22 we had <a href="https://nick-eagles.github.io/">Nicholas J. Eagles</a> joined us as a guest to present on how to use <a href="https://assistant.posit.co/docs/getting-started/">Posit Assisstant</a> for coding with AI directly on <code>Positron</code>. The notes he shared with the class are available <a href="https://docs.google.com/document/d/12ykHhK6xf9Mky1172GQZMfrfZQh8bLZAlmBRLVa2zKE/edit?usp=sharing">here</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Below is the recorded practice presentation he did on 2026-09-18 at the <a href="https://research.libd.org/rstatsclub/">LIBD RStats Club</a>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AlvBbUxgVJM?si=wIBip-GuxiYDlY1T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</div>
+</div>
+</section>
+<section id="interacting-with-llms-in-rstudio-ide-positron" class="level1">
+<h1>Interacting with LLMs in RStudio IDE / Positron</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These notes are from the course version in 2025. Coding with AI has been evolving very fast, so while these tools are still useful, nowadays I recommend that you use <code>Posit Assistant</code> instead.</p>
+</div>
+</div>
+<p>While I think that using <code>Posit Assistant</code> is the most efficient option, I want to highlight a new package called <code>chattr</code> that allows you to use LLMs like GPT-4.1 directly from <code>RStudio IDE</code> / <code>Positron</code>. <code>chattr</code> is documented at <a href="https://mlverse.github.io/chattr/" class="uri">https://mlverse.github.io/chattr/</a>.</p>
 <p>Below is a demo of how to use <code>chattr</code> with the GitHub Copilot LLM model.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install ellmer and chattr</span></span>
@@ -1468,7 +1506,7 @@ Tip
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2026-08-27
+ date     2026-09-18
  pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
