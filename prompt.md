@@ -45,5 +45,7 @@ https://github.com/lcolladotor/biostat776classnotes/commits/devel/?since=2026-09
 
 And here's the summary:
 
+https://gist.github.com/lcolladotor/1b6a51a89e3727dbcb8672ce7a72f003#file-2026-09-17_notes-md
+
 Best,
 Leo
