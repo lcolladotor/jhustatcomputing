@@ -83,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-436dee834be33787befc096da4a41310.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-51b67bf8ade3772cce0e14bd95827d94.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -828,8 +828,14 @@ Note
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20230928</span>)</span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print_message3_cli</span>(<span class="sc">-</span><span class="dv">1</span><span class="sc">:</span><span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
-<pre><code>Error in `loadNamespace()`:
-! there is no package called 'praiseMX'</code></pre>
+<pre><code>Error in `print_message3_cli()`:
+! This function is not vectorized:
+ℹ `x` has length 3.
+✖ `x` must have length 1.
+→ Try using `purrr::map(x, print_message3_cli)` to loop your input `x` on this
+  function.
+✔ You are neat!
+✔ ¡Ah chingá! Programas bien perrón.</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>purrr<span class="sc">::</span><span class="fu">map</span>(<span class="sc">-</span><span class="dv">1</span><span class="sc">:</span><span class="dv">1</span>, print_message3_cli)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
@@ -1164,50 +1170,52 @@ Tip
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.6.1 (2026-06-24)
- os       macOS Tahoe 26.6.2
+ os       macOS Tahoe 26.7
  system   aarch64, darwin23
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
- tz       America/New_York
- date     2026-08-27
+ tz       America/Guatemala
+ date     2026-09-30
  pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
- package     * version date (UTC) lib source
- cli           3.6.6   2026-04-09 [1] CRAN (R 4.6.0)
- colorout    * 1.3-3   2026-07-30 [1] Github (jalvesaq/colorout@64863bb)
- coro          1.1.0   2024-11-05 [1] CRAN (R 4.6.0)
- digest        0.6.39  2025-11-19 [1] CRAN (R 4.6.0)
- ellmer        0.4.2   2026-07-13 [1] CRAN (R 4.6.1)
- evaluate      1.0.5   2025-08-27 [1] CRAN (R 4.6.0)
- fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.6.0)
- fs            2.1.0   2026-04-18 [1] CRAN (R 4.6.0)
- gitcreds      0.1.2   2022-09-08 [1] CRAN (R 4.6.0)
- glue          1.8.1   2026-04-17 [1] CRAN (R 4.6.0)
- htmltools     0.5.9   2025-12-04 [1] CRAN (R 4.6.0)
- htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.6.0)
- httr2         1.3.0   2026-07-13 [1] CRAN (R 4.6.1)
- jsonlite      2.0.0   2025-03-27 [1] CRAN (R 4.6.0)
- KernSmooth  * 2.23-26 2025-01-01 [1] CRAN (R 4.6.1)
- knitr         1.51    2025-12-20 [1] CRAN (R 4.6.0)
- lifecycle     1.0.5   2026-01-08 [1] CRAN (R 4.6.0)
- magrittr      2.0.5   2026-04-04 [1] CRAN (R 4.6.0)
- otel          0.2.0   2025-08-29 [1] CRAN (R 4.6.0)
- pillar        1.11.1  2025-09-17 [1] CRAN (R 4.6.0)
- purrr         1.2.2   2026-04-10 [1] CRAN (R 4.6.0)
- R6            2.6.1   2025-02-15 [1] CRAN (R 4.6.0)
- reprex      * 2.1.1   2024-07-06 [1] CRAN (R 4.6.0)
- rlang         1.3.0   2026-07-05 [1] CRAN (R 4.6.1)
- rmarkdown     2.31    2026-03-26 [1] CRAN (R 4.6.0)
- S7            0.2.2   2026-04-22 [1] CRAN (R 4.6.0)
- sessioninfo   1.2.4   2026-06-04 [1] CRAN (R 4.6.0)
- vctrs         0.7.3   2026-04-11 [1] CRAN (R 4.6.0)
- withr         3.0.3   2026-06-19 [1] CRAN (R 4.6.0)
- xfun          0.60    2026-07-09 [1] CRAN (R 4.6.1)
- yaml          2.3.12  2025-12-10 [1] CRAN (R 4.6.0)
+ package     * version    date (UTC) lib source
+ cli           3.6.6      2026-04-09 [1] CRAN (R 4.6.0)
+ colorout    * 1.3-3      2026-07-30 [1] Github (jalvesaq/colorout@64863bb)
+ coro          1.1.0      2024-11-05 [1] CRAN (R 4.6.0)
+ digest        0.6.39     2025-11-19 [1] CRAN (R 4.6.0)
+ ellmer        0.4.2      2026-07-13 [1] CRAN (R 4.6.1)
+ evaluate      1.0.5      2025-08-27 [1] CRAN (R 4.6.0)
+ fastmap       1.2.0      2024-05-15 [1] CRAN (R 4.6.0)
+ fs            2.1.0      2026-04-18 [1] CRAN (R 4.6.0)
+ gitcreds      0.1.2      2022-09-08 [1] CRAN (R 4.6.0)
+ glue          1.8.1      2026-04-17 [1] CRAN (R 4.6.0)
+ htmltools     0.5.9      2025-12-04 [1] CRAN (R 4.6.0)
+ htmlwidgets   1.6.4      2023-12-06 [1] CRAN (R 4.6.0)
+ httr2         1.3.0      2026-07-13 [1] CRAN (R 4.6.1)
+ jsonlite      2.0.0      2025-03-27 [1] CRAN (R 4.6.0)
+ KernSmooth  * 2.23-26    2025-01-01 [1] CRAN (R 4.6.1)
+ knitr         1.51       2025-12-20 [1] CRAN (R 4.6.0)
+ lifecycle     1.0.5      2026-01-08 [1] CRAN (R 4.6.0)
+ magrittr      2.0.5      2026-04-04 [1] CRAN (R 4.6.0)
+ otel          0.2.0      2025-08-29 [1] CRAN (R 4.6.0)
+ pillar        1.11.1     2025-09-17 [1] CRAN (R 4.6.0)
+ praise        1.0.0      2015-08-11 [1] CRAN (R 4.6.0)
+ praiseMX      0.0.0.9000 2026-10-01 [1] Github (ComunidadBioinfo/praiseMX@9d26399)
+ purrr         1.2.2      2026-04-10 [1] CRAN (R 4.6.0)
+ R6            2.6.1      2025-02-15 [1] CRAN (R 4.6.0)
+ reprex      * 2.1.1      2024-07-06 [1] CRAN (R 4.6.0)
+ rlang         1.3.0      2026-07-05 [1] CRAN (R 4.6.1)
+ rmarkdown     2.31       2026-03-26 [1] CRAN (R 4.6.0)
+ S7            0.2.2      2026-04-22 [1] CRAN (R 4.6.0)
+ sessioninfo   1.2.4      2026-06-04 [1] CRAN (R 4.6.0)
+ vctrs         0.7.3      2026-04-11 [1] CRAN (R 4.6.0)
+ withr         3.0.3      2026-06-19 [1] CRAN (R 4.6.0)
+ xfun          0.60       2026-07-09 [1] CRAN (R 4.6.1)
+ yaml          2.3.12     2025-12-10 [1] CRAN (R 4.6.0)
 
  [1] /Library/Frameworks/R.framework/Versions/4.6/Resources/library
  * ── Packages attached to the search path.
