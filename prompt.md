@@ -41,7 +41,7 @@ Here are the links I screenshared:
 
 Here are the git commits from today's notes:
 
-https://github.com/lcolladotor/biostat776classnotes/commits/devel/?since=2026-09-08&until=2026-09-08
+https://github.com/lcolladotor/biostat776classnotes/commits/devel/?since=2026-10-06&until=2026-10-06
 
 And here's the summary:
 
