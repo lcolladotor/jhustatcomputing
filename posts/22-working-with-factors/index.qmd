@@ -123,7 +123,7 @@ levels(y)
 ::: callout-tip
 ### Note
 
-Any values not in the level will be silently converted to NA:
+Any values not in the levels will be silently converted to NA:
 
 ```{r}
 y_typo <- factor(x_typo, levels = month_levels)
