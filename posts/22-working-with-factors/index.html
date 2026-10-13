@@ -449,7 +449,7 @@ $class
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Any values not in the level will be silently converted to NA:</p>
+<p>Any values not in the levels will be silently converted to NA:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>y_typo <span class="ot">&lt;-</span> <span class="fu">factor</span>(x_typo, <span class="at">levels =</span> month_levels)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>y_typo</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -618,7 +618,7 @@ lm(formula = y ~ x)
 
 Coefficients:
 (Intercept)         xlow      xmedium  
-    -0.1469      -0.2963       0.6023  </code></pre>
+    0.04184     -0.44428      0.09290  </code></pre>
 </div>
 </div>
 </div>
@@ -1295,14 +1295,14 @@ Tip
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.6.1 (2026-06-24)
- os       macOS Tahoe 26.6.2
+ os       macOS Golden Gate 27.0.1
  system   aarch64, darwin23
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       America/New_York
- date     2026-08-27
+ date     2026-10-12
  pandoc   3.10.1 @ /opt/homebrew/bin/ (via rmarkdown)
  quarto   1.10.18 @ /Applications/quarto/bin/quarto
 
