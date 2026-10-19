@@ -644,9 +644,13 @@ Please, avoid a 3D version because it obfuscates the plot, making it more diffic
 
 Even worse than pie charts are donut plots.
 
-![](http://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Donut-Chart.svg/360px-Donut-Chart.svg.png)
+![](https://upload.wikimedia.org/wikipedia/commons/0/06/Chart_it77.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled)
 
 The reason is that by removing the center, we remove one of the visual cues for determining the different areas: the angles. **There is no reason to ever use a donut plot to display data**.
+
+![](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Graph_RE_UK_mix.svg/3840px-Graph_RE_UK_mix.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+
+Although adding text can be useful if you really want to use them.
 
 ::: callout-note
 ### Question
