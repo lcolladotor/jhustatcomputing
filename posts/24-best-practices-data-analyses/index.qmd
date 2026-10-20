@@ -227,7 +227,7 @@ Depending on the data type, you might be able to share the data itself, or a sum
 1.  The **data** itself, or a summarized version, or a simulated data similar to the original.
 2.  Any **metadata** to describe the primary data and the resources used to generate it. Most disciplines have specific metadata standards to follow (e.g. [microarrays](http://fged.org/projects/minseqe/)).
 3.  **Data dictionary**. These have crucial role in organizing your data, especially explaining the variables and their representation. Data dictionaries should provide short names for each variable, a longer text label for the variable, a definition for each variable, data type (such as floating-point number, integer, or string), measurement units, and expected minimum and maximum values. Data dictionaries can make explicit what future users would otherwise have to guess about the representation of data.
-    -   You have gotten used to seeing the *Tidy Tuesday* data dictionaries <https://github.com/rfordatascience/tidytuesday> such as <https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-10-17/readme.md#data-dictionary>
+    -   You have gotten used to seeing the *Tidy Tuesday* data dictionaries <https://github.com/rfordatascience/tidytuesday> such as <https://github.com/rfordatascience/tidytuesday/blob/main/data/2023/2023-10-17/readme.md#data-dictionary>
 4.  **Source code**. Ideally, readers should have all materials needed to completely reproduce the study described in a publication, not just data. These materials include source code, preprocessing, and analysis scripts. Guidelines for organization of computational project can help you arrange your data and scripts in a way that will make it easier for you and other to access and reuse them.
     -   See <https://github.com/LieberInstitute/template_project> for how we organize code in my team.
     -   See also <https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content> for how to deposit your GitHub repository on Zenodo and get a Digital Object Identifier (DOI) that others can cite. Example <https://zenodo.org/doi/10.5281/zenodo.10010510>
@@ -295,7 +295,7 @@ Cons:
     -   Enables downstream use of the *GitHub contributors graph* like at <https://github.com/LieberInstitute/living_brain_reanalysis/graphs/contributors>
 
 3.  Make edits and version control as you see fit
-4.  (highly recommended) Auto-style code using `styler` as shown here: <https://github.com/LieberInstitute/template_project/blob/devel/code/update_style.R>
+4.  (highly recommended) Auto-style code using `Air`
 
 -   Save the auto-style changes on their own commit message to avoid mixing auto-style changes with actual changes you made. Otherwise you'll later have trouble distinguishing the two types of changes.
 
