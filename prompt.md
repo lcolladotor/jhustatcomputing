@@ -1,4 +1,16 @@
+## Prompts:
+
+### Summarize transcript
+
 Summarize the following class transcript into bullet points with emojis.
+
+### Create visuals
+
+Generate visual graphics that I can use for posts on LinkedIn, Instagram, X, and BlueSky. Note that up to 4 visuals can be included per post, so don't generate more than them. Feel free to use the Adobe plugin. Create the alternative text for each graphic.
+
+Then draft messages using the templates I have under "prompt.md". Note that the specific links for today's class are XX and YY.
+
+
 
 ## For BlueSky
 
@@ -45,7 +57,7 @@ https://github.com/lcolladotor/biostat776classnotes/commits/devel/?since=2026-10
 
 And here's the summary:
 
-https://gist.github.com/lcolladotor/1b6a51a89e3727dbcb8672ce7a72f003#file-2026-09-17_notes-md
+https://gist.github.com/lcolladotor/1b6a51a89e3727dbcb8672ce7a72f003#file-2026-10-20_notes-md
 
 Best,
 Leo
