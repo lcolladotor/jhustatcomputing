@@ -1663,14 +1663,14 @@
     "href": "prompt.html",
     "title": "Statistical Computing (BSPH 140.776)",
     "section": "",
-    "text": "Summarize the following class transcript into bullet points with emojis.\n\n\n\nGenerate visual graphics that I can use for posts on LinkedIn, Instagram, X, and BlueSky. Note that up to 4 visuals can be included per post, so don’t generate more than them. Feel free to use the Adobe plugin. Create the alternative text for each graphic.\nThen draft messages using the templates I have under “prompt.md”. Note that the specific links for today’s class are XX and YY."
+    "text": "Summarize the following class transcript into bullet points with emojis.\n\n\n\nGenerate visual graphics that I can use for posts on LinkedIn, Instagram, X, and BlueSky. Note that up to 4 visuals can be included per post, so don’t generate more than them. Feel free to use the Adobe plugin. You can find my personal logo from https://github.com/lcolladotor/lcolladotorsource/blob/master/static/media/Leo_transparente.ai and preferred colors. Avoid using a template that is the generic ChatGPT template for the graphics. Create the alternative text for each graphic.\nThen draft messages using the templates I have under “prompt.md”. Note that the specific links for today’s class are XX and YY."
   },
   {
     "objectID": "prompt.html#prompts",
     "href": "prompt.html#prompts",
     "title": "Statistical Computing (BSPH 140.776)",
     "section": "",
-    "text": "Summarize the following class transcript into bullet points with emojis.\n\n\n\nGenerate visual graphics that I can use for posts on LinkedIn, Instagram, X, and BlueSky. Note that up to 4 visuals can be included per post, so don’t generate more than them. Feel free to use the Adobe plugin. Create the alternative text for each graphic.\nThen draft messages using the templates I have under “prompt.md”. Note that the specific links for today’s class are XX and YY."
+    "text": "Summarize the following class transcript into bullet points with emojis.\n\n\n\nGenerate visual graphics that I can use for posts on LinkedIn, Instagram, X, and BlueSky. Note that up to 4 visuals can be included per post, so don’t generate more than them. Feel free to use the Adobe plugin. You can find my personal logo from https://github.com/lcolladotor/lcolladotorsource/blob/master/static/media/Leo_transparente.ai and preferred colors. Avoid using a template that is the generic ChatGPT template for the graphics. Create the alternative text for each graphic.\nThen draft messages using the templates I have under “prompt.md”. Note that the specific links for today’s class are XX and YY."
   },
   {
     "objectID": "prompt.html#for-bluesky",
